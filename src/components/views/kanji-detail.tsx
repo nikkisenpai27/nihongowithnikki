@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { FuriganaText } from "../nikki/furigana";
 import { AudioButton } from "../nikki/audio-button";
-import { WritingCanvas } from "../nikki/writing-canvas";
+import { GuidedWritingPractice } from "../nikki/guided-writing-practice";
 import { StrokeOrderAnimation } from "../nikki/stroke-order";
 import { LevelBadge } from "../nikki/shared";
 import { useProgress } from "@/lib/stores/progress-store";
@@ -201,12 +201,16 @@ export function KanjiDetail({ kanji, onClose }: { kanji: KanjiData; onClose?: ()
         <StrokeOrderAnimation key={kanji.char} kanji={kanji.char} />
       </div>
 
-      {/* Writing practice */}
+      {/* Writing practice — guided with correct/wrong stroke order checking */}
       <div className="rounded-2xl border border-border bg-card p-4">
-        <h3 className="mb-3 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-          <PenLine className="h-3.5 w-3.5" /> Writing Practice
+        <h3 className="mb-1 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+          <PenLine className="h-3.5 w-3.5" /> Writing Practice <span className="jp normal-case font-normal">書き取り</span>
         </h3>
-        <WritingCanvas kanji={kanji.char} />
+        <p className="mb-4 text-sm text-muted-foreground">
+          Draw each stroke in the correct order. Nikki checks your stroke position and order —
+          correct strokes turn green, wrong ones get a hint to try again.
+        </p>
+        <GuidedWritingPractice key={kanji.char} kanji={kanji.char} />
       </div>
     </div>
   );
