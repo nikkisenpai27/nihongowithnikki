@@ -3,6 +3,7 @@
 import {
   Home,
   Languages,
+  Type,
   BookOpen,
   SpellCheck,
   BookText,
@@ -35,6 +36,7 @@ interface NavItem {
 const NAV: NavItem[] = [
   { view: "dashboard", label: "Home", jp: "ホーム", icon: Home, desc: "Your daily dashboard" },
   { view: "kanji", label: "Kanji", jp: "漢字", icon: Languages, desc: "Heatmap & mastery" },
+  { view: "kana", label: "Kana", jp: "仮名", icon: Type, desc: "Hiragana & Katakana" },
   { view: "vocab", label: "Vocabulary", jp: "単語", icon: BookOpen, desc: "N5 & N4 words" },
   { view: "grammar", label: "Grammar", jp: "文法", icon: SpellCheck, desc: "Grammar points" },
   { view: "reading", label: "Reading", jp: "読解", icon: FileText, desc: "Passages & questions" },

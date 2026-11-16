@@ -72,9 +72,12 @@ export function FlashcardDialog({ open, onOpenChange, cards, title = "Flashcards
         <Progress value={((pos + 1) / order.length) * 100} className="h-1 rounded-none" />
 
         <div className="p-5">
-          <button
+          <div
+            role="button"
+            tabIndex={0}
             onClick={() => setFlipped((f) => !f)}
-            className="relative flex min-h-[260px] w-full flex-col items-center justify-center rounded-2xl border-2 border-border bg-gradient-to-br from-primary/8 via-card to-card p-6 text-center transition-all hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setFlipped((f) => !f); } }}
+            className="relative flex min-h-[260px] w-full cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-border bg-gradient-to-br from-primary/8 via-card to-card p-6 text-center transition-all hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             {!flipped ? (
               <>
@@ -114,7 +117,7 @@ export function FlashcardDialog({ open, onOpenChange, cards, title = "Flashcards
                 </div>
               </>
             )}
-          </button>
+          </div>
 
           <div className="mt-4 flex items-center justify-between gap-2">
             <Button variant="outline" size="icon" onClick={prev} aria-label="Previous">

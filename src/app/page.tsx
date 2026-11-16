@@ -6,6 +6,7 @@ import { useNav, type ViewKey } from "@/lib/stores/nav-store";
 import { useSettings } from "@/lib/stores/settings-store";
 import { DashboardView } from "@/components/views/dashboard-view";
 import { KanjiView } from "@/components/views/kanji-view";
+import { KanaView } from "@/components/views/kana-view";
 import { VocabView } from "@/components/views/vocab-view";
 import { GrammarView } from "@/components/views/grammar-view";
 import { ReadingView } from "@/components/views/reading-view";
@@ -17,6 +18,7 @@ import { GlobalSearchResults } from "@/components/nikki/global-search";
 const VIEWS: Record<ViewKey, () => React.ReactNode> = {
   dashboard: () => <DashboardView />,
   kanji: () => <KanjiView />,
+  kana: () => <KanaView />,
   vocab: () => <VocabView />,
   grammar: () => <GrammarView />,
   reading: () => <ReadingView />,

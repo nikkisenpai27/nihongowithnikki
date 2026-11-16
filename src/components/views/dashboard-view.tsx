@@ -2,6 +2,7 @@
 
 import {
   Languages,
+  Type,
   BookOpen,
   SpellCheck,
   BookText,
@@ -60,6 +61,7 @@ const QUICK_CARDS: {
   tint: string;
 }[] = [
   { view: "kanji", label: "Kanji", jp: "漢字", desc: "Heatmap & mastery", icon: Languages, tint: "var(--sakura)" },
+  { view: "kana", label: "Kana", jp: "仮名", desc: "Hiragana & Katakana", icon: Type, tint: "var(--coral)" },
   { view: "vocab", label: "Vocabulary", jp: "単語", desc: "Words by theme", icon: BookOpen, tint: "var(--matcha)" },
   { view: "grammar", label: "Grammar", jp: "文法", desc: "N5 & N4 points", icon: SpellCheck, tint: "var(--indigo-deep)" },
   { view: "reading", label: "Reading", jp: "読解", desc: "Passages & quizzes", icon: FileText, tint: "var(--matcha)" },

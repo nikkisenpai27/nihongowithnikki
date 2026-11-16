@@ -30,6 +30,7 @@ import { useProgress } from "@/lib/stores/progress-store";
 import { useSettings } from "@/lib/stores/settings-store";
 import { useNav } from "@/lib/stores/nav-store";
 import { SectionHeader, EmptyState } from "../nikki/shared";
+import { FuriganaText } from "../nikki/furigana";
 import { KanjiDetail } from "./kanji-detail";
 import { cleanKun } from "@/lib/data/kanji";
 import type { JLPTLevel } from "@/lib/types";
@@ -248,11 +249,13 @@ export function KanjiView() {
         <div
           className="grid gap-2"
           style={{
-            gridTemplateColumns: "repeat(auto-fill, minmax(108px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fill, minmax(132px, 1fr))",
           }}
         >
           {filtered.map((k) => {
             const st = mastery[k.id] ?? "new";
+            const furi = k.kunyomi.length ? cleanKun(k.kunyomi[0]) : (k.onyomi[0] ?? "");
+            const furiText = furi ? `${k.char}[${furi}]` : k.char;
             return (
               <button
                 key={k.id}
@@ -265,13 +268,11 @@ export function KanjiView() {
                 title={`${k.char} — ${k.meaning.join(", ")} (${k.level})`}
                 aria-label={`${k.char}, ${k.meaning.join(", ")}, ${k.level}, ${st}`}
               >
-                <span className="w-full truncate px-1.5 text-center text-xs font-medium leading-none opacity-80">
-                  {k.onyomi[0] ?? ""}
-                </span>
-                <span className="text-4xl font-bold leading-none">{k.char}</span>
-                <span className="w-full truncate px-1.5 text-center text-xs font-medium leading-none opacity-80">
-                  {cleanKun(k.kunyomi[0] ?? "")}
-                </span>
+                <FuriganaText text={furiText} showFurigana={showFurigana} className="text-5xl font-bold leading-none" />
+                <div className="flex w-full flex-col items-center gap-0.5 px-1.5">
+                  <span className="w-full truncate text-center text-[11px] font-medium leading-none opacity-75 jp">{k.onyomi[0] ?? ""}</span>
+                  <span className="w-full truncate text-center text-[11px] font-medium leading-none opacity-75 jp">{cleanKun(k.kunyomi[0] ?? "")}</span>
+                </div>
               </button>
             );
           })}

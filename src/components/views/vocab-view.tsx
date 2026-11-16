@@ -4,11 +4,11 @@ import { useMemo, useState } from "react";
 import {
   BookOpen,
   Search,
-  LayoutGrid,
-  List,
   Layers,
   Sparkles,
   BookMarked,
+  Volume2,
+  ArrowRight,
 } from "lucide-react";
 import {
   ToggleGroup,
@@ -21,6 +21,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -29,6 +30,7 @@ import { minnaLessons, lessonsForLevel } from "@/lib/data/lessons";
 import { useProgress } from "@/lib/stores/progress-store";
 import { useSettings } from "@/lib/stores/settings-store";
 import { useNav } from "@/lib/stores/nav-store";
+import { useJapaneseAudio } from "../nikki/use-japanese-audio";
 import { SectionHeader, EmptyState, LevelBadge } from "../nikki/shared";
 import { FuriganaText } from "../nikki/furigana";
 import { AudioButton } from "../nikki/audio-button";
@@ -37,8 +39,19 @@ import { getLucideIcon } from "../nikki/icon-map";
 import type { JLPTLevel, VocabData } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
-type ViewMode = "cards" | "list";
 type LevelFilter = "all" | JLPTLevel;
+
+const POS_INFO: Record<string, { jp: string; en: string }> = {
+  noun: { jp: "名詞", en: "A word for a thing, person, place, or concept." },
+  verb: { jp: "動詞", en: "An action word (to do, to eat, to go)." },
+  "i-adjective": { jp: "い形容詞", en: "An adjective ending in い; describes a quality directly." },
+  "na-adjective": { jp: "な形容詞", en: "An adjective that takes な before a noun." },
+  adverb: { jp: "副詞", en: "Modifies a verb or adjective (how, when, how much)." },
+  particle: { jp: "助詞", en: "A grammatical marker showing the role of a word in the sentence." },
+  expression: { jp: "表現", en: "A fixed phrase or greeting used as-is." },
+  pronoun: { jp: "代名詞", en: "A word that replaces a noun (I, you, this, that)." },
+  conjunction: { jp: "接続詞", en: "Connects sentences or clauses (and, but, so)." },
+};
 
 function firstLessonForLevel(level: LevelFilter): string {
   if (level === "N4") return "26";
@@ -59,8 +72,8 @@ export function VocabView() {
   const [lesson, setLesson] = useState<string>("1");
   const [theme, setTheme] = useState<string>("all");
   const [query, setQuery] = useState("");
-  const [mode, setMode] = useState<ViewMode>("cards");
   const [flashOpen, setFlashOpen] = useState(false);
+  const [detailId, setDetailId] = useState<string | null>(null);
 
   const q = (query || globalSearch).trim().toLowerCase();
   const lessonNum = lesson === "all" ? null : Number(lesson);
@@ -80,18 +93,6 @@ export function VocabView() {
     });
   }, [level, lessonNum, theme, q]);
 
-  const grouped = useMemo(() => {
-    if (theme !== "all") return [{ name: theme, items: filtered }];
-    const map = new Map<string, VocabData[]>();
-    for (const v of filtered) {
-      if (!map.has(v.theme)) map.set(v.theme, []);
-      map.get(v.theme)!.push(v);
-    }
-    return vocabThemes
-      .map((t) => ({ name: t.name, items: map.get(t.name) ?? [] }))
-      .filter((g) => g.items.length > 0);
-  }, [filtered, theme]);
-
   function masteryColor(id: string) {
     const st = mastery[id] ?? "new";
     if (st === "mastered") return "text-matcha";
@@ -106,13 +107,22 @@ export function VocabView() {
     setTheme("all");
   }
 
+  const detailWord = detailId ? vocabData.find((v) => v.id === detailId) : null;
+  // More examples: other words from the same lesson
+  const moreExamples = useMemo(() => {
+    if (!detailWord) return [];
+    return vocabData
+      .filter((v) => v.id !== detailWord.id && v.lesson === detailWord.lesson)
+      .slice(0, 6);
+  }, [detailWord]);
+
   return (
     <div>
       <SectionHeader
         title="Vocabulary"
         jp="単語"
         icon={BookOpen}
-        description={`${vocabData.length} words organized by Minna no Nihongo lessons. Pick a lesson, browse by theme, or start flashcards.`}
+        description={`${vocabData.length} words organized by Minna no Nihongo lessons. Each entry shows the kanji with furigana, the hiragana/katakana reading, meaning, and an example sentence — click any word for more examples.`}
         action={
           <Button size="sm" onClick={() => setFlashOpen(true)} disabled={filtered.length === 0}>
             <Sparkles className="mr-1 h-4 w-4" /> Flashcards ({filtered.length})
@@ -156,20 +166,6 @@ export function VocabView() {
             ))}
           </SelectContent>
         </Select>
-        <ToggleGroup
-          type="single"
-          value={mode}
-          onValueChange={(v) => v && setMode(v as ViewMode)}
-          variant="outline"
-          size="sm"
-        >
-          <ToggleGroupItem value="cards" aria-label="Card view">
-            <LayoutGrid className="h-4 w-4" />
-          </ToggleGroupItem>
-          <ToggleGroupItem value="list" aria-label="List view">
-            <List className="h-4 w-4" />
-          </ToggleGroupItem>
-        </ToggleGroup>
       </div>
 
       {/* Lesson banner */}
@@ -215,78 +211,190 @@ export function VocabView() {
           title="No words found"
           description="Try a different lesson, theme, level, or search term."
         />
-      ) : mode === "cards" ? (
-        <div className="space-y-6">
-          {grouped.map((g) => (
-            <div key={g.name}>
-              <h3 className="mb-2 flex items-center gap-2 text-sm font-bold text-foreground">
-                {(() => {
-                  const t = vocabThemes.find((x) => x.name === g.name);
-                  const Icon = t ? getLucideIcon(t.icon) : Layers;
-                  return <Icon className="h-4 w-4 text-primary" />;
-                })()}
-                {g.name}
-                <span className="jp text-muted-foreground">
-                  {vocabThemes.find((x) => x.name === g.name)?.jp}
-                </span>
-                <span className="text-xs font-normal text-muted-foreground">({g.items.length})</span>
-              </h3>
-              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                {g.items.map((v) => (
-                  <VocabCard
-                    key={v.id}
-                    v={v}
-                    showRomaji={showRomaji}
-                    showFurigana={showFurigana}
-                    mastery={mastery[v.id] ?? "new"}
-                    onCycle={() => cycleMastery("vocab", v.id)}
-                  />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
       ) : (
-        <div className="overflow-hidden rounded-2xl border border-border">
-          <div className="divide-y divide-border">
-            {filtered.map((v) => {
-              const st = mastery[v.id] ?? "new";
-              return (
-                <div
-                  key={v.id}
-                  className="flex items-center gap-3 bg-card px-4 py-2.5 transition-colors hover:bg-accent/40"
-                >
-                  <button
-                    onClick={() => cycleMastery("vocab", v.id)}
-                    className={cn("shrink-0", masteryColor(v.id))}
-                    aria-label={`Mastery: ${st}`}
-                  >
-                    <Sparkles className="h-5 w-5" />
-                  </button>
-                  <div className="flex w-40 shrink-0 flex-col">
-                    <FuriganaText text={v.word} showFurigana={showFurigana} className="jp text-base font-bold text-foreground" />
-                    {showRomaji && <span className="text-[11px] italic text-muted-foreground">{v.romaji}</span>}
-                  </div>
-                  <span className="hidden w-32 shrink-0 jp text-xs text-muted-foreground sm:block">{v.reading}</span>
-                  <span className="flex-1 text-sm text-foreground/90">{v.meaning}</span>
-                  {v.lesson && <span className="hidden text-[10px] text-muted-foreground md:block">L{v.lesson}</span>}
-                  <LevelBadge level={v.level} className="hidden sm:inline-flex" />
-                  <AudioButton text={v.word} />
+        /* Grammar-style horizontal list */
+        <div className="grid gap-2.5">
+          {filtered.map((v) => {
+            const st = mastery[v.id] ?? "new";
+            const isKatakana = /[\u30a0-\u30ff]/.test(v.word) && !/[\u3040-\u309f]/.test(v.word.replace(/[\u30a0-\u30ff]/g, ""));
+            return (
+              <div
+                key={v.id}
+                role="button"
+                tabIndex={0}
+                onClick={() => setDetailId(v.id)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setDetailId(v.id);
+                  }
+                }}
+                className="group flex cursor-pointer items-center gap-4 rounded-2xl border border-border bg-card p-4 text-left transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                <div className="flex w-44 shrink-0 flex-col items-start gap-1">
+                  <FuriganaText text={v.word} showFurigana={showFurigana} className="jp text-xl font-bold text-foreground" />
+                  <span className="jp text-xs text-muted-foreground">
+                    {v.reading}
+                    {isKatakana && <span className="ml-1 text-[9px] uppercase opacity-70">katakana</span>}
+                    {!isKatakana && v.reading !== v.word && <span className="ml-1 text-[9px] uppercase opacity-70">hiragana</span>}
+                  </span>
+                  <LevelBadge level={v.level} />
                 </div>
-              );
-            })}
-          </div>
+                <div className="min-w-0 flex-1">
+                  <p className="text-sm font-semibold text-foreground">
+                    {v.meaning}
+                    {showRomaji && <span className="ml-2 text-xs font-normal italic text-muted-foreground">{v.romaji}</span>}
+                  </p>
+                  <p className="mt-0.5 line-clamp-1 text-xs text-muted-foreground">
+                    <span className="jp"><FuriganaText text={v.example.jp} showFurigana={showFurigana} /></span>
+                    <span className="ml-1">— {v.example.en}</span>
+                  </p>
+                  <div className="mt-1.5 flex flex-wrap gap-1">
+                    <Badge variant="outline" className="text-[10px] font-normal">{v.partOfSpeech}</Badge>
+                    <Badge variant="outline" className="text-[10px] font-normal">{v.theme}</Badge>
+                    {v.lesson && <Badge variant="secondary" className="text-[10px] font-normal">L{v.lesson}</Badge>}
+                  </div>
+                </div>
+                <AudioButton text={v.word} />
+                <button
+                  onClick={(e) => { e.stopPropagation(); cycleMastery("vocab", v.id); }}
+                  className={cn(
+                    "inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors hover:bg-accent",
+                    masteryColor(v.id)
+                  )}
+                  aria-label={`Mastery: ${st}`}
+                >
+                  <Sparkles className="h-5 w-5" />
+                </button>
+                <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
+              </div>
+            );
+          })}
         </div>
       )}
 
       <p className="mt-4 text-center text-xs text-muted-foreground">
-        {filtered.length} words ・ Want a challenge?{" "}
+        {filtered.length} words ・ Click any word for more examples and explanation ・{" "}
         <button onClick={() => setView("quiz")} className="font-semibold text-primary underline-offset-2 hover:underline">
           Take a vocab quiz →
         </button>
       </p>
 
       <FlashcardDialog open={flashOpen} onOpenChange={setFlashOpen} cards={filtered} title="Vocabulary Flashcards" />
+
+      {/* Detail dialog with more examples */}
+      <Dialog open={!!detailWord} onOpenChange={(o) => !o && setDetailId(null)}>
+        <DialogContent className="max-w-lg p-0">
+          <DialogTitle className="sr-only">Vocabulary detail</DialogTitle>
+          {detailWord && (
+            <VocabDetail
+              v={detailWord}
+              showRomaji={showRomaji}
+              showFurigana={showFurigana}
+              moreExamples={moreExamples}
+            />
+          )}
+        </DialogContent>
+      </Dialog>
+    </div>
+  );
+}
+
+function VocabDetail({
+  v,
+  showRomaji,
+  showFurigana,
+  moreExamples,
+}: {
+  v: VocabData;
+  showRomaji: boolean;
+  showFurigana: boolean;
+  moreExamples: VocabData[];
+}) {
+  const { speak } = useJapaneseAudio();
+  const pos = POS_INFO[v.partOfSpeech];
+  return (
+    <div>
+      <div className="bg-gradient-to-br from-primary/10 via-card to-card p-5">
+        <div className="mb-2 flex items-center gap-2">
+          <LevelBadge level={v.level} />
+          <Badge variant="outline">{v.partOfSpeech}</Badge>
+          {v.lesson && <Badge variant="secondary">Minna L{v.lesson}</Badge>}
+          <Badge variant="outline">{v.theme}</Badge>
+        </div>
+        <div className="flex items-center gap-3">
+          <FuriganaText text={v.word} showFurigana={showFurigana} className="jp text-4xl font-bold text-foreground" />
+          <button
+            onClick={() => speak(v.word)}
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground hover:bg-primary/10 hover:text-primary"
+            aria-label="Play audio"
+          >
+            <Volume2 className="h-5 w-5" />
+          </button>
+        </div>
+        <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
+          <span className="jp">読み: <span className="text-foreground">{v.reading}</span></span>
+          {showRomaji && <span>romaji: <span className="italic text-foreground">{v.romaji}</span></span>}
+        </div>
+        <p className="mt-2 text-lg font-semibold text-foreground">{v.meaning}</p>
+      </div>
+
+      <div className="space-y-4 p-5">
+        {pos && (
+          <div className="rounded-xl bg-muted/40 p-3">
+            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Part of speech <span className="jp normal-case">{pos.jp}</span>
+            </p>
+            <p className="mt-1 text-sm text-foreground/90">{pos.en}</p>
+          </div>
+        )}
+
+        <div>
+          <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+            Example sentence <span className="jp normal-case">例文</span>
+          </h4>
+          <div className="rounded-xl bg-muted/40 p-3">
+            <div className="flex items-start gap-2">
+              <FuriganaText text={v.example.jp} showFurigana={showFurigana} className="jp text-base font-medium text-foreground" />
+              <button
+                onClick={() => speak(v.example.jp)}
+                className="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-muted-foreground hover:bg-primary/10 hover:text-primary"
+                aria-label="Play example audio"
+              >
+                <Volume2 className="h-4 w-4" />
+              </button>
+            </div>
+            <p className="mt-2 text-sm text-muted-foreground">{v.example.en}</p>
+          </div>
+        </div>
+
+        {moreExamples.length > 0 && (
+          <div>
+            <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              More examples from this lesson <span className="jp normal-case">例文をもっと見る</span>
+            </h4>
+            <div className="space-y-2">
+              {moreExamples.map((w) => (
+                <button
+                  key={w.id}
+                  onClick={() => speak(w.example.jp)}
+                  className="block w-full rounded-xl border border-border bg-card p-3 text-left transition-colors hover:bg-accent/40"
+                >
+                  <div className="mb-1 flex items-center gap-2">
+                    <FuriganaText text={w.word} showFurigana={showFurigana} className="jp text-base font-bold text-foreground" />
+                    <span className="jp text-[11px] text-muted-foreground">{w.reading}</span>
+                    <span className="ml-auto text-xs text-foreground/80">{w.meaning}</span>
+                  </div>
+                  <div className="flex items-start gap-1.5">
+                    <FuriganaText text={w.example.jp} showFurigana={showFurigana} className="jp text-xs text-foreground/90" />
+                  </div>
+                  <p className="mt-0.5 text-[11px] text-muted-foreground">{w.example.en}</p>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
@@ -318,59 +426,5 @@ function ThemeChip({
       {label}
       {jp && <span className={cn("jp", active ? "opacity-80" : "text-muted-foreground")}>{jp}</span>}
     </button>
-  );
-}
-
-function VocabCard({
-  v,
-  showRomaji,
-  showFurigana,
-  mastery,
-  onCycle,
-}: {
-  v: VocabData;
-  showRomaji: boolean;
-  showFurigana: boolean;
-  mastery: string;
-  onCycle: () => void;
-}) {
-  return (
-    <div className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:shadow-md">
-      <div className="mb-3 flex items-start justify-between gap-2">
-        <div>
-          <FuriganaText text={v.word} showFurigana={showFurigana} className="jp text-4xl font-bold text-foreground" />
-          {showRomaji && <p className="mt-1 text-base italic text-muted-foreground">{v.romaji}</p>}
-        </div>
-        <div className="flex items-center gap-1">
-          <AudioButton text={v.word} />
-          <button
-            onClick={onCycle}
-            className={cn(
-              "inline-flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-accent",
-              mastery === "mastered"
-                ? "text-matcha"
-                : mastery === "learning"
-                  ? "text-warm-yellow"
-                  : "text-muted-foreground/40"
-            )}
-            aria-label={`Mark mastery (currently ${mastery})`}
-          >
-            <Sparkles className="h-5 w-5" />
-          </button>
-        </div>
-      </div>
-      <p className="text-lg font-medium text-foreground">{v.meaning}</p>
-      <div className="mt-2 flex flex-wrap items-center gap-1.5">
-        <LevelBadge level={v.level} />
-        <Badge variant="outline" className="text-[10px] font-normal">{v.partOfSpeech}</Badge>
-        {v.lesson && <Badge variant="secondary" className="text-[10px] font-normal">L{v.lesson}</Badge>}
-      </div>
-      <div className="mt-3 flex-1 rounded-xl bg-muted/40 p-3.5">
-        <div className="flex items-start gap-1">
-          <FuriganaText text={v.example.jp} showFurigana={showFurigana} className="jp text-base font-medium text-foreground" />
-        </div>
-        <p className="mt-2 text-sm text-muted-foreground">{v.example.en}</p>
-      </div>
-    </div>
   );
 }

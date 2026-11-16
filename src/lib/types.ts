@@ -88,6 +88,7 @@ export interface ReadingPassage {
 export type ViewKey =
   | "dashboard"
   | "kanji"
+  | "kana"
   | "vocab"
   | "grammar"
   | "reading"
