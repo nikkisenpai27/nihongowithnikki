@@ -7,6 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { FuriganaText } from "../nikki/furigana";
 import { AudioButton } from "../nikki/audio-button";
 import { WritingCanvas } from "../nikki/writing-canvas";
+import { StrokeOrderAnimation } from "../nikki/stroke-order";
 import { LevelBadge } from "../nikki/shared";
 import { useProgress } from "@/lib/stores/progress-store";
 import { cleanKun } from "@/lib/data/kanji";
@@ -186,6 +187,19 @@ export function KanjiDetail({ kanji, onClose }: { kanji: KanjiData; onClose?: ()
       )}
 
       <Separator />
+
+      {/* Stroke order */}
+      <div className="rounded-2xl border border-border bg-card p-4">
+        <h3 className="mb-3 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+          <PenLine className="h-3.5 w-3.5" /> Stroke Order <span className="jp normal-case font-normal">筆順</span>
+        </h3>
+        <p className="mb-4 text-sm text-muted-foreground">
+          Watch how <span className="jp text-base font-bold text-foreground">{kanji.char}</span> is
+          drawn — each stroke appears in the correct order ({kanji.strokes} strokes total). A faint
+          guide shows the finished shape.
+        </p>
+        <StrokeOrderAnimation key={kanji.char} kanji={kanji.char} />
+      </div>
 
       {/* Writing practice */}
       <div className="rounded-2xl border border-border bg-card p-4">
