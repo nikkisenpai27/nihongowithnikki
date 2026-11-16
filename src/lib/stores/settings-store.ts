@@ -67,3 +67,13 @@ export const useSettings = create<SettingsState>()(
     }
   )
 );
+
+// Global subscription: keep the DOM theme in sync with the store at ALL times,
+// independent of React component effects. This guarantees the data-theme attribute
+// and .dark class always reflect the current settings, even across view changes
+// or re-renders — eliminating any chance of theme drift.
+if (typeof window !== "undefined") {
+  useSettings.subscribe((state) => {
+    applyToDocument(state.colorTheme, state.mode);
+  });
+}

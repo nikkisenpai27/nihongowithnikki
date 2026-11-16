@@ -1,15 +1,23 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { SpellCheck, Search, Filter } from "lucide-react";
+import { SpellCheck, Search, Filter, BookMarked } from "lucide-react";
 import {
   ToggleGroup,
   ToggleGroupItem,
 } from "@/components/ui/toggle-group";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { grammarData, grammarCategories } from "@/lib/data/grammar";
+import { lessonsForLevel } from "@/lib/data/lessons";
 import { useSettings } from "@/lib/stores/settings-store";
 import { useNav } from "@/lib/stores/nav-store";
 import { SectionHeader, EmptyState, LevelBadge } from "../nikki/shared";
@@ -28,14 +36,18 @@ export function GrammarView() {
   const showFurigana = useSettings((s) => s.showFurigana);
 
   const [level, setLevel] = useState<LevelFilter>("all");
+  const [lesson, setLesson] = useState<string>("1");
   const [category, setCategory] = useState<string>("all");
   const [query, setQuery] = useState("");
 
   const q = (query || globalSearch).trim().toLowerCase();
+  const lessonNum = lesson === "all" ? null : Number(lesson);
+  const lessonOptions = lessonsForLevel(level);
 
   const filtered = useMemo(() => {
     return grammarData.filter((g) => {
       if (level !== "all" && g.level !== level) return false;
+      if (lessonNum !== null && g.lesson !== lessonNum) return false;
       if (category !== "all" && g.category !== category) return false;
       if (q) {
         const hay = [g.point, g.reading, g.meaning, g.category].join(" ").toLowerCase();
@@ -43,7 +55,14 @@ export function GrammarView() {
       }
       return true;
     });
-  }, [level, category, q]);
+  }, [level, lessonNum, category, q]);
+
+  function changeLevel(v: string) {
+    const lv = (v as LevelFilter) || "all";
+    setLevel(lv);
+    setLesson(lv === "N4" ? "26" : "1");
+    setCategory("all");
+  }
 
   const selected = selectedId ? grammarData.find((g) => g.id === selectedId) : null;
 
@@ -64,7 +83,7 @@ export function GrammarView() {
         title="Grammar"
         jp="文法"
         icon={SpellCheck}
-        description="JLPT N5 & N4 grammar points with clear explanations, formation rules, examples, and usage notes."
+        description={`${grammarData.length} grammar points across all 50 Minna no Nihongo lessons. Clear explanations, formation rules, examples, and notes.`}
       />
 
       <div className="mb-3 flex flex-wrap items-center gap-2">
@@ -80,7 +99,7 @@ export function GrammarView() {
         <ToggleGroup
           type="single"
           value={level}
-          onValueChange={(v) => setLevel((v as LevelFilter) || "all")}
+          onValueChange={changeLevel}
           variant="outline"
           size="sm"
         >
@@ -88,6 +107,21 @@ export function GrammarView() {
           <ToggleGroupItem value="N5">N5</ToggleGroupItem>
           <ToggleGroupItem value="N4">N4</ToggleGroupItem>
         </ToggleGroup>
+        <Select value={lesson} onValueChange={setLesson}>
+          <SelectTrigger className="h-9 w-full sm:w-[200px]">
+            <BookMarked className="mr-1.5 h-3.5 w-3.5 text-primary" />
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent className="max-h-72">
+            <SelectItem value="all">All lessons</SelectItem>
+            {lessonOptions.map((l) => (
+              <SelectItem key={l.lesson} value={String(l.lesson)}>
+                <span className="jp text-xs text-muted-foreground">L{l.lesson}</span> {l.title}
+                <span className="ml-1.5 inline-flex rounded px-1 text-[9px] font-bold uppercase text-muted-foreground">{l.level}</span>
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
 
       <div className="mb-5 flex flex-wrap gap-1.5">
@@ -140,6 +174,7 @@ export function GrammarView() {
                 <p className="mt-0.5 line-clamp-1 text-xs text-muted-foreground">{g.explanation}</p>
                 <div className="mt-1.5 flex flex-wrap gap-1">
                   <Badge variant="outline" className="text-[10px] font-normal">{g.category}</Badge>
+                  {g.lesson && <Badge variant="secondary" className="text-[10px] font-normal">L{g.lesson}</Badge>}
                 </div>
               </div>
             </button>

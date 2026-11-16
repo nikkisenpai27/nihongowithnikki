@@ -31,6 +31,7 @@ export interface VocabData {
   meaning: string;
   level: JLPTLevel;
   theme: string;
+  lesson?: number; // Minna no Nihongo lesson number
   partOfSpeech: string;
   example: { jp: string; en: string };
 }
@@ -41,6 +42,7 @@ export interface GrammarData {
   reading: string;
   level: JLPTLevel;
   category: string;
+  lesson?: number; // Minna no Nihongo lesson number
   meaning: string;
   structure: string;
   explanation: string;

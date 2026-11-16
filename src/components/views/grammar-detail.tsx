@@ -32,6 +32,7 @@ export function GrammarDetail({ point, onBack }: { point: GrammarData; onBack?: 
         <div className="mb-2 flex flex-wrap items-center gap-2">
           <LevelBadge level={point.level} />
           <Badge variant="outline">{point.category}</Badge>
+          {point.lesson && <Badge variant="secondary">Minna L{point.lesson}</Badge>}
           <button
             onClick={() => cycleMastery("grammar", point.id)}
             className={cn(

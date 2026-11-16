@@ -7,17 +7,25 @@ import {
   LayoutGrid,
   List,
   Layers,
-  Volume2,
   Sparkles,
+  BookMarked,
 } from "lucide-react";
 import {
   ToggleGroup,
   ToggleGroupItem,
 } from "@/components/ui/toggle-group";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { vocabData, vocabThemes } from "@/lib/data/vocab";
+import { minnaLessons, lessonsForLevel } from "@/lib/data/lessons";
 import { useProgress } from "@/lib/stores/progress-store";
 import { useSettings } from "@/lib/stores/settings-store";
 import { useNav } from "@/lib/stores/nav-store";
@@ -32,6 +40,12 @@ import { cn } from "@/lib/utils";
 type ViewMode = "cards" | "list";
 type LevelFilter = "all" | JLPTLevel;
 
+function firstLessonForLevel(level: LevelFilter): string {
+  if (level === "N4") return "26";
+  if (level === "N5") return "1";
+  return "1";
+}
+
 export function VocabView() {
   const globalSearch = useNav((s) => s.search);
   const setView = useNav((s) => s.setView);
@@ -42,16 +56,21 @@ export function VocabView() {
   const showFurigana = useSettings((s) => s.showFurigana);
 
   const [level, setLevel] = useState<LevelFilter>("all");
+  const [lesson, setLesson] = useState<string>("1");
   const [theme, setTheme] = useState<string>("all");
   const [query, setQuery] = useState("");
   const [mode, setMode] = useState<ViewMode>("cards");
   const [flashOpen, setFlashOpen] = useState(false);
 
   const q = (query || globalSearch).trim().toLowerCase();
+  const lessonNum = lesson === "all" ? null : Number(lesson);
+  const lessonOptions = lessonsForLevel(level);
+  const currentLesson = lessonNum ? minnaLessons.find((l) => l.lesson === lessonNum) : null;
 
   const filtered = useMemo(() => {
     return vocabData.filter((v) => {
       if (level !== "all" && v.level !== level) return false;
+      if (lessonNum !== null && v.lesson !== lessonNum) return false;
       if (theme !== "all" && v.theme !== theme) return false;
       if (q) {
         const hay = [v.word, v.reading, v.romaji, v.meaning].join(" ").toLowerCase();
@@ -59,7 +78,7 @@ export function VocabView() {
       }
       return true;
     });
-  }, [level, theme, q]);
+  }, [level, lessonNum, theme, q]);
 
   const grouped = useMemo(() => {
     if (theme !== "all") return [{ name: theme, items: filtered }];
@@ -80,13 +99,20 @@ export function VocabView() {
     return "text-muted-foreground/40";
   }
 
+  function changeLevel(v: string) {
+    const lv = (v as LevelFilter) || "all";
+    setLevel(lv);
+    setLesson(firstLessonForLevel(lv));
+    setTheme("all");
+  }
+
   return (
     <div>
       <SectionHeader
         title="Vocabulary"
         jp="単語"
         icon={BookOpen}
-        description="Browse N5 & N4 vocabulary by theme. Tap the star to mark mastery, or start a flashcard session."
+        description={`${vocabData.length} words organized by Minna no Nihongo lessons. Pick a lesson, browse by theme, or start flashcards.`}
         action={
           <Button size="sm" onClick={() => setFlashOpen(true)} disabled={filtered.length === 0}>
             <Sparkles className="mr-1 h-4 w-4" /> Flashcards ({filtered.length})
@@ -107,7 +133,7 @@ export function VocabView() {
         <ToggleGroup
           type="single"
           value={level}
-          onValueChange={(v) => setLevel((v as LevelFilter) || "all")}
+          onValueChange={changeLevel}
           variant="outline"
           size="sm"
         >
@@ -115,6 +141,21 @@ export function VocabView() {
           <ToggleGroupItem value="N5">N5</ToggleGroupItem>
           <ToggleGroupItem value="N4">N4</ToggleGroupItem>
         </ToggleGroup>
+        <Select value={lesson} onValueChange={setLesson}>
+          <SelectTrigger className="h-9 w-full sm:w-[200px]">
+            <BookMarked className="mr-1.5 h-3.5 w-3.5 text-primary" />
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent className="max-h-72">
+            <SelectItem value="all">All lessons</SelectItem>
+            {lessonOptions.map((l) => (
+              <SelectItem key={l.lesson} value={String(l.lesson)}>
+                <span className="jp text-xs text-muted-foreground">L{l.lesson}</span> {l.title}
+                <span className="ml-1.5 inline-flex rounded px-1 text-[9px] font-bold uppercase text-muted-foreground">{l.level}</span>
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
         <ToggleGroup
           type="single"
           value={mode}
@@ -130,6 +171,25 @@ export function VocabView() {
           </ToggleGroupItem>
         </ToggleGroup>
       </div>
+
+      {/* Lesson banner */}
+      {currentLesson && (
+        <div className="mb-4 flex items-center gap-3 rounded-2xl border border-primary/20 bg-primary/5 p-3">
+          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/15 text-sm font-bold text-primary jp">
+            L{currentLesson.lesson}
+          </span>
+          <div className="flex-1">
+            <p className="text-sm font-bold text-foreground">
+              {currentLesson.title}
+              <span className="jp ml-2 font-normal text-muted-foreground">{currentLesson.jp}</span>
+            </p>
+            <p className="text-[11px] text-muted-foreground">
+              {filtered.length} words ・ Minna no Nihongo {currentLesson.level} ・ Lesson {currentLesson.lesson}
+            </p>
+          </div>
+          <LevelBadge level={currentLesson.level} />
+        </div>
+      )}
 
       {/* Theme chips */}
       <div className="mb-5 flex flex-wrap gap-1.5">
@@ -153,7 +213,7 @@ export function VocabView() {
         <EmptyState
           icon={Search}
           title="No words found"
-          description="Try a different theme, level, or search term."
+          description="Try a different lesson, theme, level, or search term."
         />
       ) : mode === "cards" ? (
         <div className="space-y-6">
@@ -209,6 +269,7 @@ export function VocabView() {
                   </div>
                   <span className="hidden w-32 shrink-0 jp text-xs text-muted-foreground sm:block">{v.reading}</span>
                   <span className="flex-1 text-sm text-foreground/90">{v.meaning}</span>
+                  {v.lesson && <span className="hidden text-[10px] text-muted-foreground md:block">L{v.lesson}</span>}
                   <LevelBadge level={v.level} className="hidden sm:inline-flex" />
                   <AudioButton text={v.word} />
                 </div>
@@ -255,7 +316,7 @@ function ThemeChip({
     >
       <Icon className="h-3.5 w-3.5" />
       {label}
-      <span className={cn("jp", active ? "opacity-80" : "text-muted-foreground")}>{jp}</span>
+      {jp && <span className={cn("jp", active ? "opacity-80" : "text-muted-foreground")}>{jp}</span>}
     </button>
   );
 }
@@ -299,9 +360,10 @@ function VocabCard({
         </div>
       </div>
       <p className="text-sm font-medium text-foreground">{v.meaning}</p>
-      <div className="mt-1 flex items-center gap-1.5">
+      <div className="mt-1 flex flex-wrap items-center gap-1.5">
         <LevelBadge level={v.level} />
         <Badge variant="outline" className="text-[10px] font-normal">{v.partOfSpeech}</Badge>
+        {v.lesson && <Badge variant="secondary" className="text-[10px] font-normal">L{v.lesson}</Badge>}
       </div>
       <div className="mt-3 rounded-xl bg-muted/40 p-2.5">
         <div className="flex items-start gap-1">
