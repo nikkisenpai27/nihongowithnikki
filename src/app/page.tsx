@@ -8,6 +8,7 @@ import { DashboardView } from "@/components/views/dashboard-view";
 import { KanjiView } from "@/components/views/kanji-view";
 import { VocabView } from "@/components/views/vocab-view";
 import { GrammarView } from "@/components/views/grammar-view";
+import { ReadingView } from "@/components/views/reading-view";
 import { StoriesView } from "@/components/views/stories-view";
 import { QuizView } from "@/components/views/quiz-view";
 import { SettingsView } from "@/components/views/settings-view";
@@ -18,6 +19,7 @@ const VIEWS: Record<ViewKey, () => React.ReactNode> = {
   kanji: () => <KanjiView />,
   vocab: () => <VocabView />,
   grammar: () => <GrammarView />,
+  reading: () => <ReadingView />,
   stories: () => <StoriesView />,
   quiz: () => <QuizView />,
   settings: () => <SettingsView />,
@@ -28,9 +30,10 @@ const KEY_TO_VIEW: Record<string, ViewKey> = {
   "2": "kanji",
   "3": "vocab",
   "4": "grammar",
-  "5": "stories",
-  "6": "quiz",
-  "7": "settings",
+  "5": "reading",
+  "6": "stories",
+  "7": "quiz",
+  "8": "settings",
 };
 
 export default function Home() {
@@ -42,6 +45,7 @@ export default function Home() {
   const openKanji = useNav((s) => s.openKanji);
   const openGrammar = useNav((s) => s.openGrammar);
   const openStory = useNav((s) => s.openStory);
+  const openReading = useNav((s) => s.openReading);
 
   // Keyboard shortcuts (power users)
   useEffect(() => {
@@ -82,6 +86,7 @@ export default function Home() {
           onSelectVocab={() => { setSearch(""); setView("vocab"); }}
           onSelectGrammar={(id) => { setSearch(""); setView("grammar"); openGrammar(id); }}
           onSelectStory={(id) => { setSearch(""); setView("stories"); openStory(id); }}
+          onSelectReading={(id) => { setSearch(""); setView("reading"); openReading(id); }}
           onClear={() => setSearch("")}
         />
       ) : (
@@ -90,7 +95,7 @@ export default function Home() {
 
       {/* Keyboard hint footer (desktop) */}
       <div className="mt-8 hidden text-center text-[10px] text-muted-foreground lg:block">
-        Keyboard: <kbd className="rounded bg-muted px-1">1–7</kbd> switch views ・{" "}
+        Keyboard: <kbd className="rounded bg-muted px-1">1–8</kbd> switch views ・{" "}
         <kbd className="rounded bg-muted px-1">/</kbd> search ・{" "}
         <kbd className="rounded bg-muted px-1">F</kbd> toggle furigana ・{" "}
         <kbd className="rounded bg-muted px-1">Esc</kbd> clear search

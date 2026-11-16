@@ -7,7 +7,8 @@ import { vocabN4B } from "./vocab-n4-b";
 import { vocabN4C } from "./vocab-n4-c";
 
 // Minna no Nihongo vocabulary: ~809 N5 (lessons 1-25) + ~812 N4 (lessons 26-50)
-export const vocabData: VocabData[] = [
+// Deduplicated by word (common particles/expressions appear across multiple lessons)
+const allVocab: VocabData[] = [
   ...vocabN5A,
   ...vocabN5B,
   ...vocabN5C,
@@ -15,6 +16,12 @@ export const vocabData: VocabData[] = [
   ...vocabN4B,
   ...vocabN4C,
 ];
+const _seenWords = new Set<string>();
+export const vocabData: VocabData[] = allVocab.filter((v) => {
+  if (_seenWords.has(v.word)) return false;
+  _seenWords.add(v.word);
+  return true;
+});
 
 // Derive theme list from the data, with a best-effort icon mapping.
 const THEME_ICON_MAP: Record<string, string> = {

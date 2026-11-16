@@ -1,13 +1,14 @@
 "use client";
 
 import { useMemo } from "react";
-import { Search, X, Languages, BookOpen, SpellCheck, BookText } from "lucide-react";
+import { Search, X, Languages, BookOpen, SpellCheck, BookText, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { kanjiData, cleanKun } from "@/lib/data/kanji";
 import { vocabData } from "@/lib/data/vocab";
 import { grammarData } from "@/lib/data/grammar";
 import { storiesData } from "@/lib/data/stories";
+import { readingData } from "@/lib/data/reading";
 import { useSettings } from "@/lib/stores/settings-store";
 import { LevelBadge } from "./shared";
 import { FuriganaText } from "./furigana";
@@ -19,6 +20,7 @@ interface Props {
   onSelectVocab: () => void;
   onSelectGrammar: (id: string) => void;
   onSelectStory: (id: string) => void;
+  onSelectReading: (id: string) => void;
   onClear: () => void;
 }
 
@@ -28,13 +30,14 @@ export function GlobalSearchResults({
   onSelectVocab,
   onSelectGrammar,
   onSelectStory,
+  onSelectReading,
   onClear,
 }: Props) {
   const showFurigana = useSettings((s) => s.showFurigana);
   const q = query.trim().toLowerCase();
 
   const results = useMemo(() => {
-    if (!q) return { kanji: [], vocab: [], grammar: [], stories: [] };
+    if (!q) return { kanji: [], vocab: [], grammar: [], stories: [], reading: [] };
     return {
       kanji: kanjiData
         .filter((k) =>
@@ -53,11 +56,14 @@ export function GlobalSearchResults({
       stories: storiesData
         .filter((s) => [s.title, s.titleReading, s.summary, ...s.tags].join(" ").toLowerCase().includes(q))
         .slice(0, 8),
+      reading: readingData
+        .filter((p) => [p.title, p.titleReading, p.summary, ...p.tags].join(" ").toLowerCase().includes(q))
+        .slice(0, 8),
     };
   }, [q]);
 
   const total =
-    results.kanji.length + results.vocab.length + results.grammar.length + results.stories.length;
+    results.kanji.length + results.vocab.length + results.grammar.length + results.stories.length + results.reading.length;
 
   return (
     <div>
@@ -160,6 +166,26 @@ export function GlobalSearchResults({
                     <p className="truncate text-[11px] text-muted-foreground">{s.summary}</p>
                   </div>
                   <LevelBadge level={s.level} />
+                </button>
+              ))}
+            </div>
+          </Section>
+        )}
+
+        {results.reading.length > 0 && (
+          <Section icon={FileText} title="Reading" jp="読解" count={results.reading.length}>
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {results.reading.map((p) => (
+                <button
+                  key={p.id}
+                  onClick={() => onSelectReading(p.id)}
+                  className="flex items-center gap-3 rounded-xl border border-border bg-card p-3 text-left transition-all hover:bg-accent/40"
+                >
+                  <div className="min-w-0 flex-1">
+                    <FuriganaText text={p.title} showFurigana={showFurigana} className="jp text-base font-bold text-foreground" />
+                    <p className="truncate text-[11px] text-muted-foreground">{p.summary}</p>
+                  </div>
+                  <LevelBadge level={p.level} />
                 </button>
               ))}
             </div>

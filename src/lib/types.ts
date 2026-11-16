@@ -65,11 +65,32 @@ export interface StoryData {
   vocab: { word: string; reading: string; meaning: string }[];
 }
 
+export interface ReadingQuestion {
+  q: string;
+  choices: string[];
+  answerIndex: number;
+  explanation: string;
+}
+
+export interface ReadingPassage {
+  id: string;
+  title: string;
+  titleReading: string;
+  level: JLPTLevel;
+  summary: string;
+  estMinutes: number;
+  tags: string[];
+  body: string[];
+  translation: string[];
+  questions: ReadingQuestion[];
+}
+
 export type ViewKey =
   | "dashboard"
   | "kanji"
   | "vocab"
   | "grammar"
+  | "reading"
   | "stories"
   | "quiz"
   | "settings";

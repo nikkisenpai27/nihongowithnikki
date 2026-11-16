@@ -67,10 +67,10 @@ function pickDistractors<T>(pool: T[], correct: T, n: number): T[] {
   return others;
 }
 
-type LevelFilter = "all" | JLPTLevel;
+type LevelFilter = JLPTLevel;
 
 function buildQuestions(type: QuizType, level: LevelFilter, count: number): Question[] {
-  const lvlFilter = (l: JLPTLevel) => level === "all" || l === level;
+  const lvlFilter = (l: JLPTLevel) => l === level;
   const questions: Question[] = [];
 
   const mkKanjiMeaning = (): Question | null => {
@@ -205,7 +205,7 @@ type Phase = "setup" | "playing" | "results";
 export function QuizView() {
   const [phase, setPhase] = useState<Phase>("setup");
   const [type, setType] = useState<QuizType>("mixed");
-  const [level, setLevel] = useState<LevelFilter>("all");
+  const [level, setLevel] = useState<LevelFilter>("N5");
   const [count, setCount] = useState(10);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [current, setCurrent] = useState(0);
@@ -252,7 +252,7 @@ export function QuizView() {
       addQuizResult({
         id: `quiz-${Date.now()}`,
         type,
-        level: level === "all" ? "N5" : level,
+        level,
         score,
         total: questions.length,
         date: new Date().toISOString(),
@@ -311,11 +311,10 @@ export function QuizView() {
               <ToggleGroup
                 type="single"
                 value={level}
-                onValueChange={(v) => setLevel((v as LevelFilter) || "all")}
+                onValueChange={(v) => v && setLevel(v as LevelFilter)}
                 variant="outline"
                 size="sm"
               >
-                <ToggleGroupItem value="all">All</ToggleGroupItem>
                 <ToggleGroupItem value="N5">N5</ToggleGroupItem>
                 <ToggleGroupItem value="N4">N4</ToggleGroupItem>
               </ToggleGroup>

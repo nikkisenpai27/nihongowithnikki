@@ -248,7 +248,7 @@ export function KanjiView() {
         <div
           className="grid gap-1.5"
           style={{
-            gridTemplateColumns: "repeat(auto-fill, minmax(38px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fill, minmax(76px, 1fr))",
           }}
         >
           {filtered.map((k) => {
@@ -258,14 +258,20 @@ export function KanjiView() {
                 key={k.id}
                 onClick={() => openKanji(k.id)}
                 className={cn(
-                  "heatmap-cell jp flex aspect-square items-center justify-center rounded-md text-base font-medium ring-1 ring-inset ring-border/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                  "heatmap-cell jp flex aspect-square flex-col items-center justify-center gap-0.5 rounded-lg ring-1 ring-inset ring-border/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                   showFurigana && st === "mastered" && "ring-primary/40"
                 )}
                 style={cellStyle(k)}
                 title={`${k.char} — ${k.meaning.join(", ")} (${k.level})`}
                 aria-label={`${k.char}, ${k.meaning.join(", ")}, ${k.level}, ${st}`}
               >
-                {k.char}
+                <span className="w-full truncate px-1 text-center text-[9px] font-normal leading-none opacity-75">
+                  {k.onyomi[0] ?? ""}
+                </span>
+                <span className="text-2xl font-bold leading-none">{k.char}</span>
+                <span className="w-full truncate px-1 text-center text-[9px] font-normal leading-none opacity-75">
+                  {cleanKun(k.kunyomi[0] ?? "")}
+                </span>
               </button>
             );
           })}
