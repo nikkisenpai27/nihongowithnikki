@@ -231,7 +231,7 @@ export function VocabView() {
                 </span>
                 <span className="text-xs font-normal text-muted-foreground">({g.items.length})</span>
               </h3>
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {g.items.map((v) => (
                   <VocabCard
                     key={v.id}
@@ -261,7 +261,7 @@ export function VocabView() {
                     className={cn("shrink-0", masteryColor(v.id))}
                     aria-label={`Mastery: ${st}`}
                   >
-                    <Sparkles className="h-4 w-4" />
+                    <Sparkles className="h-5 w-5" />
                   </button>
                   <div className="flex w-40 shrink-0 flex-col">
                     <FuriganaText text={v.word} showFurigana={showFurigana} className="jp text-base font-bold text-foreground" />
@@ -335,18 +335,18 @@ function VocabCard({
   onCycle: () => void;
 }) {
   return (
-    <div className="group flex flex-col rounded-2xl border border-border bg-card p-5 transition-all hover:shadow-md">
+    <div className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:shadow-md">
       <div className="mb-3 flex items-start justify-between gap-2">
         <div>
-          <FuriganaText text={v.word} showFurigana={showFurigana} className="jp text-3xl font-bold text-foreground" />
-          {showRomaji && <p className="mt-0.5 text-sm italic text-muted-foreground">{v.romaji}</p>}
+          <FuriganaText text={v.word} showFurigana={showFurigana} className="jp text-4xl font-bold text-foreground" />
+          {showRomaji && <p className="mt-1 text-base italic text-muted-foreground">{v.romaji}</p>}
         </div>
         <div className="flex items-center gap-1">
           <AudioButton text={v.word} />
           <button
             onClick={onCycle}
             className={cn(
-              "inline-flex h-7 w-7 items-center justify-center rounded-full transition-colors hover:bg-accent",
+              "inline-flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-accent",
               mastery === "mastered"
                 ? "text-matcha"
                 : mastery === "learning"
@@ -355,21 +355,21 @@ function VocabCard({
             )}
             aria-label={`Mark mastery (currently ${mastery})`}
           >
-            <Sparkles className="h-4 w-4" />
+            <Sparkles className="h-5 w-5" />
           </button>
         </div>
       </div>
-      <p className="text-base font-medium text-foreground">{v.meaning}</p>
+      <p className="text-lg font-medium text-foreground">{v.meaning}</p>
       <div className="mt-2 flex flex-wrap items-center gap-1.5">
         <LevelBadge level={v.level} />
         <Badge variant="outline" className="text-[10px] font-normal">{v.partOfSpeech}</Badge>
         {v.lesson && <Badge variant="secondary" className="text-[10px] font-normal">L{v.lesson}</Badge>}
       </div>
-      <div className="mt-3 flex-1 rounded-xl bg-muted/40 p-3">
+      <div className="mt-3 flex-1 rounded-xl bg-muted/40 p-3.5">
         <div className="flex items-start gap-1">
-          <FuriganaText text={v.example.jp} showFurigana={showFurigana} className="jp text-sm font-medium text-foreground" />
+          <FuriganaText text={v.example.jp} showFurigana={showFurigana} className="jp text-base font-medium text-foreground" />
         </div>
-        <p className="mt-1.5 text-xs text-muted-foreground">{v.example.en}</p>
+        <p className="mt-2 text-sm text-muted-foreground">{v.example.en}</p>
       </div>
     </div>
   );
