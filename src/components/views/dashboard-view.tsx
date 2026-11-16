@@ -7,6 +7,7 @@ import {
   SpellCheck,
   BookText,
   FileText,
+  Headphones,
   GraduationCap,
   Flame,
   Target,
@@ -79,6 +80,7 @@ const QUICK_CARDS: {
   { view: "vocab", label: "Vocabulary", jp: "単語", desc: "Words by theme", icon: BookOpen, tint: "var(--matcha)" },
   { view: "grammar", label: "Grammar", jp: "文法", desc: "N5 & N4 points", icon: SpellCheck, tint: "var(--indigo-deep)" },
   { view: "reading", label: "Reading", jp: "読解", desc: "Passages & quizzes", icon: FileText, tint: "var(--matcha)" },
+  { view: "listening", label: "Listening", jp: "聴解", desc: "Audio & questions", icon: Headphones, tint: "var(--indigo-deep)" },
   { view: "stories", label: "Stories", jp: "物語", desc: "Read with Nikki", icon: BookText, tint: "var(--coral)" },
   { view: "quiz", label: "Quiz", jp: "クイズ", desc: "Test yourself", icon: GraduationCap, tint: "var(--soft-purple)" },
 ];

@@ -11,6 +11,7 @@ interface NavState {
   selectedGrammar: string | null;
   selectedStory: string | null;
   selectedReading: string | null;
+  selectedListening: string | null;
   // global filters
   levelFilter: JLPTLevel | "all";
   search: string;
@@ -19,6 +20,7 @@ interface NavState {
   openGrammar: (id: string) => void;
   openStory: (id: string) => void;
   openReading: (id: string) => void;
+  openListening: (id: string) => void;
   setVocabTheme: (t: string | null) => void;
   setLevelFilter: (l: JLPTLevel | "all") => void;
   setSearch: (s: string) => void;
@@ -32,6 +34,7 @@ export const useNav = create<NavState>((set) => ({
   selectedGrammar: null,
   selectedStory: null,
   selectedReading: null,
+  selectedListening: null,
   levelFilter: "all",
   search: "",
   setView: (v) =>
@@ -41,12 +44,14 @@ export const useNav = create<NavState>((set) => ({
       selectedGrammar: null,
       selectedStory: null,
       selectedReading: null,
+      selectedListening: null,
       selectedVocabTheme: null,
     }),
   openKanji: (id) => set({ selectedKanji: id }),
   openGrammar: (id) => set({ selectedGrammar: id }),
   openStory: (id) => set({ selectedStory: id }),
   openReading: (id) => set({ selectedReading: id }),
+  openListening: (id) => set({ selectedListening: id }),
   setVocabTheme: (t) => set({ selectedVocabTheme: t }),
   setLevelFilter: (l) => set({ levelFilter: l }),
   setSearch: (s) => set({ search: s }),
@@ -56,5 +61,6 @@ export const useNav = create<NavState>((set) => ({
       selectedGrammar: null,
       selectedStory: null,
       selectedReading: null,
+      selectedListening: null,
     }),
 }));

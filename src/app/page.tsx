@@ -10,6 +10,7 @@ import { KanaView } from "@/components/views/kana-view";
 import { VocabView } from "@/components/views/vocab-view";
 import { GrammarView } from "@/components/views/grammar-view";
 import { ReadingView } from "@/components/views/reading-view";
+import { ListeningView } from "@/components/views/listening-view";
 import { StoriesView } from "@/components/views/stories-view";
 import { QuizView } from "@/components/views/quiz-view";
 import { SettingsView } from "@/components/views/settings-view";
@@ -22,6 +23,7 @@ const VIEWS: Record<ViewKey, () => React.ReactNode> = {
   vocab: () => <VocabView />,
   grammar: () => <GrammarView />,
   reading: () => <ReadingView />,
+  listening: () => <ListeningView />,
   stories: () => <StoriesView />,
   quiz: () => <QuizView />,
   settings: () => <SettingsView />,

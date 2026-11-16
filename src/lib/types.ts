@@ -85,6 +85,18 @@ export interface ReadingPassage {
   questions: ReadingQuestion[];
 }
 
+export interface ListeningData {
+  id: string;
+  title: string;
+  level: JLPTLevel;
+  context: string; // setting, e.g. "At a convenience store"
+  text: string; // Japanese dialogue/passage with furigana brackets 漢字[かんじ] — spoken by TTS + shown as transcript
+  translation: string; // English translation
+  questions: ReadingQuestion[];
+  estMinutes: number;
+  tags: string[];
+}
+
 export type ViewKey =
   | "dashboard"
   | "kanji"
@@ -92,6 +104,7 @@ export type ViewKey =
   | "vocab"
   | "grammar"
   | "reading"
+  | "listening"
   | "stories"
   | "quiz"
   | "settings";
