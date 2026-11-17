@@ -8,6 +8,7 @@ import {
   Flame,
   Filter,
   X,
+  Layers,
 } from "lucide-react";
 import {
   Select,
@@ -35,8 +36,20 @@ import { cleanKun } from "@/lib/data/kanji";
 import type { JLPTLevel } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
-type ColorMode = "mastery" | "frequency";
+type ColorMode = "level" | "mastery" | "frequency";
 type LevelFilter = "all" | JLPTLevel;
+
+// Per-level colors: N5 sky blue, N4 green, N3 yellow, N2 orange, N1 red
+const LEVEL_COLORS: Record<string, string> = {
+  N5: "#0ea5e9",
+  N4: "#16a34a",
+  N3: "#ca8a04",
+  N2: "#ea580c",
+  N1: "#dc2626",
+};
+function levelColor(level: string): string {
+  return LEVEL_COLORS[level] ?? "var(--primary)";
+}
 
 export function KanjiView() {
   const selectedId = useNav((s) => s.selectedKanji);
@@ -47,7 +60,7 @@ export function KanjiView() {
   const mastery = useProgress((s) => s.kanji);
   const showFurigana = useSettings((s) => s.showFurigana);
 
-  const [colorMode, setColorMode] = useState<ColorMode>("mastery");
+  const [colorMode, setColorMode] = useState<ColorMode>("level");
   const [level, setLevel] = useState<LevelFilter>("all");
   const [query, setQuery] = useState("");
   const [strokeRange, setStrokeRange] = useState<[number, number]>([1, 25]);
@@ -88,23 +101,21 @@ export function KanjiView() {
   const freqMax = useMemo(() => Math.max(...kanjiData.map((k) => k.freq)), []);
 
   function cellStyle(k: (typeof kanjiData)[number]): React.CSSProperties {
+    const lc = levelColor(k.level);
     if (colorMode === "frequency") {
       const t = 1 - (k.freq - freqMin) / Math.max(1, freqMax - freqMin); // 0..1, higher=more common
       const intensity = 0.18 + t * 0.82;
-      return {
-        backgroundColor: `color-mix(in srgb, var(--primary) ${intensity * 100}%, var(--muted))`,
-        color: intensity > 0.55 ? "var(--primary-foreground)" : "var(--foreground)",
-      };
+      return { backgroundColor: `color-mix(in srgb, ${lc} ${intensity * 100}%, var(--muted))` };
+    }
+    if (colorMode === "level") {
+      return { backgroundColor: `color-mix(in srgb, ${lc} 20%, var(--card))` };
     }
     const st = mastery[k.id] ?? "new";
     if (st === "mastered")
-      return { backgroundColor: "var(--primary)", color: "var(--primary-foreground)" };
+      return { backgroundColor: `color-mix(in srgb, ${lc} 34%, var(--card))` };
     if (st === "learning")
-      return {
-        backgroundColor: "color-mix(in srgb, var(--primary) 35%, var(--card))",
-        color: "var(--foreground)",
-      };
-    return { backgroundColor: "var(--muted)", color: "var(--muted-foreground)" };
+      return { backgroundColor: `color-mix(in srgb, ${lc} 16%, var(--card))` };
+    return { backgroundColor: "var(--muted)" };
   }
 
   if (selected) {
@@ -130,7 +141,7 @@ export function KanjiView() {
         title="Kanji"
         jp="漢字"
         icon={Languages}
-        description="Explore the JLPT N5 & N4 kanji in an interactive heatmap. Color shows your mastery or character frequency. Tap any cell to dive in."
+        description="Explore JLPT N5–N1 kanji in an interactive heatmap. Each level has its own color — N5 sky blue, N4 green, N3 yellow, N2 orange, N1 red. Tap any cell to dive in."
         action={
           <ToggleGroup
             type="single"
@@ -139,6 +150,9 @@ export function KanjiView() {
             variant="outline"
             size="sm"
           >
+            <ToggleGroupItem value="level" aria-label="Color by level">
+              <Layers className="mr-1 h-3.5 w-3.5" /> Level
+            </ToggleGroupItem>
             <ToggleGroupItem value="mastery" aria-label="Color by mastery">
               <Grid3x3 className="mr-1 h-3.5 w-3.5" /> Mastery
             </ToggleGroupItem>
@@ -170,6 +184,9 @@ export function KanjiView() {
           <ToggleGroupItem value="all">All</ToggleGroupItem>
           <ToggleGroupItem value="N5">N5</ToggleGroupItem>
           <ToggleGroupItem value="N4">N4</ToggleGroupItem>
+          <ToggleGroupItem value="N3">N3</ToggleGroupItem>
+          <ToggleGroupItem value="N2">N2</ToggleGroupItem>
+          <ToggleGroupItem value="N1">N1</ToggleGroupItem>
         </ToggleGroup>
         <Popover>
           <PopoverTrigger asChild>
@@ -266,7 +283,7 @@ export function KanjiView() {
                 aria-label={`${k.char}, ${k.meaning.join(", ")}, ${k.level}, ${st}`}
               >
                 <span className="w-full truncate px-1.5 text-center text-xs font-semibold leading-tight text-foreground/90">{k.meaning[0]}</span>
-                <span className="text-5xl font-bold leading-none">{k.char}</span>
+                <span className="text-5xl font-bold leading-none" style={{ color: levelColor(k.level) }}>{k.char}</span>
                 <div className="flex w-full flex-col items-center gap-0.5 px-1.5">
                   <span className="w-full truncate text-center text-[11px] font-medium leading-none opacity-75 jp">{k.onyomi[0] ?? ""}</span>
                   <span className="w-full truncate text-center text-[11px] font-medium leading-none opacity-75 jp">{cleanKun(k.kunyomi[0] ?? "")}</span>

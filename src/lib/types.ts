@@ -2,7 +2,7 @@
 // Furigana notation: kanji readings are written inline as 漢字[かんじ].
 // e.g. "私[わたし]は学生[がくせい]です" -> renders ruby over 漢字 segments.
 
-export type JLPTLevel = "N5" | "N4";
+export type JLPTLevel = "N5" | "N4" | "N3" | "N2" | "N1";
 
 export type MasteryState = "new" | "learning" | "mastered";
 
