@@ -1,35 +1,31 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Noto_Sans_JP, M_PLUS_Rounded_1c, Geist_Mono } from "next/font/google";
+import {
+  Inter,
+  Noto_Sans_JP,
+  M_PLUS_Rounded_1c,
+  Geist_Mono,
+  Klee_One,
+  Shippori_Mincho,
+  Zen_Kaku_Gothic_New,
+  Yuji_Syuku,
+  Hina_Mincho,
+  DotGothic16,
+} from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as SonnerToaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/nikki/theme-provider";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const notojp = Noto_Sans_JP({
-  variable: "--font-notojp",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  display: "swap",
-});
-
-const rounded = M_PLUS_Rounded_1c({
-  variable: "--font-rounded",
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "800"],
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
-});
+const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
+const notojp = Noto_Sans_JP({ variable: "--font-notojp", subsets: ["latin"], weight: ["400", "500", "700"], display: "swap" });
+const rounded = M_PLUS_Rounded_1c({ variable: "--font-rounded", subsets: ["latin"], weight: ["400", "500", "700", "800"], display: "swap" });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"], display: "swap" });
+const klee = Klee_One({ variable: "--font-klee", subsets: ["latin"], weight: ["400", "600"], display: "swap" });
+const mincho = Shippori_Mincho({ variable: "--font-mincho", subsets: ["latin"], weight: ["400", "500", "700"], display: "swap" });
+const gothic = Zen_Kaku_Gothic_New({ variable: "--font-gothic", subsets: ["latin"], weight: ["400", "500", "700"], display: "swap" });
+const yuji = Yuji_Syuku({ variable: "--font-yuji", subsets: ["latin"], weight: ["400"], display: "swap" });
+const hina = Hina_Mincho({ variable: "--font-hina", subsets: ["latin"], weight: ["400"], display: "swap" });
+const dot = DotGothic16({ variable: "--font-dot", subsets: ["latin"], weight: ["400"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Nihongo with Nikki — Learn JLPT N5 & N4 with Nikki",
@@ -75,12 +71,12 @@ export default function RootLayout({
         {/* Apply theme before paint to avoid flash */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var s=JSON.parse(localStorage.getItem('nikki-settings')||'{}');var state=s.state||{};var ct=state.colorTheme||'sakura';var m=state.mode||'auto';var d=m==='dark'||(m==='auto'&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.setAttribute('data-theme',ct);document.documentElement.classList.toggle('dark',d);}catch(e){document.documentElement.setAttribute('data-theme','sakura');}})();`,
+            __html: `(function(){try{var s=JSON.parse(localStorage.getItem('nikki-settings')||'{}');var state=s.state||{};var ct=state.colorTheme||'sakura';var m=state.mode||'auto';var jf=state.jpFont||'notojp';var d=m==='dark'||(m==='auto'&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.setAttribute('data-theme',ct);document.documentElement.classList.toggle('dark',d);var fs={notojp:'var(--font-notojp)',rounded:'var(--font-rounded)',klee:'var(--font-klee)',mincho:'var(--font-mincho)',gothic:'var(--font-gothic)',yuji:'var(--font-yuji)',hina:'var(--font-hina)',dot:'var(--font-dot)'};document.documentElement.style.setProperty('--font-jp',fs[jf]||fs.notojp);}catch(e){document.documentElement.setAttribute('data-theme','sakura');}})();`,
           }}
         />
       </head>
       <body
-        className={`${inter.variable} ${notojp.variable} ${rounded.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${notojp.variable} ${rounded.variable} ${geistMono.variable} ${klee.variable} ${mincho.variable} ${gothic.variable} ${yuji.variable} ${hina.variable} ${dot.variable} antialiased`}
       >
         <ThemeProvider>{children}</ThemeProvider>
         <Toaster />

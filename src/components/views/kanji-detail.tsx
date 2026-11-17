@@ -8,6 +8,7 @@ import { FuriganaText } from "../nikki/furigana";
 import { AudioButton } from "../nikki/audio-button";
 import { GuidedWritingPractice } from "../nikki/guided-writing-practice";
 import { StrokeOrderAnimation } from "../nikki/stroke-order";
+import { KanjiFlashcardDownload } from "../nikki/kanji-flashcard-download";
 import { LevelBadge } from "../nikki/shared";
 import { useProgress } from "@/lib/stores/progress-store";
 import { cleanKun } from "@/lib/data/kanji";
@@ -76,6 +77,9 @@ export function KanjiDetail({ kanji, onClose }: { kanji: KanjiData; onClose?: ()
               <Sparkles className="h-3 w-3" /> Freq #{kanji.freq}
             </span>
           </div>
+        </div>
+        <div className="mt-3 flex justify-center sm:justify-end">
+          <KanjiFlashcardDownload kanji={kanji} />
         </div>
       </div>
 

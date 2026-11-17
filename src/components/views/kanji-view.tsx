@@ -33,7 +33,7 @@ import { useNav } from "@/lib/stores/nav-store";
 import { SectionHeader, EmptyState } from "../nikki/shared";
 import { KanjiDetail } from "./kanji-detail";
 import { cleanKun } from "@/lib/data/kanji";
-import type { JLPTLevel } from "@/lib/types";
+import type { JLPTLevel, KanjiData } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 type ColorMode = "level" | "mastery" | "frequency";
@@ -65,6 +65,7 @@ export function KanjiView() {
   const [query, setQuery] = useState("");
   const [strokeRange, setStrokeRange] = useState<[number, number]>([1, 25]);
   const [radicalFilter, setRadicalFilter] = useState<string>("all");
+  const [hovered, setHovered] = useState<{ k: KanjiData; x: number; y: number } | null>(null);
 
   const selected = selectedId
     ? kanjiData.find((k) => k.id === selectedId)
@@ -274,6 +275,11 @@ export function KanjiView() {
               <button
                 key={k.id}
                 onClick={() => openKanji(k.id)}
+                onMouseEnter={(e) => {
+                  const r = e.currentTarget.getBoundingClientRect();
+                  setHovered({ k, x: r.right + 10, y: r.top });
+                }}
+                onMouseLeave={() => setHovered(null)}
                 className={cn(
                   "heatmap-cell jp flex aspect-square flex-col items-center justify-center gap-1 rounded-xl ring-1 ring-inset ring-border/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                   showFurigana && st === "mastered" && "ring-primary/40"
@@ -295,9 +301,40 @@ export function KanjiView() {
       )}
 
       <p className="mt-4 text-center text-xs text-muted-foreground">
-        Showing {filtered.length} of {kanjiData.length} kanji ・ Click a cell to see readings,
-        vocab, examples, and practice writing.
+        Showing {filtered.length} of {kanjiData.length} kanji ・ Hover any cell for a quick
+        flashcard, or click to see readings, vocab, examples, and practice writing.
       </p>
+
+      {/* Floating hover flashcard */}
+      {hovered && (
+        <div
+          className="pointer-events-none fixed z-50 w-60 rounded-xl border border-border bg-card p-3 shadow-2xl"
+          style={{
+            left: Math.min(hovered.x, (typeof window !== "undefined" ? window.innerWidth : 9999) - 250),
+            top: Math.min(hovered.y, (typeof window !== "undefined" ? window.innerHeight : 9999) - 200),
+          }}
+        >
+          <div className="flex items-center gap-3">
+            <span className="jp text-6xl font-bold leading-none" style={{ color: levelColor(hovered.k.level), fontFamily: "var(--font-jp)" }}>
+              {hovered.k.char}
+            </span>
+            <div className="min-w-0 flex-1">
+              <span
+                className="inline-block rounded-full px-2 py-0.5 text-[9px] font-bold uppercase text-white"
+                style={{ backgroundColor: levelColor(hovered.k.level) }}
+              >
+                {hovered.k.level}
+              </span>
+              <p className="mt-1 text-sm font-bold text-foreground">{hovered.k.meaning.join(", ")}</p>
+            </div>
+          </div>
+          <div className="mt-2 space-y-0.5 text-xs text-muted-foreground">
+            <p>on&apos;yomi: <span className="jp text-indigo-deep">{hovered.k.onyomi.join("、") || "—"}</span></p>
+            <p>kun&apos;yomi: <span className="jp text-matcha">{hovered.k.kunyomi.map(cleanKun).join("、") || "—"}</span></p>
+            <p>{hovered.k.strokes} strokes ・ radical <span className="jp">{hovered.k.radical}</span> ({hovered.k.radicalMeaning})</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

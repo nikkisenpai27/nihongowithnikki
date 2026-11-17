@@ -32,7 +32,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useSettings, type ColorTheme } from "@/lib/stores/settings-store";
+import { useSettings, type ColorTheme, JP_FONT_OPTIONS } from "@/lib/stores/settings-store";
 import { useProgress } from "@/lib/stores/progress-store";
 import { SectionHeader } from "../nikki/shared";
 import { NikkiAvatar } from "../nikki/nikki-avatar";
@@ -280,6 +280,26 @@ export function SettingsView() {
           <Row icon={Sun} title="Auto (follow system)" desc="Match your device's light/dark setting">
             <Switch checked={settings.mode === "auto"} onCheckedChange={(v) => settings.set("mode", v ? "auto" : (isDark ? "dark" : "light"))} />
           </Row>
+        </div>
+        <div className="mt-4">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+            Japanese font <span className="jp normal-case">日本語フォント</span>
+          </p>
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+            {JP_FONT_OPTIONS.map((f) => (
+              <button
+                key={f.id}
+                onClick={() => settings.set("jpFont", f.id)}
+                className={cn(
+                  "flex flex-col items-center gap-1 rounded-xl border-2 p-3 transition-all",
+                  settings.jpFont === f.id ? "border-primary ring-2 ring-primary/20" : "border-border hover:bg-accent/40"
+                )}
+              >
+                <span className="jp text-2xl font-bold text-foreground" style={{ fontFamily: `var(--font-${f.id})` }}>{f.sample}</span>
+                <span className="text-[10px] font-semibold text-foreground">{f.label}</span>
+              </button>
+            ))}
+          </div>
         </div>
       </Card>
 
