@@ -64,6 +64,7 @@ interface FuriganaTextProps {
   showFurigana?: boolean;
   className?: string;
   lang?: string;
+  style?: React.CSSProperties;
 }
 
 export function FuriganaText({
@@ -71,10 +72,11 @@ export function FuriganaText({
   showFurigana = true,
   className,
   lang = "ja",
+  style,
 }: FuriganaTextProps) {
   const segments = parseFurigana(text);
   return (
-    <span className={className} lang={lang}>
+    <span className={className} lang={lang} style={style}>
       {segments.map((seg, idx) =>
         seg.f && showFurigana ? (
           <ruby key={idx}>

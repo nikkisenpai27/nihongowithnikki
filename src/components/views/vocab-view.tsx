@@ -26,6 +26,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { vocabData, vocabThemes } from "@/lib/data/vocab";
+import { levelColor } from "@/lib/data/kanji";
 import { minnaLessons, lessonsForLevel } from "@/lib/data/lessons";
 import { useProgress } from "@/lib/stores/progress-store";
 import { useSettings } from "@/lib/stores/settings-store";
@@ -56,7 +57,7 @@ const POS_INFO: Record<string, { jp: string; en: string }> = {
 function firstLessonForLevel(level: LevelFilter): string {
   if (level === "N4") return "26";
   if (level === "N5") return "1";
-  return "1";
+  return "all"; // N3/N2/N1 use chapter themes (Shinzaizen), not Minna lessons
 }
 
 export function VocabView() {
@@ -150,6 +151,9 @@ export function VocabView() {
           <ToggleGroupItem value="all">All</ToggleGroupItem>
           <ToggleGroupItem value="N5">N5</ToggleGroupItem>
           <ToggleGroupItem value="N4">N4</ToggleGroupItem>
+          <ToggleGroupItem value="N3">N3</ToggleGroupItem>
+          <ToggleGroupItem value="N2">N2</ToggleGroupItem>
+          <ToggleGroupItem value="N1">N1</ToggleGroupItem>
         </ToggleGroup>
         <Select value={lesson} onValueChange={setLesson}>
           <SelectTrigger className="h-9 w-full sm:w-[200px]">
@@ -232,7 +236,7 @@ export function VocabView() {
                 className="group flex cursor-pointer items-center gap-4 rounded-2xl border border-border bg-card p-4 text-left transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 <div className="flex w-44 shrink-0 flex-col items-start gap-1">
-                  <FuriganaText text={v.word} showFurigana={showFurigana} className="jp text-xl font-bold text-foreground" />
+                  <FuriganaText text={v.word} showFurigana={showFurigana} className="jp text-xl font-bold" style={{ color: levelColor(v.level) }} />
                   <span className="jp text-xs text-muted-foreground">
                     {v.reading}
                     {isKatakana && <span className="ml-1 text-[9px] uppercase opacity-70">katakana</span>}
@@ -323,7 +327,7 @@ function VocabDetail({
           <Badge variant="outline">{v.theme}</Badge>
         </div>
         <div className="flex items-center gap-3">
-          <FuriganaText text={v.word} showFurigana={showFurigana} className="jp text-4xl font-bold text-foreground" />
+          <FuriganaText text={v.word} showFurigana={showFurigana} className="jp text-4xl font-bold" style={{ color: levelColor(v.level) }} />
           <button
             onClick={() => speak(v.word)}
             className="inline-flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground hover:bg-primary/10 hover:text-primary"

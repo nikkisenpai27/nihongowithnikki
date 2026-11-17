@@ -5,9 +5,27 @@ import { vocabN5C } from "./vocab-n5-c";
 import { vocabN4A } from "./vocab-n4-a";
 import { vocabN4B } from "./vocab-n4-b";
 import { vocabN4C } from "./vocab-n4-c";
+import { vocabN3A } from "./vocab-n3-a";
+import { vocabN3B } from "./vocab-n3-b";
+import { vocabN3C } from "./vocab-n3-c";
+import { vocabN3D } from "./vocab-n3-d";
+import { vocabN3E } from "./vocab-n3-e";
+import { vocabN3F } from "./vocab-n3-f";
+import { vocabN2A } from "./vocab-n2-a";
+import { vocabN2B } from "./vocab-n2-b";
+import { vocabN2C } from "./vocab-n2-c";
+import { vocabN2D } from "./vocab-n2-d";
+import { vocabN2E } from "./vocab-n2-e";
+import { vocabN2F } from "./vocab-n2-f";
+import { vocabN1A } from "./vocab-n1-a";
+import { vocabN1B } from "./vocab-n1-b";
+import { vocabN1C } from "./vocab-n1-c";
+import { vocabN1D } from "./vocab-n1-d";
+import { vocabN1E } from "./vocab-n1-e";
+import { vocabN1F } from "./vocab-n1-f";
 
-// Minna no Nihongo vocabulary: ~809 N5 (lessons 1-25) + ~812 N4 (lessons 26-50)
-// Deduplicated by word (common particles/expressions appear across multiple lessons)
+// Vocabulary: N5/N4 (Minna no Nihongo) + N3/N2/N1 (Shinzaizen Master style, chapter-wise)
+// Deduplicated by word (common particles/expressions appear across multiple levels)
 const allVocab: VocabData[] = [
   ...vocabN5A,
   ...vocabN5B,
@@ -15,6 +33,24 @@ const allVocab: VocabData[] = [
   ...vocabN4A,
   ...vocabN4B,
   ...vocabN4C,
+  ...vocabN3A,
+  ...vocabN3B,
+  ...vocabN3C,
+  ...vocabN3D,
+  ...vocabN3E,
+  ...vocabN3F,
+  ...vocabN2A,
+  ...vocabN2B,
+  ...vocabN2C,
+  ...vocabN2D,
+  ...vocabN2E,
+  ...vocabN2F,
+  ...vocabN1A,
+  ...vocabN1B,
+  ...vocabN1C,
+  ...vocabN1D,
+  ...vocabN1E,
+  ...vocabN1F,
 ];
 const _seenWords = new Set<string>();
 export const vocabData: VocabData[] = allVocab.filter((v) => {

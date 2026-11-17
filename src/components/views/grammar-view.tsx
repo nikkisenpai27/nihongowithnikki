@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { grammarData, grammarCategories } from "@/lib/data/grammar";
+import { levelColor } from "@/lib/data/kanji";
 import { lessonsForLevel } from "@/lib/data/lessons";
 import { useSettings } from "@/lib/stores/settings-store";
 import { useNav } from "@/lib/stores/nav-store";
@@ -60,7 +61,7 @@ export function GrammarView() {
   function changeLevel(v: string) {
     const lv = (v as LevelFilter) || "all";
     setLevel(lv);
-    setLesson(lv === "N4" ? "26" : "1");
+    setLesson(lv === "N4" ? "26" : lv === "N5" ? "1" : "all");
     setCategory("all");
   }
 
@@ -106,6 +107,9 @@ export function GrammarView() {
           <ToggleGroupItem value="all">All</ToggleGroupItem>
           <ToggleGroupItem value="N5">N5</ToggleGroupItem>
           <ToggleGroupItem value="N4">N4</ToggleGroupItem>
+          <ToggleGroupItem value="N3">N3</ToggleGroupItem>
+          <ToggleGroupItem value="N2">N2</ToggleGroupItem>
+          <ToggleGroupItem value="N1">N1</ToggleGroupItem>
         </ToggleGroup>
         <Select value={lesson} onValueChange={setLesson}>
           <SelectTrigger className="h-9 w-full sm:w-[200px]">
@@ -166,7 +170,7 @@ export function GrammarView() {
               className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-4 text-left transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
               <div className="flex w-28 shrink-0 flex-col items-start gap-1">
-                <FuriganaText text={g.point} showFurigana={false} className="jp text-lg font-bold text-foreground" />
+                <FuriganaText text={g.point} showFurigana={false} className="jp text-lg font-bold" style={{ color: levelColor(g.level) }} />
                 <LevelBadge level={g.level} />
               </div>
               <div className="min-w-0 flex-1">
