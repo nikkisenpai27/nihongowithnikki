@@ -35,6 +35,11 @@ import { cn } from "@/lib/utils";
 
 type LevelFilter = "all" | JLPTLevel;
 
+// N3/N2/N1 use Japanese UI labels; N5/N4 use English
+function isJpLevel(level: string): boolean {
+  return level === "N3" || level === "N2" || level === "N1";
+}
+
 export function ListeningView() {
   const selectedId = useNav((s) => s.selectedListening);
   const openListening = useNav((s) => s.openListening);
@@ -119,7 +124,7 @@ export function ListeningView() {
               <p className="mt-2 flex-1 text-sm text-foreground/80 line-clamp-2">{p.translation}</p>
               <div className="mt-3 flex items-center gap-2">
                 <Badge variant="secondary" className="gap-1 text-[10px]">
-                  <HelpCircle className="h-3 w-3" /> {p.questions.length} questions
+                  <HelpCircle className="h-3 w-3" /> {p.questions.length}{isJpLevel(p.level) ? "問" : " questions"}
                 </Badge>
                 <div className="flex flex-wrap gap-1">
                   {p.tags.slice(0, 2).map((t) => (
@@ -128,7 +133,7 @@ export function ListeningView() {
                 </div>
               </div>
               <div className="mt-3 flex items-center gap-1 text-xs font-semibold text-primary">
-                <Headphones className="h-3.5 w-3.5" /> Start listening
+                <Headphones className="h-3.5 w-3.5" /> {isJpLevel(p.level) ? "聞いてみる" : "Start listening"}
               </div>
             </button>
           ))}
@@ -136,7 +141,7 @@ export function ListeningView() {
       )}
 
       <p className="mt-4 text-center text-xs text-muted-foreground">
-        {filtered.length} exercises ・ Listen carefully — the transcript is hidden until you answer.
+        {filtered.length}{" "}{level === "all" || level === "N5" || level === "N4" ? "exercises" : "問"}・{level === "all" || level === "N5" || level === "N4" ? "Listen carefully — the transcript is hidden until you answer." : "よく聞いてください。文字起こしは答えるまで非表示です。"}
       </p>
     </div>
   );
@@ -144,6 +149,7 @@ export function ListeningView() {
 
 function ListeningPlayer({ item, onBack }: { item: ListeningData; onBack: () => void }) {
   const { speak, supported } = useJapaneseAudio();
+  const jp = isJpLevel(item.level);
   const [rate, setRate] = useState<"normal" | "slow">("normal");
   const [playing, setPlaying] = useState(false);
   const [answers, setAnswers] = useState<Record<number, number>>({});
@@ -185,14 +191,14 @@ function ListeningPlayer({ item, onBack }: { item: ListeningData; onBack: () => 
   return (
     <div className="space-y-5">
       <Button variant="ghost" size="sm" onClick={onBack}>
-        <ArrowLeft className="mr-1 h-4 w-4" /> All exercises
+        <ArrowLeft className="mr-1 h-4 w-4" /> {jp ? "すべての練習" : "All exercises"}
       </Button>
 
       <div className="rounded-2xl bg-gradient-to-br from-primary/12 via-card to-card p-5">
         <div className="mb-2 flex flex-wrap items-center gap-2">
           <LevelBadge level={item.level} />
           <Badge variant="outline" className="gap-1">
-            <Clock className="h-3 w-3" /> {item.estMinutes} min
+            <Clock className="h-3 w-3" /> {item.estMinutes}{jp ? "分" : " min"}
           </Badge>
           {item.tags.map((t) => (
             <Badge key={t} variant="secondary" className="text-[10px]">{t}</Badge>
@@ -200,7 +206,7 @@ function ListeningPlayer({ item, onBack }: { item: ListeningData; onBack: () => 
         </div>
         <h1 className="text-2xl font-bold text-foreground">{item.title}</h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          <span className="font-semibold text-foreground/80">Setting:</span> {item.context}
+          <span className="font-semibold text-foreground/80">{jp ? "場面：" : "Setting:"}</span> {item.context}
         </p>
       </div>
 
@@ -220,10 +226,10 @@ function ListeningPlayer({ item, onBack }: { item: ListeningData; onBack: () => 
           </button>
           <div className="flex-1 text-center sm:text-left">
             <p className="text-sm font-semibold text-foreground">
-              {playing ? "Playing… listen carefully" : "Press play to listen"}
+              {playing ? (jp ? "再生中…よく聞いてください" : "Playing… listen carefully") : (jp ? "再生して聞いてください" : "Press play to listen")}
             </p>
             <p className="text-xs text-muted-foreground">
-              Nikki reads the dialogue in Japanese. Listen first, then answer the questions.
+              {jp ? "ニキが日本語の対話を読みます。まず聞いて、それから質問に答えてください。" : "Nikki reads the dialogue in Japanese. Listen first, then answer the questions."}
             </p>
             {!supported && (
               <p className="mt-1 text-xs text-warm-yellow">Audio not supported in this browser.</p>
@@ -237,10 +243,10 @@ function ListeningPlayer({ item, onBack }: { item: ListeningData; onBack: () => 
             size="sm"
           >
             <ToggleGroupItem value="normal" aria-label="Normal speed">
-              <Gauge className="mr-1 h-3.5 w-3.5" /> Normal
+              <Gauge className="mr-1 h-3.5 w-3.5" /> {jp ? "普通" : "Normal"}
             </ToggleGroupItem>
             <ToggleGroupItem value="slow" aria-label="Slow speed">
-              <Gauge className="mr-1 h-3.5 w-3.5" /> Slow
+              <Gauge className="mr-1 h-3.5 w-3.5" /> {jp ? "ゆっくり" : "Slow"}
             </ToggleGroupItem>
           </ToggleGroup>
         </div>
@@ -250,12 +256,12 @@ function ListeningPlayer({ item, onBack }: { item: ListeningData; onBack: () => 
       <Card className="p-5">
         <div className="mb-4 flex items-center justify-between">
           <h3 className="flex items-center gap-1.5 text-sm font-bold text-foreground">
-            <HelpCircle className="h-4 w-4 text-primary" /> Comprehension Questions
+            <HelpCircle className="h-4 w-4 text-primary" /> {jp ? "理解問題" : "Comprehension Questions"}
             <span className="text-xs font-normal text-muted-foreground">({item.questions.length})</span>
           </h3>
           {answeredCount > 0 && (
             <Badge variant="secondary" className="gap-1">
-              <Trophy className="h-3 w-3 text-warm-yellow" /> {correctCount}/{answeredCount} correct
+              <Trophy className="h-3 w-3 text-warm-yellow" /> {correctCount}/{answeredCount}{jp ? "正解" : " correct"}
             </Badge>
           )}
         </div>
@@ -305,7 +311,7 @@ function ListeningPlayer({ item, onBack }: { item: ListeningData; onBack: () => 
                 </div>
                 {answered && (
                   <p className={cn("mt-3 rounded-lg p-2 text-xs", correct ? "bg-matcha/10 text-foreground" : "bg-warm-yellow/10 text-foreground")}>
-                    <span className="font-semibold">{correct ? "正解！ Correct. " : "Not quite. "}</span>
+                    <span className="font-semibold">{correct ? (jp ? "正解！" : "正解！ Correct. ") : (jp ? "もう一度。" : "Not quite. ")}</span>
                     {question.explanation}
                   </p>
                 )}
@@ -318,7 +324,7 @@ function ListeningPlayer({ item, onBack }: { item: ListeningData; onBack: () => 
           <div className="mt-4 flex items-center justify-center gap-2 rounded-xl bg-warm-yellow/10 p-3 text-sm">
             <Check className="h-4 w-4 text-matcha" />
             <span className="font-semibold">
-              You scored {correctCount}/{item.questions.length} ・ +{correctCount * 3} XP earned
+              {jp ? `得点：${correctCount}/${item.questions.length}・+${correctCount * 3} XP` : `You scored ${correctCount}/${item.questions.length} ・ +${correctCount * 3} XP earned`}
             </span>
           </div>
         )}
@@ -328,30 +334,30 @@ function ListeningPlayer({ item, onBack }: { item: ListeningData; onBack: () => 
       <Card className="p-5">
         <div className="mb-3 flex items-center justify-between">
           <h3 className="flex items-center gap-1.5 text-sm font-bold text-foreground">
-            Transcript <span className="jp font-normal text-muted-foreground">文字起こし</span>
+            {jp ? <span className="jp">文字起こし</span> : <>Transcript <span className="jp font-normal text-muted-foreground">文字起こし</span></>}
           </h3>
           <Button size="sm" variant="outline" onClick={() => setShowTranscript((s) => !s)}>
-            {showTranscript ? <><EyeOff className="mr-1 h-3.5 w-3.5" /> Hide</> : <><Eye className="mr-1 h-3.5 w-3.5" /> Reveal</>}
+            {showTranscript ? <><EyeOff className="mr-1 h-3.5 w-3.5" /> {jp ? "非表示" : "Hide"}</> : <><Eye className="mr-1 h-3.5 w-3.5" /> {jp ? "表示" : "Reveal"}</>}
           </Button>
         </div>
         {showTranscript ? (
           <div className="space-y-4">
             <div className="rounded-xl bg-muted/40 p-4">
-              <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">日本語 Japanese</p>
+              <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">{jp ? "日本語" : "日本語 Japanese"}</p>
               <p className="jp text-base leading-loose text-foreground">
                 <FuriganaText text={item.text} />
               </p>
             </div>
             <div className="rounded-xl bg-muted/20 p-4">
-              <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">English</p>
+              <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">{jp ? "英語" : "English"}</p>
               <p className="text-base leading-relaxed text-foreground/90">{item.translation}</p>
             </div>
           </div>
         ) : (
           <p className="text-sm text-muted-foreground">
             {allAnswered
-              ? "You've answered all questions — reveal the transcript to read along and check the details."
-              : "Listen and answer the questions first. Reveal the transcript when you're ready to check your understanding."}
+              ? (jp ? "すべての質問に答えました。文字起こしを表示して確認してください。" : "You've answered all questions — reveal the transcript to read along and check the details.")
+              : (jp ? "まず聞いて質問に答えてください。準備ができたら文字起こしを表示できます。" : "Listen and answer the questions first. Reveal the transcript when you're ready to check your understanding.")}
           </p>
         )}
       </Card>
