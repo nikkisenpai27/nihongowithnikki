@@ -9,6 +9,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { storiesData } from "@/lib/data/stories";
+import { levelColor } from "@/lib/data/kanji";
 import { useProgress } from "@/lib/stores/progress-store";
 import { useSettings } from "@/lib/stores/settings-store";
 import { useNav } from "@/lib/stores/nav-store";
@@ -86,6 +87,9 @@ export function StoriesView() {
           <ToggleGroupItem value="all">All</ToggleGroupItem>
           <ToggleGroupItem value="N5">N5</ToggleGroupItem>
           <ToggleGroupItem value="N4">N4</ToggleGroupItem>
+          <ToggleGroupItem value="N3">N3</ToggleGroupItem>
+          <ToggleGroupItem value="N2">N2</ToggleGroupItem>
+          <ToggleGroupItem value="N1">N1</ToggleGroupItem>
         </ToggleGroup>
       </div>
 
@@ -117,7 +121,7 @@ export function StoriesView() {
                   )}
                 </div>
                 <h3 className="jp text-xl font-bold text-foreground">
-                  <FuriganaText text={s.title} showFurigana={showFurigana} />
+                  <FuriganaText text={s.title} showFurigana={showFurigana} style={{ color: levelColor(s.level) }} />
                 </h3>
                 <p className="mt-1 text-xs text-muted-foreground jp">{s.titleReading}</p>
                 <p className="mt-2 flex-1 text-sm text-foreground/80 line-clamp-3">{s.summary}</p>

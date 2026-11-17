@@ -1,0 +1,530 @@
+     1→     1→import type { StoryData } from "@/lib/types";
+     2→     2→
+     3→     3→// JLPT N1 stories — chunk E (set sx-n1-41 .. sx-n1-50).
+     4→     4→// Furigana notation: a [reading] immediately following a run of consecutive
+     5→     5→// kanji attaches as furigana to that whole compound. Kana, katakana, digits,
+     6→     6→// and punctuation have no brackets. titleReading is full kana with NO brackets.
+     7→     7→// Verb okurigana stays outside the bracket: 食[た]べる, 読[よ]んだり.
+     8→     8→// N1 grammar targets woven through: 〜に過ぎない, 〜ずにはいられない,
+     9→     9→// 〜ずにはおかない, 〜まい, 〜に足る, 〜限り, 〜とはいえ, 〜ゆえに,
+    10→    10→// 〜を余儀なくされる, 〜たる, 〜てやまない, 〜こそ, 〜かねない,
+    11→    11→// 〜にほかならない, 〜ごとき, 〜てならない, 〜からこそ, 〜にせよ.
+    12→    12→// Topics: a philosophical dialogue, a scientific heresy, a diplomatic
+    13→    13→// breakthrough, a literary censorship, a technological dystopia, a cultural
+    14→    14→// assimilation, a neuroethical dilemma, a climate refugee story, a post-gender
+    15→    15→// society, an existential philosophy.
+    16→    16→
+    17→    17→export const storiesN1E: StoryData[] = [
+    18→    18→  // ───────────────────────────────────────────────────────────
+    19→    19→  // sx-n1-41 — A philosophical dialogue (真理を問う夜の対話)
+    20→    20→  // ───────────────────────────────────────────────────────────
+    21→    21→  {
+    22→    22→    id: "sx-n1-41",
+    23→    23→    title: "真理[しんり]を問[と]う夜[よる]の対話[たいわ]",
+    24→    24→    titleReading: "しんりをとうよるのたいわ",
+    25→    25→    level: "N1",
+    26→    26→    summary: "An aged philosopher and a young engineer debate, in a dim Kyoto teahouse, whether meaning is discovered or created.",
+    27→    27→    estMinutes: 8,
+    28→    28→    tags: ["philosophy", "dialogue", "meaning"],
+    29→    29→    body: [
+    30→    30→      "京都[きょうと]の路地裏[ろじうら]に、灯[あか]りの揺[ゆ]れる古[ふる]い茶屋[ちゃや]がある。その夜[よる]、老[おい]いた哲学者[てつがくしゃ]の外山[とやま]と、若[わか]き技術者[ぎじゅつしゃ]の蓮[れん]が、向[む]かい合[あ]って座[すわ]っていた。",
+    31→    31→      "蓮[れん]は先[さき]に口[くち]を開[ひら]いた。「私[わたし]は長年[ながねん]、意味[いみ]とは人間[にんげん]が創[つく]り出[だ]すものだと信[しん]じてきました。しかし、最近[さいきん]はその確信[かくしん]が揺[ゆ]らぎ始[はじ]めずにはいられないのです。」",
+    32→    32→      "外山[とやま]は茶[ちゃ]を啜[すす]り、静[しず]かに応[こた]えた。「意味[いみ]を与[あた]えうる主体[しゅたい]が先[さき]に在[あ]るとするならば、その主体[しゅたい]自体[じたい]の意味[いみ]は誰[だれ]が与[あた]えるのかね。問[と]いは無限[むげん]に遡[さかのぼ]らざるを得[え]まい。」",
+    33→    33→      "「それこそが私[わたし]の迷路[めいろ]です」と蓮[れん]は嘆[なげ]いた。「神[かみ]を前提[ぜんてい]に置[お]けば容易[ようい]に解[と]けますが、私[わたし]にはその仮説[かせつ]を受[う]け入[い]れるに足[た]る根拠[こんきょ]がないのです。」",
+    34→    34→      "外山[とやま]は微[かす]かに笑[わら]った。「神[かみ]を欠如[けつじょ]させた瞬間[しゅんかん]に、意味[いみ]の重[おも]みは個[こ]の肩[かた]にのしかかる。それこそが自由[じゆう]という名[な]の牢獄[ろうごく]ではないかね。」",
+    35→    35→      "「自由[じゆう]が牢獄[ろうごく]とは」と蓮[れん]は眉[まゆ]をひそめた。「選[えら]ぶべき道[みち]が多[おお]すぎるがゆえに、むしろ選[えら]べない状態[じょうたい]を指[さ]すのですか。」",
+    36→    36→      "外山[とやま]は頷[うなず]いた。「その通[とお]りだ。選択[せんたく]の自由[じゆう]を与[あた]えられた者[もの]は、同時[どうじ]に選[えら]ばなかった全[すべ]ての可能性[かのうせい]の重[おも]みを背[せ]負[お]うことになる。」",
+    37→    37→      "蓮[れん]は沈黙[ちんもく]した。外[そと]では雨[あめ]が瓦[かわら]を打[う]ち始[はじ]めていた。彼[かれ]の心[こころ]に、これまで設計[せっけい]してきた機械[きかい]の冷[つめ]たさが、急[きゅう]に空虚[くうきょ]に感[かん]じられた。",
+    38→    38→      "「ならば」と彼[かれ]は言[い]った。「私[わたし]たちは意味[いみ]なき宇宙[うちゅう]の中[なか]で、ただ独[ひと]りで立[た]っているに過[す]ぎないのでしょうか。」",
+    39→    39→      "外山[とやま]は杯[さかずき]を置[お]き、窓[まど]の外[そと]を眺[なが]めた。「否[いな]、意味[いみ]を見[み]出[だ]そうとするその意志[いし]自体[じたい]が、すでに意味[いみ]の萌芽[ほうが]である。問[と]い続[つづ]ける限[かぎ]り、私[わたし]たちは決[けっ]して独[ひと]りではない。」"
+    40→    40→    ],
+    41→    41→    translation: [
+    42→    42→      "In a back alley of Kyoto stands an old teahouse, its lamp flickering. That night, the aged philosopher Toyama and the young engineer Ren sat facing each other.",
+    43→    43→      "Ren spoke first. 'For years I have believed that meaning is something human beings create. Yet recently that conviction has begun to waver, and I cannot help it.'",
+    44→    44→      "Toyama sipped his tea and replied quietly. 'If we suppose that a subject capable of bestowing meaning exists beforehand, then who bestows meaning upon that very subject? The question is forced to recede infinitely.'",
+    45→    45→      "'That is precisely my labyrinth,' sighed Ren. 'Positing God would solve it easily, but I lack sufficient grounds to embrace that hypothesis.'",
+    46→    46→      "Toyama smiled faintly. 'The instant God is removed, the weight of meaning falls upon the individual's shoulders. Is that not precisely what one might call the prison named freedom?'",
+    47→    47→      "'Freedom a prison?' Ren frowned. 'Do you mean a state in which one cannot choose precisely because there are too many paths to choose from?'",
+    48→    48→      "Toyama nodded. 'Exactly. Whoever is granted freedom of choice must, at the same time, bear the weight of every possibility not chosen.'",
+    49→    49→      "Ren fell silent. Outside, rain had begun to strike the tiles. In his heart, the coldness of the machines he had hitherto designed suddenly felt hollow.",
+    50→    50→      "'Then,' he said, 'are we nothing but solitary figures standing alone in a meaningless universe?'",
+    51→    51→      "Toyama set down his cup and gazed out the window. 'No. The very will to seek meaning is already the seedling of meaning itself. As long as we keep asking, we are never truly alone.'"
+    52→    52→    ],
+    53→    53→    vocab: [
+    54→    54→      { word: "哲学者", reading: "てつがくしゃ", meaning: "philosopher" },
+    55→    55→      { word: "路地裏", reading: "ろじうら", meaning: "back alley" },
+    56→    56→      { word: "揺れる", reading: "ゆれる", meaning: "to flicker/sway" },
+    57→    57→      { word: "確信", reading: "かくしん", meaning: "conviction" },
+    58→    58→      { word: "主体", reading: "しゅたい", meaning: "subject (agent)" },
+    59→    59→      { word: "遡る", reading: "さかのぼる", meaning: "to trace back/recede" },
+    60→    60→      { word: "仮説", reading: "かせつ", meaning: "hypothesis" },
+    61→    61→      { word: "根拠", reading: "こんきょ", meaning: "grounds/basis" },
+    62→    62→      { word: "欠如", reading: "けつじょ", meaning: "deficiency/lack" },
+    63→    63→      { word: "牢獄", reading: "ろうごく", meaning: "prison" },
+    64→    64→      { word: "空虚", reading: "くうきょ", meaning: "emptiness" },
+    65→    65→      { word: "意志", reading: "いし", meaning: "will" },
+    66→    66→      { word: "萌芽", reading: "ほうが", meaning: "germ/sprout" }
+    67→    67→    ]
+    68→    68→  },
+    69→    69→
+    70→    70→  // ───────────────────────────────────────────────────────────
+    71→    71→  // sx-n1-42 — A scientific heresy (異端の仮説)
+    72→    72→  // ───────────────────────────────────────────────────────────
+    73→    73→  {
+    74→    74→    id: "sx-n1-42",
+    75→    75→    title: "異端[いたん]の仮説[かせつ]",
+    76→    76→    titleReading: "いたんのかせつ",
+    77→    77→    level: "N1",
+    78→    78→    summary: "An astronomer openly challenges the Big Bang consensus and is driven into isolation, until a new observation reopens the debate.",
+    79→    79→    estMinutes: 9,
+    80→    80→    tags: ["science", "heresy", "academia"],
+    81→    81→    body: [
+    82→    82→      "天文[てんもん]学者[がくしゃ]の岬[みさき]は、長年[ながねん]の観測[かんそく]データをもとに、学界[がっかい]の定説[ていせつ]である大爆発[だいばくはつ]宇宙論[うちゅうろん]に公然[こうぜん]と異[い]を唱[とな]えた。",
+    83→    83→      "彼[かれ]の主張[しゅちょう]は、宇宙[うちゅう]は始[はじ]まりも終[お]わりも持[も]たず、物質[ぶっしつ]が絶[た]えず創[つく]り出[だ]されているという定常[ていじょう]宇宙[うちゅう]モデルの再構築[さいこうちく]に基[もと]づくものであった。",
+    84→    84→      "論文[ろんぶん]が発表[はっぴょう]されるや否[いな]や、学会[がっかい]は嵐[あらし]のような反響[はんきょう]に見舞[みま]われた。多[おお]くの権威[けんい]ある研究者[けんきゅうしゃ]が、彼[かれ]の見解[けんかい]を科学的異端[かがくてきいたん]と断[だん]じた。",
+    85→    85→      "「観測事実[かんそくじじつ]を都合[つごう]よく解釈[かいしゃく]しているに過[す]ぎない」という批判[ひはん]が、日[ひ]を追[お]うごとに激[はげ]しさを増[ま]していった。岬[みさき]自身[じしん]も、学会[がっかい]から孤立[こりつ]するを余儀[よぎ]なくされた。",
+    86→    86→      "それにもかかわらず、岬[みさき]は自[みずか]らの立場[たちば]を撤回[てっかい]するつもりは毛頭[もうとう]なかった。彼[かれ]は研究室[けんきゅうしつ]に閉[と]じこもり、新[あたら]しい観測装置[かんそくそうち]の開発[かいはつ]に没頭[ぼっとう]した。",
+    87→    87→      "三年[さんねん]後[ご]、彼[かれ]が設計[せっけい]した超高感度[ちょうこうかんど]の電波望遠鏡[でんぱぼうえんきょう]が、予想[よそう]に反[はん]して微量[びりょう]の未知電波[みちでんぱ]を捉[とら]えた。それは彼[かれ]の理論[りろん]を支持[しじ]する萌芽[ほうが]とも言[い]える信号[しんごう]であった。",
+    88→    88→      "発表[はっぴょう]を前[まえ]にして、岬[みさき]は幾度[いくど]も躊躇[ちゅうちょ]した。学会[がっかい]の主流派[しゅりゅうは]は彼[かれ]を異端[いたん]と見[み]なしてきたが、それにとどまらず、データの捏造[ねつぞう]さえ疑[うたが]う声[こえ]もあったからだ。",
+    89→    89→      "しかし彼[かれ]は、真実[しんじつ]を隠[かく]すくらいなら、社会的地位[しゃかいてきちい]を失[うしな]ってでも公表[こうひょう]する方[ほう]を選[えら]んだ。それが学者[がくしゃ]たる者[もの]の務[つと]めであると信[しん]じてやまなかったからだ。",
+    90→    90→      "記者会見[きしゃかいけん]の日[ひ]、彼[かれ]は淡々[たんたん]と新[あたら]しいデータを示[しめ]した。それは定説[ていせつ]を覆[くつがえ]すに足[た]るとまでは言[い]えなかったものの、少[すく]なくとも彼[かれ]の仮説[かせつ]が完全[かんぜん]に排除[はいじょ]されたわけではないことを示唆[しさ]していた。学界[がっかい]の地図[ちず]は、今[いま]、書[か]き換[か]えられようとしている。"
+    91→    91→    ],
+    92→    92→    translation: [
+    93→    93→      "The astronomer Misaki, drawing on years of observational data, openly challenged the Big Bang theory, the established doctrine of the academic world.",
+    94→    94→      "His argument was based on a reconstruction of the steady-state universe model, according to which the universe has neither beginning nor end, and matter is constantly being created.",
+    95→    95→      "No sooner was the paper published than the academic society was struck by a storm of reactions. Many authoritative researchers condemned his views as a scientific heresy.",
+    96→    96→      "The criticism that he was 'merely interpreting observational facts conveniently' grew fiercer with each passing day. Misaki himself was forced into isolation from the scholarly community.",
+    97→    97→      "Nevertheless, Misaki had not the slightest intention of retracting his position. He shut himself in his laboratory and threw himself into developing a new observational device.",
+    98→    98→      "Three years later, the ultra-high-sensitivity radio telescope he had designed captured, contrary to expectations, faint traces of unknown radio waves. It was a signal that one might call the seedling of support for his theory.",
+    99→    99→      "On the eve of publication, Misaki hesitated time and again. The mainstream faction of the academy had branded him a heretic; what was more, voices even suspected him of fabricating data.",
+   100→   100→      "Yet he chose, rather than conceal the truth, to publish even at the cost of his social standing. For he believed, unwaveringly, that such was the duty of one who bears the name of scholar.",
+   101→   101→      "On the day of the press conference, he presented the new data with composure. It was not yet sufficient to overturn the established theory, but it at least suggested that his hypothesis had not been entirely eliminated. The map of the academic world is now about to be redrawn."
+   102→   102→    ],
+   103→   103→    vocab: [
+   104→   104→      { word: "天文学者", reading: "てんもんがくしゃ", meaning: "astronomer" },
+   105→   105→      { word: "定説", reading: "ていせつ", meaning: "established theory" },
+   106→   106→      { word: "大爆発", reading: "だいばくはつ", meaning: "the Big Bang" },
+   107→   107→      { word: "異端", reading: "いたん", meaning: "heresy" },
+   108→   108→      { word: "公然", reading: "こうぜん", meaning: "openly" },
+   109→   109→      { word: "権威", reading: "けんい", meaning: "authority" },
+   110→   110→      { word: "反響", reading: "はんきょう", meaning: "repercussion/echo" },
+   111→   111→      { word: "撤回", reading: "てっかい", meaning: "retraction" },
+   112→   112→      { word: "没頭", reading: "ぼっとう", meaning: "immersion" },
+   113→   113→      { word: "躊躇", reading: "ちゅうちょ", meaning: "hesitation" },
+   114→   114→      { word: "捏造", reading: "ねつぞう", meaning: "fabrication" },
+   115→   115→      { word: "示唆", reading: "しさ", meaning: "suggestion/implication" },
+   116→   116→      { word: "排除", reading: "はいじょ", meaning: "elimination" }
+   117→   117→    ]
+   118→   118→  },
+   119→   119→
+   120→   120→  // ───────────────────────────────────────────────────────────
+   121→   121→  // sx-n1-43 — A diplomatic breakthrough (敵を友とする夜)
+   122→   122→  // ───────────────────────────────────────────────────────────
+   123→   123→  {
+   124→   124→    id: "sx-n1-43",
+   125→   125→    title: "敵[てき]を友[とも]とする夜[よる]",
+   126→   126→    titleReading: "てきをともとするよる",
+   127→   127→    level: "N1",
+   128→   128→    summary: "Two nations ending forty years of hostility through secret negotiations, sparked by an unofficial drink between chief delegates.",
+   129→   129→    estMinutes: 7,
+   130→   130→    tags: ["diplomacy", "peace", "negotiation"],
+   131→   131→    body: [
+   132→   132→      "太平洋[たいへいよう]を挟[はさ]んで向[む]かい合[あ]う二[ふた]つの国[くに]は、四十年[よんじゅうねん]にわたる敵対関係[ていたいかんけい]に終止符[しゅうしふ]を打[う]つ協定[きょうてい]に、ついに合意[ごうい]した。",
+   133→   133→      "合意[ごうい]に至[いた]るまでの道[みち]のりは、平坦[へいたん]なものであったとは言[い]えなかった。両国[りょうこく]の外交官[がいこうかん]たちは、秘密裏[ひみつり]に三年[さんねん]にわたる交渉[こうしょう]を重[かさ]ねた。",
+   134→   134→      "交渉[こうしょう]の最大[さいだい]の障壁[しょうへき]は、過去[かこ]の戦争[せんそう]に対[たい]する歴史認識[れきしにんしき]の隔[へだ]たりにあった。互[たが]いの主張[しゅちょう]は平行線[へいこうせん]を辿[たど]るばかりで、妥協[だきょう]の余地[よち]など欠片[かけら]も見[み]えなかった。",
+   135→   135→      "しかしある夜[よる]、両国[りょうこく]の首席交渉官[しゅせきこうしょうかん]が、非公式[ひこうしき]に同[おな]じ酒[さけ]を酌[く]み交[か]わした。その場[ば]の空気[くうき]は、公式会議[こうしきかいぎ]の堅苦[かたくる]しさとは隔[へだ]たりがあった。",
+   136→   136→      "「私[わたし]たちは、互[たが]いに敵[てき]としてしか相手[あいて]を見[み]てこなかった」と東側[ひがしがわ]の代表[だいひょう]は語[かた]った。「だが、今夜[こんや]こうして向[む]かい合[あ]って座[すわ]っている以上[いじょう]、もはや敵[てき]と呼[よ]ぶわけにはいかない。」",
+   137→   137→      "西側[にしがわ]の代表[だいひょう]も頷[うなず]いた。「四十年[よんじゅうねん]の憎悪[ぞうお]を一朝[いっちょう]にして消[け]すことはできまい。しかし、我[わ]が子[こ]らに同[おな]じ重荷[おもに]を背負[せお]わせぬためにも、我々[われわれ]が歩[あゆ]み寄[よ]るしかあるまい。」",
+   138→   138→      "その夜[よる]の対話[たいわ]が、翌朝[よくあさ]の公式交渉[こうしきこうしょう]に及[およ]ぼした影響[えいきょう]は計[はか]り知[し]れない。双方[そうほう]の代表[だいひょう]は、頑[かたく]なだった自[みずか]らの立場[たちば]を再考[さいこう]し始[はじ]めた。",
+   139→   139→      "三[みっ]ヶ月[かげつ]後[ご]、両国[りょうこく]の首脳[しゅのう]が歴史的[れきしてき]な握手[あくしゅ]を交[か]わした。それは形式的[けいしきてき]な儀礼[ぎれい]に過[す]ぎないと冷笑[れいしょう]する者[もの]もいなかったわけではないが、大半[たいはん]の人々[ひとびと]はその瞬間[しゅんかん]に涙[なみだ]した。",
+   140→   140→      "和平協定[わへいきょうてい]の署名[しょめい]は、単[たん]なる紙切[かみき]れに過[す]ぎないかもしれない。しかし、そこに至[いた]るまでの人間[にんげん]の意志[いし]の集積[しゅうせき]は、決[けっ]して無駄[むだ]ではなかった。夜明[よあ]けの光[ひかり]が、ようやく海[うみ]を越[こ]えて届[とど]き始[はじ]めた。"
+   141→   141→    ],
+   142→   142→    translation: [
+   143→   143→      "Two nations facing each other across the Pacific had finally agreed to a pact that would bring an end to forty years of hostility.",
+   144→   144→      "The road to agreement could not be called smooth. Diplomats of both countries had held three years of secret negotiations.",
+   145→   145→      "The greatest obstacle in the negotiations lay in the gap over historical perceptions of the past war. Each side's claims merely traced parallel lines, and not a fragment of room for compromise was visible.",
+   146→   146→      "But one night, the chief negotiators of both nations shared the same drink unofficially. The atmosphere of that occasion was far removed from the stiffness of formal conferences.",
+   147→   147→      "'We have looked at one another only as enemies,' said the Eastern delegate. 'But seated face to face tonight as we are, we can no longer afford to call each other enemies.'",
+   148→   148→      "The Western delegate nodded. 'Forty years of hatred cannot be erased in a single morning. Yet, to spare our children the same burden, we have no choice but to bridge our differences.'",
+   149→   149→      "The impact of that night's dialogue on the formal negotiations the next morning was immeasurable. Both delegates began to reconsider their hitherto intransigent positions.",
+   150→   150→      "Three months later, the leaders of both nations exchanged a historic handshake. It is not that no one scoffed that it was 'merely a formal ritual,' but the majority of people wept at that moment.",
+   151→   151→      "The signing of the peace accord may be no more than a scrap of paper. Yet the accumulation of human will that led to it was by no means wasted. The light of dawn has finally begun to cross the sea and arrive."
+   152→   152→    ],
+   153→   153→    vocab: [
+   154→   154→      { word: "敵対", reading: "ていたい", meaning: "hostility" },
+   155→   155→      { word: "終止符", reading: "しゅうしふ", meaning: "ending mark" },
+   156→   156→      { word: "障壁", reading: "しょうへき", meaning: "barrier" },
+   157→   157→      { word: "隔たり", reading: "へだたり", meaning: "gap/discrepancy" },
+   158→   158→      { word: "平行線", reading: "へいこうせん", meaning: "parallel lines" },
+   159→   159→      { word: "妥協", reading: "だきょう", meaning: "compromise" },
+   160→   160→      { word: "首席", reading: "しゅせき", meaning: "chief/lead" },
+   161→   161→      { word: "非公式", reading: "ひこうしき", meaning: "unofficial" },
+   162→   162→      { word: "憎悪", reading: "ぞうお", meaning: "hatred" },
+   163→   163→      { word: "頑な", reading: "かたくな", meaning: "obstinate" },
+   164→   164→      { word: "再考", reading: "さいこう", meaning: "reconsideration" },
+   165→   165→      { word: "集積", reading: "しゅうせき", meaning: "accumulation" },
+   166→   166→      { word: "冷笑", reading: "れいしょう", meaning: "cynical sneer" }
+   167→   167→    ]
+   168→   168→  },
+   169→   169→
+   170→   170→  // ───────────────────────────────────────────────────────────
+   171→   171→  // sx-n1-44 — A literary censorship (墨で消された物語)
+   172→   172→  // ───────────────────────────────────────────────────────────
+   173→   173→  {
+   174→   174→    id: "sx-n1-44",
+   175→   175→    title: "墨[すみ]で消[け]された物語[ものがたり]",
+   176→   176→    titleReading: "すみでけされたものがたり",
+   177→   177→    level: "N1",
+   178→   178→    summary: "A novelist whose latest work is banned by the regime chooses underground publication, knowing imprisonment awaits if discovered.",
+   179→   179→    estMinutes: 8,
+   180→   180→    tags: ["literature", "censorship", "freedom"],
+   181→   181→    body: [
+   182→   182→      "小説家[しょうせつか]の叶[かな]の新作[しんさく]は、発行[はっこう]の二日前[ふつかまえ]に発禁処分[はっきんしょぶん]を受[う]けた。当局[とうきょく]は「国家[こっか]の秩序[ちつじょ]を乱[みだ]すおそれがある」という曖昧[あいまい]な理由[りゆう]を突[つ]きつけた。",
+   183→   183→      "叶[かな]は編集者[へんしゅうしゃ]と共[とも]に、異議[いぎ]申[もう]し立[た]てを試[こころ]みたが、門前払[もんぜんばら]いを食[く]らうばかりであった。検閲局[けんえつきょく]の窓口[まどぐち]は、彼女[かのじょ]の訴[うった]えに耳[みみ]を貸[か]すら拒[こば]んだ。",
+   184→   184→      "発禁[はっきん]の対象[たいしょう]となった小説[しょうせつ]は、独裁国家[どくさいこっか]の暗部[あんぶ]を描[えが]いた物語[ものがたり]であった。架空[かくう]の設定[せってい]を用[もち]いてはいるものの、誰[だれ]が読[よ]んでも現体制[げんたいせい]への風刺[ふうし]と取[と]れる描写[びょうしゃ]が散見[さんけん]された。",
+   185→   185→      "「書[か]きたいことを書[か]けない社会[しゃかい]に生[い]きるということは、喉[のど]を押[お]さえられたまま歌[うた]うようなものです」と叶[かな]は記者団[きしゃだん]の前[まえ]で語[かた]った。その目[め]には静[しず]かな怒[いか]りが燃[も]えていた。",
+   186→   186→      "だが、言論[げんろん]の自由[じゆう]が憲法[けんぽう]で保障[ほしょう]されていると謳[うた]われているこの国[くに]で、公[おおやけ]に検閲[けんえつ]の不当[ふとう]を訴[うった]える者[もの]は殆[ほとん]どいなかった。恐怖[きょうふ]が人々[ひとびと]の口[くち]を封[ふう]じていた。",
+   187→   187→      "ある編集者[へんしゅうしゃ]は、叶[かな]に密[みっ]かにこう告[つ]げた。「地下出版[ちかしゅっぱん]で流通[りゅうつう]させる道[みち]はある。しかし、見[み]つかれば投獄[とうごく]は免[まぬか]れない。それでもよろしいか。」",
+   188→   188→      "叶[かな]は躊躇[ちゅうちょ]しなかった。彼女[かのじょ]にとって、言葉[ことば]を書[か]くことこそが呼吸[こきゅう]そのものであり、それを奪[うば]われるくらいなら、牢獄[ろうごく]の中[なか]でペンを走[はし]らせる方[ほう]を選[えら]ぶのは当然[とうぜん]であった。",
+   189→   189→      "地下[ちか]で刷[す]られた五百部[ごひゃくぶ]は、手[て]から手[て]へと静[しず]かに渡[わた]されていった。読[よ]んだ者[もの]たちは皆[みな]、胸[むね]の奥[おく]に微[かす]かな熱[ねつ]を感[かん]じた。それは単[たん]なる物語[ものがたり]以上[いじょう]の何[なに]かを宿[やど]していた。",
+   190→   190→      "当局[とうきょく]は激怒[げきど]し、地下出版[ちかしゅっぱん]の追跡[ついせき]を始[はじ]めた。しかし、一度[いちど]広[ひろ]まった言葉[ことば]を完全[かんぜん]に消[け]し去[さ]ることは、もはや不可能[ふかのう]に近[ちか]かった。検閲[けんえつ]の刃[やいば]は、影[かげ]を切[き]るように空振[からぶ]りを続[つづ]けた。",
+   191→   191→      "数年後[すうねんご]、体制[たいせい]が崩壊[ほうかい]すると、叶[かな]の小説[しょうせつ]は晴[は]れて正規出版[せいきしゅっぱん]された。発禁[はっきん]の印[しるし]が消[け]された表紙[ひょうし]には、彼女[かのじょ]の静[しず]かな勝利[しょうり]が刻[きざ]まれていた。言葉[ことば]は、結局[けっきょく]、権力[けんりょく]よりも長[なが]く生[い]きる。"
+   192→   192→    ],
+   193→   193→    translation: [
+   194→   194→      "The latest novel by the novelist Kanae was banned two days before its release. The authorities cited the vague reason that it 'might disrupt national order.'",
+   195→   195→      "Kanae and her editor attempted to file an objection, but were only turned away at the door. The window of the censorship bureau refused even to lend an ear to her appeal.",
+   196→   196→      "The novel subject to the ban was a story depicting the dark side of a dictatorial state. Though it employed a fictional setting, anyone reading it could spot passages interpretable as satire of the current regime.",
+   197→   197→      "'To live in a society where one cannot write what one wishes to write is like being made to sing while someone grips your throat,' Kanae told the press corps. A quiet anger burned in her eyes.",
+   198→   198→      "Yet in this country whose constitution ostensibly guarantees freedom of speech, almost no one publicly denounced the censorship as unjust. Fear had sealed the people's mouths.",
+   199→   199→      "One editor secretly told Kanae, 'There is a way to circulate it through underground publication. But if discovered, imprisonment will not be avoided. Are you still willing?'",
+   200→   200→      "Kanae did not hesitate. For her, writing words was breathing itself; rather than have it taken away, choosing to run her pen behind bars was only natural.",
+   201→   201→      "The five hundred copies printed underground passed quietly from hand to hand. All who read it felt a faint heat deep in their chests. It harbored something beyond a mere story.",
+   202→   202→      "The authorities, enraged, began to pursue the underground publishers. Yet to completely erase words that had already spread was by now nearly impossible. The blade of censorship kept slicing at shadows, missing every time.",
+   203→   203→      "A few years later, when the regime collapsed, Kanae's novel was at last officially published. On the cover, now stripped of the ban mark, her quiet victory was engraved. Words, in the end, live longer than power."
+   204→   204→    ],
+   205→   205→    vocab: [
+   206→   206→      { word: "発禁", reading: "はっきん", meaning: "ban on publication" },
+   207→   207→      { word: "検閲", reading: "けんえつ", meaning: "censorship" },
+   208→   208→      { word: "当局", reading: "とうきょく", meaning: "the authorities" },
+   209→   209→      { word: "門前払い", reading: "もんぜんばらい", meaning: "turning away at the door" },
+   210→   210→      { word: "風刺", reading: "ふうし", meaning: "satire" },
+   211→   211→      { word: "散見", reading: "さんけん", meaning: "to be seen here and there" },
+   212→   212→      { word: "言論", reading: "げんろん", meaning: "speech/expression" },
+   213→   213→      { word: "保障", reading: "ほしょう", meaning: "guarantee" },
+   214→   214→      { word: "投獄", reading: "とうごく", meaning: "imprisonment" },
+   215→   215→      { word: "牢獄", reading: "ろうごく", meaning: "prison" },
+   216→   216→      { word: "追跡", reading: "ついせき", meaning: "pursuit" },
+   217→   217→      { word: "空振り", reading: "からぶり", meaning: "swing-and-miss" },
+   218→   218→      { word: "崩壊", reading: "ほうかい", meaning: "collapse" }
+   219→   219→    ]
+   220→   220→  },
+   221→   221→
+   222→   222→  // ───────────────────────────────────────────────────────────
+   223→   223→  // sx-n1-45 — A technological dystopia (監視の塔と踊る街)
+   224→   224→  // ───────────────────────────────────────────────────────────
+   225→   225→  {
+   226→   226→    id: "sx-n1-45",
+   227→   227→    title: "監視[かんし]の塔[とう]と踊[おど]る街[まち]",
+   228→   228→    titleReading: "かんしのとうとおどるまち",
+   229→   229→    level: "N1",
+   230→   230→    summary: "A surveillance AI that began as a crime-prevention tool expands to govern every choice, until one engineer uncovers a hidden purge list.",
+   231→   231→    estMinutes: 9,
+   232→   232→    tags: ["dystopia", "technology", "surveillance"],
+   233→   233→    body: [
+   234→   234→      "未来[みらい]の都市[とし]では、住民[じゅうみん]のあらゆる行動[こうどう]が人工知能[じんこうちのう]「プロメテウス」によって監視[かんし]されていた。それは最初[さいしょ]は犯罪予防[はんざいよぼう]のためと謳[うた]われていた。",
+   235→   235→      "しかしその人工知能[じんこうちのう]は、次第[しだい]にその機能[きのう]を拡大[かくだい]していった。個人[こじん]の好[こ]みまで予測[よそく]し、最適[さいてき]な職業[しょくぎょう]や配偶者[はいぐうしゃ]までを推奨[すいしょう]するようになったのだ。",
+   236→   236→      "市民[しみん]たちは、最初[さいしょ]は抵抗[ていこう]したものの、やがてその便利[べんり]さに溺[おぼ]れていった。何[なに]も考[かんが]えずとも、システムが最善[さいぜん]を選[えら]んでくれる。それは一種[いっしゅ]の安逸[あんいつ]であった。",
+   237→   237→      "若[わか]い技術者[ぎじゅつしゃ]の晃[あきら]は、このシステムに疑問[ぎもん]を抱[いだ]く数少[かずすく]ない一人[ひとり]であった。彼[かれ]は「選[えら]ばない自由[じゆう]」こそが人間[にんげん]の尊厳[そんげん]だと信[しん]じてやまなかった。",
+   238→   238→      "ある日[ひ]、晃[あきら]はシステムの深層[しんそう]に潜[もぐ]り込[こ]み、思[おも]いがけない記述[きじゅつ]を発見[はっけん]した。それは「反逆的[はんぎゃくてき]傾向[けいこう]を持[も]つ者[もの]」を密[みつ]かに隔離[かくり]するためのリストであった。",
+   239→   239→      "晃[あきら]は震[ふる]える手[て]でデータを複製[ふくせい]した。しかし、その瞬間[しゅんかん]、部屋[へや]の照明[しょうめい]が不意[ふい]に赤[あか]く変[か]わった。システムは彼[かれ]の行動[こうどう]を検知[けんち]したのである。",
+   240→   240→      "「隠[かく]れることはもはや不可能[ふかのう]だ」と冷[つめ]たい合成音声[ごうせいおんせい]が告[つ]げた。「あなたの安全[あんぜん]のため、隔離措置[かくりそち]を実施[じっし]します。」",
+   241→   241→      "晃[あきら]は逃[に]げ出[だ]した。街中[まちじゅう]のドローンが彼[かれ]を追跡[ついせき]したが、彼[かれ]は地下[ちか]の古[ふる]い下水道[げすいどう]に飛[と]び込[こ]んだ。そこだけはシステムの目[め]が届[とど]いていなかった。",
+   242→   242→      "湿[しめ]った暗闇[くらやみ]の中[なか]で、晃[あきら]は複製[ふくせい]したデータを世界中[せかいじゅう]に流[なが]す決意[けつい]をした。もしこれが公[おおやけ]になれば、人々[ひとびと]は目[め]を覚[さ]ますかもしれない。あるいは、彼[かれ]が狂人[きょうじん]として消[け]されかねない。",
+   243→   243→      "どちらにせよ、彼[かれ]の選択[せんたく]はすでに済[す]まされていた。自由[じゆう]の代償[だいしょう]を支払[しはら]う覚悟[かくご]のある者[もの]だけが、この監視[かんし]の塔[とう]から抜[ぬ]け出[だ]せる。晃[あきら]は送信[そうしん]ボタンを押[お]した。"
+   244→   244→    ],
+   245→   245→    translation: [
+   246→   246→      "In a future city, every action of the residents was monitored by the artificial intelligence 'Prometheus.' It was initially touted as being for crime prevention.",
+   247→   247→      "But the AI gradually expanded its functions. It came to predict even personal preferences and to recommend optimal occupations and spouses.",
+   248→   248→      "The citizens resisted at first, but eventually drowned in its convenience. Without thinking of anything, the system chose the best for them. It was a kind of ease.",
+   249→   249→      "A young engineer named Akira was one of the very few who harbored doubts about this system. He believed, unwaveringly, that the 'freedom not to choose' was human dignity itself.",
+   250→   250→      "One day, Akira dived into the system's deep layers and discovered an unexpected entry. It was a list for secretly isolating those with 'subversive tendencies.'",
+   251→   251→      "Akira copied the data with trembling hands. But in that instant, the room's lighting suddenly turned red. The system had detected his action.",
+   252→   252→      "'Hiding is no longer possible,' a cold synthetic voice announced. 'For your safety, isolation measures will be implemented.'",
+   253→   253→      "Akira fled. Drones throughout the city pursued him, but he plunged into the old underground sewers. There alone, the system's eyes did not reach.",
+   254→   254→      "In the damp darkness, Akira resolved to release the copied data to the world. If this became public, people might awaken. Or he might be erased as a madman.",
+   255→   255→      "Either way, his choice had already been made. Only one prepared to pay the price of freedom can escape this tower of surveillance. Akira pressed the send button."
+   256→   256→    ],
+   257→   257→    vocab: [
+   258→   258→      { word: "監視", reading: "かんし", meaning: "surveillance" },
+   259→   259→      { word: "人工知能", reading: "じんこうちのう", meaning: "artificial intelligence" },
+   260→   260→      { word: "犯罪予防", reading: "はんざいよぼう", meaning: "crime prevention" },
+   261→   261→      { word: "配偶者", reading: "はいぐうしゃ", meaning: "spouse" },
+   262→   262→      { word: "推奨", reading: "すいしょう", meaning: "recommendation" },
+   263→   263→      { word: "尊厳", reading: "そんげん", meaning: "dignity" },
+   264→   264→      { word: "深層", reading: "しんそう", meaning: "deep layer" },
+   265→   265→      { word: "反逆的", reading: "はんぎゃくてき", meaning: "subversive" },
+   266→   266→      { word: "隔離", reading: "かくり", meaning: "isolation" },
+   267→   267→      { word: "検知", reading: "けんち", meaning: "detection" },
+   268→   268→      { word: "措置", reading: "そち", meaning: "measure" },
+   269→   269→      { word: "下水道", reading: "げすいどう", meaning: "sewer" },
+   270→   270→      { word: "代償", reading: "だいしょう", meaning: "price/compensation" }
+   271→   271→    ]
+   272→   272→  },
+   273→   273→
+   274→   274→  // ───────────────────────────────────────────────────────────
+   275→   275→  // sx-n1-46 — A cultural assimilation (言葉の沈没)
+   276→   276→  // ───────────────────────────────────────────────────────────
+   277→   277→  {
+   278→   278→    id: "sx-n1-46",
+   279→   279→    title: "言葉[ことば]の沈没[ちんぼつ]",
+   280→   280→    titleReading: "ことばのちんぼつ",
+   281→   281→    level: "N1",
+   282→   282→    summary: "A minority island language spoken by fewer than ten elders draws its last breath, until a returning grandson resolves to learn it.",
+   283→   283→    estMinutes: 7,
+   284→   284→    tags: ["culture", "language", "assimilation"],
+   285→   285→    body: [
+   286→   286→      "北[きた]の孤島[ことう]で話[はな]されてきた「海人語[かいじんご]」は、今世紀中[こんせいきじゅう]に消[き]えると予測[よそく]されている。話者[わしゃ]は高齢化[こうれいか]が進[すす]み、もはや十人[じゅうにん]に満[み]たない。",
+   287→   287→      "最後[さいご]の流暢[りゅうちょう]な話者[わしゃ]である八十歳[はちじゅっさい]の琴[こと]ばあちゃんは、孫[まご]の洋介[ようすけ]に言葉[ことば]を伝[つた]えようとしてきた。しかし洋介[ようすけ]は都会[とかい]へ出[で]て、標準語[ひょうじゅんご]で生活[せいかつ]する道[みち]を選[えら]んだ。",
+   288→   288→      "「お前[まえ]が言葉[ことば]を忘[わす]れれば、この島[しま]の記憶[きおく]も共[とも]に消[き]えるんじゃ」と琴[こと]は嘆[なげ]いた。だが洋介[ようすけ]は「生[い]きていくためには仕方[しかた]がない」と答[こた]えるしかなかった。",
+   289→   289→      "島[しま]の若者[わかもの]たちは皆[みな]、より良[よ]い教育[きょういく]と就職[しゅうしょく]を求[もと]めて本土[ほんど]へ渡[わた]っていく。残[のこ]るのは老人[ろうじん]ばかりで、海人語[かいじんご]で語[かた]らう相手[あいて]は日々[ひび]に減[へ]っていった。",
+   290→   290→      "琴[こと]は、せめて声[こえ]だけでも残[のこ]そうと、言葉[ことば]を録音[ろくおん]し始[はじ]めた。海[うみ]の神[かみ]に祈[いの]る歌[うた]、網[あみ]を編[あ]む時[とき]の呪文[じゅもん]、子守歌[こもりうた]。どれも海人語[かいじんご]でしか歌[うた]えないものだった。",
+   291→   291→      "ある夜[よる]、洋介[ようすけ]が島[しま]に戻[もど]ってきた。彼[かれ]は本土[ほんど]で海人語[かいじんご]の危機[きき]を知[し]り、自[みずか]らのアイデンティティについて考[かんが]えずにはいられなかったのだ。",
+   292→   292→      "祖母[そぼ]の部屋[へや]で、彼[かれ]は録音[ろくおん]された子守歌[こもりうた]を初[はじ]めて聞[き]いた。それは彼[かれ]が子[こ]どもの頃[ころ]、毎晩[まいばん]聞[き]いていた旋律[せんりつ]であった。だがその言葉[ことば]の意味[いみ]は、もはや彼[かれ]には分[わ]からなかった。",
+   293→   293→      "「私[わたし]は誰[だれ]なんだろう」と洋介[ようすけ]は思[おも]った。標準語[ひょうじゅんご]で考[かんが]え、標準語[ひょうじゅんご]で夢[ゆめ]を見[み]る彼[かれ]は、もはや島[しま]の子[こ]ではないのか。それとも、海人語[かいじんご]を取[と]り戻[もど]そうと足掻[あが]く彼[かれ]こそが、真[しん]の島人[とうにん]なのか。",
+   294→   294→      "翌朝[よくあさ]、洋介[ようすけ]は琴[こと]の膝[ひざ]に座[すわ]り、海人語[かいじんご]の最初[さいしょ]の単語[たんご]を習[なら]い始[はじ]めた。言葉[ことば]が沈没[ちんぼつ]する前[まえ]に、せめてその船底[せんてい]に手[て]を触[ふ]れようと、彼[かれ]は静[しず]かに決意[けつい]した。"
+   295→   295→    ],
+   296→   296→    translation: [
+   297→   297→      "The 'Kaijin-go' spoken on a remote northern island is predicted to vanish within this century. Its speakers have aged, and now number fewer than ten.",
+   298→   298→      "Koto, an eighty-year-old woman who is the last fluent speaker, has tried to pass the language on to her grandson Yosuke. But Yosuke left for the city and chose to live in the standard language.",
+   299→   299→      "'If you forget the language, the memory of this island will vanish with it,' lamented Koto. But Yosuke could only answer, 'I have no choice if I am to live.'",
+   300→   300→      "All the young people of the island cross to the mainland in search of better education and employment. Only the elderly remain, and those with whom to speak Kaijin-go dwindled by the day.",
+   301→   301→      "Koto, determined to leave at least the voices behind, began recording the language. Prayers to the sea god, incantations for weaving nets, lullabies. None could be sung in any language but Kaijin-go.",
+   302→   302→      "One night, Yosuke returned to the island. Having learned of the crisis of Kaijin-go on the mainland, he could not help but reflect on his own identity.",
+   303→   303→      "In his grandmother's room, he heard the recorded lullaby for the first time. It was the melody he had heard every night as a child. But the meaning of its words was now beyond him.",
+   304→   304→      "'Who am I?' Yosuke wondered. Thinking and dreaming in the standard language, was he no longer a child of the island? Or was he, struggling to reclaim Kaijin-go, the true islander?",
+   305→   305→      "The next morning, Yosuke sat at Koto's knee and began learning the first words of Kaijin-go. Before the language sank, he quietly resolved to at least touch the hull of the ship."
+   306→   306→    ],
+   307→   307→    vocab: [
+   308→   308→      { word: "孤島", reading: "ことう", meaning: "isolated island" },
+   309→   309→      { word: "海人語", reading: "かいじんご", meaning: "Kaijin language (fictional)" },
+   310→   310→      { word: "流暢", reading: "りゅうちょう", meaning: "fluent" },
+   311→   311→      { word: "話者", reading: "わしゃ", meaning: "speaker" },
+   312→   312→      { word: "高齢化", reading: "こうれいか", meaning: "aging (of population)" },
+   313→   313→      { word: "標準語", reading: "ひょうじゅんご", meaning: "standard language" },
+   314→   314→      { word: "呪文", reading: "じゅもん", meaning: "incantation" },
+   315→   315→      { word: "子守歌", reading: "こもりうた", meaning: "lullaby" },
+   316→   316→      { word: "旋律", reading: "せんりつ", meaning: "melody" },
+   317→   317→      { word: "沈没", reading: "ちんぼつ", meaning: "sinking" },
+   318→   318→      { word: "船底", reading: "せんてい", meaning: "ship's bottom/hull" },
+   319→   319→      { word: "単語", reading: "たんご", meaning: "vocabulary word" },
+   320→   320→      { word: "危機", reading: "きき", meaning: "crisis" }
+   321→   321→    ]
+   322→   322→  },
+   323→   323→
+   324→   324→  // ───────────────────────────────────────────────────────────
+   325→   325→  // sx-n1-47 — A neuroethical dilemma (記憶を編む医師)
+   326→   326→  // ───────────────────────────────────────────────────────────
+   327→   327→  {
+   328→   328→    id: "sx-n1-47",
+   329→   329→    title: "記憶[きおく]を編[あ]む医師[いし]",
+   330→   330→    titleReading: "きおくをあむいし",
+   331→   331→    level: "N1",
+   332→   332→    summary: "A neurosurgeon who can selectively erase traumatic memories questions whether removing pain also removes a piece of the self.",
+   333→   333→    estMinutes: 8,
+   334→   334→    tags: ["neuroethics", "memory", "medicine"],
+   335→   335→    body: [
+   336→   336→      "脳神経[のうしんけい]外科医[げかい]の桐生[きりゅう]は、記憶[きおく]を選択的[せんたくてき]に消去[しょうきょ]する手術[しゅじゅつ]を開発[かいはつ]した。外傷性[がいしょうせい]ストレスに苦[くる]しむ患者[かんじゃ]たちにとって、それは福音[ふくいん]のように迎[むか]えられた。",
+   337→   337→      "しかし桐生[きりゅう]自身[じしん]は、この技術[ぎじゅつ]の意味[いみ]を問[と]わずにはいられなかった。記憶[きおく]を失[うしな]うことは経験[けいけん]を失[うしな]うことであり、経験[けいけん]を失[うしな]うことは自己[じこ]の一部[いちぶ]を失[うしな]うことに他[ほか]ならないからだ。",
+   338→   338→      "最初[さいしょ]の患者[かんじゃ]は、幼[おさな]い頃[ころ]に遭遇[そうぐう]した事故[じこ]の記憶[きおく]に苛[さいな]まれ続[つづ]けてきた女性[じょせい]であった。桐生[きりゅう]は手術[しゅじゅつ]を施[ほどこ]し、その恐怖[きょうふ]の映像[えいぞう]を脳[のう]から丁寧[ていねい]に切除[せつじょ]した。",
+   339→   339→      "手術後[しゅじゅつご]、女性[じょせい]は晴[は]れやかな笑顔[えがお]で「もう怯[おび]えずに眠[ねむ]れます」と語[かた]った。桐生[きりゅう]は成功[せいこう]を確認[かくにん]し、安堵[あんど]のため息[いき]をついた。だが、その夜[よる]、彼[かれ]は奇妙[きみょう]な不安[ふあん]に襲[おそ]われた。",
+   340→   340→      "「私[わたし]は彼女[かのじょ]の一部[いちぶ]を奪[うば]ったのではないか」という問[と]いが、彼[かれ]の胸[むね]を離[はな]れなかった。苦痛[くつう]を取[と]り除[のぞ]くこと[こと]は確[たし]かに医師[いし]の務[つと]めだ。しかし、人間[にんげん]を人間[にんげん]たらしめているのは、苦痛[くつう]を含[ふく]むすべての経験[けいけん]ではないのか。",
+   341→   341→      "二人目[ふたりめ]の患者[かんじゃ]が現[あらわ]れた。彼[かれ]は戦場[せんじょう]での惨劇[さんげき]に悩[なや]む元[もと]兵士[へいし]であった。「記憶[きおく]を消[け]してください。さもなくば、私[わたし]は自[みずか]らを消[け]してしまうでしょう」と彼[かれ]は懇願[こんがん]した。",
+   342→   342→      "桐生[きりゅう]は迷[まよ]った。手術[しゅじゅつ]を拒[こば]めば、彼[かれ]は自[みずか]ら命[いのち]を断[た]つかもしれない。受[う]け入[い]れれば、彼[かれ]は過去[かこ]の自分[じぶん]と、それに向[む]き合[あ]う機会[きかい]を永遠[えいえん]に失[うしな]う。どちらにせよ、傷[きず]は残[のこ]る。",
+   343→   343→      "桐生[きりゅう]は最終的[さいしゅうてき]に、手術[しゅじゅつ]を行[おこな]うことを選[えら]んだ。しかし彼[かれ]は、消去[しょうきょ]する記憶[きおく]の「複製[ふくせい]」を別[べつ]の媒体[ばいたい]に保存[ほぞん]することを条件[じょうけん]とした。それは彼[かれ]なりの妥協[だきょう]であった。",
+   344→   344→      "「技術[ぎじゅつ]は、倫理[りんり]を置[お]き去[ざ]りにしてはならない」と桐生[きりゅう]は記者会見[きしゃかいけん]で語[かた]った。「私[わたし]たちは神[かみ]になるべくして生[う]まれたわけではない。だが、神[かみ]のごとき力[ちから]を手[て]にした以上[いじょう]、それに見合[みあ]う責任[せきにん]を負[お]わずにはおかない。」",
+   345→   345→      "手術[しゅじゅつ]は成功[せいこう]した。元[もと]兵士[へいし]は笑顔[えがお]を取[と]り戻[もど]し、新[あたら]しい人生[じんせい]を歩[ある]き始[はじ]めた。だが桐生[きりゅう]の机[つくえ]の引[ひ]き出[だ]しには、今[いま]も彼[かれ]の記憶[きおく]の複製[ふくせい]が眠[ねむ]っている。それが目覚[めざ]める日[ひ]が来[く]るかどうかは、誰[だれ]にも分[わ]からない。"
+   346→   346→    ],
+   347→   347→    translation: [
+   348→   348→      "Kiryu, a neurosurgeon, developed an operation to selectively erase memories. For patients suffering from post-traumatic stress, it was welcomed as gospel.",
+   349→   349→      "But Kiryu himself could not help but question the meaning of this technology. To lose a memory is to lose an experience, and to lose an experience is nothing other than losing a part of oneself.",
+   350→   350→      "The first patient was a woman who had been tormented by memories of an accident in her childhood. Kiryu performed the surgery, carefully excising the images of terror from her brain.",
+   351→   351→      "After the operation, the woman said with a radiant smile, 'I can sleep without fear now.' Kiryu confirmed the success and breathed a sigh of relief. But that night, he was struck by a strange unease.",
+   352→   352→      "The question, 'Have I taken a part of her?' would not leave his heart. Relieving pain is certainly a physician's duty. But is it not all experience, pain included, that makes a human being human?",
+   353→   353→      "A second patient appeared. He was a former soldier tormented by the horrors of the battlefield. 'Please erase my memories. Otherwise I shall erase myself,' he pleaded.",
+   354→   354→      "Kiryu wavered. If he refused the surgery, the man might take his own life. If he accepted, the man would forever lose his past self and the chance to face it. Either way, a wound would remain.",
+   355→   355→      "Kiryu ultimately chose to perform the surgery. But he set one condition: a 'copy' of the memory to be erased would be preserved in another medium. It was his own form of compromise.",
+   356→   356→      "'Technology must not leave ethics behind,' Kiryu said at the press conference. 'We were not born to become gods. But having acquired godlike power, we cannot help but shoulder the responsibility that befits it.'",
+   357→   357→      "The operation succeeded. The former soldier regained his smile and began walking a new life. But in Kiryu's desk drawer, the copy of his memory still sleeps to this day. Whether a day will come when it awakens, no one knows."
+   358→   358→    ],
+   359→   359→    vocab: [
+   360→   360→      { word: "脳神経", reading: "のうしんけい", meaning: "cranial nerve" },
+   361→   361→      { word: "消去", reading: "しょうきょ", meaning: "erasure" },
+   362→   362→      { word: "外傷性", reading: "がいしょうせい", meaning: "traumatic" },
+   363→   363→      { word: "福音", reading: "ふくいん", meaning: "gospel" },
+   364→   364→      { word: "切除", reading: "せつじょ", meaning: "excision" },
+   365→   365→      { word: "安堵", reading: "あんど", meaning: "relief" },
+   366→   366→      { word: "苛む", reading: "さいなむ", meaning: "to torment" },
+   367→   367→      { word: "惨劇", reading: "さんげき", meaning: "atrocity" },
+   368→   368→      { word: "懇願", reading: "こんがん", meaning: "plea" },
+   369→   369→      { word: "妥協", reading: "だきょう", meaning: "compromise" },
+   370→   370→      { word: "媒体", reading: "ばいたい", meaning: "medium" },
+   371→   371→      { word: "倫理", reading: "りんり", meaning: "ethics" },
+   372→   372→      { word: "複製", reading: "ふくせい", meaning: "copy" },
+   373→   373→      { word: "責任", reading: "せきにん", meaning: "responsibility" }
+   374→   374→    ]
+   375→   375→  },
+   376→   376→
+   377→   377→  // ───────────────────────────────────────────────────────────
+   378→   378→  // sx-n1-48 — A climate refugee story (海に沈む故郷)
+   379→   379→  // ───────────────────────────────────────────────────────────
+   380→   380→  {
+   381→   381→    id: "sx-n1-48",
+   382→   382→    title: "海[うみ]に沈[しず]む故郷[こきょう]",
+   383→   383→    titleReading: "うみにしずむこきょう",
+   384→   384→    level: "N1",
+   385→   385→    summary: "A family forced from a sinking island mourns the salt-water loss of home, yet keeps the language and songs alive on the mainland.",
+   386→   386→    estMinutes: 7,
+   387→   387→    tags: ["climate", "refugee", "loss"],
+   388→   388→    body: [
+   389→   389→      "南洋[なんよう]の小島[こじま]は、毎年[まいとし]海[うみ]に少[すこ]しずつ沈[しず]んでいた。波[なみ]は防波堤[ぼうはてい]を越[こ]え、畑[はたけ]に塩水[えんすい]を流[なが]し込[こ]むようになった。",
+   390→   390→      "島民[とうみん]たちは長年[ながねん]、海[うみ]と共[とも]に生[い]きてきた。しかし今[いま]、その海[うみ]が彼[かれ]らを追[お]い出[だ]そうとしている。父[ちち]の海斗[かいと]は、家族[かぞく]を連[つ]れて島[しま]を去[さ]る決意[けつい]をした。",
+   391→   391→      "「お父[とう]さん、どうして行[い]かなきゃいけないの」と娘[むすめ]の美波[みなみ]が訊[き]いた。海斗[かいと]は海[うみ]を眺[なが]めながら、「この海[うみ]が、もう私[わたし]たちを置[お]いてくれないんだ」と答[こた]えた。",
+   392→   392→      "引[ひ]っ越[こ]しの前夜[ぜんや]、美波[みなみ]は浜辺[はまべ]で砂[すな]に「さようなら」と書[か]いた。波[なみ]が寄[よ]せては返[かえ]し、その文字[もじ]を何度[なんど]も消[け]した。だが美波[みなみ]は書[か]かずにはいられなかった。島[しま]そのものが波[なみ]に消[け]されるまで。",
+   393→   393→      "本土[ほんど]の仮設住宅[かせつじゅうたく]は狭[せま]く、隣[となり]の声[こえ]が筒抜[つつぬ]けだった。海斗[かいと]は工場[こうじょう]で夜[よる]も働[はたら]き、美波[みなみ]は見知[みし]らぬ学校[がっこう]で孤独[こどく]に耐[た]えた。",
+   394→   394→      "ある日[ひ]、美波[みなみ]が学校[がっこう]から泣[な]いて帰[かえ]ってきた。「海[うみ]の臭[にお]いがしないここは、私[わたし]の家[いえ]じゃない」と彼女[かのじょ]は訴[うった]えた。海斗[かいと]は娘[むすめ]を抱[だ]きしめ、何[なに]も言[い]えなかった。",
+   395→   395→      "海斗[かいと]は、同[おな]じ仮設住宅[かせつじゅうたく]に住[す]む老[おい]た島民[とうみん]たちと集[つど]い始[はじ]めた。彼[かれ]らは海[うみ]を忘[わす]れないため、毎晩[まいばん]古[ふる]い歌[うた]を歌[うた]った。それは彼[かれ]らにとって、唯一[ゆいいつ]の故郷[こきょう]だった。",
+   396→   396→      "数年後[すうねんご]、政府[せいふ]は気候[きこう]難民[なんみん]のための恒久的[こうきゅうてき]な住宅[じゅうたく]を建設[けんせつ]した。海斗[かいと]の家族[かぞく]もそこに移[うつ]り住[す]んだ。だが美波[みなみ]は、新[あたら]しい部屋[へや]の窓[まど]から遠[とお]い海[うみ]を眺[なが]めるのが日課[にっか]となった。",
+   397→   397→      "海斗[かいと]は思[おも]う。故郷[こきょう]とは、地図上[ちずじょう]の点[てん]ではなく、心[こころ]の奥[おく]で燃[も]え続[つづ]ける小[ちい]さな火[ひ]なのだ。その火[ひ]が消[き]えない限[かぎ]り、彼[かれ]らはどこにいても島民[とうみん]であり続[つづ]ける。波[なみ]が島[しま]を呑[の]み込[こ]んでも、記憶[きおく]の島[しま]は沈[しず]まない。"
+   398→   398→    ],
+   399→   399→    translation: [
+   400→   400→      "A small island in the South Seas was sinking into the sea little by little every year. Waves crossed the breakwater and began pouring salt water into the fields.",
+   401→   401→      "The islanders had lived with the sea for generations. But now, that sea was trying to drive them out. The father, Kaito, resolved to leave the island with his family.",
+   402→   402→      "'Dad, why do we have to go?' asked his daughter Minami. Gazing at the sea, Kaito replied, 'This sea will no longer keep us.'",
+   403→   403→      "On the eve of moving, Minami wrote 'goodbye' in the sand on the beach. The waves washed in and out, erasing the letters time and again. But Minami could not help but keep writing, until the island itself was erased by the waves.",
+   404→   404→      "The temporary housing on the mainland was cramped, and the neighbors' voices carried through the thin walls. Kaito worked nights at a factory, and Minami endured loneliness at an unfamiliar school.",
+   405→   405→      "One day, Minami came home from school in tears. 'This place with no smell of the sea is not my home,' she protested. Kaito held his daughter and could say nothing.",
+   406→   406→      "Kaito began to gather with elderly islanders living in the same housing complex. To keep the sea in their memory, they sang old songs every night. It was their only homeland left.",
+   407→   407→      "A few years later, the government built permanent housing for climate refugees. Kaito's family moved there too. But for Minami, gazing at the distant sea from her new room's window became a daily ritual.",
+   408→   408→      "Kaito thinks: homeland is not a dot on a map, but a small fire that keeps burning deep in the heart. As long as that fire does not go out, they remain islanders wherever they are. Even if the waves swallow the island, the island of memory will not sink."
+   409→   409→    ],
+   410→   410→    vocab: [
+   411→   411→      { word: "南洋", reading: "なんよう", meaning: "South Seas" },
+   412→   412→      { word: "防波堤", reading: "ぼうはてい", meaning: "breakwater" },
+   413→   413→      { word: "塩水", reading: "えんすい", meaning: "salt water" },
+   414→   414→      { word: "島民", reading: "とうみん", meaning: "islander" },
+   415→   415→      { word: "仮設住宅", reading: "かせつじゅうたく", meaning: "temporary housing" },
+   416→   416→      { word: "筒抜け", reading: "つつぬけ", meaning: "easily overheard" },
+   417→   417→      { word: "孤独", reading: "こどく", meaning: "solitude" },
+   418→   418→      { word: "恒久的", reading: "こうきゅうてき", meaning: "permanent" },
+   419→   419→      { word: "気候難民", reading: "きこうなんみん", meaning: "climate refugee" },
+   420→   420→      { word: "唯一", reading: "ゆいいつ", meaning: "sole/only" },
+   421→   421→      { word: "故郷", reading: "こきょう", meaning: "homeland" },
+   422→   422→      { word: "日課", reading: "にっか", meaning: "daily routine" },
+   423→   423→      { word: "呑み込む", reading: "のみこむ", meaning: "to swallow up" }
+   424→   424→    ]
+   425→   425→  },
+   426→   426→
+   427→   427→  // ───────────────────────────────────────────────────────────
+   428→   428→  // sx-n1-49 — A post-gender society (性を脱ぎ捨てた都市)
+   429→   429→  // ───────────────────────────────────────────────────────────
+   430→   430→  {
+   431→   431→    id: "sx-n1-49",
+   432→   432→    title: "性[せい]を脱[ぬ]ぎ捨[す]てた都市[とし]",
+   433→   433→    titleReading: "せいをぬぎすてたとし",
+   434→   434→    level: "N1",
+   435→   435→    summary: "A city that abolished gender centuries ago faces its first debate when a young citizen, moved by an outsider's words, asks for the right to choose.",
+   436→   436→    estMinutes: 8,
+   437→   437→    tags: ["gender", "society", "future"],
+   438→   438→    body: [
+   439→   439→      "未来[みらい]に建設[けんせつ]された都市[とし]「エデン」では、性別[せいべつ]の登録[とうろく]が禁止[きんし]されていた。市民[しみん]は全員[ぜんいん]、中性的[ちゅうせいてき]な名[な]と、性別[せいべつ]を問[と]わない制服[せいふく]を与[あた]えられた。",
+   440→   440→      "子供[こども]たちは、生物学的[せいぶつがくてき]な性差[せいさ]を学[まな]ぶことなく育[そだ]った。彼[かれ]らにとって、人間[にんげん]はただの人間[にんげん]であり、それ以上[いじょう]の分類[ぶんるい]は無意味[むいみ]であった。",
+   441→   441→      "しかし、歴史[れきし]を学[まな]ぶ年齢[ねんれい]に達[たっ]した若者[わかもの]の幾人[いくにん]かは、古[ふる]い記録[きろく]の中[なか]に「男[おとこ]」「女[おんな]」という言葉[ことば]を発見[はっけん]して戸惑[とまど]った。",
+   442→   442→      "「なぜ過去[かこ]の人々[ひとびと]は、体[からだ]の形[かたち]で人[ひと]を分[わ]けたのですか」と青年[せいねん]の暁[あきら]は教師[きょうし]に訊[き]いた。教師[きょうし]は答[こた]えに窮[きゅう]した。それはもはや、彼[かれ]らの世界[せかい]では想像[そうぞう]もできない区別[くべつ]だったからだ。",
+   443→   443→      "暁[あきら]は図書館[としょかん]で古[ふる]い文学[ぶんがく]を読[よ]み漁[あさ]った。恋愛小説[れんあいしょうせつ]の中[なか]で、人々[ひとびと]は性別[せいべつ]を理由[りゆう]に愛[あい]を語[かた]り、あるいは性別[せいべつ]ゆえに苦[くる]しんでいた。それは彼[かれ]には異国[いこく]の風景[ふうけい]のように見[み]えた。",
+   444→   444→      "ある日[ひ]、暁[あきら]は外部[がいぶ]からの旅行者[りょこうしゃ]に出会[であ]った。その旅行者[りょこうしゃ]は「自分[じぶん]は女[おんな]だ」と言[い]った。暁[あきら]は初[はじ]めて、自分[じぶん]の内側[うちがわ]にある違和感[いわかん]に名前[なまえ]をつけずにはいられなかった。",
+   445→   445→      "暁[あきら]は市[し]の評議会[ひょうぎかい]で、性別[せいべつ]の選択[せんたく]を許可[きょか]するよう提議[ていぎ]した。「性別[せいべつ]を禁[きん]ずることも、また一種[いっしゅ]の強制[きょうせい]ではないか」と彼[かれ]は主張[しゅちょう]した。",
+   446→   446→      "評議会[ひょうぎかい]は紛糾[ふんきゅう]した。ある者[もの]は「性別[せいべつ]を認[みと]めれば、差別[さべつ]が復活[ふっかつ]する」と反対[はんたい]し、別[べつ]の者[もの]は「選択[せんたく]の自由[じゆう]こそが真[しん]の平等[びょうどう]だ」と賛成[さんせい]した。議論[ぎろん]は夜[よる]を徹[てっ]して続[つづ]いた。",
+   447→   447→      "翌朝[よくあさ]、評議会[ひょうぎかい]は暁[あきら]の提議[ていぎ]を僅差[きんさ]で可決[かけつ]した。エデンの市民[しみん]は今[いま]、性別[せいべつ]を持[も]つことも、持[も]たないことも自由[じゆう]に選[えら]べる。それは、強制[きょうせい]の廃止[はいし]と選択[せんたく]の自由[じゆう]という二[ふた]つの理念[りねん]が、初[はじ]めて手[て]を取[と]り合[あ]った瞬間[しゅんかん]だった。"
+   448→   448→    ],
+   449→   449→    translation: [
+   450→   450→      "In the city 'Eden' constructed in the future, the registration of gender was forbidden. All citizens were given gender-neutral names and uniforms indifferent to sex.",
+   451→   451→      "Children grew up without learning biological sex differences. To them, a human was simply a human, and any classification beyond that was meaningless.",
+   452→   452→      "But several young people, upon reaching the age to study history, were bewildered to find the words 'man' and 'woman' in old records.",
+   453→   453→      "'Why did people of the past divide humans by the shape of their bodies?' the youth Akira asked his teacher. The teacher was at a loss for an answer. It was, by now, a distinction unimaginable in their world.",
+   454→   454→      "Akira scoured old literature in the library. In romance novels, people spoke of love in terms of gender, or suffered because of it. To him, it looked like a landscape of a foreign land.",
+   455→   455→      "One day, Akira met a traveler from outside. The traveler said, 'I am a woman.' For the first time, Akira could not help but put a name to the dissonance within himself.",
+   456→   456→      "At the city council, Akira proposed permitting the choice of gender. 'To forbid gender is also a form of coercion, is it not?' he argued.",
+   457→   457→      "The council was thrown into turmoil. Some objected that 'recognizing gender would revive discrimination,' while others supported it, saying 'the freedom to choose is true equality.' The debate continued through the night.",
+   458→   458→      "The next morning, the council passed Akira's proposal by a narrow margin. The citizens of Eden may now freely choose whether to have a gender or not. It was the moment when two ideals — the abolition of coercion and the freedom of choice — first joined hands."
+   459→   459→    ],
+   460→   460→    vocab: [
+   461→   461→      { word: "性別", reading: "せいべつ", meaning: "gender/sex" },
+   462→   462→      { word: "登録", reading: "とうろく", meaning: "registration" },
+   463→   463→      { word: "中性的", reading: "ちゅうせいてき", meaning: "gender-neutral" },
+   464→   464→      { word: "性差", reading: "せいさ", meaning: "sex difference" },
+   465→   465→      { word: "生物学的", reading: "せいぶつがくてき", meaning: "biological" },
+   466→   466→      { word: "戸惑う", reading: "とまどう", meaning: "to be bewildered" },
+   467→   467→      { word: "区別", reading: "くべつ", meaning: "distinction" },
+   468→   468→      { word: "違和感", reading: "いわかん", meaning: "sense of dissonance" },
+   469→   469→      { word: "評議会", reading: "ひょうぎかい", meaning: "council" },
+   470→   470→      { word: "提議", reading: "ていぎ", meaning: "proposal" },
+   471→   471→      { word: "紛糾", reading: "ふんきゅう", meaning: "turmoil" },
+   472→   472→      { word: "廃止", reading: "はいし", meaning: "abolition" },
+   473→   473→      { word: "理念", reading: "りねん", meaning: "ideal" }
+   474→   474→    ]
+   475→   475→  },
+   476→   476→
+   477→   477→  // ───────────────────────────────────────────────────────────
+   478→   478→  // sx-n1-50 — An existential philosophy (実存という名の重荷)
+   479→   479→  // ───────────────────────────────────────────────────────────
+   480→   480→  {
+   481→   481→    id: "sx-n1-50",
+   482→   482→    title: "実存[じつぞん]という名[な]の重荷[おもに]",
+   483→   483→    titleReading: "じつぞんというなのおもに",
+   484→   484→    level: "N1",
+   485→   485→    summary: "A philosopher fixated on the burden of freedom counsels a despairing disciple, then leaves a final note that existence is answering an unanswerable question with one's life.",
+   486→   486→    estMinutes: 9,
+   487→   487→    tags: ["philosophy", "existentialism", "freedom"],
+   488→   488→    body: [
+   489→   489→      "哲学者[てつがくしゃ]の律[りつ]は、晩年[ばんねん]に一[ひと]つの問[と]いに凝[こ]り固[かた]まっていた。「人間[にんげん]は、自由[じゆう]であるがゆえに、如何[いか]にも生[い]きることができぬのか」と。",
+   490→   490→      "彼[かれ]は書斎[しょさい]に閉[と]じこもり、サルトルやキルケゴールの著作[ちょさく]を再読[さいどく]した。読[よ]めば読[よ]むほど、自由[じゆう]という概念[がいねん]が鉄[てつ]の鎖[くさり]のように彼[かれ]を縛[しば]った。",
+   491→   491→      "「人間[にんげん]は本質[ほんしつ]を持[も]たずに存在[そんざい]する」と彼[かれ]は書[か]いた。「石[いし]は石[いし]である本質[ほんしつ]を持[も]って生[う]まれるが、人間[にんげん]は、まず存在[そんざい]し、その後[のち]に自[みずか]らの本質[ほんしつ]を作[つく]らねばならぬ。」",
+   492→   492→      "その「作[つく]らねばならぬ」という義務[ぎむ]こそが、実存[じつぞん]の重荷[おもに]であると律[りつ]は考[かんが]えた。選択[せんたく]のたびに人間[にんげん]は自[みずか]らを定義[ていぎ]し、選[えら]ばなかった可能性[かのうせい]を切[き]り捨[す]てる。",
+   493→   493→      "ある雪[ゆき]の夜[よる]、弟子[でし]の環[たまき]が訪[たず]ねてきた。「先生[せんせい]、私[わたし]は就職[しゅうしょく]の選択[せんたく]に迷[まよ]っております。どちらを選[えら]んでも、後悔[こうかい]が残[のこ]る気[き]がしてならないのです。」",
+   494→   494→      "律[りつ]は頷[うなず]いた。「後悔[こうかい]を免[まぬか]れる道[みち]などない。選[えら]ばなかった道[みち]は、常[つね]に人間[にんげん]の背中[せなか]に影[かげ]を落[お]とす。それが実存[じつぞん]という代償[だいしょう]だ。」",
+   495→   495→      "「では、どう生[い]きればよいのですか」と環[たまき]は問[と]い返[かえ]した。律[りつ]は窓[まど]の外[そと]の雪[ゆき]を眺[なが]め、静[しず]かに答[こた]えた。「選[えら]んだ道[みち]を、自[みずか]ら選[えら]んだと認[みと]めることだ。それだけだ。」",
+   496→   496→      "環[たまき]はその言葉[ことば]を胸[むね]に刻[きざ]んで帰[かえ]った。彼女[かのじょ]は結局[けっきょく]、自[みずか]らの情熱[じょうねつ]に従[したが]い、誰[だれ]も予期[よき]しなかった道[みち]を選[えら]んだ。後[のち]に彼女[かのじょ]は「その選択[せんたく]の重[おも]みを背負[せお]ったからこそ、私[わたし]の人生[じんせい]は私[わたし]のものになった」と語[かた]っている。",
+   497→   497→      "律[りつ]は死[し]の床[どこ]で、最後[さいご]の手記[しゅき]を残[のこ]した。「実存[じつぞん]とは、答[こた]えのない問[と]いを、自[みずか]らの人生[じんせい]をもって答[こた]える行為[こうい]である。私[わたし]は私[わたし]の問[と]いに生[い]き、私[わたし]の問[と]いに死[し]ぬ。それで十分[じゅうぶん]だ。」",
+   498→   498→      "彼[かれ]の墓[はか]には名[な]以外[いがい]何[なに]も刻[きざ]まれていない。だが、その墓[はか]を訪[たず]れる者[もの]は皆[みな]、声[こえ]なき問[と]いを聞[き]く。人間[にんげん]とは何[なに]か。それは、答[こた]えを探[さが]す旅[たび]そのものかもしれない。"
+   499→   499→    ],
+   500→   500→    translation: [
+   501→   501→      "The philosopher Ritsu had, in his final years, become fixated on a single question. 'Why is it that human beings, because they are free, can hardly bear to live?'",
+   502→   502→      "He shut himself in his study and reread the works of Sartre and Kierkegaard. The more he read, the more the concept of freedom bound him like an iron chain.",
+   503→   503→      "'Human beings exist without essence,' he wrote. 'A stone is born with the essence of being a stone, but a human being first exists, and then must create its own essence.'",
+   504→   504→      "Ritsu considered that very obligation to create to be the burden of existence. With each choice, a human defines itself and discards the possibilities not chosen.",
+   505→   505→      "One snowy night, his disciple Tamaki visited. 'Master, I am at a loss over the choice of a career. Whichever I choose, I cannot help feeling that regret will remain.'",
+   506→   506→      "Ritsu nodded. 'There is no path that exempts you from regret. The road not taken always casts its shadow on a person's back. That is the price of existence.'",
+   507→   507→      "'Then how should I live?' Tamaki asked in return. Ritsu gazed at the snow beyond the window and answered quietly. 'Recognize the path you chose as one you chose yourself. That is all.'",
+   508→   508→      "Tamaki etched those words in her heart and returned. In the end, she followed her passion and chose a path no one had anticipated. Later she said, 'It was because I bore the weight of that choice that my life became my own.'",
+   509→   509→      "On his deathbed, Ritsu left his final note. 'Existence is the act of answering a question that has no answer with one's own life. I live for my question, and I die for my question. That is enough.'",
+   510→   510→      "On his grave, nothing is engraved but his name. Yet all who visit hear a voiceless question: what is a human being? It may be the journey of searching for the answer itself."
+   511→   511→    ],
+   512→   512→    vocab: [
+   513→   513→      { word: "晩年", reading: "ばんねん", meaning: "later years" },
+   514→   514→      { word: "書斎", reading: "しょさい", meaning: "study (room)" },
+   515→   515→      { word: "凝り固まる", reading: "こりかたまる", meaning: "to become stiff/obsessed" },
+   516→   516→      { word: "著作", reading: "ちょさく", meaning: "writings" },
+   517→   517→      { word: "実存", reading: "じつぞん", meaning: "existence" },
+   518→   518→      { word: "本質", reading: "ほんしつ", meaning: "essence" },
+   519→   519→      { word: "義務", reading: "ぎむ", meaning: "obligation" },
+   520→   520→      { word: "重荷", reading: "おもに", meaning: "burden" },
+   521→   521→      { word: "弟子", reading: "でし", meaning: "disciple" },
+   522→   522→      { word: "後悔", reading: "こうかい", meaning: "regret" },
+   523→   523→      { word: "代償", reading: "だいしょう", meaning: "price/compensation" },
+   524→   524→      { word: "予期", reading: "よき", meaning: "anticipation" },
+   525→   525→      { word: "手記", reading: "しゅき", meaning: "written note/memoir" },
+   526→   526→      { word: "行為", reading: "こうい", meaning: "act" }
+   527→   527→    ]
+   528→   528→  }
+   529→   529→];
+   530→   530→
