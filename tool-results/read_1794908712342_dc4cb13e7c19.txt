@@ -1,0 +1,202 @@
+   100→      "Tatsuya's trajectory shows that success is not merely an arrival point. What he pursued was not the symbol called a star but the process of continually expanding his own limits as a chef. That attitude will serve as a model for anyone striving to master something. His restaurant still stands quietly deep in an alley, continuing to await the customers who visit."
+   101→    ],
+   102→    questions: [
+   103→      {
+   104→        q: "Why did Tatsuya leave the long-established sushi restaurant in Ginza?",
+   105→        choices: ["Because he was fired by his master", "Because he wanted to build his own world with his own hands", "Because the Ginza restaurant closed down", "Because he could not handle sushi preparation"],
+   106→        answerIndex: 1,
+   107→        explanation: "The text states 達也 had a 静かな野心 — the desire to 自らの手で一つの世界を創り上げたい — which led him to leave."
+   108→      },
+   109→      {
+   110→        q: "What was the turning point that brought more customers to his shop?",
+   111→        choices: ["A television drama featured his restaurant", "A magazine reporter praised his dish of nanohana and shirauo", "A government tourism campaign promoted him", "His former master sent him his customers"],
+   112→        answerIndex: 1,
+   113→        explanation: "The 転機 came when a 料理雑誌の記者 visited and was impressed by 春の菜の花と白魚を炊き合わせた一皿, after which an article spread his reputation."
+   114→      },
+   115→      {
+   116→        q: "How did Tatsuya feel after earning the Michelin star?",
+   117→        choices: ["He immediately aimed for three stars", "He felt only happiness and relief", "He learned fame is a double-edged sword and feared losing his direction", "He sold the restaurant and retired"],
+   118→        answerIndex: 2,
+   119→        explanation: "The passage states 名声は諸刃の剣である and that he feared losing sight of his culinary direction due to the external evaluation."
+   120→      },
+   121→      {
+   122→        q: "What does Tatsuya teach his apprentices first, before technique?",
+   123→        choices: ["How to deal with the media", "Reverence for ingredients", "How to maximize profit per dish", "How to obtain Michelin stars"],
+   124→        answerIndex: 1,
+   125→        explanation: "The text says he teaches 素材への畏敬の念 first, before technique — he emphasizes reverence for ingredients."
+   126→      },
+   127→      {
+   128→        q: "Which N2 grammar point appears in '星を獲得して以降、予約は半年待ちとなった'?",
+   129→        choices: ["〜上で", "〜て以降 (since / after doing)", "〜うちに", "〜つつある"],
+   130→        answerIndex: 1,
+   131→        explanation: "〜て以降 indicates 'since the time of doing X' — here, since earning the star, reservations became a half-year wait."
+   132→      }
+   133→    ]
+   134→  },
+   135→
+   136→  // ───────────────────────────────────────────────────────────
+   137→  // r-n2-43 — The role of religion in modern Japan
+   138→  // ───────────────────────────────────────────────────────────
+   139→  {
+   140→    id: "r-n2-43",
+   141→    title: "現代[げんだい]日本[にほん]における宗教[しゅうきょう]の役割[やくわり]",
+   142→    titleReading: "げんだいにほんにおけるしゅうきょうのやくわり",
+   143→    level: "N2",
+   144→    summary: "An examination of how religion functions in modern Japan: syncretic Shinto and Buddhist practices, low self-identification as believers, the role of new religions and controversies, and the cultural continuity of ritual life without doctrinal commitment.",
+   145→    estMinutes: 12,
+   146→    tags: ["religion", "society", "culture", "tradition"],
+   147→    body: [
+   148→      "現代[げんだい]日本[にほん]の宗教[しゅうきょう]状況[じょうきょう]は、一見[いっけん]すると矛盾[むじゅん]に満[み]ちている。調査[ちょうさ]によれば、自分[じぶん]を宗教[しゅうきょう的[てき]な人[ひと]だとみなす日本人[にほんじん]の割合[わりあい]は先進[せんしん]国[こく]の中[なか]で極[きわ]めて低[ひく]い。しかし、正月[しょうがつ]には神社[じんじゃ]を参拝[さんぱい]し、夏[なつ]にはお盆[ぼん]で先祖[せんぞ]の墓[はか]を訪[たず]ね、秋[あき]には教会[きょうかい]で結婚式[けっこんしき]を挙[あ]げるというように、儀礼[ぎれい]の実践[じっせん]は盛[さか]んに行[おこな]われている。この現象[げんしょう]は外国人[がいこくじん]には理解[りかい]しがたいとされ、しばしば日本[にほん]は無宗教[むしゅうきょう]の国[くに]だと表現[ひょうげん]される。",
+   149→      "しかし、無宗教[むしゅうきょう]という言葉[ことば]は誤解[ごかい]を招[まね]くきらいがある。正確[せいかく]には、日本人[にほんじん]は特定[とくてい]の教義[きょうぎ]への帰依[きえ]を強[つよ]く意識[いしき]しないまま、宗教[しゅうきょう]的[てき]な実践[じっせん]を生活[せいかつ]に溶[と]け込[こ]ませていると言[い]える。神[かみ]と仏[ほとけ]という二[ふた]つの異質[いしつ]な体系[たいけい]が、日常[にちじょう]の節目[ふしめ]ごとに使い分[つかいわ]けられるという習慣[しゅうかん]は、他[ほか]の文化[ぶんか]には見[み]られない独特[どくとく]なものである。誕生[たんじょう]は神社[じんじゃ]で祝[いわ]い、死[し]は仏教[ぶっきょう]で弔[とむら]うという住[す]み分[わ]けは、教義[きょうぎ]上[じょう]の矛盾[むじゅん]を気[き]に留[と]めない実践[じっせん]的[てき]な態度[たいど]を示[しめ]している。",
+   150→      "歴史[れきし]的[てき]に見[み]れば、この混交[こんこう]は江戸[えど]時代[じだい]の宗教[しゅうきょう]統制[とうせい]に由来[ゆらい]する。幕府[ばくふ]はキリスト[きりすと]教[きょう]を禁圧[きんあつ]するため、すべての民衆[みんしゅう]を寺院[じいん]に属[ぞく]させた。これが寺請[てらう]け制度[せいど]であり、結果[けっか]として仏教[ぶっきょう]が葬儀[そうぎ]や先祖[せんぞ]供養[くよう]を担[にな]うことになった。明治[めいじ]維新[いしん]後[ご]には神[かみ]仏[ほとけ]分離[ぶんり]が断行[だんこう]され、神道[しんとう]が国家[こっか]の祭祀[さいし]として位置[いち]づけられた。しかし、人々[ひとびと]の意識[いしき]の底[そこ]では、神[かみ]と仏[ほとけ]は容易[ようい]には分離[ぶんり]されず、戦後[せんご]に至[いた]るまで二[ふた]つの宗教[しゅうきょう]が並行[へいこう]して実践[じっせん]されてきたのである。",
+   151→      "他方[たほう]、新興[しんこう]宗教[しゅうきょう]の台頭[たいとう]も現代[げんだい]日本[にほん]の宗教[しゅうきょう]地図[ちず]を特徴[とくちょう]づける。戦後[せんご]の混乱[こんらん]期[き]に、数多[かずおお]くの新宗教[しんしゅうきょう]が誕生[たんじょう]し、社会[しゃかい]不安[ふあん]に寄[よ]り添[そ]う形[かた]で信者[しんじゃ]を獲得[かくとく]した。一部[いちぶ]は政治[せいじ]的[てき]な影響[えいきょう]力[りょく]を拡大[かくだい]し、論争[ろんそう]を呼[よ]んだ。なかには、教祖[きょうそ]への絶対的[ぜったいてき]な帰依[きえ]を求[もと]め、社会[しゃかい]から孤立[こりつ]した集団[しゅうだん]を形成[けいせい]するものもあった。こうした事例[じれい]は、宗教[しゅうきょう]が社会[しゃかい]に及[およ]ぼし得[う]る負[ふ]の側面[そくめん]を浮[う]き彫[ぼ]りにし、日本人[にほんじん]の宗教[しゅうきょう]に対[たい]する警戒[けいかい]心[しん]を強[つよ]める要因[よういん]となった。",
+   152→      "近年[きんねん]、宗教[しゅうきょう]的[てき]な実践[じっせん]の減少[げんしょう]も顕著[けんちょ]である。若[わか]い世代[せだい]の間[あいだ]では、正月[しょうがつ]の初詣[はつもうで]や法事[ほうじ]への参加[さんか]率[りつ]が低下[ていか]していると指摘[してき]される。都市化[としか]と核家族化[かくかぞくか]の進行[しんこう]により、地域[ちいき]の寺社[じしゃ]と結[むす]びついた儀礼[ぎれい]を維持[いじ]することが困難[こんなん]になったからである。しかし、同時[どうじ]に、スピリチュアル[すぴりちゅある]という曖昧[あいまい]な概念[がいねん]が流行[りゅうこう]し、占[うらな]いやパワー[ぱわー]スポット[すぽっと]が若者[わかもの]に受[う]け入[い]れられている。これは、形式的[けいしきてき]な宗教[しゅうきょう]から個人的[こじんてき]な体験[たいけん]重視[じゅうし]へと変化[へんか]している兆候[ちょうこう]と解釈[かいしゃく]できる。",
+   153→      "宗教[しゅうきょう]のもう一[ひと]つの役割[やくわり]は、共同体[きょうどうたい]の維持[いじ]機能[きのう]である。地域[ちいき]の祭[まつり]は神社[じんじゃ]を中心[ちゅうしん]に組[く]み立[た]てられ、住民[じゅうみん]の連帯[れんたい]感[かん]を再生[さいせい]産[さん]する場[ば]として機能[きのう]してきた。災害[さいがい]時[じ]には、寺社[じしゃ]が避難[ひなん]所[しょ]や支援[しえん]拠点[きょてん]として活用[かつよう]され、宗教[しゅうきょう]施設[しせつ]の社会[しゃかい]的[てき]価値[かち]が再[さい]認識[にんしき]された。すなわち、宗教[しゅうきょう]は信仰[しんこう]の対象[たいしょう]であると同時[どうじ]に、地域[ちいき]社会[しゃかい]のインフラ[いんふら]としても働[はたら]いているのである。この二[ふた]つの機能[きのう]を切り離[きりはな]して考[かんが]えることは、現実[げんじつ]を捉[とら]え損[そこ]なうことになろう。",
+   154→      "結論[けつろん]として、現代[げんだい]日本[にほん]における宗教[しゅうきょう]は、教義[きょうぎ]への熱心[ねっしん]な帰依[きえ]という形[かた]ではなく、儀礼[ぎれい]と共同体[きょうどうたい]の基盤[きばん]という形[かた]で生[い]き続[つづ]けている。したがって、日本人[にほんじん]を無宗教[むしゅうきょう]と断[だん]定するのは表層[ひょうそう]的な見方[みかた]に過[す]ぎない。宗教[しゅうきょう]が果[は]たす社会[しゃかい]的[てき]機能[きのう]を正確[せいかく]に理解[りかい]することは、日本[にほん]社会[しゃかい]の特質[とくしつ]を捉[とら]える上[うえ]で不可欠[ふかつけつ]である。私[わたし]たちは、見[み]えない形[かた]で宗教[しゅうきょう]が私[わたし]たちの生活[せいかつ]を支[ささ]えている事実[じじつ]に、改[あらた]めて目[め]を向[む]ける必要[ひつよう]がある。"
+   155→    ],
+   156→    translation: [
+   157→      "The religious landscape of modern Japan appears, at first glance, full of contradictions. Surveys show that the proportion of Japanese who regard themselves as religious is extremely low among advanced nations. Yet ritual practice is thriving: people visit shrines at New Year, visit ancestors' graves at Obon in summer, and hold wedding ceremonies at churches in autumn. This phenomenon is said to be difficult for foreigners to grasp, and Japan is often described as a non-religious country.",
+   158→      "However, the word non-religious is apt to invite misunderstanding. To be precise, the Japanese have woven religious practice into daily life without strongly being conscious of devotion to any specific doctrine. The custom of alternating between two distinct systems — gods and buddhas — at the milestones of everyday life is unique and unseen in other cultures. The division of labor, where births are celebrated at shrines and the dead consoled through Buddhism, demonstrates a pragmatic attitude that pays no mind to doctrinal contradictions.",
+   159→      "Historically, this blending derives from the religious controls of the Edo period. In order to suppress Christianity, the shogunate placed all commoners under the jurisdiction of temples. This was the temple-affiliation system, and as a result Buddhism came to assume responsibility for funerals and ancestral rites. After the Meiji Restoration, the separation of gods and buddhas was enforced, and Shinto was positioned as the state's ritual. Yet at the bottom of people's consciousness, gods and buddhas were not easily separated, and the two religions continued to be practiced in parallel into the postwar period.",
+   160→      "On the other hand, the rise of new religions also characterizes the religious map of modern Japan. In the chaos of the postwar era, numerous new religions were born, gaining adherents by attending to social anxieties. Some expanded political influence and provoked controversy. Among them were groups that demanded absolute devotion to a founder and formed collectives isolated from society. Such cases highlighted the negative aspects that religion can have on society, becoming a factor that strengthened Japanese wariness toward religion.",
+   161→      "In recent years, a decline in religious practice has also been conspicuous. It is pointed out that participation rates in New Year's first shrine visits and Buddhist memorial services have been falling among younger generations. The reason is that, due to ongoing urbanization and the shift to nuclear families, maintaining rituals tied to local temples and shrines has become difficult. At the same time, however, the vague concept of spiritual has gained popularity, and fortune-telling and power spots are accepted by young people. This can be interpreted as a sign of a shift from formal religion to a focus on personal experience.",
+   162→      "Another role of religion is its function in maintaining community. Local festivals are organized around shrines and have functioned as venues that regenerate a sense of solidarity among residents. At times of disaster, temples and shrines have been used as evacuation centers and support hubs, and the social value of religious facilities was recognized anew. That is, religion is an object of faith and at the same time works as infrastructure for local communities. Considering the two functions in isolation would fail to capture reality.",
+   163→      "In conclusion, religion in modern Japan lives on not in the form of ardent devotion to doctrine but in the form of ritual and community foundation. Therefore, to declare the Japanese non-religious is merely a superficial view. Accurately understanding the social functions religion performs is indispensable for grasping the nature of Japanese society. We need to look anew at the fact that religion, in unseen forms, supports our lives."
+   164→    ],
+   165→    questions: [
+   166→      {
+   167→        q: "What does the passage say about the apparent contradiction in Japanese religiosity?",
+   168→        choices: ["Japanese people never perform any religious rituals at all", "Few identify as religious yet rituals like New Year shrine visits, Obon, and church weddings are widely practiced", "Most Japanese convert to Christianity in adulthood", "The surveys are unreliable and overstate religiosity"],
+   169→        answerIndex: 1,
+   170→        explanation: "The passage contrasts low self-identification as religious with thriving ritual practice (正月参拝、お盆、教会結婚式)."
+   171→      },
+   172→      {
+   173→        q: "Historically, what gave rise to the Buddhist role in funerals and ancestral rites?",
+   174→        choices: ["The Meiji government's promotion of Buddhism", "Edo-period temple-affiliation system designed to suppress Christianity", "Postwar American occupation policy", "The adoption of Buddhist funerals by the imperial family in the Heian period"],
+   175→        answerIndex: 1,
+   176→        explanation: "The 寺請制度 of the Edo shogunate placed commoners under temples, resulting in Buddhism assuming funerary and ancestral roles."
+   177→      },
+   178→      {
+   179→        q: "How does the passage interpret the popularity of spiritual concepts and power spots among youth?",
+   180→        choices: ["As a return to strict doctrinal religion", "As a shift from formal religion toward personal experience", "As proof that new religions have disappeared", "As a sign of foreign cultural influence only"],
+   181→        answerIndex: 1,
+   182→        explanation: "The text interprets this as a 兆候 of a shift from 形式的な宗教 to 個人的な体験重視 — a move toward personal experience."
+   183→      },
+   184→      {
+   185→        q: "What social function of religion did disasters highlight, according to the passage?",
+   186→        choices: ["Religious facilities served as evacuation centers and support hubs", "Religious leaders took over government functions", "Religion replaced the welfare system entirely", "Temples and shrines were largely useless during disasters"],
+   187→        answerIndex: 0,
+   188→        explanation: "The passage notes 寺社が避難所や支援拠点として活用され, re-recognizing the social value of religious facilities."
+   189→      },
+   190→      {
+   191→        q: "Which N2 grammar point appears in '宗教が社会に及ぼし得る負の側面を浮き彫りにし'?",
+   192→        choices: ["〜得る (can / is possible to)", "〜かねる", "〜ざるを得ない", "〜にすぎない"],
+   193→        answerIndex: 0,
+   194→        explanation: "〜得る attaches to a verb stem to indicate possibility — here, the negative side that religion can bring about."
+   195→      }
+   196→    ]
+   197→  },
+   198→
+   199→  // ───────────────────────────────────────────────────────────
+   200→  // r-n2-44 — A story about an Olympic athlete
+   201→  // ───────────────────────────────────────────────────────────
+   202→  {
+   203→    id: "r-n2-44",
+   204→    title: "五輪[ごりん]に賭[か]けた一人[ひとり]の水泳選手[すいえいせんしゅ]",
+   205→    titleReading: "ごりんにかけたひとりのすいえいせんしゅ",
+   206→    level: "N2",
+   207→    summary: "The story of swimmer Yui, who overcame a career-threatening shoulder injury, qualified for the Olympics through a final-chance meet, and after the Games chose to mentor younger swimmers rather than chase medals.",
+   208→    estMinutes: 10,
+   209→    tags: ["biography", "sports", "injury recovery", "Olympics"],
+   210→    body: [
+   211→      "彼女[かのじょ]の名[な]は結衣[ゆい]。水泳[すいえい]を始[はじ]めたのは五[いつ]歳[さい]のときであったと、彼女[かのじょ]は後[のち]に語[かた]っている。地元[じもと]のプール[ぷーる]で泳[およ]ぐことが何[なに]よりも好[す]きだった少女[しょうじょ]は、中学校[ちゅうがっこう]に入[はい]ると本格的[ほんかくてき]な競技[きょうぎ]に打[う]ち込[こ]むようになった。高校[こうこう]時代[じだい]には全国[ぜんこく]大会[たいかい]で入賞[にゅうしょう]し、大学[だいがく]に進学[しんがく]してからは日本[にほん]代表[だいひょう]候補[こうほ]に選[えら]ばれた。順風満帆[じゅんぷうまんぱん]に見[み]えた彼女[かのじょ]のキャリア[きゃりあ]は、しかし、ある試合[しあい]の着地[ちゃくち]の瞬間[しゅんかん]に暗転[あんてん]する。",
+   212→      "大学[だいがく]三年[さんねん]の冬[ふゆ]、合宿[がっしゅく]中[ちゅう]に右肩[みぎかた]に激痛[げきつう]が走[はし]った。診断[しんだん]は肩[かた]の腱板[けんばん]断裂[だんれつ]。手術[しゅじゅつ]を回避[かいひ]すれば競技[きょうぎ]生命[せいめい]が危[あぶ]ないと宣告[せんこく]された。長年[ながねん]積[つ]み上[あ]げてきた記録[きろく]と自信[じしん]が、一瞬[いっしゅん]で崩[くず]れ去[さ]った。彼女[かのじょ]は病院[びょういん]の廊下[ろうか]で声[こえ]を殺[ころ]して泣[な]いた。医師[いし]からは、復帰[ふっき]まで最低[さいてい]十[じゅう]か月[かげつ]を要[よう]すると告[つ]げられた。オリンピック[おりんぴっく]まであと一年半[いちねんはん]、計算[けいさん]上[じょう]は間[ま]に合[あ]うはずであったが、彼女[かのじょ]自身[じしん]の心[こころ]はすでに折[お]れかけていた。",
+   213→      "リハビリ[りはびり]の初[はじ]めの三[さん]か月[かげつ]、彼女[かのじょ]はプール[ぷーる]に入[はい]ることすら許[ゆる]されなかった。指[ゆび]先[さき]の感覚[かんかく]を確[たし]かめるための細[こま]かい運動[うんどう]を、毎日[まいにち]幾時間[いくじかん]も続[つづ]けた。支[ささ]えたのは家族[かぞく]と、かつての恩師[おんし]からの手紙[てがみ]であった。恩師[おんし]は手紙[てがみ]の中[なか]で、泳[およ]げない日々[ひび]こそが泳者[およもの]を作[つく]るのだと書[か]き送[おく]った。彼女[かのじょ]はその言葉[ことば]を壁[かべ]に貼[は]り、朝[あさ]目[め]を覚[さ]ますたびに読[よ]み返[かえ]した。どん底[どんぞこ]にいたからこそ、自分[じぶん]が本当[ほんとう]に泳[およ]ぎ続[つづ]けたいのかを問[と]い直[なお]す余裕[よゆう]を持[も]てたのかもしれない。",
+   214→      "半年[はんとし]後[ご]、彼女[かのじょ]はようやく水[みず]に戻[もど]った。かつての感覚[かんかく]は戻[もど]らず、五[いつ]百[ひゃく]メートル[めーとる]で息切[いきぎ]れがした。しかし彼女[かのじょ]は焦[あせ]らなかった。一[いち]か月[かげつ]ごとに少[すこ]しずつ距離[きょり]を伸[の]ばし、三[さん]か月[かげつ]後[ご]には公式[こうしき]試合[しあい]に復帰[ふっき]した。結果[けっか]は予選[よせん]敗退[はいたい]。それでも彼女[かのじょ]は、自分[じぶん]がまだ競技[きょうぎ]者[しゃ]でいられるという事実[じじつ]に救[すく]われた。彼女[かのじょ]は記録[きろく]ではなく、泳[およ]ぐこと自体[じたい]を取[と]り戻[もど]したのである。",
+   215→      "オリンピック[おりんぴっく]代表[だいひょう]の切符[きっぷ]は、最終[さいしゅう]選考[せんこう]会[かい]まで判定[はんてい]に持ち[もち]込[こ]まれた。最後[さいご]の一枠[いちわく]を争[あらそ]うレース[れーす]で、彼女[かのじょ]は残[のこ]り五[ご]メートル[めーとる]で二[に]位[い]から一[いち]位[い]に浮上[ふじょう]した。ゴール[ごーる]後[ご]、彼女[かのじょ]はプール[ぷーる]サイド[さいど]で天[てん]を仰[あお]いだ。長[なが]い闘[たたか]いが報[むく]われた瞬間[しゅんかん]であった。本番[ほんばん]のオリンピック[おりんぴっく]では準決勝[じゅんけっしょう]止[ど]まりであったが、彼女[かのじょ]にとって成績[せいせき]は二[に]の次[つぎ]であった。彼女[かのじょ]は自分[じぶん]の限界[げんかい]を越[こ]えたという達成感[たっせいかん]を胸[むね]に、競技[きょうぎ]人生[じんせい]を閉[と]じる覚悟[かくご]を決[き]めた。",
+   216→      "引退[いんたい]後[ご]、結衣[ゆい]は母校[ぼこう]で後輩[こうはい]たちの指導[しどう]に当[あ]たっている。彼女[かのじょ]が最[もっと]も重[おも]んでいるのは、記録[きろく]を伸[の]ばすことではなく、怪我[けが]をした選手[せんしゅ]の心[こころ]を支[ささ]えることである。彼女[かのじょ]自身[じしん]の経験[けいけん]が、教科書[きょうかしょ]には載[の]らない教訓[きょうくん]となっている。若[わか]い選手[せんしゅ]たちは、彼女[かのじょ]の言葉[ことば]の奥[おく]にある痛み[いたみ]と希望[きぼう]を敏感[びんかん]に感[かん]じ取[と]るという。",
+   217→      "結衣[ゆい]はかつて語[かた]った。メダル[めだる]は色[いろ]が褪[あ]せても、闘[たたか]った記憶[きおく]は色褪[いろあ]せない、と。彼女[かのじょ]の言葉[ことば]は、結果[けっか]だけを尊[とうと]ぶ風潮[ふうちょう]に一[ひと]石[せき]を投[な]げる。スポーツ[すぽーつ]の価値[かち]は勝敗[しょうはい]の向[む]こう側[がわ]にあるという彼女[かのじょ]の信念[しんねん]は、これからも多[おお]くの人[ひと]に響[ひび]き続[つづ]けるだろう。彼女[かのじょ]の泳[およ]ぎは、たった一度[いちど]きりの輝[かがや]きを残[のこ]して終[お]わったが、その軌跡[きせき]は次世代[じせだい]へと確[たし]かに手渡[てわた]されている。"
+   218→    ],
+   219→    translation: [
+   220→      "Her name is Yui. She later said she started swimming at the age of five. A girl who loved nothing more than swimming at her local pool, she began to devote herself to competitive swimming upon entering junior high school. In high school she placed in national competitions, and after advancing to university she was selected as a candidate for the Japanese national team. Her career, which seemed to be sailing smoothly, however, suddenly darkened the moment she finished a race.",
+   221→      "In the winter of her third year of university, a sharp pain ran through her right shoulder during training camp. The diagnosis was a torn rotator cuff. She was told that avoiding surgery would endanger her competitive career. The records and confidence she had built up over many years collapsed in an instant. She stifled her cries and wept in the hospital corridor. The doctor told her recovery would take at least ten months. A year and a half remained until the Olympics, so on paper she should make it, but her heart was already close to breaking.",
+   222→      "During the first three months of rehabilitation, she was not even allowed into the pool. She continued for hours each day the small movements to confirm the sensations in her fingertips. What supported her were her family and a letter from a former mentor. In the letter the mentor wrote that the days she could not swim were what would make her a swimmer. She pasted those words on her wall and read them every morning when she woke. Perhaps because she was at rock bottom, she had the composure to ask herself whether she truly wanted to keep swimming.",
+   223→      "Half a year later, she finally returned to the water. Her old sensations did not return; she was out of breath after five hundred meters. But she did not rush. She extended the distance little by little each month, and three months later she returned to an official competition. The result was elimination in the preliminaries. Still, she was saved by the fact that she could still be a competitor. She recovered not records but the act of swimming itself.",
+   224→      "The ticket to the Olympics was carried over to the final selection meet. In the race fighting for the last slot, she rose from second to first place with five meters remaining. After the finish she looked up at the sky at poolside. It was the moment her long battle was rewarded. In the Olympics proper she stopped at the semifinals, but for her the result was secondary. With a sense of achievement that she had exceeded her limits, she resolved to close her competitive career.",
+   225→      "After retirement, Yui coaches younger swimmers at her alma mater. What she values most is not extending records but supporting the hearts of athletes who have been injured. Her own experience has become a lesson no textbook carries. Young athletes, it is said, sensitively sense the pain and hope behind her words.",
+   226→      "Yui once said: even if the color of a medal fades, the memory of having fought does not. Her words cast a stone into a culture that prizes only results. Her belief that the value of sport lies on the other side of victory and defeat will continue to resonate with many. Her swimming ended, leaving behind a once-in-a-lifetime brilliance, but her trajectory is certainly being handed to the next generation."
+   227→    ],
+   228→    questions: [
+   229→      {
+   230→        q: "What injury threatened Yui's swimming career in her third year of university?",
+   231→        choices: ["A torn ligament in her knee", "A torn rotator cuff in her right shoulder", "A fractured wrist", "A stress fracture in her spine"],
+   232→        answerIndex: 1,
+   233→        explanation: "The diagnosis was 肩の腱板断裂 — a torn rotator cuff in her right shoulder, suffered during a winter training camp."
+   234→      },
+   235→      {
+   236→        q: "What did Yui's mentor write in the letter that supported her?",
+   237→        choices: ["That she should retire immediately and find another career", "That the days she could not swim were what would make her a swimmer", "That she should pursue surgery abroad", "That medals do not matter at all"],
+   238→        answerIndex: 1,
+   239→        explanation: "The mentor wrote 泳げない日々こそが泳者を作るのだ — the days she could not swim would make her a swimmer."
+   240→      },
+   241→      {
+   242→        q: "How did Yui qualify for the Olympics?",
+   243→        choices: ["By winning the national championship outright", "By placing first in the final selection race, moving from second to first in the last five meters", "By a coach's discretionary selection", "By default after another swimmer withdrew"],
+   244→        answerIndex: 1,
+   245→        explanation: "At the 最終選考会 she 残り五メートルで二位から一位に浮上 to claim the last slot."
+   246→      },
+   247→      {
+   248→        q: "What does Yui now emphasize when coaching her juniors?",
+   249→        choices: ["Maximizing medal counts at any cost", "Supporting the hearts of injured athletes", "Pushing swimmers past pain regardless of injury", "Specializing only in young prodigies"],
+   250→        answerIndex: 1,
+   251→        explanation: "She values 怪我をした選手の心を支えること over extending records, drawing on her own experience."
+   252→      },
+   253→      {
+   254→        q: "Which N2 grammar point appears in '彼女自身の経験が、教科書には載らない教訓となっている'?",
+   255→        choices: ["〜とは限らない", "〜にすぎない", "〜とは (definitional: being / is what is called)", "〜どころか"],
+   256→        answerIndex: 2,
+   257→        explanation: "〜とは here introduces a definitional phrase — 'has become what is called a lesson not found in textbooks.'"
+   258→      }
+   259→    ]
+   260→  },
+   261→
+   262→  // ───────────────────────────────────────────────────────────
+   263→  // r-n2-45 — Japanese corporate governance
+   264→  // ───────────────────────────────────────────────────────────
+   265→  {
+   266→    id: "r-n2-45",
+   267→    title: "日本[にほん]企業[きぎょう]のガバナンス[がばなんす]改革[かいかく]が直面[ちょくめん]する課題[かだい]",
+   268→    titleReading: "にほんきぎょうのがばなんすかいかくがちょくめんするかだい",
+   269→    level: "N2",
+   270→    summary: "An overview of Japanese corporate governance reform: the shift from stakeholder to shareholder orientation, the introduction of outside directors and the corporate governance code, persistent cross-shareholding, and the cultural tensions reform must navigate.",
+   271→    estMinutes: 12,
+   272→    tags: ["business", "governance", "corporate reform", "policy"],
+   273→    body: [
+   274→      "日本[にほん]企業[きぎょう]のガバナンス[がばなんす]は、ここ十年[じゅうねん]ほどの間[あいだ]に大[おお]きな変革[へんかく]を遂[と]げつつある。かつては株主[かぶぬし]よりも従業[じゅうぎょう]員[いん]や取引[とりひき]先[さき]といったステークホルダー[すてーくほるだー]を重視[じゅうし]する経営[けいえい]が主流[しゅりゅう]であった。しかし、海外[かいがい]投資[とうし]家[か]の増加[ぞうか]と国際的[こくさいてき]な競争[きょうそう]の激化[げきか]を背景[はいけい]に、株主[かぶぬし]の利益[りえき]を明示的[めいじてき]に反映[はんえい]させる仕組[しく]みが求[もと]められるようになった。この変化[へんか]は単[たん]なる経営[けいえい]手法[しゅほう]の変更[へんこう]にとどまらず、日本[にほん]の企業[きぎょう]文化[ぶんか]そのものの転換[てんかん]を意味[いみ]している。",
+   275→      "改革[かいかく]の象徴[しょうちょう]的存在[そんざい]とされるのが、二[に]〇[じゅう]一[いち]五[ご]年[ねん]に導入[どうにゅう]されたコーポレート[こーぽれーと]ガバナンス[がばなんす]コード[こーど]である。この規則[きそく]は、上場[じょうじょう]企業[きぎょう]に対[たい]して取締[とりしまり]役会[やくかい]の独立性[どくりつせい]と透明性[とうめいせい]を確保[かくほ]することを求[もと]めている。とりわけ社外[しゃがい]取締[とりしまり]役[やく]の過半[かはん]数[すう]登用[とうよう]は、経営[けいえい]陣[じん]の監視[かんし]機能[きのう]を強化[きょうか]する重要[じゅうよう]な手段[しゅだん]と位置[いち]づけられた。以前[いぜん]は、社内[しゃない]出身[しゅっしん]の役員[やくいん]が幅[はば]を利[き]かせ、意思決定[いしけってい]が閉鎖[へいさ]的[てき]になりがちであった。社外[しゃがい]の視点[してん]を取[と]り入[い]れることは、長[なが]年の慣行[かんこう]を覆[くつがえ]す試[こころ]みであったと言[い]える。",
+   276→      "もう一[ひと]つの柱[はしら]が、持分[もちぶん]基準[きじゅん]会計[かいけい]の見直[みなお]しと持合[もちあい]株式[かぶしき]の解消[かいしょう]である。日本[にほん]企業[きぎょう]は古[ふる]くから、取引[とりひき]先[さき]と互[たが]いに株[かぶ]を持ち合[あ]うことで関係[かんけい]を強固[きょうこ]にしてきた。この慣行[かんこう]は取引[とりひき]関係[かんけい]を安定[あんてい]させる反面[はんめん]、資本[しほん]の効率[こうりつ]を低[ひく]め、外部[がいぶ]からの監視[かんし]を遮断[しゃだん]する弊害[へいがい]が指摘[してき]されていた。東京[とうきょう]証券[しょうけん]取引[とりひき]所[しょ]は持合[もちあい]株式[かぶしき]の解消[かいしょう]を促[うなが]す指針[しひん]を公表[こうひょう]し、企業[きぎょう]側[がわ]も徐[じょじょ]々に対応[たいおう]を進[すす]めている。しかし、取引[とりひき]関係[かんけい]の見直[みなお]しが経営[けいえい]に与[あた]える影響[えいきょう]は大きく、簡[かん]単[たん]に解決[かいけつ]できる問題[もんだい]ではない。",
+   277→      "ROEという指標[しひょう]の重視[じゅうし]も、改革[かいかく]の重要[じゅうよう]な要素[ようそ]である。日本[にほん]企業[きぎょう]のROEは長[なが]く先進[せんしん]国[こく]の平均[へいきん]を下回[したまわ]っており、資本[しほん]効率[こうりつ]の低[てい]さが海外[かいがい]投資[とうし]家[か]の批判[ひはん]の的[まと]となっていた。政府[せいふ]が主導[しゅどう]する投資[とうし]家[か]と企業[きぎょう]の対話[たいわ]促進[そくしん]プロジェクト[ぷろじぇくと]は、こうした指摘[してき]に応[おう]じるものである。企業[きぎょう]は配当[はいとう]や自[じ]己[こ]株[かぶ]買[がい]戻[もど]しを通[つう]じて株主[かぶぬし]還元[かんげん]を強化[きょうか]し始[はじ]めた。しかし同時[どうじ]に、短期的[たんきてき]な利益[りえき]の追求[ついきゅう]が長期的[ちょうきてき]な投資[とうし]を犠牲[ぎせい]にする危険[きけん]も指摘[してき]されており、バランス[ばらんす]の取[と]り方[かた]が問[と]われている。",
+   278→      "改革[かいかく]が進[すす]む一方[いっぽう]で、日本[にほん]特有[とくゆう]の課題[かだい]も顕在化[けんざいか]している。社外[しゃがい]取締[とりしまり]役[やく]を外部[がいぶ]から採用[さいよう]しても、実際[じっさい]に経営[けいえい]に深[ふか]く関与[かんよ]する人材[じんざい]は少[すく]ない。多[おお]くの企業[きぎょう]で、社外[しゃがい]役員[やくいん]は名目的[めいめてき]な存在[そんざい]に留[とど]まっているとの批判[ひはん]が絶[た]えない。また、取締[とりしまり]役会[やくかい]の多様性[たようせい]も依然[いぜん]として低[ひく]く、女性[じょせい]や外国人[がいこくじん]の比率[ひりつ]は欧米[おうべい]に大[おお]きく後[おく]れを取[と]っている。制度[せいど]的[てき]な枠組[わくぐ]みを整備[せいび]しても、意識[いしき]と実践[じっせん]が伴[ともな]わなければ、改革[かいかく]は形骸化[けいたいか]する恐[おそ]れがある。",
+   279→      "ガバナンス[がばなんす]改革[かいかく]は、単[たん]なる制度[せいど]の輸入[ゆにゅう]では成[な]り立[た]たない。日本[にほん]企業[きぎょう]が長年[ながねん]培[つちか]ってきた経営[けいえい]哲学[てつがく]と、新[あたら]しい株主[かぶぬし]資本[しほん]主義[しゅぎ]の要求[ようきゅう]をどう統合[とうごう]するかが鍵[かぎ]となる。終身[しゅうしん]雇用[こよう]を背景[はいけい]に形成[けいせい]された内部[ないぶ]昇進[しょうしん]制度[せいど]は、独特[どくとく]な強[つよ]みを持[も]つ反面[はんめん]、外部[がいぶ]人材[じんざい]の登用[とうよう]を困難[こんなん]にしている。このジレンマ[じれんま]を乗[の]り越[こ]えるためには、日本[にほん]型[がた]経営[けいえい]の核心[かくしん]を保[たも]ちつつ、柔軟[じゅうなん]性[せい]を取[と]り入[い]れるハイブリッド[はいぶりっど]な仕組[しく]みが模索[もさく]されなければならない。",
+   280→      "結論[けつろん]として、日本[にほん]企業[きぎょう]のガバナンス[がばなんす]改革[かいかく]は、折[おり]を踏[ふ]まえた前進[ぜんしん]を見[み]せているが、未[いま]だ途上[とじょう]にある。制度[せいど]の整備[せいび]と実践[じっせん]の浸透[しんとう]、そして文化[ぶんか]的[てき]な受容[じゅよう]の三[みっ]つが揃[そろ]って初[はじ]めて、改革[かいかく]は真[しん]の効果[こうか]を発揮[はっき]するだろう。日本[にほん]企業[きぎょう]が国際的[こくさいてき]な信頼[しんらい]を獲得[かくとく]し、持続[じぞく]的[てき]な成長[せいちょう]を果[は]たすためには、この改革[かいかく]を継続[けいぞく]させる意志[いし]が経営[けいえい]陣[じん]の两侧[そうそく]から問[と]われている。変化[へんか]を恐[おそ]れず、しかし伝統[でんとう]を無[む]視[し]しない、そのような姿勢[しせい]が求[もと]められていると言[い]える。"
+   281→    ],
+   282→    translation: [
+   283→      "Corporate governance in Japanese companies has been undergoing major transformation over the past decade or so. Management that emphasized stakeholders such as employees and business partners over shareholders was once mainstream. However, against a backdrop of growing foreign investors and intensifying global competition, mechanisms have come to be demanded that explicitly reflect shareholder interests. This change is not merely a modification of management techniques but signifies a transformation of Japanese corporate culture itself.",
+   284→      "The symbolic existence of reform is the corporate governance code introduced in 2015. This regulation requires listed companies to secure the independence and transparency of their boards of directors. In particular, appointing a majority of outside directors was positioned as an important means to strengthen the monitoring function over management. Previously, executives from within the company held sway and decision-making tended to be closed. Incorporating outside perspectives can be said to be an attempt to overturn a long-standing practice.",
+   285→      "Another pillar is the review of equity-method accounting and the unwinding of cross-shareholdings. Japanese companies have long strengthened relationships by mutually holding shares with business partners. This practice stabilizes trading relationships, but on the other hand has been pointed out to lower capital efficiency and block external monitoring. The Tokyo Stock Exchange has published guidelines encouraging the unwinding of cross-shareholdings, and companies have been gradually responding. However, the impact of revising trading relationships on management is significant, and it is not an issue that can be resolved easily.",
+   286→      "The emphasis on ROE as an indicator is also an important element of reform. Japanese companies' ROE has long been below the advanced-nation average, and the low capital efficiency has been a target of criticism from foreign investors. The investor-company dialogue promotion project led by the government responds to these points. Companies have begun to enhance shareholder returns through dividends and share buybacks. At the same time, however, it has been pointed out that the pursuit of short-term profit risks sacrificing long-term investment, and how to strike the balance is being questioned.",
+   287→      "While reform proceeds, issues peculiar to Japan have also become apparent. Even when outside directors are hired from outside, few actually engage deeply in management. In many companies, criticism persists that outside officers remain nominal presences. In addition, board diversity remains low, with ratios of women and foreigners lagging far behind those in the West. Even if institutional frameworks are prepared, without accompanying awareness and practice, reform risks becoming a mere formality.",
+   288→      "Governance reform cannot be sustained merely by importing institutions. The key will be how to integrate the management philosophy Japanese companies have cultivated over the years with the demands of new shareholder capitalism. The internal promotion system formed against the backdrop of lifetime employment has, on the one hand, distinctive strengths, but on the other hand makes it difficult to hire outside talent. To overcome this dilemma, a hybrid mechanism must be explored that retains the core of Japanese-style management while incorporating flexibility.",
+   289→      "In conclusion, governance reform in Japanese companies shows steady progress but remains in progress. Only when the three elements of institutional preparation, the permeation of practice, and cultural acceptance come together will reform demonstrate true effect. For Japanese companies to earn international trust and achieve sustainable growth, the will to continue this reform is being asked of both sides of management. An attitude can be said to be required that does not fear change but does not ignore tradition."
+   290→    ],
+   291→    questions: [
+   292→      {
+   293→        q: "What did the corporate governance code of 2015 require of listed companies?",
+   294→        choices: ["Abolition of all boards of directors", "Securing board independence and transparency, including a majority of outside directors", "Mandatory sale of all subsidiaries", "Adoption of lifetime employment for all staff"],
+   295→        answerIndex: 1,
+   296→        explanation: "The コーポレートガバナンスコード required listed companies to 取締役会の独立性と透明性を確保, especially through 社外取締役の過半数登用."
+   297→      },
+   298→      {
+   299→        q: "Why has cross-shareholding been criticized?",
+
+[showing lines 100-299 of 640; use offset=300 with limit to continue reading]

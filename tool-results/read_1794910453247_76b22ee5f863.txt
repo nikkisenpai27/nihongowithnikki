@@ -1,0 +1,202 @@
+     1→     1→import type { ReadingPassage } from "@/lib/types";
+     2→     2→
+     3→     3→// Furigana notation: kanji readings are written inline as 漢字[かんじ].
+     4→     4→// A [reading] immediately following a run of kanji attaches to that whole run.
+     5→     5→// Adjacent kanji compounds may be split by brackets (e.g. 日本[にほん]語[ご]).
+     6→     6→// Kana, katakana, punctuation, and 々 have no brackets. See types.ts & furigana.tsx.
+     7→     7→// 10 original N1-level reading passages with comprehension questions.
+     8→     8→
+     9→     9→export const readingN1A: ReadingPassage[] = [
+    10→    10→  // ───────────────────────────────────────────────────────────
+    11→    11→  // r-n1-01 — Japanese aesthetics: wabi-sabi and mono no aware
+    12→    12→  // ───────────────────────────────────────────────────────────
+    13→    13→  {
+    14→    14→    id: "r-n1-01",
+    15→    15→    title: "「わびさび」と「ものの哀[あわ]れ」が織[お]りなす日本[にほん]美学[びがく]の系譜[けいふ]",
+    16→    16→    titleReading: "わびさびともののあわれがおりなすにほんびがくのけいふ",
+    17→    17→    level: "N1",
+    18→    18→    summary: "A study of the lineage of Japanese aesthetics centered on wabi-sabi and mono no aware — how they diverge from Western notions of beauty grounded in form and symmetry, how Motoori Norinaga theorized aware as a mode of knowing the world, and why these sensibilities remain decisive in an age of accelerating commodification.",
+    19→    19→    estMinutes: 12,
+    20→    20→    tags: ["aesthetics", "wabi-sabi", "mono no aware", "Motoori Norinaga", "cultural theory"],
+    21→    21→    body: [
+    22→    22→      "西欧[せいおう]の美学[びがく]が「美[び]」を対象[たいしょう]の形式[けいしき]的[てき]な調和[ちょうわ]や比例[ひれい]として、換言[かんげん]すれば客観[きゃっかん]的[てき]な構造[こうぞう]として捉[とら]えてきたのに対[たい]し、日本[にほん]の美学[びがく]は一貫[いっかん]して主客[しゅかく]未分[みぶん]の情況[じょうきょう]のうちに美[び]を語[かた]り続[つづ]けてきた。そこでは、鑑賞[かんしょう]する主体[しゅたい]と鑑賞[かんしょう]される対象[たいしょう]との間[あいだ]に生[しょう]じる微妙[びみょう]な振動[しんどう]そのものが美[び]の本体[ほんたい]と見[み]なされてきたのである。かかる構造[こうぞう]は、プラトン[ぷらとん]以降[いこう]の西欧[せいおう]哲学[てつがく]が念頭[ねんとう]に置[お]いてきた「美[び]そのもの」という理念[りねん]とは決定的[けっていてき]に異[こと]なる。むしろ、美[び]とは固定[こてい]された実体[じったい]ではなく、変移[へんい]してやまない世界[せかい]のありように対[たい]する人[ひと]の感受[かんじゅ]性[せい]の共振[きょうしん]にほかならない、という立場[たちば]を日本[にほん]の美学[びがく]はとり続[つづ]けてきたと言[い]える。",
+    23→    23→      "「ものの哀[あわ]れ」という概念[がいねん]を体系[たいけい]的[てき]に提唱[ていしょう]したのは、江戸[えど]中期[ちゅうき]の国学者[くにがくしゃ]本居[もとおり]宣長[のりなが]であった。宣長[のりなが]は主著[しゅちょ]『源氏[げんじ]物語[ものがたり]玉[たま]小櫛[おぐし]』において、物語[ものがたり]という文学[ぶんがく]形態[けいたい]の本質[ほんしつ]を「ものの哀[あわ]れ」を知[し]ることにあると論[ろん]じた。ここで「もの」とは天地[てんち]自然[しぜん]の万物[ばんぶつ]を指[さ]し、「哀[あわ]れ」とは、その万物[ばんぶつ]の移[うつ]り変[か]わりに対[たい]して人[ひと]の心[こころ]が感[かん]じる深[ふか]い情趣[せいしゅ]を意味[いみ]する。重要[じゅうよう]なのは、「哀[あわ]れ」が単[たん]なる悲傷[ひしょう]ではなく、むしろ対象[たいしょう]への鋭[するど]い認識[にんしき]を含[ふく]んだ情動[じょうどう]であるという点[てん]である。換言[かんげん]すれば、宣長[のりなが]にとって「ものの哀[あわ]れ」を知[し]ることは、世界[せかい]を知[し]ることと同義[どうぎ]であった。",
+    24→    24→      "これに対[たい]し、「わびさび」は茶[ちゃ]の湯[ゆ]や連歌[れんが]、俳句[はいく]という中世[ちゅうせい]以降[いこう]の芸道[げいどう]のなかで涵養[かんよう]された感性[かんせい]である。「わび」とは、不足[ふそく]や欠如[けつじょ]のうちに豊[ゆた]かさを見出[みいだ]す態度[たいど]をいい、「さび」とは、古[ふ]るいものや寂[さび]れたものに宿[やど]る静謐[せいひつ]な美[び]を指[さ]す。千[せん]利休[りきゅう]が狭[せま]く暗[くら]い茶室[ちゃしつ]に一本[いっぽん]の花[はな]を生[い]けることで宇宙[うちゅう]を表現[ひょうげん]しようとしたのは、まさに「わびさび」の極致[きょくち]であった。ここでは、過剰[かじょう]な装飾[そうしょく]は否定[ひてい]され、簡素[かんそ]のうちに無限[むげん]を感[かん]じ取[と]る感性[かんせい]が尊[とうと]ばれたのである。",
+    25→    25→      "わびさびの美学[びがく]が最[もっとも]も純化[じゅんか]された形[かたち]で現[あらわ]れるのは、俳句[はいく]という十七[じゅうしち]音[おん]の詩形[しけい]においてである。松尾[まつお]芭蕉[ばしょう]の「古池[ふるいけ]や蛙[かわず]飛[と]び込[こ]む水[みず]の音[おと]」という句[く]は、静寂[せいじゃく]のなかに一瞬[いっしゅん]の響[ひび]きを捉[とら]え、その響[ひび]きが消[き]えゆく静寂[せいじゃく]を予感[よかん]させる。つまり、句[く]は現[げん]在[ざい]の瞬間[しゅんかん]を切り取[と]りつつ、同時[どうじ]にその瞬間[しゅんかん]の消滅[しょうめつ]を内包[ないほう]している。これこそが、時間[じかん]の流[なが]れのなかに永遠[えいえん]を感[かん]じ取[と]る日本[にほん]的[てき]な感性[かんせい]の特徴[とくちょう]であり、西欧[せいおう]の叙事[じょじ]的[てき]な文学[ぶんがく]とは異質[いしつ]な美[び]の論理[ろんり]を成[な]している。",
+    26→    26→      "しかしながら、近代[きんだい]以降[いこう]、日本[にほん]の美学[びがく]は西欧[せいおう]近代[きんだい]の美学[びがく]概念[がいねん]との翻訳[ほんやく]の圧力[あつりょく]に晒[さら]され続[つづ]けてきた。「美[び]」も「崇高[そうこう]」も、西洋[せいよう]哲学[てつがく]の範疇[はんちゅう]に日本[にほん]の概念[がいねん]を無理[むり]に当[あ]て嵌[は]める作業[さぎょう]が繰[く]り返[かえ]された結果[けっか]、わびさびやものの哀[あわ]れの本来[ほんらい]の含意[がんい]は稀薄[きはく]化[か]せざるを得[え]なかった。とりわけ明治[めいじ]期[き]の知識[ちしき]人[じん]が西欧[せいおう]の美[び]の概念[がいねん]を輸入[ゆにゅう]する過程[かてい]で、日本[にほん]古来[こらい]の感性[かんせい]は「前近代[ぜんきんだい]的[てき]」として退[しりぞ]けられることすらあった。この翻訳[ほんやく]の暴力[ぼうりょく]について、我々[われわれ]は改[あらた]めて批判[ひはん]的[てき]に検証[けんしょう]し直[なお]す必要[ひつよう]に迫[せま]られている。",
+    27→    27→      "現代[げんだい]の消費[しょうひ]社会[しゃかい]において、わびさびはとかく商品[しょうひん]のパッケージとして消費[しょうひ]される運命[うんめい]にある。京都[きょうと]の旅館[りょかん]や料亭[りょうてい]が「わびさび」を売[う]り文句[もんく]に掲[かか]げる場合[ばあい]、そこで消費[しょうひ]されるのはわびさびの形式[けいしき]だけであり、その背後[はいご]にある哲学[てつがく]的[てき]な世界観[せかいかん]は捨[す]て去[さ]られていることが少[すく]なくない。簡素[かんそ]を尊[とうと]ぶはずの感性[かんせい]が、逆[ぎゃく]に過剰[かじょう]な消費[しょうひ]を正当化[せいとうか]する記号[きごう]として機能[きのう]してしまうというのは、まさに皮肉[ひにく]と呼[よ]ぶほかない。本物[ほんもの]のわびさびは、消費[しょうひ]されることを拒否[きょひ]する構造[こうぞう]を本来[ほんらい]持[も]っているからである。",
+    28→    28→      "にもかかわらず、日本[にほん]の美学[びがく]が現代[げんだい]においてなお射程[しゃてい]を持[も]ち続[つづ]けるとすれば、それは、わびさびやものの哀[あわ]れが変容[へんよう]と消滅[しょうめつ]を本質[ほんしつ]とする世界[せかい]への感受[かんじゅ]性[せい]を鍛[きた]え上げ[あ]たからであろう。環境[かんきょう]破壊[はかい]やデジタル[でじたる]化[か]が加速[かそく]する時代[じだい]にあって、我々[われわれ]は逆[ぎゃく]に、ものの哀[あわ]れが教[おし]える「移[うつ]り行[ゆ]くものへの眼差[まなざ]し」を必要[ひつよう]としているのではないか。美[び]を固定[こてい]された実体[じったい]としてではなく、関係[かんけい]のなかで生[しょう]じる共振[きょうしん]として捉[とら]え直[なお]すこと、それこそが日本[にほん]の美学[びがく]が未来[みらい]に向[む]けて提示[ていじ]し得[う]る哲学[てつがく]的[てき]遺産[いさん]であると言[い]えよう。"
+    29→    29→    ],
+    30→    30→    translation: [
+    31→    31→      "Whereas Western aesthetics has conceived of beauty as the formal harmony and proportion of an object — that is to say, as an objective structure — Japanese aesthetics has consistently spoken of beauty within a situation in which subject and object remain undifferentiated. In that tradition, the subtle vibration arising between the appreciating subject and the appreciated object has itself been regarded as the very substance of beauty. Such a structure differs decisively from the idea of beauty itself that Western philosophy since Plato has kept in mind. One may say that Japanese aesthetics has persisted in the position that beauty is not a fixed entity but is instead a resonance of human sensibility toward an ever-shifting world.",
+    32→    32→      "It was Motoori Norinaga, a scholar of Japanese classics of the mid-Edo period, who systematically advocated the concept of mono no aware. In his principal work, Genji Monogatari Tama no Ogushi, Norinaga argued that the essence of the literary form called monogatari lies in knowing mono no aware. Here mono refers to all things in heaven and earth, and aware denotes the deep emotion that the human heart feels toward the changing of those myriad things. What is crucial is that aware is not mere sadness but rather an affect that entails a sharp recognition of its object. In other words, for Norinaga, to know mono no aware was synonymous with knowing the world.",
+    33→    33→      "By contrast, wabi-sabi is a sensibility cultivated in the artistic disciplines that developed from the medieval period onward, such as the tea ceremony, renga linked verse, and haiku. Wabi denotes the attitude of finding richness amid insufficiency and lack, while sabi refers to the tranquil beauty that lodges in old and withered things. When Sen no Rikyu arranged a single flower in a narrow, dim tea room to express the cosmos, he was reaching the very pinnacle of wabi-sabi. There, excessive ornamentation was negated and a sensibility that sensed the infinite within simplicity was prized.",
+    34→    34→      "The aesthetic of wabi-sabi appears in its most purified form in the seventeen-syllable poetic form of haiku. The haiku by Matsuo Basho — old pond, a frog leaps in, sound of water — captures a single instant of sound within stillness while foreshadowing the stillness into which that sound will vanish. That is to say, the poem excises the present moment while simultaneously enclosing the disappearance of that moment within itself. This is precisely the characteristic feature of Japanese sensibility, which senses the eternal within the flow of time, and it constitutes a logic of beauty heterogeneous to Western narrative literature.",
+    35→    35→      "Nevertheless, since the modern era, Japanese aesthetics has been continually exposed to the pressure of translation vis-à-vis the concepts of Western modern aesthetics. As the work of forcibly fitting Japanese concepts into the categories of Western philosophy — beauty and the sublime alike — was repeated, the original implications of wabi-sabi and mono no aware could not help but become diluted. Especially during the Meiji period, as intellectuals imported Western concepts of beauty, Japan's ancient sensibility was at times dismissed as pre-modern. We are now compelled to critically re-examine this violence of translation.",
+    36→    36→      "In contemporary consumer society, wabi-sabi is all too often destined to be consumed as a packaging for commodities. When a Kyoto inn or restaurant advertises wabi-sabi as a slogan, what is consumed is merely the form of wabi-sabi, and the philosophical worldview behind it is frequently discarded. That a sensibility supposed to prize simplicity comes to function as a sign legitimating excessive consumption can only be called ironic, for genuine wabi-sabi possesses a structure that inherently resists being consumed.",
+    37→    37→      "Nevertheless, if Japanese aesthetics still possesses a reach in the present, it is presumably because wabi-sabi and mono no aware forged a sensibility toward a world whose essence lies in transformation and disappearance. In an age of accelerating environmental destruction and digitization, we may conversely be in need of the gaze toward transient things that mono no aware teaches. To reconceive beauty not as a fixed entity but as a resonance arising within relationships — that, surely, is the philosophical legacy that Japanese aesthetics can offer toward the future."
+    38→    38→    ],
+    39→    39→    questions: [
+    40→    40→      {
+    41→    41→        q: "How does the passage characterize the difference between Western and Japanese aesthetics?",
+    42→    42→        choices: ["Western aesthetics sees beauty as an objective structure; Japanese aesthetics sees beauty within an undifferentiated subject-object situation", "Both traditions treat beauty as a fixed entity independent of the observer", "Western aesthetics denies formal harmony, whereas Japanese aesthetics is built on proportion", "Japanese aesthetics regards beauty as identical to the Platonic Idea of Beauty"],
+    43→    43→        answerIndex: 0,
+    44→    44→        explanation: "The first paragraph states that while Western aesthetics treats beauty as objective structure (formal harmony/proportion), Japanese aesthetics speaks of beauty within a subject-object undifferentiated situation (主客未分の情況)."
+    45→    45→      },
+    46→    46→      {
+    47→    47→        q: "According to Norinaga's theory as described, what does 'mono no aware' fundamentally amount to?",
+    48→    48→        choices: ["A purely aesthetic response unrelated to cognition", "An emotion that includes sharp recognition of the object, equivalent to knowing the world", "A mode of grief distinct from any act of knowing", "A formal criterion for classifying literary genres"],
+    49→    49→        answerIndex: 1,
+    50→    50→        explanation: "Paragraph two states that 'aware' is not mere sadness but an affect entailing sharp recognition of its object, so that knowing mono no aware was synonymous with knowing the world (世界を知ることと同義)."
+    51→    51→      },
+    52→    52→      {
+    53→    53→        q: "What irony does the passage identify in the contemporary use of wabi-sabi?",
+    54→    54→        choices: ["Wabi-sabi has become identical to mono no aware in marketing", "Wabi-sabi is now used as a sign that legitimizes excessive consumption, although it originally prized simplicity", "Wabi-sabi is rejected entirely by Kyoto inns and restaurants", "Wabi-sabi has been replaced by Western formal aesthetics"],
+    55→    55→        answerIndex: 1,
+    56→    56→        explanation: "Paragraph six notes that a sensibility meant to prize simplicity paradoxically functions as a sign authorizing excessive consumption — precisely the irony the author emphasizes (簡素を尊ぶはずの感性が、逆に過剰な消費を正当化する記号)."
+    57→    57→      },
+    58→    58→      {
+    59→    59→        q: "Which N1 grammar point does the author use to express that Japanese aesthetics was forced to thin out under the pressure of translation?",
+    60→    60→        choices: ["〜ずにはおかない", "〜ざるを得なかった (could not help but)", "〜に堪えない", "〜たりとも"],
+    61→    61→        answerIndex: 1,
+    62→    62→        explanation: "The phrase 稀薄化せざるを得なかった uses 〜ざるを得ない (cannot help but), conveying that thinning was unavoidable under translation pressure."
+    63→    63→      },
+    64→    64→      {
+    65→    65→        q: "What does the author conclude Japanese aesthetics can offer to the future?",
+    66→    66→        choices: ["A fixed doctrine of beauty to replace Western aesthetics", "A sensibility that treats beauty as a resonance within relationships, suited to an age of environmental and digital change", "A blueprint for reviving the Edo-period class system", "A universal aesthetic canon identical with Plato's"],
+    67→    67→        answerIndex: 1,
+    68→    68→        explanation: "The final paragraph concludes that reconceiving beauty as a resonance arising within relationships — the sensibility mono no aware teaches — is the philosophical legacy Japanese aesthetics can offer a future marked by environmental destruction and digitization."
+    69→    69→      }
+    70→    70→    ]
+    71→    71→  },
+    72→    72→
+    73→    73→  // ───────────────────────────────────────────────────────────
+    74→    74→  // r-n1-02 — Modern consumer society
+    75→    75→  // ───────────────────────────────────────────────────────────
+    76→    76→  {
+    77→    77→    id: "r-n1-02",
+    78→    78→    title: "消費[しょうひ]社会[しゃかい]の論理[ろんり]と欲望[よくぼう]の再生産[さいせいさん]",
+    79→    79→    titleReading: "しょうひしゃかいのろんりとよくぼうのさいせいさん",
+    80→    80→    level: "N1",
+    81→    81→    summary: "A theoretical inquiry into modern consumer society drawing on Baudrillard's notion of sign value and simulacra — how the consumer is produced by the system rather than vice versa, how needs are recursively manufactured, and why the logic of differentiation dooms any authentic satisfaction.",
+    82→    82→    estMinutes: 13,
+    83→    83→    tags: ["consumer society", "Baudrillard", "sign value", "simulacra", "critical theory"],
+    84→    84→    body: [
+    85→    85→      "現代[げんだい]の資本[しほん]主義[しゅぎ]を規定[きてい]する最大[さいだい]の特徴[とくちょう]は、もはや生産[せいさん]の論理[ろんり]ではなく消費[しょうひ]の論理[ろんり]が社会[しゃかい]全体[ぜんたい]を支配[しはい]しているという点[てん]にある。かつてマルクス[まるくす]が『資本論[しほんろん]』において分析[ぶんせき]したのは、労働[ろうどう]力[りょく]と生産[せいさん]手段[しゅだん]の結合[けつごう]から剰余[じょうよ]価値[かち]が搾取[さくしゅ]される過程[かてい]であった。しかし、二十[にじゅう]世紀[せいき]後半[こうはん]以降[いこう]の先進[せんしん]諸国[しょこく]においては、問題[もんだい]の核心[かくしん]は生産[せいさん]の場[ば]から消費[しょうひ]の場[ば]へと移動[いどう]した。人々[ひとびと]はもはや労働[ろうどう]者[しゃ]としてのみならず、消費[しょうひ]者[しゃ]として資本[しほん]主義[しゅぎ]の再生産[さいせいさん]構造[こうぞう]に組み込[こ]まれているのである。",
+    86→    86→      "フランス[ふらんす]の哲学者[てつがくしゃ]ボードリヤール[ぼーどりやーる]は、著書[ちょしょ]『消費[しょうひ]社会[しゃかい]の神話[しんわ]と構造[こうぞう]』において、現代[げんだい]社会[しゃかい]で消費[しょうひ]されているのは商品[しょうひん]の使用[しよう]価値[かち]ではなく記号[きごう]価値[かち]であると論[ろん]じた。換言[かんげん]すれば、人々[ひとびと]がブランド[ぶらんど]品[ひん]を買[か]うのは、その機能[きのう]的[てき]な有用性[ゆうようせい]ゆえではなく、そのブランド[ぶらんど]が差異[さい]の体系[たいけい]のなかで示[しめ]す位置[いち]ゆえである。ある自動車[じどうしゃ]を選[えら]ぶことで、消費[しょうひ]者[しゃ]は自分[じぶん]の社会[しゃかい]的[てき]所属[しょぞく]やライフスタイル[らいふすたいる]を他者[たしゃ]に向[む]けて表明[ひょうめい]する。かくして、消費[しょうひ]は記号[きごう]的[てき]な差異[さい]の再生産[さいせいさん]として機能[きのう]するのである。",
+    87→    87→      "ボードリヤール[ぼーどりやーる]の理論[りろん]が鋭[するど]いのは、消費[しょうひ]者[しゃ]の「必要[ひつよう]」自体[じたい]が資本[しほん]主義[しゅぎ]のシステム[しすてむ]によって生産[せいさん]される産物[さんぶつ]であると看破[かんぱ]した点[てん]である。我々[われわれ]は「自分[じぶん]が本当[ほんとう]に必要[ひつよう]としているもの」を自[みずか]ら選[えら]んでいると錯覚[さっかく]する。しかし実際[じっさい]には、広告[こうこく]やマーケティング[まーけてぃんぐ]、そして同[どう]調圧力[ちょうあつりょく]の総体[そうたい]が、あらかじめ我々[われわれ]の欲望[よくぼう]の輪郭[りんかく]を形成[けいせい]している。つまり、欲望[よくぼう]は個[こ]人の[にん]内部[ないぶ]から湧[わ]き出[で]るものではなく、外部[がいぶ]から注入[ちゅうにゅう]され、内部[ないぶ]化[か]された指令[しれい]に過[す]ぎない。ここにおいて、自己[じこ]決定[けってい]的[てき]な主体[しゅたい]という近代[きんだい]的[てき]神話[しんわ]は根底[こんてい]から揺[ゆ]さぶられる。",
+    88→    88→      "さらに問題[もんだい]を複雑[ふくざつ]にするのは、差異[さい]の消費[しょうひ]が本質[ほんしつ]的[てき]に無限[むげん]回帰[かいき]の構造[こうぞう]を持[も]つことである。ある記号[きごう]を獲得[かくとく]して差異[さい]を確保[かくほ]しても、その差異[さい]はただちに他者[たしゃ]によって模倣[もほう]され、普及[ふきゅう]することで差異[さい]でなくなってしまう。かくして消費[しょうひ]者[しゃ]は、新[あたら]しい差異[さい]を求[もと]めて次[つぎ]から次[つぎ]へと商品[しょうひん]を買い替[か]え続[つづ]ける。このプロセス[ぷろせす]を支[ささ]えるのが、流行[りゅうこう]という名[な]の計画的[けいかくてき]陳腐化[ちんぷか]である。システム[しすてむ]は消費[しょうひ]者[しゃ]に「まだ足[た]りない」という感覚[かんかく]を持[も]たせることで、継続[けいぞく]的[てき]な消費[しょうひ]を保証[ほしょう]するのである。",
+    89→    89→      "このようにして、消費[しょうひ]社会[しゃかい]は欲望[よくぼう]の再生産[さいせいさん]を通[とお]じて自[みずか]らを維持[いじ]する閉鎖[へいさ]的[てき]な循環[じゅんかん]構造[こうぞう]を形成[けいせい]する。重要[じゅうよう]なのは、消費[しょうひ]者[しゃ]がこの構造[こうぞう]の犠牲[ぎせい]者[しゃ]であると同時[どうじ]に、加害[かがい]者[しゃ]でもあるという点[てん]である。我々[われわれ]が差異[さい]の消費[しょうひ]に参加[さんか]することで、システム[しすてむ]は再生産[さいせいさん]される。したがって、消費[しょうひ]社会[しゃかい]に対[たい]する批判[ひはん]は、単[たん]なる道徳[どうとく]的[てき]非難[ひなん]では不十分[ふじゅうぶん]であり、自[みずか]の消費[しょうひ]行動[こうどう]を含[ふく]めた構造[こうぞう]的[てき]な点検[てんけん]を要[よう]するのである。",
+    90→    90→      "現代[げんだい]日本[にほん]社会[しゃかい]をこの枠組[わくぐ]みで捉[とら]え直[なお]すと、いくつかの顕著[けんちょ]な特徴[とくちょう]が浮[う]かび上[あ]がる。其一[そのいち]、戦後[せんご]の高度[こうど]経済[けいざい]成長[せいちょう]がもたらした中間層[ちゅうかんそう]の厚[あつ]みは、同[どう]時に大規模[だいきぼ]な消費[しょうひ]人口[じんこう]を準備[じゅんび]した。其二[そのに]、一世帯[いっせたい]あたりの所得[しょとく]が上昇[じょうしょう]する一方[いっぽう]で、ファッション[ふぁっしょん]や家電[かでん]、外食[がいしょく]産業[さんぎょう]が高度[こうど]に組織化[そしきか]され、記号[きごう]的[てき]差異[さい]の消費[しょうひ]を日常[にちじょう]化[か]した。其三[そのさん]、とりわけSNS[えすえぬえす]の普及[ふきゅう]は、他者[たしゃ]の目[め]を意識[いしき]した差異[さい]の再生産[さいせいさん]を加速[かそく]させ、自己[じこ]呈示[ていじ]の圧力[あつりょく]を社会[しゃかい]全体[ぜんたい]に蔓延[まんえん]させた。",
+    91→    91→      "消費[しょうひ]社会[しゃかい]の論理[ろんり]に対[たい]する抵抗[ていこう]を考[かんが]える場合[ばあい]、我々[われわれ]は二[ふた]つの罠[わな]を避[さ]けなければならない。第一[だいいち]に、消費[しょうひ]そのものを完全[かんぜん]に拒絶[きょぜつ]するという選択[せんたく]は、現実[げんじつ]的[てき]であると同時[どうじ]にシステム[しすてむ]の外[そと]に立[た]つことの不可能[ふかのう]性[せい]を無視[むし]する。第二[だいに]に、倫理的[りんりてき]な消費[しょうひ]という名[な]の新[あたら]しい差異[さい]の消費[しょうひ]に陥[おちい]る危険[きけん]がある。エシカル[えしかる]消費[しょうひ]もまた、ある種[しゅ]の記号[きごう]的[てき]優越[ゆうえつ]性[せい]を購入[こうにゅう]する行為[こうい]に転化[てんか]し得[う]るからである。真[しん]の批判[ひはん]は、欲望[よくぼう]の構造[こうぞう]そのものを自覚的[じかくてき]に点検[てんけん]し、差異[さい]への執着[しゅうちゃく]から離脱[りだつ]する主体[しゅたい]の形成[けいせい]にあると言[い]えよう。"
+    92→    92→    ],
+    93→    93→    translation: [
+    94→    94→      "The greatest defining feature of contemporary capitalism lies in the fact that it is no longer the logic of production but the logic of consumption that governs society as a whole. What Marx analyzed in Capital was the process by which surplus value is extracted from the combination of labor power and the means of production. In the advanced nations from the latter half of the twentieth century onward, however, the core of the problem shifted from the site of production to the site of consumption. People are incorporated into the reproductive structure of capitalism not merely as workers but also as consumers.",
+    95→    95→      "The French philosopher Baudrillard argued in The Consumer Society: Myths and Structures that what is consumed in modern society is not the use value of commodities but their sign value. In other words, people buy brand goods not because of their functional utility but because of the position that the brand indicates within a system of differences. By choosing a particular automobile, the consumer declares to others their social belonging and lifestyle. Consumption thus functions as the reproduction of symbolic difference.",
+    96→    96→      "What is sharp about Baudrillard's theory is the insight that the consumer's needs themselves are products manufactured by the capitalist system. We harbor the illusion that we ourselves choose what we truly need. In reality, however, the totality of advertising, marketing, and peer pressure has already formed the contours of our desire in advance. Desire, in other words, does not well up from within the individual; it is no more than a command injected from without and internalized. Here the modern myth of the self-determining subject is shaken at its foundation.",
+    97→    97→      "What further complicates the matter is that the consumption of differences possesses an essentially infinite-regress structure. Even when one acquires a sign and secures a difference, that difference is immediately imitated and popularized by others, ceasing to be a difference. Consumers accordingly replace commodities one after another in pursuit of new differences. Sustaining this process is what is called planned obsolescence under the name of fashion. By instilling in consumers the sensation that they still lack something, the system guarantees continuous consumption.",
+    98→    98→      "In this way, consumer society forms a closed circular structure that maintains itself through the reproduction of desire. Crucially, the consumer is simultaneously a victim and a perpetrator of this structure. By participating in the consumption of differences, we reproduce the system. A critique of consumer society, therefore, cannot be limited to moral condemnation; it requires structural scrutiny that includes our own acts of consumption.",
+    99→    99→      "Re-examining contemporary Japanese society within this framework, several salient features come to the surface. First, the thickness of the middle stratum produced by postwar high economic growth simultaneously prepared a vast consuming population. Second, while household income rose, the fashion, home appliance, and restaurant industries became highly organized, routinizing the consumption of symbolic differences. Third, the spread of social media in particular accelerated the reproduction of differences performed with an eye on others, spreading the pressure of self-presentation throughout society.",
+   100→   100→      "In considering resistance to the logic of consumer society, we must avoid two traps. First, the option of rejecting consumption altogether is unrealistic and ignores the impossibility of standing outside the system. Second, there is a danger of falling into a new consumption of difference under the name of ethical consumption. Ethical consumption too can be transformed into the act of purchasing a certain kind of symbolic superiority. True critique, one may say, lies in the formation of a subject that scrutinizes the very structure of desire and detaches itself from attachment to difference."
+   101→   101→    ],
+   102→   102→    questions: [
+   103→   103→      {
+   104→   104→        q: "What does the passage identify as the core shift defining contemporary capitalism?",
+   105→   105→        choices: ["The shift from consumption logic to production logic, reversing Marx", "The shift from production logic to consumption logic as the principle governing society", "The shift from agricultural labor to feudal rent extraction", "The shift from manual labor to spiritual contemplation"],
+   106→   106→        answerIndex: 1,
+   107→   107→        explanation: "Paragraph one states that the defining feature of contemporary capitalism is that the logic of consumption, not production, now governs society as a whole (生産の論理ではなく消費の論理が社会全体を支配)."
+   108→   108→      },
+   109→   109→      {
+   110→   110→        q: "According to Baudrillard as paraphrased in the passage, what do consumers actually purchase?",
+   111→   111→        choices: ["The functional use value of commodities alone", "The labor time embedded in commodities", "The sign value that indicates a position within a system of differences", "The Marxist surplus value generated at production"],
+   112→   112→        answerIndex: 2,
+   113→   113→        explanation: "Paragraph two states that what is consumed in modern society is not use value but sign value, with consumers purchasing the position the brand indicates within a system of differences (差異の体系のなかで示す位置)."
+   114→   114→      },
+   115→   115→      {
+   116→   116→        q: "Why does the consumption of differences necessarily become an infinite regress?",
+   117→   117→        choices: ["Because differences, once imitated and popularized, cease to be differences, requiring ever-new differences", "Because the state forbids any repetition of consumption", "Because use value can never be exhausted", "Because commodities are biodegradable by law"],
+   118→   118→        answerIndex: 0,
+   119→   119→        explanation: "Paragraph four argues that any secured difference is imitated and popularized, ceasing to be a difference, which drives consumers to seek ever-new differences — an infinite regress (差異の消費が本質的に無限回帰の構造を持つ)."
+   120→   120→      },
+   121→   121→      {
+   122→   122→        q: "What is the passage's verdict on 'ethical consumption' as a form of resistance?",
+   123→   123→        choices: ["It is the only genuine escape from consumer society", "It risks becoming a new consumption of symbolic superiority", "It eliminates the need for any structural scrutiny", "It is forbidden by the capitalist system"],
+   124→   124→        answerIndex: 1,
+   125→   125→        explanation: "Paragraph seven warns that ethical consumption can transform into the purchase of a kind of symbolic superiority (ある種の記号的優越性を購入する行為に転化し得る), making it a trap rather than a true escape."
+   126→   126→      },
+   127→   127→      {
+   128→   128→        q: "Which N1 grammar pattern in the passage conveys that 'true critique lies in forming a subject that detaches itself from attachment to difference'?",
+   129→   129→        choices: ["〜に堪えない", "〜ずにはおかない", "〜にある (lies in / resides in)", "〜たるもの"],
+   130→   130→        answerIndex: 2,
+   131→   131→        explanation: "The final sentence 真の批判は…主体の形成にある uses 〜にある (lies in / resides in), an N1-level construction identifying where something essential resides."
+   132→   132→      }
+   133→   133→    ]
+   134→   134→  },
+   135→   135→
+   136→   136→  // ───────────────────────────────────────────────────────────
+   137→   137→  // r-n1-03 — Genetic engineering ethics
+   138→   138→  // ───────────────────────────────────────────────────────────
+   139→   139→  {
+   140→   140→    id: "r-n1-03",
+   141→   141→    title: "遺伝子[いでんし]編集[へんしゅう]技術[ぎじゅつ]が突[つ]きつける倫理[りんり]的[てき]境界[きょうかい]",
+   142→   142→    titleReading: "いでんしへんしゅうぎじゅつがつきつけるりんりてききょうかい",
+   143→   143→    level: "N1",
+   144→   144→    summary: "An ethical inquiry into CRISPR-based genetic editing — the distinction between somatic and germline modification, the 2018 He Jiankui case as a watershed, the specter of designer babies and a new biological class divide, and the inadequacy of existing bioethical frameworks for a technology that edits the human future.",
+   145→   145→    estMinutes: 14,
+   146→   146→    tags: ["bioethics", "CRISPR", "germline editing", "designer babies", "He Jiankui"],
+   147→   147→    body: [
+   148→   148→      "二〇[に〇]一世紀[いっせいき]後半[こうはん]の科学[かがく]技術[ぎじゅつ]の進展[しんてん]のなかで、とりわけ人類[じんるい]の自己[じこ]理解[りかい]を根底[こんてい]から覆[くつがえ]す可能性[かのうせい]を秘[ひめ]ているのが、遺伝子[いでんし]編集[へんしゅう]技術[ぎじゅつ]、なかでも通称[つうしょう]クリスパー[くりすぱー]・キャスナイン[きゃすないん]と呼[よ]ばれるツールであろう。この技術[ぎじゅつ]は、DNA[でぃーえぬえー]の特定[とくてい]部位[ぶい]を精密[せいみつ]に切断[せつだん]し、置換[ちかん]または挿入[そうにゅう]を行[おこな]うことを可能[かのう]にし、これまで不可能[ふかのう]とされてきた遺伝[いでん]的[てき]改変[かいへん]を日常[にちじょう]的[てき]な実験[じっけん]室[しつ]作業[さぎょう]へと変[か]えた。その簡便[かんべん]さと低[てい]成本[せいひん]性[せい]は、他方[たほう]で、倫理[りんり]的[てき]統御[とうぎょ]の枠組[わくぐ]みが技術[ぎじゅつ]の進歩[しんぽ]に追[お]いついていないという深刻[しんこく]な事態[じたい]を生[しょう]み出[だ]した。",
+   149→   149→      "遺伝子[いでんし]編集[へんしゅう]を倫理[りんり]的[てき]に検討[けんとう]する場合[ばあい]、最[もっとも]も基本的[きほんてき]な区別[くべつ]は体細胞[たいさいぼう]編集[へんしゅう]と生殖[せいしょく]系列[けいれつ]編集[へんしゅう]の間[あいだ]に引[ひ]かれる。前者[ぜんしゃ]は、治療[ちりょう]を目的[もくてき]として患者[かんじゃ]自身[じしん]の体細胞[たいさいぼう]を改変[かいへん]するものであり、その改変[かいへん]は次代[じだい]に遺伝[いでん]されない。これに対[たい]し、後者[こうしゃ]は精子[せいし]や卵子[らんし]、あるいは受精卵[じゅせいらん]の段階[だんかい]で遺伝子[いでんし]を書[か]き換[か]えるものであり、その変更[へんこう]は以後[いご]のすべて[すべて]の世代[せだい]に遺伝[いでん]される。この違い[ちがい]は、技術[ぎじゅつ]的[てき]には連続[れんぞく]的[てき]であっても、倫理[りんり]的[てき]には質[しつ]的[てき]に断絶[だんぜつ]的[てき]である。なぜなら、後者[こうしゃ]は被[ひ]治療[ちりょう]者[しゃ]の同意[どうい]を得[え]ることのできない未来[みらい]の世代[せだい]の運命[うんめい]を決定[けってい]してしまうからである。",
+   150→   150→      "二〇一八[にせんじゅうはち]年[ねん]、中国[ちゅうごく]の科学者[かがくしゃ]賀[が]建奎[けんけい]は、世界[せかい]初[はつ]となる生殖[せいしょく]系列[けいれつ]編集[へんしゅう]乳[にゅう]児[じ]の誕生[たんじょう]を発表[はっぴょう]した。彼[かれ]はHIV[えいちあいぶい]ウイルス[ういるす]に対[たい]する抵抗力[ていこうりょく]を与[あた]える目的[もくてき]で、受精卵[じゅせいらん]の段階[だんかい]でCCR5[しーしーあーるご]遺伝子[いでんし]を改変[かいへん]し、双子[ふたご]の嬰児[えいじ]を誕生[たんじょう]させたと主張[しゅちょう]した。この行為[こうい]は国際[こくさい]科学[かがく]共同体[きょうどうたい]から激[はげ]しい非難[ひなん]を受[う]けた。その理由[りゆう]は、安全性[あんぜんせい]が未[いま]だ確立[かくりつ]されていない段階[だんかい]で人間[にんげん]に応用[おうよう]したこと、および、疾病[しっぺい]の予防[よぼう]という名目[めいもく]の下[もと]に生殖[せいしょく]系列[けいれつ]の改変[かいへん]を行[おこな]ったことの二[ふた]点[てん]にあった。この事件[じけん]は、遺伝子[いでんし]編集[へんしゅう]の倫理[りんり]的[てき]統御[とうぎょ]がもはや抽象的[ちゅうしょうてき]な議論[ぎろん]の段階[だんかい]を脱[だつ]したことを示[しめ]した。",
+   151→   151→      "問題[もんだい]をさらに複雑[ふくざつ]にするのは、治療[ちりょう]と強化[きょうか]の境界[きょうかい]が曖昧[あいまい]であるという点[てん]である。難病[なんびょう]の遺伝[いでん]的[てき]原因[げんいん]を除去[じょきょ]することは誰[だれ]もが治療[ちりょう]と認[みと]めるであろう。しかし、筋肉[きんにく]量[りょう]の増加[ぞうか]や記憶[きおく]力[りょく]の向上[こうじょう]、寿命[じゅみょう]の延長[えんちょう]はどうであろうか。これらは疾病[しっぺい]の治療[ちりょう]ではなく能力[のうりょく]の強化[きょうか]であると直感[ちょっかん]的[てき]に言[い]えるかもしれないが、正常[せいじょう]と異常[いじょう]の境界[きょうかい]自体[じたい]が統計[とうけい]的[てき]な規約[きやく]に過[す]ぎない以上[いじょう]、境界[きょうかい]の引[ひ]き方[かた]には必然[ひつぜん]的[てき]に恣意[しい]性[せい]が混入[こんにゅう]する。かくして、治療[ちりょう]を許容[きょよう]し強化[きょうか]を禁止[きんし]するという原則[げんそく]は、一[ひと]見[けん]明快[めいかい]であるが、実行[じっこう]の段階[だんかい]で深刻[しんこく]な困難[こんなん]に直面[ちょくめん]する。",
+   152→   152→      "仮[かり]に遺伝子[いでんし]強化[きょうか]が許容[きょよう]される社会[しゃかい]を想定[そうてい]しよう。その社会[しゃかい]において、富裕[ふゆう]層[そう]は自己[じこ]の子孫[しそん]の知能[ちのう]や体力[たいりょく]、容姿[ようし]を最適[さいてき]化[か]するための遺伝子[いでんし]編集[へんしゅう]に多額[たがく]の資金[しきん]を投入[とうにゅう]するだろう。かくして生[う]まれた強化[きょうか]人間[にんげん]は、自然[しぜん]に生[う]まれた人間[にんげん]に対[たい]して先天的[せんてんてき]な優位[ゆうい]を獲得[かくとく]する。このプロセス[ぷろせす]が数[すう]世代[せだい]にわたって累積[るいせき]すれば、遺伝[いでん]的[てき]な階級[かいきゅう]分化[ぶんか]が生[しょう]じ、生物学的[せいぶつがくてき]な決定論[けっていろん]が社会[しゃかい]的[てき]階層[かいそう]を正当化[せいとうか]する事態[じたい]に至[いた]り得[う]。かつてマルクス[まるくす]が階級[かいきゅう]を所有[しょゆう]関係[かんけい]の問題[もんだい]として分析[ぶんせき]した時代[じだい]とは異[こと]なり、階級[かいきゅう]がDNA[でぃーえぬえー]そのものに刻印[こくいん]される時代[じだい]が訪[おとず]れるのである。",
+   153→   153→      "このような将来[しょうらい]を回避[かいひ]するためには、国際[こくさい]的[てき]な統一[とういつ]規範[きはん]の構築[こうちく]が不可欠[ふかつけつ]である。しかしながら、国家[こっか]間[かん]の競争[きょうそう]が激化[げきか]する状況[じょうきょう]下[か]では、一国[いっこく]が規制[きせい]を強化[きょうう]しても他国[たこく]が追随[ついずい]しない限[かぎ]り意味[いみ]を持[も]たない。事実[じじつ]、一部[いちぶ]の科学者[かがくしゃ]は、規制[きせい]の厳格[げんかく]化[か]は革新的[かくしんてき]な研究[けんきゅう]を海外[かいがい]に逸[そ]らすだけだと主張[しゅちょう]する。かくして、規制[きせい]の国際[こくさい]的[てき]協調[きょうちょう]と科学[かがく]研究[けんきゅう]の自由[じゆう]という二[ふた]つの原理[げんり]の間[あいだ]に、深刻[しんこく]なトレードオフが生[しょう]じる。このトレードオフを解消[かいしょう]するための制度的[せいどてき]知恵[ちえ]を、人類[じんるい]はまだ見出[みいだ]していない。",
+   154→   154→      "もう一[ひと]つの論点[ろんてん]は、障害[しょうがい]者の尊厳[そんげん]との関係[かんけい]である。遺伝子[いでんし]編集[へんしゅう]によって特定[とくてい]の障害[しょうがい]を出生前[しゅっしょうまえ]に除去[じょきょ]することは、一[ひと]見[けん]、個[こ]人の[にん]幸福[こうふく]を増進[ぞうしん]する行為[こうい]である。しかし、障害[しょうがい]者[しゃ]の権利[けんり]を擁護[ようご]する立場[たちば]からは、こうした選別[せんべつ]は暗黙[あんもく]のうちに障害[しょうがい]ある生命[せいめい]は生[なま]きる価値[かち]に欠[か]けると宣告[せんこく]するものではないか、という批判[ひはん]が提示[ていじ]される。ここでは、個[こ]人の[にん]選択[せんたく]の自由[じゆう]と集団[しゅうだん]の尊厳[そんげん]という二[ふた]つの原理[げんり]が衝突[しょうとつ]する。この衝突[しょうとつ]を解決[かいけつ]するための十分[じゅうぶん]な議論[ぎろん]は、未[いま]だ尽[つ]くされていないと言[い]わざるを得[え]ない。",
+   155→   155→      "遺伝子[いでんし]編集[へんしゅう]技術[ぎじゅつ]は、人類[じんるい]にとって解放[かいほう]の道具[どうぐ]にもなり得[う]れば、新[あたら]しい階級[かいきゅう]支配[しはい]の道具[どうぐ]にもなり得[う]。その方向性[ほうこうせい]を決定[けってい]するのは、技術[ぎじゅつ]そのものではなく、技術[ぎじゅつ]を運用[うんよう]する社会[しゃかい]の倫理[りんり]的[てき]成熟[せいじゅく]の程度[ていど]である。我々[われわれ]は今[いま]、生物学的[せいぶつがくてき]な運命[うんめい]を自[みずか]ら書[か]き換[か]える能力[のうりょく]を手[て]に入れた。その能力[のうりょく]に見合[みあ]うだけの知的[ちてき]および道徳[どうとく]的[てき]成熟[せいじゅく]を、我々[われわれ]が同時[どうじ]に獲得[かくとく]しているか否[いな]か。この問[と]いこそが、二十[にじゅう]一世紀[いっせいき]の人類[じんるい]に課[か]された最[もっとも]も過酷[かこく]な問[と]いであると結論[けつろん]づけることができよう。"
+   156→   156→    ],
+   157→   157→    translation: [
+   158→   158→      "Among the advances in science and technology in the latter half of the twenty-first century, the one that perhaps harbors the potential to overturn humanity's self-understanding at its very foundation is genetic editing technology — above all the tool commonly called CRISPR-Cas9. This technology makes it possible to precisely cut specific sites in DNA and to perform substitution or insertion, turning genetic modification once deemed impossible into routine laboratory work. Its convenience and low cost, on the other hand, have produced the grave situation in which the framework of ethical governance has failed to keep pace with technological progress.",
+   159→   159→      "In ethically examining genetic editing, the most fundamental distinction is drawn between somatic cell editing and germline editing. The former modifies the patient's own somatic cells for therapeutic purposes, and the modification is not inherited by the next generation. The latter rewrites genes at the stage of sperm, egg, or fertilized ovum, and the change is inherited by all subsequent generations. Although continuous technologically, this difference is qualitatively discontinuous ethically. For the latter determines the fate of future generations whose consent as patients can never be obtained.",
+   160→   160→      "In 2018, the Chinese scientist He Jiankui announced the birth of the world's first germline-edited infants. He claimed to have altered the CCR5 gene at the fertilized-ovum stage in order to confer resistance to HIV, bringing twin infants into the world. This act drew fierce condemnation from the international scientific community. The reasons were twofold: he applied the technique to humans at a stage when safety had not yet been established, and he performed a germline modification under the nominal heading of disease prevention. The incident demonstrated that ethical governance of genetic editing had moved beyond the stage of abstract debate.",
+   161→   161→      "What further complicates the matter is the ambiguity of the boundary between therapy and enhancement. Everyone would presumably acknowledge the removal of the genetic cause of an intractable disease as therapy. But what about increases in muscle mass, enhancement of memory, or extension of lifespan? One might intuitively call these the enhancement of capabilities rather than the treatment of disease. Yet given that the boundary between normal and abnormal is itself no more than a statistical convention, the drawing of the line necessarily admits arbitrariness. Thus the principle of permitting therapy while prohibiting enhancement appears clear at first glance but confronts serious difficulty at the stage of implementation.",
+   162→   162→      "Suppose we imagine a society that permits genetic enhancement. In that society, the wealthy class would pour enormous funds into genetic editing to optimize the intelligence, physical strength, and appearance of its descendants. The enhanced humans thereby born would acquire a congenital advantage over naturally born humans. If this process accumulated over several generations, genetic class differentiation would arise, potentially leading to a situation in which biological determinism legitimized social stratification. Unlike the era in which Marx analyzed class as a matter of ownership relations, an age would arrive in which class was inscribed in DNA itself.",
+   163→   163→      "To avert such a future, the construction of an international unified norm is indispensable. Under conditions of intensifying competition among states, however, even if one country tightens regulation, it means nothing unless other countries follow suit. Indeed, some scientists argue that stricter regulation only drives innovative research overseas. A serious trade-off thus arises between international regulatory coordination and the freedom of scientific research. Humanity has yet to find the institutional wisdom to resolve this trade-off.",
+   164→   164→      "Another point at issue is the relation to the dignity of persons with disabilities. Removing a particular disability prenatally through genetic editing is, on its face, an act that promotes individual happiness. From the standpoint of advocates for the rights of the disabled, however, the criticism is offered that such selection may implicitly pronounce that life with disability lacks worth living. Here the two principles of individual freedom of choice and collective dignity collide. One must say that sufficient debate to resolve this collision has not yet been exhausted.",
+   165→   165→      "Genetic editing technology may become either a tool of liberation for humanity or a tool of new class domination. What determines its directionality is not the technology itself but the degree of ethical maturity of the society that wields it. We have now acquired the ability to rewrite our biological fate ourselves. The harshest question imposed on humanity in the twenty-first century is whether we are simultaneously acquiring the intellectual and moral maturity commensurate with that ability. One may conclude that this is the question that frames our age."
+   166→   166→    ],
+   167→   167→    questions: [
+   168→   168→      {
+   169→   169→        q: "On what basis does the passage distinguish somatic from germline editing ethically?",
+   170→   170→        choices: ["Somatic editing affects only the patient and is not inherited, whereas germline editing determines the fate of future generations whose consent cannot be obtained", "Both are equivalent because both modify DNA", "Germline editing is safer than somatic editing", "Somatic editing is forbidden while germline editing is permitted"],
+   171→   171→        answerIndex: 0,
+   172→   172→        explanation: "Paragraph two states that although technologically continuous, germline editing is qualitatively discontinuous ethically because it determines the fate of future generations whose consent cannot be obtained (被治療者の同意を得ることのできない未来の世代の運命を決定)."
+   173→   173→      },
+   174→   174→      {
+   175→   175→        q: "What two reasons does the passage give for the international condemnation of He Jiankui?",
+   176→   176→        choices: ["He falsified his data and plagiarized a colleague", "He applied the technique to humans before safety was established, and performed germline modification under the nominal heading of disease prevention", "He sold his results to a corporation and refused to publish", "He worked without funding and without institutional affiliation"],
+   177→   177→        answerIndex: 1,
+   178→   178→        explanation: "Paragraph three identifies the two reasons: applying to humans at a stage when safety had not been established, and performing germline modification under the name of disease prevention (安全性が未だ確立されていない段階で人間に応用、および、疾病の予防という名目の下に生殖系列の改変)."
+   179→   179→      },
+   180→   180→      {
+   181→   181→        q: "What is the structural worry the passage raises about permitting genetic enhancement?",
+   182→   182→        choices: ["It would lower the overall birth rate", "Accumulated across generations, it would produce genetic class differentiation inscribed in DNA, with biological determinism legitimizing social stratification", "It would make all humans identical in appearance", "It would immediately cure all known diseases"],
+   183→   183→        answerIndex: 1,
+   184→   184→        explanation: "Paragraph five argues that if enhancement is permitted, accumulated over generations it would produce genetic class differentiation, with biological determinism legitimizing social stratification and class inscribed in DNA itself (階級がDNAそのものに刻印される時代)."
+   185→   185→      },
+   186→   186→      {
+   187→   187→        q: "What trade-off does the passage identify at the level of international regulation?",
+   188→   188→        choices: ["Between food security and energy independence", "Between international regulatory coordination and the freedom of scientific research", "Between military spending and welfare spending", "Between tourism and immigration policy"],
+   189→   189→        answerIndex: 1,
+   190→   190→        explanation: "Paragraph six argues that unless other countries follow a single country's stricter regulation, the regulation is meaningless, and some scientists fear regulation drives innovation abroad — yielding a trade-off between international regulatory coordination and scientific freedom."
+   191→   191→      },
+   192→   192→      {
+   193→   193→        q: "Which N1 grammar pattern does the passage use to convey 'one must say that sufficient debate has not yet been exhausted'?",
+   194→   194→        choices: ["〜ずにはおかない", "〜と言わざるを得ない (one cannot help but say)", "〜に堪えない", "〜たりとも"],
+   195→   195→        answerIndex: 1,
+   196→   196→        explanation: "The phrase 十分な議論は、未だ尽くされていないと言わざるを得ない uses 〜と言わざるを得ない (cannot help but say), an N1 construction expressing unavoidable conclusion."
+   197→   197→      }
+   198→   198→    ]
+   199→   199→  },
+   200→   200→
+
+[showing lines 1-200 of 656; use offset=201 with limit to continue reading]

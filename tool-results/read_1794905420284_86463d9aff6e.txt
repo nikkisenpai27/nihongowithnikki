@@ -1,0 +1,640 @@
+     1→import type { ReadingPassage } from "@/lib/types";
+     2→
+     3→// Furigana notation: kanji readings are written inline as 漢字[かんじ].
+     4→// A [reading] immediately following a run of kanji attaches to that whole run.
+     5→// Adjacent kanji compounds may be split by brackets (e.g. 日本[にほん]語[ご]).
+     6→// Kana, katakana, punctuation, and 々 have no brackets. See types.ts & furigana.tsx.
+     7→// 10 original N2-level reading passages with comprehension questions.
+     8→
+     9→export const readingN2A: ReadingPassage[] = [
+    10→  // ───────────────────────────────────────────────────────────
+    11→  // r-n2-01 — Japan's demographic crisis
+    12→  // ───────────────────────────────────────────────────────────
+    13→  {
+    14→    id: "r-n2-01",
+    15→    title: "少子[しょうし]高齢化[こうれいか]という国難[こくなん]",
+    16→    titleReading: "しょうしこうれいかというこくなん",
+    17→    level: "N2",
+    18→    summary: "An examination of Japan's declining birthrate and aging population, its economic and social consequences, the immigration debate, regional collapse, and the limits of current policy responses.",
+    19→    estMinutes: 10,
+    20→    tags: ["demographics", "aging society", "labor", "policy"],
+    21→    body: [
+    22→      "近年[きんねん]、日本[にほん]における少子[しょうし]高齢化[こうれいか]は国難[こくなん]と称[しょう]されるほど深刻[しんこく]な状況[じょうきょう]に直面[ちょくめん]している。総務省[そうむしょう]の統計[とうけい]によれば、総人口[そうじんこう]は既[すで]に減少[げんしょう]局面[きょくめん]に入[はい]っており、このままの推移[すいい]が続[つづ]けば、五十年[ごじゅうねん]後[ご]には一億[いちおく]人[にん]を割[わ]り込[こ]むと予測[よそく]されている。",
+    23→      "かつて高度[こうど]経済[けいざい]成長[せいちょう]期[き]を支[ささ]えた人口[じんこう]構造[こうぞう]は、現在[げんざい]逆[ぎゃく]の作用[さよう]を及[およ]ぼしつつある。生産[せいさん]年齢[ねんれい]人口[じんこう]の減少[げんしょう]は、労働力[ろうどうりょく]不足[ぶそく]のみならず、社会[しゃかい]保障[ほしょう]制度[せいど]の維持[いじ]をも脅[おびや]かしている。このまま放置[ほうち]すれば、現行[げんこう]の年金[ねんきん]や医療[いりょう]制度[せいど]は行[ゆき]き詰[づ]まりを迎[むか]えるに違[ちが]いない。",
+    24→      "出生率[しゅっしょうりつ]低下[ていか]の背景[はいけい]には、経済的[けいざいてき]な不安[ふあん]が深[ふか]く関与[かんよ]している。非正規[ひせいき]雇用[こよう]の増加[ぞうか]に伴[ともな]い、若者[わかもの]の結婚[けっこん]意欲[いよく]は低下[ていか]の一途[いっと]をたどっている。安定[あんてい]した雇用[こよう]どころか、将来[しょうらい]への見通[みとお]しさえ立[た]てられない状況[じょうきょう]では、子[こ]どもを育[そだ]てる決断[けつだん]を下[お]ろすことは困難[こんなん]を極[きわ]める。",
+    25→      "外国人[がいこくじん]労働者[ろうどうしゃ]の受入[うけいれ]についても、議論[ぎろん]が二分[にぶん]されている。人手[ひとで]不足[ぶそく]を補[おぎな]うには移民[いみん]政策[せいさく]の拡大[かくだい]が不可欠[ふかけつ]だと主張[しゅちょう]する声[こえ]がある一方[いっぽう]で、文化[ぶんか]摩擦[まさつ]や社会[しゃかい]統合[とうごう]の困難[こんなん]を懸念[けねん]する向[む]きもある。いずれにせよ、国民的[こくみんてき]合意[ごうい]形成[けいせい]を待[ま]っている間[あいだ]に、現場[げんば]の人手[ひとで]不足[ぶそく]は一段[いちだん]と深刻化[しんこくか]している。",
+    26→      "地方[ちほう]の人口[じんこう]流出[りゅうしゅつ]も見過[みす]ごせない問題[もんだい]である。若年層[わかねんそう]が都市[とし]部[ぶ]に集中[しゅうちゅう]する余[あま]り、地方[ちほう]都市[とし]や農村[のうそん]部[ぶ]では高齢化[こうれいか]が加速[かそく]している。限界集落[げんかいしゅうらく]と呼[よ]ばれる、住民[じゅうみん]の半数[はんすう]以上[いじょう]が六十五歳[ろくじゅうごさい]を超[こ]える地域[ちいき]は、全国[ぜんこく]で増加[ぞうか]の一途[いっと]をたどっている。",
+    27→      "政府[せいふ]行政[ぎょうせい]は子育[こそだ]て支援[しえん]策[さく]の拡充[かいじゅう]に力[ちから]を入[い]れているものの、財源[ざいげん]の確保[かくほ]という壁[かべ]に直面[ちょくめん]している。補助金[ほじょきん]を投入[とうにゅう]する限[かぎ]りでは、根本的[こんぽんてき]な解決[かいけつ]には至[いた]らない。働[はたら]き方[かた]の改革[かいかく]と並行[へいこう]して、男性[だんせい]の育児[いくじ]参加[さんか]を促[うなが]す意識[いしき]改革[かいかく]が求[もと]められている。",
+    28→      "少子[しょうし]高齢化[こうれいか]という課題[かだい]は、一朝一夕[いっちょういっせき]で解決[かいけつ]できるものではない。しかし、現状[げんじょう]を認識[にんしき]する限[かぎ]り、私[わたし]たちが行動[こうどう]を起[お]こさないわけにはいかない。状況[じょうきょう]が悪化[あっか]するうちに手[て]を打[う]たなければ、次[つぎ]世代[せだい]に責任[せきにん]ある社会[しゃかい]を引[ひ]き継[つ]ぐことはできない。今[いま]こそ国民[こくみん]挙[あ]げて取[と]り組[く]む必要[ひつよう]がある。"
+    29→    ],
+    30→    translation: [
+    31→      "In recent years, Japan's declining birthrate and aging population have become a situation severe enough to be called a national crisis. According to Ministry of Internal Affairs statistics, the total population has already entered a phase of decline, and if this trend continues, it is predicted to fall below one hundred million in fifty years.",
+    32→      "The demographic structure that once supported the period of rapid economic growth is now exerting the opposite effect. The decline of the working-age population threatens not only labor shortages but also the maintenance of the social security system. If left unaddressed, the current pension and medical systems will undoubtedly reach a dead end.",
+    33→      "Economic insecurity is deeply involved in the background of the declining birthrate. Along with the increase in non-regular employment, the desire of young people to marry has been steadily declining. In a situation where one cannot even form a vision for the future, let alone stable employment, making the decision to raise children is extremely difficult.",
+    34→      "Opinions are also divided on the acceptance of foreign workers. There are voices arguing that expanding immigration policy is essential to compensate for labor shortages, while others are concerned about cultural friction and the difficulty of social integration. In any case, while waiting for national consensus to be formed, the labor shortage on the ground is becoming even more serious.",
+    35→      "The outflow of population from rural areas is also a problem that cannot be overlooked. As the young concentrate in urban areas, aging is accelerating in regional cities and rural areas. The number of so-called marginal communities, where more than half the residents are over 65, is steadily increasing nationwide.",
+    36→      "Although the government administration is putting effort into expanding childcare support measures, it faces the wall of securing financial resources. As long as it only injects subsidies, it will not lead to a fundamental solution. In parallel with work-style reform, awareness reform to encourage male participation in childcare is sought.",
+    37→      "The challenge of the declining birthrate and aging population is not something that can be solved overnight. However, as long as we recognize the current situation, we cannot help but take action. If we do not act while the situation worsens, we cannot pass on a responsible society to the next generation. It is now necessary for the entire nation to tackle this together."
+    38→    ],
+    39→    questions: [
+    40→      {
+    41→        q: "What does the passage predict about Japan's population in fifty years?",
+    42→        choices: ["It will increase beyond 100 million", "It will fall below 100 million", "It will stabilize at current levels", "It will double due to immigration"],
+    43→        answerIndex: 1,
+    44→        explanation: "The passage predicts the total population will fall below one hundred million in fifty years (一億人を割り込むと予測されている)."
+    45→      },
+    46→      {
+    47→        q: "What is deeply involved in the background of the declining birthrate?",
+    48→        choices: ["Cultural changes in marriage customs", "Economic insecurity among young people", "Government restrictions on childbirth", "A shortage of housing"],
+    49→        answerIndex: 1,
+    50→        explanation: "Economic insecurity is deeply involved in the background of the declining birthrate (経済的な不安が深く関与している)."
+    51→      },
+    52→      {
+    53→        q: "What concerns do some people have about accepting foreign workers?",
+    54→        choices: ["They fear wage inflation", "They worry about cultural friction and integration difficulty", "They believe immigrants will not pay taxes", "They think foreign workers lack skills"],
+    55→        answerIndex: 1,
+    56→        explanation: "Some are concerned about cultural friction and the difficulty of social integration (文化摩擦や社会統合の困難を懸念する向きもある)."
+    57→      },
+    58→      {
+    59→        q: "What are 'marginal communities' (限界集落)?",
+    60→        choices: ["Areas with no internet access", "Areas where more than half of residents are over 65", "Areas with high crime rates", "Areas abandoned by the government"],
+    61→        answerIndex: 1,
+    62→        explanation: "Marginal communities are defined as areas where more than half the residents are over 65 (住民の半数以上が六十五歳を超える地域)."
+    63→      },
+    64→      {
+    65→        q: "What does the author conclude about government subsidy policy?",
+    66→        choices: ["It alone provides a fundamental solution", "It is sufficient without further reform", "Merely injecting subsidies will not lead to a fundamental solution", "It should be expanded to cover all families"],
+    67→        answerIndex: 2,
+    68→        explanation: "As long as it only injects subsidies, it will not lead to a fundamental solution (補助金を投入する限りでは根本的な解決には至らない)."
+    69→      }
+    70→    ]
+    71→  },
+    72→
+    73→  // ───────────────────────────────────────────────────────────
+    74→  // r-n2-02 — The future of AI and employment
+    75→  // ───────────────────────────────────────────────────────────
+    76→  {
+    77→    id: "r-n2-02",
+    78→    title: "人工[じんこう]知能[ちのう]と雇用[こよう]の未来[みらい]",
+    79→    titleReading: "じんこうちのうとこようのみらい",
+    80→    level: "N2",
+    81→    summary: "An analysis of how AI is transforming the labor market, the jobs at risk versus those that remain human, the necessity of lifelong learning, and the ethical and inequality challenges posed by automation.",
+    82→    estMinutes: 11,
+    83→    tags: ["AI", "employment", "technology", "inequality"],
+    84→    body: [
+    85→      "人工[じんこう]知能[ちのう]の急速[きゅうそく]な進展[しんてん]は、雇用[こよう]のあり方[かた]に根本的[こんぽんてき]な変革[へんかく]をもたらしている。機械学習[きかいがくしゅう]や自然[しぜん]言語[げんご]処理[しょり]の技術[ぎじゅつ]が飛躍的[ひやくてき]に向上[こうじょう]するにつれ、かつて人間[にんげん]にしか不可能[ふかのう]と考[かんが]えられていた業務[ぎょうむ]までも自動化[じどうか]されつつある。",
+    86→      "実際[じっさい]、製造業[せいぞうぎょう]のみならず、財務[ざいむ]や法務[ほうむ]といった専門[せんもん]業務[ぎょうむ]の一部[いちぶ]もAIに取[と]って代[かわ]わられつつある。定型[ていけい]的[てき]なデータ処理[しょり]や分析[ぶんせき]において、AIは人間[にんげん]を凌駕[りょうが]する精度[せいど]と速度[そくど]を誇[ほこ]る。このまま進[すす]めば、多[おお]くの職種[しょくしゅ]が消滅[しょうめつ]の危機[きき]に瀕[ひん]するに違[ちが]いない。",
+    87→      "しかしながら、AIが代替[だいたい]できない領域[りょういき]も依然[いぜん]として存在[そんざい]する。創造的[そうぞうてき]な活動[かつどう]、複雑[ふくざつ]な人間関係[にんげんかんけい]を要[よう]する交渉[こうしょう]、あるいは深[ふか]い共感[きょうかん]を伴[ともな]う介護[かいご]や教育[きょういく]の現場[げんば]は、人間[にんげん]ならではの領域[りょういき]と言[い]える。技術[ぎじゅつ]が進歩[しんぽ]する限[かぎ]り、むしろそうした領域[りょういき]の重要性[じゅうようせい]は増[ま]す一方[いっぽう]である。人間[にんげん]にしかできない仕事[しごと]が残[のこ]されているうちに、その価値[かち]を見直[みなお]すべきである。",
+    88→      "したがって、労働者[ろうどうしゃ]には継続的[けいぞくてき]なスキルの更新[こうしん]が求[もと]められる。一度[いちど]身[み]につけた知識[ちしき]で済[す]ませる時代[じだい]は終[お]わり、生涯[しょうがい]学習[がくしゅう]を前提[ぜんてい]とした職業[しょくぎょう]観[かん]の確立[かくりつ]が急務[きゅうむ]となっている。企業[きぎょう]側[がわ]も、従業員[じゅうぎょういん]の再教育[さいきょういく]に投資[とうし]しなければ、優秀[ゆうしゅう]な人材[じんざい]の流出[りゅうしゅつ]を招[まね]きかねない。",
+    89→      "他方[たほう]で、技術[ぎじゅつ]革新[かくしん]がもたらす恩恵[おんけい]が平等[びょうどう]に分配[ぶんぱい]されるとは限[かぎ]らない。AIを活用[かつよう]できる者[もの]とそうでない者[もの]との間[あいだ]に、経済的[けいざいてき]格差[かくさ]が拡大[かくだい]する懸念[けねん]がある。この格差[かくさ]を放置[ほうち]すれば、社会[しゃかい]分断[ぶんだん]を引[ひ]き起[お]こしかねない。",
+    90→      "倫理的[りんりてき]な問題[もんだい]も看過[かんか]できない。AIの判断[はんだん]に潜[ひそ]む偏見[へんけん]や、プライバシーの侵害[しんがい]、責任[せきにん]の所在[しょざい]の不明確[ふめいかく]化[か]など、解決[かいけつ]すべき課題[かだい]は山積[やまづ]みだ。技術[ぎじゅつ]の発展[はってん]が倫理的[りんりてき]考察[こうさつ]に先[せん]行[こう]するあまり、予期[よき]せぬ事態[じたい]を招[まね]く事例[じれい]も既[すで]に報告[ほうこく]されている。",
+    91→      "結局[けっきょく]のところ、AIと人間[にんげん]の共存[きょうぞん]を実現[じつげん]するには、技術[ぎじゅつ]の進歩[しんぽ]と社会[しゃかい]制度[せいど]の整備[せいび]を同時[どうじ]に進[すす]める必要[ひつよう]がある。雇用[こよう]の未来[みらい]を悲観[ひかん]するだけではなく、新[あら]たな可能性[かのうせい]を探[さぐ]る視点[してん]を持[も]つことが、これからの社会[しゃかい]を生[い]き抜[ぬ]く鍵[かぎ]となるに違[ちが]いない。"
+    92→    ],
+    93→    translation: [
+    94→      "The rapid development of artificial intelligence is bringing fundamental change to the nature of employment. As technologies such as machine learning and natural language processing advance dramatically, tasks once thought to be impossible for anyone but humans are being automated.",
+    95→      "In fact, not only the manufacturing industry but also parts of specialized work such as finance and legal affairs are being replaced by AI. In routine data processing and analysis, AI boasts accuracy and speed surpassing humans. If this continues, many occupations will undoubtedly face the crisis of extinction.",
+    96→      "Nevertheless, areas that AI cannot replace still exist. Creative activities, negotiations requiring complex human relationships, or care and education settings involving deep empathy can be called uniquely human domains. As long as technology progresses, the importance of such areas will only increase. While work that only humans can do still remains, its value should be reassessed.",
+    97→      "Therefore, workers are required to continuously update their skills. The era of settling with knowledge acquired once is over, and establishing a career perspective premised on lifelong learning has become an urgent task. If companies do not invest in re-educating employees, they may risk losing excellent talent.",
+    98→      "On the other hand, the benefits brought by technological innovation are not necessarily equally distributed. There is concern that economic disparity will widen between those who can use AI and those who cannot. If this disparity is left unaddressed, it could cause social division.",
+    99→      "Ethical issues cannot be overlooked either. Problems such as bias hidden in AI judgments, privacy infringement, and the unclear location of responsibility are piling up to be solved. Due to technological development preceding ethical consideration, cases of unexpected situations have already been reported.",
+   100→      "Ultimately, to realize the coexistence of AI and humans, it is necessary to advance technological progress and social system development simultaneously. Rather than merely being pessimistic about the future of employment, having the perspective to explore new possibilities will undoubtedly be the key to surviving in the society to come."
+   101→    ],
+   102→    questions: [
+   103→      {
+   104→        q: "According to the passage, what is happening to tasks once thought impossible for anyone but humans?",
+   105→        choices: ["They remain exclusively human", "They are being automated", "They have become illegal", "They require government approval"],
+   106→        answerIndex: 1,
+   107→        explanation: "Tasks once thought impossible for anyone but humans are being automated (自動化されつつある)."
+   108→      },
+   109→      {
+   110→        q: "In what areas does AI surpass humans according to the passage?",
+   111→        choices: ["Creative activities and empathy", "Negotiations and education", "Routine data processing and analysis", "Care and human relationships"],
+   112→        answerIndex: 2,
+   113→        explanation: "In routine data processing and analysis, AI boasts accuracy and speed surpassing humans (定型的なデータ処理や分析においてAIは人間を凌駕する)."
+   114→      },
+   115→      {
+   116→        q: "What is now required of workers?",
+   117→        choices: ["Switching jobs every five years", "Continuous skill updating and lifelong learning", "Refusing to use AI tools", "Returning to manual labor"],
+   118→        answerIndex: 1,
+   119→        explanation: "Workers are required to continuously update their skills, and establishing a career premised on lifelong learning is an urgent task (継続的なスキルの更新が求められる、生涯学習を前提とした職業観の確立が急務)."
+   120→      },
+   121→      {
+   122→        q: "What concern does the author raise about AI's benefits?",
+   123→        choices: ["They are taxed too heavily", "They may not be equally distributed, widening economic disparity", "They cause environmental damage", "They reduce creativity"],
+   124→        answerIndex: 1,
+   125→        explanation: "The benefits of technological innovation are not necessarily equally distributed, and economic disparity may widen between those who can use AI and those who cannot (恩恵が平等に分配されるとは限らない、経済的格差が拡大する懸念)."
+   126→      },
+   127→      {
+   128→        q: "What does the author say is necessary to realize AI-human coexistence?",
+   129→        choices: ["Halting AI development entirely", "Advancing technology and social system development simultaneously", "Prioritizing economic growth over ethics", "Replacing all human workers with AI"],
+   130→        answerIndex: 1,
+   131→        explanation: "To realize coexistence, it is necessary to advance technological progress and social system development simultaneously (技術の進歩と社会制度の整備を同時に進める必要がある)."
+   132→      }
+   133→    ]
+   134→  },
+   135→
+   136→  // ───────────────────────────────────────────────────────────
+   137→  // r-n2-03 — Climate policy debates
+   138→  // ───────────────────────────────────────────────────────────
+   139→  {
+   140→    id: "r-n2-03",
+   141→    title: "気候[きこう]政策[せいさく]を巡[めぐ]る論争[ろんそう]",
+   142→    titleReading: "きこうせいさくをめぐるろんそう",
+   143→    level: "N2",
+   144→    summary: "An overview of debates surrounding climate policy in Japan, including the 2050 carbon neutrality goal, the tension between growth and environment, nuclear energy, carbon taxation, and intergenerational justice.",
+   145→    estMinutes: 12,
+   146→    tags: ["climate", "energy policy", "carbon neutrality", "environment"],
+   147→    body: [
+   148→      "地球[ちきゅう]温暖化[おんだんか]への対処[たいしょ]は、現代[げんだい]社会[しゃかい]が直面[ちょくめん]する最[もっと]も重大[じゅうだい]な課題[かだい]の一[ひと]つである。パリ協定[きょうてい]の締結[ていけつ]以降[いこう]、各国[かっこく]は温室[おんしつ]効果[こうか]ガスの削減[さくげん]目標[もくひょう]を設定[せってい]し、脱[だつ]炭素[たんそ]社会[しゃかい]の実現[じつげん]に向[む]けて歩[ある]みを進[すす]めている。しかしながら、その道筋[みすじ]は決[けっ]して平坦[へいたん]なものではない。",
+   149→      "日本[にほん]政府[せいふ]は2050年[ねん]までに温室[おんしつ]効果[こうか]ガスの排出[はいしゅつ]をゼロにする目標[もくひょう]を掲[かか]げた。これは野心的[やしんてき]な目標[もくひょう]であると同時[どうじ]に、産業界[さんぎょうかい]に多大[ただい]な影響[えいきょう]を及[およ]ぼすものでもある。エネルギー転換[てんかん]を始[はじ]めとする構造[こうぞう]改革[かいかく]は、既存[きぞん]の産業[さんぎょう]モデルを根本[こんぽん]から問[と]い直[なお]すものである。",
+   150→      "経済[けいざい]成長[せいちょう]と環境[かんきょう]保護[ほご]の両立[りょうりつ]は、長年[ながねん]の難題[なんだい]とされてきた。環境[かんきょう]規制[きせい]を強化[きょうか]すれば産業[さんぎょう]の競争力[きょうそうりょく]が低下[ていか]する恐[おそ]れがあり、逆[ぎゃく]に経済[けいざい]を優先[ゆうせん]すれば気候[きこう]目標[もくひょう]の達成[たっせい]が遠[とお]のくというジレンマに陥[おちい]りがちである。",
+   151→      "特[とく]に原子力[げんしりょく]発電[はつでん]の取扱[とりあつか]いは、政策[せいさく]論争[ろんそう]の焦点[しょうてん]となっている。福島[ふくしま]の事故[じこ]を経[へ]て安全[あんぜん]性[せい]への懸念[けねん]が高[たか]まる中[なか]、再[さい]稼働[かどう]のペースは遅[おそ]い。一方[いっぽう]で、再[さい]生[せい]可能[かのう]エネルギーだけでは安定[あんてい]供給[きょうきゅう]を担保[たんぽ]しきれないという指摘[してき]も根強[ねづよ]く、エネルギーミックスの構築[こうちく]は難航[なんこう]を極[きわ]めている。",
+   152→      "炭素[たんそ]税[ぜい]の導入[どうにゅう]と価格[かかく]設定[せってい]も議論[ぎろん]的[てき]である。排出[はいしゅつ]量[りょう]に応[おう]じた費用[ひよう]負担[ふたん]は理論上[りろんじょう]有効[ゆうこう]だが、低[てい]所得[しょとく]者[しゃ]への影響[えいきょう]を緩和[かんわ]する仕組[しく]みがなければ、逆[ぎゃく]進[しん]的[てき]な税制[ぜいせい]になりかねない。",
+   153→      "国際的[こくさいてき]な連携[れんけい]も不可欠[ふかけつ]である。先進国[せんしんこく]が歴史的[れきしてき]に多[おお]く排出[はいしゅつ]してきた事実[じじつ]を踏[ふ]まえれば、発展[はってん]途上[とじょう]国[こく]に対[たい]する資金[しきん]・技術[ぎじゅつ]支援[しえん]は道義的[どうぎてき]義務[ぎむ]にほかならない。しかし、各国[かっこく]の利害[りがい]が錯綜[さくそう]するなか、合意[ごうい]形成[けいせい]は困難[こんなん]を極[きわ]めている。",
+   154→      "若者[わかもの]の気候[きこう]運動[うんどう]も看過[かんか]できない存在[そんざい]となっている。世代間[せだいかん]の公正[こうせい]という観点[かんてん]から、現[げん]世代[せだい]が未来[みらい]世代[せだい]の環境[かんきょう]を搾取[さくしゅ]しているという批判[ひはん]が強[つよ]まっている。気候[きこう]政策[せいさく]の行方[ゆくえ]は、私[わたし]たちが次[つぎ]世代[せだい]にどのような社会[しゃかい]を残[のこ]すかに直結[ちょっけつ]する問[とい]いである。"
+   155→    ],
+   156→    translation: [
+   157→      "Addressing global warming is one of the most serious challenges modern society faces. Since the conclusion of the Paris Agreement, countries have set greenhouse gas reduction targets and are moving toward realizing a decarbonized society. However, the path is by no means smooth.",
+   158→      "The Japanese government set a goal of reducing greenhouse gas emissions to zero by 2050. This is an ambitious goal and at the same time one that will have a tremendous impact on the industrial world. Structural reforms beginning with energy transition fundamentally question the existing industrial model.",
+   159→      "Balancing economic growth and environmental protection has been considered a long-standing difficult problem. If environmental regulations are strengthened, there is a risk of declining industrial competitiveness, and conversely, if the economy is prioritized, achieving climate goals tends to drift away — a dilemma we are prone to fall into.",
+   160→      "In particular, the handling of nuclear power generation has become the focus of policy debate. Amid growing safety concerns following the Fukushima accident, the pace of restarts has been slow. On the other hand, the argument that stable supply cannot be guaranteed by renewable energy alone persists, and constructing an energy mix is proving extremely difficult.",
+   161→      "The introduction and pricing of a carbon tax are also subjects of debate. Cost burdens according to emission amounts are theoretically effective, but without a mechanism to mitigate the impact on low-income earners, it could become a regressive tax system.",
+   162→      "International cooperation is also indispensable. Given the fact that developed countries have historically emitted much, financial and technological support for developing countries is nothing but a moral obligation. However, with the interests of various countries intricately intertwined, forming consensus is extremely difficult.",
+   163→      "Youth climate movements have also become a presence that cannot be overlooked. From the perspective of intergenerational justice, the criticism that the current generation is exploiting the environment of future generations is growing stronger. The direction of climate policy is a question directly tied to what kind of society we leave to the next generation."
+   164→    ],
+   165→    questions: [
+   166→      {
+   167→        q: "What goal did the Japanese government set for 2050?",
+   168→        choices: ["Doubling GDP growth", "Reducing greenhouse gas emissions to zero", "Expanding nuclear power to 50%", "Achieving full energy independence"],
+   169→        answerIndex: 1,
+   170→        explanation: "The Japanese government set a goal of reducing greenhouse gas emissions to zero by 2050 (二〇五〇年までに温室効果ガスの排出をゼロにする目標を掲げた)."
+   171→      },
+   172→      {
+   173→        q: "What is the long-standing dilemma in balancing economic growth and environment?",
+   174→        choices: ["Stronger regulation lowers competitiveness, but prioritizing economy delays climate goals", "Environmental protection always increases profits", "Economic growth has no environmental impact", "Regulation has no effect on competitiveness"],
+   175→        answerIndex: 0,
+   176→        explanation: "Strengthening environmental regulation risks declining industrial competitiveness, while prioritizing the economy makes climate goals recede — a dilemma we tend to fall into (規制を強化すれば競争力が低下し、経済を優先すれば目標が遠のくというジレンマ)."
+   177→      },
+   178→      {
+   179→        q: "Why is the pace of nuclear reactor restarts slow?",
+   180→        choices: ["Due to lack of fuel", "Due to growing safety concerns after Fukushima", "Due to worker shortages", "Due to international sanctions"],
+   181→        answerIndex: 1,
+   182→        explanation: "Amid growing safety concerns following the Fukushima accident, the pace of restarts has been slow (福島の事故を経て安全性への懸念が高まる中、再稼働のペースは遅い)."
+   183→      },
+   184→      {
+   185→        q: "What risk does a carbon tax pose without mitigation measures?",
+   186→        choices: ["It could become a progressive tax system", "It could become a regressive tax system", "It could eliminate all emissions", "It would have no effect"],
+   187→        answerIndex: 1,
+   188→        explanation: "Without a mechanism to mitigate the impact on low-income earners, it could become a regressive tax system (緩和する仕組みがなければ逆進的な税制になりかねない)."
+   189→      },
+   190→      {
+   191→        q: "What is the criticism from the perspective of intergenerational justice?",
+   192→        choices: ["That youth do not understand economics", "That the current generation is exploiting the environment of future generations", "That future generations are too demanding", "That climate movements are ineffective"],
+   193→        answerIndex: 1,
+   194→        explanation: "From the perspective of intergenerational justice, the criticism is that the current generation is exploiting the environment of future generations (現世代が未来世代の環境を搾取しているという批判)."
+   195→      }
+   196→    ]
+   197→  },
+   198→
+   199→  // ───────────────────────────────────────────────────────────
+   200→  // r-n2-04 — The decline of rural communities
+   201→  // ───────────────────────────────────────────────────────────
+   202→  {
+   203→    id: "r-n2-04",
+   204→    title: "地方[ちほう]消滅[しょうめつ]という危機[きき]",
+   205→    titleReading: "ちほうしょうめつというきき",
+   206→    level: "N2",
+   207→    summary: "An exploration of Japan's rural decline, the collapse of local industries and infrastructure, agricultural succession crises, the limits of revitalization policy, and the cultural loss that accompanies regional extinction.",
+   208→    estMinutes: 9,
+   209→    tags: ["rural decline", "regional revitalization", "agriculture", "culture"],
+   210→    body: [
+   211→      "日本[にほん]における過密[かみつ]と過疎[かそ]の二極化[にきょくか]は、近年[きんねん]ますます顕著[けんちょ]になっている。東京[とうきょう]圏[けん]への人[ひと]と経済[けいざい]の集中[しゅうちゅう]が続[つづ]く余[あま]り、地方[ちほう]では人口[じんこう]減少[げんしょう]と産業[さんぎょう]衰退[すいたい]が同時[どうじ]に進行[しんこう]している。「地方[ちほう]消滅[しょうめつ]」という言葉[ことば]が衝撃[しょうげき]を持[も]って受[う]け止[と]められたのは、決[けっ]して偶然[ぐうぜん]ではない。",
+   212→      "地方[ちほう]を支[ささ]えてきた地場[じば]産業[さんぎょう]は、グローバル化[か]の波[なみ]に飲[の]まれ、軒並[のきなみ]み衰退[すいたい]の道[みち]をたどっている。かつて活況[かっきょう]を呈[てい]していた商店街[しょうてんがい]は今[いま]や空店舗[あきてんぽ]が目立[めだ]ち、地域[ちいき]経済[けいざい]の血液[けつえき]である循環[じゅんかん]が滞[とどこお]っている。地元[じもと]企業[きぎょう]が衰退[すいたい]すれば、雇用[こよう]の喪失[そうしつ]につながるのは言[い]うまでもない。",
+   213→      "人口[じんこう]減少[げんしょう]はインフラの維持[いじ]にも深刻[しんこく]な影響[えいきょう]を及[およ]ぼしている。公共[こうきょう]交通[こうつう]機関[きかん]の赤字[あかじ]路線[ろせん]は次[つぎ]々と廃止[はいし]され、医療[いりょう]機関[きかん]や学校[がっこう]の統廃合[とうはいごう]も加速[かそく]している。住民[じゅうみん]が日常[にちじょう]生活[せいかつ]を営[いとな]むうえで不可欠[ふかけつ]なサービスが失[うしな]われていく状況[じょうきょう]は、地域[ちいき]社会[しゃかい]の存立[そんりつ]そのものを揺[ゆ]るがす。",
+   214→      "農業[のうぎょう]の後継者[こうけいしゃ]不足[ぶそく]も食[しょく]料[りょう]安全[あんぜん]保障[ほしょう]の観点[かんてん]から看過[かんか]できない。農業[のうぎょう]就業[しゅうぎょう]人口[じんこう]の高齢化[こうれいか]が進[すす]む中[なか]、耕作[こうさく]放棄[ほうき]地[ち]は全国[ぜんこく]で拡大[かくだい]の一途[いっと]をたどっている。国内[こくない]で食[た]べ物[もの]を生産[せいさん]する力[ちから]が低下[ていか]すれば、輸入[ゆにゅう]依存度[いぞんど]が高[たか]まるあまり、国際[こくさい]情勢[じょうせい]の変化[へんか]に翻弄[ほんろう]されかねない。",
+   215→      "政府[せいふ]行政[ぎょうせい]は「地方[ちほう]創生[そうせい]」を掲[かか]げ、地域[ちいき]おこし協力[きょうりょく]隊員[たいいん]制度[せいど]や移住[いじゅう]支援[しえん]策[さく]を推進[すいしん]している。しかし、こうした取[と]り組[く]みが地域[ちいき]全体[ぜんたい]に波及[はきゅう]効果[こうか]を及[およ]ぼすには至[いた]っていない。一[いち]部[ぶ]の成功[せいこう]事例[じれい]は注目[ちゅうもく]を集[あつ]めるものの、全体[ぜんたい]としては焼石[やきいし]に水[みず]の感[かん]が否[いな]めない。",
+   216→      "コロナ禍[か]を契機[けいき]に、テレワークの普及[ふきゅう]が地方[ちほう]移住[いじゅう]を促[うなが]す一因[いちいん]ともなった。都市[とし]の住[す]まいに限[かぎ]を感[かん]じる人[ひと]が、自然[しぜん]豊[ゆた]かな地方[ちほう]での生活[せいかつ]を選択[せんたく]する動[うご]きは歓迎[かんげい]すべきである。ただし、そうした移住[いじゅう]が定着[ていちゃく]するか否[いな]かは、受入[うけいれ]側[がわ]の態勢[たいせい]次第[しだい]である。",
+   217→      "地方[ちほう]の衰退[すいたい]は、単[たん]なる経済的[けいざいてき]問題[もんだい]にとどまらない。地域[ちいき]固有[こゆう]の文化[ぶんか]や祭[まつ]り、方言[ほうげん]など、長年[ながねん]育[はぐく]まれてきた無形[むけい]の資産[しさん]が失[うしな]われつつある。地域[ちいき]のアイデンティティが失[うしな]われることは、国家[こっか]の文化[ぶんか]的[てき]多様性[たようせい]の縮小[しゅくしょう]を意味[いみ]する。地方[ちほう]の再生[さいせい]なくして、日本[にほん]の将来[しょうらい]もまた望[のぞ]み得[う]ないと言[い]える。"
+   218→    ],
+   219→    translation: [
+   220→      "The polarization of overconcentration and depopulation in Japan has become increasingly pronounced in recent years. As people and the economy continue to concentrate in the Tokyo metropolitan area, population decline and industrial decline progress simultaneously in rural areas. It is no coincidence that the phrase regional extinction was received with shock.",
+   221→      "Local industries that supported rural areas have been swallowed by the wave of globalization and are almost universally following the path of decline. Shopping streets that once bustled with activity now stand out with empty stores, and the circulation that is the blood of the local economy has stagnated. It goes without saying that if local companies decline, it leads to loss of employment.",
+   222→      "Population decline also has a serious impact on infrastructure maintenance. Deficit routes of public transportation are being abolished one after another, and the consolidation and abolition of medical institutions and schools are accelerating. The situation where services essential for residents to lead daily life are being lost shakes the very existence of local communities.",
+   223→      "The shortage of successors in agriculture also cannot be overlooked from the perspective of food security. As the aging of the agricultural working population progresses, abandoned cultivated land is steadily expanding nationwide. If the capacity to produce food domestically declines, the high dependence on imports means we may be at the mercy of changes in the international situation.",
+   224→      "The government administration has proclaimed regional revitalization and is promoting systems such as regional revitalization cooperators and migration support measures. However, these efforts have not yet spread effects throughout the regions. While some success stories attract attention, overall the effect cannot be denied to be like water on a hot stone.",
+   225→      "Triggered by the COVID pandemic, the spread of telework also became a factor prompting migration to rural areas. The movement of people who feel limitations in urban living choosing to live in rural areas rich in nature is to be welcomed. However, whether such migration takes root depends on the preparedness of the receiving side.",
+   226→      "The decline of rural areas is not merely an economic problem. Intangible assets nurtured over many years — such as culture, festivals, and dialects unique to regions — are being lost. The loss of regional identity means the shrinking of the nation's cultural diversity. It can be said that without the revitalization of rural areas, there is no hope for Japan's future either."
+   227→    ],
+   228→    questions: [
+   229→      {
+   230→        q: "What is happening simultaneously in rural areas according to the passage?",
+   231→        choices: ["Population growth and industrial expansion", "Population decline and industrial decline", "Economic boom and cultural revival", "Immigration and urbanization"],
+   232→        answerIndex: 1,
+   233→        explanation: "In rural areas, population decline and industrial decline progress simultaneously (人口減少と産業衰退が同時に進行している)."
+   234→      },
+   235→      {
+   236→        q: "What happens if local companies decline?",
+   237→        choices: ["It leads to loss of employment", "It attracts foreign investment", "It improves the local economy", "It has no significant effect"],
+   238→        answerIndex: 0,
+   239→        explanation: "If local companies decline, it leads to loss of employment (雇用の喪失につながるのは言うまでもない)."
+   240→      },
+   241→      {
+   242→        q: "Why can agricultural decline not be overlooked?",
+   243→        choices: ["It is a food security concern", "It only affects elderly farmers", "It has no economic impact", "It is offset by imports automatically"],
+   244→        answerIndex: 0,
+   245→        explanation: "The shortage of agricultural successors cannot be overlooked from the perspective of food security (食料安全保障の観点から看過できない)."
+   246→      },
+   247→      {
+   248→        q: "What does the author say about regional revitalization efforts overall?",
+   249→        choices: ["They have transformed all regions", "They are like water on a hot stone — insufficient overall", "They have completely failed", "They exceed expectations"],
+   250→        answerIndex: 1,
+   251→        explanation: "While some success stories attract attention, overall the effect cannot be denied to be like water on a hot stone (焼石に水の感が否めない)."
+   252→      },
+   253→      {
+   254→        q: "What is lost with the loss of regional identity?",
+   255→        choices: ["Only economic output", "The nation's cultural diversity shrinks", "Only agricultural knowledge", "Nothing of significance"],
+   256→        answerIndex: 1,
+   257→        explanation: "The loss of regional identity means the shrinking of the nation's cultural diversity (国家の文化的多様性の縮小を意味する)."
+   258→      }
+   259→    ]
+   260→  },
+   261→
+   262→  // ───────────────────────────────────────────────────────────
+   263→  // r-n2-05 — Education inequality
+   264→  // ───────────────────────────────────────────────────────────
+   265→  {
+   266→    id: "r-n2-05",
+   267→    title: "教育[きょういく]格差[かくさ]という深刻[しんこく]な問題[もんだい]",
+   268→    titleReading: "きょういくかくさというしんこくなもんだい",
+   269→    level: "N2",
+   270→    summary: "An analysis of how household income shapes educational outcomes in Japan, the role of cram schools and the digital divide, the reproduction of class through higher education, and the need for systemic reform to break the poverty cycle.",
+   271→    estMinutes: 10,
+   272→    tags: ["education", "inequality", "poverty", "social mobility"],
+   273→    body: [
+   274→      "教育[きょういく]はかつて、社会[しゃかい]階層[かいそう]を越[こ]えるための最良[さいりょう]の手段[しゅだん]と信[しん]じられてきた。誰[だれ]もが努力[どりょく]次第[しだい]で出世[しゅっせ]できるという「機会[きかい]の平等[びょうどう]」は、戦後[せんご]日本[にほん]社会[しゃかい]の根幹[こんかん]を成[な]す理念[りねん]であった。しかし今日[こんにち]、その理念[りねん]は現実[げんじつ]とかけ離[はな]れたものになりつつある。",
+   275→      "学力[がくりょく]と家庭[かてい]の経済力[けいざいりょく]との間[あいだ]には、無視[むし]できない相関[そうかん]関係[かんけい]が存在[そんざい]する。所得[しょとく]格差[かくさ]が拡大[かくだい]するなか、教育[きょういく]投資[とうし]の格差[かくさ]もまた拡大[かくだい]の一途[いっと]をたどっている。貧困[ひんこん]の連鎖[れんさ]を断[た]ち切[き]るための教育[きょういく]が、逆[ぎゃく]に格差[かくさ]を固定[こてい]化[か]する装置[そうち]と化[か]しているという指摘[してき]は看過[かんか]できない。",
+   276→      "学習塾[がくしゅうじゅく]への通塾[つうじゅう]率[りつ]は、家庭[かてい]の収入[しゅうにゅう]水準[すいじゅん]に大[おお]きく依存[いぞん]する。経済的[けいざいてき]に余裕[よゆう]のある家庭[かてい]の子[こ]どもは、早期[そうき]から多額[たがく]の教育[きょういく]投資[とうし]を受[う]ける一方[いっぽう]で、そうでない家庭[かてい]の子[こ]どもは学校[がっこう]教育[きょういく]のみに頼[たよ]らざるを得[え]ない。この差[さ]は、年齢[ねんれい]を重[かさ]ねるごとに拡大[かくだい]していく。",
+   277→      "情報[じょうほう]格差[かくさ]、いわゆるデジタル・ディバイドも新[あら]たな問題[もんだい]となっている。オンライン学習[がくしゅう]の資源[しげん]を活用[かつよう]できる環境[かんきょう]にある子[こ]どもと、端末[たんまつ]や通信[つうしん]環境[かんきょう]に恵[めぐ]まれない子[こ]どもとの間[あいだ]で、学習[がくしゅう]機会[きかい]の格差[かくさ]が一段[いちだん]と広[ひろ]がっている。この格差[かくさ]が固定化[こていか]しないうちに、早急[そうきゅう]に対策[たいさく]を講[こう]じる必要[ひつよう]がある。",
+   278→      "高等[こうとう]教育[きょういく]段階[だんかい]になると、問題[もんだい]はさらに深刻化[しんこくか]する。大学[だいがく]進学[しんがく]率[りつ]は家庭[かてい]の所得[しょとく]と強[つよ]い相関[そうかん]を示[しめ]し、親[おや]の学歴[がくれき]が子[こ]の学歴[がくれき]を規定[きてい]する傾向[けいこう]が強[つよ]まっている。社会[しゃかい]移動[いどう]の手段[しゅだん]としての教育[きょういく]が機能[きのう]しなくなれば、階層[かいそう]の固定化[こていか]は避[さ]けられない。",
+   279→      "子[こ]どもの貧困[ひんこん]は、単[たん]なる経済的[けいざいてき]匱乏[きふく]にとどまらない。進学[しんがく]の断念[だんねん]や自尊[じそん]感情[かんじょう]の低下[ていか]、将来[しょうらい]への希望[きぼう]の喪失[そうしつ]など、心理的[しんりてき]な影響[えいきょう]も甚大[じんだい]である。貧困[ひんこん]の連鎖[れんさ]を断[た]ち切[き]るためには、経済的[けいざいてき]支援[しえん]のみならず、心理的[しんりてき]支援[しえん]を含[ふく]めた総合的[そうごうてき]な施策[しさく]が求[もと]められる。",
+   280→      "教育[きょういく]の機会[きかい]均等[きんとう]を真[しん]に実現[じつげん]するには、公教育[こうきょういく]の質[しつ]向上[こうじょう]と、家庭[かてい]背景[はいけい]にかかわらず全[ぜん]子[こ]どもに十[じゅう]分[ぶん]な学習[がくしゅう]機会[きかい]を保障[ほしょう]する制度[せいど]設計[せっけい]が不可欠[ふかけつ]である。格差[かくさ]の再生産[さいせいさん]を防[ふせ]ぐ教育[きょういく]制度[せいど]の構築[こうちく]こそが、持続可能[じぞくかのう]な社会[しゃかい]の基盤[きばん]を成[な]すものに違[ちが]いない。"
+   281→    ],
+   282→    translation: [
+   283→      "Education was once believed to be the best means to transcend social class. Equality of opportunity, in which anyone can succeed depending on effort, was a principle forming the foundation of postwar Japanese society. However, today that principle is becoming far removed from reality.",
+   284→      "There is an undeniable correlation between academic ability and household economic power. As income disparity widens, the disparity in educational investment is also steadily widening. The criticism that education, which should break the chain of poverty, has instead become a mechanism that fixes disparity cannot be overlooked.",
+   285→      "The rate of attending cram schools depends heavily on household income level. While children from economically comfortable families receive large educational investments from an early age, children from other families have no choice but to rely solely on school education. This gap expands as they grow older.",
+   286→      "Information disparity, the so-called digital divide, has also become a new problem. Between children in environments where they can utilize online learning resources and children not blessed with devices or communication environments, the gap in learning opportunities is widening even further. Before this gap becomes fixed, urgent countermeasures must be taken.",
+   287→      "At the higher education stage, the problem becomes even more serious. The university advancement rate shows a strong correlation with household income, and the tendency for parents' educational background to determine children's educational background is growing stronger. If education ceases to function as a means of social mobility, the fixing of class is unavoidable.",
+   288→      "Child poverty is not merely economic deprivation. The psychological impacts are also tremendous, including giving up on advancing to higher education, lowered self-esteem, and loss of hope for the future. To break the chain of poverty, comprehensive measures including psychological support as well as economic support are required.",
+   289→      "To truly realize equal opportunity in education, improving the quality of public education and designing a system that guarantees sufficient learning opportunities to all children regardless of family background are indispensable. Constructing an educational system that prevents the reproduction of disparity is undoubtedly what forms the foundation of a sustainable society."
+   290→    ],
+   291→    questions: [
+   292→      {
+   293→        q: "What was education once believed to be?",
+   294→        choices: ["A burden on the state", "The best means to transcend social class", "A privilege for the wealthy", "An unnecessary institution"],
+   295→        answerIndex: 1,
+   296→        explanation: "Education was once believed to be the best means to transcend social class (社会階層を越えるための最良の手段と信じられてきた)."
+   297→      },
+   298→      {
+   299→        q: "What correlation exists between academic ability and household economics?",
+   300→        choices: ["There is no correlation", "There is an undeniable correlation", "Poorer families have higher academic ability", "Wealth has no effect on education"],
+   301→        answerIndex: 1,
+   302→        explanation: "There is an undeniable correlation between academic ability and household economic power (学力と家庭の経済力との間には無視できない相関関係が存在する)."
+   303→      },
+   304→      {
+   305→        q: "What does cram school attendance depend on heavily?",
+   306→        choices: ["Student motivation alone", "Household income level", "School recommendations", "Geographic location only"],
+   307→        answerIndex: 1,
+   308→        explanation: "The rate of attending cram schools depends heavily on household income level (学習塾への通塾率は家庭の収入水準に大きく依存する)."
+   309→      },
+   310→      {
+   311→        q: "What tendency is growing stronger in higher education?",
+   312→        choices: ["Parents' background has no effect on children", "Parents' educational background determines children's educational background", "University advancement is declining for all", "All students receive equal funding"],
+   313→        answerIndex: 1,
+   314→        explanation: "The tendency for parents' educational background to determine children's educational background is growing stronger (親の学歴が子の学歴を規定する傾向が強まっている)."
+   315→      },
+   316→      {
+   317→        q: "What is needed to truly realize equal opportunity in education?",
+   318→        choices: ["Privatizing all schools", "Improving public education quality and guaranteeing learning opportunities regardless of background", "Eliminating cram schools entirely", "Making university free for everyone only"],
+   319→        answerIndex: 1,
+   320→        explanation: "Improving the quality of public education and designing a system that guarantees sufficient learning opportunities regardless of family background are indispensable (公教育の質向上と家庭背景にかかわらず学習機会を保障する制度設計が不可欠)."
+   321→      }
+   322→    ]
+   323→  },
+   324→
+   325→  // ───────────────────────────────────────────────────────────
+   326→  // r-n2-06 — The #MeToo movement in Japan
+   327→  // ───────────────────────────────────────────────────────────
+   328→  {
+   329→    id: "r-n2-06",
+   330→    title: "日本[にほん]における#MeToo運動[うんどう]の現状[げんじょう]",
+   331→    titleReading: "にほんにおける#MeTooうんどうのげんじょう",
+   332→    level: "N2",
+   333→    summary: "An examination of why the #MeToo movement spread more slowly in Japan than in the West, covering cultural barriers, legal inadequacies, corporate culture, recent signs of change, and the backlash victims face when speaking out.",
+   334→    estMinutes: 9,
+   335→    tags: ["gender", "social movements", "law", "corporate culture"],
+   336→    body: [
+   337→      "セクシュアル・ハラスメントや性的[せいてき]暴行[ぼうこう]の被害[ひがい]を公[おおやけ]にする#MeToo運動[うんどう]は、世界中[せかいじゅう]に波紋[はもん]を広[ひろ]げた。しかし、日本[にほん]における同[どう]運動[うんどう]の広[ひろ]がりは、欧米[おうべい]諸国[しょこく]に比[くら]べ限定的[げんていてき]なものにとどまっている。この乖離[かいり]の背景[はいけい]には、文化的[ぶんかてき]、制度的[せいどてき]な要因[よういん]が複雑[ふくざつ]に絡[から]み合[あ]っている。",
+   338→      "日本[にほん]社会[しゃかい]では、被害[ひがい]を公[おおやけ]にすることへの羞恥心[しゅうちしん]が根強[ねづよ]く存在[そんざい]する。加害者[かがいしゃ]よりも被害[ひがい]者[しゃ]の責任[せきにん]を問[と]うような「被害[ひがい]者[しゃ]非難[ひなん]」の風潮[ふうちょう]も、声[こえ]を上[あ]げることを躊躇[ちゅうちょ]させる要因[よういん]となっている。結果[けっか]として、多[おお]くの被害[ひがい]が闇[やみ]に葬[ほうむ]られたままとなっている。",
+   339→      "法的[ほうてき]な整備[せいび]も十[じゅう]分[ぶん]とは言[い]えない。時効[じこう]が短[みじか]く、被害[ひがい]証明[しょうめい]のハードルが高[たか]い現行[げんこう]の制度[せいど]では、被害[ひがい]者[しゃ]が救済[きゅうさい]を受[う]けることは困難[こんなん]を極[きわ]める。法整備[ほうせいび]の遅[おく]れが、結果[けっか]として加害者[かがいしゃ]の免責[めんせき]を招[まね]いている側面[そくめん]も否[いな]めない。",
+   340→      "企業[きぎょう]文化[ぶんか]も見直[みなお]すべき点[てん]が多[おお]い。依然[いぜん]として男性[だんせい]中心[ちゅうしん]の組織[そしき]構造[こうぞう]が残[のこ]る職場[しょくば]では、権力[けんりょく]勾配[こうばい]を利用[りよう]したハラスメントが潜在化[せんざいか]しやすい。コンプライアンスの形式[けいしき]的[てき]整備[せいび]にとどまらず、組織[そしき]文化[ぶんか]そのものの変革[へんかく]が求[もと]められている。",
+   341→      "ただし、近[きん]年[ねん]は変化[へんか]の兆[きざし]も見[み]られる。SNSを通[つう]じて被害[ひがい]を告発[こくはつ]する女性[じょせい]が増[ふ]えたほか、メディアの報道[ほうどう]姿勢[しせい]も徐[じょ]々に変化[へんか]しつつある。声[こえ]を上[あ]げた被害[ひがい]者[しゃ]に寄[よ]り添[そ]う社会[しゃかい]的[てき]合意[ごうい]が形成[けいせい]されつつあることは、一定[いってい]の進歩[しんぽ]と評価[ひょうか]できる。",
+   342→      "他方[たほう]で、告発[こくはつ]への反発[はんぱつ]や、被害[ひがい]者[しゃ]への二次[にじ]加害[かがい]も後[あと]を絶[た]たない。名[な]指[さ]しによる誹謗[ひぼう]中傷[ちゅうしょう]や、就労[しゅうろう]機会[きかい]の剥奪[はくだつ]など、声[こえ]を上[あ]げた代償[だいしょう]を強[し]いられる事例[じれい]も報告[ほうこく]されている。このような状況[じょうきょう]を放置[ほうち]すれば、運動[うんどう]の萎縮[いしゅく]を招[まね]きかねない。",
+   343→      "性的[せいてき]暴力[ぼうりょく]の根絶[こんぜつ]は、一朝一夕[いっちょういっせき]には成[な]し得[え]ない。しかし、被害[ひがい]者[しゃ]が声[こえ]を上[あ]げやすい環境[かんきょう]を整備[せいび]する限[かぎ]り、社会[しゃかい]は少[すこ]しずつ前[まえ]に進[すす]むことができる。法制度[ほうせいど]と意識[いしき]の双方[そうほう]を変革[へんかく]することが、真[しん]の性差別[せいさべつ]解消[かいしょう]への不可欠[ふかけつ]な条件[じょうけん]である。"
+   344→    ],
+   345→    translation: [
+   346→      "The #MeToo movement, which publicizes experiences of sexual harassment and sexual assault, sent ripples across the world. However, the spread of the movement in Japan has remained limited compared to Western countries. Behind this divergence, cultural and institutional factors are intricately intertwined.",
+   347→      "In Japanese society, a deep-rooted sense of shame about making victimization public exists. The tendency to blame the victim rather than the perpetrator, victim blaming, also becomes a factor that makes people hesitate to speak up. As a result, many cases of victimization remain buried in darkness.",
+   348→      "Legal preparation also cannot be said to be sufficient. Under the current system, with short statutes of limitations and high hurdles for proving victimization, it is extremely difficult for victims to receive relief. It cannot be denied that the delay in legal preparation has, as a result, invited the exoneration of perpetrators.",
+   349→      "Corporate culture also has many points that should be reconsidered. In workplaces where male-centered organizational structures remain, harassment utilizing power gradients tends to be latent. Not merely formal preparation of compliance, but transformation of the organizational culture itself is sought.",
+   350→      "However, in recent years, signs of change can also be seen. Besides the increase in women reporting victimization through social media, the media's reporting posture is also gradually changing. That a social consensus sympathizing with victims who have spoken up is being formed can be evaluated as a certain degree of progress.",
+   351→      "On the other hand, backlash against reports and secondary harm to victims also continue unabated. Cases have been reported where those who speak up are forced to pay the price, such as defamation by naming and deprivation of employment opportunities. If this situation is left unaddressed, it could invite the shrinkage of the movement.",
+   352→      "The eradication of sexual violence cannot be achieved overnight. However, as long as an environment is prepared where victims can easily speak up, society can move forward little by little. Transforming both the legal system and awareness is an indispensable condition for true elimination of sexual discrimination."
+   353→    ],
+   354→    questions: [
+   355→      {
+   356→        q: "How does Japan's #MeToo spread compare to Western countries?",
+   357→        choices: ["It has spread faster than in the West", "It has remained more limited", "It is identical in scale", "It does not exist at all"],
+   358→        answerIndex: 1,
+   359→        explanation: "The spread of the movement in Japan has remained limited compared to Western countries (欧米諸国に比べ限定的なものにとどまっている)."
+   360→      },
+   361→      {
+   362→        q: "What makes people hesitate to speak up in Japanese society?",
+   363→        choices: ["Lack of interest in justice", "Deep-rooted shame and victim-blaming culture", "Excessive legal protection", "Fear of economic penalties"],
+   364→        answerIndex: 1,
+   365→        explanation: "A deep-rooted sense of shame about making victimization public and victim-blaming culture make people hesitate (羞恥心が根強く存在する、被害者非難の風潮も躊躇させる要因)."
+   366→      },
+   367→      {
+   368→        q: "What makes it difficult for victims to receive relief under the current system?",
+   369→        choices: ["Short statutes of limitations and high proof hurdles", "Too many lawyers", "Excessive compensation amounts", "Lack of courts"],
+   370→        answerIndex: 0,
+   371→        explanation: "With short statutes of limitations and high hurdles for proving victimization, receiving relief is extremely difficult (時効が短く、被害証明のハードルが高い)."
+   372→      },
+   373→      {
+   374→        q: "What is sought beyond formal compliance preparation?",
+   375→        choices: ["More regulations on paper", "Transformation of organizational culture itself", "Hiring more compliance officers", "Reducing workplace size"],
+   376→        answerIndex: 1,
+   377→        explanation: "Not merely formal preparation of compliance, but transformation of the organizational culture itself is sought (形式整備にとどまらず組織文化そのものの変革が求められている)."
+   378→      },
+   379→      {
+   380→        q: "What could happen if backlash and secondary harm are left unaddressed?",
+   381→        choices: ["The movement will grow stronger", "It could invite the shrinkage of the movement", "It will have no effect", "It will improve corporate culture"],
+   382→        answerIndex: 1,
+   383→        explanation: "If this situation is left unaddressed, it could invite the shrinkage of the movement (運動の萎縮を招きかねない)."
+   384→      }
+   385→    ]
+   386→  },
+   387→
+   388→  // ───────────────────────────────────────────────────────────
+   389→  // r-n2-07 — Renewable energy transitions
+   390→  // ───────────────────────────────────────────────────────────
+   391→  {
+   392→    id: "r-n2-07",
+   393→    title: "再[さい]生[せい]可能[かのう]エネルギーへの移行[いこう]",
+   394→    titleReading: "さいせいかのうエネルギーへのいこう",
+   395→    level: "N2",
+   396→    summary: "A discussion of Japan's transition to renewable energy, covering the expansion and limits of solar power, untapped geothermal and offshore wind resources, grid and storage challenges, cost barriers, and community conflicts over development.",
+   397→    estMinutes: 11,
+   398→    tags: ["renewable energy", "solar", "wind", "grid infrastructure"],
+   399→    body: [
+   400→      "脱[だつ]炭素[たんそ]社会[しゃかい]の実現[じつげん]に向[む]け、再[さい]生[せい]可能[かのう]エネルギーへの移行[いこう]は急務[きゅうむ]とされている。化石[かせき]燃料[ねんりょう]への依存[いぞん]を脱[だつ]し、太陽[たいよう]光[こう]や風力[ふうりょく]など自然[しぜん]エネルギーを主力[しゅりょく]電源[でんげん]に位置付[いちづ]ける取[と]り組[く]みが加速[かそく]している。しかし、移行[いこう]の道筋[みすじ]には技術[ぎじゅつ]、経済[けいざい]、社会[しゃかい]の各[かく]側面[そくめん]で障壁[しょうへき]が立[た]ち塞[ふさ]がる。",
+   401→      "太陽[たいよう]光[こう]発電[はつでん]は導入[どうにゅう]量[りょう]が飛躍的[ひやくてき]に伸[の]びたものの、設置[せっち]面積[めんせき]の確保[かくほ]や出力[しゅつりょく]の変動[へんどう]という課題[かだい]を抱[かか]えている。天候[てんこう]に依存[いぞん]するがゆえに、安定[あんてい]供給[きょうきゅう]を担保[たんぽ]するには大[だい]規模[きぼ]な蓄電[ちくでん]池[ち]システムが不可欠[ふかけつ]となる。",
+   402→      "洋上[ようじょう]風力[ふうりょく]や地熱[ちねつ]発電[はつでん]は、未[み]開拓[かいたく]の潜在[せんざい]力[りょく]を秘[ひそ]める。とりわけ日本[にほん]は地熱[ちねつ]資源[しげん]に恵[めぐ]まれながら、開発[かいはつ]は国立[こくりつ]公園[こうえん]内[ない]の規制[きせい]などで制約[せいやく]を受[う]けている。規制[きせい]緩和[かんわ]と環境[かんきょう]保護[ほご]の両立[りょうりつ]は容易[ようい]ではない。",
+   403→      "電力[でんりょく]網[もう]の強化[きょうか]も焦眉[しょうび]の課題[かだい]である。再[さい]生[せい]可能[かのう]エネルギーは地域[ちいき]によって資源[しげん]賦存[ふそん]状況[じょうきょう]が異[こと]なるため、需要[じゅよう]地[ち]と供給[きょうきゅう]地[ち]を結[むす]ぶ送電[そうでん]網[もう]の拡充[かいじゅう]が不可欠[ふかけつ]だ。しかし、送電[そうでん]網[もう]の整備[せいび]には長期[ちょうき]にわたる時間[じかん]と多額[たがく]の投資[とうし]を要[よう]する。",
+   404→      "コスト面[めん]の課題[かだい]も軽視[けいし]できない。初期[しょき]投資[とうし]が大[おお]きい再[さい]生[せい]可能[かのう]エネルギーは、導入[どうにゅう]段階[だんかい]で電気[でんき]料金[りょうきん]に跳[は]ね返[かえ]る。国民[こくみん]の理解[りかい]を得[え]ながら、長期[ちょうき]視野[しや]で投資[とうし]を継続[けいぞく]する仕組[しく]みが必要[ひつよう]である。",
+   405→      "地域[ちいき]レベルでは、風景[ふうけい]破壊[はかい]や生態[せいたい]系[けい]への影響[えいきょう]を懸念[けねん]する住民[じゅうみん]と、開発[かいはつ]を推進[すいしん]する事業者[じぎょうしゃ]との間[あいだ]で対立[たいりつ]が生[しょう]じることもある。住民[じゅうみん]の合意[ごうい]形成[けいせい]を待[ま]つことなく開発[かいはつ]を進[すす]めれば、後[のち]の禍根[かこん]を残[のこ]しかねない。丁寧[ていねい]な対話[たいわ]と情報[じょうほう]公開[こうかい]が求[もと]められる。",
+   406→      "再[さい]生[せい]可能[かのう]エネルギーへの移行[いこう]は、単[たん]なる技術[ぎじゅつ]的[てき]転換[てんかん]にとどまらない。エネルギーのあり方[かた]を根本[こんぽん]から問[と]い直[なお]す社会[しゃかい]変革[へんかく]のプロセスである。長期的[ちょうきてき]な視座[しざ]を失[うしな]わず、着実[ちゃくじつ]に移行[いこう]を進[すす]めることが、未来[みらい]世代[せだい]に対[たい]する責任[せきにん]を果[は]たす道[みち]に違[ちが]いない。"
+   407→    ],
+   408→    translation: [
+   409→      "Toward realizing a decarbonized society, transitioning to renewable energy is considered urgent. Efforts to break dependence on fossil fuels and position natural energies such as solar and wind as main power sources are accelerating. However, on the path of transition, barriers stand in the way on technical, economic, and social fronts.",
+   410→      "Although the introduction of solar power generation has expanded dramatically, it faces the challenges of securing installation area and output fluctuation. Because it depends on the weather, large-scale battery storage systems are indispensable to guarantee stable supply.",
+   411→      "Offshore wind and geothermal generation hold untapped potential. In particular, while Japan is blessed with geothermal resources, development is constrained by regulations such as those within national parks. Balancing deregulation and environmental protection is not easy.",
+   412→      "Strengthening the power grid is also a pressing challenge. Because renewable energy resources differ by region, expanding the transmission network connecting demand areas and supply areas is essential. However, preparing the transmission network requires long periods of time and massive investment.",
+   413→      "The cost challenge also cannot be taken lightly. Renewable energy, which requires large initial investment, is reflected in electricity rates at the introduction stage. A mechanism to continue investment with a long-term perspective while gaining national understanding is necessary.",
+   414→      "At the regional level, conflicts sometimes arise between residents concerned about landscape destruction and impacts on ecosystems and developers promoting development. If development proceeds without waiting for residents' consensus formation, it may leave future trouble. Careful dialogue and information disclosure are sought.",
+   415→      "The transition to renewable energy is not merely a technological shift. It is a process of social transformation that fundamentally questions the nature of energy. Without losing a long-term perspective, steadily advancing the transition is undoubtedly the path to fulfilling responsibility toward future generations."
+   416→    ],
+   417→    questions: [
+   418→      {
+   419→        q: "What challenges does solar power face according to the passage?",
+   420→        choices: ["Securing installation area and output fluctuation", "Lack of sunlight in Japan", "No technology available", "Excessive government subsidies"],
+   421→        answerIndex: 0,
+   422→        explanation: "Solar power faces the challenges of securing installation area and output fluctuation (設置面積の確保や出力の変動という課題を抱えている)."
+   423→      },
+   424→      {
+   425→        q: "Why is geothermal development constrained in Japan?",
+   426→        choices: ["Due to lack of geothermal resources", "Due to regulations such as those within national parks", "Due to high temperatures", "Due to public opposition everywhere"],
+   427→        answerIndex: 1,
+   428→        explanation: "While Japan is blessed with geothermal resources, development is constrained by regulations such as those within national parks (国立公園内の規制などで制約を受けている)."
+   429→      },
+   430→      {
+   431→        q: "What is essential for connecting demand areas and supply areas?",
+   432→        choices: ["More fossil fuel plants", "Expanding the transmission network", "Reducing renewable energy use", "Building more nuclear plants"],
+   433→        answerIndex: 1,
+   434→        explanation: "Expanding the transmission network connecting demand areas and supply areas is essential (需要地と供給地を結ぶ送電網の拡充が不可欠だ)."
+   435→      },
+   436→      {
+   437→        q: "What may happen if development proceeds without resident consensus?",
+   438→        choices: ["Faster completion", "Lower costs", "It may leave future trouble", "Better environmental outcomes"],
+   439→        answerIndex: 2,
+   440→        explanation: "If development proceeds without waiting for residents' consensus formation, it may leave future trouble (後の禍根を残しかねない)."
+   441→      },
+   442→      {
+   443→        q: "What is the transition to renewable energy fundamentally?",
+   444→        choices: ["Merely a system replacement", "A process of social transformation questioning the nature of energy", "A purely economic decision", "A temporary trend"],
+   445→        answerIndex: 1,
+   446→        explanation: "The transition is not merely a technological shift but a process of social transformation that fundamentally questions the nature of energy (社会変革のプロセスである)."
+   447→      }
+   448→    ]
+   449→  },
+   450→
+   451→  // ───────────────────────────────────────────────────────────
+   452→  // r-n2-08 — The gig economy and labor rights
+   453→  // ───────────────────────────────────────────────────────────
+   454→  {
+   455→    id: "r-n2-08",
+   456→    title: "ギグ・エコノミーと労働[ろうどう]権利[けんり]",
+   457→    titleReading: "ギグ・エコノミーとろうどうけんり",
+   458→    level: "N2",
+   459→    summary: "An analysis of the gig economy's growth in Japan, the flexibility it offers workers versus the instability and lack of social protection it creates, the power imbalance with platform companies, and the need for new legal classifications and safety nets.",
+   460→    estMinutes: 10,
+   461→    tags: ["gig economy", "labor rights", "platform companies", "social security"],
+   462→    body: [
+   463→      "スマートフォンの普及[ふきゅう]を契機[けいき]に、ギグ・エコノミーと呼[よ]ばれる新[あら]たな労働[ろうどう]形態[けいたい]が急成長[きゅうせいちょう]を遂[と]げている。配達[はいたつ]アプリやライドシェアなどを通[つう]じて、個人[こじん]が業務[ぎょうむ]を請[う]け負[お]う働[はたら]き方[かた]は、労働[ろうどう]市場[しじょう]に不可逆[ふかぎゃく]的[てき]な変化[へんか]をもたらした。",
+   464→      "ギグ・ワーカーにとって、時間[じかん]や場所[ばしょ]を自由[じゆう]に選択[せんたく]できる柔軟性[じゅうなんせい]は最大[さいだい]の魅力[みりょく]である。副業[ふくぎょう]として補完的[ほかんてき]収入[しゅうにゅう]を得[え]る者[もの]もいれば、ギグ労働[ろうどう]を本業[ほんぎょう]とする者[もの]もいる。雇用[こよう]関係[かんけい]に縛[しば]られない働[はたら]き方[かた]は、従来[じゅうらい]の労働[ろうどう]観[かん]そのものを変[か]えつつある。",
+   465→      "その反面[はんめん]、不安定[ふあんてい]性[せい]という深刻[しんこく]な問題[もんだい]を孕[はら]んでいる。雇用[こよう]契約[けいやく]を結[むす]ばないため、健康[けんこう]保険[ほけん]や年金[ねんきん]といった社会[しゃかい]保障[ほしょう]の網[あみ]の目[め]から漏[も]れる者[もの]が多[おお]い。収入[しゅうにゅう]が需要[じゅよう]の変動[へんどう]に左右[さゆう]されるあまり、生活[せいかつ]の維持[いじ]に苦[くる]しむケースも報告[ほうこく]されている。",
+   466→      "プラットフォーム企業[きぎょう]の強大[きょうだい]な支配[しはい]力[りょく]も問題[もんだい]視[し]されている。報酬[ほうしゅう]の単価[たんか]や配分[はいぶん]を一方的[いっぽうてき]に変更[へんこう]できる立場[たちば]にあるため、労働者[ろうどうしゃ]は不利[ふり]な条件[じょうけん]を飲[の]み込[こ]まざるを得[え]ない。交渉[こうしょう]力[りょく]を欠[か]くギグ・ワーカーは、制度的[せいどてき]な保護[ほご]なしに置[お]き去[ざ]りにされている。",
+   467→      "法的[ほうてき]な分類[ぶんるい]も議論[ぎろん]的[てき]である。「労働者[ろうどうしゃ]」と「業務[ぎょうむ]委託[いたく]者[しゃ]」の中間[ちゅうかん]に位置[いち]する彼[かれ]らを、既存[きぞん]の枠組[わくぐみ]で扱[あつか]うことの無理[むり]が指摘[してき]されている。新[あら]たな法的[ほうてき]地位[ちい]を定義[ていぎ]する立法[りっぽう]の必要性[ひつようせい]が高[たか]まっている。",
+   468→      "海外[かいがい]では、ギグ・ワーカーを「従業員[じゅうぎょういん]」に準[じゅん]ずる存在[そんざい]と認定[にんてい]する判例[はんれい]も出[で]始[はじ]めている。日本[にほん]でも、欧米[おうべい]の動向[どうこう]を参考[さんこう]にしつつ、法制度[ほうせいど]の見直[みなお]しが進[すす]められている。ただし、規制[きせい]を強化[きょうか]するあまり、柔軟性[じゅうなんせい]というメリットを損[そこ]なうことがないよう、バランスを取[と]る必要[ひつよう]がある。",
+   469→      "働[はたら]き方[かた]の多様化[たようか]が進[すす]む中[なか]で、すべての労働者[ろうどうしゃ]を保護[ほご]する安全[あんぜん]網[もう]の再構築[さいこうちく]が急務[きゅうむ]である。ギグ・エコノミーがもたらす便益[べんえき]を享受[きょうじゅ]しつつ、その犠牲[ぎせい]を最小限[さいしょうげん]に抑[おさ]える制度[せいど]設計[せっけい]こそが、これからの労働[ろうどう]政策[せいさく]の核心[かくしん]となるに違[ちが]いない。"
+   470→    ],
+   471→    translation: [
+   472→      "Triggered by the spread of smartphones, a new form of labor called the gig economy has achieved rapid growth. Working styles in which individuals take on tasks through delivery apps and ridesharing have brought irreversible changes to the labor market.",
+   473→      "For gig workers, the flexibility of freely choosing time and place is the greatest attraction. While some earn supplementary income as a side job, others make gig work their main occupation. Working styles not bound by employment relationships are changing the very conventional view of labor.",
+   474→      "On the other hand, it harbors the serious problem of instability. Because they do not sign employment contracts, many slip through the net of social security such as health insurance and pensions. Because income is swayed by fluctuations in demand, cases of struggling to maintain a living have also been reported.",
+   475→      "The overwhelming power of platform companies is also viewed as a problem. Because they are in a position to unilaterally change unit prices and distribution of compensation, workers have no choice but to swallow disadvantageous conditions. Gig workers lacking bargaining power are left behind without institutional protection.",
+   476→      "Legal classification is also the subject of debate. The irrationality of treating them, positioned between workers and contractors, within existing frameworks has been pointed out. The necessity for legislation defining a new legal status is growing.",
+   477→      "Overseas, precedents have begun to appear recognizing gig workers as beings equivalent to employees. In Japan too, while referencing trends in the West, review of the legal system is being advanced. However, it is necessary to take balance so that strengthening regulation does not undermine the merit of flexibility.",
+   478→      "As the diversification of work styles progresses, rebuilding a safety net that protects all workers is urgent. The system design that minimizes its sacrifices while enjoying the benefits brought by the gig economy is undoubtedly what will become the core of future labor policy."
+   479→    ],
+   480→    questions: [
+   481→      {
+   482→        q: "What has brought irreversible changes to the labor market?",
+   483→        choices: ["The decline of manufacturing", "The gig economy via apps and ridesharing", "Government labor reforms", "An aging workforce"],
+   484→        answerIndex: 1,
+   485→        explanation: "The gig economy, where individuals take on tasks through delivery apps and ridesharing, has brought irreversible changes to the labor market (ギグ・エコノミーは労働市場に不可逆的な変化をもたらした)."
+   486→      },
+   487→      {
+   488→        q: "What is the greatest attraction for gig workers?",
+   489→        choices: ["High salaries", "Job security", "Flexibility to freely choose time and place", "Comprehensive benefits"],
+   490→        answerIndex: 2,
+   491→        explanation: "The flexibility of freely choosing time and place is the greatest attraction for gig workers (時間や場所を自由に選択できる柔軟性は最大の魅力)."
+   492→      },
+   493→      {
+   494→        q: "Why do many gig workers slip through the social security net?",
+   495→        choices: ["They earn too much to qualify", "They do not sign employment contracts", "They refuse to pay taxes", "They work only overseas"],
+   496→        answerIndex: 1,
+   497→        explanation: "Because they do not sign employment contracts, many slip through the net of social security (雇用契約を結ばないため社会保障の網の目から漏れる者が多い)."
+   498→      },
+   499→      {
+   500→        q: "What power do platform companies have over workers?",
+   501→        choices: ["They can only suggest changes", "They can unilaterally change unit prices and distribution of compensation", "They have no influence over pay", "They must negotiate every change"],
+   502→        answerIndex: 1,
+   503→        explanation: "Platform companies can unilaterally change unit prices and distribution of compensation, forcing workers to accept disadvantageous conditions (報酬の単価や配分を一方的に変更できる)."
+   504→      },
+   505→      {
+   506→        q: "What is urgent as work styles diversify?",
+   507→        choices: ["Banning all gig work", "Rebuilding a safety net that protects all workers", "Reducing minimum wage", "Eliminating traditional employment"],
+   508→        answerIndex: 1,
+   509→        explanation: "Rebuilding a safety net that protects all workers is urgent as work styles diversify (すべての労働者を保護する安全網の再構築が急務である)."
+   510→      }
+   511→    ]
+   512→  },
+   513→
+   514→  // ───────────────────────────────────────────────────────────
+   515→  // r-n2-09 — Digital transformation of government
+   516→  // ───────────────────────────────────────────────────────────
+   517→  {
+   518→    id: "r-n2-09",
+   519→    title: "行政[ぎょうせい]のデジタル変革[へんかく]",
+   520→    titleReading: "ぎょうせいのデジタルへんかく",
+   521→    level: "N2",
+   522→    summary: "An overview of Japan's efforts to digitally transform government services, the legacy of paper-based and seal-stamp culture, the My Number system's struggles, cybersecurity risks, the digital divide among the elderly, and the need for human-centered reform.",
+   523→    estMinutes: 11,
+   524→    tags: ["digital transformation", "government", "My Number", "cybersecurity"],
+   525→    body: [
+   526→      "日本[にほん]の行政[ぎょうせい]手続[てつづ]きは、長年[ながねん]紙[かみ]ベースと押印[おういん]文化[ぶんか]に縛[しば]られてきた。しかし、新型[しんがた]コロナ禍[か]が浮[う]き彫[ぼ]りにした行政[ぎょうせい]の数[すう]字[じ]化[か]の遅[おく]れは、もはや看過[かんか]できない水準[すいじゅん]に達[たっ]している。デジタル庁[ちょう]の創設[そうせつ]は、こうした現状[げんじょう]を打開[だかい]するための画期[かっき]的[てき]な一歩[いっぽ]と位置付[いちづ]けられている。",
+   527→      "しかしながら、変革[へんかく]の道[みち]は平坦[へいたん]ではない。各省庁[かくしょうちょう]に個別[こべつ]に構築[こうちく]された旧式[きゅうしき]システムは、相互[そうご]運用性[うんようせい]を欠[か]き、改修[かいしゅう]には多額[たがく]の費用[ひよう]を要[よう]する。ガラパゴス化[か]したシステム群[ぐん]は、技術[ぎじゅつ]的[てき]負債[ふさい]として次[つぎ]世代[せだい]に負担[ふたん]を押[お]し付[つ]けている。",
+   528→      "マイナンバー制度[せいど]の活用[かつよう]も、期待[きたい]通[どお]りに進[すす]んでいるとは言[い]い難[がた]い。利便性[りべんせい]と効率性[こうりつせい]を高[たか]める潜在能力[せんざいのうりょく]を秘[ひそ]めながらも、個人情報[こじんじょうほう]の漏洩[ろうえい]に対[たい]する不安[ふあん]から、利用[りよう]登録[とうろく]率[りつ]は依然[いぜん]として低[ひく]い水準[すいじゅん]に留[とど]まっている。",
+   529→      "サイバー攻撃[こうげき]への脆弱性[ぜいじゃくせい]も深刻[しんこく]な懸念[けねん]事項[じこう]である。行政[ぎょうせい]のデジタル化[か]が進[すす]むにつれ、情報[じょうほう]漏洩[ろうえい]やシステム障害[しょうがい]が及[およ]ぼす影響[えいきょう]は甚大[じんだい]なものとなる。安全[あんぜん]性[せい]と利便性[りべんせい]の二[に]律[りつ]背反[はいはん]をいかに調和[ちょうわ]させるかが、政策[せいさく]の趨勢[すうせい]を左右[さゆう]する。",
+   530→      "高齢者[こうれいしゃ]のデジタル・ディバイドも看過[かんか]できない。スマートフォンの操作[そうさ]に不慣[ふな]れな高齢者[こうれいしゃ]は、行政[ぎょうせい]サービスの利用[りよう]自体[たい]から排除[はいじょ]されかねない。誰[だれ]もが取[と]り残[のこ]されないよう、アナログとデジタルの選択肢[せんたくし]を並存[へいぞん]させる工夫[くふう]が求[もと]められる。",
+   531→      "地方[ちほう]自治体[じちたい]の人材[じんざい]不足[ぶそく]も障壁[しょうへき]となっている。IT人材[じんざい]を確保[かくほ]できない自治体[じちたい]では、システムの維持[いじ]管理[かんり]すら外部[がいぶ]に依存[いぞん]せざるを得[え]ない状況[じょうきょう]にある。国[くに]が主導[しゅどう]する標準化[ひょうじゅんか]と、地方[ちほう]の実情[じつじょう]に即[そく]した柔軟[じゅうなん]な運用[うんよう]の両立[りょうりつ]が不可欠[ふかけつ]である。",
+   532→      "行政[ぎょうせい]のデジタル変革[へんかく]は、単[たん]なるシステムの置換[ちかん]ではない。国民[こくみん]と行政[ぎょうせい]の関[かか]わり方[かた]を根底[こんてい]から見直[みなお]す意識[いしき]改革[かいかく]でもある。技術[ぎじゅつ]を手段[しゅだん]としつつ、人[ひと]を中心[ちゅうしん]に据[す]えたデジタル化[か]を進[すす]めることが、真[しん]の行政[ぎょうせい]改革[かいかく]への唯一[ゆいいつ]の道[みち]である。"
+   533→    ],
+   534→    translation: [
+   535→      "For many years, Japanese administrative procedures have been bound by paper-based and seal-stamping culture. However, the lag in administrative digitalization, which the COVID pandemic brought into relief, has reached a level that can no longer be overlooked. The establishment of the Digital Agency is positioned as a groundbreaking step to break through this current state.",
+   536→      "However, the path of transformation is not smooth. The old systems individually constructed in each ministry and agency lack interoperability, and modification requires massive costs. The Galapagosized cluster of systems is being pushed onto the next generation as technical debt.",
+   537→      "The utilization of the My Number system is also hard to say to be progressing as expected. While it holds the potential to enhance convenience and efficiency, due to anxiety about the leakage of personal information, the utilization registration rate remains at a low level.",
+   538→      "Vulnerability to cyber attacks is also a serious concern. As administrative digitalization progresses, the impact of information leakage and system failures becomes tremendous. How to harmonize the dilemma of safety and convenience will determine the trend of policy.",
+   539→      "The digital divide among the elderly also cannot be overlooked. Elderly people unfamiliar with operating smartphones may be excluded from using administrative services themselves. Ingenuity to make analog and digital options coexist is sought so that no one is left behind.",
+   540→      "The shortage of human resources in local governments is also a barrier. In local governments unable to secure IT personnel, the situation is such that even the maintenance and management of systems must depend on the outside. It is indispensable to balance standardization led by the national government and flexible operation adapted to local realities.",
+   541→      "The digital transformation of administration is not merely a replacement of systems. It is also an awareness reform that fundamentally reviews how citizens and administration interact. Advancing digitalization that places technology as a means while placing people at the center is the only path to true administrative reform."
+   542→    ],
+   543→    questions: [
+   544→      {
+   545→        q: "What did the COVID pandemic bring into relief?",
+   546→        choices: ["The excellence of Japan's IT systems", "The lag in administrative digitalization", "The efficiency of paper-based work", "The popularity of remote work"],
+   547→        answerIndex: 1,
+   548→        explanation: "The COVID pandemic brought into relief the lag in administrative digitalization, which has reached a level that cannot be overlooked (行政の数字化の遅れはもはや看過できない水準に達している)."
+   549→      },
+   550→      {
+   551→        q: "What problem do old systems in ministries have?",
+   552→        choices: ["They are too modern", "They lack interoperability and require massive modification costs", "They use too much open-source software", "They are too secure"],
+   553→        answerIndex: 1,
+   554→        explanation: "The old systems lack interoperability, and modification requires massive costs (相互運用性を欠き改修には多額の費用を要する)."
+   555→      },
+   556→      {
+   557→        q: "Why is the My Number registration rate low?",
+   558→        choices: ["Due to lack of awareness", "Due to anxiety about personal information leakage", "Due to high costs", "Due to technical impossibility"],
+   559→        answerIndex: 1,
+   560→        explanation: "Due to anxiety about the leakage of personal information, the utilization registration rate remains at a low level (個人情報の漏洩に対する不安から登録率は低い水準に留まっている)."
+   561→      },
+   562→      {
+   563→        q: "What may happen to elderly people unfamiliar with smartphones?",
+   564→        choices: ["They will adapt quickly", "They may be excluded from using administrative services", "They will receive special help automatically", "They are not affected"],
+   565→        answerIndex: 1,
+   566→        explanation: "Elderly people unfamiliar with operating smartphones may be excluded from using administrative services themselves (行政サービスの利用自体から排除されかねない)."
+   567→      },
+   568→      {
+   569→        q: "What is the digital transformation of administration fundamentally?",
+   570→        choices: ["Merely a system replacement", "An awareness reform reviewing how citizens and administration interact", "A cost-cutting exercise", "A temporary project"],
+   571→        answerIndex: 1,
+   572→        explanation: "It is not merely a replacement of systems but an awareness reform that fundamentally reviews how citizens and administration interact (国民と行政の関わり方を根底から見直す意識改革でもある)."
+   573→      }
+   574→    ]
+   575→  },
+   576→
+   577→  // ───────────────────────────────────────────────────────────
+   578→  // r-n2-10 — Cultural assimilation vs preservation
+   579→  // ───────────────────────────────────────────────────────────
+   580→  {
+   581→    id: "r-n2-10",
+   582→    title: "文化[ぶんか]の同化[どうか]と保存[ほぞん]の間[あいだ]で",
+   583→    titleReading: "ぶんかのどうかとほぞんのあいだで",
+   584→    level: "N2",
+   585→    summary: "A reflection on the tension between cultural assimilation and preservation in a globalized world, covering the homogenization of minority cultures, the cases of Ainu and Okinawa, language extinction, the commodification of culture through tourism, and a balanced path forward.",
+   586→    estMinutes: 10,
+   587→    tags: ["culture", "globalization", "indigenous peoples", "identity"],
+   588→    body: [
+   589→      "グローバル化[か]が進[すす]む現代[げんだい]において、異[い]文化[ぶんか]間[かん]の接触[せっしょく]と交流[こうりゅう]はかつてない規模[きぼ]で展開[てんかい]されている。文化[ぶんか]の多様性[たようせい]は人類[じんるい]の共有[きょうゆう]財産[ざいさん]であると同時[どうじ]に、個[こ]々[こ]の社会[しゃかい]のアイデンティティを支[ささ]える基盤[きばん]でもある。しかし、その多様性[たようせい]は今日[こんにち]、深刻[しんこく]な危機[きき]に瀕[ひん]している。",
+   590→      "強[つよ]い文化[ぶんか]が弱[よわ]い文化[ぶんか]を飲[の]み込[こ]む同化[どうか]圧力[あつりょく]は、均質化[きんしつか]という形[かたち]で現[あらわ]れる。支配[しはい]的[てき]な言語[げんご]や価値観[かちかん]が浸透[しんとう]するにつれ、少数[しょうすう]文化[ぶんか]は周縁[しゅうえん]へと追[お]いやられ、次第[しだい]に消滅[しょうめつ]の危機[きき]に直面[ちょくめん]する。文化[ぶんか]の喪失[そうしつ]は、単[たん]なる慣習[かんしゅう]の消滅[しょうめつ]にとどまらず、集団[しゅうだん]の精神的[せいしんてき]基盤[きばん]の崩壊[ほうかい]を意味[いみ]する。",
+   591→      "日本[にほん]国内[こくない]でも、先住[せんじゅう]民族[みんぞく]の文化[ぶんか]継承[けいしょう]は深刻[しんこく]な課題[かだい]となっている。アイヌ民族[みんぞく]の言語[げんご]や儀礼[ぎれい]は、長年[ながねん]の同化[どうか]政策[せいさく]の結果[けっか]、存続[そんぞく]の危機[きき]に瀕[ひん]している。沖縄[おきなわ]における独自[どくじ]の文化[ぶんか]も、本土[ほんど]との同化[どうか]と観光[かんこう]化[か]の波[なみ]の中[なか]で、本来[ほんらい]の姿[すがた]を失[うしな]いつつある。",
+   592→      "言語[げんご]の保存[ほぞん]は、文化[ぶんか]継承[けいしょう]の要[かなめ]である。しかし、話者[わしゃ]の減少[げんしょう]が続[つづ]く限[かぎ]り、言語[げんご]自体[たい]の消滅[しょうめつ]は避[さ]けられない。緊急[きんきゅう]に記録[きろく]と教育[きょういく]の取[と]り組[く]みを強化[きょうか]しなければ、数[すう]世代[せだい]後[ご]には完全[かんぜん]に失[うしな]われかねない。",
+   593→      "観光[かんこう]資源[しげん]化[か]も諸刃[もろは]の剣[けん]である。文化[ぶんか]を商品化[しょうひんか]して経済的[けいざいてき]価値[かち]を生[う]み出[だ]す一方[いっぽう]で、本来[ほんらい]の神聖[しんせい]性[せい]や文脈[ぶんみゃく]が損[そこ]なわれる恐[おそ]れがある。文化[ぶんか]を搾取[さくしゅ]するのではなく、敬意[けいい]を持[も]って継承[けいしょう]する姿勢[しせい]が求[もと]められる。",
+   594→      "同化[どうか]と保存[ほぞん]の二[に]項[こう]対立[たいりつ]で考[かんが]えること自体[たい]が、議論[ぎろん]を貧困[ひんこん]化[か]しかねない。重要[じゅうよう]なのは、伝統[でんとう]を固定[こてい]化[か]するのではなく、時代[じだい]の変化[へんか]に即[そく]しつつ生[い]きた文化[ぶんか]として継承[けいしょう]することである。変化[へんか]を受[う]け入[い]れながらも、核[かく]となる価値[かち]を守[まも]る柔軟[じゅうなん]な姿勢[しせい]こそが、文化[ぶんか]を持続[じぞく]させる鍵[かぎ]である。",
+   595→      "文化[ぶんか]の多様性[たようせい]を守[まも]ることは、人類[じんるい]の未来[みらい]に対[たい]する責任[せきにん]である。同化[どうか]の圧力[あつりょく]に抗[あらが]いながらも、他[た]文化[ぶんか]と対話[たいわ]を続[つづ]けることこそが、豊[ゆた]かな文化[ぶんか]的未来[みらい]を切[き]り拓[ひら]く道[みち]に違[ちが]いない。"
+   596→    ],
+   597→    translation: [
+   598→      "In today's globalizing world, contact and exchange between different cultures are unfolding on an unprecedented scale. Cultural diversity is humanity's shared asset and at the same time the foundation supporting the identity of each society. However, that diversity is today facing a serious crisis.",
+   599→      "The assimilation pressure in which a strong culture swallows a weak one manifests in the form of homogenization. As dominant languages and values permeate, minority cultures are pushed to the periphery and gradually face the crisis of extinction. The loss of culture means not merely the disappearance of customs but the collapse of the group's spiritual foundation.",
+   600→      "Even within Japan, the inheritance of indigenous cultures has become a serious challenge. The language and rituals of the Ainu people, as a result of years of assimilation policy, are facing the crisis of existence. The unique culture of Okinawa is also losing its original form amid the waves of assimilation and touristicization with the mainland.",
+   601→      "The preservation of language is the cornerstone of cultural inheritance. However, as long as the decrease of speakers continues, the extinction of the language itself is unavoidable. If efforts in recording and education are not strengthened urgently, it may be completely lost within a few generations.",
+   602→      "The conversion into tourism resources is also a double-edged sword. While creating economic value by commercializing culture, there is a risk that the original sacredness and context may be impaired. Rather than exploiting culture, an attitude of inheriting it with respect is sought.",
+   603→      "Thinking in the dichotomy of assimilation and preservation may itself impoverish the discussion. What is important is not to fix traditions, but to inherit them as living culture while adapting to changes of the times. A flexible attitude that accepts change while protecting core values is the key to sustaining culture.",
+   604→      "Protecting cultural diversity is a responsibility toward humanity's future. Resisting the pressure of assimilation while continuing dialogue with other cultures is undoubtedly the path to open up a rich cultural future."
+   605→    ],
+   606→    questions: [
+   607→      {
+   608→        q: "What is cultural diversity to humanity according to the passage?",
+   609→        choices: ["A source of conflict only", "Humanity's shared asset and the foundation of identity", "An obstacle to progress", "An outdated concept"],
+   610→        answerIndex: 1,
+   611→        explanation: "Cultural diversity is humanity's shared asset and at the same time the foundation supporting each society's identity (人類の共有財産であると同時にアイデンティティを支える基盤)."
+   612→      },
+   613→      {
+   614→        q: "What does the loss of culture mean beyond the disappearance of customs?",
+   615→        choices: ["Nothing significant", "The collapse of the group's spiritual foundation", "Economic improvement", "Cultural unification"],
+   616→        answerIndex: 1,
+   617→        explanation: "The loss of culture means not merely the disappearance of customs but the collapse of the group's spiritual foundation (集団の精神的基盤の崩壊を意味する)."
+   618→      },
+   619→      {
+   620→        q: "What are the Ainu people's language and rituals facing?",
+   621→        choices: ["Government promotion", "The crisis of existence due to assimilation policy", "Rapid expansion", "No particular challenge"],
+   622→        answerIndex: 1,
+   623→        explanation: "As a result of years of assimilation policy, the Ainu language and rituals are facing the crisis of existence (長年の同化政策の結果、存続の危機に瀕している)."
+   624→      },
+   625→      {
+   626→        q: "What is the cornerstone of cultural inheritance?",
+   627→        choices: ["Tourism revenue", "Language preservation", "Government funding", "Internet documentation"],
+   628→        answerIndex: 1,
+   629→        explanation: "The preservation of language is the cornerstone of cultural inheritance (言語の保存は文化継承の要である)."
+   630→      },
+   631→      {
+   632→        q: "What is the key to sustaining culture according to the passage?",
+   633→        choices: ["Fixing traditions completely", "A flexible attitude accepting change while protecting core values", "Rejecting all foreign influence", "Commercializing all traditions"],
+   634→        answerIndex: 1,
+   635→        explanation: "A flexible attitude that accepts change while protecting core values is the key to sustaining culture (変化を受け入れながらも核となる価値を守る柔軟な姿勢こそが鍵である)."
+   636→      }
+   637→    ]
+   638→  }
+   639→];
+   640→

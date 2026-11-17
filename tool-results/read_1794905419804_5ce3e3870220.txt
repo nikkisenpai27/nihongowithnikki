@@ -1,0 +1,617 @@
+     1→import type { ReadingPassage } from "@/lib/types";
+     2→
+     3→// Furigana notation: kanji readings are written inline as 漢字[かんじ].
+     4→// A [reading] immediately following a run of kanji attaches to that whole run.
+     5→// Kana, katakana, punctuation, and 々 have no brackets. See types.ts & furigana.tsx.
+     6→// 10 original N3-level reading passages with comprehension questions.
+     7→// Topics (chunk C): the future of remote work, Japanese cinema, climate change
+     8→// adaptation, the role of libraries, artificial intelligence in society,
+     9→// traditional Japanese cuisine, youth unemployment, the housing market,
+    10→// mental health in schools, the art of decluttering.
+    11→
+    12→export const readingN3C: ReadingPassage[] = [
+    13→  // ───────────────────────────────────────────────────────────
+    14→  // r-n3-21 — The Future of Remote Work
+    15→  // ───────────────────────────────────────────────────────────
+    16→  {
+    17→    id: "r-n3-21",
+    18→    title: "テレワークの将来[しょうらい]を考[かんが]える",
+    19→    titleReading: "てれわーくのしょうらいをかんがえる",
+    20→    level: "N3",
+    21→    summary: "An exploration of how remote work is reshaping modern work culture, its benefits and challenges, and the rise of hybrid arrangements.",
+    22→    estMinutes: 7,
+    23→    tags: ["work", "remote work", "society", "technology"],
+    24→    body: [
+    25→      "ここ数年[すうねん]、テレワークが急速[きゅうそく]に普及[ふきゅう]しました。インターネットの発達[はったつ]により、会社[かいしゃ]に行[い]かなくても仕事[しごと]ができる環境[かんきょう]が整[ととの]いました。特[とく]に大[おお]きな都市[とし]では、通勤[つうきん]の負担[ふたん]を減[へ]らすためにテレワークを導入[どうにゅう]する企業[きぎょう]が増[ふ]えています。働[はたら]き方[かた]の選択肢[せんたくし]が広[ひろ]がったことで、人々[ひとびと]の生活[せいかつ]も変[か]わり始[はじ]めました。",
+    26→      "テレワークには多[おお]くのメリットがあります。最大[さいだい]のメリットは、通勤時間[つうきんじかん]を有効[ゆうこう]に使[つか]えることです。その時間[じかん]を家族[かぞく]との時間[じかん]や自己[じこ]投資[とうし]に使[つか]えるため、生活[せいかつ]の質[しつ]が向上[こうじょう]します。また、地方[ちほう]に住[す]みながら都市[とし]の企業[きぎょう]で働[はたら]けるため、地域[ちいき]の活性化[かっせいか]にもつながると期待[きたい]されています。",
+    27→      "一方[いっぽう]で、課題[かだい]もあります。自宅[じたく]で一人[ひとり]で働[はたら]くことが多[おお]くなると、孤独[こどく]を感[かん]じる人[ひと]が増[ふ]えます。また、同僚[どうりょう]とのコミュニケーションが減[へ]ることで、チームの一体感[いったいかん]が失[うしな]われやすいという指摘[してき]もあります。新[あたら]しい社員[しゃいん]にとっては、仕事[しごと]のやり方[かた]を学[まな]ぶ機会[きかい]が減[へ]ることが懸念[けねん]されています。",
+    28→      "そのため、最近[さいきん]はテレワークと出社[しゅっしゃ]を組[く]み合[あ]わせたハイブリッド勤務[きんむ]を導入[どうにゅう]する企業[きぎょう]が増[ふ]えています。週[しゅう]に数日[すうじつ]は会社[かいしゃ]に出[で]て直接[ちょくせつ]顔[かお]を合[あ]わせ、残[のこ]りは自宅[じたく]で働[はたら]くという方法[ほうほう]です。この方式[ほうしき]により、効率[こうりつ]と人間関係[にんげんかんけい]のバランスを取[と]ることができます。",
+    29→      "テレワークの普及[ふきゅう]は、都市[とし]の姿[すがた]にも変化[へんか]をもたらしています。オフィスの需要[じゅよう]が減[へ]り、空[あ]きビルが増[ふ]えている地域[ちいき]もあります。一方[いっぽう]で、コワーキングスペースが地方[ちほう]にも増[ふ]え、住[す]む場所[ばしょ]の選択肢[せんたくし]が広[ひろ]がっています。働[はたら]き方[かた]の変化[へんか]が、まちづくりにも影響[えいきょう]を与[あた]えているのです。",
+    30→      "将来[しょうらい]の働[はたら]き方[かた]として、テレワークはますます重要[じゅうよう]な役割[やくわり]を果[はた]すでしょう。しかし、技術[ぎじゅつ]だけでは解決[かいけつ]できない人間関係[にんげんかんけい]の問題[もんだい]もあります。企業[きぎょう]と労働者[ろうどうしゃ]が協力[きょうりょく]して、より良[よ]い働[はたら]き方[かた]を模索[もさく]していくことが求[もと]められています。"
+    31→    ],
+    32→    translation: [
+    33→      "Over the past few years, remote work has spread rapidly. Thanks to the development of the internet, an environment has been prepared in which people can work without going to the office. Especially in large cities, more companies are introducing remote work to reduce the burden of commuting. As the range of work-style options has widened, people's lives have begun to change as well.",
+    34→      "Remote work has many benefits. The biggest benefit is that commuting time can be used effectively. Because that time can be spent with family or on self-investment, the quality of life improves. Also, since people can live in regional areas while working for urban companies, it is expected to lead to the revitalization of local communities.",
+    35→      "On the other hand, there are also challenges. When people work alone at home more often, more of them feel loneliness. Moreover, it is pointed out that as communication with colleagues decreases, a sense of unity within the team is easily lost. For new employees, there is concern that opportunities to learn how to work are reduced.",
+    36→      "Therefore, recently more companies are introducing hybrid work that combines remote work and office attendance. In this method, employees go to the office a few days a week to meet face to face, and work from home the rest of the time. With this style, a balance between efficiency and human relationships can be maintained.",
+    37→      "The spread of remote work is also bringing changes to the appearance of cities. In some areas, demand for offices has decreased and the number of vacant buildings has risen. On the other hand, co-working spaces have increased in regional areas as well, broadening the choices of where to live. The change in work style is influencing urban planning too.",
+    38→      "As a way of working in the future, remote work will likely play an increasingly important role. However, there are also problems of human relationships that cannot be solved by technology alone. Companies and workers are required to cooperate and explore better ways of working together."
+    39→    ],
+    40→    questions: [
+    41→      {
+    42→        q: "テレワークの最大[さいだい]のメリットは何[なん]ですか。",
+    43→        choices: ["高[たか]い給料[きゅうりょう]", "通勤[つうきん]時間[じかん]を有効[ゆうこう]に使[つか]えること", "同僚[どうりょう]との交流[こうりゅう]が増[ふ]えること", "オフィスが大[おお]きくなること"],
+    44→        answerIndex: 1,
+    45→        explanation: "第二段で「最大のメリットは、通勤時間を有効に使えることです」と明記されています。"
+    46→      },
+    47→      {
+    48→        q: "テレワークの課題[かだい]として挙[あ]げられているのは何[なん]ですか。",
+    49→        choices: ["通勤時間が長くなること", "孤独を感じる人が増え、チームの一体感が失われやすいこと", "給料が下がること", "インターネットが使えないこと"],
+    50→        answerIndex: 1,
+    51→        explanation: "第三段で孤独感の増加とチームの一体感の喪失が課題として挙げられています。"
+    52→      },
+    53→      {
+    54→        q: "ハイブリッド勤務[きんむ]の目的[もくてき]は何[なん]ですか。",
+    55→        choices: ["全員を会社に出させること", "効率と人間関係のバランスを取ること", "テレワークを禁止すること", "通勤時間を長くすること"],
+    56→        answerIndex: 1,
+    57→        explanation: "第四段で「効率と人間関係のバランスを取ることができる」と説明されています。"
+    58→      },
+    59→      {
+    60→        q: "本文[ほんぶん]の内容[ないよう]と合[あ]っているものはどれですか。",
+    61→        choices: ["テレワークは都市に影響を与えない", "テレワークの普及で地方にコワーキングスペースが増えている", "テレワークは技術だけで全て解決できる", "将来テレワークは不要になる"],
+    62→        answerIndex: 1,
+    63→        explanation: "第五段で、地方にもコワーキングスペースが増えていると書かれています。"
+    64→      }
+    65→    ]
+    66→  },
+    67→
+    68→  // ───────────────────────────────────────────────────────────
+    69→  // r-n3-22 — Japanese Cinema
+    70→  // ───────────────────────────────────────────────────────────
+    71→  {
+    72→    id: "r-n3-22",
+    73→    title: "日本[にほん]映画[えいが]の歴史[れきし]と魅力[みりょく]",
+    74→    titleReading: "にほんえいがのれきしとみりょく",
+    75→    level: "N3",
+    76→    summary: "A survey of Japanese cinema from its early history to the golden age of Kurosawa and Ozu, the global influence of anime, and modern industry challenges.",
+    77→    estMinutes: 8,
+    78→    tags: ["culture", "cinema", "history", "anime"],
+    79→    body: [
+    80→      "日本[にほん]の映画[えいが]は、長[なが]い歴史[れきし]と独自[どくじ]の魅力[みりょく]を持[も]っています。映画[えいが]が日本[にほん]に紹介[しょうかい]されたのは1890年代[ねんだい]のことです。その後[ご]、日本[にほん]の映画産業[えいがさんぎょう]は急速[きゅうそく]に発展[はってん]し、独自[どくじ]の表現[ひょうげん]方法[ほうほう]を生[う]み出[だ]してきました。特[とく]に、時代劇[じだいげき]と呼[よ]ばれる歴史[れきし]物[もの]の映画[えいが]は、日本[にほん]ならではのジャンルとして親[した]しまれてきました。",
+    81→      "1950年代[ねんだい]は、日本[にほん]映画[えいが]の黄金[おうごん]時代[じだい]と呼[よ]ばれています。黒沢[くろさわ]明[あきら]監督[かんとく]の「七[しち]人の侍[さむらい]」は、海外[かいがい]でも高[たか]く評価[ひょうか]され、アカデミー賞[しょう]を受賞[じゅしょう]しました。また、小津[おづ]安二郎[やじろう]監督[かんとく]の作品[さくひん]は、日本[にほん]の家庭[かてい]の日常[にちじょう]を静[しず]かに描[えが]き、今[いま]も多[おお]くの人[ひと]に愛[あい]されています。この時期[じき]の日本[にほん]映画[えいが]は、世界[せかい]の映画史[えいがし]に大[おお]きな影響[えいきょう]を与[あた]えました。",
+    82→      "日本[にほん]のアニメーション映画[えいが]も、世界的[せかいてき]な影響力[えいきょうりょく]を持[も]っています。宮崎[みやざき]駿[はやお]監督[かんとく]のスタジオジブリ作品[さくひん]は、「千[せん]と千尋[ちひろ]の神隠[かみかく]し」がベルリン国際[こくさい]映画祭[えいがさい]で大賞[たいしょう]を受賞[じゅしょう]するなど、多[おお]くの賞[しょう]を受[う]け取[と]ってきました。日本[にほん]のアニメは、独自[どくじ]の美[うつく]しい映像[えいぞう]と深[ふか]いテーマで、世界中[せかいじゅう]の視聴者[しちょうしゃ]を魅了[みりょう]しています。",
+    83→      "一方[いっぽう]で、大[おお]きな映画会社[えいががいしゃ]に頼[たよ]らない独立[どくりつ]映画[えいが]も、日本[にほん]の映画文化[えいがぶんか]を支[ささ]えています。若[わか]い監督[かんとく]たちが少[すく]ない予算[よさん]で独創的[どくそうてき]な作品[さくひん]を作[つく]り続[つづ]けています。海外[かいがい]の映画祭[えいがさい]で日本[にほん]の独立[どくりつ]映画[えいが]が評価[ひょうか]されることも多[おお]く、新[あたら]しい才能[さいのう]が生[う]まれる場[ば]として重要[じゅうよう]な役割[やくわり]を果[はた]しています。",
+    84→      "しかし、日本[にほん]の映画産業[えいがさんぎょう]は課題[かだい]にも直面[ちょくめん]しています。人口[じんこう]減少[げんしょう]や娯楽[ごらく]の多様化[たようか]により、映画館[えいがかん]の観客数[かんきゃくすう]は減少[げんしょう]傾向[けいこう]にあります。特[とく]に地方[ちほう]では、映画館[えいがかん]が閉[と]じられるケースが増[ふ]えています。これにより、人々[ひとびと]が映画[えいが]を体験[たいけん]する機会[きかい]が地域[ちいき]格差[かくさ]を生[う]んでいます。",
+    85→      "日本[にほん]映画[えいが]の魅力[みりょく]を未来[みらい]に伝[つた]えるため、国[くに]や地方自治体[ちほうじちたい]も保存[ほぞん]と普及[ふきゅう]に取[と]り組[く]んでいます。名作[めいさく]をデジタル化[か]して保存[ほぞん]する事業[じぎょう]や、子[こ]ども向けの上映会[じょうえかい]を開[ひら]く活動[かつどう]が進[すす]んでいます。日本[にほん]映画[えいが]は、単[たん]なる娯楽[ごらく]ではなく、文化[ぶんか]を伝[つた]える大切[たいせつ]な手段[しゅだん]なのです。"
+    86→    ],
+    87→    translation: [
+    88→      "Japanese cinema has a long history and its own unique appeal. Cinema was introduced to Japan in the 1890s. Since then, the Japanese film industry has developed rapidly and produced original methods of expression. In particular, historical films called jidaigeki have been loved as a uniquely Japanese genre.",
+    89→      "The 1950s are called the golden age of Japanese cinema. Akira Kurosawa's Seven Samurai was highly praised overseas and won an Academy Award. Also, the works of director Yasujiro Ozu quietly depict the daily life of Japanese families and are still loved by many people. Japanese films of this period had a major influence on world film history.",
+    90→      "Japanese animated films also have worldwide influence. The works of Studio Ghibli, led by director Hayao Miyazaki, have won many awards, with Spirited Away winning the top prize at the Berlin International Film Festival. Japanese anime fascinates viewers all over the world with its unique beautiful images and deep themes.",
+    91→      "On the other hand, independent films that do not rely on large film companies also support Japanese film culture. Young directors continue to produce original works with small budgets. Japanese independent films are often evaluated at overseas film festivals, and they play an important role as a place where new talent is born.",
+    92→      "However, the Japanese film industry also faces challenges. Due to population decline and diversification of entertainment, the number of cinema audiences is on the decline. Especially in regional areas, the number of cases in which cinemas close is increasing. As a result, a regional gap is created in opportunities for people to experience films.",
+    93→      "In order to convey the appeal of Japanese cinema to the future, the national and local governments are also working on preservation and popularization. Projects to digitize and preserve masterpieces and activities to hold screenings for children are advancing. Japanese cinema is not merely entertainment but an important means of transmitting culture."
+    94→    ],
+    95→    questions: [
+    96→      {
+    97→        q: "1950年代[ねんだい]が日本[にほん]映画[えいが]の黄金[おうごん]時代[じだい]と呼[よ]ばれる理由[りゆう]は何[なん]ですか。",
+    98→        choices: ["海外で映画が作られ始めたから", "黒沢明や小津安二郎などの作品が世界に影響を与えたから", "アニメが普及したから", "映画館が増えたから"],
+    99→        answerIndex: 1,
+   100→        explanation: "第二段で、黒沢明監督や小津安二郎監督の作品が世界の映画史に大きな影響を与えたと述べられています。"
+   101→      },
+   102→      {
+   103→        q: "日本[にほん]のアニメーション映画[えいが]の特徴[とくちょう]として挙[あ]げられているのは何[なん]ですか。",
+   104→        choices: ["予算が少ないこと", "独自の美しい映像と深いテーマ", "長い歴史がないこと", "海外で評価されないこと"],
+   105→        answerIndex: 1,
+   106→        explanation: "第三段で、独自の美しい映像と深いテーマで世界中の視聴者を魅了していると書かれています。"
+   107→      },
+   108→      {
+   109→        q: "日本[にほん]の映画産業[えいがさんぎょう]が直面[ちょくめん]している課題[かだい]は何[なん]ですか。",
+   110→        choices: ["観客数が増えすぎていること", "映画館が増えすぎていること", "人口減少や娯楽の多様化により観客数が減少していること", "予算が多すぎること"],
+   111→        answerIndex: 2,
+   112→        explanation: "第五段で、人口減少や娯楽の多様化により観客数が減少傾向にあると説明されています。"
+   113→      },
+   114→      {
+   115→        q: "映画[えいが]の魅力[みりょく]を未来[みらい]に伝[つた]えるために行[おこな]われていることは何[なん]ですか。",
+   116→        choices: ["映画館を閉じること", "名作をデジタル化して保存すること", "映画を作らないこと", "海外の映画だけを上映すること"],
+   117→        answerIndex: 1,
+   118→        explanation: "第六段で、名作をデジタル化して保存する事業が進んでいると書かれています。"
+   119→      },
+   120→      {
+   121→        q: "本文[ほんぶん]の内容[ないよう]と合[あ]っているものはどれですか。",
+   122→        choices: ["日本映画は世界に影響を与えていない", "独立映画は日本の映画文化を支えている", "アニメは海外で評価されていない", "映画館は増加している"],
+   123→        answerIndex: 1,
+   124→        explanation: "第四段で、独立映画が日本の映画文化を支え、新しい才能が生まれる場として重要な役割を果たしていると述べられています。"
+   125→      }
+   126→    ]
+   127→  },
+   128→
+   129→  // ───────────────────────────────────────────────────────────
+   130→  // r-n3-23 — Climate Change Adaptation
+   131→  // ───────────────────────────────────────────────────────────
+   132→  {
+   133→    id: "r-n3-23",
+   134→    title: "気候[きこう]変動[へんどう]への適応[てきおう]",
+   135→    titleReading: "きこうへんどうへのてきおう",
+   136→    level: "N3",
+   137→    summary: "A look at the growing need to adapt to climate change, distinguishing mitigation from adaptation and surveying measures by governments and individuals.",
+   138→    estMinutes: 8,
+   139→    tags: ["environment", "climate", "society", "policy"],
+   140→    body: [
+   141→      "地球[ちきゅう]温暖化[おんだんか]に伴[ともな]う気候[きこう]変動[へんどう]が、世界[せかい]中[じゅう]で深刻[しんこく]な問題[もんだい]となっています。平均[へいきん]気温[きおん]の上昇[じょうしょう]により、猛暑[もうしょ]や干[かん]ばつ、洪水[こうずい]などの異常[いじょう]気象[きしょう]が頻発[ひんぱつ]しています。これまで経験[けいけん]したことのない気候[きこう]の変化[へんか]に、人々[ひとびと]の生活[せいかつ]が脅[おびや]かされています。気候[きこう]変動[へんどう]への対応[たいおう]は、人類[じんるい]の重要[じゅうよう]な課題[かだい]となっています。",
+   142→      "日本[にほん]でも、気候[きこう]変動[へんどう]の影響[えいきょう]がすでに現[あらわ]れています。毎年[まいとし]のように大[おお]きな台風[たいふう]が上陸[じょうりく]し、洪水[こうずい]や土砂崩[どしゃくず]れの被害[ひがい]をもたらしています。また、夏[なつ]の気温[きおん]が年々[ねんねん]上[あ]がり、熱中症[ねっちゅうしょう]で救急[きゅうきゅう]搬送[はんそう]される人[ひと]が増[ふ]えています。農業[のうぎょう]にも影響[えいきょう]が及[およ]び、作物[さくもつ]の収穫[しゅうかく]時期[じき]が変[か]わったり、品質[ひんしつ]が落[お]ちたりするケースが報告[ほうこく]されています。",
+   143→      "気候[きこう]変動[へんどう]への対応[たいおう]には、緩和[かんわ]と適応[てきおう]の二[ふた]つの考[かんが]え方[かた]があります。緩和[かんわ]とは、温室[おんしつ]効果[こうか]ガスを減[へ]らして、気候[きこう]変動[へんどう]の原因[げんいん]そのものを抑[ゆす]えることです。一方[いっぽう]、適応[てきおう]とは、変化[へんか]した気候[きこう]に合[あ]わせて、社会[しゃかい]や生活[せいかつ]の仕組[しく]みを変[か]えることです。どちらも重要[じゅうよう]ですが、すでに進[すす]んでいる変化[へんか]に備[そな]える適応[てきおう]の必要性[ひつようせい]が高[たか]まっています。",
+   144→      "適応[てきおう]の具体[ぐたい]的[てき]な取[と]り組[く]みは様々[さまざま]です。例[たと]えば、河川[かせん]の堤防[ていぼう]を高[たか]くして洪水[こうずい]を防[ふせ]ぐ工事[こうじ]が進[すす]んでいます。また、農業[のうぎょう]では、暑[あつ]さに強[つよ]い品種[ひんしゅ]を開発[かいはつ]したり、灌溉[かんがい]設備[せつび]を整[ととの]えたりする取[と]り組[く]みが行[おこな]われています。都市[とし]では、緑[みどり]を増[ふ]やしてヒートアイランド現象[げんしょう]を和[やわ]らげる工夫[くふう]も進[すす]んでいます。",
+   145→      "地方自治体[ちほうじちたい]の役割[やくわり]も大[おお]きいです。地域[ちいき]の気候[きこう]や地理[ちり]に合[あ]わせた対策[たいさく]を立[た]てるため、自治体[じちたい]ごとに気候[きこう]変動[へんどう]適応[てきおう]計画[けいかく]が作[つく]られています。住民[じゅうみん]への情報[じょうほう]提供[ていきょう]や避難[ひなん]訓練[くんれん]の実施[じっし]も、自治体[じちたい]の重要[じゅうよう]な任務[にんむ]です。地域[ちいき]の特性[とくせい]を理解[りかい]した対応[たいおう]が、被害[ひがい]を最小限[さいしょうげん]にする鍵[かぎ]となります。",
+   146→      "個人[こじん]レベルでも、できることから始[はじ]めることが大切[たいせつ]です。暑[あつ]い日[ひ]には水分[すいぶん]をこまめに取[と]り、避難[ひなん]先[さき]を確認[かくにん]しておくことが命[いのち]を守[まも]ります。さらに、日常[にちじょう]の生活[せいかつ]の中[なか]で節電[せつでん]や省[しょう]資源[しげん]を心[こころ]がけることも、緩和[かんわ]と適応[てきおう]の両方[りょうほう]につながります。気候[きこう]変動[へんどう]は遠[とお]い未来[みらい]の話[はなし]ではなく、今[いま]の私[わたし]たちの問題[もんだい]なのです。"
+   147→    ],
+   148→    translation: [
+   149→      "Climate change accompanied by global warming has become a serious problem all over the world. Due to the rise in average temperature, extreme weather events such as heat waves, droughts, and floods occur frequently. People's lives are threatened by climate changes they have never experienced before. Responding to climate change has become an important task for humanity.",
+   150→      "In Japan too, the effects of climate change have already appeared. Large typhoons make landfall almost every year, bringing damage from floods and landslides. Also, summer temperatures rise year by year, and the number of people transported by ambulance for heatstroke is increasing. Agriculture is also affected, with cases reported in which harvest times of crops change or quality declines.",
+   151→      "There are two approaches to responding to climate change: mitigation and adaptation. Mitigation means reducing greenhouse gases and suppressing the cause of climate change itself. Adaptation, on the other hand, means changing the structure of society and life to fit the changed climate. Both are important, but the need for adaptation, which prepares for changes that have already progressed, is increasing.",
+   152→      "Concrete adaptation efforts are various. For example, work to heighten river embankments to prevent floods is progressing. Also, in agriculture, efforts are being made to develop heat-resistant varieties and to improve irrigation facilities. In cities, ideas to increase greenery and ease the heat island phenomenon are also advancing.",
+   153→      "The role of local governments is also large. In order to make measures suited to the local climate and geography, climate change adaptation plans are being created for each local government. Providing information to residents and conducting evacuation drills are also important duties of local governments. Response that understands regional characteristics becomes the key to minimizing damage.",
+   154→      "Even at the individual level, it is important to start with what one can do. On hot days, taking fluids frequently and confirming evacuation destinations protects lives. Furthermore, being mindful of saving electricity and conserving resources in daily life leads to both mitigation and adaptation. Climate change is not a story of the distant future but a problem for us now."
+   155→    ],
+   156→    questions: [
+   157→      {
+   158→        q: "日本[にほん]で気候[きこう]変動[へんどう]の影響[えいきょう]として挙[あ]げられていないものはどれですか。",
+   159→        choices: ["大[おお]きな台風[たいふう]が上陸[じょうりく]すること", "熱中症[ねっちゅうしょう]で搬送[はんそう]される人[ひと]が増[ふ]えること", "農業[のうぎょう]への影響[えいきょう]", "地震[じしん]が増[ふ]えること"],
+   160→        answerIndex: 3,
+   161→        explanation: "第二段では台風、熱中症、農業への影響が挙げられていますが、地震については触れられていません。"
+   162→      },
+   163→      {
+   164→        q: "緩和[かんわ]とは何[なん]ですか。",
+   165→        choices: ["変化した気候に合わせて社会を変えること", "温室効果ガスを減らして気候変動の原因を抑えること", "台風を止めること", "農業をやめること"],
+   166→        answerIndex: 1,
+   167→        explanation: "第三段で「緩和とは、温室効果ガスを減らして、気候変動の原因そのものを抑えることです」と説明されています。"
+   168→      },
+   169→      {
+   170→        q: "都市[とし]で行[おこな]われている適応[てきおう]の工夫[くふう]は何[なん]ですか。",
+   171→        choices: ["堤防を高くすること", "緑を増やしてヒートアイランド現象を和らげること", "灌溉設備を整えること", "品種を開発すること"],
+   172→        answerIndex: 1,
+   173→        explanation: "第四段で、都市では緑を増やしてヒートアイランド現象を和らげる工夫が進んでいると書かれています。"
+   174→      },
+   175→      {
+   176→        q: "地方自治体[ちほうじちたい]の重要[じゅうよう]な任務[にんむ]として挙[あ]げられているのは何[なん]ですか。",
+   177→        choices: ["海外との貿易", "映画の制作", "住民への情報提供や避難訓練の実施", "学校の建設"],
+   178→        answerIndex: 2,
+   179→        explanation: "第五段で、住民への情報提供や避難訓練の実施が自治体の重要な任務だと述べられています。"
+   180→      },
+   181→      {
+   182→        q: "個人[こじん]レベルでできることとして挙[あ]げられているのは何[なん]ですか。",
+   183→        choices: ["堤防を高くすること", "品種を開発すること", "水分をこまめに取り、避難先を確認すること", "映画館を作ること"],
+   184→        answerIndex: 2,
+   185→        explanation: "第六段で、暑い日には水分をこまめに取り、避難先を確認しておくことが大切だと書かれています。"
+   186→      }
+   187→    ]
+   188→  },
+   189→
+   190→  // ───────────────────────────────────────────────────────────
+   191→  // r-n3-24 — The Role of Libraries
+   192→  // ───────────────────────────────────────────────────────────
+   193→  {
+   194→    id: "r-n3-24",
+   195→    title: "図書館[としょかん]の役割[やくわり]とは",
+   196→    titleReading: "としょかんのやくわりとは",
+   197→    level: "N3",
+   198→    summary: "How modern libraries have evolved beyond book lending into community hubs, their role in reducing social gaps, and the challenges they face.",
+   199→    estMinutes: 7,
+   200→    tags: ["society", "education", "community", "technology"],
+   201→    body: [
+   202→      "図書館[としょかん]は、本[ほん]を読[よ]むための場所[ばしょ]として長[なが]く人々[ひとびと]に利用[りよう]されてきました。しかし、最近[さいきん]は、その役割[やくわり]が大[おお]きく変[か]わりつつあります。単[たん]なる本[ほん]の保管[ほかん]場所[ばしょ]ではなく、情報[じょうほう]や文化[ぶんか]を共有[きょうゆう]するための重要[じゅうよう]な拠点[きょてん]となっています。図書館[としょかん]の変化[へんか]を通[つう]じて、現代[げんだい]社会[しゃかい]の変化[へんか]も見[み]えてきます。",
+   203→      "昔[むかし]の図書館[としょかん]は主[おも]に紙[かみ]の本[ほん]を集[あつ]めていましたが、今[いま]は電子[でんし]書籍[しょせき]やデータベースも提供[ていきょう]しています。インターネットに接続[せつぞく]できるパソコンが設置[せっち]され、オンラインで情報[じょうほう]を検索[けんさく]できる環境[かんきょう]が整[ととの]っています。利用者[りようしゃ]は家[いえ]にいながら、図書館[としょかん]のサイトを通[つう]じて電子[でんし]書籍[しょせき]を借[か]りることもできるようになりました。",
+   204→      "また、現代[げんだい]の図書館[としょかん]は、地域[ちいき]の人々[ひとびと]が集[あつ]まる場[ば]としても機能[きのう]しています。読書[どくしょ]会[かい]や勉強[べんきょう]会[かい]、子[こ]ども向けのイベントなど、様々[さまざま]な活動[かつどう]が行[おこな]われています。静[しず]かに勉強[べんきょう]したい学生[がくせい]から、人[ひと]と話[はな]したいお年寄[としよ]りまで、多[おお]くの人[ひと]が図書館[としょかん]を利用[りよう]しています。図書館[としょかん]は、人々[ひとびと]の学[まな]ぶ意欲[いよく]を支[ささ]える場所[ばしょ]なのです。",
+   205→      "図書館[としょかん]は、社会[しゃかい]の格差[かくさ]を埋[う]める役割[やくわり]も果[はた]しています。経済[けいざい]的[てき]な理由[りゆう]で本[ほん]を買[か]えない家庭[かてい]の子[こ]どもたちにとっても、図書館[としょかん]は重要[じゅうよう]な学習[がくしゅう]の場[ば]です。また、デジタル機器[きき]に不慣[ふな]れな高齢者[こうれいしゃ]に、パソコンの使[つか]い方[かた]を教[おし]える講座[こうざ]を開[ひら]く図書館[としょかん]も増[ふ]えています。誰[だれ]もが情報[じょうほう]にアクセスできる社会[しゃかい]を支[ささ]えています。",
+   206→      "しかしながら、図書館[としょかん]も課題[かだい]に直面[ちょくめん]しています。自治体[じちたい]の予算[よさん]不足[ぶそく]により、購入[こうにゅう]できる本[ほん]の数[かず]が減[へ]っている地域[ちいき]もあります。また、デジタル化[か]が進[すす]む中[なか]で、紙[かみ]の本[ほん]を好[この]む人[ひと]と電子[でんし]書籍[しょせき]を好[この]む人[ひと]の両方[りょうほう]のニーズに応[こた]えることが求[もと]められています。職員[しょくいん]の負担[ふたん]も増[ふ]え、人材[じんざい]確保[かくほ]が課題[かだい]となっています。",
+   207→      "将来[しょうらい]の図書館[としょかん]は、さらに多[おお]くの役割[やくわり]を担[にな]うことになるでしょう。技術[ぎじゅつ]を取[と]り入[い]れつつも、人[ひと]と人[ひと]をつなぐ役割[やくわり]は変[か]わりません。本[ほん]と出会[であ]う喜[よろこ]びや、新[あたら]しい知識[ちしき]を得[え]る楽[たの]しさを、次[つぎ]の世代[せだい]に伝[つた]えていくことが、図書館[としょかん]の大切[たいせつ]な使命[しめい]なのです。"
+   208→    ],
+   209→    translation: [
+   210→      "Libraries have long been used by people as places to read books. However, recently their role has been changing greatly. No longer merely storage places for books, they have become important centers for sharing information and culture. Through the changes in libraries, we can also see the changes in modern society.",
+   211→      "In the past, libraries mainly collected paper books, but now they also provide e-books and databases. Computers connected to the internet are installed, and an environment where one can search for information online is prepared. Users can now even borrow e-books through the library's website while staying at home.",
+   212→      "Also, modern libraries function as places where local people gather. Various activities are held, such as reading clubs, study meetings, and events for children. From students who want to study quietly to elderly people who want to talk with others, many people use libraries. Libraries are places that support people's desire to learn.",
+   213→      "Libraries also play a role in bridging social gaps. For children in families who cannot buy books for economic reasons, libraries are important places to study. Also, more libraries are holding courses to teach elderly people who are unfamiliar with digital devices how to use computers. They support a society in which everyone can access information.",
+   214→      "However, libraries also face challenges. Due to budget shortages in local governments, there are areas where the number of books that can be purchased is decreasing. Also, as digitalization advances, libraries are required to meet the needs of both those who prefer paper books and those who prefer e-books. The burden on staff is also increasing, and securing personnel has become a challenge.",
+   215→      "Future libraries will likely take on even more roles. While incorporating technology, the role of connecting people with people will not change. Conveying to the next generation the joy of encountering books and the pleasure of gaining new knowledge is the important mission of libraries."
+   216→    ],
+   217→    questions: [
+   218→      {
+   219→        q: "現代[げんだい]の図書館[としょかん]が提供[ていきょう]しているものは何[なん]ですか。",
+   220→        choices: ["紙[かみ]の本[ほん]だけ", "電子[でんし]書籍[しょせき]やデータベース", "映画[えいが]だけ", "食事[しょくじ]だけ"],
+   221→        answerIndex: 1,
+   222→        explanation: "第二段で、図書館は電子書籍やデータベースも提供していると書かれています。"
+   223→      },
+   224→      {
+   225→        q: "図書館[としょかん]が社会[しゃかい]の格差[かくさ]を埋[う]める役割[やくわり]として挙[あ]げられているのは何[なん]ですか。",
+   226→        choices: ["高齢者にパソコンの使い方を教えること", "映画を上映すること", "レストランを開くこと", "会社を設立すること"],
+   227→        answerIndex: 0,
+   228→        explanation: "第四段で、デジタル機器に不慣れな高齢者にパソコンの使い方を教える講座を開く図書館が増えていると述べられています。"
+   229→      },
+   230→      {
+   231→        q: "図書館[としょかん]が直面[ちょくめん]している課題[かだい]は何[なん]ですか。",
+   232→        choices: ["利用者が増えすぎること", "予算不足で購入できる本が減ることと、職員確保の難しさ", "映画館が多すぎること", "インターネットが使えないこと"],
+   233→        answerIndex: 1,
+   234→        explanation: "第五段で、予算不足による本の購入減少と、職員の負担増・人材確保が課題だと説明されています。"
+   235→      },
+   236→      {
+   237→        q: "本文[ほんぶん]の内容[ないよう]と合[あ]っているものはどれですか。",
+   238→        choices: ["図書館は単なる本の保管場所である", "図書館は地域の人々が集まる場としても機能している", "図書館は技術を取り入れない", "図書館は次の世代に知識を伝えない"],
+   239→        answerIndex: 1,
+   240→        explanation: "第三段で、図書館は地域の人々が集まる場としても機能していると書かれています。"
+   241→      },
+   242→      {
+   243→        q: "将来[しょうらい]の図書館[としょかん]について、本文[ほんぶん]はどう述[の]べていますか。",
+   244→        choices: ["技術を取り入れつつも、人と人をつなぐ役割は変わらない", "紙の本だけを提供する", "電子書籍だけを提供する", "地域の人々を集めない"],
+   245→        answerIndex: 0,
+   246→        explanation: "第六段で、技術を取り入れつつも人と人をつなぐ役割は変わらないと述べられています。"
+   247→      }
+   248→    ]
+   249→  },
+   250→
+   251→  // ───────────────────────────────────────────────────────────
+   252→  // r-n3-25 — Artificial Intelligence in Society
+   253→  // ───────────────────────────────────────────────────────────
+   254→  {
+   255→    id: "r-n3-25",
+   256→    title: "社会[しゃかい]における人工[じんこう]知能[ちのう]",
+   257→    titleReading: "しゃかいにおけるじんこうちのう",
+   258→    level: "N3",
+   259→    summary: "An overview of how AI is reshaping daily life and industry, the concerns about jobs and ethics, and the need for balanced regulation and education.",
+   260→    estMinutes: 8,
+   261→    tags: ["technology", "AI", "society", "ethics"],
+   262→    body: [
+   263→      "近年[きんねん]、人工[じんこう]知能[ちのう]、つまりAIが目覚[めざ]ましい進歩[しんぽ]を遂[と]げています。膨大[ぼうだい]なデータを学習[がくしゅう]し、人間[にんげん]のように考[かんが]えて判断[はんだん]する技術[ぎじゅつ]が、私[わたし]たちの生活[せいかつ]に浸透[しんとう]し始[はじ]めました。AIは、もはや一部[いちぶ]の専門家[せんもんか]だけの話題[わだい]ではなく、誰[だれ]もが関心[かんしん]を持[も]つべき社会[しゃかい]の問題[もんだい]となっています。",
+   264→      "AIは、日常[にちじょう]生活[せいかつ]の中[なか]でも様々[さまざま]な場面[ばめん]で使[つか]われています。スマートフォンの音声[おんせい]認識[にんしき]、翻訳[ほんやく]アプリ、おすすめの映画[えいが]や商品[しょうひん]を提案[ていあん]するシステムなど、私[わたし]たちは気[き]づかないうちにAIの恩恵[おんけい]を受[う]けています。また、自動[じどう]運転[うんてん]技術[ぎじゅつ]や医療[いりょう]診断[しんだん]の支援[しえん]など、高度[こうど]な分野[ぶんや]での活用[かつよう]も進[すす]んでいます。",
+   265→      "産業[さんぎょう]の面[めん]でも、AIは大[おお]きな変革[へんかく]をもたらしています。工場[こうじょう]では、AIを搭載[とうさい]したロボットが作業[さぎょう]を自動[じどう]化[か]し、生産[せいさん]効率[こうりつ]を向上[こうじょう]させています。また、小売[こうり]業[ぎょう]では、顧客[こきゃく]の購買[こうばい]データを分析[ぶんせき]して、最適[さいてき]な在庫[ざいこ]管理[かんり]を行[おこな]うシステムが導入[どうにゅう]されています。AIの導入[どうにゅう]により、企業[きぎょう]はより速[はや]く、より正確[せいかく]な判断[はんだん]ができるようになりました。",
+   266→      "しかし、AIの普及[ふきゅう]には懸念[けねん]もあります。最大[さいだい]の懸念[けねん]は、仕事[しごと]が奪[うば]われることです。これまで人間[にんげん]が行[おこな]ってきた単純[たんじゅん]作業[さぎょう]の多[おお]くが、AIによって置[お]き換[か]えられる可能性[かのうせい]が高[たか]いです。また、AIが下[くだ]した判断[はんだん]の理由[りゆう]が不明[ふめい]な場合[ばあい]があることや、個人情報[こじんじょうほう]が不適切[ふてきせつ]に使[つか]われる可能性[かのうせい]など、倫理[りんり]的[てき]な問題[もんだい]も指摘[してき]されています。",
+   267→      "これらの課題[かだい]に対[たい]して、教育[きょういく]と規制[きせい]の両方[りょうほう]のアプローチが必要[ひつよう]です。学校[がっこう]では、AIについて正[ただ]しく理解[りかい]し、批判[ひはん]的[てき]に考[かんが]える力[ちから]を養[やしな]う教育[きょういく]が始[はじ]まっています。また、政府[せいふ]はAIの利用[りよう]に関する法律[ほうりつ]や指針[ししん]を整備[せいび]し、個人情報[こじんじょうほう]の保護[ほご]や透明性[とうめいせい]の確保[かくほ]に取[と]り組[く]んでいます。",
+   268→      "AIは人間[にんげん]の敵[てき]ではなく、強[つよ]い味方[みかた]になり得[え]る存在[そんざい]です。しかし、そのためには、技術[ぎじゅつ]を正[ただ]しく使[つか]いこなす人間[にんげん]の知恵[ちえ]が不可欠[ふかけつ]です。AIと人間[にんげん]が共存[きょうそん]する社会[しゃかい]を築[きず]くためには、技術[ぎじゅつ]への理解[りかい]と倫理[りんり]的[てき]な配慮[はいりょ]の両方[りょうほう]をバランス良[よ]く発展[はってん]させていく必要[ひつよう]があるでしょう。"
+   269→    ],
+   270→    translation: [
+   271→      "In recent years, artificial intelligence, or AI, has been making remarkable progress. Technology that learns from enormous amounts of data and thinks and makes judgments like humans has begun to permeate our lives. AI is no longer a topic only for some specialists but has become a social issue that everyone should be interested in.",
+   272→      "AI is used in various scenes of daily life as well. Voice recognition on smartphones, translation apps, and systems that recommend movies and products—unconsciously, we receive the benefits of AI. Also, the use of AI in advanced fields such as autonomous driving technology and support for medical diagnosis is advancing.",
+   273→      "In terms of industry, AI is bringing major changes as well. In factories, robots equipped with AI automate work and improve production efficiency. Also, in retail, systems that analyze customers' purchase data and perform optimal inventory management have been introduced. With the introduction of AI, companies have become able to make faster and more accurate decisions.",
+   274→      "However, there are also concerns about the spread of AI. The biggest concern is that jobs will be taken away. Much of the simple work that humans have done until now has a high possibility of being replaced by AI. Also, ethical problems are pointed out, such as cases in which the reasons for judgments made by AI are unclear and the possibility that personal information may be used inappropriately.",
+   275→      "In response to these challenges, both educational and regulatory approaches are necessary. In schools, education has begun to foster the ability to correctly understand AI and think critically about it. Also, the government is developing laws and guidelines concerning the use of AI, working on the protection of personal information and ensuring transparency.",
+   276→      "AI is not an enemy of humans but can be a strong ally. However, for that to happen, human wisdom to use technology correctly is indispensable. In order to build a society in which AI and humans coexist, both understanding of technology and ethical consideration need to develop in a well-balanced way."
+   277→    ],
+   278→    questions: [
+   279→      {
+   280→        q: "AIが日常[にちじょう]生活[せいかつ]で使[つか]われている例[れい]として挙[あ]げられていないものはどれですか。",
+   281→        choices: ["スマートフォンの音声[おんせい]認識[にんしき]", "翻訳[ほんやく]アプリ", "お勧[すす]めの映画[えいが]を提案[ていあん]するシステム", "手作[てづく]りの料理[りょうり]"],
+   282→        answerIndex: 3,
+   283→        explanation: "第二段では音声認識、翻訳アプリ、おすすめ提案システムが挙げられていますが、手作りの料理は触れられていません。"
+   284→      },
+   285→      {
+   286→        q: "AIが産業[さんぎょう]にもたらした変化[へんか]は何[なん]ですか。",
+   287→        choices: ["生産[せいさん]効率[こうりつ]の低下[ていか]", "在庫[ざいこ]管理[かんり]の非効率化", "より速[はや]く、より正確[せいかく]な判断[はんだん]ができること", "ロボットの廃止[はいし]"],
+   288→        answerIndex: 2,
+   289→        explanation: "第三段で、AIの導入により企業はより速く、より正確な判断ができるようになったと述べられています。"
+   290→      },
+   291→      {
+   292→        q: "AIの普及[ふきゅう]に対[たい]する最大[さいだい]の懸念[けねん]は何[なん]ですか。",
+   293→        choices: ["AIが高価[こうか]すぎること", "仕事[しごと]が奪[うば]われること", "AIが芸術[げいじゅつ]を作[つく]らないこと", "AIが増[ふ]えすぎること"],
+   294→        answerIndex: 1,
+   295→        explanation: "第四段で「最大の懸念は、仕事が奪われることです」と書かれています。"
+   296→      },
+   297→      {
+   298→        q: "AIの課題[かだい]に対[たい]するアプローチとして挙[あ]げられているのは何[なん]ですか。",
+   299→        choices: ["教育[きょういく]と規制[きせい]の両方[りょうほう]", "AIの禁止[きんし]だけ", "AIの輸出[ゆしゅつ]だけ", "AIの隠蔽[いんぺい]だけ"],
+   300→        answerIndex: 0,
+   301→        explanation: "第五段で、教育と規制の両方のアプローチが必要だと述べられています。"
+   302→      },
+   303→      {
+   304→        q: "本文[ほんぶん]の内容[ないよう]と合[あ]っているものはどれですか。",
+   305→        choices: ["AIは人間[にんげん]の敵[てき]である", "AIは人間[にんげん]と共存[きょうそん]できる存在[そんざい]である", "AIは技術[ぎじゅつ]だけで解決[かいけつ]できる", "AIに倫理[りんり]的[てき]な配慮[はいりょ]は不要[ふよう]である"],
+   306→        answerIndex: 1,
+   307→        explanation: "第六段で、AIは人間の敵ではなく強い味方になり得ると述べられています。"
+   308→      }
+   309→    ]
+   310→  },
+   311→
+   312→  // ───────────────────────────────────────────────────────────
+   313→  // r-n3-26 — Traditional Japanese Cuisine
+   314→  // ───────────────────────────────────────────────────────────
+   315→  {
+   316→    id: "r-n3-26",
+   317→    title: "日本[にほん]の伝統[でんとう]料理[りょうり]",
+   318→    titleReading: "にほんのでんとうりょうり",
+   319→    level: "N3",
+   320→    summary: "An introduction to washoku, its seasonal sensibility and nutritional balance, its UNESCO heritage status, and the challenges of preserving the tradition.",
+   321→    estMinutes: 7,
+   322→    tags: ["culture", "food", "tradition", "UNESCO"],
+   323→    body: [
+   324→      "日本[にほん]の伝統[でんとう]的[てき]な料理[りょうり]は、「和食[わしょく]」と呼[よ]ばれ、世界[せかい]中[じゅう]で愛[あい]されています。和食[わしょく]は、単[たん]なる食事[しょくじ]ではなく、自然[しぜん]の恵[めぐ]みを感謝[かんしゃ]の気持[きも]ちと共[とも]に味[あじ]わう文化[ぶんか]です。その歴史[れきし]と哲学[てつがく]は、日本人[にほんじん]の生活[せいかつ]に深[ふか]く根付[ねづ]いています。",
+   325→      "和食[わしょく]の特徴[とくちょう]は、季節[きせつ]感[かん]と栄養[えいよう]のバランスです。春[はる]には山菜[さんさい]を、夏[なつ]には涼[すず]しい麺類[めんるい]を、秋[あき]には秋刀魚[さんま]などを、冬[ふゆ]には鍋[なべ]料理[りょうり]を楽[たの]しむように、季節[きせつ]ごとの食材[しょくざい]を大切[たいせつ]にします。また、「一汁三菜[いちじゅうさんさい]」と呼[よ]ばれる、汁物[しるもの]と三[みっ]つのおかずを組[く]み合[あ]わせた食事[しょくじ]の形[かたち]は、栄養[えいよう]バランスに優[すぐ]れています。",
+   326→      "2013年[ねん]に、和食[わしょく]はユネスコの無形[むけい]文化[ぶんか]遺産[いさん]に登録[とうろく]されました。これは、和食[わしょく]が単[たん]なる料理[りょうり]の技術[ぎじゅつ]ではなく、自然[しぜん]を尊重[そんちょう]する精神[せいしん]や社会[しゃかい]の慣習[かんしゅう]を含[ふく]む文化[ぶんか]であることが評価[ひょうか]されたからです。この登録[とうろく]を機[き]に、海外[かいがい]でも和食[わしょく]に対[たい]する関心[かんしん]が高[たか]まりました。",
+   327→      "和食[わしょく]には、寿司[すし]、刺身[さしみ]、天[てん]ぷら、そばなど、多[おお]くの代表的[だいひょうてき]な料理[りょうり]があります。これらは、素材[そざい]の本来[ほんらい]の味[あじ]を生[い]かす調理[ちょうり]法[ほう]が特徴[とくちょう]です。例[たと]えば、寿司[すし]は新鮮[しんせん]な魚[さかな]の味[あじ]を直接[ちょくせつ]楽[たの]しむことができ、天[てん]ぷらは衣[ころも]が薄[うす]く、素材[そざい]の風味[ふうみ]を損[そこな]ないません。",
+   328→      "しかし、現代[げんだい]の日本[にほん]では、食生活[しょくせいかつ]の西洋化[せいようか]が進[すす]んでいます。若[わか]い世代[せだい]を中心[ちゅうしん]に、パンや肉[にく]料理[りょうり]を好[この]む人[ひと]が増[ふ]え、伝統[でんとう]料理[りょうり]を食[た]べる機会[きかい]が減[へ]っています。一方[いっぽう]で、海外[かいがい]では寿司[すし]やラーメンが人気[にんき]となり、現地[げんち]の味[あじ]に合[あ]わせた変化[へんか]も起[お]きています。和食[わしょく]の文化[ぶんか]は、国内[こくない]と海外[かいがい]で異[こと]なる運命[うんめい]を辿[たど]っています。",
+   329→      "和食[わしょく]の文化[ぶんか]を未来[みらい]に残[のこ]すため、学校[がっこう]で料理[りょうり]を教[おし]える活動[かつどう]や、地域[ちいき]で伝統[でんとう]料理[りょうり]を伝[つた]える取[と]り組[く]みが行[おこな]われています。食[しょく]は、文化[ぶんか]を伝[つた]える強[つよ]い手段[しゅだん]です。家庭[かてい]や学校[がっこう]で和食[わしょく]を味[あじ]わう機会[きかい]を増[ふ]やすことが、伝統[でんとう]を守[まも]る第一歩[だいいっぽ]となるでしょう。"
+   330→    ],
+   331→    translation: [
+   332→      "Traditional Japanese cuisine, called washoku, is loved all over the world. Washoku is not merely a meal but a culture in which one savors the blessings of nature together with a feeling of gratitude. Its history and philosophy are deeply rooted in the lives of Japanese people.",
+   333→      "The characteristics of washoku are a sense of the seasons and nutritional balance. As people enjoy mountain vegetables in spring, cool noodles in summer, saury in autumn, and hot pot dishes in winter, ingredients for each season are valued. Also, the meal style called ichiju sansai, which combines a soup and three side dishes, excels in nutritional balance.",
+   334→      "In 2013, washoku was registered as a UNESCO intangible cultural heritage. This was because washoku was evaluated as a culture that includes not merely cooking techniques but also the spirit of respecting nature and social customs. With this registration as an opportunity, interest in washoku increased overseas as well.",
+   335→      "Washoku includes many representative dishes such as sushi, sashimi, tempura, and soba. These are characterized by cooking methods that bring out the original flavor of the ingredients. For example, with sushi you can directly enjoy the taste of fresh fish, and tempura has a thin batter so it does not damage the flavor of the ingredients.",
+   336→      "However, in modern Japan, the Westernization of dietary habits is progressing. Centered on the younger generation, more people prefer bread and meat dishes, and opportunities to eat traditional cuisine are decreasing. On the other hand, sushi and ramen have become popular overseas, and changes have occurred to suit local tastes. The culture of washoku is following different destinies at home and abroad.",
+   337→      "In order to preserve the culture of washoku for the future, activities to teach cooking in schools and efforts to pass on traditional cuisine in local communities are being carried out. Food is a strong means of transmitting culture. Increasing opportunities to savor washoku at home and school will be the first step to protecting tradition."
+   338→    ],
+   339→    questions: [
+   340→      {
+   341→        q: "和食[わしょく]の特徴[とくちょう]として挙[あ]げられているのは何[なん]ですか。",
+   342→        choices: ["季節[きせつ]感[かん]と栄養[えいよう]のバランス", "高価[こうか]な食材[しょくざい]を使[つか]うこと", "肉[にく]料理[りょうり]が中心[ちゅうしん]であること", "西洋[せいよう]風[ふう]の味付[あじつ]け"],
+   343→        answerIndex: 0,
+   344→        explanation: "第二段で、和食の特徴は季節感と栄養のバランスであると述べられています。"
+   345→      },
+   346→      {
+   347→        q: "和食[わしょく]がユネスコの無形[むけい]文化[ぶんか]遺産[いさん]に登録[とうろく]された理由[りゆう]は何[なん]ですか。",
+   348→        choices: ["料理の技術だけが優れていたから", "自然を尊重する精神や社会の慣習を含む文化であるから", "料理が高価だったから", "海外で人気がなかったから"],
+   349→        answerIndex: 1,
+   350→        explanation: "第三段で、自然を尊重する精神や社会の慣習を含む文化であることが評価されたと説明されています。"
+   351→      },
+   352→      {
+   353→        q: "和食[わしょく]の代表的[だいひょうてき]な料理[りょうり]として挙[あ]げられていないものはどれですか。",
+   354→        choices: ["寿司[すし]", "天[てん]ぷら", "ハンバーガー", "そば"],
+   355→        answerIndex: 2,
+   356→        explanation: "第四段では寿司、刺身、天ぷら、そばが挙げられていますが、ハンバーガーは触れられていません。"
+   357→      },
+   358→      {
+   359→        q: "現代[げんだい]の日本[にほん]で起[お]きていることは何[なん]ですか。",
+   360→        choices: ["若[わか]い世代[せだい]が和食[わしょく]ばかり食[た]べている", "食生活[しょくせいかつ]の西洋化[せいようか]が進[すす]んでいる", "パンを食[た]べる人[ひと]が減[へ]っている", "伝統[でんとう]料理[りょうり]を食[た]べる機会[きかい]が増[ふ]えている"],
+   361→        answerIndex: 1,
+   362→        explanation: "第五段で、現代の日本では食生活の西洋化が進み、若い世代を中心にパンや肉料理を好む人が増えていると書かれています。"
+   363→      },
+   364→      {
+   365→        q: "和食[わしょく]の文化[ぶんか]を未来[みらい]に残[のこ]すための取[と]り組[く]みとして挙[あ]げられているのは何[なん]ですか。",
+   366→        choices: ["和食を食べないこと", "海外でだけ和食を食べること", "学校で料理を教える活動や、地域で伝統料理を伝える取り組み", "伝統料理を廃止すること"],
+   367→        answerIndex: 2,
+   368→        explanation: "第六段で、学校で料理を教える活動や、地域で伝統料理を伝える取り組みが行われていると書かれています。"
+   369→      }
+   370→    ]
+   371→  },
+   372→
+   373→  // ───────────────────────────────────────────────────────────
+   374→  // r-n3-27 — Youth Unemployment
+   375→  // ───────────────────────────────────────────────────────────
+   376→  {
+   377→    id: "r-n3-27",
+   378→    title: "若者[わかもの]の失業[しつぎょう]問題[もんだい]",
+   379→    titleReading: "わかもののしつぎょうもんだい",
+   380→    level: "N3",
+   381→    summary: "An examination of the causes and consequences of youth unemployment in Japan, the rise of non-regular work, and the policies and education needed to address it.",
+   382→    estMinutes: 8,
+   383→    tags: ["society", "labor", "youth", "economy"],
+   384→    body: [
+   385→      "若者[わかもの]の失業[しつぎょう]は、多[おお]くの国[くに]で深刻[しんこく]な社会[しゃかい]問題[もんだい]となっています。若[わか]い人[ひと]が仕事[しごと]を見[み]つけられないと、経済[けいざい]的[てき]な困難[こんなん]だけでなく、将来[しょうらい]への希望[きぼう]も失[うしな]ってしまうことがあります。日本[にほん]でも、若者[わかもの]の雇用[こよう]問題[もんだい]は長年[ながねん]にわたり重要[じゅうよう]な課題[かだい]とされてきました。",
+   386→      "若者[わかもの]の失業[しつぎょう]の原因[げんいん]は複雑[ふくざつ]です。一[ひと]つの理由[りゆう]は、学校[がっこう]で学[まな]んだ内容[ないよう]と、企業[きぎょう]が求[もと]めるスキルの間[あいだ]に乖離[かいり]があることです。いわゆる「ミスマッチ」が起[お]きており、求人[きゅうじん]があっても応募[おうぼ]できる人[ひと]が限[かぎ]られるという状況[じょうきょう]が生[う]まれています。また、景気[けいき]の変動[へんどう]により、新[あたら]しい卒業生[そつぎょうせい]の採用[さいよう]が減[へ]る年[とし]もあります。",
+   387→      "日本[にほん]の若者[わかもの]は、非正規[ひせいき]雇用[こよう]で働[はたら]く割合[わりあい]が高[たか]いことも問題[もんだい]です。正社員[せいしゃいん]として働[はたら]けない若者[わかもの]は、給料[きゅうりょう]が低[ひく]く、雇用[こよう]が不安定[ふあんてい]なため、将来[しょうらい]の設計[せっけい]が難[むずか]しくなります。結婚[けっこん]や住宅[じゅうたく]の購入[こうにゅう]をあきらめる人[ひと]もおり、社会[しゃかい]全体[ぜんたい]に波及[はけい]効果[こうか]が及[およ]んでいます。",
+   388→      "仕事[しごと]がない期間[きかん]が長[なが]くなると、若者[わかもの]の自信[じしん]が失[うしな]われ、社会[しゃかい]参加[さんか]から遠[とお]ざかるリスクが高[たか]まります。「ニート」と呼[よ]ばれる、仕事[しごと]も教育[きょういく]も受[う]けない若者[わかもの]の存在[そんざい]も、深刻[しんこく]な問題[もんだい]です。彼[かれ]らを社会[しゃかい]に戻[もど]すためには、個[こ]人[じん]の状況[じょうきょう]に合[あ]わせたきめ細[こま]かい支援[しえん]が必要[ひつよう]です。",
+   389→      "政府[せいふ]は、若者[わかもの]の雇用[こよう]を支[ささ]えるため、ジョブカード制度[せいど]や若者[わかもの]雇用[こよう]支援[しえん]センターを設置[せっち]しています。また、企業[きぎょう]にも、新[あたら]しい卒業生[そつぎょうせい]を継続[けいぞく]的[てき]に採用[さいよう]するよう呼[よ]びかけています。地域[ちいき]レベルでも、地元[じもと]企業[きぎょう]と学生[がくせい]をつなぐインターンシップが活発[かっぱつ]化[か]し、学校[がっこう]から仕事[しごと]への移行[いこう]を助[たす]ける動[うご]きが広[ひろ]がっています。",
+   390→      "根本[こんぽん]的[てき]な解決[かいけつ]には、教育[きょういく]の役割[やくわり]が大[おお]きいです。学校[がっこう]で実践[じっせん]的[てき]なスキルを身[み]につけると同時[どうじ]に、自分[じぶん]の適性[てきせい]を見[み]つめる力[ちから]を養[やしな]う必要[ひつよう]があります。また、一度[いちど]失敗[しっぱい]しても再[さい]挑戦[ちょうせん]できる社会[しゃかい]の仕組[しく]みも大切[たいせつ]です。若者[わかもの]が希望[きぼう]を持[も]って将来[しょうらい]を描[えが]ける社会[しゃかい]を築[きず]くことが、私[わたし]たち大人[おとな]の責任[せきにん]です。"
+   391→    ],
+   392→    translation: [
+   393→      "Youth unemployment has become a serious social problem in many countries. When young people cannot find work, they may suffer not only economic hardship but also lose hope for the future. In Japan too, the youth employment issue has been considered an important challenge for many years.",
+   394→      "The causes of youth unemployment are complex. One reason is a gap between what is learned in school and the skills companies seek. A so-called mismatch occurs, creating a situation in which there are job openings but only a limited number of people can apply. Also, due to fluctuations in the economy, there are years in which the hiring of new graduates decreases.",
+   395→      "It is also a problem that a high proportion of young people in Japan work in non-regular employment. Young people who cannot work as full-time employees have low salaries and unstable employment, making it difficult to plan for the future. Some give up on marriage or buying a home, and the ripple effects spread throughout society.",
+   396→      "When the period without work grows long, young people lose confidence and the risk of distancing themselves from social participation rises. The existence of young people called NEETs, who neither work nor receive education, is also a serious problem. In order to bring them back to society, fine-grained support suited to each individual's situation is necessary.",
+   397→      "The government has established the job card system and youth employment support centers in order to support youth employment. Also, it calls on companies to continue hiring new graduates. At the regional level too, internships connecting local companies with students have become active, and efforts to support the transition from school to work are spreading.",
+   398→      "Education plays a major role in a fundamental solution. It is necessary to acquire practical skills in school while also fostering the ability to consider one's own aptitude. Also, a social structure that allows re-challenge even after one failure is important. Building a society in which young people can picture the future with hope is the responsibility of us adults."
+   399→    ],
+   400→    questions: [
+   401→      {
+   402→        q: "若者[わかもの]の失業[しつぎょう]の原因[げんいん]として挙[あ]げられているのは何[なん]ですか。",
+   403→        choices: ["学校[がっこう]の内容[ないよう]と企業[きぎょう]が求[もと]めるスキルの乖離[かいり]", "若者[わかもの]が働[はたら]きたくないから", "給料[きゅうりょう]が高[たか]すぎるから", "仕事[しごと]が多[おお]すぎるから"],
+   404→        answerIndex: 0,
+   405→        explanation: "第二段で、学校で学んだ内容と企業が求めるスキルの間に乖離があることが原因として挙げられています。"
+   406→      },
+   407→      {
+   408→        q: "非正規[ひせいき]雇用[こよう]で働[はたら]く若者[わかもの]が直面[ちょくめん]する問題[もんだい]は何[なん]ですか。",
+   409→        choices: ["給料[きゅうりょう]が高[たか]すぎること", "将来[しょうらい]の設計[せっけい]が難[むずか]しくなること", "雇用[こよう]が安定[あんてい]していること", "正社員[せいしゃいん]になれること"],
+   410→        answerIndex: 1,
+   411→        explanation: "第三段で、非正規雇用の若者は給料が低く雇用が不安定なため、将来の設計が難しくなると説明されています。"
+   412→      },
+   413→      {
+   414→        q: "「ニート」とはどのような若者[わかもの]ですか。",
+   415→        choices: ["働[はたら]きながら勉強[べんきょう]する若者[わかもの]", "仕事[しごと]も教育[きょういく]も受[う]けない若者[わかもの]", "正社員[せいしゃいん]として働[はたら]く若者[わかもの]", "海外[かいがい]で働[はたら]く若者[わかもの]"],
+   416→        answerIndex: 1,
+   417→        explanation: "第四段で「ニート」とは仕事も教育も受けない若者と説明されています。"
+   418→      },
+   419→      {
+   420→        q: "政府[せいふ]が設置[せっち]したものは何[なん]ですか。",
+   421→        choices: ["映画館[えいがかん]", "ジョブカード制度[せいど]や若者[わかもの]雇用[こよう]支援[しえん]センター", "図書館[としょかん]", "学校[がっこう]"],
+   422→        answerIndex: 1,
+   423→        explanation: "第五段で、政府はジョブカード制度や若者雇用支援センターを設置していると書かれています。"
+   424→      },
+   425→      {
+   426→        q: "根本[こんぽん]的[てき]な解決[かいけつ]に大切[たいせつ]なのは何[なん]ですか。",
+   427→        choices: ["教育[きょういく]の役割[やくわり]", "仕事[しごと]を減[へ]らすこと", "若者[わかもの]を社会[しゃかい]から遠[とお]ざけること", "失敗[しっぱい]を許[ゆる]さないこと"],
+   428→        answerIndex: 0,
+   429→        explanation: "第六段で、根本的な解決には教育の役割が大きいと述べられています。"
+   430→      }
+   431→    ]
+   432→  },
+   433→
+   434→  // ───────────────────────────────────────────────────────────
+   435→  // r-n3-28 — The Housing Market
+   436→  // ───────────────────────────────────────────────────────────
+   437→  {
+   438→    id: "r-n3-28",
+   439→    title: "住宅[じゅうたく]市場[しじょう]の現状[げんじょう]",
+   440→    titleReading: "じゅうたくしじょうのげんじょう",
+   441→    level: "N3",
+   442→    summary: "A look at the dual challenge of soaring urban housing prices and growing vacant homes in rural Japan, the impact on families, and government responses.",
+   443→    estMinutes: 8,
+   444→    tags: ["economy", "housing", "society", "policy"],
+   445→    body: [
+   446→      "住宅[じゅうたく]は、人々[ひとびと]の生活[せいかつ]の基盤[きばん]となる重要[じゅうよう]な財産[ざいさん]です。しかし、最近[さいきん]の住宅[じゅうたく]市場[しじょう]は、複雑[ふくざつ]な状況[じょうきょう]に直面[ちょくめん]しています。都市[とし]部[ぶ]では住宅[じゅうたく]価格[かかく]が上[あ]がり続[つづ]ける一方[いっぽう]で、地方[ちほう]では空[あ]き家[や]が増[ふ]えるという、二[ふた]つの異[こと]なる問題[もんだい]が同時[どうじ]に起[お]きています。",
+   447→      "東京[とうきょう]や大阪[おおさか]などの大[おお]都市[とし]では、住宅[じゅうたく]の需要[じゅよう]が高[たか]く、価格[かかく]が年々[ねんねん]上[あ]がっています。特[とく]に都心[としん]部[ぶ]のマンションは、投資[とうし]目的[もくてき]で買[か]う人[ひと]も多[おお]く、価格[かかく]が高騰[こうとう]しています。若[わか]い世代[せだい]が都心[としん]に家[いえ]を買[か]うことは、ますます難[むずか]しくなっています。",
+   448→      "一方[いっぽう]、地方[ちほう]では人口[じんこう]減少[げんしょう]により、空[あ]き家[や]が増[ふ]えています。親[おや]の世代[せだい]が亡[な]くなり、子[こ]どもたちが都市[とし]に住[す]んでいるため、実家[じっか]が空[あ]き家[や]になるケースが多[おお]いです。放置[ほうち]された空[あ]き家[や]は、景観[けいかん]を損[そこな]うだけでなく、防災[ぼうさい]上[じょう]のリスクにもなっています。",
+   449→      "住宅[じゅうたく]問題[もんだい]は、若[わか]い家族[かぞく]の生活[せいかつ]計画[けいかく]にも大[おお]きな影響[えいきょう]を与[あた]えています。住宅[じゅうたく]ローンの負担[ふたん]が重[おも]いため、子[こ]どもを持[も]つことを先延[さきの]ばしする夫婦[ふうふ]もいます。また、賃貸[ちんたい]で暮[く]らす人[ひと]も、家賃[やちん]の上[あ]がりにより生活[せいかつ]費[ひ]が圧迫[あっぱく]されています。住[す]まいの不安定[ふあんてい]さは、少子化[しょうしか]の一[ひと]つの原因[げんいん]とも指摘[してき]されています。",
+   450→      "政府[せいふ]は、住宅[じゅうたく]政策[せいさく]を通[つう]じてこの問題[もんだい]に対応[たいおう]しています。都市[とし]部[ぶ]では、公営[こうえい]住宅[じゅうたく]の供給[きょうきゅう]を増[ふ]やし、若[わか]い世代[せだい]向けの支援[しえん]制度[せいど]を整備[せいび]しています。地方[ちほう]では、移住[いじゅう]を促[うなが]すための補助金[ほじょきん]や、空[あ]き家[や]を活用[かつよう]したシェアハウスの設立[せつりつ]などを支援[しえん]しています。",
+   451→      "住宅[じゅうたく]市場[しじょう]の将来[しょうらい]は、人口[じんこう]動態[どうたい]や働[はたら]き方[かた]の変化[へんか]に大[おお]きく左右[さゆう]されるでしょう。テレワークの普及[ふきゅう]により、都市[とし]に住[す]む必要[ひつよう]がなくなれば、地方[ちほう]の住宅[じゅうたく]需要[じゅよう]も回復[かいふく]する可能性[かのうせい]があります。それぞれの地域[ちいき]が魅力[みりょく]を高[たか]め、多様[たよう]な住[す]まい方[かた]が選[えら]べる社会[しゃかい]を作[つく]ることが、今後[こんご]の課題[かだい]です。"
+   452→    ],
+   453→    translation: [
+   454→      "Housing is an important asset that forms the foundation of people's lives. However, the housing market recently faces a complex situation. While housing prices continue to rise in urban areas, in rural areas the number of vacant houses increases—two different problems occur at the same time.",
+   455→      "In large cities such as Tokyo and Osaka, demand for housing is high and prices rise year by year. In particular, many people buy condominiums in central districts for investment purposes, and prices soar. It is becoming increasingly difficult for the younger generation to buy homes in central areas.",
+   456→      "On the other hand, in rural areas, vacant houses are increasing due to population decline. There are many cases in which the parents' generation passes away and the children live in cities, leaving the family home empty. Vacant houses left unattended not only damage the landscape but also become a risk in terms of disaster prevention.",
+   457→      "The housing problem also has a major impact on the life plans of young families. Because the burden of housing loans is heavy, some couples postpone having children. Also, people living in rentals are pressed by living expenses due to rising rent. The instability of housing is pointed out as one of the causes of the declining birthrate.",
+   458→      "The government responds to this problem through housing policy. In urban areas, it increases the supply of public housing and develops support systems for the younger generation. In rural areas, it supports subsidies to encourage migration and the establishment of share houses using vacant houses.",
+   459→      "The future of the housing market will be greatly influenced by demographic trends and changes in work styles. With the spread of remote work, if it becomes unnecessary to live in cities, demand for rural housing may also recover. It is a future challenge for each region to increase its appeal and build a society in which diverse ways of living can be chosen."
+   460→    ],
+   461→    questions: [
+   462→      {
+   463→        q: "都市[とし]部[ぶ]で起[お]きている問題[もんだい]は何[なん]ですか。",
+   464→        choices: ["住宅[じゅうたく]価格[かかく]が下[さ]がっている", "住宅[じゅうたく]価格[かかく]が上[あ]がり続[つづ]けている", "空[あ]き家[や]が増[ふ]えている", "人口[じんこう]が増[ふ]えている"],
+   465→        answerIndex: 1,
+   466→        explanation: "第二段で、大都市では住宅の需要が高く、価格が年々上がっていると書かれています。"
+   467→      },
+   468→      {
+   469→        q: "地方[ちほう]で空[あ]き家[や]が増[ふ]える理由[りゆう]は何[なん]ですか。",
+   470→        choices: ["住宅[じゅうたく]を建[た]てる人[ひと]が増[ふ]えたから", "人口[じんこう]減少[げんしょう]により、親[おや]が亡[な]くなり子[こ]どもが都市[とし]に住[す]んでいるから", "家賃[やちん]が高[たか]すぎるから", "新[あたら]しい建物[たてもの]が多[おお]すぎるから"],
+   471→        answerIndex: 1,
+   472→        explanation: "第三段で、親の世代が亡くなり子どもたちが都市に住んでいるため、実家が空き家になると説明されています。"
+   473→      },
+   474→      {
+   475→        q: "住宅[じゅうたく]問題[もんだい]が若[わか]い家族[かぞく]に与[あた]える影響[えいきょう]は何[なん]ですか。",
+   476→        choices: ["子[こ]どもを持[も]つことを先延[さきの]ばしすること", "都心[としん]に家[いえ]を買[か]えること", "生活[せいかつ]費[ひ]が減[へ]ること", "家賃[やちん]が下[さ]がること"],
+   477→        answerIndex: 0,
+   478→        explanation: "第四段で、住宅ローンの負担が重いため子どもを持つことを先延ばしする夫婦もいると述べられています。"
+   479→      },
+   480→      {
+   481→        q: "政府[せいふ]が地方[ちほう]で行[おこな]っている政策[せいさく]は何[なん]ですか。",
+   482→        choices: ["公営[こうえい]住宅[じゅうたく]の供給[きょうきゅう]を増[ふ]やすこと", "移住[いじゅう]を促[うなが]す補助金[ほじょきん]や空[あ]き家[や]を活用[かつよう]したシェアハウスの設立[せつりつ]の支援[しえん]", "住宅[じゅうたく]価格[かかく]を上[あ]げること", "空[あ]き家[や]を増[ふ]やすこと"],
+   483→        answerIndex: 1,
+   484→        explanation: "第五段で、地方では移住を促す補助金や、空き家を活用したシェアハウスの設立を支援していると書かれています。"
+   485→      },
+   486→      {
+   487→        q: "住宅[じゅうたく]市場[しじょう]の将来[しょうらい]を左右[さゆう]すると述[の]べられているのは何[なん]ですか。",
+   488→        choices: ["映画[えいが]の人気[にんき]", "人口[じんこう]動態[どうたい]や働[はたら]き方[かた]の変化[へんか]", "食文化[しょくぶんか]の変化[へんか]", "図書館[としょかん]の数[かず]"],
+   489→        answerIndex: 1,
+   490→        explanation: "第六段で、住宅市場の将来は人口動態や働き方の変化に大きく左右されると述べられています。"
+   491→      }
+   492→    ]
+   493→  },
+   494→
+   495→  // ───────────────────────────────────────────────────────────
+   496→  // r-n3-29 — Mental Health in Schools
+   497→  // ───────────────────────────────────────────────────────────
+   498→  {
+   499→    id: "r-n3-29",
+   500→    title: "学校[がっこう]のメンタルヘルス問題[もんだい]",
+   501→    titleReading: "がっこうのめんたるへるすもんだい",
+   502→    level: "N3",
+   503→    summary: "A reflection on the rising mental health concerns among students, the causes from academic pressure to social media, and the roles of schools, families, and communities.",
+   504→    estMinutes: 7,
+   505→    tags: ["education", "mental health", "society", "youth"],
+   506→    body: [
+   507→      "近年[きんねん]、学校[がっこう]におけるメンタルヘルスの問題[もんだい]が深刻[しんこく]化[か]しています。不登校[ふとうこう]やひきこもり、うつ状態[じょうたい]に陥[おち]いる子[こ]どもたちが増[ふ]えており、教育[きょういく]現場[げんば]でも対応[たいおう]に苦[くる]しんでいます。メンタルヘルスは、子[こ]どもの将来[しょうらい]に大[おお]きな影響[えいきょう]を与[あた]えるため、早[はや]い段階[だんかい]での対応[たいおう]が求[もと]められています。",
+   508→      "学校[がっこう]生活[せいかつ]の中[なか]で、子[こ]どもたちは様々[さまざま]なストレスを抱[かか]えています。進学[しんがく]へのプレッシャー、人間関係[にんげんかんけい]の悩[なや]み、いじめなど、ストレスの原因[げんいん]は多岐[たき]にわたります。特[とく]に、SNSの普及[ふきゅう]により、人間関係[にんげんかんけい]の悩[なや]みは学校[がっこう]の外[そと]でも続[つづ]くようになり、子[こ]どもたちが休[やす]む時間[じかん]を取[と]れなくなっています。",
+   509→      "メンタルヘルスの問題[もんだい]は、子[こ]どもの学習[がくしゅう]意欲[いよく]や社会[しゃかい]性[せい]の発達[はったつ]にも悪[あく]影響[えいきょう]を及[およ]ぼします。不登校[ふとうこう]が長[なが]引[ひ]くと、学力[がくりょく]の低下[ていか]だけでなく、友人[ゆうじん]関係[かんけい]を築[きず]く機会[きかい]も失[うしな]われます。心[こころ]の傷[きず]が深[ふか]くなる前[まえ]に、適切[てきせつ]な支援[しえん]を提供[ていきょう]することが大切[たいせつ]です。",
+   510→      "学校[がっこう]は、スクールカウンセラーや養護[ようご]教諭[きょうゆ]と連携[れんけい]して、子[こ]どもの心[こころ]のケアに取[と]り組[く]んでいます。早期[そうき]発見[はっけん]のためのアンケート調査[ちょうさ]や、個[こ]別[べつ]面談[めんだん]を通[つう]じて問題[もんだい]を把握[はあく]する取[と]り組[く]みが広[ひろ]がっています。また、授業[じゅぎょう]の中[なか]でメンタルヘルスについて教[おし]え、子[こ]ども自身[じしん]が助[たす]けを求[もと]める力[ちから]を養[やしな]う学校[がっこう]も増[ふ]えています。",
+   511→      "家庭[かてい]と地域[ちいき]の役割[やくわり]も重要[じゅうよう]です。親[おや]は子[こ]どもの小[ちい]さな変化[へんか]に気[き]づき、話[はな]を聞[き]く姿勢[しせい]を持[も]つことが求[もと]められます。また、地域[ちいき]の相談[そうだん]機関[きかん]やNPOが、学校[がっこう]と連携[れんけい]して子[こ]どもを支[ささ]えるネットワークを作[つく]ることも有効[ゆうこう]です。一人[ひとり]で悩[なや]む子[こ]どもを一人[ひとり]にしない社会[しゃかい]が求[もと]められています。",
+   512→      "かつて、メンタルヘルスの問題[もんだい]は話[はな]しにくい話題[わだい]とされてきました。しかし、最近[さいきん]は理解[りかい]が深[ふか]まり、相談[そうだん]することが弱[よわ]さではないという認識[にんしき]が広[ひろ]がっています。学校[がっこう]、家庭[かてい]、地域[ちいき]が協力[きょうりょく]し、子[こ]どもたちの心[こころ]の健康[けんこう]を守[まも]ることが、これからの社会[しゃかい]の重要[じゅうよう]な責務[せきにむ]です。"
+   513→    ],
+   514→    translation: [
+   515→      "In recent years, mental health problems in schools have become more serious. The number of children who become truant, shut themselves in, or fall into depressive states is increasing, and educational settings also struggle to respond. Because mental health has a major impact on children's futures, response at an early stage is required.",
+   516→      "In school life, children bear various stresses. The causes of stress are wide-ranging: pressure to advance to higher schools, worries about human relationships, and bullying. In particular, with the spread of social media, worries about relationships continue outside school as well, and children can no longer take time to rest.",
+   517→      "Mental health problems also adversely affect children's motivation to learn and the development of social skills. When truancy drags on, they lose not only academic ability but also opportunities to build friendships. It is important to provide appropriate support before the wounds of the heart deepen.",
+   518→      "Schools work with school counselors and school nurses to care for children's hearts. Efforts to grasp problems through questionnaire surveys for early detection and individual interviews are spreading. Also, more schools teach about mental health in class and foster the ability of children themselves to seek help.",
+   519→      "The role of family and community is also important. Parents are required to notice small changes in their children and maintain an attitude of listening. Also, it is effective for local consultation organizations and NPOs to build networks supporting children in cooperation with schools. A society is required in which children who worry alone are not left alone.",
+   520→      "In the past, mental health problems were considered a topic difficult to talk about. However, recently understanding has deepened, and the recognition that seeking consultation is not weakness has spread. Schools, families, and communities cooperating to protect the mental health of children is an important responsibility of society going forward."
+   521→    ],
+   522→    questions: [
+   523→      {
+   524→        q: "子[こ]どもたちが学校[がっこう]で抱[かか]えるストレスの原因[げんいん]として挙[あ]げられていないものはどれですか。",
+   525→        choices: ["進学[しんがく]へのプレッシャー", "人間関係[にんげんかんけい]の悩[なや]み", "いじめ", "給食[きゅうしょく]が美味[おい]しすぎること"],
+   526→        answerIndex: 3,
+   527→        explanation: "第二段では進学へのプレッシャー、人間関係の悩み、いじめが挙げられていますが、給食については触れられていません。"
+   528→      },
+   529→      {
+   530→        q: "メンタルヘルスの問題[もんだい]が子[こ]どもに与[あた]える影響[えいきょう]は何[なん]ですか。",
+   531→        choices: ["学習[がくしゅう]意欲[いよく]や社会[しゃかい]性[せい]の発達[はったつ]への悪[あく]影響[えいきょう]", "学力[がくりょく]の向上[こうじょう]", "友人[ゆうじん]関係[かんけい]の改善[かいぜん]", "社会[しゃかい]参加[さんか]の増加[ぞうか]"],
+   532→        answerIndex: 0,
+   533→        explanation: "第三段で、メンタルヘルスの問題は子どもの学習意欲や社会性の発達に悪影響を及ぼすと述べられています。"
+   534→      },
+   535→      {
+   536→        q: "学校[がっこう]がメンタルヘルスケアのために行[おこな]っていることは何[なん]ですか。",
+   537→        choices: ["映画[えいが]を上映[じょうえい]すること", "スクールカウンセラーや養護[ようご]教諭[きょうゆ]と連携[れんけい]すること", "給食[きゅうしょく]を増[ふ]やすこと", "授業[じゅぎょう]を減[へ]らすこと"],
+   538→        answerIndex: 1,
+   539→        explanation: "第四段で、学校はスクールカウンセラーや養護教諭と連携して子どもの心のケアに取り組んでいると書かれています。"
+   540→      },
+   541→      {
+   542→        q: "家庭[かてい]に求[もと]められていることは何[なん]ですか。",
+   543→        choices: ["子[こ]どもを叱[しか]ること", "子[こ]どもの小[ちい]さな変化[へんか]に気[き]づき、話[はな]を聞[き]く姿勢[しせい]を持[も]つこと", "子[こ]どもを放置[ほうち]すること", "学校[がっこう]に行[い]かせ続けること"],
+   544→        answerIndex: 1,
+   545→        explanation: "第五段で、親は子どもの小さな変化に気づき、話を聞く姿勢を持つことが求められると述べられています。"
+   546→      },
+   547→      {
+   548→        q: "最近[さいきん]のメンタルヘルス問題[もんだい]に対[たい]する認識[にんしき]の変化[へんか]は何[なん]ですか。",
+   549→        choices: ["相談[そうだん]することは弱[よわ]さではないという認識[にんしき]が広[ひろ]がっている", "メンタルヘルスは話題[わだい]にしてはいけない", "相談[そうだん]する人[ひと]は増[ふ]えない", "学校[がっこう]は関与[かんよ]しない"],
+   550→        answerIndex: 0,
+   551→        explanation: "第六段で、最近は理解が深まり、相談することが弱さではないという認識が広がっていると述べられています。"
+   552→      }
+   553→    ]
+   554→  },
+   555→
+   556→  // ───────────────────────────────────────────────────────────
+   557→  // r-n3-30 — The Art of Decluttering
+   558→  // ───────────────────────────────────────────────────────────
+   559→  {
+   560→    id: "r-n3-30",
+   561→    title: "片付[かたづ]けの技術[ぎじゅつ]",
+   562→    titleReading: "かたづけのぎじゅつ",
+   563→    level: "N3",
+   564→    summary: "An exploration of why decluttering has captured global attention, its psychological benefits, popular methods like KonMari and danshari, and its ties to sustainability.",
+   565→    estMinutes: 6,
+   566→    tags: ["lifestyle", "psychology", "sustainability", "culture"],
+   567→    body: [
+   568→      "近年[きんねん]、「断捨離[だんしゃり]」や「近藤[こんどう]麻理恵[まりえ]メソッド」など、片付[かたづ]けの技術[ぎじゅつ]が注目[ちゅうもく]を集[あつ]めています。モノに囲[かこ]まれた生活[せいかつ]を見直[みなお]す動[うご]きは、日本[にほん]だけでなく世界[せかい]中[じゅう]に広[ひろ]がりました。なぜ、これほどまでに片付[かたづ]けが人々[ひとびと]を引[ひ]きつけるのでしょうか。",
+   569→      "片付[かたづ]けには、心理[しんり]的[てき]な効果[こうか]があると言[い]われています。モノが多[おお]すぎる部屋[へや]は、視覚[しかく]的[てき]な情報[じょうほう]が多[おお]すぎて、集中力[しゅうちゅうりょく]が低下[ていか]する原因[げんいん]になります。また、使[つか]わないモノを見[み]るたびに、「いつか使[つか]おう」という未[み]完了[かんりょう]のタスクを感[かん]じてしまい、ストレスが蓄積[ちくせき]します。片付[かたづ]けることで、心[こころ]の負担[ふたん]も減[へ]らすことができるのです。",
+   570→      "効果的[こうかてき]な片付[かたづ]けの方法[ほうほう]は様々[さまざま]です。近藤[こんどう]麻理恵[まりえ]は、「ドキドキするモノだけを残[のこ]す」という基準[きじゅん]を提唱[ていしょう]しています。また、断捨離[だんしゃり]は、「必要[ひつよう]か、適切[てきせつ]か、快適[かいてき]か」という質問[しつもん]を通[つう]じて、モノと自分[じぶん]の関係[かんけい]を見直[みなお]す方法[ほうほう]です。どちらも、単[たん]にモノを捨[す]てるのではなく、自分[じぶん]にとって何[なに]が大切[たいせつ]かを考[かんが]えるプロセスを重視[じゅうし]しています。",
+   571→      "現代[げんだい]では、デジタルの片付[かたづ]けも重要[じゅうよう]になってきました。スマートフォンの中[なか]に貯[た]まった写真[しゃしん]、未[み]読[どく]のメール、使[つか]わないアプリなど、目[め]に見[み]えないデータも片付[かたづ]ける必要[ひつよう]があります。デジタルの混乱[こんらん]は、現実[げんじつ]の部屋[へや]の混乱[こんらん]と同様[どうよう]に、心[こころ]の負担[ふたん]を増[ふ]やす原因[げんいん]になります。",
+   572→      "片付[かたづ]けは、環境[かんきょう]問題[もんだい]にも関連[かんれん]しています。使[つか]わないモノを買[か]い続[つづ]けることは、資源[しげん]の無駄遣[むだづか]いにつながります。片付[かたづ]けを通[つう]じて自分[じぶん]の本当[ほんとう]のニーズを見直[みなお]すことで、過剰[かじょう]な消費[しょうひ]を抑[ゆす]えることができます。不要[ふよう]なモノをリサイクルや寄付[きふ]に回[まわ]すことも、持続[じぞく]可能[かのう]な社会[しゃかい]に貢献[こうけん]する行動[こうどう]です。",
+   573→      "片付[かたづ]けは、一[ひと]回[かい]で終[お]わる作業[さぎょう]ではなく、生活[せいかつ]の習慣[しゅうかん]として続[つづ]けることが大切[たいせつ]です。モノを減[へ]らすことで、時間[じかん]や空間[くうかん]に余裕[よゆう]が生[う]まれ、本当[ほんとう]に大切[たいせつ]なことにお金[かね]と時間[じかん]を使[つか]えるようになります。片付[かたづ]けを通[つう]じて、より豊[ゆた]かで意味[いみ]のある生活[せいかつ]を築[きず]くことができるのです。"
+   574→    ],
+   575→    translation: [
+   576→      "In recent years, the art of decluttering, such as danshari and the KonMari method, has attracted attention. The movement to reconsider lives surrounded by things has spread not only in Japan but all over the world. Why does decluttering attract people so much?",
+   577→      "Decluttering is said to have a psychological effect. A room with too many things has too much visual information, which causes a decline in concentration. Also, every time you see things you do not use, you feel an unfinished task of I will use it someday, and stress accumulates. By decluttering, you can also reduce the burden on your mind.",
+   578→      "There are various effective decluttering methods. Marie Kondo advocates the standard of keeping only things that make your heart beat. Also, danshari is a method of reconsidering the relationship between things and yourself through the questions of whether it is necessary, appropriate, and comfortable. Both emphasize the process of considering what is truly important to oneself, rather than merely throwing things away.",
+   579→      "In modern times, digital decluttering has also become important. Photographs accumulated in smartphones, unread emails, and unused apps—data that cannot be seen also needs to be decluttered. Digital clutter is a cause of increasing the burden on the mind, just like clutter in a real room.",
+   580→      "Decluttering is also related to environmental problems. Continuing to buy things you do not use leads to a waste of resources. By reconsidering your true needs through decluttering, you can suppress excessive consumption. Turning unneeded things to recycling or donation is also an action that contributes to a sustainable society.",
+   581→      "Decluttering is not a task that ends once; it is important to continue it as a habit of life. By reducing things, time and space become free, and you become able to spend money and time on what is truly important. Through decluttering, you can build a richer and more meaningful life."
+   582→    ],
+   583→    questions: [
+   584→      {
+   585→        q: "片付[かたづ]けが心理[しんり]的[てき]にもたらす効果[こうか]は何[なん]ですか。",
+   586→        choices: ["集中力[しゅうちゅうりょく]の低下[ていか]", "心[こころ]の負担[ふたん]を減[へ]らすこと", "ストレスの蓄積[ちくせき]", "視覚[しかく]的[てき]情報[じょうほう]の増加[ぞうか]"],
+   587→        answerIndex: 1,
+   588→        explanation: "第二段で、片付けることで心の負担も減らすことができると述べられています。"
+   589→      },
+   590→      {
+   591→        q: "近藤[こんどう]麻理恵[まりえ]が提唱[ていしょう]する基準[きじゅん]は何[なん]ですか。",
+   592→        choices: ["高価[こうか]なモノだけを残[のこ]す", "ドキドキするモノだけを残[のこ]す", "新[あたら]しいモノだけを残[のこ]す", "全[すべ]てのモノを捨[す]てる"],
+   593→        answerIndex: 1,
+   594→        explanation: "第三段で、近藤麻理恵は「ドキドキするモノだけを残す」という基準を提唱していると書かれています。"
+   595→      },
+   596→      {
+   597→        q: "断捨離[だんしゃり]とは何[なん]ですか。",
+   598→        choices: ["モノを全[すべ]て捨[す]てること", "「必要[ひつよう]か、適切[てきせつ]か、快適[かいてき]か」という質問[しつもん]を通[つう]じてモノと自分[じぶん]の関係[かんけい]を見直[みなお]す方法[ほうほう]", "モノを高[たか]く売[う]る方法[ほうほう]", "モノを集[あつ]める方法[ほうほう]"],
+   599→        answerIndex: 1,
+   600→        explanation: "第三段で、断捨離は「必要か、適切か、快適か」という質問を通じてモノと自分の関係を見直す方法と説明されています。"
+   601→      },
+   602→      {
+   603→        q: "デジタルの片付[かたづ]けが必要[ひつよう]な理由[りゆう]は何[なん]ですか。",
+   604→        choices: ["デジタルデータは片付[かたづ]ける必要[ひつよう]がないから", "デジタルの混乱[こんらん]は心[こころ]の負担[ふたん]を増[ふ]やす原因[げんいん]になるから", "デジタルデータは増[ふ]えないから", "デジタルの片付[かたづ]けは不可能[ふかのう]だから"],
+   605→        answerIndex: 1,
+   606→        explanation: "第四段で、デジタルの混乱は現実の部屋の混乱と同様に心の負担を増やす原因になると説明されています。"
+   607→      },
+   608→      {
+   609→        q: "片付[かたづ]けと環境[かんきょう]問題[もんだい]の関連[かんれん]として挙[あ]げられているのは何[なん]ですか。",
+   610→        choices: ["片付[かたづ]けは環境[かんきょう]問題[もんだい]と無関係[むかんけい]である", "使[つか]わないモノを買[か]い続[つづ]けることは資源[しげん]の無駄遣[むだづか]いにつながる", "片付[かたづ]けは資源[しげん]を浪費[ろうひ]する", "不要[ふよう]なモノは燃[も]やすべきである"],
+   611→        answerIndex: 1,
+   612→        explanation: "第五段で、使わないモノを買い続けることは資源の無駄遣いにつながると書かれています。"
+   613→      }
+   614→    ]
+   615→  }
+   616→];
+   617→

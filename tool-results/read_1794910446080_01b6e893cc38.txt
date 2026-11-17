@@ -1,0 +1,660 @@
+     1→import type { ReadingPassage } from "@/lib/types";
+     2→
+     3→// Furigana notation: kanji readings are written inline as 漢字[かんじ].
+     4→// A [reading] immediately following a run of kanji attaches to that whole run.
+     5→// Adjacent kanji compounds may be split by brackets (e.g. 日本[にほん]語[ご]).
+     6→// Kana, katakana, punctuation, and 々 have no brackets. See types.ts & furigana.tsx.
+     7→// 10 original N1-level reading passages with comprehension questions.
+     8→
+     9→export const readingN1D: ReadingPassage[] = [
+    10→  // ───────────────────────────────────────────────────────────
+    11→  // r-n1-31 — The aesthetics of Japanese gardens
+    12→  // ───────────────────────────────────────────────────────────
+    13→  {
+    14→    id: "r-n1-31",
+    15→    title: "日本[にほん]庭園[ていえん]の美学[びがく]を読[よ]み解[と]く",
+    16→    titleReading: "にほんていえんのびがくをよみとく",
+    17→    level: "N1",
+    18→    summary: "An essay exploring how Japanese gardens synthesize nature, philosophy, and abstraction — from karesansui to tea gardens — examining the aesthetic principles of mu, ma, shakkei, and wabi-sabi, and the garden as a vehicle for contemplation rather than mere ornament.",
+    19→    estMinutes: 12,
+    20→    tags: ["aesthetics", "Japanese garden", "wabi-sabi", "Zen", "landscape design"],
+    21→    body: [
+    22→      "日本[にほん]庭園[ていえん]は、単[たん]なる景観[けいかん]装飾[そうしょく]の手法[しゅほう]にとどまるものではない。それは自然[しぜん]と人間[にんげん]、あるいは見[み]る者[もの]と見[み]られるものとの間[あいだ]に立[た]ち現[あらわ]れる哲学[てつがく]的[てき]な装置[そうち]である。石[いし]一[ひと]つ、水[みず]一[ひと]滴[てき]に至[いた]るまで、そこには作[つく]り手[て]の世界観[せかいかん]が凝縮[ぎょうしゅく]されている。したがって、庭[にわ]を鑑賞[かんしょう]するとは、じつはある種[しゅ]の思想[しそう]の読解[どっかい]にほかならないのである。",
+    23→      "その源流[げんりゅう]を辿[たど]れば、古代[こだい]中国[ちゅうごく]の蓬莱[ほうらい]神仙[しんせん]思想[しそう]や仏教[ぶっきょう]の浄土[じょうど]信仰[しんこう]に逢着[ほうちゃく]する。平安[へいあん]時代[じだい]の寝殿[しんでん]造[づく]りに始[はじ]まり、鎌倉[かまくら]から室町[むろまち]にかけて禅宗[ぜんしゅう]の興隆[こうりゅう]と共[とも]に枯山水[かれさんすい]が成熟[せいじゅく]した。江戸[えど]時代[じだい]には回遊[かいゆう]式[しき]庭園[ていえん]が完成[かんせい]の域[いき]に達[たっ]し、それぞれの時代[じだい]が独自[どくじ]の美意識[びいしき]を投影[とうえい]してきた。変遷[へんせん]の背後[はいご]には、日本人[にほんじん]が自然[しぜん]と向[む]き合[あ]う態度[たいど]の変容[へんよう]が読[よ]み取[と]れる。",
+    24→      "中[なか]でも枯山水[かれさんすい]は、日本[にほん]的[てき]抽象[ちゅうしょう]の極致[きょくち]と言[い]えよう。水[みず]を用[もち]いず、白砂[しらすな]と石[いし]のみで山水[さんすい]を表現[ひょうげん]するその手法[しゅほう]は、極限[きょくげん]まで引[ひ]き算[ざん]された美[び]である。そこには、描[か]かれていないものこそが見[み]る者[もの]の想像[そうぞう]力[りょく]を喚起[かんき]するという確信[かくしん]が横[よこ]たわっている。すなわち、不在[ふざい]が在[ざい]よりも雄弁[ゆうべん]に語[かた]るという逆転[ぎゃくてん]の論理[ろんり]が作動[さどう]しているのである。",
+    25→      "この不在[ふざい]の美学[びがく]を支[ささ]えるのが、間[ま]と無[む]という概念[がいねん]である。間[ま]とは単[たん]なる空白[くうはく]ではなく、そこに宿[やど]る緊張[きんちょう]や余韻[よいん]を含[ふく]めた時間[じかん]的[てき]、空間[くうかん]的[てき]な間隙[かんげき]である。無[む]は仏教[ぶっきょう]の空[くう]の思想[しそう]に由来[ゆらい]し、万物[ばんぶつ]は関係[かんけい]性[せい]の中[なか]でしか存立[そんりつ]しないという認識[にんしき]に基[もと]づく。庭[にわ]における石[いし]の配置[はいち]一[ひと]つをとっても、石[いし]と石[いし]の間[はし]の空隙[くうげき]こそが主役[しゅやく]となる。",
+    26→      "借景[しゃっけい]の技法[ぎほう]も見逃[みのが]せない。庭[にわ]の境界[きょうかい]を画[かく]する垣根[かきね]を低[ひく]くし、周[まわ]囲[り]の山[やま]や森[もり]を風景[ふうけい]の一部[いちぶ]として取[と]り込[こ]むこの手法[しゅほう]は、人[ひと]が自然[しぜん]を支配[しはい]するのではなく、自然[しぜん]と連続[れんぞく]するという世界観[せかいかん]を表[あらわ]している。庭[にわ]は閉[と]じた箱[はこ]ではなく、周[まわ]囲[り]の風景[ふうけい]と共鳴[きょうめい]する開[ひら]かれた体系[たいけい]なのである。",
+    27→      "わびさびの感覚[かんかく]もまた庭[にわ]の美学[びがく]に深[ふか]く浸透[しんとう]している。不完全[ふかんぜん]さ、古[ふる]び、寂[さび]れた色合[いろあ]いにこそ美[び]を見出[みいだ]す態度[たいど]は、完成[かんせい]された豪華[ごうか]さを退[しりぞ]ける。苔[こけ]の生[は]えた石[いし]、傾[かたむ]いた灯籠[とうろう]、落[お]ちた葉[は]の散乱[さんらん]。それらは決[けっ]して欠陥[けっかん]ではなく、時[とき]の流[なが]れそのものを刻[きざ]む証[あかし]である。永遠[えいえん]に完成[かんせい]しないことこそが、かえって生命[せいめい]の兆[きざし]を宿[やど]すのである。",
+    28→      "茶庭[ちゃにわ]、すなわち露地[ろじ]は、この美学[びがく]を一段[いちだん]と研[と]ぎ澄[す]ませた空間[くうかん]である。茶室[ちゃしつ]に至[いた]るまでの飛石[とびいし]や蹲踞[つくばい]、外[そと]に植[う]えられた植栽[しょくさい]は、客[きゃく]の心[こころ]を静[しず]め、日常[にちじょう]の喧騒[けんそう]から茶[ちゃ]の湯[ゆ]の聖域[せいいき]へと移行[いこう]させるための入[いり]口[ぐち]として設[もう]けられている。そこには、侘[わび]しいながらも心[こころ]を込[こ]めて客[きゃく]をもてなす、茶人[ちゃじん]の精神[せいしん]が具現[ぐげん]化[か]されている。",
+    29→      "結[むす]びとして指摘[してき]しておきたいのは、日本庭園[にほんていえん]が見[み]る者[もの]に対[たい]して受動[じゅどう]的[てき]な消費[しょうひ]を許[ゆる]さないという点[てん]である。庭[にわ]は一[ひと]方的[ぽうてき]に意味[いみ]を提示[ていじ]するのではなく、見[み]る者[もの]の内面[ないめん]と共鳴[きょうめい]してはじめて完結[かんけつ]する。だからこそ、同[おな]じ庭[にわ]でも見[み]る時[とき]の心[こころ]次第[しだい]で異[こと]なる顔[かお]を見[み]せる。庭[にわ]は自然[しぜん]を模[も]した鏡[かがみ]であると同時[どうじ]に、人[ひと]の心[こころ]を映[うつ]す鏡[かがみ]でもあるのだ。"
+    30→    ],
+    31→    translation: [
+    32→      "The Japanese garden is not merely a method of landscape decoration. It is a philosophical apparatus that emerges between nature and human beings, or between the one who sees and the one who is seen. From a single stone to a single drop of water, the creator's worldview is condensed therein. To appreciate a garden, therefore, is nothing other than a kind of reading of thought.",
+    33→      "Tracing its source leads to the ancient Chinese idea of the Penglai immortals and the Buddhist faith in the Pure Land. Beginning with the shinden-zukuri of the Heian period, karesansui matured with the rise of Zen from the Kamakura to the Muromachi period. In the Edo period the stroll garden reached perfection, and each era has projected its own aesthetic consciousness. Behind the transformation, one can read the changing attitude of the Japanese toward nature.",
+    34→      "Among them, the karesansui may be called the pinnacle of Japanese abstraction. The method of expressing landscape with only white sand and stones, without using water, is a beauty reduced by subtraction to its limit. Therein lies the conviction that what is not depicted is precisely what awakens the viewer's imagination. In other words, a logic of reversal is at work, in which absence speaks more eloquently than presence.",
+    35→      "Underpinning this aesthetic of absence are the concepts of ma and mu. Ma is not mere blankness but a temporal and spatial gap charged with the tension and afterglow that dwell there. Mu derives from the Buddhist concept of emptiness, the recognition that all things exist only within relationality. Even in the placement of stones in a garden, the void between stones becomes the protagonist.",
+    36→      "The technique of borrowed scenery is also not to be overlooked. By lowering the fence that marks the garden's boundary and incorporating surrounding mountains and forests as part of the scenery, this method expresses a worldview in which human beings do not dominate nature but continue with it. A garden is not a closed box but an open system that resonates with the surrounding landscape.",
+    37→      "The sensibility of wabi-sabi also permeates deeply into the garden's aesthetics. The attitude that finds beauty precisely in incompleteness, in age, and in desolate hues rejects completed splendor. A moss-covered stone, a tilted lantern, the scattering of fallen leaves — these are by no means defects but marks that engrave the very passage of time. It is precisely by never being completed that life's traces are harbored.",
+    38→      "The tea garden, or roji, is a space that refines this aesthetic still further. The stepping stones, the stone basin, and the plantings set outside, leading to the tea room, are arranged as an entrance that quiets the guest's heart and shifts them from the everyday clamor to the sanctuary of the tea ceremony. Therein is embodied the spirit of the tea master who entertains guests with full heart, however humble the setting.",
+    39→      "In conclusion, it should be noted that the Japanese garden does not allow the viewer passive consumption. The garden does not present meaning one-sidedly; it completes only by resonating with the viewer's inner self. For that reason, even the same garden shows a different face depending on the state of mind at the time of viewing. The garden is a mirror that imitates nature and, at the same time, a mirror that reflects the human heart."
+    40→    ],
+    41→    questions: [
+    42→      {
+    43→        q: "According to the passage, what is the essential nature of a Japanese garden?",
+    44→        choices: ["A philosophical apparatus that emerges between the viewer and the viewed", "A purely decorative landscape installation", "A recreation space for the elite", "An imitation of Chinese imperial gardens"],
+    45→        answerIndex: 0,
+    46→        explanation: "The passage states that 日本庭園は、単なる景観装飾の手法にとどまるものではない (the Japanese garden is not merely a method of landscape decoration) but rather a 哲学的な装置 (philosophical apparatus)."
+    47→      },
+    48→      {
+    49→        q: "What does the karesansui garden achieve through its absence of water?",
+    50→        choices: ["It awakens the viewer's imagination by leaving things undepicted", "It saves water for agricultural use", "It reflects the poverty of medieval temples", "It is merely a stylistic preference"],
+    51→        answerIndex: 0,
+    52→        explanation: "The passage states that 描かれていないものこそが見る者の想像力を喚起する (what is not depicted is precisely what awakens the viewer's imagination) — absence speaks more eloquently than presence."
+    53→      },
+    54→      {
+    55→        q: "According to the passage, what does the concept of 'ma' refer to?",
+    56→        choices: ["A gap charged with tension and afterglow, not mere blankness", "A type of stone arrangement", "A unit of measurement for gardens", "A Buddhist prayer"],
+    57→        answerIndex: 0,
+    58→        explanation: "The text defines ma as 単なる空白ではなく、そこに宿る緊張や余韻を含めた時間的、空間的な間隙 (not mere blankness but a temporal and spatial gap charged with tension and afterglow)."
+    59→      },
+    60→      {
+    61→        q: "What does the technique of shakkei (borrowed scenery) reveal about the Japanese worldview?",
+    62→        choices: ["That human beings do not dominate nature but continue with it", "That gardens should be isolated from their surroundings", "That nature must be conquered by human design", "That scenery should be imported artificially"],
+    63→        answerIndex: 0,
+    64→        explanation: "The passage states that shakkei expresses 人が自然を支配するのではなく、自然と連続するという世界観 (a worldview in which human beings do not dominate nature but continue with it)."
+    65→      },
+    66→      {
+    67→        q: "What does the author conclude about viewing a Japanese garden?",
+    68→        choices: ["The garden completes itself only by resonating with the viewer's inner self", "The garden's meaning is fixed regardless of the viewer", "The garden should be consumed passively like a painting", "The garden exists independently of human perception"],
+    69→        answerIndex: 0,
+    70→        explanation: "The final paragraph states that 見る者の内面と共鳴してはじめて完結する (the garden completes only by resonating with the viewer's inner self) and shows a different face depending on the viewer's state of mind."
+    71→      }
+    72→    ]
+    73→  },
+    74→
+    75→  // ───────────────────────────────────────────────────────────
+    76→  // r-n1-32 — A discourse on the future of democracy
+    77→  // ───────────────────────────────────────────────────────────
+    78→  {
+    79→    id: "r-n1-32",
+    80→    title: "民主[みんしゅ]主義[しゅぎ]の未来[みらい]へ向[む]けて",
+    81→    titleReading: "みんしゅしゅぎのみらいにむけて",
+    82→    level: "N1",
+    83→    summary: "A discourse on the structural challenges facing modern democracy — populism, polarization, declining trust, algorithmic fragmentation of public opinion — and a defense of deliberative and cosmopolitan democracy as a path forward.",
+    84→    estMinutes: 13,
+    85→    tags: ["democracy", "populism", "deliberation", "digital politics", "governance"],
+    86→    body: [
+    87→      "民主[みんしゅ]主義[しゅぎ]は今[いま]、歴史[れきし]的[てき]な転換[てんかん]点[てん]に立[た]っている。冷戦[れいせん]の終結[しゅうけつ]以降[いこう]、その普遍[ふへん]性[せい]は疑[うたが]われることなく受[う]け入[い]れられてきたが、二十一世紀[にじゅういちせいき]に入[はい]ってからは、むしろその揺[ゆ]らぎが目立[めだ]つようになった。権威[けんい]主義[しゅぎ]的[てき]体制[たいせい]の台頭[たいとう]、政治[せいじ]的[てき]無関心[むかんしん]の蔓延[まんえん]、そして世論[せろん]の二極[にきょく]化[か]。これらは、民主[みんしゅ]主義[しゅぎ]が内[ない]包[ほう]する矛盾[むじゅん]が表面[ひょうめん]化[か]した兆候[ちょうこう]にほかならない。",
+    88→      "中[なか]でもポピュリズム[ぽぴゅりずむ]の隆盛[りゅうせい]は看過[かんか]できない。複雑[ふくざつ]な現実[げんじつ]を単純[たんじゅん]な二元[にげん]論[ろん]に還元[かんげん]し、大衆[たいしゅう]の不安[ふあん]を煽[あお]ることで支持[しじ]を集[あつ]める政治[せいじ]的[てき]スタイル[すたいる]は、民主[みんしゅ]主義[しゅぎ]の健康[けんこう]さを損[そこ]なうどころか、その根[ね]幹[かん]を蝕[むしば]む。しかし、ポピュリズム[ぽぴゅりずむ]が一定[いってい]の支持[しじ]を得[え]る背景[はいけい]には、既存[きぞん]の政治[せいじ]エリート[えりーと]への不信[ふしん]があることを忘[わす]れてはなるまい。",
+    89→      "さらなる追[お]い風[かぜ]となっているのが、デジタル[でじたる]技術[ぎじゅつ]の発展[はってん]である。ソーシャル[そうしゃる]メディア[めでぃあ]は言論[げんろん]の広場[ひろば]を民主[みんしゅ]化[か]したと喧伝[げんでん]されたが、実[じつ]のところ、アルゴリズム[あるごりずむ]は同[おな]じ意見[いけん]の反復[はんぷく]を促[うなが]し、確証[かくしょう]バイアス[ばいあす]を強[つよ]化[か]する結果[けっか]をもたらした。いわゆるエコーチェンバー[えこーちぇんばー]現象[げんしょう]である。共通[きょうつう]の事実[じじつ]を共有[きょうゆう]する土壌[どじょう]が失[うしな]われ、民主[みんしゅ]主義[しゅぎ]的[てき]な議論[ぎろん]の前提[ぜんてい]そのものが崩[くず]れつつある。",
+    90→      "結果[けっか]として、制度[せいど]への信頼[しんらい]は急[きゅう]激[げき]に低下[ていか]している。選挙[せんきょ]の投票[とうひょう]率[りつ]の減少[げんしょう]だけではない。議会[ぎかい]、司法[しほう]、行政[ぎょうせい]のいずれに対[たい]しても、市民[しみん]の信[しん]は揺[ゆ]らいでいる。これまで当然[とうぜん]とされてきた民主[みんしゅ]主義[しゅぎ]的[てき]手続[てつづ]きの正統[せいとう]性[せい]が、問[と]い直[なお]される時代[じだい]に突入[とつにゅう]したのである。",
+    91→      "こうした危機[きき]に対[たい]する一[ひと]つの処方[しょほう]箋[せん]として、熟議[じゅくぎ]民主[みんしゅ]主義[しゅぎ]の理念[りねん]が注目[ちゅうもく]を集[あつ]めている。単[たん]なる多数決[たすうけつ]ではなく、対話[たいわ]と議論[ぎろん]を通[つう]じて合意[ごうい]を形成[けいせい]しようという立場[たちば]である。市民[しみん]会議[かいぎ]や審議[しんぎ]会[かい]など、参加[さんか]型[がた]の民主[みんしゅ]主義[しゅぎ]の実践[じっせん]が各地[かくち]で試[こころ]みられている。意思[いし]決定[けってい]の過程[かてい]そのものを公開[こうかい]することで、結果[けっか]に対[たい]する受容[じゅよう]性[せい]を高[たか]めようという狙[ねら]いである。",
+    92→      "もっとも、熟議[じゅくぎ]を機能[きのう]させるには、それを支[ささ]える市民[しみん]の教育[きょういく]が欠[か]かせない。批判[ひはん]的[てき]思考[しこう]、論理[ろんり]的[てき]推論[すいろん]、情報[じょうほう]の識別[しきべつ]。これらは一朝一夕[いっちょういっせき]に身[み]につくものではなく、長期[ちょうき]にわたる修練[しゅうれん]を要[よう]する。教育[きょういく]制度[せいど]そのものが、民主[みんしゅ]主義[しゅぎ]を維持[いじ]するための根[ね]幹[かん]的[てき]な基盤[きばん]として再[さい]定位[ていい]されるべきである。",
+    93→      "さらに、国境[こっきょう]を越[こ]える問題[もんだい]には国家[こっか]単位[たんい]の民主[みんしゅ]主義[しゅぎ]だけでは対処[たいしょ]しきれない。気候[きこう]変動[へんどう]、経済[けいざい]格差[かくさ]、デジタル[でじたる]ガバナンス[がばなんす]。これらは一[ひと]国[こく]の枠組[わくぐ]みを超[こ]える課題[かだい]であり、超国家[ちょうこっか]的[てき]な意思[いし]決定[けってい]機関[きかん]の民主[みんしゅ]主義[しゅぎ]化[か]が模索[もさく]されている。いわゆるコスモポリタン[こすもぽりたん]民主[みんしゅ]主義[しゅぎ]の構想[こうそう]である。主権[しゅけん]の概念[がいねん]自体[じたい]も、国土[こくど]と結[むす]びついたものから、人[ひと]と結[むす]びついたものへと再定義[さいていぎ]される必要[ひつよう]に迫[せま]られている。",
+    94→      "民主[みんしゅ]主義[しゅぎ]は、完成[かんせい]された制度[せいど]ではなく、常[つね]に問[と]い直[なお]されるべき過程[かてい]である。その弱点[じゃくてん]を露呈[ろてい]したからといって、放棄[ほうき]してよいわけではない。むしろ、その弱点[じゃくてん]を直視[ちょくし]したうえで、修正[しゅうせい]を重[かさ]ねることこそが、民主[みんしゅ]主義[しゅぎ]の本質[ほんしつ]に即[そく]した態度[たいど]であろう。市民[しみん]一人[ひとり]一人[ひとり]が自[みずか]らの権利[けんり]と責任[せきにん]を再[さい]認識[にんしき]し、未来[みらい]を共[とも]に構築[こうちく]する営[いとな]みに参画[さんかく]すること。それこそが、二十一世紀[にじゅういちせいき]の民主[みんしゅ]主義[しゅぎ]に課[か]された課題[かだい]なのである。"
+    95→    ],
+    96→    translation: [
+    97→      "Democracy now stands at a historical turning point. Since the end of the Cold War, its universality has been accepted without question, but in the twenty-first century its instability has become conspicuous: the rise of authoritarian regimes, the spread of political apathy, and the polarization of public opinion. These are nothing other than signs that the contradictions inherent in democracy have surfaced.",
+    98→      "Among them, the rise of populism cannot be overlooked. A political style that reduces complex reality to simplistic binaries and stirs public anxiety to garner support does not merely harm the health of democracy; it eats away at its foundations. Yet we must not forget that populism gains support against a backdrop of distrust toward existing political elites.",
+    99→      "Adding further fuel is the development of digital technology. Social media was heralded as having democratized the forum of speech, but in reality, algorithms prompt the repetition of identical opinions and end up reinforcing confirmation bias — the so-called echo chamber phenomenon. The soil that once allowed the sharing of common facts is being lost, and the very premise of democratic deliberation is collapsing.",
+   100→      "As a result, trust in institutions has dropped sharply. It is not only the decline in voter turnout. Citizens' faith in parliament, the judiciary, and the administration has all wavered. We have entered an era in which the legitimacy of democratic procedures once taken for granted is being questioned.",
+   101→      "As one prescription for this crisis, the idea of deliberative democracy has gained attention. It is a stance that seeks to form consensus through dialogue and discussion, not mere majority vote. Participatory experiments in democracy — citizens' assemblies, deliberative councils — are being tried in many places. The aim is to raise the acceptance of outcomes by making the decision-making process itself public.",
+   102→      "To be sure, for deliberation to function, civic education that supports it is indispensable. Critical thinking, logical inference, discrimination of information — these cannot be acquired overnight and require long cultivation. The education system itself must be repositioned as a foundational infrastructure for sustaining democracy.",
+   103→      "Furthermore, problems that cross borders cannot be handled by democracy at the nation-state level alone. Climate change, economic inequality, digital governance — these are challenges that exceed the framework of a single country, and the democratization of supranational decision-making bodies is being explored: the vision of so-called cosmopolitan democracy. The very concept of sovereignty is being pressed to be redefined from one tied to territory to one tied to people.",
+   104→      "Democracy is not a completed system but a process that must constantly be questioned. Just because its weaknesses have been exposed does not mean it may be abandoned. Rather, the attitude true to the essence of democracy is to confront those weaknesses and accumulate corrections. For each citizen to re-recognize their own rights and responsibilities and to participate in the shared endeavor of building the future — that is the task imposed on twenty-first-century democracy."
+   105→    ],
+   106→    questions: [
+   107→      {
+   108→        q: "According to the passage, what is one cause of populism's appeal?",
+   109→        choices: ["Distrust toward existing political elites", "Increased voter turnout", "Strengthening of public institutions", "Decline of social media"],
+   110→        answerIndex: 0,
+   111→        explanation: "The passage states that ポピュリズムが一定の支持を得る背景には、既存の政治エリートへの不信がある (populism gains support against a backdrop of distrust toward existing political elites)."
+   112→      },
+   113→      {
+   114→        q: "What does the passage argue about social media's effect on democracy?",
+   115→        choices: ["Algorithms cause echo chambers that reinforce confirmation bias and erode shared facts", "It has fully democratized public discourse", "It has no measurable impact on polarization", "It strengthens deliberation by exposing users to diverse views"],
+   116→        answerIndex: 0,
+   117→        explanation: "The passage states that algorithms 促す (prompt repetition of identical opinions) and 強化する (reinforce) confirmation bias, producing the エコーチェンバー現象 (echo chamber phenomenon) that destroys the 民主的な議論の前提 (premise of democratic deliberation)."
+   118→      },
+   119→      {
+   120→        q: "What is the core idea of deliberative democracy according to the passage?",
+   121→        choices: ["Forming consensus through dialogue and discussion rather than mere majority vote", "Abolishing elections entirely", "Replacing parliaments with technocratic councils", "Relying solely on referenda"],
+   122→        answerIndex: 0,
+   123→        explanation: "The passage defines deliberative democracy as 単なる多数決ではなく、対話と議論を通じて合意を形成しようという立場 (a stance that forms consensus through dialogue and discussion rather than mere majority vote)."
+   124→      },
+   125→      {
+   126→        q: "Why does the passage argue that national-level democracy is insufficient?",
+   127→        choices: ["Cross-border issues such as climate change and digital governance exceed a single nation's framework", "Because nationalism is obsolete", "Because nation-states are too small to handle local issues", "Because voters are too educated for national politics"],
+   128→        answerIndex: 0,
+   129→        explanation: "The passage argues that 一国の枠組みを超える課題 (challenges that exceed a single nation's framework) — climate change, economic inequality, digital governance — require the democratization of supranational bodies."
+   130→      },
+   131→      {
+   132→        q: "What does the author conclude about democracy's future?",
+   133→        choices: ["Democracy is an unfinished process; its weaknesses should be confronted and corrected, not abandoned", "Democracy should be replaced by expert governance", "Democracy has already achieved its final form", "Democracy is doomed regardless of effort"],
+   134→        answerIndex: 0,
+   135→        explanation: "The final paragraph states that 民主主義は、完成された制度ではなく、常に問い直されるべき過程である (democracy is not a completed system but a process that must constantly be questioned) and calls for confronting weaknesses rather than abandoning it."
+   136→      }
+   137→    ]
+   138→  },
+   139→
+   140→  // ───────────────────────────────────────────────────────────
+   141→  // r-n1-33 — The psychology of collective memory
+   142→  // ───────────────────────────────────────────────────────────
+   143→  {
+   144→    id: "r-n1-33",
+   145→    title: "集合[しゅうごう]的[てき]記憶[きおく]の心理学[しんりがく]",
+   146→    titleReading: "しゅうごうてききおくのしんりがく",
+   147→    level: "N1",
+   148→    summary: "A psychological inquiry into how societies remember and forget — the mechanisms by which collective memory is constructed, transmitted, contested, and rewritten across generations, drawing on Halbwachs and the ethics of memory.",
+   149→    estMinutes: 13,
+   150→    tags: ["memory", "social psychology", "trauma", "identity", "history"],
+   151→    body: [
+   152→      "集合[しゅうごう]的[てき]記憶[きおく]という概念[がいねん]は、個[こ]人[じん]の頭[あたま]の中[なか]にのみ存在[そんざい]する記憶[きおく]とは異[こと]なる次元[じげん]を指[さ]す。それは、集団[しゅうだん]が共有[きょうゆう]し、継承[けいしょう]してきた過去[かこ]の像[ぞう]であり、儀礼[ぎれい]、言説[げんせつ]、儀式[ぎしき]を通[つう]じて絶[た]えず再生[さいせい]産[さん]される。個[こ]人[じん]が決[けっ]して直接[ちょくせつ]経験[けいけん]していない出来事[できごと]であっても、語[かた]り継[つ]がれることであたかも自身[じしん]の記憶[きおく]であるかのように内面[ないめん]化[か]される。その点[てん]で、集合[しゅうごう]的[てき]記憶[きおく]は事実[じじつ]の記録[きろく]というよりも、現在[げんざい]の集団[しゅうだん]が過去[かこ]に賦与[ふよ]する意味[いみ]の体系[たいけい]なのである。",
+   153→      "この概念[がいねん]を最初[さいしょ]に体系化[たいけいか]したのは、フランス[ふらんす]の社会[しゃかい]学者[がくしゃ]モーリス[もーりす]・アルヴァックス[あるばっくす]である。彼[かれ]は、記憶[きおく]が個[こ]人[じん]の脳[のう]内[ない]に閉[と]じ込[こ]められたものではなく、他[た]者[しゃ]との関係[かんけい]の中[なか]で維持[いじ]されると主張[しゅちょう]した。個[こ]人[じん]が自[みずか]らの過去[かこ]を思[おも]い出[だ]す際[さい]、参照[さんしょう]するのは集団[しゅうだん]の枠組[わくぐ]みである。したがって、所属[しょぞく]する集団[しゅうだん]が変化[へんか]すれば、記憶[きおく]の輪郭[りんかく]も変容[へんよう]せざるを得[え]ない。記憶[きおく]は本質[ほんしつ]的[てき]に社会的[しゃかいてき]な構築[こうちく]物[ぶつ]なのである。",
+   154→      "集合[しゅうごう]的[てき]記憶[きおく]の伝達[でんたつ]を担[にな]う媒介[ばいかい]は多様[たよう]である。叙事[じょじ]詩[し]、歴史[れきし]教科書[きょうかしょ]、記念碑[きねんひ]、追悼[ついとう]式[しき]、映画[えいが]。いずれもが過去[かこ]を現在[げんざい]に運[はこ]び込[こ]む装置[そうち]として機能[きのう]する。特[とく]に儀礼[ぎれい]は、参加[さんか]者[しゃ]の身体[しんたい]を通[つう]じて記憶[きおく]を体化[たいか]する点[てん]で強力[きょうりょく]である。繰[く]り返[かえ]される行為[こうい]を通[つう]じて、参加[さんか]者[しゃ]は集団[しゅうだん]の物語[ものがたり]を自[みずか]らの経験[けいけん]として内面[ないめん]化[か]していく。",
+   155→      "集合[しゅうごう]的[てき]記憶[きおく]の中[なか]で特[とく]に複雑[ふくざつ]な様相[ようそう]を呈[てい]するのが、トラウマ[とらうま]的[てき]出来事[できごと]の記憶[きおく]である。戦争[せんそう]、虐殺[ぎゃくさつ]、植民[しょくみん]支配[しはい]。こうした出来事[できごと]は、言語[げんご]化[か]を拒[こば]む余[あま]りの苦痛[くつう]を含[ふく]むため、しばしば沈黙[ちんもく]として伝達[でんたつ]される。しかし、沈黙[ちんもく]は記憶[きおく]の不在[ふざい]ではなく、その逆[ぎゃく]に過[す]ぎない。語[かた]られざるものこそが、集団[しゅうだん]の心理[しんり]的[てき]地層[ちそう]の深[ふか]層[そう]を形[かたち]作[づく]るのである。",
+   156→      "その結果[けっか]、集合[しゅうごう]的[てき]記憶[きおく]は紛争[ふんそう]の舞台[ぶたい]と化[か]す。同[おな]じ出来事[できごと]であっても、立場[たちば]によって記憶[きおく]の意味[いみ]は異[こと]なる。加害[かがい]者[しゃ]の記憶[きおく]と被害[ひがい]者[しゃ]の記憶[きおく]、支配[しはい]者[しゃ]の記憶[きおく]と被支配[ひしはい]者[しゃ]の記憶[きおく]。それぞれが自[みずか]らの正統[せいとう]性[せい]を主張[しゅちょう]し、相手[あいて]の記憶[きおく]を否認[ひにん]する。歴史[れきし]認識[にんしき]を巡[めぐ]る国際[こくさい]的[てき]対立[たいりつ]の根[ね]には、こうした記憶[きおく]の政治[せいじ]学[がく]が横[よこ]たわっている。",
+   157→      "忘却[ぼうきゃく]もまた、集合[しゅうごう]的[てき]記憶[きおく]の重要[じゅうよう]な構成[こうせい]要素[ようそ]である。忘却[ぼうきゃく]は受動[じゅどう]的[てき]な喪失[そうしつ]ではなく、能動[のうどう]的[てき]な選択[せんたく]であり得[え]る。不都合[ふつごう]な過去[かこ]を沈黙[ちんもく]の底[そこ]に押[お]し留[とど]めることで、集団[しゅうだん]は自[みずか]らのアイデンティティ[あいでんてぃてぃ]を維持[いじ]しようとする。その意味[いみ]で、何[なに]が記憶[きおく]され、何[なに]が忘却[ぼうきゃく]されるかという問[と]いは、集団[しゅうだん]が自[みずか]ら何者[なにもの]であるかを定義[ていぎ]する営[いとな]みにほかならない。",
+   158→      "世代[せだい]が交代[こうたい]するにつれ、記憶[きおく]は必然[ひつぜん]的[てき]に変容[へんよう]する。直接[ちょくせつ]経験[けいけん]者[しゃ]の死[し]と共[とも]に、生[せい]々[せい]しい記憶[きおく]は物語[ものがたり]へと移行[いこう]し、物語[ものがたり]はやがて神話[しんわ]へと結晶[けっしょう]化[か]する。この過程[かてい]で、細部[さいぶ]は失[うしな]われ、象徴[しょうちょう]が強化[きょうか]される。第三[だいさん]世代[せだい]、第四[だいよん]世代[せだい]と進[すす]むにつれて、記憶[きおく]は歴史[れきし]という形式[けいしき]へと再編[さいへん]されるのである。その変容[へんよう]を批判[ひはん]的[てき]に捉[とら]え直[なお]すことこそが、記憶[きおく]の倫理[りんり]学[がく]の核心[かくしん]である。",
+   159→      "結局[けっきょく]のところ、過去[かこ]を記憶[きおく]することは過去[かこ]を正確[せいかく]に再現[さいげん]することではなく、過去[かこ]と現在[げんざい]の関係[かんけい]を絶[た]えず問[と]い直[なお]すことである。私[わたし]たちが過去[かこ]から引[ひ]き受[う]けるのは事実[じじつ]の羅列[られつ]ではなく、責任[せきにん]である。集合[しゅうごう]的[てき]記憶[きおく]を巡[めぐ]る心理[しんり]学[がく]的[てき]考察[こうさつ]は、したがって、私[わたし]たちが未来[みらい]に向[む]けていかに責任[せきにん]ある主体[しゅたい]として振[ふ]る舞[ま]うべきかという問[と]いに連[つら]なっている。記憶[きおく]の正当[せいとう]な継承[けいしょう]とは、過去[かこ]を偶像[ぐうぞう]化[か]することではなく、それを生[い]きた教訓[きょうくん]として現在[げんざい]の実践[じっせん]に活[いか]すことなのである。"
+   160→    ],
+   161→    translation: [
+   162→      "The concept of collective memory refers to a dimension distinct from memory that exists only inside an individual's head. It is the image of the past that a group shares and has inherited, constantly reproduced through ritual, discourse, and ceremony. Even events an individual has never directly experienced can be internalized as if they were their own memory, through being passed down. In that sense, collective memory is less a record of facts than a system of meaning that the present group confers upon the past.",
+   163→      "The first to systematize this concept was the French sociologist Maurice Halbwachs. He argued that memory is not enclosed within an individual's brain but maintained in relation to others. When an individual recalls their past, what they reference is the framework of the group. Therefore, if the group to which one belongs changes, the contours of memory must also change. Memory is essentially a social construct.",
+   164→      "The media that transmit collective memory are diverse: epic poetry, history textbooks, monuments, memorial ceremonies, film. All function as devices that carry the past into the present. Ritual in particular is powerful in embodying memory through the bodies of participants. Through repeated action, participants internalize the group's narrative as their own experience.",
+   165→      "Particularly complex within collective memory is the memory of traumatic events. War, massacre, colonial domination — such events contain pain so excessive that it resists verbalization, and is thus often transmitted as silence. Silence, however, is not the absence of memory but quite the opposite. It is precisely what is not spoken that shapes the deep strata of a group's psychological underground.",
+   166→      "As a result, collective memory becomes a stage of conflict. Even the same event holds different meanings depending on one's standpoint: the memory of the perpetrator and the victim, of the ruler and the ruled. Each asserts its own legitimacy and denies the other's memory. At the root of international conflicts over historical recognition lies this politics of memory.",
+   167→      "Forgetting is also a crucial component of collective memory. Forgetting is not a passive loss but can be an active choice. By suppressing inconvenient pasts to the depths of silence, a group seeks to maintain its identity. In that sense, the question of what is remembered and what is forgotten is nothing other than the act by which a group defines what it is.",
+   168→      "As generations succeed one another, memory inevitably transforms. With the death of direct witnesses, vivid memory shifts into narrative, and narrative eventually crystallizes into myth. In this process, detail is lost and symbols are strengthened. As we move into the third and fourth generations, memory is reorganized into the form called history. To critically reframe this transformation is the core of the ethics of memory.",
+   169→      "In the end, to remember the past is not to reproduce it accurately but to constantly question the relation between past and present. What we accept from the past is not a list of facts but responsibility. Psychological inquiry into collective memory thus connects to the question of how we ought to act as responsible subjects toward the future. The proper inheritance of memory is not to idolize the past but to translate it into living lessons and put them into present practice."
+   170→    ],
+   171→    questions: [
+   172→      {
+   173→        q: "According to the passage, what distinguishes collective memory from individual memory?",
+   174→        choices: ["It is the image of the past that a group shares and inherits, transmitted through ritual, discourse, and ceremony", "It is the precise factual record of historical events", "It exists only in archives and textbooks", "It is the sum of all individual memories"],
+   175→        answerIndex: 0,
+   176→        explanation: "The passage defines collective memory as 集団が共有し、継承してきた過去の像 (the image of the past that a group shares and has inherited), transmitted through 儀礼、言説、儀式 (ritual, discourse, ceremony)."
+   177→      },
+   178→      {
+   179→        q: "What did Maurice Halbwachs argue about memory?",
+   180→        choices: ["Memory is not enclosed in the individual brain but maintained in relation to others within a group framework", "Memory is purely a neurological phenomenon", "Memory cannot exist outside of written records", "Individual memory is independent of social context"],
+   181→        answerIndex: 0,
+   182→        explanation: "The passage states that Halbwachs argued 記憶が個人の脳内に閉じ込められたものではなく、他者との関係の中で維持される (memory is not enclosed within an individual's brain but maintained in relation to others)."
+   183→      },
+   184→      {
+   185→        q: "According to the passage, what does silence about trauma signify?",
+   186→        choices: ["It is not the absence of memory but its opposite, shaping the deep strata of group psychology", "It indicates the trauma never occurred", "It is simply a failure to record events", "It is an inevitable result of poor archival practice"],
+   187→        answerIndex: 0,
+   188→        explanation: "The passage states that 沈黙は記憶の不在ではなく、その逆に過ぎない (silence is not the absence of memory but quite the opposite); what is not spoken shapes the deep psychological strata."
+   189→      },
+   190→      {
+   191→        q: "What does the passage say about forgetting in collective memory?",
+   192→        choices: ["Forgetting can be an active choice by which a group defines its identity", "Forgetting is always accidental", "Forgetting has no relation to group identity", "Forgetting is impossible in collective memory"],
+   193→        answerIndex: 0,
+   194→        explanation: "The passage states that 忘却は受動的な喪失ではなく、能動的な選択であり得る (forgetting is not a passive loss but can be an active choice) by which a group maintains its identity."
+   195→      },
+   196→      {
+   197→        q: "What does the author conclude about the proper relation to the past?",
+   198→        choices: ["To remember the past is to constantly question the relation between past and present and to accept responsibility", "To reproduce the past as accurately as possible", "To idolize past events as sacred myths", "To abandon memory once direct witnesses die"],
+   199→        answerIndex: 0,
+   200→        explanation: "The final paragraph states that 過去を記憶することは過去を正確に再現することではなく、過去と現在の関係を絶えず問い直すこと (to remember the past is to constantly question the relation between past and present), accepting responsibility rather than facts."
+   201→      }
+   202→    ]
+   203→  },
+   204→
+   205→  // ───────────────────────────────────────────────────────────
+   206→  // r-n1-34 — Japan's approach to multiculturalism
+   207→  // ───────────────────────────────────────────────────────────
+   208→  {
+   209→    id: "r-n1-34",
+   210→    title: "多[た]文化[ぶんか]共生[きょうせい]の光[ひかり]と影[かげ]",
+   211→    titleReading: "たぶんかきょうせいのひかりとかげ",
+   212→    level: "N1",
+   213→    summary: "An examination of Japan's distinctive path toward multicultural coexistence — between the official rhetoric of tabunka kyōsei and the demographic realities of population decline, examining both limits and possibilities through local innovation, internal diversity, and structural barriers.",
+   214→    estMinutes: 12,
+   215→    tags: ["multiculturalism", "immigration", "coexistence", "identity", "Japan"],
+   216→    body: [
+   217→      "日本[にほん]は伝統[でんとう]的[てき]に単[たん]一[いつ]民族[みんぞく]国家[こっか]を自称[じしょう]してきたが、その前提[ぜんてい]はもはや維持[いじ]し難[がた]くなっている。少子[しょうし]化[か]と高齢[こうれい]化[か]の進行[しんこう]に伴[ともな]い、労働[ろうどう]力[りょく]不足[ぶそく]が深刻[しんこく]化[か]し、海外[かいがい]からの人材[じんざい]受[う]け入[い]れを避[さ]けて通[とお]れなくなった。二千[にせん]二十[にじゅう]四[よん]年[ねん]末[まつ]現在[げんざい]、外国人[がいこくじん]人口[じんこう]は三百[さんびゃく]万[まん]人[にん]を突破[とっぱ]している。こうした人口[じんこう]的[てき]現実[げんじつ]は、多[た]文化[ぶんか]共生[きょうせい]という理念[りねん]を政策的[せいさくてき]課題[かだい]として浮上[ふじょう]させた。",
+   218→      "多[た]文化[ぶんか]共生[きょうせい]とは、一九[じゅうきゅう]九[きゅう]〇[ぜろ]年代[ねんだい]に地方[ちほう]自治体[じちたい]が提唱[ていしょう]し始[はじ]めた概念[がいねん]で、異[こと]なる文化[ぶんか]背景[はいけい]を持[も]つ人々[ひとびと]が相互[そうご]に尊重[そんちょう]し合[あ]いながら共[とも]に生[い]きる社会[しゃかい]を目指[めざ]すものである。しかしその理念[りねん]の裏[うら]には、欧米[おうべい]的[てき]な多文化[たぶんか]主義[しゅぎ]とは異[こと]なる日本[にほん]的[てき]な戦略[せんりゃく]が読[よ]み取[と]れる。差異[さい]を承認[しょうにん]するというより、差異[さい]を抱[いだ]いたまま共[とも]生[きょうせい]の枠組[わくぐ]みに包摂[ほうせつ]しようという、調和[ちょうわ]重視[じゅうし]の立場[たちば]である。",
+   219→      "こうした立場[たちば]の限界[げんかい]も明[あき]らかである。同化[どうか]圧力[あつりょく]が暗黙[あんもく]の裡[り]に作動[さどう]し、表面上[ひょうめんじょう]の調和[ちょうわ]を維持[いじ]するため、差異[さい]は私[わたくし]的[てき]領域[りょういき]に押[お]し込[こ]められる。結果[けっか]として、外国人[がいこくじん]住民[じゅうみん]は表面上[ひょうめんじょう]適応[てきおう]しつつも、内面[ないめん]に矛盾[むじゅん]を抱[いだ]え続[つづ]けることになる。制度[せいど]的[てき]包摂[ほうせつ]と心理[しんり]的[てき]包摂[ほうせつ]の間[はし]には、依然[いぜん]として埋[う]め難[がた]い溝[みぞ]が横[よこ]たわっているのである。",
+   220→      "面白[おもしろ]いのは、国[くに]の中央[ちゅうおう]政府[せいふ]が慎重[しんちょう]な姿勢[しせい]を保[たも]つ一方[いっぽう]で、地方[ちほう]自治体[じちたい]が先[さき]んじて多[た]文化[ぶんか]共生[きょうせい]の現場[げんば]を切[き]り拓[ひら]いている点[てん]である。外国人[がいこくじん]市民[しみん]会議[かいぎ]の設置[せっち]、多言語[たげんご]行政[ぎょうせい]サービス[さーびす]、子[こ]ども[ども]の教育[きょういく]支援[しえん]。こうした実践[じっせん]は、現場[げんば]の必然[ひつぜん]から生[う]まれたものであり、トップ[とっぷ]ダウン[だうん]の政策[せいさく]の遅[おく]れを現場[げんば]の知恵[ちえ]で補[おぎな]う構図[こうず]を示[しめ]している。",
+   221→      "もう一[ひと]つ見逃[みのが]せないのは、日本[にほん]社会[しゃかい]の内[ない]部[ぶ]に既[すで]に存在[そんざい]する多様性[たようせい]の不可視化[ふかしか]である。アイヌ[あいぬ]民族[みんぞく]、琉球[りゅうきゅう]の人々[ひとびと]、在日[ざいにち]コリアン[こりあん]。これらの人々[ひとびと]は長[なが]きにわたり同化[どうか]を強[し]いられ、その差異[さい]は歴史[れきし]の底[そこ]に沈殿[ちんでん]してきた。多[た]文化[ぶんか]共生[きょうせい]を外国人[がいこくじん]政策[せいさく]の枠組[わくぐ]みの中[なか]だけで語[かた]る限[かぎ]り、こうした内[ない]部[ぶ]の多様性[たようせい]に対[たい]する無自覚[むじかく]を反復[はんぷく]することになる。",
+   222→      "差別[さべつ]と構造[こうぞう]的[てき]障壁[しょうへき]も依然[いぜん]として根強[ねづよ]い。入居[にゅうきょ]時[じ]の住宅[じゅうたく]拒否[きょひ]、就職[しゅうしょく]時[じ]の書類[しょるい]審査[しんさ]、日常[にちじょう]的[てき]な微細[びさい]な排除[はいじょ]。これらは法的[ほうてき]に禁止[きんし]されていても、実態[じったい]として後[の]を絶[た]たない。ヘイト[へいと]スピーチ[すぴーち]対策[たいさく]法[ほう]の制定[せいてい]は一[ひと]つの前進[ぜんしん]だが、法[ほう]の網[あみ]の目[め]を潜[くぐ]る巧妙[こうみょう]な差別[さべつ]までを根絶[こんぜつ]するには至[いた]っていない。",
+   223→      "教育[きょういく]現場[げんば]は、多[た]文化[ぶんか]共生[きょうせい]の成否[せいひ]を分[わ]かつ試練[しれん]の最前線[さいぜんせん]である。外国[がいこく]にルーツ[るーつ]を持[も]つ子[こ]ども[ども]の不就学[ふしゅうがく]問題[もんだい]、日本[にほん]語[ご]指導[しどう]の不[ふ]充実[じゅうじつ]、いじめの防止[ぼうし]。こうした課題[かだい]に対[たい]する学校[がっこう]の対応[たいおう]は、次[つぎ]の世代[せだい]の社会[しゃかい]の形[かたち]を規定[きてい]する。真[しん]の多[た]文化[ぶんか]共生[きょうせい]は、法[ほう]や制度[せいど]の改革[かいかく]だけでなく、日[ひ]々[び]の教育[きょういく]実践[じっせん]の中[なか]で鍛[きた]えられるものだからである。",
+   224→      "未来[みらい]の日本[にほん]が多[た]文化[ぶんか]共生[きょうせい]を実質化[じっしつか]するためには、差異[さい]を管理[かんり]する視点[してん]から、差異[さい]を生[い]きる視点[してん]への転換[てんかん]が不可欠[ふかけつ]である。多数[たすう]派[は]が自[みずか]らを相対化[そうたいか]し、自[みずか]らの文化[ぶんか]的[てき]前提[ぜんてい]を問[と]い直[なお]すこと。それなくして、共生[きょうせい]は単[たん]なる形式的[けいしきてき]なスローガン[すろーがん]に終[お]わるであろう。多[た]文化[ぶんか]共生[きょうせい]の真[しん]の成熟[せいじゅく]は、最終[さいしゅう]的[てき]には、日本[にほん]人[にん]という範疇[はんちゅう]自体[じたい]が問[と]い直[なお]される地点[ちてん]に到達[とうたつ]するはずである。"
+   225→    ],
+   226→    translation: [
+   227→      "Japan has traditionally called itself a homogeneous nation-state, but that premise can no longer be sustained. As population decline and aging advance and labor shortages deepen, accepting human resources from abroad has become unavoidable. As of the end of 2024, the foreign population has surpassed three million. Such demographic realities have lifted the ideal of multicultural coexistence to the level of policy.",
+   228→      "Multicultural coexistence is a concept that local governments began advocating in the 1990s, aiming at a society in which people of different cultural backgrounds live together while mutually respecting one another. Yet behind that ideal one can read a distinctly Japanese strategy, different from Western multiculturalism: a stance emphasizing harmony that seeks to incorporate difference within a framework of coexistence rather than simply acknowledging difference.",
+   229→      "The limits of such a stance are also apparent. Assimilation pressure operates implicitly, and to maintain surface harmony, difference is pushed into the private sphere. As a result, foreign residents outwardly adapt while internally carrying unresolved contradictions. Between institutional and psychological inclusion there remains a hard-to-bridge gulf.",
+   230→      "What is interesting is that while the central government maintains a cautious stance, local governments have taken the lead in carving out the frontlines of multicultural coexistence: foreign-resident councils, multilingual administrative services, education support for children. These practices emerged from necessity on the ground, illustrating how the wisdom of the field compensates for lagging top-down policy.",
+   231→      "Equally impossible to overlook is the invisibilization of diversity already existing within Japanese society: the Ainu people, the people of Okinawa, Koreans in Japan. Long forced into assimilation, their difference has settled to the bottom of history. As long as multicultural coexistence is discussed only within the framework of foreign-resident policy, it will perpetuate a lack of awareness of internal diversity.",
+   232→      "Discrimination and structural barriers also remain deep-rooted. Refusal in housing, screening in employment, daily micro-exclusions — though legally prohibited, they continue in practice. The enactment of the hate-speech countermeasure law was a step forward, but it has not yet eradicated the subtle discrimination that slips through the meshes of the law.",
+   233→      "The education front is the testing ground that divides success from failure in multicultural coexistence: non-enrollment of children with foreign roots, inadequate Japanese-language instruction, prevention of bullying. How schools respond to these issues will shape the form of the next generation's society. True multicultural coexistence is forged not only through legal and institutional reform but through daily educational practice.",
+   234→      "For the future of Japan to substantiate multicultural coexistence, a shift is indispensable — from a perspective that manages difference to one that lives difference. For the majority to relativize itself and to question its own cultural premises. Without that, coexistence will end as a mere formal slogan. The true maturation of multicultural coexistence should, ultimately, reach the point where the very category of 'Japanese' is itself questioned."
+   235→    ],
+   236→    questions: [
+   237→      {
+   238→        q: "According to the passage, what forced multicultural coexistence onto Japan's policy agenda?",
+   239→        choices: ["Demographic realities of population decline, aging, and labor shortages, with the foreign population exceeding three million", "A sudden influx of refugees", "Pressure from international organizations", "Cultural fascination with foreign traditions"],
+   240→        answerIndex: 0,
+   241→        explanation: "The passage states that 少子化と高齢化の進行に伴い、労働力不足が深刻化し (as population decline and aging advance and labor shortages deepen), and 外国人人口は三百万人を突破している (the foreign population has surpassed three million)."
+   242→      },
+   243→      {
+   244→        q: "How does the passage characterize Japan's distinctive approach to multicultural coexistence?",
+   245→        choices: ["It emphasizes harmony, incorporating difference within a coexistence framework rather than simply acknowledging difference", "It is identical to Western multiculturalism", "It rejects any form of cultural difference", "It is based on complete cultural assimilation"],
+   246→        answerIndex: 0,
+   247→        explanation: "The passage states that Japan's approach is 差異を承認するというより、差異を抱いたまま共生の枠組みに包摂しようという、調和重視の立場 (a harmony-emphasizing stance that incorporates difference within a coexistence framework rather than simply acknowledging it)."
+   248→      },
+   249→      {
+   250→        q: "What does the passage identify as a key blind spot in Japan's multicultural coexistence policy?",
+   251→        choices: ["The invisibilization of internal diversity such as the Ainu, Okinawans, and Koreans in Japan", "The lack of foreign tourists", "The absence of English-language education", "The over-emphasis on internal minorities"],
+   252→        answerIndex: 0,
+   253→        explanation: "The passage warns that as long as multicultural coexistence is discussed only within 外国人政策の枠組みの中だけで (the framework of foreign-resident policy), it perpetuates the 不可視化 (invisibilization) of internal diversity like the Ainu, Okinawans, and Koreans in Japan."
+   254→      },
+   255→      {
+   256→        q: "According to the passage, why is education critical to multicultural coexistence?",
+   257→        choices: ["Daily educational practice forges the next generation's society and addresses issues like non-enrollment and bullying", "Schools have no impact on social cohesion", "Education is irrelevant to the foreign population", "Schools should focus only on language instruction"],
+   258→        answerIndex: 0,
+   259→        explanation: "The passage states that 真の多文化共生は、法や制度の改革だけでなく、日々の教育実践の中で鍛えられるもの (true multicultural coexistence is forged in daily educational practice), and that school responses shape the 次の世代の社会の形 (form of the next generation's society)."
+   260→      },
+   261→      {
+   262→        q: "What does the author conclude is necessary for true multicultural coexistence in Japan?",
+   263→        choices: ["A shift from managing difference to living it, with the majority relativizing its own cultural premises", "The complete assimilation of all minorities", "The abandonment of the foreign population", "The expansion of the homogeneity myth"],
+   264→        answerIndex: 0,
+   265→        explanation: "The final paragraph calls for a shift from 差異を管理する視点から、差異を生きる視点への転換 (a perspective that manages difference to one that lives difference), with the majority 相対化し、自らの文化的前提を問い直す (relativizing itself and questioning its cultural premises)."
+   266→      }
+   267→    ]
+   268→  },
+   269→
+   270→  // ───────────────────────────────────────────────────────────
+   271→  // r-n1-35 — A philosophical essay on the nature of suffering
+   272→  // ───────────────────────────────────────────────────────────
+   273→  {
+   274→    id: "r-n1-35",
+   275→    title: "苦[く]の哲学[てつがく]について",
+   276→    titleReading: "くのてつがくについて",
+   277→    level: "N1",
+   278→    summary: "A philosophical meditation on the nature of suffering — drawing on Buddhist, Greek, Christian, and modern thought — examining whether suffering is constitutive of meaning, and the ethics of its alleviation versus the solidarity it enables.",
+   279→    estMinutes: 14,
+   280→    tags: ["philosophy", "suffering", "Buddhism", "existentialism", "ethics"],
+   281→    body: [
+   282→      "苦[く]とは、人間[にんげん]の存在[そんざい]に不可分[ふかぶん]に伴[ともな]う現象[げんしょう]である。誰[だれ]もが一度[いちど]はその重[おも]みに耐[た]え忍[しの]び、哲学[てつがく]も宗教[しゅうきょう]も文学[ぶんがく]も古[ふる]くからこの問[と]いに取[と]り組[く]んできた。しかし、苦[く]とはそもそも何[なに]であり、それを私[わたし]たちはいかに捉[とら]えるべきなのだろうか。その問[と]いに答[こた]えることなしには、人間[にんげん]の条件[じょうけん]そのものを理解[りかい]することはできない。",
+   283→      "仏教[ぶっきょう]は苦[く]をその教理[きょうり]の中心[ちゅうしん]に据[す]えた。四[し]諦[たい]の説[せつ]は、生老病死[しょうろうびょうし]という苦[く]を前提[ぜんてい]としたうえで、その原因[げんいん]を渇愛[かつあい]に求[もと]め、その滅[めつ]を実現[じつげん]する道[みち]を示[しめ]す。ここで注目[ちゅうもく]すべきは、苦[く]の原因[げんいん]が外部[がいぶ]の事情[じじょう]ではなく、内部[ないぶ]の執着[しゅうちゃく]に求[もと]められている点[てん]である。すなわち、苦[く]とは事物[じぶつ]に対[たい]する我[わ]が執着[しゅうちゃく]の反映[はんえい]にほかならない。",
+   284→      "これに対[たい]し、古代[こだい]ギリシャ[ぎりしゃ]哲学[てつがく]はやや異[こと]なる立場[たちば]をとった。エピクロス[えぴくろす]は苦[く]を避[さ]けるための実践[じっせん]的[てき]知恵[ちえ]を強調[きょうちょう]し、ストア[すとあ]派[は]は苦[く]を耐[た]え忍[しの]ぶのみならず、自[みずか]らの徳[とく]を磨[みが]く契機[けいき]へと転[てん]化[か]しようとした。彼[かれ]らにとって、苦[く]は克服[こくふく]されるべき障害[しょうがい]であると同時[どうじ]に、人間[にんげん]の理性[りせい]を鍛[きた]える試練[しれん]でもあった。仏教[ぶっきょう]が執着[しゅうちゃく]を解[と]くことを志向[しこう]したのに対[たい]し、ギリシャ[ぎりしゃ]哲学[てつがく]は理性[りせい]を通[つう]じて苦[く]に意味[いみ]を付与[ふよ]しようとしたのである。",
+   285→      "キリスト[きりすと]教[きょう]は、苦[く]に別[べつ]の次元[じげん]の意味[いみ]を与[あた]えた。十字架[じゅうじか]の物語[ものがたり]は、神[かみ]自体[じたい]が苦[く]を引[ひ]き受[う]けたという逆説[ぎゃくせつ]を提示[ていじ]する。無垢[むく]なる者[もの]の苦[く]が救済[きゅうさい]の契機[けいき]となるという構図[こうず]は、苦[く]を単[たん]なる罰[ばつ]ではなく、愛[あい]の受肉[じゅにく]として再解釈[さいかいしゃく]した。中世[ちゅうせい]の神秘[しんぴ]家[か]たちが自[みずか]ら進[すす]んで苦[く]を求[もと]めたのも、それが神[かみ]との合一[ごういつ]に至[いた]る道[みち]と信[しん]じられたからにほかならない。",
+   286→      "近代[きんだい]に入[はい]ると、苦[く]の位置[いち]づけは根本[こんぽん]的[てき]に変[か]わる。科学[かがく]技術[ぎじゅつ]と医学[いがく]の進歩[しんぽ]は、苦[く]を除去[じょきょ]可能[かのう]な技術[ぎじゅつ]的[てき]課題[かだい]へと還元[かんげん]した。ベーコン[べーこん]の言葉[ことば]を借[か]りれば、自然[しぜん]を支配[しはい]することで人間[にんげん]の状態[じょうたい]を改善[かいぜん]するという近世[きんせい]のプロジェクト[ぷろじぇくと]は、苦[く]を技術[ぎじゅつ]の対象[たいしょう]と化[か]したのである。もはや苦[く]に耐[た]えるのではなく、それを根絶[こんぜつ]するという希望[きぼう]が、近代[きんだい]の支配[しはい]的[てき]な物語[ものがたり]となった。",
+   287→      "しかし、この希望[きぼう]は深刻[しんこく]な逆説[ぎゃくせつ]を孕[はら]んでいる。技術[ぎじゅつ]的[てき]に苦[く]を和[やわ]らげる能力[のうりょく]が拡張[かくちょう]する一方[いっぽう]で、意味[いみ]なき苦[く]に対[たい]する耐性[たいせい]は却[かえ]って低下[ていか]しているのではないか。物質[ぶっしつ]的[てき]不自由[ふじゆう]は減[へ]ったが、精神的[せいしんてき]な苦[く]は消[け]えず、むしろ新種[しんしゅ]の苦[く]を生[う]み出[だ]している。意味[いみ]の枠組[わくぐ]みが喪失[そうしつ]した現代[げんだい]では、苦[く]はもはや何[なに]かに耐[た]えるための試練[しれん]ではなく、ただ無[む]意味[いみ]なものとして立[た]ち現[あらわ]れる。",
+   288→      "ここから倫理[りんり]的[てき]な問[と]いが浮上[ふじょう]する。苦[く]の軽減[けいげん]は確[たし]かに倫理[りんり]的[てき]要請[ようせい]である。医療[いりょう]の発展[はってん]、貧困[ひんこん]の救済[きゅうさい]、災害[さいがい]援護[えんご]。これらは人間[にんげん]の連帯[れんたい]の当然[とうぜん]の形[かたち]である。しかし同時[どうじ]に、すべての苦[く]を除去[じょきょ]しようとする意志[いし]そのものが、人間[にんげん]の尊厳[そんげん]を損[そこ]なうことになりはしないか。他者[たしゃ]の苦[く]に触[ふ]れることで生[う]まれる共感[きょうかん]、責任[せきにん]、連帯[れんたい]。それらは苦[く]の完全[かんぜん]な除去[じょきょ]によって消[き]え去[さ]る対象[たいしょう]でもある。",
+   289→      "結局[けっきょく]、苦[く]の哲学[てつがく]は、苦[く]をなくす技術[ぎじゅつ]の哲学[てつがく]ではあり得[え]ない。それは、人間[にんげん]が有限[ゆうげん]な存在[そんざい]であることの受容[じゅよう]と、その受容[じゅよう]の上[うえ]に立[た]つ他者[たしゃ]との連帯[れんたい]の倫理[りんり]でなければならない。苦[く]を無[む]に還[かえ]すことのできない存在[そんざい]であることこそが、私[わたし]たちを人間[にんげん]たらしめているのである。徹底[てってい]して苦[く]を軽減[けいげん]しつつ、なお残[のこ]るものに謙虚[けんきょ]に向[む]き合[あ]うこと。それこそが、二十一世紀[にじゅういちせいき]における苦[く]の哲学[てつがく]の課題[かだい]であろう。"
+   290→    ],
+   291→    translation: [
+   292→      "Suffering is a phenomenon inseparable from human existence. Everyone must at some point endure its weight, and philosophy, religion, and literature have long grappled with this question. But what is suffering in the first place, and how should we grasp it? Without answering that question, we cannot understand the human condition itself.",
+   293→      "Buddhism placed suffering at the center of its teaching. The doctrine of the Four Noble Truths presupposes the suffering of birth, aging, illness, and death, locates its cause in craving, and shows the path to its cessation. What is notable here is that the cause of suffering is sought not in external circumstances but in internal clinging. Suffering, in other words, is nothing but a reflection of our clinging to things.",
+   294→      "In contrast, ancient Greek philosophy took a somewhat different stance. Epicurus emphasized practical wisdom for avoiding suffering, while the Stoics sought not only to endure suffering but to transform it into an occasion to refine their virtue. For them, suffering was an obstacle to be overcome and at the same time a trial that forged human reason. While Buddhism aimed at releasing clinging, Greek philosophy sought to confer meaning on suffering through reason.",
+   295→      "Christianity gave suffering another dimension of meaning. The narrative of the cross presents the paradox that God himself took on suffering. The structure in which the suffering of the innocent becomes the occasion of salvation reinterpreted suffering not as mere punishment but as the incarnation of love. That medieval mystics voluntarily sought suffering was precisely because they believed it to be the path to union with God.",
+   296→      "In modernity, the placement of suffering fundamentally changes. Advances in science, technology, and medicine reduced suffering to a technical problem that can be eliminated. To borrow Bacon's words, the early modern project of improving the human condition by mastering nature transformed suffering into an object of technique. No longer enduring suffering but eradicating it became the dominant narrative of modernity.",
+   297→      "Yet this hope harbors a serious paradox. While the technical capacity to alleviate suffering expands, our tolerance for meaningless suffering may rather decline. Material privation has decreased, but spiritual suffering has not disappeared; it has instead produced new kinds of suffering. In a modernity that has lost the framework of meaning, suffering appears no longer as a trial to be endured for something, but simply as something meaningless.",
+   298→      "From here an ethical question arises. The alleviation of suffering is certainly an ethical imperative: medical advance, relief of poverty, disaster relief — these are natural forms of human solidarity. Yet at the same time, the very will to eliminate all suffering may undermine human dignity. The empathy, responsibility, and solidarity that arise through contact with another's suffering are themselves things that would vanish with the complete elimination of suffering.",
+   299→      "In the end, the philosophy of suffering cannot be a philosophy of techniques for eliminating it. It must be an ethics of acceptance that human beings are finite, and a solidarity with others built upon that acceptance. It is precisely being an existence that cannot reduce suffering to nothing that makes us human. To thoroughly alleviate suffering while remaining humble toward what nonetheless remains — that is the task of the philosophy of suffering in the twenty-first century."
+   300→    ],
+   301→    questions: [
+   302→      {
+   303→        q: "According to the passage, where does Buddhism locate the cause of suffering?",
+   304→        choices: ["In internal clinging rather than external circumstances", "In external misfortune alone", "In divine punishment", "In the absence of technology"],
+   305→        answerIndex: 0,
+   306→        explanation: "The passage states that 苦の原因が外部の事情ではなく、内部の執着に求められている (the cause of suffering is sought not in external circumstances but in internal clinging)."
+   307→      },
+   308→      {
+   309→        q: "How did ancient Greek philosophy differ from Buddhism in its approach to suffering?",
+   310→        choices: ["Greek philosophy sought to confer meaning on suffering through reason, while Buddhism aimed to release clinging", "Both completely rejected any engagement with suffering", "Greek philosophy denied the existence of suffering", "Buddhism emphasized reason more than Greek philosophy"],
+   311→        answerIndex: 0,
+   312→        explanation: "The passage contrasts them: 仏教が執着を解くことを志向したのに対し、ギリシャ哲学は理性を通じて苦に意味を付与しようとした (while Buddhism aimed to release clinging, Greek philosophy sought to confer meaning on suffering through reason)."
+   313→      },
+   314→      {
+   315→        q: "What change does the passage identify in modernity's treatment of suffering?",
+   316→        choices: ["Suffering was reduced to a technical problem to be eliminated rather than endured", "Suffering was elevated to a sacred status", "Suffering was celebrated as the highest good", "Suffering was completely ignored"],
+   317→        answerIndex: 0,
+   318→        explanation: "The passage states that modernity 苦を除去可能な技術的課題へと還元した (reduced suffering to a technical problem that can be eliminated) — an object of technique rather than something to be endured."
+   319→      },
+   320→      {
+   321→        q: "What paradox does the passage identify regarding modernity and suffering?",
+   322→        choices: ["While technical capacity to alleviate suffering expands, tolerance for meaningless suffering declines and new forms of spiritual suffering emerge", "Modernity has eliminated all suffering", "Suffering has become irrelevant to modern people", "Modernity has restored the medieval view of suffering"],
+   323→        answerIndex: 0,
+   324→        explanation: "The passage notes that 技術的に苦を和らげる能力が拡張する一方で、意味なき苦に対する耐性は却って低下している (while technical capacity expands, tolerance for meaningless suffering declines), and that 新種の苦を生み出している (new kinds of suffering are produced)."
+   325→      },
+   326→      {
+   327→        q: "What does the author conclude about the proper philosophy of suffering?",
+   328→        choices: ["It must accept human finitude and build solidarity with others, while alleviating suffering and remaining humble toward what remains", "It should seek the complete elimination of all suffering by any means", "It should reject all forms of alleviation", "It should glorify suffering as the path to God"],
+   329→        answerIndex: 0,
+   330→        explanation: "The final paragraph concludes that the philosophy of suffering must be 受容と、その受容の上に立つ他者との連帯の倫理 (an ethics of acceptance and solidarity with others), calling for 徹底して苦を軽減しつつ、なお残るものに謙虚に向き合う (thorough alleviation while remaining humble toward what remains)."
+   331→      }
+   332→    ]
+   333→  },
+   334→
+   335→  // ───────────────────────────────────────────────────────────
+   336→  // r-n1-36 — The economics of Japan's tourism industry
+   337→  // ───────────────────────────────────────────────────────────
+   338→  {
+   339→    id: "r-n1-36",
+   340→    title: "日本[にほん]観光[かんこう]産業[さんぎょう]の経済[けいざい]学[がく]",
+   341→    titleReading: "にほんかんこうさんぎょうのけいざいがく",
+   342→    level: "N1",
+   343→    summary: "An economic analysis of Japan's tourism boom — its contribution to GDP and regional revitalization, structural vulnerabilities, overtourism, exchange-rate risks, and the need for a sustainable model beyond volume-based growth.",
+   344→    estMinutes: 12,
+   345→    tags: ["tourism", "economics", "overtourism", "inbound", "regional revitalization"],
+   346→    body: [
+   347→      "二千[にせん]十[じゅう]年代[ねんだい]以降[いこう]、日本[にほん]の観光[かんこう]産業[さんぎょう]は未曽[みぞう]有[ゆう]の成長[せいちょう]を遂[と]げた。訪[ほう]日[にち]外国人[がいこくじん]数[すう]は二千[にせん]二十[にじゅう]三[さん]年[ねん]には年間[ねんかん]二千五百[にせんごひゃく]万[まん]人[にん]を超[こ]え、観光[かんこう]収入[しゅうにゅう]は五[ご]兆[ちょう]円[えん]に迫[せま]った。これを支[ささ]えたのは、ビザ[びざ]緩和[かんわ]、インフラ[いんふら]整備[せいび]、そして円安[えんやす]の三重[みえ]の追[お]い風[かぜ]である。観光[かんこう]はもはや単[たん]なる一[ひと]産業[さんぎょう]ではなく、日本[にほん]経済[けいざい]全体[ぜんたい]を支[ささ]える柱[はしら]の一[ひと]つとなった。",
+   348→      "経済[けいざい]的[てき]効果[こうか]は多[おお]岐[き]にわたる。宿泊[しゅくはく]、飲食[いんしょく]、運輸[うんゆ]、小売[こうり]といった直接[ちょくせつ]的[てき]な波及[はきゅう]効果[こうか]のみならず、地方[ちほう]の雇用[こよう]創出[そうしゅつ]や地域[ちいき]ブランド[ぶらんど]の形成[けいせい]にも寄与[きよ]している。特[とく]に、人口[じんこう]減少[げんしょう]に悩[なや]む地方[ちほう]都市[とし]にとって、観光[かんこう]は数少[すうすく]ない成長[せいちょう]産業[さんぎょう]として期待[きたい]を集[あつ]めてきた。地域[ちいき]の魅力[みりょく]を貨幣[かへい]価値[かち]に転換[てんかん]する仕組[しく]みとして、観光[かんこう]の経済[けいざい]的[てき]意義[いぎ]は大[おお]きい。",
+   349→      "しかし、その成長[せいちょう]の構造[こうぞう]を検[けん]討[とう]すれば、脆弱[ぜいじゃく]さが浮[う]き彫[ぼ]りになる。観光[かんこう]収入[しゅうにゅう]の大半[たいはん]は訪[ほう]日[にち]客[きゃく]の数[かず]に依存[いぞん]しており、一人[いちにん]当[とう]たりの消費[しょうひ]額[がく]の伸[の]びは頭[あたま]打[う]ちである。いわゆる量[りょう]から質[しつ]への転換[てんかん]が叫[さけ]ばれて久[ひさ]しいが、実態[じったい]は依然[いぜん]として人[ひと]の数[かず]に依存[いぞん]したモデル[もでる]である。こうした体質[たいしつ]は、外部[がいぶ]環境[かんきょう]の変化[へんか]に対[たい]する耐性[たいせい]を欠[か]いていることを示[しめ]している。",
+   350→      "人手[ひとで]不足[ぶそく]も深刻[しんこく]な制約[せいやく]である。宿泊[しゅくはく]業[ぎょう]や飲食[いんしょく]業[ぎょう]では外国人[がいこくじん]労働[ろうどう]者[しゃ]の受[う]け入[い]れに頼[たよ]らざるを得[え]ない状況[じょうきょう]が広[ひろ]がっている。しかし、技能[ぎのう]水準[すいじゅん]の格差[かくさ]、言語[げんご]の壁[かべ]、労働[ろうどう]条件[じょうけん]の劣悪[れつあく]。これらはサービス[さーびす]品質[ひんしつ]の低下[ていか]に直結[ちょっけつ]し、長期[ちょうき]的[てき]には日本[にほん]ブランド[ぶらんど]の価値[かち]を毀損[きそん]する懸念[けねん]がある。人手[ひとで]の確保[かくほ]と品質[ひんしつ]の維持[いじ]という二[に]律[りつ]背反[はいはん]に、業界[ぎょうかい]は直面[ちょくめん]している。",
+   351→      "オーバー[おーばー]ツーリズム[つーりずむ]も看過[かんか]できない。京都[きょうと]、鎌倉[かまくら]、白川郷[しらかわごう]。著名[ちょめい]な観光[かんこう]地[ち]では、住民[じゅうみん]の生活[せいかつ]環境[かんきょう]の悪化[あっか]、交通[こうつう]混雑[こんざつ]、ごみ問題[もんだい]が深刻[しんこく]化[か]している。観光[かんこう]の利益[りえき]が一部[いちぶ]の事業者[じぎょうしゃ]に偏[かたよ]る一方[いっぽう]で、その負担[ふたん]は地元[じもと]住民[じゅうみん]に押[お]し付[つ]けられるという非対称[ひたいしょう]性[せい]が、地域[ちいき]社会[しゃかい]の分断[ぶんだん]を生[う]み出[だ]しかねない。",
+   352→      "為替[かわせ]の変動[へんどう]も大[おお]きなリスク[りすく]である。円安[えんやす]が訪[ほう]日[にち]客[きゃく]の増加[ぞうか]を支[ささ]えてきた反面[はんめん]、急[きゅう]激[げき]な円高[えんだか]は逆[ぎゃく]方向[ほうこう]の衝撃[しょうげき]をもたらす。二千[にせん]八[はち]年[ねん]のリーマン[りーまん]・ショック[しょっく]や、新型[しんがた]コロナ[ころな]禍[か]の際[さい]には、訪[ほう]日[にち]客[きゃく]が急落[きゅうらく]し、観光[かんこう]依存[いぞん]型[がた]の地域[ちいき]は壊滅[かいめつ]的[てき]な打撃[だげき]を受[う]けた。単一[たんいつ]の要因[よういん]に依存[いぞん]する経済[けいざい]構造[こうぞう]の危険[きけん]性[せい]が、そこに露呈[ろてい]された。",
+   353→      "持続[じぞく]可能[かのう]な観光[かんこう]、すなわちサステナブル[さすてなぶる]・ツーリズム[つーりずむ]への転換[てんかん]が、今[いま]や急務[きゅうむ]である。分散[ぶんさん]化[か]による観光[かんこう]地[ち]の拡大[かくだい]、滞在[たいざい]期間[きかん]の延長[えんちょう]、消費[しょうひ]単価[たんか]の向上[こうじょう]。これらを実現[じつげん]するには、単[たん]なるマス[ます]・ツーリズム[つーりずむ]からハイ[はい]バリュー[ばりゅー]・ツーリズム[つーりずむ]への戦略[せんりゃく]的[てき]転換[てんかん]が求[もと]められる。自然[しぜん]や文化[ぶんか]という観光[かんこう]資源[しげん]は有限[ゆうげん]であり、その保存[ほぞん]と活用[かつよう]の両立[りょうりつ]を図[はか]る制度[せいど]設計[せっけい]が必要[ひつよう]である。",
+   354→      "観光[かんこう]立[りっ]国[こく]を掲[かか]げる以上[いじょう]、その政策[せいさく]は短期的[たんきてき]な収益[しゅうえき]の最大化[さいだいか]ではなく、長期[ちょうき]的[てき]な価値[かち]の維持[いじ]を目指[めざ]すべきである。量[りょう]から質[しつ]へ、地元[じもと]との共生[きょうせい]、外部[がいぶ]ショック[しょっく]への耐性[たいせい]。これらを統合[とうごう]した新[あたら]しい観光[かんこう]経済[けいざい]のモデル[もでる]を構築[こうちく]することが、これからの日本[にほん]に課[か]された課題[かだい]である。観光[かんこう]を支[ささ]えるのは、数字[すうじ]ではなく、文化[ぶんか]と人[ひと]の絆[きずな]であることを忘[わす]れてはならない。"
+   355→    ],
+   356→    translation: [
+   357→      "Since the 2010s, Japan's tourism industry has achieved unprecedented growth. The number of foreign visitors in 2023 exceeded 25 million annually, and tourism revenue approached five trillion yen. This was supported by a triple tailwind: visa relaxation, infrastructure development, and the weak yen. Tourism is no longer a mere single industry but one of the pillars supporting the entire Japanese economy.",
+   358→      "The economic effects are wide-ranging. Not only direct ripple effects in lodging, food and drink, transportation, and retail, but it also contributes to local job creation and regional branding. For regional cities troubled by population decline, tourism has been one of the few growth industries. The economic significance of tourism is great as a mechanism that converts regional charm into monetary value.",
+   359→      "However, examining the structure of that growth reveals its fragility. Most tourism revenue depends on the number of visitors, and per-capita spending growth has plateaued. The shift from quantity to quality has long been called for, but the reality remains a model dependent on the number of people. This constitution shows a lack of resilience to changes in external conditions.",
+   360→      "Labor shortages are also a serious constraint. In lodging and food service, reliance on foreign workers has spread. But gaps in skill levels, the language barrier, and poor labor conditions directly lead to declines in service quality and, in the long run, risk damaging the value of the Japan brand. The industry faces the dilemma of securing labor while maintaining quality.",
+   361→      "Overtourism cannot be overlooked either. In famous destinations such as Kyoto, Kamakura, and Shirakawa-go, the deterioration of residents' living environments, traffic congestion, and waste problems have worsened. While tourism profits accrue to a portion of operators, the burdens are placed on local residents — an asymmetry that could fracture regional communities.",
+   362→      "Exchange-rate fluctuation is also a major risk. While the weak yen has supported the increase in visitors, a sharp yen appreciation would bring a shock in the opposite direction. During the 2008 Lehman shock and the COVID-19 pandemic, foreign visitors plummeted, and tourism-dependent regions suffered devastating blows. There the danger of an economic structure dependent on a single factor was exposed.",
+   363→      "The transition to sustainable tourism is now an urgent task. Realizing dispersion to broaden tourism destinations, longer stays, and higher per-capita spending requires a strategic shift from mass tourism to high-value tourism. Natural and cultural tourism resources are finite; institutional design that balances preservation and use is necessary.",
+   364→      "As long as Japan proclaims itself a tourism nation, its policy should aim not at maximizing short-term profit but at sustaining long-term value. From quantity to quality, coexistence with localities, and resilience to external shocks — building a new model of tourism economy that integrates these is the task imposed on Japan going forward. We must not forget that what sustains tourism is not numbers but the bonds of culture and people."
+   365→    ],
+   366→    questions: [
+   367→      {
+   368→        q: "According to the passage, what triple tailwind supported Japan's tourism growth?",
+   369→        choices: ["Visa relaxation, infrastructure development, and the weak yen", "Strong yen, low taxes, and high savings", "Domestic travel subsidies, rail privatization, and tax cuts", "Government subsidies, population growth, and oil prices"],
+   370→        answerIndex: 0,
+   371→        explanation: "The passage lists ビザ緩和、インフラ整備、そして円安の三重の追い風 (visa relaxation, infrastructure development, and the weak yen) as the triple tailwind."
+   372→      },
+   373→      {
+   374→        q: "What structural fragility does the passage identify in Japan's tourism economy?",
+   375→        choices: ["Tourism revenue depends mostly on the number of visitors, with per-capita spending growth plateauing", "Japan has too many diverse revenue streams", "The industry is over-diversified and unfocused", "Tourism is decoupled from regional economies"],
+   376→        answerIndex: 0,
+   377→        explanation: "The passage states that 観光収入の大半は訪日客の数に依存しており、一人当たりの消費額の伸びは頭打ち (most revenue depends on visitor numbers, with per-capita spending growth plateauing), making the model dependent on quantity."
+   378→      },
+   379→      {
+   380→        q: "What dilemma does the tourism industry face regarding labor?",
+   381→        choices: ["The industry must secure labor and maintain service quality despite reliance on foreign workers with skill and language gaps", "There is an oversupply of skilled Japanese hospitality workers", "Foreign workers refuse hospitality jobs", "The industry has no labor shortage"],
+   382→        answerIndex: 0,
+   383→        explanation: "The passage describes the 二律背反 (dilemma) of 人手の確保と品質の維持 (securing labor and maintaining quality) despite reliance on foreign workers with 技能水準の格差、言語の壁、労働条件の劣悪 (skill gaps, language barriers, poor conditions)."
+   384→      },
+   385→      {
+   386→        q: "What risk does the passage identify in dependence on the exchange rate?",
+   387→        choices: ["A sharp yen appreciation would bring a shock in the opposite direction, as seen during the Lehman shock and COVID-19", "Exchange rates have no effect on tourism", "The strong yen has always helped tourism", "Currency volatility benefits tourism equally in both directions"],
+   388→        answerIndex: 0,
+   389→        explanation: "The passage states that 急激な円高は逆方向の衝撃をもたらす (a sharp yen appreciation would bring a shock in the opposite direction), as demonstrated during the Lehman shock and COVID-19 when visitors 急落 (plummeted)."
+   390→      },
+   391→      {
+   392→        q: "What does the author conclude Japan's tourism policy should aim for?",
+   393→        choices: ["A strategic shift from quantity to quality, with coexistence with localities and resilience to external shocks", "The continued pursuit of mass tourism at all costs", "The complete abandonment of inbound tourism", "Maximum short-term profit regardless of long-term costs"],
+   394→        answerIndex: 0,
+   395→        explanation: "The final paragraph calls for a shift 量から質へ、地元との共生、外部ショックへの耐性 (from quantity to quality, coexistence with localities, resilience to shocks), integrating these into a new model."
+   396→      }
+   397→    ]
+   398→  },
+   399→
+   400→  // ───────────────────────────────────────────────────────────
+   401→  // r-n1-37 — A sociological analysis of Japan's gender gap
+   402→  // ───────────────────────────────────────────────────────────
+   403→  {
+   404→    id: "r-n1-37",
+   405→    title: "日本[にほん]のジェンダー[じぇんだー]格差[かくさ]を問[と]う",
+   406→    titleReading: "にほんのじぇんだーかくさをとう",
+   407→    level: "N1",
+   408→    summary: "A sociological analysis of why Japan's gender gap persists — examining structural, cultural, and institutional factors behind its low global ranking, the limits of recent reform, and the need for transformation across institutions, culture, and consciousness.",
+   409→    estMinutes: 13,
+   410→    tags: ["gender", "sociology", "inequality", "labor", "Japan"],
+   411→    body: [
+   412→      "世界[せかい]経済[けいざい]フォーラム[ふぉーらむ]のジェンダー[じぇんだー]格差[かくさ]指数[しすう]において、日本[にほん]は常[つね]に下位[かい]に位置[いち]している。この事実[じじつ]は、経済[けいざい]大国[たいこく]としての地位[いち]と著[いちじる]しい不釣合[ふつりあ]いを示[しめ]しており、国際[こくさい]社会[しゃかい]からの批判[ひはん]も免[まぬが]れない。しかし、この数値[すうち]の背後[はいご]には、単[たん]なる政策[せいさく]の遅[おく]れ以上[いじょう]の、構造[こうぞう]的[てき]、文化[ぶんか]的[てき]な要因[よういん]が横[よこ]たわっている。表面的[ひょうめんてき]な是正[ぜせい]では及[およ]ばない深[ふか]層[そう]を、社会[しゃかい]学[がく]的[てき]視点[してん]から掘[ほ]り下[さ]げる必要[ひつよう]がある。",
+   413→      "まず指摘[してき]すべきは、労働[ろうどう]市場[しじょう]の構造[こうぞう]的[てき]偏[かたよ]りである。正規[せいき]雇用[こよう]と非正規[ひせいき]雇用[こよう]の二[に]極[きょく]化[か]は、女性[じょせい]に不利[ふり]に働[はたら]く。育児[いくじ]期[き]に退職[たいしょく]し、再就職[さいしゅうしょく]する際[さい]には非正規[ひせいき]の枠[わく]に回[まわ]されることが多[おお]く、生涯[しょうがい]賃金[ちんぎん]に決定的[けっていてき]な差[さ]が生[しょう]じる。いわゆるM字[もじ]カーブ[かーぶ]は改善[かいぜん]されたものの、質[しつ]の面[めん]での格差[かくさ]は依然[いぜん]として埋[う]まらない。",
+   414→      "税[ぜい]・社会保障[しゃかいほしょう]制度[せいど]も、女性[じょせい]の就労[しゅうろう]を抑制[よくせい]する方向[ほうこう]に作動[さどう]している。配偶[はいぐう]者[しゃ]控除[こうじょ]や第[だい]三[さん]号[ごう]被保険[ひほけん]者[しゃ]制度[せいど]は、制度的[せいどてき]に専業[せんぎょう]主婦[しゅふ]を優遇[ゆうぐう]する構造[こうぞう]を温存[おんぞん]させてきた。これは個[こ]人[じん]の選択[せんたく]を支援[しえん]するという名[めい]目[もく]のもとに、実[じつ]質[しつ]的[てき]には女性[じょせい]の経済[けいざい]的自立[じりつ]を阻[はば]む要因[よういん]として機能[きのう]してきた。制度[せいど]改革[かいかく]は進[すす]められているが、依然[いぜん]として移行[いこう]期間[きかん]の過渡[かと]期[き]にある。",
+   415→      "文化的[ぶんかてき]な要因[よういん]も軽[かる]視[し]できない。男[だん]尊[そん]女[じょ]卑[ひ]の思想[しそう]は、制度[せいど]の改革[かいかく]だけでは消[け]え去[さ]らない。無意識[むいしき]の偏見[へんけん]、すなわちアンコンシャス[あんこんしゃす]・バイアス[ばいあす]は、採用[さいよう]、昇進[しょうしん]、賃金[ちんぎん]査定[さてい]の各[かく]段階[だんかい]で暗黙[あんもく]の裡[り]に女性[じょせい]を不利[ふり]に扱[あつか]う。期待[きたい]される役割[やくわり]の固定[こてい]化[か]が、個[こ]人[じん]の潜在[せんざい]能力[のうりょく]の発揮[はっき]を阻[はば]んでいる。",
+   416→      "教育[きょういく]現場[げんば]におけるジェンダー[じぇんだー]の再生産[さいせいさん]も看過[かんか]できない。教科書[きょうかしょ]の記述[きじゅつ]、進路[しんろ]指導[しどう]の偏向[へんこう]、部活動[ぶかつどう]の伝統[でんとう]的[てき]な性別[せいべつ]分業[ぶんぎょう]。これらは意図[いと]的[てき]でなくとも、次[つぎ]の世代[せだい]に古[ふる]い性別[せいべつ]役割[やくわり]観[かん]を内面[ないめん]化[か]させる効果[こうか]を持[も]つ。社会[しゃかい]化[か]の初期[しょき]段階[だんかい]で刻印[こくいん]された規範[きはん]は、成年[せいねん]後[ご]も強固[きょうこ]な心理[しんり]的[てき]制約[せいやく]として残[のこ]る。",
+   417→      "政治[せいじ]的[てき]代表[だいひょう]の不足[ぶそく]も深刻[しんこく]である。国会[こっかい]議員[ぎいん]に占[し]める女性[じょせい]の割合[わりあい]は十[じゅう]パーセント[ぱーせんと]台[だい]に留[とど]まり、先進[せんしん]国[こく]の中[なか]で際立[さわだ]って低[ひく]い。意思[いし]決定[けってい]機関[きかん]における女性[じょせい]の不在[ふざい]は、政策[せいさく]そのものが男性[だんせい]の視点[してん]で形成[けいせい]されることを意味[いみ]する。クオータ[くおーた]制[せい]の導入[どうにゅう]が議論[ぎろん]されるようになったが、憲法[けんぽう]的[てき]制約[せいやく]もあり、実現[じつげん]には至[いた]っていない。",
+   418→      "企業[きぎょう]側[がわ]の取[と]り組[く]みにも限界[げんかい]がある。女性[じょせい]管理[かんり]職[しょく]比率[ひりつ]の目標[もくひょう]設定[せってい]、育児[いくじ]休業[きゅうぎょう]制度[せいど]の拡充[かくじゅう]。こうした形式[けいしき]的[てき]な対応[たいおう]は進[すす]んだものの、企業[きぎょう]文化[ぶんか]そのものの変容[へんよう]には至[いた]っていない。長時間[ちょうじかん]労働[ろうどう]を前提[ぜんてい]とした評価[ひょうか]制度[せいど]、飲[の]み会[かい]等[など]の付[つ]き合[あ]い文化[ぶんか]、意思[いし]決定[けってい]の閉鎖[へいさ]性[せい]。これらが女性[じょせい]の登用[とうよう]を阻[はば]む見[み]えない壁[かべ]として立[た]ち塞[ふさ]がっている。",
+   419→      "ジェンダー[じぇんだー]格差[かくさ]の解消[かいしょう]は、もはや個[こ]人[じん]の努力[どりょく]や企業[きぎょう]の善意[ぜんい]に委[ゆだ]ねられる問題[もんだい]ではない。制度[せいど]、文化[ぶんか]、意識[いしき]の三[さん]層[そう]にわたる構造[こうぞう]的[てき]変革[へんかく]が不可欠[ふかけつ]である。とりわけ重要[じゅうよう]なのは、無意識[むいしき]の規範[きはん]を自[みずか]ら問[と]い直[なお]す主体的[しゅたいてき]な営[いとな]みである。改革[かいかく]は上[うえ]から与[あた]えられるものではなく、社会[しゃかい]の各層[かくそう]から生[う]み出[だ]されるものだからである。真[しん]の平等[びょうどう]とは、機会[きかい]の均等[きんとう]という形式的[けいしきてき]な要件[ようけん]にとどまらず、結果[けっか]の公正[こうせい]さを実質[じっしつ]化[か]する営[いとな]みにほかならない。"
+   420→    ],
+   421→    translation: [
+   422→      "In the World Economic Forum's Gender Gap Index, Japan consistently ranks low. This fact shows a striking imbalance with its status as an economic power and exposes it to international criticism. Yet behind these numbers lie structural and cultural factors that go beyond mere policy lag. A sociological perspective is needed to dig into the depths that surface corrections cannot reach.",
+   423→      "First to be noted is the structural bias of the labor market. The polarization between regular and non-regular employment works to women's disadvantage. Women who leave work during childrearing and re-enter employment are often placed in non-regular positions, producing a decisive gap in lifetime wages. Although the so-called M-shaped curve has improved, the gap in quality remains unbridged.",
+   424→      "The tax and social security system also works to suppress women's employment. The spouse deduction and the third-class insured person system have preserved a structure that institutionally favors full-time housewives. In the name of supporting individual choice, these have functioned as factors that hinder women's economic independence. Reform is underway, but the system remains in a transitional period.",
+   425→      "Cultural factors also cannot be dismissed lightly. The ideology of male supremacy and female subordination does not vanish through institutional reform alone. Unconscious bias operates implicitly at each stage — hiring, promotion, wage assessment — to disadvantage women. The fixing of expected roles blocks the exercise of individual potential.",
+   426→      "The reproduction of gender in education cannot be overlooked either. Textbook descriptions, biased career guidance, and the traditional gender division of club activities — even if unintended — have the effect of internalizing old gender roles in the next generation. Norms imprinted at the early stage of socialization remain as strong psychological constraints into adulthood.",
+   427→      "The lack of political representation is also serious. The proportion of women in the Diet remains in the ten-percent range, strikingly low among advanced nations. The absence of women in decision-making bodies means that policy itself is shaped from a male perspective. Although the introduction of a quota system has begun to be debated, constitutional constraints have prevented its realization.",
+   428→      "Corporate initiatives also have limits. Setting targets for the ratio of women in management and expanding childcare leave have advanced as formal responses, but they have not transformed corporate culture itself. Evaluation systems premised on long working hours, drinking-party networking culture, and closed decision-making — these stand as invisible walls blocking women's advancement.",
+   429→      "Resolving the gender gap is no longer a matter that can be left to individual effort or corporate goodwill. Structural transformation across the three layers of institutions, culture, and consciousness is indispensable. What is particularly important is the subjective endeavor to question one's own unconscious norms. Reform is not something given from above but something generated from every layer of society. True equality is not limited to the formal requirement of equal opportunity but is the work of substantiating the fairness of outcomes."
+   430→    ],
+   431→    questions: [
+   432→      {
+   433→        q: "According to the passage, what does Japan's low ranking in the Gender Gap Index reveal?",
+   434→        choices: ["Structural and cultural factors beyond mere policy lag", "A strong record on gender equality", "A statistical error in measurement", "A temporary anomaly soon to be corrected"],
+   435→        answerIndex: 0,
+   436→        explanation: "The passage states that behind the numbers lies 単なる政策の遅れ以上の、構造的、文化的な要因 (structural and cultural factors beyond mere policy lag) that require a sociological perspective."
+   437→      },
+   438→      {
+   439→        q: "What does the passage identify as the labor market's structural bias against women?",
+   440→        choices: ["Polarization between regular and non-regular employment means women who leave for childrearing often re-enter as non-regular workers with lower lifetime wages", "Women are over-represented in senior management", "The labor market has no gender differences", "Men face systematic discrimination"],
+   441→        answerIndex: 0,
+   442→        explanation: "The passage describes 正規雇用と非正規雇用の二極化は、女性に不利に働く (the polarization between regular and non-regular employment works to women's disadvantage), with re-entry often into non-regular positions and a decisive gap in lifetime wages."
+   443→      },
+   444→      {
+   445→        q: "How do tax and social security systems affect women's employment according to the passage?",
+   446→        choices: ["The spouse deduction and third-class insured system institutionally favor full-time housewives and hinder women's economic independence", "They aggressively promote women's full-time employment", "They are completely gender-neutral", "They impose higher taxes on men"],
+   447→        answerIndex: 0,
+   448→        explanation: "The passage states that the spouse deduction and third-class insured person system 制度的に専業主婦を優遇する構造を温存 (preserve a structure that institutionally favors full-time housewives), functioning as a factor that hinders women's economic independence."
+   449→      },
+   450→      {
+   451→        q: "What does the passage say about women's political representation in Japan?",
+   452→        choices: ["Women hold only about ten percent of Diet seats, and policy is shaped from a male perspective; quota systems have not been realized due to constitutional constraints", "Women hold a majority of parliamentary seats", "Quotas have been fully implemented", "Political representation is irrelevant to gender policy"],
+   453→        answerIndex: 0,
+   454→        explanation: "The passage states that 国会議員に占める女性の割合は一〇パーセント台に留まり (the proportion of women in the Diet remains in the ten-percent range), and that the クオータ制の導入 (introduction of a quota system) has not been realized due to 憲法的制約 (constitutional constraints)."
+   455→      },
+   456→      {
+   457→        q: "What does the author conclude is necessary to resolve the gender gap?",
+   458→        choices: ["Structural transformation across institutions, culture, and consciousness, with subjects questioning their own unconscious norms", "Reliance on individual effort alone", "Trusting corporate goodwill without oversight", "Maintaining current formal reforms indefinitely"],
+   459→        answerIndex: 0,
+   460→        explanation: "The final paragraph states that 制度、文化、意識の三層にわたる構造的変革が不可欠 (structural transformation across institutions, culture, and consciousness is indispensable) and emphasizes questioning 無意識の規範を自ら問い直す (one's own unconscious norms)."
+   461→      }
+   462→    ]
+   463→  },
+   464→
+   465→  // ───────────────────────────────────────────────────────────
+   466→  // r-n1-38 — An essay on the ethics of animal rights
+   467→  // ───────────────────────────────────────────────────────────
+   468→  {
+   469→    id: "r-n1-38",
+   470→    title: "動物[どうぶつ]の権利[けんり]という問[と]い",
+   471→    titleReading: "どうぶつのけんりというとい",
+   472→    level: "N1",
+   473→    summary: "A philosophical essay on the moral status of animals — challenging speciesism, examining utilitarian, rights-based, and capability arguments, and probing the limits of moral considerability and the expansion of the moral circle.",
+   474→    estMinutes: 13,
+   475→    tags: ["ethics", "animal rights", "philosophy", "welfare", "moral status"],
+   476→    body: [
+   477→      "西洋[せいよう]哲学[てつがく]の伝統[でんとう]において、動物[どうぶつ]は長[なが]く道徳[どうとく]的[てき]配慮[はいりょ]の対象[たいしょう]から除外[じょがい]されてきた。デカルト[でかると]は動物[どうぶつ]を機械[きかい]と見做[みな]し、カント[かんと]は動物[どうぶつ]への配慮[はいりょ]を人間[にんげん]の道徳[どうとく]的[てき]義務[ぎむ]の間接[かんせつ]的[てき]表現[ひょうげん]に過[す]ぎないとした。このように、動物[どうぶつ]は人間[にんげん]の目的[もくてき]のための手段[しゅだん]として扱[あつか]われることが、哲学[てつがく]的[てき]にも正当[せいとう]化[か]されてきたのである。しかしこの前提[ぜんてい]は、現代[げんだい]において深刻[しんこく]な挑戦[ちょうせん]を受[う]けている。",
+   478→      "その先駆[せんく]けとなったのは、功利[こうり]主義[しゅぎ]の立場[たちば]である。ベンサム[べんさむ]は、理性的[りせいてき]能力[のうりょく]の有無[うむ]ではなく、苦痛[くつう]を感[かん]じる能力[のうりょく]の有無[うむ]こそが道徳[どうとく]的[てき]配慮[はいりょ]の基準[きじゅん]であると主張[しゅちょう]した。彼[かれ]の問[と]い、彼[かれ]らは苦痛[くつう]を受[う]けるかという問[と]いは、道徳[どうとく]共同体[きょうどうたい]の境界[きょうかい]を人間[にんげん]の範囲[はんい]から拡張[かくちょう]する画期[かっき]的[てき]な転換[てんかん]であった。シンガー[しんがー]はこの立場[たちば]を継承[けいしょう]し、利益[りえき]の平等[びょうどう]な考量[こうりょう]という原理[げんり]を打[う]ち立[た]てた。",
+   479→      "これに対[たい]し、権利[けんり]論[ろん]的[てき]な立場[たちば]は異[こと]なる論拠[ろんきょ]を提示[ていじ]する。トム[とむ]・レーガン[れーがん]は、動物[どうぶつ]も主体的[しゅたいてき]な生命[せいめい]の主体[しゅたい]、すなわち自[みずか]らの生活[せいかつ]を持[も]つ存在[そんざい]であり、それ自体[じたい]として尊重[そんちょう]される権利[けんり]を有[ゆう]すると主張[しゅちょう]した。功利[こうり]主義[しゅぎ]が苦痛[くつう]の総量[そうりょう]に注目[ちゅうもく]するのに対[たい]し、権利[けんり]論[ろん]は個[こ]人[じん]の尊厳[そんげん]に根拠[こんきょ]を置[お]く。道徳[どうとく]的[てき]主体[しゅたい]であるという事実[じじつ]それ自体[じたい]が、不可侵[ふかしん]の地位[いち]を保障[ほしょう]するという立場[たちば]である。",
+   480→      "両者[りょうしゃ]に共通[きょうつう]する敵[てき]は、種[しゅ]差別[さべつ]、すなわちスピーシーズイズム[すぴーしぅいずむ]という概念[がいねん]である。人間[にんげん]という種[しゅ]に属[ぞく]するという理由[りゆう]だけでの特権[とっけん]的[てき]扱[あつか]いは、人種[じんしゅ]差別[さべつ]や性別[せいべつ]差別[さべつ]と同[おな]じ構造[こうぞう]の偏見[へんけん]である、という批判[ひはん]である。この批判[ひはん]は、人間[にんげん]の優越[ゆうえつ]性[せい]の前提[ぜんてい]そのものを問[と]い直[なお]すことで、道徳[どうとく]哲学[てつがく]の地盤[じばん]を揺[ゆ]さぶる。",
+   481→      "能力[のうりょく]アプローチ[あぷろーち]は、第三[だいさん]の立場[たちば]を提供[ていきょう]する。ナスバウム[なすばうむ]は、各[かく]動物[どうぶつ]種[しゅ]に固有[こゆう]の能力[のうりょく]の展開[てんかい]を阻[はば]むことを否定[ひてい]するよう、社会[しゃかい]制度[せいど]を設計[せっけい]すべきだと主張[しゅちょう]する。人間[にんげん]に近[ちか]い能力[のうりょく]を持[も]つものだけを保護[ほご]するのではなく、各[かく]種[しゅ]の固有[こゆう]な豊[ゆた]かさを尊重[そんちょう]するという多[た]元的[げんてき]な道徳[どうとく]的[てき]視座[しざ]である。この立場[たちば]は、普遍[ふへん]主義[しゅぎ]と多様[たよう]性[せい]の尊重[そんちょう]を巧[たく]みに統合[とうごう]する。",
+   482→      "実践[じっせん]的[てき]な含意[がんい]は大[おお]きい。食肉[しょくにく]生産[せいさん]、動物[どうぶつ]実験[じっけん]、毛皮[けがわ]産業[さんぎょう]、娯楽[ごらく]用[よう]の動物[どうぶつ]利用[りよう]。いずれも現代[げんだい]社会[しゃかい]に深[ふか]く根差[ねざ]した制度[せいど]的[てき]慣行[かんこう]であるが、動物[どうぶつ]の権利[けんり]の観点[かんてん]からは、いずれも重大[じゅうだい]な倫理[りんり]的[てき]問題[もんだい]を含[ふく]む。工場[こうじょう]式[しき]畜産[ちくさん]、すなわちファクトリー[ふぁくとりー]・ファーミング[ふぁーみんぐ]の惨状[さんじょう]は、その最[もっと]も露骨[ろこつ]な形[かたち]で現[あらわ]れている。",
+   483→      "もっとも、反論[はんろん]も存在[そんざい]する。人間[にんげん]の特別[とくべつ]な義務[ぎむ]は人間[にんげん]同士[どうし]にのみ生[しょう]じるという立場[たちば]、すなわち契約[けいやく]主義[しゅぎ]的[てき]な見地[けんち]からの批判[ひはん]である。また、権利[けんり]の概念[がいねん]を動物[どうぶつ]に拡張[かくちょう]することは、概念[がいねん]の本質[ほんしつ]を損[そこ]なうという懸念[けねん]もある。しかし、これらの反論[はんろん]は、道徳[どうとく]共同体[きょうどうたい]の境界[きょうかい]を改[あらた]めて問[と]い直[なお]す契機[けいき]となるに過[す]ぎない。境界[きょうかい]の引[ひ]き直[なお]しは、放棄[ほうき]ではなく、再考[さいこう]である。",
+   484→      "動物[どうぶつ]の権利[けんり]という問[と]いは、結局[けっきょく]のところ、人間[にんげん]が人間[にんげん]であることの意味[いみ]を問[と]う鏡[かがみ]でもある。他[ほか]の生[せい]き物[もの]との関係[かんけい]において、自[みずか]らをいかに位置[いち]づけるか。その答[こた]え方[かた]こそが、人間[にんげん]の道徳[どうとく]的[てき]成熟[せいじゅく]の度合[どあ]いを測[はか]る尺度[しゃくど]となる。道徳[どうとく]の円[えん]は歴史[れきし]的[てき]に拡張[かくちょう]されてきた。奴隷[どれい]、女性[じょせい]、他[ほか]民族[みんぞく]。その円[えん]に動物[どうぶつ]を含[ふく]めるかどうかは、二十一世紀[にじゅういちせいき]の私[わたし]たちに課[か]された倫理[りんり]的[てき]試練[しれん]である。"
+   485→    ],
+   486→    translation: [
+   487→      "In the Western philosophical tradition, animals have long been excluded from the scope of moral consideration. Descartes regarded animals as machines, and Kant held that concern for animals was no more than an indirect expression of human moral duty. In this way, treating animals as means to human ends has been philosophically justified. Yet this premise now faces serious challenge in the modern era.",
+   488→      "The forerunner of this challenge was the utilitarian position. Bentham argued that it is not the presence of rationality but the capacity to feel pain that is the criterion of moral consideration. His question — 'Can they suffer?' — was a landmark shift that expanded the boundary of the moral community beyond the human. Singer inherited this position and established the principle of equal consideration of interests.",
+   489→      "In contrast, the rights-based position offers a different rationale. Tom Regan argued that animals, too, are subjects-of-a-life — beings with lives of their own — and that they have the right to be respected as such. While utilitarianism focuses on the total amount of suffering, the rights theory grounds itself in individual dignity. The fact of being a moral subject itself secures an inviolable status.",
+   490→      "The common enemy of both is the concept of speciesism. The critique is that privileging treatment solely on the basis of belonging to the human species is a prejudice with the same structure as racism or sexism. By questioning the very premise of human superiority, this critique shakes the foundations of moral philosophy.",
+   491→      "The capability approach offers a third position. Nussbaum argues that social institutions should be designed to deny blocking the development of capabilities inherent to each animal species. Rather than protecting only those with capacities close to humans, this is a pluralistic moral standpoint that respects the distinct richness of each species. This position elegantly integrates universalism and respect for diversity.",
+   492→      "The practical implications are great. Meat production, animal experimentation, the fur industry, the use of animals for entertainment — all are institutional practices deeply rooted in modern society, and from the standpoint of animal rights, all harbor serious ethical problems. The horrors of factory farming manifest in their most blatant form.",
+   493→      "To be sure, objections also exist. The contractualist position argues that special human duties arise only between humans. There is also concern that extending the concept of rights to animals undermines the essence of the concept. Yet these objections serve only as occasions to re-examine the boundary of the moral community. Redrawing the boundary is not abandonment but reconsideration.",
+   494→      "The question of animal rights is, in the end, also a mirror that questions the meaning of being human. How humans position themselves in relation to other living beings — the way that question is answered becomes the measure of human moral maturity. The moral circle has historically expanded: slaves, women, other peoples. Whether to include animals within that circle is the ethical trial imposed on us in the twenty-first century."
+   495→    ],
+   496→    questions: [
+   497→      {
+   498→        q: "According to the passage, how did the Western philosophical tradition treat animals?",
+   499→        choices: ["Animals were excluded from moral consideration; Descartes saw them as machines and Kant held concern for animals to be merely indirect human duty", "Animals were considered equal to humans in dignity", "Animals were given full legal rights", "Animals were worshipped as divine beings"],
+   500→        answerIndex: 0,
+   501→        explanation: "The passage states that animals were 道徳的配慮の対象から除外されてきた (excluded from the scope of moral consideration); Descartes 見做した (regarded) them as machines, and Kant held concern to be 間接的表現に過ぎない (no more than indirect expression)."
+   502→      },
+   503→      {
+   504→        q: "What is the central criterion of moral consideration according to the utilitarian position?",
+   505→        choices: ["The capacity to feel pain, not rational capacity", "The ability to use language", "The ability to enter into contracts", "The size of the animal's brain"],
+   506→        answerIndex: 0,
+   507→        explanation: "The passage states Bentham's criterion: 理性的能力の有無ではなく、苦痛を感じる能力の有無こそが道徳的配慮の基準 (not the presence of rationality but the capacity to feel pain is the criterion of moral consideration)."
+   508→      },
+   509→      {
+   510→        q: "How does the rights-based position differ from utilitarianism?",
+   511→        choices: ["It grounds moral status in individual dignity as subjects-of-a-life rather than in the total amount of suffering", "It rejects moral consideration of animals entirely", "It bases rights on utility calculations", "It denies that animals can suffer"],
+   512→        answerIndex: 0,
+   513→        explanation: "The passage states that while utilitarianism 苦痛の総量に注目する (focuses on the total amount of suffering), the rights theory 個人の尊厳に根拠を置く (grounds itself in individual dignity) as subjects-of-a-life."
+   514→      },
+   515→      {
+   516→        q: "What does the concept of speciesism criticize?",
+   517→        choices: ["Privileging treatment solely on the basis of belonging to the human species, as a prejudice structurally similar to racism or sexism", "The protection of endangered species", "The practice of treating humans and animals equally", "The denial of any human-animal distinction"],
+   518→        answerIndex: 0,
+   519→        explanation: "The passage defines speciesism as 人間という種に属するという理由だけでの特権的扱い (privileging treatment solely on the basis of belonging to the human species), a prejudice 同じ構造の偏見 (with the same structure as racism or sexism)."
+   520→      },
+   521→      {
+   522→        q: "What does the author conclude about the question of animal rights?",
+   523→        choices: ["It is a mirror for the meaning of being human and an ethical trial for the twenty-first century — whether to expand the moral circle to include animals", "It is irrelevant to human moral maturity", "It can be settled by reference to tradition alone", "It requires the rejection of all rights discourse"],
+   524→        answerIndex: 0,
+   525→        explanation: "The final paragraph states that the question of animal rights is 人間が人間であることの意味を問う鏡 (a mirror questioning the meaning of being human) and an 倫理的試練 (ethical trial) for the twenty-first century — whether to expand the moral circle."
+   526→      }
+   527→    ]
+   528→  },
+   529→
+   530→  // ───────────────────────────────────────────────────────────
+   531→  // r-n1-39 — The history of Japan's postwar constitution
+   532→  // ───────────────────────────────────────────────────────────
+   533→  {
+   534→    id: "r-n1-39",
+   535→    title: "戦後[せんご]憲法[けんぽう]の形成[けいせい]と変容[へんよう]",
+   536→    titleReading: "せんごけんぽうのけいせいとへんよう",
+   537→    level: "N1",
+   538→    summary: "A historical analysis of the making of Japan's postwar constitution — its American authorship, the principle of popular sovereignty, the Article 9 paradox, seven decades without amendment, and contemporary debates on revision.",
+   539→    estMinutes: 14,
+   540→    tags: ["constitution", "postwar Japan", "sovereignty", "democracy", "history"],
+   541→    body: [
+   542→      "一九[じゅうきゅう]四[し]五[ご]年[ねん]八[はち]月[がつ]十五[じゅうご]日[にち]、日本[にほん]はポツダム[ぽつだむ]宣言[せんげん]を受[う]け入[い]れ、無条件[むじょうけん]降伏[こうふく]に至[いた]った。敗戦[はいせん]は、単[たん]なる軍事[ぐんじ]的[てき]敗北[はいぼく]にとどまらず、国家[こっか]の統治[とうち]機構[きこう]と価値[かち]体系[たいけい]の根[ね]底[てい]的[てき]な変革[へんかく]を迫[せま]った。連合[れんごう]国[こく]軍[ぐん]総[そう]司令[しれい]部[ぶ]、すなわちGHQ[じーえいちきゅー]の占領[せんりょう]政策[せいさく]の下[もと]で、新[あたら]しい憲法[けんぽう]の制定[せいてい]が不可避[ふかひ]な課題[かだい]として浮上[ふじょう]したのである。帝国[ていこく]憲法[けんぽう]の改正[かいせい]という形式[けいしき]をとりながら、実[じつ]質[しつ]的[てき]には新[あたら]たな統治[とうち]理念[りねん]が導入[どうにゅう]されることとなった。",
+   543→      "起草[きそう]の過程[かてい]は、日本[にほん]側[がわ]の自主[じしゅ]的[てき]な改正[かいせい]案[あん]がGHQ[じーえいちきゅー]に拒否[きょひ]されたのち、わずか一週間[いっしゅうかん]でアメリカ[あめりか]側[がわ]が起草[きそう]した草案[そうあん]が日本[にほん]政府[せいふ]に提示[ていじ]されたという経緯[けいい]を持[も]つ。この事実[じじつ]は、戦後[せんご]憲法[けんぽう]が押[お]し付[つ]けられた憲法[けんぽう]であるという批判[ひはん]を生[しょう]じる根拠[こんきょ]となった。しかし同時[どうじ]に、その内容[ないよう]の理念[りねん]的[てき]な先進性[せんしんせい]は、当時[とうじ]の日本[にほん]社会[しゃかい]の現実[げんじつ]を遥[はる]かに超[こ]えていた。理念[りねん]と現実[げんじつ]の緊張[きんちょう]関係[かんけい]が、戦後[せんご]憲法[けんぽう]史[し]の出発[しゅっぱつ]点[てん]である。",
+   544→      "その理念[りねん]の核心[かくしん]は、国[くに]の主権[しゅけん]が天皇[てんのう]ではなく国民[こくみん]に存[ぞん]するという国民主権[こくみんしゅけん]の原則[げんそく]である。天皇[てんのう]は国民[こくみん]の象徴[しょうちょう]という地位[いち]に位置[いち]づけられ、政治[せいじ]的[てき]権力[けんりょく]からは明確[めいかく]に分離[ぶんり]された。これは明治[めいじ]憲法[けんぽう]の統治[とうち]構造[こうぞう]を根本[こんぽん]的[てき]に覆[くつがえ]す転換[てんかん]であり、主権[しゅけん]の主体[しゅたい]を神話[しんわ]から人民[じんみん]へと移行[いこう]させる革命的[かくめいてき]な変容[へんよう]であった。",
+   545→      "第九[だいきゅう]条[じょう]は、戦後[せんご]憲法[けんぽう]の最[もっと]も特徴[とくちょう]的[てき]な規定[きてい]である。戦争[せんそう]の放棄[ほうき]、戦力[せんりょく]の不[ふ]保持[ほじ]、交戦[こうせん]権[けん]の否認[ひにん]。この三[さん]つの要素[ようそ]からなる平和[へいわ]条項[じょうこう]は、世界[せかい]の憲法[けんぽう]史[し]においても類[るい]を見[み]ないものであった。しかし、この理想[りそう]的[てき]な規定[きてい]は、冷戦[れいせん]の激化[げきか]という国際[こくさい]環境[かんきょう]の下[もと]で、早[はや]くも逆説[ぎゃくせつ]的[てき]な運用[うんよう]を余儀[よぎ]なくされる。",
+   546→      "いわゆる吉田[よしだ]ドクトリン[どくとりん]は、この逆説[ぎゃくせつ]を整理[せいり]する戦略[せんりゃく]であった。軽装[けいそう]経済[けいざい]路線[ろせん]を主張[しゅちょう]した吉田[よしだ]茂[しげる]は、アメリカ[あめりか]の安全保障[あんぜんほしょう]の傘[かさ]に入[はい]ることで、日本[にほん]は軍事[ぐんじ]負担[ふたん]を最小限[さいしょうげん]に抑[おさ]えつつ経済[けいざい]復興[ふっこう]に専念[せんねん]できると考[かんが]えた。一方[いっぽう]で、警察[けいさつ]予備[よび]隊[たい]、のちの自衛[じえい]隊[たい]の創設[そうせつ]は、第九[だいきゅう]条[じょう]の解釈[かいしゃく]を複雑化[ふくざつか]させた。戦力[せんりょく]に該当[がいとう]しないという解釈[かいしゃく]は、法的[ほうてき]な整合[せいごう]性[せい]よりも戦略[せんりゃく]的[てき]な必要[ひつよう]性[せい]に支[ささ]えられた構成[こうせい]であった。",
+   547→      "以来[いらい]、七十年[ななじゅうねん]余[あま]り、戦後[せんご]憲法[けんぽう]は一度[いちど]も改正[かいせい]されることなく今日[きょう]に至[いた]っている。これは世界[せかい]の憲法[けんぽう]史[し]においても特異[とくい]な事例[じれい]である。厳格[げんかく]な改正[かいせい]手続[てつづ]きを設[もう]けたことのみならず、憲法[けんぽう]の理念[りねん]が広[ひろ]く国民[こくみん]に受[う]け入[い]れられてきたことによる。しかし、不改正[ふかいせい]は、理念[りねん]と現実[げんじつ]のズレを蓄積[ちくせき]してきた側面[そくめん]も否定[ひてい]できない。",
+   548→      "改憲[かいけん]論議[ろんぎ]は、第九[だいきゅう]条[じょう]の見直[みなお]しを中心[ちゅうしん]に、繰[く]り返[かえ]し政治[せいじ]的[てき]舞台[ぶたい]に登場[とうじょう]してきた。緊急[きんきゅう]事態[じたい]条項[じょうこう]の新設[しんせつ]、家族[かぞく]の形[かたち]の明文化[めいぶんか]。こうした論点[ろんてん]は、憲法[けんぽう]の理念[りねん]的[てき]な基盤[きばん]を問[と]い直[なお]す重要性[じゅうようせい]を持[も]つと同時[どうじ]に、政治[せいじ]的[てき]利用[りよう]の危険[きけん]性[せい]も孕[はら]んでいる。",
+   549→      "憲法[けんぽう]は、制定[せいてい]時[じ]の理念[りねん]を固定[こてい]するものではなく、時代[じだい]と共[とも]に読[よ]み直[なお]される生[せい]きた文書[ぶんしょ]である。しかし、その読[よ]み直[なお]しは、理念[りねん]の核[かく]を損[そこ]なうものであってはならない。平和[へいわ]主義[しゅぎ]、国民主権[こくみんしゅけん]、基本[きほん]的人権[じんけん]の尊重[そんちょう]。これら戦後[せんご]憲法[けんぽう]の三[さん]大原理[げんり]は、過去[かこ]の遺物[いぶつ]ではなく、未来[みらい]への指標[しひょう]であり続[つづ]ける。憲法[けんぽう]をめぐる議論[ぎろん]は、結局[けっきょく]のところ、日本[にほん]が何[なに]を理念[りねん]の核[かく]として守[まも]り、何[なに]を時代[じだい]の変化[へんか]に応[おう]じて変[か]えるかという、未来選択[みらいせんたく]の問[と]いにほかならない。"
+   550→    ],
+   551→    translation: [
+   552→      "On August 15, 1945, Japan accepted the Potsdam Declaration and reached unconditional surrender. Defeat was not merely military defeat but compelled a fundamental transformation of the state's governing structure and value system. Under the occupation policy of the Supreme Commander for the Allied Powers — GHQ — the enactment of a new constitution emerged as an unavoidable task. Taking the form of an amendment to the Imperial Constitution, new principles of governance were in substance introduced.",
+   553→      "The drafting process went through the following circumstances: after a Japanese proposal for autonomous revision was rejected by GHQ, a draft prepared by the American side in only one week was presented to the Japanese government. This fact became the basis for the criticism that the postwar constitution was an imposed constitution. Yet at the same time, the conceptual progressiveness of its content far exceeded the realities of Japanese society at the time. The tension between ideal and reality is the starting point of postwar constitutional history.",
+   554→      "At the core of that ideal is the principle of popular sovereignty — that sovereignty resides in the people, not in the emperor. The emperor was positioned as the symbol of the people, clearly separated from political power. This was a transformation that fundamentally overturned the governing structure of the Meiji Constitution, a revolutionary shift that moved the subject of sovereignty from myth to the people.",
+   555→      "Article 9 is the most distinctive provision of the postwar constitution. The renunciation of war, the non-maintenance of war potential, and the denial of the right of belligerency — these three elements formed a peace clause unseen in the constitutional history of the world. Yet under the international environment of intensifying Cold War, this idealistic provision was from the early days forced into paradoxical application.",
+   556→      "The so-called Yoshida Doctrine was a strategy that organized this paradox. Yoshida Shigeru, who advocated a light-armament economic line, believed that by entering the umbrella of American security, Japan could minimize its military burden and concentrate on economic recovery. Meanwhile, the establishment of the National Police Reserve, later the Self-Defense Forces, complicated the interpretation of Article 9. The interpretation that the SDF did not constitute 'war potential' was a construct supported more by strategic necessity than legal consistency.",
+   557→      "Since then, for over seventy years, the postwar constitution has reached the present without once being amended. This is an exceptional case in the world's constitutional history, due not only to the strict amendment procedures established but also to the broad acceptance of the constitution's ideals among the people. However, the absence of amendment cannot be denied to have also accumulated a gap between ideal and reality.",
+   558→      "The debate on constitutional revision has repeatedly appeared on the political stage, centered on the review of Article 9. The creation of an emergency clause, the explicit codification of the form of the family — such issues carry the importance of re-examining the conceptual foundation of the constitution while also harboring the danger of political exploitation.",
+   559→      "The constitution is not a document that fixes the ideals of the time of enactment but a living text that is re-read with the times. Yet that re-reading must not damage the core of the ideals. Pacifism, popular sovereignty, and respect for fundamental human rights — these three great principles of the postwar constitution are not relics of the past but continue to be pointers to the future. The debate surrounding the constitution is, in the end, nothing other than the question of future choice: what Japan should preserve as the core of its ideals and what it should change in response to the changes of the times."
+   560→    ],
+   561→    questions: [
+   562→      {
+   563→        q: "According to the passage, what was the form taken by the postwar constitution?",
+   564→        choices: ["It took the form of amendment to the Imperial Constitution while substantively introducing new principles of governance", "It was an entirely new document unrelated to prior law", "It was a return to pre-Meiji legal traditions", "It was a direct copy of the American constitution"],
+   565→        answerIndex: 0,
+   566→        explanation: "The passage states that it took 帝国憲法の改正という形式をとりながら、実質的には新たな統治理念が導入される (the form of amendment to the Imperial Constitution while substantively introducing new principles of governance)."
+   567→      },
+   568→      {
+   569→        q: "What does the passage say about the drafting process?",
+   570→        choices: ["After Japan's autonomous revision proposal was rejected by GHQ, an American-drafted proposal was presented to the Japanese government within a week", "The constitution was drafted by the Japanese Diet over many months", "The drafting was led entirely by Japanese legal scholars", "The drafting was overseen by the United Nations"],
+   571→        answerIndex: 0,
+   572→        explanation: "The passage states that after 自主的な改正案がGHQに拒否されたのち (the autonomous revision proposal was rejected by GHQ), a draft 起草した草案が日本政府に提示された (drafted by the American side was presented to the Japanese government) within 一週間 (one week)."
+   573→      },
+   574→      {
+   575→        q: "What is the core principle at the heart of the postwar constitution?",
+   576→        choices: ["Popular sovereignty — sovereignty resides in the people, not the emperor", "The divinity of the emperor", "Military supremacy", "State ownership of industry"],
+   577→        answerIndex: 0,
+   578→        explanation: "The passage states that the core is 国民主権の原則 (the principle of popular sovereignty) — that 国の主権が天皇ではなく国民に存する (sovereignty resides in the people, not in the emperor)."
+   579→      },
+   580→      {
+   581→        q: "According to the passage, how was the paradox of Article 9 managed?",
+   582→        choices: ["Through the Yoshida Doctrine, where Japan entered the American security umbrella and the SDF was interpreted as not constituting 'war potential'", "By amending Article 9 immediately after the war", "By abolishing the Self-Defense Forces", "By declaring war on the Soviet Union"],
+   583→        answerIndex: 0,
+   584→        explanation: "The passage describes the 吉田ドクトリン (Yoshida Doctrine) where Japan entered アメリカの安全保障の傘 (the American security umbrella), and the SDF was interpreted as 戦力に該当しない (not constituting 'war potential')."
+   585→      },
+   586→      {
+   587→        q: "What does the author conclude about the constitution?",
+   588→        choices: ["It is a living text that may be re-read with the times, but the three core principles of pacifism, popular sovereignty, and human rights must not be damaged", "It must be amended immediately", "It must never be re-interpreted under any circumstances", "It is a relic with no future relevance"],
+   589→        answerIndex: 0,
+   590→        explanation: "The final paragraph states that the constitution is 生きた文書 (a living text) that may be re-read with the times, but 平和主義、国民主権、基本的人権の尊重 (pacifism, popular sovereignty, respect for fundamental human rights) — the 三大原理 (three great principles) — must not be damaged."
+   591→      }
+   592→    ]
+   593→  },
+   594→
+   595→  // ───────────────────────────────────────────────────────────
+   596→  // r-n1-40 — A discourse on the meaning of work in modern society
+   597→  // ───────────────────────────────────────────────────────────
+   598→  {
+   599→    id: "r-n1-40",
+   600→    title: "現代[げんだい]社会[しゃかい]における労働[ろうどう]の意味[いみ]",
+   601→    titleReading: "げんだいしゃかいにおけるろうどうのいみ",
+   602→    level: "N1",
+   603→    summary: "A discourse on the meaning of work — examining how labor's significance has shifted from calling to commodity, Marx on alienation, Weber's Protestant ethic, the rise of bullshit jobs, and the search for post-work alternatives that preserve social recognition.",
+   604→    estMinutes: 13,
+   605→    tags: ["labor", "meaning", "work", "ethics", "modern society"],
+   606→    body: [
+   607→      "現代[げんだい]社会[しゃかい]において、労働[ろうどう]の意味[いみ]は深刻[しんこく]な危機[きき]に直面[ちょくめん]している。かつて労働[ろうどう]は人間[にんげん]の自己[じこ]実現[じつげん]の場[ば]であり、社会[しゃかい]的[てき]承認[しょうにん]の源泉[げんせん]であった。しかし今日[きょう]、労働[ろうどう]はその意味[いみ]を急[きゅう]速[そく]に失[うしな]いつつある。技術[ぎじゅつ]革新[かくしん]、グローバル[ぐろーばる]化[か]、雇用[こよう]形態[けいたい]の多様[たよう]化[か]。これらの変化[へんか]は、労働[ろうどう]と人間[にんげん]の関係[かんけい]を根[ね]底[てい]から問[と]い直[なお]している。",
+   608→      "歴史[れきし]的[てき]に見[み]れば、労働[ろうどう]の意味[いみ]は時代[じだい]と共[とも]に変容[へんよう]してきた。古代[こだい]ギリシャ[ぎりしゃ]において労働[ろうどう]は奴隷[どれい]の営[いとな]みであり、自由[じゆう]市民[しみん]は哲学[てつがく]や政治[せいじ]に時間[じかん]を費[つい]やした。中世[ちゅうせい]の職人[しょくにん]は、自[みずか]らの技[わざ]を神[かみ]への奉仕[ほうし]と捉[とら]え、労働[ろうどう]を召命[しょうめい]として位置[いち]づけた。近代[きんだい]に入[はい]ると、労働[ろうどう]は商品[しょうひん]化[か]され、資本[しほん]主義[しゅぎ]的[てき]な交換[こうかん]価値[かち]の体系[たいけい]の中[なか]に包摂[ほうせつ]されていった。",
+   609→      "マルクス[まるくす]は、資本[しほん]主義[しゅぎ]の下[もと]での労働[ろうどう]が必然[ひつぜん]的[てき]に疎外[そがい]を生[しょう]じると論[ろん]じた。労働[ろうどう]者[しゃ]は自[みずか]らの生産[せいさん]物[ぶつ]から、労働[ろうどう]過程[かてい]から、さらには人間[にんげん]の本質[ほんしつ]からも疎外[そがい]される。本来[ほんらい]人間[にんげん]を人間[にんげん]たらしめる営[いとな]みが、逆[ぎゃく]に人間[にんげん]を萎縮[いしゅく]させるという逆説[ぎゃくせつ]である。この批判[ひはん]は、産業[さんぎょう]革命[かくめい]期[き]の過酷[かこく]な労働[ろうどう]条件[じょうけん]に対[たい]するものだったが、その核心[かくしん]は今日[きょう]も失[うしな]われていない。",
+   610→      "ウェーバー[うぇーばー]は、プロテスタント[ぷろてすたんと]的[てき]な労働[ろうどう]倫理[りんり]が資本[しほん]主義[しゅぎ]の精神[せいしん]を形成[けいせい]したと論[ろん]じた。労働[ろうどう]を天職[てんしょく]として内面[ないめん]化[か]することで、勤勉[きんべん]と蓄財[ちくざい]が美徳[びとく]へと転[てん]化[か]した。しかし、この倫理[りんり]は資本[しほん]主義[しゅぎ]の発展[はってん]と共[とも]に宗教[しゅうきょう]的[てき]な基盤[きばん]を失[うしな]い、純粋[じゅんすい]な効率[こうりつ]主義[しゅぎ]へと変質[へんしつ]していった。今日[きょう]、労働[ろうどう]を天職[てんしょく]と呼[よ]べる者[もの]はどれほどいるのだろうか。",
+   611→      "ポスト[ぽすと]産業[さんぎょう]的[てき]な転換[てんかん]は、事態[じたい]を一段[いちだん]と複雑[ふくざつ]にした。肉体[にくたい]労働[ろうどう]から知識[ちしき]労働[ろうどう]へ、製造[せいぞう]からサービス[さーびす]へ。情報[じょうほう]化[か]と知識[ちしき]経済[けいざい]は、労働[ろうどう]の内容[ないよう]を大[おお]きく変[か]えた。しかし、マニュアル[まにゅある]化[か]できる仕事[しごと]は人工[じんこう]知能[ちのう]やロボット[ろぼっと]に代替[だいたい]され、人間[にんげん]に残[のこ]される仕事[しごと]は、創造[そうぞう]性[せい]と感情[かんじょう]労働[ろうどう]を要[よう]するものへと二極[にきょく]化[か]している。",
+   612→      "その中[なか]で現[あらわ]れたのが、グラーバー[ぐらーばー]の言[い]うブルシット[ぶるしっと]・ジョブ[じょぶ]、すなわち無意味[むいみ]業[ぎょう]である。社会[しゃかい]的[てき]に必要[ひつよう]とされず、労働[ろうどう]者[しゃ]自体[じたい]もその意味[いみ]を認[みと]められない仕事[しごと]。それにもかかわらず、膨大[ぼうだい]な人[ひと]がそのような労働[ろうどう]に従事[じゅうじ]しているという事実[じじつ]は、現代[げんだい]資本[しほん]主義[しゅぎ]の不条理[ふじょうり]を露呈[ろてい]する。意味[いみ]なき労働[ろうどう]に縛[しば]られることで、人間[にんげん]の時間[じかん]と才能[さいのう]が浪費[ろうひ]されているのである。",
+   613→      "こうした危機[きき]に対[たい]する処方[しょほう]箋[せん]として、ベーシック[べーしっく]・インカム[いんかむ]や労働[ろうどう]時間[じかん]の短縮[たんしゅく]が議論[ぎろん]されるようになった。労働[ろうどう]を生存[せいぞん]の手段[しゅだん]から解放[かいほう]し、人間[にんげん]が自[みずか]らの才能[さいのう]と関心[かんしん]に従[したが]って活動[かつどう]できる社会[しゃかい]。いわゆるポスト[ぽすと]・ワーク[わーく]の構想[こうそう]である。しかし、労働[ろうどう]を通[つう]じて社会[しゃかい]的[てき]承認[しょうにん]を得[え]るという人間[にんげん]の基本的[きほんてき]な欲求[よっきゅう]を、別[べつ]の仕組[しく]みで満[み]たすことができるかどうかは、依然[いぜん]として問[と]い残[のこ]されている。",
+   614→      "労働[ろうどう]の未来[みらい]を考[かんが]えるとは、単[たん]に雇用[こよう]政策[せいさく]を論[ろん]じることではない。それは、人間[にんげん]とは何[なに]か、豊[ゆた]かな生[せい]とは何[なに]かという根源[こんげん]的[てき]な問[と]いに連[つら]なる営[いとな]みである。労働[ろうどう]を名誉[めいよ]として、あるいは罰[ばつ]としてではなく、人間[にんげん]の成長[せいちょう]と社会[しゃかい]の連帯[れんたい]を媒介[ばいかい]するものとして再[さい]定位[ていい]する。その再定義[さいていぎ]の作業[さぎょう]こそが、現代[げんだい]社会[しゃかい]に課[か]された最重要[さいじゅうよう]課題[かだい]であろう。技術[ぎじゅつ]が人間[にんげん]の労働[ろうどう]を代替[だいたい]する時代[じだい]にこそ、人間[にんげん]に固有[こゆう]な労働[ろうどう]の意味[いみ]を問[と]い直[なお]すことが不可欠[ふかけつ]なのである。"
+   615→    ],
+   616→    translation: [
+   617→      "In modern society, the meaning of work faces a serious crisis. Work was once the site of human self-realization and the source of social recognition. But today, work is rapidly losing its meaning. Technological innovation, globalization, diversification of employment forms — these changes are fundamentally questioning the relationship between work and the human being.",
+   618→      "Historically, the meaning of labor has changed with the times. In ancient Greece, labor was the work of slaves, and free citizens spent their time on philosophy and politics. The medieval craftsman regarded his craft as service to God, positioning labor as a calling. In modernity, labor was commodified and absorbed into the system of capitalist exchange value.",
+   619→      "Marx argued that under capitalism, labor inevitably produces alienation. The worker is alienated from the product of their labor, from the labor process, and even from the human essence. It is a paradox that the very activity that makes humans human instead atrophies them. This critique was directed at the harsh labor conditions of the Industrial Revolution, but its core has not been lost today.",
+   620→      "Weber argued that the Protestant work ethic formed the spirit of capitalism. By internalizing labor as a calling, diligence and accumulation were transformed into virtues. Yet with the development of capitalism, this ethic lost its religious foundation and degenerated into pure efficiency-ism. Today, how many can call their work a calling?",
+   621→      "The post-industrial turn complicated matters further. From physical labor to knowledge labor, from manufacturing to services. Information technology and the knowledge economy greatly altered the content of labor. Yet jobs that can be manualized are being replaced by artificial intelligence and robots, and the work left to humans is polarizing into that requiring creativity and that requiring emotional labor.",
+   622→      "Within this emerged what Graeber called bullshit jobs — work that is socially unnecessary and whose meaning the workers themselves cannot acknowledge. The fact that a vast number of people are nonetheless engaged in such labor reveals the absurdity of modern capitalism. Bound to meaningless labor, human time and talent are being wasted.",
+   623→      "As a prescription for this crisis, basic income and the reduction of working hours have come to be debated. A society that liberates work from being a means of survival, allowing humans to act according to their own talents and interests — the vision of so-called post-work. Yet whether the basic human desire to gain social recognition through work can be satisfied by another mechanism remains an open question.",
+   624→      "To think about the future of work is not merely to discuss employment policy. It is an endeavor connected to the fundamental questions of what a human being is and what a rich life is. To reposition labor neither as honor nor as punishment but as a mediator of human growth and social solidarity — that work of redefinition is perhaps the most important task imposed on modern society. Precisely in an era when technology replaces human labor, re-questioning the meaning of labor proper to the human being is indispensable."
+   625→    ],
+   626→    questions: [
+   627→      {
+   628→        q: "According to the passage, how has the meaning of labor changed historically?",
+   629→        choices: ["From slave labor in Greece, to a calling in the Middle Ages, to a commodity in modernity", "It has remained constant throughout history", "It has always been considered a calling", "It has always been treated as a commodity"],
+   630→        answerIndex: 0,
+   631→        explanation: "The passage traces labor's meaning: 古代ギリシャにおいて労働は奴隷の営み (in ancient Greece, labor was the work of slaves), 中世の職人は労働を召命として位置づけた (the medieval craftsman positioned labor as a calling), and 近代に入ると、労働は商品化された (in modernity, labor was commodified)."
+   632→      },
+   633→      {
+   634→        q: "What is the core of Marx's critique of labor under capitalism?",
+   635→        choices: ["Labor inevitably produces alienation from the product, the process, and the human essence", "Labor always leads to human happiness", "Capitalism eliminates all alienation", "Workers own the means of production"],
+   636→        answerIndex: 0,
+   637→        explanation: "The passage states Marx's view that 資本主義の下での労働が必然的に疎外を生じる (labor under capitalism inevitably produces alienation) — from the product, process, and even 人間の本質からも疎外される (the human essence)."
+   638→      },
+   639→      {
+   640→        q: "According to Weber, what happened to the Protestant work ethic?",
+   641→        choices: ["It formed the spirit of capitalism but lost its religious foundation and degenerated into pure efficiency-ism", "It remained unchanged through the centuries", "It was rejected by early capitalists", "It had no influence on capitalism"],
+   642→        answerIndex: 0,
+   643→        explanation: "The passage states that the Protestant work ethic 資本主義の精神を形成した (formed the spirit of capitalism) but 資本主義の発展と共に宗教的な基盤を失い、純粋な効率主義へと変質 (lost its religious foundation with the development of capitalism and degenerated into pure efficiency-ism)."
+   644→      },
+   645→      {
+   646→        q: "What does the concept of 'bullshit jobs' reveal according to the passage?",
+   647→        choices: ["The absurdity of modern capitalism, where vast numbers engage in socially unnecessary work whose meaning they themselves cannot acknowledge", "The excellence of modern labor allocation", "The decline of religious labor ethics", "The overproduction of skilled workers"],
+   648→        answerIndex: 0,
+   649→        explanation: "The passage states that the fact 膨大な人がそのような労働に従事している (a vast number of people are engaged in such labor) reveals 現代資本主義の不条理 (the absurdity of modern capitalism), wasting human time and talent."
+   650→      },
+   651→      {
+   652→        q: "What does the author conclude about the future of work?",
+   653→        choices: ["It requires repositioning labor as a mediator of human growth and social solidarity, and re-questioning the meaning of labor proper to humans in an era of technological replacement", "Work should be eliminated entirely", "Employment policy alone is sufficient", "Work should remain purely as a means of survival"],
+   654→        answerIndex: 0,
+   655→        explanation: "The final paragraph states that labor should be repositioned as 人間の成長と社会の連帯を媒介するもの (a mediator of human growth and social solidarity), and that re-questioning 人間に固有な労働の意味 (the meaning of labor proper to humans) is 不可欠 (indispensable) in an era of technological replacement."
+   656→      }
+   657→    ]
+   658→  }
+   659→];
+   660→

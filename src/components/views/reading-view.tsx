@@ -23,6 +23,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { readingData } from "@/lib/data/reading";
+import { levelColor } from "@/lib/data/kanji";
 import { useSettings } from "@/lib/stores/settings-store";
 import { useNav } from "@/lib/stores/nav-store";
 import { useProgress } from "@/lib/stores/progress-store";
@@ -92,6 +93,9 @@ export function ReadingView() {
           <ToggleGroupItem value="all">All</ToggleGroupItem>
           <ToggleGroupItem value="N5">N5</ToggleGroupItem>
           <ToggleGroupItem value="N4">N4</ToggleGroupItem>
+          <ToggleGroupItem value="N3">N3</ToggleGroupItem>
+          <ToggleGroupItem value="N2">N2</ToggleGroupItem>
+          <ToggleGroupItem value="N1">N1</ToggleGroupItem>
         </ToggleGroup>
       </div>
 
@@ -112,7 +116,7 @@ export function ReadingView() {
                 </Badge>
               </div>
               <h3 className="jp text-xl font-bold text-foreground">
-                <FuriganaText text={p.title} showFurigana={showFurigana} />
+                <FuriganaText text={p.title} showFurigana={showFurigana} style={{ color: levelColor(p.level) }} />
               </h3>
               <p className="mt-1 text-xs text-muted-foreground jp">{p.titleReading}</p>
               <p className="mt-2 flex-1 text-sm text-foreground/80 line-clamp-3">{p.summary}</p>

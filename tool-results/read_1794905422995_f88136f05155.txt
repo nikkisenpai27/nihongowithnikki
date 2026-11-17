@@ -1,0 +1,600 @@
+     1→     1→import type { ReadingPassage } from "@/lib/types";
+     2→     2→
+     3→     3→// Furigana notation: kanji readings are written inline as 漢字[かんじ].
+     4→     4→// A [reading] immediately following a run of kanji attaches to that whole run.
+     5→     5→// Adjacent kanji compounds may be split by brackets (e.g. 日本[にほん]語[ご]).
+     6→     6→// Kana, katakana, punctuation, and 々 have no brackets. See types.ts & furigana.tsx.
+     7→     7→// 10 original N3-level reading passages with comprehension questions.
+     8→     8→
+     9→     9→export const readingN3A: ReadingPassage[] = [
+    10→    10→  // ───────────────────────────────────────────────────────────
+    11→    11→  // r-n3-01 — Work-style reform in Japan (modern work culture)
+    12→    12→  // ───────────────────────────────────────────────────────────
+    13→    13→  {
+    14→    14→    id: "r-n3-01",
+    15→    15→    title: "働[はたら]き方[かた]改革[かいかく]という課題[かだい]",
+    16→    16→    titleReading: "はたらきかたかいかくというかだい",
+    17→    17→    level: "N3",
+    18→    18→    summary: "An overview of Japan's work-style reform, the shift away from long overtime, telework, and the changing values of younger workers.",
+    19→    19→    estMinutes: 8,
+    20→    20→    tags: ["work culture", "labor", "telework", "society"],
+    21→    21→    body: [
+    22→    22→      "近年[きんねん]、日本[にほん]では働[はたら]き方[かた]改革[かいかく]が進[すす]んでいる。長時間労働[ちょうじかんろうどう]が問題[もんだい]となり、政府[せいふ]は法律[ほうりつ]を変[か]えることで働[はたら]く人[ひと]の生活[せいかつ]を改善[かいぜん]しようとしている。しかし、この変化[へんか]に対[たい]して、人[ひと]によって意見[いけん]が分[わ]かれている。",
+    23→    23→      "以前[いぜん]は、残業[ざんぎょう]をすればするほど会社[かいしゃ]に貢献[こうけん]していると考[かんが]えられていた。夜[よる]遅[おそ]くまで働[はたら]くことが美徳[びとく]とされた時代[じだい]もあった。ところが今[いま]では、長[なが]く働[はたら]けばいいというわけではないと気[き]づく人[ひと]が増[ふ]えている。仕事[しごと]の効率[こうりつ]を上[あ]げるほうが大切[たいせつ]だという意識[いしき]が広[ひろ]がった。",
+    24→    24→      "テレワークを導入[どうにゅう]する企業[きぎょう]も多[おお]くなった。通勤[つうきん]時間[じかん]が減[へ]るうちに、家族[かぞく]と過[す]ごす時間[じかん]や自分[じぶん]の趣味[しゅみ]の時間[じかん]を持[も]てるようになったという声[こえ]が聞[き]かれる。一方[いっぽう]で、家[いえ]だと仕事[しごと]と休[やす]みの境界線[きょうかいせん]が曖昧[あいまい]になるという問題[もんだい]も指摘[してき]されている。",
+    25→    25→      "若者[わかもの]の間[あいだ]では、副業[ふくぎょう]や起業[きぎょう]に挑戦[ちょうせん]する人[ひと]も増[ふ]えている。一[ひと]つの会社[かいしゃ]に頼[たよ]るだけでは、将来[しょうらい]が不安[ふあん]だからだ。安定[あんてい]どころか、変化[へんか]に柔軟[じゅうなん]に対応[たいおう]できる力[ちから]が求[もと]められる時代[じだい]になった。もし失敗[しっぱい]しても、そこから学[まな]べばいいと考[かんが]える人[ひと]もいる。",
+    26→    26→      "働[はたら]き方[かた]が変[か]わるにつれて、評価[ひょうか]の基準[きじゅん]も変[か]わりつつある。結果[けっか]を出[だ]した人[ひと]が正当[せいとう]に評価[ひょうか]される社会[しゃかい]を目指[めざ]すべきである。誰[だれ]もが無理[むり]なく働[はたら]ける環境[かんきょう]を作[つく]ることは、日本[にほん]の将来[しょうらい]に直結[ちょっけつ]する課題[かだい]と言[い]えるだろう。"
+    27→    27→    ],
+    28→    28→    translation: [
+    29→    29→      "In recent years, work-style reform has been advancing in Japan. Long working hours have become a problem, and the government is trying to improve workers' lives by changing laws. However, opinions about this change differ depending on the person.",
+    30→    30→      "In the past, the more overtime one did, the more one was thought to be contributing to the company. There was even an era when working late into the night was considered a virtue. However, nowadays more people realize that it is not necessarily good just to work long. The awareness that raising work efficiency is more important has spread.",
+    31→    31→      "More companies have also introduced telework. As commuting time decreases, voices can be heard saying that people have come to have time to spend with family or for their own hobbies. On the other hand, the problem that the boundary between work and rest becomes blurred at home has also been pointed out.",
+    32→    32→      "Among young people, those who try side jobs or starting businesses are also increasing. This is because relying only on one company makes them anxious about the future. Far from stability, the era has come to require the ability to respond flexibly to change. There are also people who think that even if they fail, they should just learn from it.",
+    33→    33→      "As work styles change, evaluation standards are also changing. Society should aim for a state where people who produce results are fairly evaluated. Creating an environment where everyone can work without strain is a challenge directly tied to Japan's future."
+    34→    34→    ],
+    35→    35→    questions: [
+    36→    36→      {
+    37→    37→        q: "According to the passage, why has work-style reform become necessary?",
+    38→    38→        choices: ["Long working hours became a problem", "Foreign workers increased suddenly", "Companies wanted to hire more young people", "The government wanted to raise taxes"],
+    39→    39→        answerIndex: 0,
+    40→    40→        explanation: "The passage states that long working hours became a problem (長時間労働が問題となり), prompting the government to change laws."
+    41→    41→      },
+    42→    42→      {
+    43→    43→        q: "What does the passage say about telework?",
+    44→    44→        choices: ["It completely solves the problem of overwork", "It lets people have more personal time but blurs work-rest boundaries", "It is rejected by most companies", "It increases commuting time"],
+    45→    45→        answerIndex: 1,
+    46→    46→        explanation: "Telework gives people more time with family and hobbies, but the boundary between work and rest becomes blurred at home (境界線が曖昧になる)."
+    47→    47→      },
+    48→    48→      {
+    49→    49→        q: "Why are young people trying side jobs or starting businesses?",
+    50→    50→        choices: ["They want to leave Japan", "They are anxious about relying on only one company", "Their companies force them to", "They cannot find any full-time work"],
+    51→    51→        answerIndex: 1,
+    52→    52→        explanation: "Relying only on one company makes them anxious about the future (一つの会社に頼るだけでは将来が不安だからだ)."
+    53→    53→      },
+    54→    54→      {
+    55→    55→        q: "What was considered a virtue in the past according to the passage?",
+    56→    56→        choices: ["Working efficiently", "Taking long vacations", "Working late into the night", "Changing jobs often"],
+    57→    57→        answerIndex: 2,
+    58→    58→        explanation: "There was an era when working late into the night was considered a virtue (夜遅くまで働くことが美徳とされた時代もあった)."
+    59→    59→      },
+    60→    60→      {
+    61→    61→        q: "What does the author conclude is necessary for Japan's future?",
+    62→    62→        choices: ["Stricter overtime laws alone", "An environment where everyone can work without strain", "Returning to the old work culture", "Hiring more foreign workers only"],
+    63→    63→        answerIndex: 1,
+    64→    64→        explanation: "Creating an environment where everyone can work without strain is a challenge directly tied to Japan's future (誰もが無理なく働ける環境を作ることは日本の将来に直結する課題)."
+    65→    65→      }
+    66→    66→    ]
+    67→    67→  },
+    68→    68→
+    69→    69→  // ───────────────────────────────────────────────────────────
+    70→    70→  // r-n3-02 — Environmental issues and solutions
+    71→    71→  // ───────────────────────────────────────────────────────────
+    72→    72→  {
+    73→    73→    id: "r-n3-02",
+    74→    74→    title: "環境[かんきょう]問題[もんだい]と私[わたし]たちの選択[せんたく]",
+    75→    75→    titleReading: "かんきょうもんだいとわたしたちのせんたく",
+    76→    76→    level: "N3",
+    77→    77→    summary: "A look at worsening environmental problems, the limits of recycling, renewable energy challenges, environmental education, and the need for individual and systemic change.",
+    78→    78→    estMinutes: 9,
+    79→    79→    tags: ["environment", "energy", "recycling", "education"],
+    80→    80→    body: [
+    81→    81→      "地球温暖化[ちきゅうおんだんか]やプラスチックごみの増加[ぞうか]など、環境[かんきょう]問題[もんだい]は毎年[まいとし]深刻化[しんこくか]している。このままでは将来[しょうらい]の世代[せだい]に多大[ただい]な負担[ふたん]をかけることになると、専門家[せんもんか]が警告[けいこく]している。私[わたし]たちが日常生活[にちじょうせいかつ]の中[なか]で何[なに]を選択[せんたく]するかが、これからの地球[ちきゅう]の運命[うんめい]を左右[さゆう]すると言[い]っても過言[かごん]ではない。",
+    82→    82→      "リサイクルの推進[すいしん]は、解決策[かいけつさく]の一[ひと]つとして広[ひろ]く取[と]り組[く]まれている。しかし、リサイクルだけでなく、そもそもごみを出[だ]さない工夫[くふう]が必要[ひつよう]だ。使[つか]い捨[す]ての容器[ようき]を減[へ]らし、再利用[さいりよう]できるものを選[えら]ぶようにすれば、一人[ひとり]一人[ひとり]の小[ちい]さな行動[こうどう]が大[おお]きな結果[けっか]を生[う]み出[だ]すことになるだろう。",
+    83→    83→      "再生可能[さいせいかのう]エネルギーの導入[どうにゅう]も重要[じゅうよう]な課題[かだい]である。太陽光[たいようこう]や風力[ふうりょく]を活用[かつよう]することで、化石燃料[かせきねんりょう]への依存[いぞん]を減[へ]らすことができる。一方[いっぽう]で、これらの技術[ぎじゅつ]を普及[ふきゅう]させるには、初期費用[しょきひよう]の問題[もんだい]や景観[けいかん]への配慮[はいりょ]など、解決[かいけつ]しなければならない課題[かだい]が山積[やまづ]みになっている。",
+    84→    84→      "教育[きょういく]の現場[げんば]でも、環境[かんきょう]問題[もんだい]に対[たい]する意識[いしき]を高[たか]める取[と]り組[く]みが進[すす]んでいる。子[こ]どものうちに自然[しぜん]の大切[たいせつ]さを学[まな]べば、大人[おとな]になってからも環境[かんきょう]に配慮[はいりょ]した行動[こうどう]をとるようになるだろう。地域[ちいき]の清掃活動[せいそうかつどう]や農業[のうぎょう]体験[たいけん]など、体験[たいけん]を通[とお]して学[まな]ぶ機会[きかい]を増[ふ]やすことが求[もと]められている。",
+    85→    85→      "もちろん、個[こ]人[じん]の努力[どりょく]だけでは限界[げんかい]がある。企業[きぎょう]や政府[せいふ]が連携[れんけい]し、法律[ほうりつ]や制度[せいど]を整備[せいび]しなければ、根本的[こんぽんてき]な解決[かいけつ]には至[いた]らないだろう。しかし、個[こ]の意識[いしき]の変化[へんか]が社会[しゃかい]全体[ぜんたい]を動[うご]かす原動力[げんどうりょく]になることも忘[わす]れてはならない。私[わたし]たち一人[ひとり]一人[ひとり]の行動[こうどう]が、未来[みらい]を形作[かたちづく]るのである。"
+    86→    86→    ],
+    87→    87→    translation: [
+    88→    88→      "Environmental problems such as global warming and the increase of plastic waste are becoming more serious every year. Specialists warn that if things continue like this, future generations will be heavily burdened. It is no exaggeration to say that what we choose in our daily lives will determine the fate of the earth.",
+    89→    89→      "Promoting recycling is widely pursued as one solution. However, not only recycling but also efforts not to produce waste in the first place are necessary. If we reduce disposable containers and choose reusable items, the small actions of each individual will produce great results.",
+    90→    90→      "The introduction of renewable energy is also an important challenge. By utilizing solar and wind power, dependence on fossil fuels can be reduced. On the other hand, to spread these technologies, problems such as initial costs and consideration for landscapes have piled up and must be solved.",
+    91→    91→      "In education too, efforts to raise awareness of environmental problems are advancing. If children learn the importance of nature while still young, they will likely take environmentally-conscious actions even as adults. Increasing opportunities to learn through experience, such as community clean-up activities and farming experiences, is sought after.",
+    92→    92→      "Of course, individual efforts alone have limits. Unless companies and governments cooperate and develop laws and systems, fundamental solutions will not be reached. However, we must not forget that changes in individual awareness become the driving force that moves the whole society. The actions of each of us shape the future."
+    93→    93→    ],
+    94→    94→    questions: [
+    95→    95→      {
+    96→    96→        q: "What do specialists warn about?",
+    97→    97→        choices: ["Future generations will be heavily burdened if things continue", "Recycling alone can solve all problems", "Solar power is too expensive to use", "Children should not learn about nature"],
+    98→    98→        answerIndex: 0,
+    99→    99→        explanation: "Specialists warn that continuing as-is will heavily burden future generations (将来の世代に多大な負担をかけることになる)."
+   100→   100→      },
+   101→   101→      {
+   102→   102→        q: "According to the passage, what is necessary besides recycling?",
+   103→   103→        choices: ["Building more incinerators", "Efforts not to produce waste in the first place", "Importing more fossil fuels", "Increasing disposable containers"],
+   104→   104→        answerIndex: 1,
+   105→   105→        explanation: "The passage stresses not only recycling but also efforts to avoid producing waste in the first place (ごみを出さない工夫が必要)."
+   106→   106→      },
+   107→   107→      {
+   108→   108→        q: "What problems must be solved to spread renewable energy?",
+   109→   109→        choices: ["Lack of sunlight and wind", "Initial costs and consideration for landscapes", "Too many specialists", "Children's opposition"],
+   110→   110→        answerIndex: 1,
+   111→   111→        explanation: "Initial costs and consideration for landscapes have piled up as challenges to spreading renewable technologies (初期費用の問題や景観への配慮)."
+   112→   112→      },
+   113→   113→      {
+   114→   114→        q: "Why is environmental education important for children?",
+   115→   115→        choices: ["They can earn money from recycling", "They will take environmentally-conscious actions as adults", "They will become specialists", "They can avoid going to school"],
+   116→   116→        answerIndex: 1,
+   117→   117→        explanation: "If children learn the importance of nature while young, they will keep taking environmentally-conscious actions as adults (大人になってからも環境に配慮した行動をとるようになる)."
+   118→   118→      },
+   119→   119→      {
+   120→   120→        q: "What does the author say is the driving force that moves society?",
+   121→   121→        choices: ["Government laws alone", "Changes in individual awareness", "Corporate profits", "Technological innovation alone"],
+   122→   122→        answerIndex: 1,
+   123→   123→        explanation: "Changes in individual awareness become the driving force that moves the whole society (個の意識の変化が社会全体を動かす原動力になる)."
+   124→   124→      }
+   125→   125→    ]
+   126→   126→  },
+   127→   127→
+   128→   128→  // ───────────────────────────────────────────────────────────
+   129→   129→  // r-n3-03 — The aging society
+   130→   130→  // ───────────────────────────────────────────────────────────
+   131→   131→  {
+   132→   132→    id: "r-n3-03",
+   133→   133→    title: "少子高齢化[しょうしこうれいか]という現実[げんじつ]",
+   134→   134→    titleReading: "しょうしこうれいかというげんじつ",
+   135→   135→    level: "N3",
+   136→   136→    summary: "An examination of Japan's declining birth rate and aging population, labor shortages, depopulation in rural areas, active elderly citizens, and the need for combined solutions.",
+   137→   137→    estMinutes: 9,
+   138→   138→    tags: ["aging society", "demographics", "labor", "regional decline"],
+   139→   139→    body: [
+   140→   140→      "日本[にほん]は世界[せかい]で最[もっと]も高齢化[こうれいか]が進[すす]んだ国[くに]の一[ひと]つである。出生率[しゅっしょうりつ]が下[さ]がり続[つづ]ける一方[いっぽう]で、平均寿命[へいきんじゅみょう]が延[の]びた結果[けっか]、人口[じんこう]構造[こうぞう]が大[おお]きく変[か]わった。この少子高齢化[しょうしこうれいか]という現実[げんじつ]に対[たい]して、社会[しゃかい]全体[ぜんたい]が真剣[しんけん]に向[む]き合[あ]う必要[ひつよう]がある。",
+   141→   141→      "労働力[ろうどうりょく]不足[ぶそく]は、すでに多[おお]くの産業[さんぎょう]で深刻[しんこく]な問題[もんだい]となっている。特[とく]に介護[かいご]の現場[げんば]では、人手[ひとで]が足[た]りないためにサービスが行[い]き届[とど]かないケースが増[ふ]えている。このまま人口[じんこう]が減[へ]り続[つづ]ければ、経済[けいざい]成長[せいちょう]も維持[いじ]できなくなる恐[おそ]れがある。政府[せいふ]は外国人[がいこくじん]労働者[ろうどうしゃ]の受[う]け入[い]れを拡大[かくだい]する政策[せいさく]を打[う]ち出[だ]したが、それだけでは不十分[ふじゅうぶん]である。",
+   142→   142→      "地域[ちいき]によっては、過疎化[かそか]が進[すす]んで住[す]む人[ひと]が激減[げきげん]している場所[ばしょ]もある。高齢者[こうれいしゃ]のみが残[のこ]された集落[しゅうらく]では、日常[にちじょう]の買[か]い物[もの]や通院[つういん]すら難[むずか]しくなっている。若者[わかもの]が都市[とし]に流[なが]れ続[つづ]ける限[かぎ]り、この格差[かくさ]は広[ひろ]がるばかりだ。地方[ちほう]創生[そうせい]を掲[かか]げる政策[せいさく]は少[すく]なくないが、目[め]に見[み]える成果[せいか]はまだ限[かぎ]られている。",
+   143→   143→      "一方[いっぽう]で、高齢[こうれい]になっても元気[げんき]に活躍[かつやく]する人[ひと]が増[ふ]えているのも事実[じじつ]である。定年[ていねん]退職[たいしょく]後[ご]、新[あたら]しい趣味[しゅみ]を始[はじ]めたり、地域[ちいき]活動[かつどう]に参加[さんか]したりする人[ひと]が少[すく]なくない。経験[けいけん]や知恵[ちえ]を地域[ちいき]に還元[かんげん]することは、社会[しゃかい]全体[ぜんたい]にとってもメリットが大[おお]きい。年齢[ねんれい]に対[たい]する固定[こてい]観念[かんねん]を見直[みなお]す時期[じき]に来[き]ているのかもしれない。",
+   144→   144→      "解決[かいけつ]策[さく]は一[ひと]つではない。出生率[しゅっしょうりつ]の向上[こうじょう]を図[はか]りつつ、高齢者[こうれいしゃ]が働[はたら]き続[つづ]けられる環境[かんきょう]を整備[せいび]し、外国[がいこく]からの人[ひと]も受[う]け入[い]れていく。多様[たよう]な選択肢[せんたくし]を組[く]み合[あ]わせることでしか、この複雑[ふくざつ]な課題[かだい]に対応[たいおう]することはできない。私[わたし]たちが変[か]わらなければ、社会[しゃかい]も変[か]わらないのである。"
+   145→   145→    ],
+   146→   146→    translation: [
+   147→   147→      "Japan is one of the most aged countries in the world. As the birth rate continues to fall while average lifespan extends, the population structure has changed greatly. Society as a whole must seriously face this reality of declining birth rate and aging population.",
+   148→   148→      "Labor shortage has already become a serious problem in many industries. Especially at nursing care sites, cases where services cannot reach everyone are increasing due to lack of staff. If the population continues to decrease, there is a risk that economic growth can no longer be maintained. The government has announced a policy of expanding acceptance of foreign workers, but that alone is insufficient.",
+   149→   149→      "In some regions, depopulation has advanced and the number of residents has drastically decreased. In settlements where only the elderly remain, even daily shopping and hospital visits have become difficult. As long as young people keep flowing to cities, this gap only widens. Policies advocating regional revitalization are not few, but visible results are still limited.",
+   150→   150→      "On the other hand, it is also a fact that more people stay active and energetic even in old age. After retirement, not a few people start new hobbies or participate in community activities. Returning experience and wisdom to the community is also a great benefit for society as a whole. It may be time to rethink fixed notions about age.",
+   151→   151→      "There is not just one solution. While aiming to raise the birth rate, we should develop environments where the elderly can keep working and accept people from abroad. Only by combining various options can we respond to this complex challenge. If we do not change, society will not change either."
+   152→   152→    ],
+   153→   153→    questions: [
+   154→   154→      {
+   155→   155→        q: "According to the passage, what has caused Japan's population structure to change greatly?",
+   156→   156→        choices: ["The birth rate fell while lifespan extended", "Many foreigners moved to Japan", "Young people stopped working entirely", "The government changed the laws overnight"],
+   157→   157→        answerIndex: 0,
+   158→   158→        explanation: "The birth rate keeps falling while average lifespan extends, greatly changing the population structure (出生率が下がり続ける一方で平均寿命が延びた結果)."
+   159→   159→      },
+   160→   160→      {
+   161→   161→        q: "What problem is particularly serious at nursing care sites?",
+   162→   162→        choices: ["Lack of funding", "Lack of staff leading to insufficient services", "Too many young workers", "High technology costs"],
+   163→   163→        answerIndex: 1,
+   164→   164→        explanation: "Lack of staff at nursing care sites leads to cases where services cannot reach everyone (人手が足りないためにサービスが行き届かない)."
+   165→   165→      },
+   166→   166→      {
+   167→   167→        q: "What happens in settlements where only the elderly remain?",
+   168→   168→        choices: ["Daily shopping and hospital visits become difficult", "New businesses open frequently", "Young people return in large numbers", "The government builds new housing"],
+   169→   169→        answerIndex: 0,
+   170→   170→        explanation: "In such settlements, even daily shopping and hospital visits become difficult (日常の買い物や通院すら難しくなっている)."
+   171→   171→      },
+   172→   172→      {
+   173→   173→        q: "What does the author say about elderly people who stay active?",
+   174→   174→        choices: ["It is extremely rare", "Returning experience and wisdom benefits society", "They usually leave for cities", "They refuse community activities"],
+   175→   175→        answerIndex: 1,
+   176→   176→        explanation: "Returning experience and wisdom to the community is a great benefit for society as a whole (経験や知恵を地域に還元することは社会全体にとってもメリットが大きい)."
+   177→   177→      },
+   178→   178→      {
+   179→   179→        q: "What does the author conclude about solving the aging society problem?",
+   180→   180→        choices: ["Only one solution exists", "Foreign workers alone can solve it", "Multiple options must be combined", "The birth rate will fix itself naturally"],
+   181→   181→        answerIndex: 2,
+   182→   182→        explanation: "Only by combining various options can the complex challenge be addressed (多様な選択肢を組み合わせることでしか対応できない)."
+   183→   183→      }
+   184→   184→    ]
+   185→   185→  },
+   186→   186→
+   187→   187→  // ───────────────────────────────────────────────────────────
+   188→   188→  // r-n3-04 — Technology in education
+   189→   189→  // ───────────────────────────────────────────────────────────
+   190→   190→  {
+   191→   191→    id: "r-n3-04",
+   192→   192→    title: "教育[きょういく]とテクノロジーの融合[ゆうごう]",
+   193→   193→    titleReading: "きょういくとてくのろじーのゆうごう",
+   194→   194→    level: "N3",
+   195→   195→    summary: "How tablets, AI, and digital tools are reshaping classrooms, the risks of screen overuse and the digital divide, and the need to balance digital and analog learning.",
+   196→   196→    estMinutes: 8,
+   197→   197→    tags: ["education", "technology", "AI", "digital divide"],
+   198→   198→    body: [
+   199→   199→      "近年[きんねん]、学校[がっこう]の現場[げんば]にテクノロジーが急速[きゅうそく]に導入[どうにゅう]されている。タブレット端末[たんまつ]や電子[でんし]黒板[こくばん]が当[あ]たり前[まえ]になり、子[こ]どもたちの学習[がくしゅう]環境[かんきょう]は数[すう]年前[ねんまえ]とは全[まった]く異[こと]なるものになった。この変化[へんか]に対[たい]して、賛成[さんせい]も反対[はんたい]も様[さま]々な意見[いけん]が交[か]わされている。",
+   200→   200→      "テクノロジーを活用[かつよう]すれば、一人[ひとり]一人[ひとり]の学習[がくしゅう]進度[しんど]に合[あ]わせた授業[じゅぎょう]が可能[かのう]になる。苦手[にがて]な科目[かもく]には時間[じかん]をかける一方[いっぽう]で、得意[とくい]な分野[ぶんや]は早[はや]く進[すす]めることで、効率[こうりつ]的[てき]な学習[がくしゅう]が実現[じつげん]できる。また、AIを用[もち]いた個別[こべつ]最適化[さいてきか]された教材[きょうざい]は、子[こ]どもの理解[りかい]度合[どあい]を即座[そくざ]に分析[ぶんせき]し、次[つぎ]の学習[がくしゅう]ステップを提案[ていあん]する。",
+   201→   201→      "しかし、デジタル化[か]には課題[かだい]も伴[ともな]う。画面[がめん]を見[み]続[つづ]ける時間[じかん]が長[なが]くなれば、目[め]の疲労[ひろう]や集中力[しゅうちゅうりょく]の低下[ていか]が心配[しんぱい]される。さらに、子[こ]どもが早[はや]い段階[だんかい]でスマートフォンに依存[いぞん]するようになれば、対人[たいじん]関係[かんけい]能力[のうりょく]の形成[けいせい]に悪[あく]影響[えいきょう]を及[およ]ぼす恐[おそ]れがある。技術[ぎじゅつ]を導入[どうにゅう]する際[さい]には、その使[つか]い方[かた]を慎重[しんちょう]に考[かんが]える必要[ひつよう]がある。",
+   202→   202→      "情報[じょうほう]格差[かくさ]の問題[もんだい]も指摘[してき]されている。家庭[かてい]の経済[けいざい]状況[じょうきょう]によって、子[こ]どもが利用[りよう]できる環境[かんきょう]に差[さ]が生[しょう]じれば、教育[きょういく]の機会[きかい]均等[きんとう]という理念[りねん]が損[そこ]なわれかねない。学校[がっこう]が端末[たんまつ]を貸[か]し出[だ]す制度[せいど]を整備[せいび]するなど、公平[こうへい]なアクセスを保証[ほしょう]する工夫[くふう]が欠[か]かせない。",
+   203→   203→      "テクノロジーはあくまで手段[しゅだん]であり、目的[もくてき]ではない。対[たい]面[めん]での対話[たいわ]や体験[たいけん]を通[とお]した学習[がくしゅう]の価値[かち]は、どれだけ技術[ぎじゅつ]が進化[しんか]しても失[うしな]われるものではない。デジタルとアナログの良[よ]いところを組[く]み合[あ]わせた教育[きょういく]の形[かたち]を探[さが]し続[つづ]けることが、これからの時代[じだい]に求[もと]められる姿勢[しせい]であろう。"
+   204→   204→    ],
+   205→   205→    translation: [
+   206→   206→      "In recent years, technology has been rapidly introduced into school settings. Tablet terminals and electronic blackboards have become commonplace, and children's learning environments have become completely different from a few years ago. Various opinions, both for and against this change, are exchanged.",
+   207→   207→      "If technology is utilized, lessons matched to each child's learning progress become possible. By spending time on weak subjects while advancing quickly in strong fields, efficient learning can be realized. Also, individually optimized teaching materials using AI instantly analyze children's level of understanding and propose the next learning step.",
+   208→   208→      "However, digitalization also brings challenges. If the time spent looking at screens becomes long, eye fatigue and decline in concentration are worried about. Furthermore, if children become dependent on smartphones at an early stage, there is a risk of negatively affecting the formation of interpersonal relationship skills. When introducing technology, it is necessary to carefully consider how to use it.",
+   209→   209→      "The problem of information gap is also pointed out. If differences arise in the environments children can use depending on their family's economic situation, the ideal of equal educational opportunity may be undermined. Efforts to guarantee fair access, such as schools establishing a system to lend terminals, are indispensable.",
+   210→   210→      "Technology is merely a means, not an end. The value of learning through face-to-face dialogue and experience is not lost no matter how much technology evolves. Continuing to seek a form of education that combines the good points of digital and analog is the attitude required of our era."
+   211→   211→    ],
+   212→   212→    questions: [
+   213→   213→      {
+   214→   214→        q: "What has become possible by utilizing technology in education?",
+   215→   215→        choices: ["Lessons matched to each child's learning progress", "Eliminating teachers from classrooms", "Forcing all students to learn at the same pace", "Banning all homework"],
+   216→   216→        answerIndex: 0,
+   217→   217→        explanation: "Technology enables lessons matched to each child's learning progress (一人一人の学習進度に合わせた授業が可能になる)."
+   218→   218→      },
+   219→   219→      {
+   220→   220→        q: "What is a concern if children become dependent on smartphones early?",
+   221→   221→        choices: ["They will earn too much money", "It may negatively affect interpersonal relationship skills", "They will not need teachers anymore", "Their grades will improve too fast"],
+   222→   222→        answerIndex: 1,
+   223→   223→        explanation: "Early smartphone dependence risks harming the formation of interpersonal relationship skills (対人関係能力の形成に悪影響を及ぼす恐れがある)."
+   224→   224→      },
+   225→   225→      {
+   226→   226→        q: "What problem arises if families' economic situations differ?",
+   227→   227→        choices: ["An information gap in accessible learning environments", "All students use the same devices", "Teachers get fewer students", "Schools close down immediately"],
+   228→   228→        answerIndex: 0,
+   229→   229→        explanation: "Differences in family economic situations create gaps in accessible environments, undermining equal opportunity (情報格差の問題も指摘されている)."
+   230→   230→      },
+   231→   231→      {
+   232→   232→        q: "How do schools try to guarantee fair access?",
+   233→   233→        choices: ["By charging higher fees", "By lending terminals to students", "By banning devices at school", "By hiring more teachers only"],
+   234→   234→        answerIndex: 1,
+   235→   235→        explanation: "Schools establish systems to lend terminals to guarantee fair access (学校が端末を貸し出す制度を整備する)."
+   236→   236→      },
+   237→   237→      {
+   238→   238→        q: "What does the author say technology is?",
+   239→   239→        choices: ["The ultimate goal of education", "Merely a means, not an end", "A complete replacement for teachers", "Unnecessary for learning"],
+   240→   240→        answerIndex: 1,
+   241→   241→        explanation: "Technology is merely a means, not an end (テクノロジーはあくまで手段であり、目的ではない)."
+   242→   242→      }
+   243→   243→    ]
+   244→   244→  },
+   245→   245→
+   246→   246→  // ───────────────────────────────────────────────────────────
+   247→   247→  // r-n3-05 — Japanese pop culture abroad
+   248→   248→  // ───────────────────────────────────────────────────────────
+   249→   249→  {
+   250→   250→    id: "r-n3-05",
+   251→   251→    title: "海外[かいがい]で広[ひろ]がる日本[にほん]のポップカルチャー",
+   252→   252→    titleReading: "かいがいでひろがるにほんのぽっぷかるちゃー",
+   253→   253→    level: "N3",
+   254→   254→    summary: "The global spread of Japanese anime and manga, the piracy problem, growing interest in Japanese language and culture, and concerns about superficial consumption.",
+   255→   255→    estMinutes: 8,
+   256→   256→    tags: ["pop culture", "anime", "globalization", "cultural exchange"],
+   257→   257→    body: [
+   258→   258→      "日本[にほん]のアニメや漫画[まんが]は、今[いま]や世界[せかい]中[じゅう]で愛好[あいこう]されている。数[すう]十年前[じゅうねんまえ]までは海外[かいがい]で知[し]られる機会[きかい]も限[かぎ]られていたが、インターネットの普及[ふきゅう]に伴[ともな]って爆発的[ばくはつてき]に知名度[ちめいど]を上[あ]げた。この現象[げんしょう]に対[たい]して、文化[ぶんか]交流[こうりゅう]の新[あたら]しい形[かたち]だと評価[ひょうか]する声[こえ]が多[おお]い。",
+   259→   259→      "しかし、人気[にんき]が高[たか]まるにつれて、新[あたら]しい課題[かだい]も浮[う]かび上[あ]がった。無断[むだん]で翻訳[ほんやく]して配信[はいしん]する海賊版[かいぞくばん]サイトが後[あと]を絶[た]たず、制作者[せいさくしゃ]に還元[かんげん]されるべき利益[りえき]が失[うしな]われている。この問題[もんだい]に対[たい]して、正式[せいしき]な配信[はいしん]サービスを世界[せかい]中[じゅう]で提供[ていきょう]することで対処[たいしょ]する動[うご]きが進[すす]んでいる。",
+   260→   260→      "興味[きょうみ]深[ぶか]いのは、ポップカルチャーをきっかけに日本[にほん]語[ご]や文化[ぶんか]全体[ぜんたい]に関心[かんしん]を持[も]つ人[ひと]が増[ふ]えた点[てん]である。日本[にほん]語[ご]を学[まな]ぶ留学生[りゅうがくせい]は年[ねん]々増[ふ]えており、彼[かれ]らの中[なか]には将来[しょうらい]日本[にほん]で働[はたら]きたいと願[ねが]う人[ひと]も少[すく]なくない。文化[ぶんか]の輸出[ゆしゅつ]が人[ひと]の流[なが]れを生[う]み出[だ]していると言[い]える。",
+   261→   261→      "一方[いっぽう]で、日本[にほん]のポップカルチャーが海外[かいがい]で消費[しょうひ]されるにつれて、本来[ほんらい]の文化[ぶんか]的[てき]背景[はいけい]が省[はぶ]かれるケースも見[み]られる。表面的[ひょうめんてき]な要素[ようそ]だけが模倣[もほう]され、深[ふか]い意味[いみ]が伝[つた]わらないという懸念[けねん]がある。文化[ぶんか]を売[う]るだけでなく、その背景[はいけい]も伝[つた]える工夫[くふう]が必要[ひつよう]だろう。",
+   262→   262→      "これからの日本[にほん]のポップカルチャーは、単[たん]なる娯楽[ごらく]以上[いじょう]の存在[そんざい]として世界[せかい]と向[む]き合[あ]うことになるだろう。相互[そうご]理解[りかい]の架[か]け橋[はし]となり得[う]るかどうかは、作[つく]り手[て]と受[う]け手[て]、双方[そうほう]の姿勢[しせい]にかかっている。ポップカルチャーの力[ちから]を活[い]かした交流[こうりゅう]は、これからも続[つづ]いていくに違[ちが]いない。"
+   263→   263→    ],
+   264→   264→    translation: [
+   265→   265→      "Japanese anime and manga are now loved all over the world. Until a few decades ago, opportunities to be known overseas were limited, but along with the spread of the internet, recognition explosively increased. Many voices evaluate this phenomenon as a new form of cultural exchange.",
+   266→   266→      "However, as popularity rises, new challenges have also surfaced. Pirate sites that translate and stream without permission do not cease, and profits that should be returned to creators are lost. To deal with this problem, a movement to provide official streaming services worldwide is progressing.",
+   267→   267→      "What is interesting is that more people have come to be interested in the Japanese language and culture as a whole, triggered by pop culture. International students studying Japanese increase year by year, and not a few of them wish to work in Japan in the future. It can be said that the export of culture has produced a flow of people.",
+   268→   268→      "On the other hand, as Japanese pop culture is consumed overseas, cases where the original cultural background is omitted are also seen. There is concern that only superficial elements are imitated and deep meanings are not conveyed. Efforts to convey not only the culture but also its background seem necessary.",
+   269→   269→      "Japanese pop culture in the future will probably face the world as more than mere entertainment. Whether it can become a bridge of mutual understanding depends on the attitudes of both creators and audiences. Exchange that leverages the power of pop culture will surely continue."
+   270→   270→    ],
+   271→   271→    questions: [
+   272→   272→      {
+   273→   273→        q: "What caused the explosive increase in recognition of Japanese pop culture overseas?",
+   274→   274→        choices: ["The spread of the internet", "Government promotion alone", "Lower prices", "Lack of foreign competition"],
+   275→   275→        answerIndex: 0,
+   276→   276→        explanation: "Along with the spread of the internet, recognition explosively increased (インターネットの普及に伴って爆発的に知名度を上げた)."
+   277→   277→      },
+   278→   278→      {
+   279→   279→        q: "What problem is caused by pirate sites?",
+   280→   280→        choices: ["They provide too much profit to creators", "They translate and stream without permission, causing lost profits", "They reduce the number of anime produced", "They make content too expensive"],
+   281→   281→        answerIndex: 1,
+   282→   282→        explanation: "Pirate sites stream without permission, causing profits that should reach creators to be lost (無断で翻訳して配信する海賊版サイト...利益が失われている)."
+   283→   283→      },
+   284→   284→      {
+   285→   285→        q: "What effect has pop culture had on international students?",
+   286→   286→        choices: ["They stopped studying Japanese", "More of them wish to work in Japan in the future", "They lost interest in Japan", "They prefer to study other languages"],
+   287→   287→        answerIndex: 1,
+   288→   288→        explanation: "Not a few international students wish to work in Japan in the future (将来日本で働きたいと願う人も少なくない)."
+   289→   289→      },
+   290→   290→      {
+   291→   291→        q: "What concern does the author raise about pop culture consumption overseas?",
+   292→   292→        choices: ["It is too expensive", "Only superficial elements are imitated without deep meanings", "It reduces tourism to Japan", "It makes Japanese culture too popular"],
+   293→   293→        answerIndex: 1,
+   294→   294→        explanation: "There is concern that only superficial elements are imitated and deep meanings are not conveyed (表面的な要素だけが模倣され、深い意味が伝わらない)."
+   295→   295→      },
+   296→   296→      {
+   297→   297→        q: "What does the author say the future of Japanese pop culture depends on?",
+   298→   298→        choices: ["Government funding alone", "The attitudes of both creators and audiences", "Reducing the number of works produced", "Banning foreign consumption"],
+   299→   299→        answerIndex: 1,
+   300→   300→        explanation: "Whether pop culture becomes a bridge of mutual understanding depends on the attitudes of both creators and audiences (作り手と受け手、双方の姿勢にかかっている)."
+   301→   301→      }
+   302→   302→    ]
+   303→   303→  },
+   304→   304→
+   305→   305→  // ───────────────────────────────────────────────────────────
+   306→   306→  // r-n3-06 — Traditional arts and modern life
+   307→   307→  // ───────────────────────────────────────────────────────────
+   308→   308→  {
+   309→   309→    id: "r-n3-06",
+   310→   310→    title: "伝統[でんとう]芸能[げいのう]と現代[げんだい]生活[せいかつ]",
+   311→   311→    titleReading: "でんとうげいのうとげんだいせいかつ",
+   312→   312→    level: "N3",
+   313→   313→    summary: "The declining exposure to traditional arts, evolving tradition, youth engagement via media, the successor shortage, and the true meaning of cultural inheritance.",
+   314→   314→    estMinutes: 8,
+   315→   315→    tags: ["tradition", "arts", "culture", "crafts"],
+   316→   316→    body: [
+   317→   317→      "茶[ちゃ]道[どう]、華[か]道[どう]、能[のう]、歌舞伎[かぶき]など、日本[にほん]には古[ふる]くから伝[つた]わる伝統[でんとう]芸能[げいのう]が数多[かずおお]くある。しかし、現代[げんだい]の忙[いそが]しい生活[せいかつ]の中[なか]で、これらに触[ふ]れる機会[きかい]は減[へ]り続[つづ]けている。伝統[でんとう]文化[ぶんか]が単[たん]なる観光[かんこう]用[よう]のショーに成[な]り下[さ]がるどころか、生活[せいかつ]の中[なか]で生[い]き続[つづ]けるには何[なに]が必要[ひつよう]だろうか。",
+   318→   318→      "一[ひと]つの鍵[かぎ]は、伝統[でんとう]を固定[こてい]されたものとして扱[あつか]わず、時代[じだい]に合[あ]わせて進化[しんか]させることである。例[たと]えば、茶道[ちゃどう]の精神[せいしん]である「もてなしの心[こころ]」は、現代[げんだい]のホスピタリティと共通[きょうつう]する普遍[ふへん]的[てき]な価値[かち]を持[も]つ。形式[けいしき]に縛[しば]られすぎない限[かぎ]り、伝統[でんとう]は新[あたら]しい形[かたち]で生[い]まれ変[か]わることができる。",
+   319→   319→      "若者[わかもの]が伝統[でんとう]芸能[げいのう]に興味[きょうみ]を持[も]つきっかけも様[さま]々だ。アニメや映画[えいが]で描[えが]かれた歴史[れきし]的[てき]人物[じんぶつ]に魅了[みりょう]され、能[のう]や歌舞伎[かぶき]を見[み]に行[い]くようになったという人[ひと]もいる。SNSで美[うつく]しい着物[きもの]の姿[すがた]を見[み]て、着付[きつけ]に通[かよ]い始[はじ]めたという若者[わかもの]も増[ふ]えている。現代[げんだい]のメディアが伝統[でんとう]への入口[いりぐち]となっている事例[じれい]は少[すく]なくない。",
+   320→   320→      "もちろん、後継者[こうけいしゃ]不足[ぶそく]という深刻[しんこく]な問題[もんだい]もある。職人[しょくにん]の技術[ぎじゅつ]は長年[ながねん]の修行[しゅぎょう]を通[とお]して初[はじ]めて身[み]につくものであり、簡単[かんたん]に代替[だいたい]できるものではない。後継者[こうけいしゃ]が育[そだ]たなければ、技術[ぎじゅつ]そのものが失[うしな]われる恐[おそ]れがある。これに対[たい]して、学校[がっこう]で伝統[でんとう]芸能[げいのう]を教[おし]える試[こころ]みや、企業[きぎょう]が若手[わかて]職人[しょくにん]を支援[しえん]する仕組[しくみ]など、様[さま]々な取[と]り組[く]みが進[すす]んでいる。",
+   321→   321→      "伝統[でんとう]を守[まも]ることは、過去[かこ]に固執[こしつ]することではない。時代[じだい]と共[とも]に変[か]わりながらも、本質[ほんしつ]を伝[つた]え続[つづ]けることこそが、真[しん]の伝統[でんとう]の継承[けいしょう]であろう。古[ふる]いものと新[あたら]しいものが出会[であ]う場所[ばしょ]にこそ、文化[ぶんか]は新[あたら]しい息吹[いぶき]を得[え]るのである。"
+   322→   322→    ],
+   323→   323→    translation: [
+   324→   324→      "Japan has many traditional arts passed down since ancient times, such as tea ceremony, flower arrangement, noh, and kabuki. However, in modern busy life, opportunities to encounter these are continuously decreasing. Far from traditional culture being reduced to mere tourist shows, what is needed for it to keep living within daily life?",
+   325→   325→      "One key is not to treat tradition as something fixed, but to let it evolve with the times. For example, the spirit of tea ceremony, the heart of hospitality, shares universal values in common with modern hospitality. As long as it is not too bound by forms, tradition can be reborn in new shapes.",
+   326→   326→      "The triggers for young people to take interest in traditional arts are also various. Some say they were fascinated by historical figures depicted in anime and movies and came to go see noh or kabuki. More young people also started attending kimono classes after seeing beautiful kimono figures on social media. Cases where modern media becomes an entrance to tradition are not few.",
+   327→   327→      "Of course, there is also the serious problem of shortage of successors. Artisans' techniques are acquired only through years of training, and cannot be easily substituted. If successors are not nurtured, the techniques themselves may be lost. In response to this, various efforts are advancing, such as trials to teach traditional arts in schools and systems where companies support young artisans.",
+   328→   328→      "Protecting tradition is not clinging to the past. Changing with the times while continuing to convey the essence is what true inheritance of tradition is. It is where the old and the new meet that culture gains new breath."
+   329→   329→    ],
+   330→   330→    questions: [
+   331→   331→      {
+   332→   332→        q: "What is happening to opportunities to encounter traditional arts in modern life?",
+   333→   333→        choices: ["They are increasing rapidly", "They are continuously decreasing", "They remain unchanged", "They are only for tourists now"],
+   334→   334→        answerIndex: 1,
+   335→   335→        explanation: "Opportunities to encounter traditional arts are continuously decreasing in modern busy life (触れる機会は減り続けている)."
+   336→   336→      },
+   337→   337→      {
+   338→   338→        q: "What does the author say is one key to keeping tradition alive?",
+   339→   339→        choices: ["Treating tradition as fixed and unchangeable", "Letting tradition evolve with the times", "Banning all changes to tradition", "Making tradition only for the elderly"],
+   340→   340→        answerIndex: 1,
+   341→   341→        explanation: "Tradition should not be treated as fixed but should evolve with the times (時代に合わせて進化させることである)."
+   342→   342→      },
+   343→   343→      {
+   344→   344→        q: "What is one way young people become interested in traditional arts?",
+   345→   345→        choices: ["Through anime and movies depicting historical figures", "By avoiding social media entirely", "Only through formal schooling", "By traveling abroad"],
+   346→   346→        answerIndex: 0,
+   347→   347→        explanation: "Some young people are fascinated by historical figures in anime and movies and start watching noh or kabuki (歴史的人物に魅了され)."
+   348→   348→      },
+   349→   349→      {
+   350→   350→        q: "Why is the shortage of successors a serious problem?",
+   351→   351→        choices: ["Techniques take years of training and cannot be easily substituted", "There are too many artisans already", "Techniques are too simple to matter", "Young people refuse to learn anything"],
+   352→   352→        answerIndex: 0,
+   353→   353→        explanation: "Artisans' techniques require years of training and cannot be easily substituted (長年の修行を通して初めて身につく...簡単に代替できるものではない)."
+   354→   354→      },
+   355→   355→      {
+   356→   356→        q: "What does the author say is true inheritance of tradition?",
+   357→   357→        choices: ["Clinging to the past exactly", "Changing with the times while conveying the essence", "Banning all modern media", "Only teaching tradition in schools"],
+   358→   358→        answerIndex: 1,
+   359→   359→        explanation: "True inheritance means changing with the times while continuing to convey the essence (時代と共に変わりながらも、本質を伝え続けることこそが真の伝統の継承)."
+   360→   360→      }
+   361→   361→    ]
+   362→   362→  },
+   363→   363→
+   364→   364→  // ───────────────────────────────────────────────────────────
+   365→   365→  // r-n3-07 — Social media impact
+   366→   366→  // ───────────────────────────────────────────────────────────
+   367→   367→  {
+   368→   368→    id: "r-n3-07",
+   369→   369→    title: "SNSが変[か]える人間[にんげん]関係[かんけい]",
+   370→   370→    titleReading: "えすえぬえすがかえるにんげんかんけい",
+   371→   371→    level: "N3",
+   372→   372→    summary: "How social media has reshaped human relationships, narrowed perspectives, harmed mental health through comparison, and spread misinformation, alongside the need for mindful use.",
+   373→   373→    estMinutes: 8,
+   374→   374→    tags: ["social media", "mental health", "information", "relationships"],
+   375→   375→    body: [
+   376→   376→      "スマートフォンの普及[ふきゅう]に伴[ともな]って、SNSは日常生活[にちじょうせいかつ]に不可欠[ふかけつ]なものとなった。友達[ともだち]と連絡[れんらく]を取[と]るだけでなく、ニュースをチェックしたり、趣味[しゅみ]の情報[じょうほう]を集[あつ]めたりと、多種多様[たしゅたよう]な目的[もくてき]で使[つか]われている。その便利[べんり]さに対[たい]して疑[うたが]う人[ひと]は少[すく]ないが、一方[いっぽう]で新[あたら]しい課題[かだい]も生[しょう]じている。",
+   377→   377→      "最[もっと]も顕著[けんちょ]な変化[へんか]は、人間[にんげん]関係[かんけい]の在[あ]り方[かた]だろう。対[たい]面[めん]で話[はな]す機会[きかい]が減[へ]る一方[いっぽう]で、画面[がめん]を通[とお]してやり取[と]りをするのが当[あ]たり前[まえ]になった。気[き]の合[あ]う人[ひと]とだけ繋[つな]がっていれば心地[ここち]よいが、異[こと]なる意見[いけん]に触[ふ]れる機会[きかい]も減[へ]ってしまう。これでは、自分[じぶん]の信念[しんねん]が強[つよ]くなるどころか、かえって視野[しや]が狭[せま]くなる恐[おそ]れがある。",
+   378→   378→      "さらに深刻[しんこく]なのは、SNS上[じょう]での比較[ひかく]が心[こころ]の健康[けんこう]に与[あた]える影響[えいきょう]である。他人[たにん]の輝[かがや]かしい投稿[とうこう]を見[み]るうちに、自分[じぶん]の生活[せいかつ]が不十分[ふじゅうぶん]に思[おも]えてくる若者[わかもの]が増[ふ]えている。このような比較[ひかく]を続[つづ]ければ、自[じ]己[こ]肯定[こうてい]感[かん]が低下[ていか]し、ひどい場合[ばあい]にはうつ状態[じょうたい]に陥[おちい]ることもある。",
+   379→   379→      "情報[じょうほう]の信頼[しんらい]性[せい]という問題[もんだい]も無視[むし]できない。SNSでは誰[だれ]でも簡単[かんたん]に情報[じょうほう]を発信[はっしん]できる一方[いっぽう]で、偽[にせ]情報[じょうほう]や偏[かたよ]った意見[いけん]も瞬[またた]く間[ま]に広[ひろ]がる。確[たし]かな情報源[じょうほうげん]を確[たし]かめる習慣[しゅうかん]がなければ、知[し]らず知[し]らずのうちに誤[あやま]った情報[じょうほう]に左右[さゆう]されることになるだろう。情報[じょうほう]リテラシーを高[たか]める教育[きょういく]が急務[きゅうむ]となっている。",
+   380→   380→      "SNSそのものが悪[わる]いわけではない。使[つか]い方[かた]次第[しだい]で、便利[べんり]な道具[どうぐ]にも有害[ゆうがい]な武器[ぶき]にもなる。自分[じぶん]とSNSとの距離[きょり]を意識的[いしきてき]に保[たも]ちながら、本物[ほんもの]の人間[にんげん]関係[かんけい]や体験[たいけん]を大[おお]切[せつ]にすることが、これからの私[わたし]たちに求[もと]められる姿勢[しせい]であろう。"
+   381→   381→    ],
+   382→   382→    translation: [
+   383→   383→      "Along with the spread of smartphones, social media has become indispensable in daily life. It is used for various purposes, not only contacting friends but also checking news and gathering hobby information. Few people doubt its convenience, but on the other hand, new challenges have also emerged.",
+   384→   384→      "The most notable change is probably the way human relationships work. While opportunities to talk face-to-face decrease, communicating through screens has become normal. It is comfortable to be connected only with people who share your interests, but opportunities to encounter different opinions also decrease. Far from one's beliefs becoming stronger, there is a risk that one's perspective becomes narrower.",
+   385→   385→      "Even more serious is the impact of comparison on social media on mental health. More young people come to feel their own lives are insufficient while looking at others' shining posts. If such comparison continues, self-affirmation decreases, and in severe cases, one can fall into a depressive state.",
+   386→   386→      "The problem of information reliability also cannot be ignored. While anyone can easily disseminate information on social media, false information and biased opinions also spread in the blink of an eye. Without the habit of checking reliable sources, one will end up being swayed by incorrect information without realizing it. Education to raise information literacy has become an urgent task.",
+   387→   387→      "Social media itself is not bad. Depending on how it is used, it can be either a convenient tool or a harmful weapon. Consciously maintaining the distance between oneself and social media while valuing real human relationships and experiences is the attitude required of us now."
+   388→   388→    ],
+   389→   389→    questions: [
+   390→   390→      {
+   391→   391→        q: "What is the most notable change caused by social media according to the passage?",
+   392→   392→        choices: ["The way human relationships work", "The increase in face-to-face conversations", "The reduction in smartphone use", "The end of traditional news"],
+   393→   393→        answerIndex: 0,
+   394→   394→        explanation: "The most notable change is the way human relationships work (人間関係の在り方)."
+   395→   395→      },
+   396→   396→      {
+   397→   397→        q: "What is the risk of connecting only with people who share your interests?",
+   398→   398→        choices: ["Your beliefs become stronger", "Your perspective becomes narrower", "You make more friends quickly", "You learn languages faster"],
+   399→   399→        answerIndex: 1,
+   400→   400→        explanation: "Connecting only with like-minded people narrows one's perspective rather than strengthening beliefs (視野が狭くなる恐れがある)."
+   401→   401→      },
+   402→   402→      {
+   403→   403→        q: "What can happen if young people keep comparing themselves to others' posts?",
+   404→   404→        choices: ["Self-affirmation decreases and they may fall into depression", "They become more confident", "They stop using smartphones entirely", "They earn more money"],
+   405→   405→        answerIndex: 0,
+   406→   406→        explanation: "Continued comparison lowers self-affirmation and in severe cases leads to a depressive state (自己肯定感が低下し、うつ状態に陥ることもある)."
+   407→   407→      },
+   408→   408→      {
+   409→   409→        q: "What habit is necessary to avoid being swayed by false information?",
+   410→   410→        choices: ["Checking reliable information sources", "Posting more often yourself", "Avoiding all news completely", "Trusting everything on social media"],
+   411→   411→        answerIndex: 0,
+   412→   412→        explanation: "Without the habit of checking reliable sources, one is swayed by incorrect information without realizing it (確かな情報源を確かめる習慣がなければ)."
+   413→   413→      },
+   414→   414→      {
+   415→   415→        q: "What does the author say social media can become depending on use?",
+   416→   416→        choices: ["Only a harmful weapon", "Either a convenient tool or a harmful weapon", "Only a convenient tool", "Always unreliable"],
+   417→   417→        answerIndex: 1,
+   418→   418→        explanation: "Depending on usage, social media can be either a convenient tool or a harmful weapon (使い方次第で便利な道具にも有害な武器にもなる)."
+   419→   419→      }
+   420→   420→    ]
+   421→   421→  },
+   422→   422→
+   423→   423→  // ───────────────────────────────────────────────────────────
+   424→   424→  // r-n3-08 — Regional revitalization
+   425→   425→  // ───────────────────────────────────────────────────────────
+   426→   426→  {
+   427→   427→    id: "r-n3-08",
+   428→   428→    title: "地方[ちほう]創生[そうせい]という挑戦[ちょうせん]",
+   429→   429→    titleReading: "ちほうそうせいというちょうせん",
+   430→   430→    level: "N3",
+   431→   431→    summary: "Japan's regional revitalization efforts, accepting immigrants, tourism-based revitalization, remote work possibilities, and the deeper meaning of rebuilding regional society.",
+   432→   432→    estMinutes: 9,
+   433→   433→    tags: ["regional revitalization", "demographics", "tourism", "remote work"],
+   434→   434→    body: [
+   435→   435→      "東京[とうきょう]一極集中[いっきょくしゅうちゅう]が続[つづ]く日本[にほん]において、地方[ちほう]の過疎化[かそか]と人口[じんこう]減少[げんしょう]は深刻[しんこく]な課題[かだい]である。若者[わかもの]が就職[しゅうしょく]や進学[しんがく]を機[き]に都市[とし]へ流出[りゅうしゅつ]し、地方[ちほう]には高齢者[こうれいしゃ]ばかりが残[のこ]るという地域[ちいき]が増[ふ]え続[つづ]けている。この状況[じょうきょう]に対[たい]して、国[くに]や自治体[じちたい]は「地方[ちほう]創生[そうせい]」を掲[かか]げて様[さま]々な政策[せいさく]を打[う]ち出[だ]している。",
+   436→   436→      "成功[せいこう]事例[じれい]の一[ひと]つとして、移住[いじゅう]者[しゃ]を受[う]け入[い]れる町[まち]が挙[あ]げられる。子[こ]育[そだ]て支援[しえん]や住宅[じゅうたく]補助[ほじょ]、仕事[しごと]の紹介[しょうかい]など、移住[いじゅう]を希望[きぼう]する人[ひと]に具体的[ぐたいてき]なサポートを提供[ていきょう]することで、定着[ていちゃく]率[りつ]を上[あ]げているところも少[すく]なくない。地元[じもと]の人[ひと]と新住民[しんじゅうみん]が交流[こうりゅう]する機会[きかい]を作[つく]ることで、地域[ちいき]全体[ぜんたい]に活気[かっき]が戻[もど]るという効果[こうか]も見[み]られる。",
+   437→   437→      "観光[かんこう]資源[しげん]を活用[かつよう]した町[まち]おこしも、有効[ゆうこう]な手段[しゅだん]である。地域[ちいき]ならではの祭[まつり]や伝統[でんとう]工芸[こうげい]、自然[しぜん]景観[けいかん]を観光客[かんこうきゃく]にPRすることで、一時的[いちじてき]な訪問[ほうもん]者[しゃ]だけでなく定住[ていじゅう]する人[ひと]も呼[よ]び込[こ]むことができる。ただし、観光[かんこう]に依存[いぞん]しすぎると、環境[かんきょう]破壊[はかい]や観光客[かんこうきゃく]の減少[げんしょう]といったリスクも抱[かか]えることになる。持続的[じぞくてき]な視点[してん]が欠[か]かせない。",
+   438→   438→      "リモートワークの普及[ふきゅう]は、地方[ちほう]創生[そうせい]に新[あたら]しい可能性[かのうせい]をもたらした。都市[とし]に住[す]まなくても仕事[しごと]ができる環境[かんきょう]が整[ととの]えば、ライフスタイルを重視[じゅうし]して地方[ちほう]への移住[いじゅう]を選択[せんたく]する人[ひと]がさらに増[ふ]えるだろう。空[あ]き家[や]を改修[かいしゅう]して共有[きょうゆう]オフィスにするなど、柔軟[じゅうなん]な活用[かつよう]が進[すす]んでいる地域[ちいき]もある。",
+   439→   439→      "地方[ちほう]創生[そうせい]は、単[たん]なる人口[じんこう]回復[かいふく]の問題[もんだい]ではない。地域[ちいき]の誇[ほこ]りと独自[どくじ]の文化[ぶんか]を次[つぎ]の世代[せだい]に継[つ]ぐ場[ば]として、地域[ちいき]社会[しゃかい]をどう再構築[さいこうちく]するかが問[と]われているのである。この挑戦[ちょうせん]の成否[せいひ]は、日本[にほん]の将来[しょうらい]を左右[さゆう]すると言[い]っても過言[かごん]ではない。"
+   440→   440→    ],
+   441→   441→    translation: [
+   442→   442→      "In Japan, where unipolar concentration in Tokyo continues, depopulation and population decline in regional areas are serious challenges. More and more regions remain where only elderly people are left as young people flow out to cities upon employment or schooling. In response to this situation, the national and local governments advocate regional revitalization and announce various policies.",
+   443→   443→      "As one success case, towns that accept immigrants are mentioned. By providing concrete support such as childcare assistance, housing subsidies, and job introductions to people wishing to relocate, not a few towns are raising their settlement rates. Effects are also seen in which the whole region regains vitality by creating opportunities for locals and new residents to interact.",
+   444→   444→      "Town revitalization utilizing tourism resources is also an effective means. By PR-ing regional festivals, traditional crafts, and natural scenery to tourists, not only temporary visitors but also permanent residents can be invited. However, relying too much on tourism entails risks such as environmental destruction and decline in tourists. A sustainable perspective is indispensable.",
+   445→   445→      "The spread of remote work has brought new possibilities to regional revitalization. If environments where one can work without living in cities are arranged, more people who value lifestyle will likely choose relocation to regional areas. Some regions are also advancing flexible use, such as renovating vacant houses into shared offices.",
+   446→   446→      "Regional revitalization is not merely a problem of population recovery. It is being asked how to rebuild regional society as a place to pass on regional pride and unique culture to the next generation. The success or failure of this challenge is no exaggeration to say will determine Japan's future."
+   447→   447→    ],
+   448→   448→    questions: [
+   449→   449→      {
+   450→   450→        q: "What is the main challenge facing regional Japan?",
+   451→   451→        choices: ["Overpopulation", "Depopulation and population decline", "Too many young people", "Excessive tourism only"],
+   452→   452→        answerIndex: 1,
+   453→   453→        explanation: "Depopulation and population decline are serious challenges in regional Japan (過疎化と人口減少は深刻な課題)."
+   454→   454→      },
+   455→   455→      {
+   456→   456→        q: "How do some towns raise their settlement rates?",
+   457→   457→        choices: ["By providing concrete support like childcare and housing subsidies", "By refusing immigrants entirely", "By raising taxes on newcomers", "By closing local schools"],
+   458→   458→        answerIndex: 0,
+   459→   459→        explanation: "Towns provide concrete support such as childcare assistance, housing subsidies, and job introductions to raise settlement rates (具体的なサポートを提供することで定着率を上げている)."
+   460→   460→      },
+   461→   461→      {
+   462→   462→        q: "What risk arises if a region relies too much on tourism?",
+   463→   463→        choices: ["Environmental destruction and decline in tourists", "Too many permanent residents", "Lower housing prices", "Increased young population"],
+   464→   464→        answerIndex: 0,
+   465→   465→        explanation: "Over-reliance on tourism entails risks such as environmental destruction and decline in tourists (環境破壊や観光客の減少といったリスクも抱える)."
+   466→   466→      },
+   467→   467→      {
+   468→   468→        q: "What new possibility has remote work brought to regional revitalization?",
+   469→   469→        choices: ["People can work without living in cities", "Cities become more crowded", "Tourism decreases sharply", "Companies leave rural areas"],
+   470→   470→        answerIndex: 0,
+   471→   471→        explanation: "If environments allow working without living in cities, more people will choose regional relocation (都市に住まなくても仕事ができる環境が整えば)."
+   472→   472→      },
+   473→   473→      {
+   474→   474→        q: "What does the author say regional revitalization is really about?",
+   475→   475→        choices: ["Just increasing population numbers", "Rebuilding regional society to pass on pride and culture to the next generation", "Building more factories everywhere", "Encouraging everyone to move to Tokyo"],
+   476→   476→        answerIndex: 1,
+   477→   477→        explanation: "Regional revitalization is about rebuilding regional society as a place to pass on regional pride and unique culture to the next generation (地域の誇りと独自の文化を次の世代に継ぐ場として地域社会をどう再構築するか)."
+   478→   478→      }
+   479→   479→    ]
+   480→   480→  },
+   481→   481→
+   482→   482→  // ───────────────────────────────────────────────────────────
+   483→   483→  // r-n3-09 — Mental health awareness
+   484→   484→  // ───────────────────────────────────────────────────────────
+   485→   485→  {
+   486→   486→    id: "r-n3-09",
+   487→   487→    title: "心[こころ]の健康[けんこう]と向[む]き合[あ]い方[かた]",
+   488→   488→    titleReading: "こころのけんこうとむきあいかた",
+   489→   489→    level: "N3",
+   490→   490→    summary: "Persistent stigma around mental illness in Japan, workplace stress, the need to treat mental distress naturally, company preventive efforts, and personal self-care.",
+   491→   491→    estMinutes: 8,
+   492→   492→    tags: ["mental health", "workplace", "wellbeing", "stigma"],
+   493→   493→    body: [
+   494→   494→      "昔[むかし]に比[くら]べて、メンタルヘルスに対[たい]する関心[かんしん]は高[たか]まってきた。しかし、日本[にほん]では依然[いぜん]として心[こころ]の病[やまい]に対[たい]する偏見[へんけん]が残[のこ]っており、苦[くる]しんでいる人[ひと]が助[たす]けを求[もと]めにくい状況[じょうきょう]が続[つづ]いている。この問題[もんだい]に対[たい]して、社会[しゃかい]全体[ぜんたい]の意識[いしき]を変[か]える取[と]り組[く]みが急務[きゅうむ]となっている。",
+   495→   495→      "特[とく]に職場[しょくば]でのストレスは深刻[しんこく]だ。長時間労働[ちょうじかんろうどう]や人間[にんげん]関係[かんけい]のトラブル、責任[せきにん]の重[おも]さなど、原因[げんいん]は様[さま]々である。心[こころ]が疲[つか]れ切[き]ってしまう前[まえ]に休[やす]むことができればいいが、周囲[しゅうい]の目[め]を気[き]にして限界[げんかい]まで頑張[がんば]ってしまう人[ひと]も少[すく]なくない。その結果[けっか]、休職[きゅうしょく]や退職[たいしょく]に追[お]い込[こ]まれるケースが後[あと]を絶[た]たない。",
+   496→   496→      "重要[じゅうよう]なのは、心[こころ]の不調[ふちょう]は決[けっ]して珍[めずら]しいことではないと認識[にんしき]することである。風邪[かぜ]をひくのと同[おな]じように、誰[だれ]にでも起[お]こり得[う]る自然[しぜん]な現象[げんしょう]として扱[あつか]うべきである。もし自分[じぶん]が辛[つら]い状態[じょうたい]にあることに気[き]づいたら、早[はや]めに専門家[せんもんか]や信頼[しんらい]できる人[ひと]に相談[そうだん]することが回復[かいふく]への近道[ちかみち]になる。",
+   497→   497→      "企業[きぎょう]側[がわ]の取[と]り組[く]みも徐[じょ]々に広[ひろ]がっている。メンタルヘルス研修[けんしゅう]の実施[じっし]や、産業[さんぎょう]カウンセラーの配置[はいち]、フレックスタイム制[せい]の導入[どうにゅう]など、予防[よぼう]的[てき]な対策[たいさく]が取[と]られ始[はじ]めている。ただし、制度[せいど]を整備[せいび]するだけでは不十分[ふじゅうぶん]で、上司[じょうし]が部下[ぶか]の小[ちい]さな変化[へんか]に気[き]づく日常[にちじょう]の関心[かんしん]が何[なに]より大切[たいせつ]である。",
+   498→   498→      "心[こころ]の健康[けんこう]は、目[め]に見[み]えないだけに軽[かる]く扱[あつか]われがちだ。しかし、一度失[うしな]うと回復[かいふく]には時間[じかん]がかかる。自分[じぶん]自身[じしん]の心[こころ]と対話[たいわ]する時間[じかん]を意識的[いしきてき]に持[も]ち、無理[むり]をしすぎないことが、長[なが]く健康[けんこう]に生[い]きるための秘訣[ひけつ]である。心[こころ]の健康[けんこう]を守[まも]ることは、決[けっ]して誰[だれ]か他人[たにん]の問題[もんだい]ではない。"
+   499→   499→    ],
+   500→   500→    translation: [
+   501→   501→      "Compared to the past, awareness of mental health has increased. However, in Japan prejudice against mental illness still remains, and the situation continues where people who suffer find it hard to seek help. In response to this problem, efforts to change the awareness of society as a whole have become urgent.",
+   502→   502→      "Stress in the workplace is particularly serious. Causes are various, such as long working hours, troubles in human relationships, and heavy responsibility. It would be good if one could rest before the mind gets completely exhausted, but not a few people push themselves to the limit worrying about how others see them. As a result, cases where people are driven to leave of absence or resignation do not cease.",
+   503→   503→      "What is important is to recognize that mental distress is by no means rare. It should be treated as a natural phenomenon that can happen to anyone, just like catching a cold. If you realize you are in a painful state, consulting a specialist or someone you trust early on is the shortcut to recovery.",
+   504→   504→      "Companies' efforts are also gradually spreading. Preventive measures have begun to be taken, such as implementing mental health training, placing industrial counselors, and introducing flextime systems. However, just developing systems is insufficient; what is most important is supervisors' daily attention to notice small changes in their subordinates.",
+   505→   505→      "Mental health tends to be treated lightly because it cannot be seen. However, once lost, recovery takes time. Consciously taking time to dialogue with your own mind and not pushing yourself too much is the secret to living long and healthy. Protecting mental health is by no means someone else's problem."
+   506→   506→    ],
+   507→   507→    questions: [
+   508→   508→      {
+   509→   509→        q: "What problem persists in Japan regarding mental illness?",
+   510→   510→        choices: ["Too much awareness", "Prejudice remains, making it hard to seek help", "Too many specialists", "Free treatment for everyone"],
+   511→   511→        answerIndex: 1,
+   512→   512→        explanation: "Prejudice against mental illness remains, making it hard for sufferers to seek help (偏見が残っており、助けを求めにくい状況が続いている)."
+   513→   513→      },
+   514→   514→      {
+   515→   515→        q: "Why do some people push themselves to the limit at work?",
+   516→   516→        choices: ["They don't feel any stress", "They worry about how others see them", "They truly enjoy overwork", "Their bosses legally force them"],
+   517→   517→        answerIndex: 1,
+   518→   518→        explanation: "Not a few people push themselves to the limit worrying about how others see them (周囲の目を気にして限界まで頑張ってしまう)."
+   519→   519→      },
+   520→   520→      {
+   521→   521→        q: "How should mental distress be treated according to the passage?",
+   522→   522→        choices: ["As a rare and shameful thing", "As a natural phenomenon that can happen to anyone", "As something to hide away", "As a personal weakness"],
+   523→   523→        answerIndex: 1,
+   524→   524→        explanation: "Mental distress should be treated as a natural phenomenon that can happen to anyone, like catching a cold (誰にでも起こり得る自然な現象として扱うべきである)."
+   525→   525→      },
+   526→   526→      {
+   527→   527→        q: "What is most important for supervisors to do?",
+   528→   528→        choices: ["Ignore subordinates' changes", "Notice small changes in subordinates daily", "Increase working hours", "Ban all rest breaks"],
+   529→   529→        answerIndex: 1,
+   530→   530→        explanation: "What matters most is supervisors' daily attention to notice small changes in subordinates (上司が部下の小さな変化に気づく日常の関心が何より大切)."
+   531→   531→      },
+   532→   532→      {
+   533→   533→        q: "Why does the author say mental health tends to be treated lightly?",
+   534→   534→        choices: ["Because it's not important", "Because it cannot be seen", "Because specialists are too few", "Because treatment is too expensive"],
+   535→   535→        answerIndex: 1,
+   536→   536→        explanation: "Mental health tends to be treated lightly because it cannot be seen (目に見えないだけに軽く扱われがちだ)."
+   537→   537→      }
+   538→   538→    ]
+   539→   539→  },
+   540→   540→
+   541→   541→  // ───────────────────────────────────────────────────────────
+   542→   542→  // r-n3-10 — Sustainable tourism
+   543→   543→  // ───────────────────────────────────────────────────────────
+   544→   544→  {
+   545→   545→    id: "r-n3-10",
+   546→   546→    title: "持続[じぞく]可能[かのう]な観光[かんこう]を求[もと]めて",
+   547→   547→    titleReading: "じぞくかのうなかんこうをもとめて",
+   548→   548→    level: "N3",
+   549→   549→    summary: "Japan's tourism boom and overtourism issues, the concept of sustainable tourism, dispersing visitors, responsible tourists, and the need for cooperation among all stakeholders.",
+   550→   550→    estMinutes: 9,
+   551→   551→    tags: ["tourism", "sustainability", "overtourism", "environment"],
+   552→   552→    body: [
+   553→   553→      "インバウンド需要[じゅよう]の増加[ぞうか]に伴[ともな]って、日本[にほん]の観光[かんこう]産業[さんぎょう]は空前[くうぜん]の好調[こうちょう]を迎[むか]えている。しかし、観光客[かんこうきゃく]が急増[きゅうぞう]する一方[いっぽう]で、地元[じもと]住民[じゅうみん]の生活[せいかつ]への影響[えいきょう]や環境[かんきょう]への負荷[ふか]が無視[むし]できない問題[もんだい]となっている。この状況[じょうきょう]に対[たい]して、「持続[じぞく]可能[かのう]な観光[かんこう]」という概念[がいねん]が注目[ちゅうもく]を集[あつ]めている。",
+   554→   554→      "持続[じぞく]可能[かのう]な観光[かんこう]とは、観光客[かんこうきゃく]、地元[じもと]住民[じゅうみん]、自然[しぜん]環境[かんきょう]の三者[さんしゃ]が共存[きょうそん]できる形[かたち]の観光[かんこう]のことである。観光客[かんこうきゃく]が増[ふ]えればいいというわけではなく、その恩恵[おんけい]が地元[じもと]に還元[かんげん]され、文化[ぶんか]や自然[しぜん]が次[つぎ]の世代[せだい]にも残[のこ]されるような仕組[しくみ]が必要[ひつよう]だ。短期的[たんきてき]な利益[りえき]を追及[ついきゅう]すればするほど、長期的[ちょうきてき]な衰退[すいたい]を招[まね]くことになりかねない。",
+   555→   555→      "具体的[ぐたいてき]な取[と]り組[く]みとして、観光客[かんこうきゃく]の分散[ぶんさん]が挙[あ]げられる。有名[ゆうめい]な観光[かんこう]地[ち]に人[ひと]が集中[しゅうちゅう]する「オーバーツーリズム」を防[ふせ]ぐため、オフシーズンの旅行[りょこう]を促[うなが]したり、周辺[しゅうへん]地域[ちいき]への周遊[しゅうゆう]ルートを提案[ていあん]したりする動[うご]きが進[すす]んでいる。また、地元[じもと]の人[ひと]が観光[かんこう]案内[あんない]を担当[たんとう]することで、観光客[かんこうきゃく]に深[ふか]い文化[ぶんか]理解[りかい]を提供[ていきょう]すると同時[どうじ]に、地域[ちいき]経済[けいざい]も潤[うるお]す仕組[しくみ]も広[ひろ]がりつつある。",
+   556→   556→      "観光客[かんこうきゃく]自身[じしん]の意識[いしき]も問[と]われている。地元[じもと]のルールを守[まも]り、文化[ぶんか]を尊重[そんちょう]し、ごみを持[も]ち帰[かえ]るなどの基本的[きほんてき]なマナーは当然[とうぜん]として、さらに一歩[いっぽ]進[すす]んで、観光[かんこう]先[さき]の課題[かだい]を理解[りかい]し、解決[かいけつ]に貢献[こうけん]する「責任[せきにん]ある観光[かんこう]」の実践[じっせん]が求[もと]められている。消費[しょうひ]するだけの観光[かんこう]客[きゃく]から、参加[さんか]する観光[かんこう]客[きゃく]への転換[てんかん]が必要[ひつよう]だ。",
+   557→   557→      "持続[じぞく]可能[かのう]な観光[かんこう]を実現[じつげん]するには、観光[かんこう]業[ぎょう]、政府[せいふ]、観光客[かんこうきゃく]、地元[じもと]住民[じゅうみん]の四方[しほう]が協力[きょうりょく]することが不可欠[ふかけつ]である。利益[りえき]を追[お]い求[もと]めるだけの観光[かんこう]から、文化[ぶんか]と自然[しぜん]を守[まも]りながら楽[たの]しむ観光[かんこう]へ。この転換[てんかん]ができるかどうかが、日本[にほん]の観光[かんこう]の将来[しょうらい]を決[き]めるだろう。"
+   558→   558→    ],
+   559→   559→    translation: [
+   560→   560→      "Along with the increase in inbound demand, Japan's tourism industry is enjoying unprecedented prosperity. However, while tourists rapidly increase, the impact on local residents' lives and the burden on the environment have become problems that cannot be ignored. In response to this situation, the concept of sustainable tourism is gaining attention.",
+   561→   561→      "Sustainable tourism refers to a form of tourism in which tourists, local residents, and the natural environment can coexist. It is not simply that more tourists are better; mechanisms are necessary in which benefits are returned to the locality and culture and nature are preserved for the next generation. Pursuing short-term profits could invite long-term decline.",
+   562→   562→      "As concrete efforts, dispersing tourists is mentioned. To prevent overtourism where people concentrate in famous tourist spots, movements are advancing to encourage off-season travel and propose tour routes to surrounding areas. Also, systems are spreading in which locals serve as tour guides, providing tourists with deep cultural understanding while at the same time enriching the regional economy.",
+   563→   563→      "Tourists' own awareness is also being questioned. Basic manners such as following local rules, respecting culture, and taking garbage back are of course expected, but going one step further, the practice of responsible tourism is sought after, in which tourists understand the challenges of their destinations and contribute to solving them. A shift from tourists who merely consume to tourists who participate is necessary.",
+   564→   564→      "To realize sustainable tourism, cooperation among four parties — the tourism industry, government, tourists, and local residents — is indispensable. From tourism that merely pursues profit to tourism that protects culture and nature while enjoying them. Whether this shift can be made will determine the future of Japanese tourism."
+   565→   565→    ],
+   566→   566→    questions: [
+   567→   567→      {
+   568→   568→        q: "What concept is gaining attention due to the rapid increase of tourists?",
+   569→   569→        choices: ["Mass tourism", "Sustainable tourism", "Discount tourism", "Urban tourism only"],
+   570→   570→        answerIndex: 1,
+   571→   571→        explanation: "The concept of sustainable tourism is gaining attention amid rapid tourist increase (持続可能な観光という概念が注目を集めている)."
+   572→   572→      },
+   573→   573→      {
+   574→   574→        q: "According to the passage, what is needed besides increasing tourist numbers?",
+   575→   575→        choices: ["Mechanisms to return benefits to localities and preserve culture and nature", "Lower prices for all tourists", "Banning all tourists entirely", "Reducing local residents"],
+   576→   576→        answerIndex: 0,
+   577→   577→        explanation: "Benefits must be returned to localities and culture and nature preserved for the next generation (恩恵が地元に還元され、文化や自然が次の世代にも残されるような仕組みが必要)."
+   578→   578→      },
+   579→   579→      {
+   580→   580→        q: "What is being done to prevent overtourism?",
+   581→   581→        choices: ["Encouraging off-season travel and routes to surrounding areas", "Forcing tourists to only visit famous spots", "Banning tourists during peak season entirely", "Closing all tourist sites"],
+   582→   582→        answerIndex: 0,
+   583→   583→        explanation: "Movements advance to encourage off-season travel and propose routes to surrounding areas to prevent overtourism (オフシーズンの旅行を促したり、周辺地域への周遊ルートを提案したり)."
+   584→   584→      },
+   585→   585→      {
+   586→   586→        q: "What shift in tourists does the author say is necessary?",
+   587→   587→        choices: ["From participating to consuming", "From consuming to participating", "From domestic to international only", "From responsible to irresponsible"],
+   588→   588→        answerIndex: 1,
+   589→   589→        explanation: "A shift from tourists who merely consume to tourists who participate is necessary (消費するだけの観光客から、参加する観光客への転換が必要)."
+   590→   590→      },
+   591→   591→      {
+   592→   592→        q: "What does the author say is indispensable for realizing sustainable tourism?",
+   593→   593→        choices: ["Only government action", "Cooperation among four parties: industry, government, tourists, and residents", "Higher profits for tourism companies", "More foreign tourists only"],
+   594→   594→        answerIndex: 1,
+   595→   595→        explanation: "Cooperation among four parties — tourism industry, government, tourists, and local residents — is indispensable (四方が協力することが不可欠である)."
+   596→   596→      }
+   597→   597→    ]
+   598→   598→  }
+   599→   599→];
+   600→   600→

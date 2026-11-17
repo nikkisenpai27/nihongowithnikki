@@ -1,0 +1,622 @@
+     1→     1→import type { ReadingPassage } from "@/lib/types";
+     2→     2→
+     3→     3→// Furigana notation: kanji readings are written inline as 漢字[かんじ].
+     4→     4→// A [reading] immediately following a run of kanji attaches to that whole run.
+     5→     5→// Single kanji with okurigana use per-kanji brackets (e.g. 働[はたら]く).
+     6→     6→// 10 original N3-level reading passages with comprehension questions.
+     7→     7→// Topics: work-style reform, animation industry, ocean pollution,
+     8→     8→// community design, aging workforce, intangible cultural heritage,
+     9→     9→// digital divide, rural depopulation, lifelong learning, ethical consumption.
+    10→    10→
+    11→    11→export const readingN3E: ReadingPassage[] = [
+    12→    12→  // ───────────────────────────────────────────────────────────
+    13→    13→  // r-n3-41 — Work-style reform (働き方改革)
+    14→    14→  // ───────────────────────────────────────────────────────────
+    15→    15→  {
+    16→    16→    id: "r-n3-41",
+    17→    17→    title: "働[はたら]き方[かた]改革[かいかく]とこれからの会社[かいしゃ]",
+    18→    18→    titleReading: "はたらきかたかいかくとこれからのかいしゃ",
+    19→    19→    level: "N3",
+    20→    20→    summary: "An overview of Japan's work-style reform: reviewing long overtime, accepting diverse work styles, telework and side jobs, and the challenge of transforming work culture itself.",
+    21→    21→    estMinutes: 7,
+    22→    22→    tags: ["work culture", "labor", "telework", "society"],
+    23→    23→    body: [
+    24→    24→      "近年[きんねん]、日本[にほん]では「働[はたら]き方[かた]改革[かいかく]」という言葉[ことば]がよく使[つか]われるようになりました。長時間労働[ちょうじかんろうどう]を見直[みなお]し、多様[たよう]な働[はたら]き方[かた]を認[みと]めることが目的[もくてき]です。",
+    25→    25→      "以前[いぜん]は、残業[ざんぎょう]が多[おお]いことがまじめな態度[たいど]だと考[かんが]える風潮[ふうちょう]がありました。しかし、過労死[かろうし]などの問題[もんだい]が社会[しゃかい]で注目[ちゅうもく]されるようになり、働[はたら]く人[ひと]の健康[けんこう]が重視[じゅうし]されるようになりました。",
+    26→    26→      "改革[かいかく]のひとつに、残業時間[ざんぎょうじかん]の上限[じょうげん]を法律[ほうりつ]で決[き]めることがあります。これにより、企業[きぎょう]は労働時間[ろうどうじかん]の管理[かんり]をより厳[きび]しく行[おこな]う必要[ひつよう]があります。",
+    27→    27→      "また、テレワークや副業[ふくぎょう]を認[みと]める会社[かいしゃ]も増[ふ]えています。通勤時間[つうきんじかん]が減[へ]り、地方[ちほう]に住[す]みながら都会[とかい]の会社[かいしゃ]で働[はたら]くことも可能[かのう]になりました。",
+    28→    28→      "一方[いっぽう]で、現場[げんば]では仕事[しごと]の量[りょう]が変[か]わらないのに時間[じかん]だけが減[へ]り、ストレスが増[ふ]えたという声[こえ]もあります。制度[せいど]を変[か]えるだけでなく、仕事[しごと]そのものを見直[みなお]すことが求[もと]められています。",
+    29→    29→      "働[はたら]き方[かた]改革[かいかく]は、単[たん]なる規制[きせい]の変更[へんこう]ではなく、日本人[にほんじん]の働[はたら]き方[かた]の文化[ぶんか]そのものを変[か]える大[おお]きな挑戦[ちょうせん]だと言[い]えるでしょう。"
+    30→    30→    ],
+    31→    31→    translation: [
+    32→    32→      "In recent years, the term \"work-style reform\" has come to be widely used in Japan. Its purpose is to review long working hours and to accept diverse ways of working.",
+    33→    33→      "In the past, there was a culture in which doing a lot of overtime was considered a serious attitude. However, as problems such as death from overwork gained social attention, workers' health came to be emphasized.",
+    34→    34→      "One part of the reform is to set a legal limit on overtime hours. As a result, companies must manage working hours more strictly.",
+    35→    35→      "In addition, more companies are allowing telework and side jobs. Commuting time has decreased, and it has become possible to live in a rural area while working for an urban company.",
+    36→    36→      "On the other hand, some in the field say that the amount of work stays the same while only the hours decrease, increasing stress. It is required not only to change the system but also to review the work itself.",
+    37→    37→      "Work-style reform is not merely a regulatory change, but a major challenge that transforms the very culture of how Japanese people work."
+    38→    38→    ],
+    39→    39→    questions: [
+    40→    40→      {
+    41→    41→        q: "働き方改革の目的は何ですか。",
+    42→    42→        choices: ["長時間労働を増やすこと", "多様な働き方を認めること", "会社の利益を増やすこと", "外国人労働者を減らすこと"],
+    43→    43→        answerIndex: 1,
+    44→    44→        explanation: "本文に「多様な働き方を認めることが目的です」と書かれています。"
+    45→    45→      },
+    46→    46→      {
+    47→    47→        q: "以前、残業が多い人はどう見られていましたか。",
+    48→    48→        choices: ["非効率だと思われていた", "まじめだと思われていた", "無責任だと思われていた", "健康的だと思われていた"],
+    49→    49→        answerIndex: 1,
+    50→    50→        explanation: "「残業が多いことがまじめな態度だと考える風潮があった」と述べられています。"
+    51→    51→      },
+    52→    52→      {
+    53→    53→        q: "テレワークのメリットとして本文に書かれていることは何ですか。",
+    54→    54→        choices: ["給料が上がること", "昇進しやすいこと", "通勤時間が減ること", "残業が増えること"],
+    55→    55→        answerIndex: 2,
+    56→    56→        explanation: "「通勤時間が減り」とテレワークの利点として挙げられています。"
+    57→    57→      },
+    58→    58→      {
+    59→    59→        q: "現場での課題として挙げられているのは何ですか。",
+    60→    60→        choices: ["仕事の量が減らないこと", "給料が下がること", "人手が増えすぎること", "制度が厳しすぎること"],
+    61→    61→        answerIndex: 0,
+    62→    62→        explanation: "「仕事の量が変わらないのに時間だけが減り、ストレスが増えた」と書かれています。"
+    63→    63→      },
+    64→    64→      {
+    65→    65→        q: "本文では働き方改革をどのように位置づけていますか。",
+    66→    66→        choices: ["単なる規制の変更", "文化そのものを変える挑戦", "失敗した政策", "一時的な流行"],
+    67→    67→        answerIndex: 1,
+    68→    68→        explanation: "最後の段落で「日本人の働き方の文化そのものを変える大きな挑戦」と述べています。"
+    69→    69→      }
+    70→    70→    ]
+    71→    71→  },
+    72→    72→
+    73→    73→  // ───────────────────────────────────────────────────────────
+    74→    74→  // r-n3-42 — Japanese animation industry
+    75→    75→  // ───────────────────────────────────────────────────────────
+    76→    76→  {
+    77→    77→    id: "r-n3-42",
+    78→    78→    title: "日本[にほん]のアニメーション産業[さんぎょう]",
+    79→    79→    titleReading: "にほんのアニメーションさんぎょう",
+    80→    80→    level: "N3",
+    81→    81→    summary: "Japan's animation industry is globally loved, yet animators face low pay and long hours; the article explores subcontracting structures, digital advances, and the need to support creators.",
+    82→    82→    estMinutes: 8,
+    83→    83→    tags: ["anime", "industry", "labor", "culture"],
+    84→    84→    body: [
+    85→    85→      "日本[にほん]のアニメは世界中[せかいじゅう]で愛[あい]されており、大[おお]きな産業[さんぎょう]となっています。ジブリ作品[さくひん]や最近[さいきん]の映画[えいが]が海外[かいがい]でも高[たか]い評価[ひょうか]を受[う]けることが増[ふ]えています。",
+    86→    86→      "しかし、アニメを作[つく]る現場[げんば]の労働環境[ろうどうかんきょう]は必[かなら]ずしも良[よ]いとは言[い]えません。多[おお]くのアニメーターが低[ひく]い賃金[ちんぎん]で長時間[ちょうじかん]働[はたら]いていると言[い]われています。",
+    87→    87→      "その原因[げんいん]のひとつは、制作費[せいさくひ]が下請[したう]けの会社[かいしゃ]へと流[なが]れ、末端[まったん]の制作者[せいさくしゃ]に十分[じゅうぶん]なお金[かね]が届[とど]かない構造[こうぞう]です。このため、優秀[ゆうしゅう]な人[ひと]が業界[ぎょうかい]を去[さ]る問題[もんだい]も起[お]きています。",
+    88→    88→      "一方[いっぽう]で、デジタル技術[ぎじゅつ]の進歩[しんぽ]により、作画[さくが]の効率[こうりつ]が上[あ]がっています。また、ストリーミングサービスの普及[ふきゅう]で、作品[さくひん]が世界中[せかいじゅう]に届[とど]きやすくなりました。",
+    89→    89→      "業界[ぎょうかい]では、働[はたら]き手[て]の待遇改善[たいぐうかいぜん]や、新人育成[しんじんいくせい]の仕組[しく]み作[づく]りが急務[きゅうむ]とされています。アニメの質[しつ]を保[たも]つには、作[つく]る人[ひと]を支[ささ]える環境[かんきょう]が欠[か]かせません。",
+    90→    90→      "日本[にほん]のアニメは文化[ぶんか]の輸出品[ゆしゅつひん]としても重要[じゅうよう]です。魅力[みりょく]ある作品[さくひん]を作[つく]り続[つづ]けるためには、産業[さんぎょう]全体[ぜんたい]の健全[けんぜん]な発展[はってん]が求[もと]められています。"
+    91→    91→    ],
+    92→    92→    translation: [
+    93→    93→      "Japanese anime is loved all over the world and has become a major industry. Studio Ghibli works and recent films are increasingly receiving high praise overseas.",
+    94→    94→      "However, the working environment at anime production sites is not necessarily good. It is said that many animators work long hours for low wages.",
+    95→    95→      "One cause is a structure in which production budgets flow to subcontracting companies, and sufficient money does not reach the creators at the end of the chain. As a result, talented people are leaving the industry.",
+    96→    96→      "On the other hand, advances in digital technology have improved drawing efficiency. In addition, with the spread of streaming services, works can now reach the whole world more easily.",
+    97→    97→      "In the industry, improving working conditions and building systems to train newcomers are considered urgent tasks. To maintain anime quality, an environment that supports the creators is essential.",
+    98→    98→      "Japanese anime is also important as a cultural export. To keep producing attractive works, the healthy development of the entire industry is required."
+    99→    99→    ],
+   100→   100→    questions: [
+   101→   101→      {
+   102→   102→        q: "本文によると、日本のアニメはどうなっていますか。",
+   103→   103→        choices: ["国内だけで消費されている", "世界中で愛されている", "利益が少ない", "制作費が高い"],
+   104→   104→        answerIndex: 1,
+   105→   105→        explanation: "第一段落に「日本のアニメは世界中で愛されている」と書かれています。"
+   106→   106→      },
+   107→   107→      {
+   108→   108→        q: "アニメーターの労働環境はどうですか。",
+   109→   109→        choices: ["非常に良い", "法律で保護されている", "賃金が低く長時間労働", "海外より良い"],
+   110→   110→        answerIndex: 2,
+   111→   111→        explanation: "「多くのアニメーターが低い賃金で長時間働いている」と述べられています。"
+   112→   112→      },
+   113→   113→      {
+   114→   114→        q: "お金が末端の制作者に届かない原因は何ですか。",
+   115→   115→        choices: ["制作費が高すぎる", "下請け構造のため", "海外売上が少ない", "デジタル化のため"],
+   116→   116→        answerIndex: 1,
+   117→   117→        explanation: "「制作費が下請けの会社へと流れ、末端の制作者に十分なお金が届かない構造」と説明されています。"
+   118→   118→      },
+   119→   119→      {
+   120→   120→        q: "デジタル技術の進歩によって何が変わりましたか。",
+   121→   121→        choices: ["賃金が上がった", "作画の効率が上がった", "制作数が減った", "海外評価が下がった"],
+   122→   122→        answerIndex: 1,
+   123→   123→        explanation: "「デジタル技術の進歩により、作画の効率が上がっている」と書かれています。"
+   124→   124→      },
+   125→   125→      {
+   126→   126→        q: "業界の急務として挙げられているのは何ですか。",
+   127→   127→        choices: ["海外展開の拡大", "作品数の増加", "待遇改善と新人育成", "制作費の削減"],
+   128→   128→        answerIndex: 2,
+   129→   129→        explanation: "「働き手の待遇改善や新人育成の仕組み作りが急務」とされています。"
+   130→   130→      }
+   131→   131→    ]
+   132→   132→  },
+   133→   133→
+   134→   134→  // ───────────────────────────────────────────────────────────
+   135→   135→  // r-n3-43 — Ocean pollution and plastic waste
+   136→   136→  // ───────────────────────────────────────────────────────────
+   137→   137→  {
+   138→   138→    id: "r-n3-43",
+   139→   139→    title: "海[うみ]の汚染[おせん]とプラスチックごみ",
+   140→   140→    titleReading: "うみのおせんとプラスチックごみ",
+   141→   141→    level: "N3",
+   142→   142→    summary: "Plastic waste pollutes the world's oceans, breaking into microplastics that enter marine life and even human blood; reducing waste and developing renewable materials are needed.",
+   143→   143→    estMinutes: 7,
+   144→   144→    tags: ["environment", "ocean", "plastic", "pollution"],
+   145→   145→    body: [
+   146→   146→      "世界[せかい]の海[うみ]は、毎年[まいとし]大量[たいりょう]のプラスチックごみによって汚染[おせん]されています。川[かわ]から流[なが]れ込[こ]んだごみが海[うみ]に集[あつ]まり、大[おお]きな環境問題[かんきょうもんだい]となっています。",
+   147→   147→      "プラスチックは便利[べんり]な素材[そざい]ですが、自然[しぜん]に分解[ぶんかい]されにくいという特徴[とくちょう]があります。そのため、一度[いちど]捨[す]てられると、何十年[なんじゅうねん]も海[うみ]に残[のこ]り続[つづ]けます。",
+   148→   148→      "さらに、波[なみ]や太陽[たいよう]の光[ひかり]によってプラスチックが細[こま]かく砕[くだ]かれ、マイクロプラスチックと呼[よ]ばれる小[ちい]さな粒[つぶ]になります。これが魚[さかな]や鳥[とり]の体内[たいない]に入[はい]り、生態系[せいたいけい]に悪影響[あくえいきょう]を及[およ]ぼしています。",
+   149→   149→      "最近[さいきん]の研究[けんきゅう]では、人間[にんげん]の血液[けつえき]からもマイクロプラスチックが検出[けんしゅつ]されたと報告[ほうこく]されています。海[うみ]の汚染[おせん]は、遠[とお]く離[はな]れた場所[ばしょ]に住[す]む人[ひと]たちにも影響[えいきょう]を与[あた]える可能性[かのうせい]があります。",
+   150→   150→      "解決[かいけつ]のためには、ごみを減[へ]らすだけでなく、再生可能[さいせいかのう]な素材[そざい]の開発[かいはつ]や、リサイクルの仕組[しく]みを整[ととの]えることが必要[ひつよう]です。また、一人[ひとり]一人[ひとり]が使[つか]い捨[す]てのプラスチックを減[へ]らす工夫[くふう]が求[もと]められています。",
+   151→   151→      "海[うみ]は地球[ちきゅう]の宝[たから]であり、未来[みらい]の世代[せだい]に残[のこ]すべき大切[たいせつ]な資源[しげん]です。今[いま]の私[わたし]たちの行動[こうどう]が、海[うみ]の未来[みらい]を決[き]めると言[い]っても過言[かげん]ではありません。"
+   152→   152→    ],
+   153→   153→    translation: [
+   154→   154→      "The world's oceans are polluted every year by massive amounts of plastic waste. Waste flowing in from rivers accumulates in the sea and has become a major environmental problem.",
+   155→   155→      "Plastic is a convenient material, but it has the characteristic of being difficult to decompose naturally. Therefore, once discarded, it can remain in the ocean for decades.",
+   156→   156→      "Furthermore, plastic is broken into small pieces by waves and sunlight, becoming tiny particles called microplastics. These enter the bodies of fish and birds, adversely affecting the ecosystem.",
+   157→   157→      "Recent studies report that microplastics have been detected even in human blood. Ocean pollution may affect people living in faraway places.",
+   158→   158→      "To solve this, it is necessary not only to reduce waste but also to develop renewable materials and to organize recycling systems. In addition, each individual is expected to make efforts to reduce single-use plastics.",
+   159→   159→      "The ocean is a treasure of the Earth and a precious resource to be left for future generations. It is no exaggeration to say that our current actions will determine the future of the ocean."
+   160→   160→    ],
+   161→   161→    questions: [
+   162→   162→      {
+   163→   163→        q: "海にごみが集まる主な経路は何ですか。",
+   164→   164→        choices: ["風で運ばれる", "川から流れ込む", "船から捨てられる", "鳥が運ぶ"],
+   165→   165→        answerIndex: 1,
+   166→   166→        explanation: "「川から流れ込んだごみが海に集まり」と書かれています。"
+   167→   167→      },
+   168→   168→      {
+   169→   169→        q: "プラスチックの特徴として本文で述べられているのは何ですか。",
+   170→   170→        choices: ["分解されやすい", "重い", "分解されにくい", "高価である"],
+   171→   171→        answerIndex: 2,
+   172→   172→        explanation: "「自然に分解されにくいという特徴がある」と述べられています。"
+   173→   173→      },
+   174→   174→      {
+   175→   175→        q: "マイクロプラスチックは何に悪影響を及ぼしていますか。",
+   176→   176→        choices: ["人間の皮膚", "魚や鳥の体内", "植物の成長", "空気の質"],
+   177→   177→        answerIndex: 1,
+   178→   178→        explanation: "「これが魚や鳥の体内に入り、生態系に悪影響を及ぼしている」と書かれています。"
+   179→   179→      },
+   180→   180→      {
+   181→   181→        q: "解決のために必要なこととして挙げられていないのは何ですか。",
+   182→   182→        choices: ["ごみを減らすこと", "再生可能な素材の開発", "リサイクルの仕組み", "プラスチックを燃やすこと"],
+   183→   183→        answerIndex: 3,
+   184→   184→        explanation: "本文には燃やすことは挙げられていません。減らす、再生可能素材の開発、リサイクルの仕組みが挙げられています。"
+   185→   185→      },
+   186→   186→      {
+   187→   187→        q: "本文の主張として最も近いのはどれですか。",
+   188→   188→        choices: ["海の汚染は遠くの人に影響しない", "今の行動が海の未来を決める", "プラスチックは全く問題ない", "リサイクルだけで解決する"],
+   189→   189→        answerIndex: 1,
+   190→   190→        explanation: "最後の段落で「今の私たちの行動が、海の未来を決めると言っても過言ではない」と述べています。"
+   191→   191→      }
+   192→   192→    ]
+   193→   193→  },
+   194→   194→
+   195→   195→  // ───────────────────────────────────────────────────────────
+   196→   196→  // r-n3-44 — Community design and town-building
+   197→   197→  // ───────────────────────────────────────────────────────────
+   198→   198→  {
+   199→   199→    id: "r-n3-44",
+   200→   200→    title: "コミュニティデザインと町作[まちづく]り",
+   201→   201→    titleReading: "コミュニティデザインとまちづくり",
+   202→   202→    level: "N3",
+   203→   203→    summary: "Community design is resident-led town-building that solves local issues through participation, intergenerational projects, and the design of relationships rather than mere space.",
+   204→   204→    estMinutes: 8,
+   205→   205→    tags: ["community", "design", "urban", "society"],
+   206→   206→    body: [
+   207→   207→      "「コミュニティデザイン」とは、住民[じゅうみん]が自[みずか]ら参加[さんか]して、地域[ちいき]の課題[かだい]を解決[かいけつ]するための町作[まちづく]りの考[かんが]え方[かた]です。専門家[せんもんか]だけではなく、そこに住[す]む人[ひと]たちが主役[しゅやく]となります。",
+   208→   208→      "日本[にほん]では、少子高齢化[しょうしこうれいか]により、地域[ちいき]のつながりが薄[うす]れる問題[もんだい]が深刻化[しんこくか]しています。昔[むかし]は近所同士[きんじょどうし]で助[たす]け合[あ]うのが当[あ]たり前[まえ]でしたが、今[いま]は隣人[りんじん]の顔[かお]を知[し]らない人[ひと]も少[すく]なくありません。",
+   209→   209→      "コミュニティデザインでは、空[あ]きスペースを公園[こうえん]やカフェに変[か]えたり、住民[じゅうみん]が集[あつ]まる場[ば]を作[つく]ったりすることがよく行[おこな]われます。こうした場所[ばしょ]は、人[ひと]たちの交流[こうりゅう]を生[う]み、新[あら]たな地域[ちいき]の活力[かつりょく]を生[う]み出[だ]します。",
+   210→   210→      "また、子[こ]どもからお年寄[としよ]りまで、異[こと]なる世代[せだい]が関[かか]わるプロジェクトも増[ふ]えています。例[たと]えば、小学生[しょうがくせい]が地域[ちいき]の歴史[れきし]を聞[き]き取[と]り、お年寄[としよ]りが語[かた]り部[べ]となる活動[かつどう]などが注目[ちゅうもく]されています。",
+   211→   211→      "成功[せいこう]する町作[まちづく]りには、時間[じかん]がかかります。しかし、住民[じゅうみん]が主体[しゅたい]となって取[と]り組[く]むことで、行政[ぎょうせい]だけではできない細[こま]やかな対応[たいおう]が可能[かのう]になります。",
+   212→   212→      "コミュニティデザインは、単[たん]なる空間[くうかん]の設計[せっけい]ではなく、人[ひと]と人[ひと]との関係[かんけい]を設計[せっけい]することだと言[い]えるでしょう。"
+   213→   213→    ],
+   214→   214→    translation: [
+   215→   215→      "\"Community design\" is an approach to town-building in which residents themselves participate to solve local issues. Not only experts but the people who live there take the leading role.",
+   216→   216→      "In Japan, the weakening of community ties due to the declining birthrate and aging population has become a serious problem. In the past, helping one another among neighbors was taken for granted, but nowadays there are not a few people who do not even know their neighbors' faces.",
+   217→   217→      "In community design, it is common to turn vacant spaces into parks or cafes, and to create places where residents can gather. Such places generate interaction among people and create new vitality in the community.",
+   218→   218→      "In addition, projects involving different generations, from children to the elderly, are increasing. For example, activities in which elementary school students interview locals about regional history and the elderly serve as storytellers are attracting attention.",
+   219→   219→      "Successful town-building takes time. However, when residents take the initiative, it enables detailed responses that administration alone cannot achieve.",
+   220→   220→      "Community design can be said to be not merely the design of space, but the design of relationships between people."
+   221→   221→    ],
+   222→   222→    questions: [
+   223→   223→      {
+   224→   224→        q: "コミュニティデザインの主役は誰ですか。",
+   225→   225→        choices: ["行政", "専門家", "住民", "企業"],
+   226→   226→        answerIndex: 2,
+   227→   227→        explanation: "「そこに住む人たちが主役となる」と書かれています。"
+   228→   228→      },
+   229→   229→      {
+   230→   230→        q: "日本で地域のつながりが薄れる原因は何ですか。",
+   231→   231→        choices: ["少子高齢化", "外国人の増加", "都市化だけ", "災害"],
+   232→   232→        answerIndex: 0,
+   233→   233→        explanation: "「少子高齢化により、地域のつながりが薄れる問題が深刻化している」と述べられています。"
+   234→   234→      },
+   235→   235→      {
+   236→   236→        q: "コミュニティデザインでよく行われることは何ですか。",
+   237→   237→        choices: ["大型ショッピングモールの建設", "空きスペースを公園やカフェに変えること", "高層ビルの建設", "道路の拡張"],
+   238→   238→        answerIndex: 1,
+   239→   239→        explanation: "「空きスペースを公園やカフェに変えたり、住民が集まる場を作ったりする」と書かれています。"
+   240→   240→      },
+   241→   241→      {
+   242→   242→        q: "異世代プロジェクトの例として挙げられているのは何ですか。",
+   243→   243→        choices: ["子どもがお年寄りから歴史を聞き取る活動", "企業が町を作る活動", "外国人を招待する活動", "スポーツ大会"],
+   244→   244→        answerIndex: 0,
+   245→   245→        explanation: "「小学生が地域の歴史を聞き取り、お年寄りが語り部となる活動」と例が挙げられています。"
+   246→   246→      },
+   247→   247→      {
+   248→   248→        q: "本文によると、コミュニティデザインとは何を設計することですか。",
+   249→   249→        choices: ["建物の形", "道路の配置", "人と人の関係", "公園の数"],
+   250→   250→        answerIndex: 2,
+   251→   251→        explanation: "最後の段落で「人と人との関係を設計することだ」と結んでいます。"
+   252→   252→      }
+   253→   253→    ]
+   254→   254→  },
+   255→   255→
+   256→   256→  // ───────────────────────────────────────────────────────────
+   257→   257→  // r-n3-45 — The aging workforce
+   258→   258→  // ───────────────────────────────────────────────────────────
+   259→   259→  {
+   260→   260→    id: "r-n3-45",
+   261→   261→    title: "高齢化[こうれいか]する労働市場[ろうどうしじょう]",
+   262→   262→    titleReading: "こうれいかするろうどうしじょう",
+   263→   263→    level: "N3",
+   264→   264→    summary: "As Japan ages, more seniors keep working past retirement for economic reasons; the government pushes employment up to age 70, while physical burden and intergenerational communication remain challenges.",
+   265→   265→    estMinutes: 7,
+   266→   266→    tags: ["aging", "workforce", "demographics", "economy"],
+   267→   267→    body: [
+   268→   268→      "日本[にほん]は世界[せかい]でも最[もっと]も高齢化[こうれいか]が進[すす]んでいる国[くに]のひとつであり、労働市場[ろうどうしじょう]にも大[おお]きな影響[えいきょう]を与[あた]えています。定年[ていねん]を迎[むか]えた後[のち]も働[はたら]き続[つづ]ける人[ひと]が毎年[まいとし]増[ふ]えています。",
+   269→   269→      "かつては、六十歳[ろくじゅっさい]で定年退職[ていねんたいしょく]し、静[しず]かな老後[ろうご]を送[おく]るのが一般的[いっぱんてき]でした。しかし、年金[ねんきん]だけでは生活[せいかつ]が難[むずか]しくなり、経済的[けいざいてき]な理由[りゆう]から働[はたら]き続[つづ]ける人[ひと]が多[おお]くなりました。",
+   270→   270→      "また、健康[けんこう]な高齢者[こうれいしゃ]が増[ふ]えたことにより、働[はたら]く意欲[いよく]のあるシニア層[そう]が拡大[かくだい]しています。彼[かれ]らの豊[ゆた]かな経験[けいけん]や知識[ちしき]は、企業[きぎょう]にとっても貴重[きちょう]な資源[しげん]となっています。",
+   271→   271→      "政府[せいふ]は、七十歳[しちじゅっさい]までの就業機会[しゅうぎょうきかい]を確保[かくほ]することを企業[きぎょう]に義務付[ぎむづ]けるなど、高齢者[こうれいしゃ]が働[はたら]きやすい環境[かんきょう]を作[つく]る政策[せいさく]を進[すす]めています。",
+   272→   272→      "一方[いっぽう]で、高齢者[こうれいしゃ]が働[はたら]く現場[げんば]では、体力的[たいりょくてき]な負担[ふたん]や、若[わか]い世代[せだい]とのコミュニケーションの課題[かだい]も指摘[してき]されています。働[はたら]き方[かた]を年齢[ねんれい]に合[あ]わせて柔軟[じゅうなん]に変[か]える工夫[くふう]が必要[ひつよう]です。",
+   273→   273→      "高齢化社会[こうれいかしゃかい]において、年齢[ねんれい]にかかわらず能力[のうりょく]を発揮[はっき]できる社会[しゃかい]を作[つく]ることが、日本[にほん]の重要[じゅうよう]な課題[かだい]となっています。"
+   274→   274→    ],
+   275→   275→    translation: [
+   276→   276→      "Japan is one of the most aging countries in the world, and this has a major impact on the labor market. The number of people who continue working after reaching retirement age is increasing every year.",
+   277→   277→      "In the past, it was common to retire at sixty and lead a quiet life in old age. However, as pensions alone have made life difficult, more people continue working for economic reasons.",
+   278→   278→      "In addition, as the number of healthy elderly people has increased, the senior group with the desire to work is expanding. Their rich experience and knowledge have become a valuable resource for companies as well.",
+   279→   279→      "The government is advancing policies to create an environment where elderly people can work easily, such as obliging companies to secure employment opportunities up to age seventy.",
+   280→   280→      "On the other hand, at workplaces where elderly people work, issues such as physical burden and communication with younger generations have also been pointed out. It is necessary to devise ways to flexibly change work styles according to age.",
+   281→   281→      "In an aging society, creating a society where people can demonstrate their abilities regardless of age has become an important challenge for Japan."
+   282→   282→    ],
+   283→   283→    questions: [
+   284→   284→      {
+   285→   285→        q: "日本の労働市場で起きている変化は何ですか。",
+   286→   286→        choices: ["若者が増えている", "定年後も働く人が増えている", "外国人が減っている", "失業率が高い"],
+   287→   287→        answerIndex: 1,
+   288→   288→        explanation: "「定年を迎えた後も働き続ける人が毎年増えている」と書かれています。"
+   289→   289→      },
+   290→   290→      {
+   291→   291→        q: "高齢者が働き続ける経済的な理由は何ですか。",
+   292→   292→        choices: ["年金だけで生活が難しいから", "働くのが好きだから", "子供に迷惑をかけたくないから", "健康だから"],
+   293→   293→        answerIndex: 0,
+   294→   294→        explanation: "「年金だけでは生活が難しくなり、経済的な理由から働き続ける人が多くなった」と述べられています。"
+   295→   295→      },
+   296→   296→      {
+   297→   297→        q: "高齢者の経験や知識は企業にとって何ですか。",
+   298→   298→        choices: ["負担", "貴重な資源", "不要なもの", "競争相手"],
+   299→   299→        answerIndex: 1,
+   300→   300→        explanation: "「彼らの豊かな経験や知識は、企業にとっても貴重な資源となっている」と書かれています。"
+   301→   301→      },
+   302→   302→      {
+   303→   303→        q: "政府の政策として述べられているのは何ですか。",
+   304→   304→        choices: ["定年を早めること", "七十歳までの就業機会を確保すること", "高齢者を雇わないこと", "年金を減らすこと"],
+   305→   305→        answerIndex: 1,
+   306→   306→        explanation: "「七十歳までの就業機会を確保することを企業に義務付けるなど」と述べられています。"
+   307→   307→      },
+   308→   308→      {
+   309→   309→        q: "高齢者が働く現場の課題として挙げられていないのは何ですか。",
+   310→   310→        choices: ["体力的な負担", "若い世代とのコミュニケーション", "給料が高すぎる", "柔軟な働き方の必要性"],
+   311→   311→        answerIndex: 2,
+   312→   312→        explanation: "本文には体力的な負担、若い世代とのコミュニケーション、柔軟な働き方の必要性が挙げられており、給料が高すぎることは挙げられていません。"
+   313→   313→      }
+   314→   314→    ]
+   315→   315→  },
+   316→   316→
+   317→   317→  // ───────────────────────────────────────────────────────────
+   318→   318→  // r-n3-46 — Intangible cultural heritage preservation
+   319→   319→  // ───────────────────────────────────────────────────────────
+   320→   320→  {
+   321→   321→    id: "r-n3-46",
+   322→   322→    title: "無形文化遺産[むけいぶんかいさん]の保存[ほぞん]",
+   323→   323→    titleReading: "むけいぶんかいさんのほぞん",
+   324→   324→    level: "N3",
+   325→   325→    summary: "UNESCO intangible cultural heritage such as washoku, kabuki, and traditional crafts is passed person to person; successor shortages threaten it, so preservation must also let culture evolve.",
+   326→   326→    estMinutes: 8,
+   327→   327→    tags: ["heritage", "culture", "unesco", "tradition"],
+   328→   328→    body: [
+   329→   329→      "ユネスコの無形文化遺産[むけいぶんかいさん]には、和食[わしょく]や歌舞伎[かぶき]、伝統工芸[でんとうこうげい]など、日本[にほん]の文化[ぶんか]が多[おお]く登録[とうろく]されています。これらは、建物[たてもの]のような目[め]に見[み]える遺産[いさん]ではなく、人[ひと]たちの技[わざ]や習慣[しゅうかん]そのものを守[まも]るものです。",
+   330→   330→      "無形文化遺産[むけいぶんかいさん]の最大[さいだい]の特徴[とくちょう]は、それが人[ひと]から人[ひと]へと伝[つた]えられるものであることです。道具[どうぐ]や建物[たてもの]は残[のこ]せても、技[わざ]を守[まも]る人[ひと]がいなければ、文化[ぶんか]は消[き]えてしまいます。",
+   331→   331→      "しかし、後継者不足[こうけいしゃぶそく]が深刻[しんこく]な問題[もんだい]となっています。例[たと]えば、伝統工芸[でんとうこうげい]の職人[しょくにん]は減[へ]り続[つづ]け、技術[ぎじゅつ]の継承[けいしょう]が難[むずか]しくなっています。若者[わかもの]が都会[とかい]に流出[りゅうしゅつ]し、地方[ちほう]の伝統[でんとう]が途絶[とた]える危機[きき]にあります。",
+   332→   332→      "保存活動[ほぞんかつどう]では、学校[がっこう]での体験授業[たいけんじゅぎょう]や、職人[しょくにん]と若者[わかもの]のマッチングなどが行[おこな]われています。また、デジタル技術[ぎじゅつ]を活用[かつよう]し、技[わざ]の過程[かてい]を記録[きろく]する取[と]り組[く]みも進[すす]んでいます。",
+   333→   333→      "一方[いっぽう]で、文化[ぶんか]を守[まも]るだけでなく、現代[げんだい]の生活[せいかつ]に合[あ]わせて工夫[くふう]することも大切[たいせつ]です。例[たと]えば、和食[わしょく]を日常[にちじょう]の食事[しょくじ]として楽[たの]しみやすくする提案[ていあん]などが進[すす]んでいます。",
+   334→   334→      "無形文化遺産[むけいぶんかいさん]は、過去[かこ]の遺物[いぶつ]ではなく、生[い]きた文化[ぶんか]です。次[つぎ]の世代[せだい]に引[ひ]き継[つ]ぐためには、守[まも]るだけでなく、進化[しんか]させることも求[もと]められています。"
+   335→   335→    ],
+   336→   336→    translation: [
+   337→   337→      "Many aspects of Japanese culture, such as washoku, kabuki, and traditional crafts, are registered in UNESCO's Intangible Cultural Heritage. These are not visible heritage like buildings, but protect the skills and customs of the people themselves.",
+   338→   338→      "The greatest characteristic of intangible cultural heritage is that it is something passed from person to person. Even if tools and buildings can be preserved, if there is no one to maintain the skills, the culture will disappear.",
+   339→   339→      "However, the shortage of successors has become a serious problem. For example, craftsmen of traditional crafts continue to decrease, making it difficult to pass on techniques. Young people flow into the cities, and local traditions are in danger of dying out.",
+   340→   340→      "In preservation activities, experience classes in schools and matching between craftsmen and young people are being conducted. In addition, efforts to record the process of skills using digital technology are advancing.",
+   341→   341→      "On the other hand, it is also important not only to protect culture but to adapt it to modern life. For example, proposals to make washoku easier to enjoy as an everyday meal are progressing.",
+   342→   342→      "Intangible cultural heritage is not a relic of the past, but a living culture. To pass it on to the next generation, it is required not only to preserve it but also to let it evolve."
+   343→   343→    ],
+   344→   344→    questions: [
+   345→   345→      {
+   346→   346→        q: "無形文化遺産の最大の特徴は何ですか。",
+   347→   347→        choices: ["目に見える建物であること", "人から人へ伝えられるものであること", "古い時代のものであること", "金持ちが所有するもの"],
+   348→   348→        answerIndex: 1,
+   349→   349→        explanation: "「それが人から人へと伝えられるものであること」と最大の特徴として述べられています。"
+   350→   350→      },
+   351→   351→      {
+   352→   352→        q: "無形文化遺産が消えてしまう条件は何ですか。",
+   353→   353→        choices: ["建物が古くなった時", "技を守る人がいなくなった時", "ユネスコが認定を取り消した時", "観光客が減った時"],
+   354→   354→        answerIndex: 1,
+   355→   355→        explanation: "「技を守る人がいなければ、文化は消えてしまう」と書かれています。"
+   356→   356→      },
+   357→   357→      {
+   358→   358→        q: "伝統工芸の職人にとっての問題は何ですか。",
+   359→   359→        choices: ["給料が高い", "後継者不足", "仕事が多すぎる", "海外競争"],
+   360→   360→        answerIndex: 1,
+   361→   361→        explanation: "「後継者不足が深刻な問題となっている」と述べられています。"
+   362→   362→      },
+   363→   363→      {
+   364→   364→        q: "デジタル技術は保存活動でどのように使われていますか。",
+   365→   365→        choices: ["新しい遺産を作るため", "技の過程を記録するため", "観光客を集めるため", "ユネスコに申請するため"],
+   366→   366→        answerIndex: 1,
+   367→   367→        explanation: "「デジタル技術を活用し、技の過程を記録する取り組みも進んでいる」と書かれています。"
+   368→   368→      },
+   369→   369→      {
+   370→   370→        q: "本文の主張として最も近いのはどれですか。",
+   371→   371→        choices: ["文化は守るだけで十分だ", "文化は守るだけでなく進化させる必要がある", "文化は現代生活に合わせるべきでない", "文化は過去の遺物である"],
+   372→   372→        answerIndex: 1,
+   373→   373→        explanation: "最後の段落で「守るだけでなく、進化させることも求められている」と述べています。"
+   374→   374→      }
+   375→   375→    ]
+   376→   376→  },
+   377→   377→
+   378→   378→  // ───────────────────────────────────────────────────────────
+   379→   379→  // r-n3-47 — Digital divide and information gap
+   380→   380→  // ───────────────────────────────────────────────────────────
+   381→   381→  {
+   382→   382→    id: "r-n3-47",
+   383→   383→    title: "デジタルディバイドと情報格差[じょうほうかくさ]",
+   384→   384→    titleReading: "デジタルディバイドとじょうほうかくさ",
+   385→   385→    level: "N3",
+   386→   386→    summary: "The digital divide separates those who can and cannot use digital devices, hitting the elderly, rural areas, and low-income families; digital education, infrastructure, and inclusive design are essential.",
+   387→   387→    estMinutes: 7,
+   388→   388→    tags: ["digital", "divide", "inequality", "technology"],
+   389→   389→    body: [
+   390→   390→      "「デジタルディバイド」とは、インターネットやデジタル機器[きき]を使[つか]える人[ひと]と使[つか]えない人[ひと]の間[あいだ]に生[う]まれる格差[かくさ]のことです。現代社会[げんだいしゃかい]では、情報[じょうほう]へのアクセスが生活[せいかつ]の質[しつ]に直結[ちょっけつ]しています。",
+   391→   391→      "例[たと]えば、オンライン予約[よやく]やオンラインショップが当[あ]たり前[まえ]になった今[いま]、スマートフォンを使[つか]いこなせない人[ひと]は、サービスを利用[りよう]するだけで大[おお]きな労力[ろうりょく]を要[よう]します。",
+   392→   392→      "特[とく]に高齢者[こうれいしゃ]にこの問題[もんだい]が顕著[けんちょ]です。役所[やくしょ]の手続[てつづ]きがオンライン化[か]され、窓口[まどぐち]の数[かず]が減[へ]ると、デジタルに不慣[ふな]れな人[ひと]は大[おお]きな不便[ふべん]を感[かん]じることになります。",
+   393→   393→      "また、地域間[ちいかん]の格差[かくさ]もあります。都市部[としぶ]は高速[こうそく]なインターネット環境[かんきょう]が整[ととの]っていますが、山間部[さんかんぶ]や離島[りとう]では、通信環境[つうしんかんきょう]が不十分[ふじゅうぶん]な場所[ばしょ]がまだ残[のこ]っています。",
+   394→   394→      "教育面[きょういくめん]でも影響[えいきょう]があります。家庭[かてい]にパソコンがない子[こ]どもは、学校[がっこう]の宿題[しゅくだい]や調[しら]べ学習[がくしゅう]で不利[ふり]になり、学力格差[がくりょくかくさ]につながることが指摘[してき]されています。",
+   395→   395→      "解決[かいけつ]には、デジタル教育[きょういく]の充実[じゅうじつ]と、通信環境[つうしんかんきょう]の整備[せいび]が不可欠[ふかけつ]です。また、誰[だれ]もが使[つか]いやすい設計[せっけい]を心[こころ]がけることも、格差[かくさ]を広[ひろ]げないために大切[たいせつ]です。"
+   396→   396→    ],
+   397→   397→    translation: [
+   398→   398→      "\"Digital divide\" refers to the gap that arises between those who can use the internet and digital devices and those who cannot. In modern society, access to information is directly linked to the quality of life.",
+   399→   399→      "For example, now that online reservations and online shops have become commonplace, people who cannot master smartphones require significant effort just to use services.",
+   400→   400→      "This problem is particularly notable among the elderly. When government procedures are moved online and the number of service counters decreases, people unfamiliar with digital tools feel great inconvenience.",
+   401→   401→      "There is also a gap between regions. Urban areas are equipped with high-speed internet environments, but in mountainous areas and remote islands, there are still places with insufficient communication environments.",
+   402→   402→      "It also has an impact on education. Children without a computer at home are disadvantaged in school homework and research learning, which is pointed out to lead to an academic achievement gap.",
+   403→   403→      "To solve this, enhancing digital education and developing communication infrastructure are indispensable. In addition, keeping in mind designs that everyone can use easily is also important to prevent widening the gap."
+   404→   404→    ],
+   405→   405→    questions: [
+   406→   406→      {
+   407→   407→        q: "デジタルディバイドとは何ですか。",
+   408→   408→        choices: ["貧富の差", "デジタル機器を使える人と使えない人の格差", "都市と地方の人口差", "年齢の差"],
+   409→   409→        answerIndex: 1,
+   410→   410→        explanation: "「デジタル機器を使える人と使えない人の間に生まれる格差」と定義されています。"
+   411→   411→      },
+   412→   412→      {
+   413→   413→        q: "スマートフォンを使いこなせない人は何に直面しますか。",
+   414→   414→        choices: ["高い通信費", "サービス利用の労力", "仕事の減少", "健康問題"],
+   415→   415→        answerIndex: 1,
+   416→   416→        explanation: "「サービスを利用するだけで大きな労力を要する」と書かれています。"
+   417→   417→      },
+   418→   418→      {
+   419→   419→        q: "デジタルディバイドが特に顕著なのは誰ですか。",
+   420→   420→        choices: ["若者", "高齢者", "外国人", "子ども"],
+   421→   421→        answerIndex: 1,
+   422→   422→        explanation: "「特に高齢者にこの問題が顕著です」と述べられています。"
+   423→   423→      },
+   424→   424→      {
+   425→   425→        q: "教育面での影響は何ですか。",
+   426→   426→        choices: ["学校が減ること", "学力格差につながること", "先生が不足すること", "授業料が上がること"],
+   427→   427→        answerIndex: 1,
+   428→   428→        explanation: "「学力格差につながることが指摘されている」と書かれています。"
+   429→   429→      },
+   430→   430→      {
+   431→   431→        q: "解決に不可欠なものとして挙げられていないのは何ですか。",
+   432→   432→        choices: ["デジタル教育の充実", "通信環境の整備", "使いやすい設計", "高齢者の減少"],
+   433→   433→        answerIndex: 3,
+   434→   434→        explanation: "本文にはデジタル教育の充実、通信環境の整備、使いやすい設計が挙げられており、高齢者の減少は挙げられていません。"
+   435→   435→      }
+   436→   436→    ]
+   437→   437→  },
+   438→   438→
+   439→   439→  // ───────────────────────────────────────────────────────────
+   440→   440→  // r-n3-48 — Rural depopulation
+   441→   441→  // ───────────────────────────────────────────────────────────
+   442→   442→  {
+   443→   443→    id: "r-n3-48",
+   444→   444→    title: "過疎化[かそか]が進[すす]む地方[ちほう]",
+   445→   445→    titleReading: "かそかがすすむちほう",
+   446→   446→    level: "N3",
+   447→   447→    summary: "Rural depopulation reduces shops, hospitals, and transport, isolating the elderly; yet some regions recruit migrants, use telework, and revive vacant houses and closed schools for new vitality.",
+   448→   448→    estMinutes: 8,
+   449→   449→    tags: ["rural", "depopulation", "demographics", "society"],
+   450→   450→    body: [
+   451→   451→      "日本[にほん]の地方[ちほう]では、人口[じんこう]が減[へ]り続[つづ]ける「過疎化[かそか]」が深刻[しんこく]な問題[もんだい]となっています。若者[わかもの]が都会[とかい]に移[うつ]り住[す]み、高齢化[こうれいか]と人口減少[じんこうげんしょう]が同時[どうじ]に進行[しんこう]しています。",
+   452→   452→      "過疎化[かそか]の影響[えいきょう]は生活[せいかつ]のあらゆる面[めん]に及[およ]びます。商店[しょうてん]が閉[し]まり、病院[びょういん]や学校[がっこう]が統廃合[とうはいごう]され、住民[じゅうみん]の生活利便性[せいかつりべんせい]が大[おお]きく低下[ていか]します。",
+   453→   453→      "特[とく]に交通手段[こうつうしゅだん]の減少[げんしょう]は深刻[しんこく]です。公共交通[こうきょうこうつう]が縮小[しゅくしょう]されると、車[くるま]の運転[うんてん]ができない高齢者[こうれいしゃ]の移動[いどう]が制限[せいげん]され、通院[つういん]や買[か]い物[もの]すら難[むずか]しくなります。",
+   454→   454→      "一方[いっぽう]で、過疎化[かそか]を逆手[ぎゃくて]に取[と]り、新[あら]たな挑戦[ちょうせん]をする地域[ちいき]もあります。移住者[いじゅうしゃ]を募集[ぼしゅう]し、テレワークを活用[かつよう]して都会[とかい]から人[ひと]を呼[よ]び寄[よ]せる動[うご]きが活発化[かっぱつか]しています。",
+   455→   455→      "また、空[あ]き家[や]を改修[かいしゅう]してシェアハウスにしたり、廃校[はいこう]をカフェや工房[こうぼう]に再生[さいせい]したりする取[と]り組[く]みも広[ひろ]がっています。こうした活動[かつどう]は、地域[ちいき]に新[あら]たな活力[かつりょく]をもたらします。",
+   456→   456→      "過疎化[かそか]の問題[もんだい]に特効薬[とっこうやく]はありません。しかし、地域[ちいき]の特性[とくせい]を活[いか]し、住民[じゅうみん]と移住者[いじゅうしゃ]が協力[きょうりょく]することで、持続可能[じぞくかのう]な地域[ちいき]を作[つく]る道[みち]が模索[もさく]されています。"
+   457→   457→    ],
+   458→   458→    translation: [
+   459→   459→      "In rural Japan, \"depopulation,\" in which the population continues to decline, has become a serious problem. Young people move to the cities, and aging and population decline proceed simultaneously.",
+   460→   460→      "The impact of depopulation extends to all aspects of life. Shops close, hospitals and schools are consolidated or closed, and residents' living convenience decreases greatly.",
+   461→   461→      "The decline in transportation means is particularly serious. When public transportation is reduced, the movement of elderly people who cannot drive is restricted, making even hospital visits and shopping difficult.",
+   462→   462→      "On the other hand, some regions take depopulation as an opportunity and take on new challenges. Movements to recruit migrants and use telework to attract people from the cities are becoming active.",
+   463→   463→      "In addition, efforts such as renovating vacant houses into share houses and converting closed schools into cafes and workshops are spreading. Such activities bring new vitality to the community.",
+   464→   464→      "There is no miracle cure for the depopulation problem. However, by making use of regional characteristics and having residents and migrants cooperate, the path to creating a sustainable community is being explored."
+   465→   465→    ],
+   466→   466→    questions: [
+   467→   467→      {
+   468→   468→        q: "過疎化の原因として本文で述べられているのは何ですか。",
+   469→   469→        choices: ["若者が都会に移ること", "出生率が上がること", "外国人が増えること", "災害が多いこと"],
+   470→   470→        answerIndex: 0,
+   471→   471→        explanation: "「若者が都会に移り住み」と原因として書かれています。"
+   472→   472→      },
+   473→   473→      {
+   474→   474→        q: "過疎化の影響として挙げられていないのは何ですか。",
+   475→   475→        choices: ["商店が閉まること", "病院の統廃合", "学校の統廃合", "都会の人口減少"],
+   476→   476→        answerIndex: 3,
+   477→   477→        explanation: "本文は地方での商店の閉鎖、病院や学校の統廃合を挙げており、都会の人口減少は挙げていません。"
+   478→   478→      },
+   479→   479→      {
+   480→   480→        q: "公共交通が縮小されると誰が困りますか。",
+   481→   481→        choices: ["若者", "車の運転ができない高齢者", "観光客", "学生"],
+   482→   482→        answerIndex: 1,
+   483→   483→        explanation: "「車の運転ができない高齢者の移動が制限され」と書かれています。"
+   484→   484→      },
+   485→   485→      {
+   486→   486→        q: "過疎化を逆手に取った取り組みは何ですか。",
+   487→   487→        choices: ["商店を閉めること", "移住者を募集しテレワークで人を呼ぶこと", "学校を増やすこと", "病院を統合すること"],
+   488→   488→        answerIndex: 1,
+   489→   489→        explanation: "「移住者を募集し、テレワークを活用して都会から人を呼び寄せる動き」と述べられています。"
+   490→   490→      },
+   491→   491→      {
+   492→   492→        q: "本文によると、過疎化問題に特効薬はありますか。",
+   493→   493→        choices: ["ある", "ない", "若者次第", "行政次第"],
+   494→   494→        answerIndex: 1,
+   495→   495→        explanation: "「過疎化の問題に特効薬はない」と明記されています。"
+   496→   496→      }
+   497→   497→    ]
+   498→   498→  },
+   499→   499→
+   500→   500→  // ───────────────────────────────────────────────────────────
+   501→   501→  // r-n3-49 — Lifelong learning
+   502→   502→  // ───────────────────────────────────────────────────────────
+   503→   503→  {
+   504→   504→    id: "r-n3-49",
+   505→   505→    title: "生涯学習[しょうがいがくしゅう]の意義[いぎ]",
+   506→   506→    titleReading: "しょうがいがくしゅうのいぎ",
+   507→   507→    level: "N3",
+   508→   508→    summary: "Lifelong learning means studying throughout life, including reskilling for changing jobs, enriching hobbies and post-retirement purpose; clear goals and steady effort make it a key habit for the new era.",
+   509→   509→    estMinutes: 6,
+   510→   510→    tags: ["education", "lifelong", "learning", "skills"],
+   511→   511→    body: [
+   512→   512→      "「生涯学習[しょうがいがくしゅう]」とは、学校[がっこう]を卒業[そつぎょう]した後[のち]も、一生[いっしょう]を通[とお]じて学[まな]び続[つづ]けることです。現代[げんだい]は変化[へんか]が激[はげ]しく、一度[いちど]学[まな]んだ知識[ちしき]では対応[たいおう]できない場面[ばめん]が増[ふ]えています。",
+   513→   513→      "技術[ぎじゅつ]の進歩[しんぽ]により、新[あたら]しい仕事[しごと]が生[う]まれる一方[いっぽう]で、古[ふる]い仕事[しごと]が消[き]えていきます。そのため、新[あたら]しいスキルを身[み]につけ直[なお]す「リスキリング」という言葉[ことば]が注目[ちゅうもく]されています。",
+   514→   514→      "生涯学習[しょうがいがくしゅう]は、仕事[しごと]のためだけではありません。趣味[しゅみ]や教養[きょうよう]を深[ふか]めることで、人生[じんせい]の豊[ゆた]かさが増[ま]します。定年後[ていねんご]の生[い]きがいを見[み]つけるきっかけにもなります。",
+   515→   515→      "最近[さいきん]では、オンライン講座[こうざ]が普及[ふきゅう]し、いつでもどこでも学[まな]べる環境[かんきょう]が整[ととの]いました。また、地域[ちいき]の公民館[こうみんかん]や大学[だいがく]でも、一般[いっぱん]向[む]けの講座[こうざ]が多[おお]く開[ひら]かれています。",
+   516→   516→      "一方[いっぽう]で、忙[いそが]しい中[なか]で学[まな]ぶ時間[じかん]を確保[かくほ]するのは簡単[かんたん]ではありません。継続[けいぞく]するためには、目標[もくひょう]を明確[めいかく]にし、少[すこ]しずつ進[すす]める工夫[くふう]が大切[たいせつ]です。",
+   517→   517→      "学[まな]ぶことは、年齢[ねんれい]に関係[かんけい]なく、心[こころ]を柔軟[じゅうなん]に保[たも]ち、社会[しゃかい]の変化[へんか]に対応[たいおう]する力[ちから]を養[やしな]います。生涯学習[しょうがいがくしゅう]は、これからの時代[じだい]を生[い]きるための大切[たいせつ]な習慣[しゅうかん]だと言[い]えるでしょう。"
+   518→   518→    ],
+   519→   519→    translation: [
+   520→   520→      "\"Lifelong learning\" means continuing to learn throughout one's life even after graduating from school. Modern times change rapidly, and there are increasing situations that cannot be handled with knowledge learned only once.",
+   521→   521→      "With advances in technology, new jobs are created while old jobs disappear. Therefore, the term \"reskilling,\" which means reacquiring new skills, is attracting attention.",
+   522→   522→      "Lifelong learning is not only for work. By deepening hobbies and cultural refinement, the richness of life increases. It can also be an opportunity to find purpose in life after retirement.",
+   523→   523→      "Recently, online courses have spread, and an environment where one can learn anytime and anywhere has been prepared. In addition, many courses for the general public are offered at local community centers and universities.",
+   524→   524→      "On the other hand, it is not easy to secure time to study while busy. To continue, it is important to clarify goals and make efforts to proceed little by little.",
+   525→   525→      "Learning, regardless of age, keeps the mind flexible and cultivates the ability to respond to social change. Lifelong learning can be said to be an important habit for living in the coming era."
+   526→   526→    ],
+   527→   527→    questions: [
+   528→   528→      {
+   529→   529→        q: "生涯学習とは何ですか。",
+   530→   530→        choices: ["学校で学ぶこと", "卒業後も一生学び続けること", "仕事のためだけの学習", "子供向けの学習"],
+   531→   531→        answerIndex: 1,
+   532→   532→        explanation: "「学校を卒業した後も、一生を通じて学び続けること」と定義されています。"
+   533→   533→      },
+   534→   534→      {
+   535→   535→        q: "リスキリングとは何ですか。",
+   536→   536→        choices: ["古い知識を忘れること", "新しいスキルを身につけ直すこと", "学校に戻ること", "趣味を楽しむこと"],
+   537→   537→        answerIndex: 1,
+   538→   538→        explanation: "「新しいスキルを身につけ直す『リスキリング』」と説明されています。"
+   539→   539→      },
+   540→   540→      {
+   541→   541→        q: "生涯学習は仕事のためだけですか。",
+   542→   542→        choices: ["はい", "いいえ", "定年後だけ", "学生だけ"],
+   543→   543→        answerIndex: 1,
+   544→   544→        explanation: "「生涯学習は、仕事のためだけではありません」と明記されています。"
+   545→   545→      },
+   546→   546→      {
+   547→   547→        q: "最近普及した学習環境は何ですか。",
+   548→   548→        choices: ["夜間学校", "オンライン講座", "専門学校", "留学"],
+   549→   549→        answerIndex: 1,
+   550→   550→        explanation: "「オンライン講座が普及し」と書かれています。"
+   551→   551→      },
+   552→   552→      {
+   553→   553→        q: "継続するために大切なことは何ですか。",
+   554→   554→        choices: ["たくさんのお金", "目標を明確にし少しずつ進めること", "強い意志だけ", "友達を作ること"],
+   555→   555→        answerIndex: 1,
+   556→   556→        explanation: "「目標を明確にし、少しずつ進める工夫が大切」と述べられています。"
+   557→   557→      }
+   558→   558→    ]
+   559→   559→  },
+   560→   560→
+   561→   561→  // ───────────────────────────────────────────────────────────
+   562→   562→  // r-n3-50 — Ethical consumption
+   563→   563→  // ───────────────────────────────────────────────────────────
+   564→   564→  {
+   565→   565→    id: "r-n3-50",
+   566→   566→    title: "エシカル消費[しょうひ]とは何[なに]か",
+   567→   567→    titleReading: "エシカルしょうひとはなにか",
+   568→   568→    level: "N3",
+   569→   569→    summary: "Ethical consumption means choosing products that consider environment and society; despite higher prices and commercial misuse of the term, small conscious choices can improve society as a whole.",
+   570→   570→    estMinutes: 7,
+   571→   571→    tags: ["ethical", "consumption", "environment", "shopping"],
+   572→   572→    body: [
+   573→   573→      "「エシカル消費[しょうひ]」とは、環境[かんきょう]や社会[しゃかい]に配慮[はいりょ]した商品[しょうひん]を選[えら]んで買[か]うことを指[さ]します。安[やす]さや便利[べんり]さだけでなく、作[つく]られる過程[かてい]や影響[えいきょう]を考[かんが]える消費[しょうひ]のあり方[かた]です。",
+   574→   574→      "例[たと]えば、環境[かんきょう]に負荷[ふか]を与[あた]えない再生品[さいせいひん]や、公正[こうせい]な労働環境[ろうどうかんきょう]で作[つく]られた商品[しょうひん]を選[えら]ぶことがエシカル消費[しょうひ]の一例[いちれい]です。これにより、消費者[しょうひしゃ]が社会[しゃかい]を良[よ]くする力[ちから]を持[も]つことができます。",
+   575→   575→      "近年[きんねん]、若者[わかもの]を中心[ちゅうしん]にエシカル消費[しょうひ]への関心[かんしん]が高[たか]まっています。フードロスを減[へ]らすアプリや、プラスチックを使[つか]わない商品[しょうひん]が人気[にんき]を集[あつ]めています。",
+   576→   576→      "しかし、エシカルな商品[しょうひん]は、生産過程[せいさんかてい]に配慮[はいりょ]がある分[ぶん]、値段[ねだん]が高[たか]くなりがちです。そのため、すべての商品[しょうひん]をエシカルなものに変[か]えるのは現実的[げんじつてき]ではありません。",
+   577→   577→      "また、「エシカル」という言葉[ことば]が商業的[しょうぎょうてき]に使[つか]われ、実態[じったい]とかけ離[はな]れた商品[しょうひん]もあると指摘[してき]されています。消費者[しょうひしゃ]が正[ただ]しい情報[じょうほう]を見極[みきわ]める目[め]を持[も]つことも求[もと]められます。",
+   578→   578→      "エシカル消費[しょうひ]は、完璧[かんぺき]な正解[せいかい]があるものではありません。しかし、一人[ひとり]一人[ひとり]が少[すこ]しずつ意識[いしき]を持[も]ち、選択[せんたく]を変[か]えることで、社会全体[しゃかいぜんたい]をより良[よ]くする大[おお]きな力[ちから]になると言[い]えるでしょう。"
+   579→   579→    ],
+   580→   580→    translation: [
+   581→   581→      "\"Ethical consumption\" refers to choosing and buying products that consider the environment and society. It is a way of consuming that considers not only cheapness and convenience but also the production process and impact.",
+   582→   582→      "For example, choosing recycled products that do not burden the environment or products made under fair labor conditions is one example of ethical consumption. Through this, consumers can have the power to make society better.",
+   583→   583→      "In recent years, interest in ethical consumption has been growing, especially among young people. Apps that reduce food waste and products that do not use plastic are gaining popularity.",
+   584→   584→      "However, ethical products tend to be more expensive because of the consideration given to the production process. Therefore, it is not realistic to change all products to ethical ones.",
+   585→   585→      "In addition, it has been pointed out that the word \"ethical\" is sometimes used commercially, and some products are far from the reality. Consumers are also required to have the eye to discern correct information.",
+   586→   586→      "Ethical consumption does not have a perfect answer. However, it can be said that each person becoming a little more conscious and changing their choices can become a great power to improve society as a whole."
+   587→   587→    ],
+   588→   588→    questions: [
+   589→   589→      {
+   590→   590→        q: "エシカル消費とは何ですか。",
+   591→   591→        choices: ["環境や社会に配慮した商品を選んで買うこと", "一番安い商品を買うこと", "人気のある商品を買うこと", "便利な商品だけを買うこと"],
+   592→   592→        answerIndex: 0,
+   593→   593→        explanation: "「環境や社会に配慮した商品を選んで買うことを指す」と定義されています。"
+   594→   594→      },
+   595→   595→      {
+   596→   596→        q: "エシカル消費の例として挙げられているのは何ですか。",
+   597→   597→        choices: ["一番安い商品", "再生品や公正な労働環境で作られた商品", "人気のある商品", "輸入品"],
+   598→   598→        answerIndex: 1,
+   599→   599→        explanation: "「再生品や、公正な労働環境で作られた商品を選ぶこと」が一例として挙げられています。"
+   600→   600→      },
+   601→   601→      {
+   602→   602→        q: "エシカルな商品の課題は何ですか。",
+   603→   603→        choices: ["品質が悪い", "値段が高くなりがち", "種類が少ない", "人気がない"],
+   604→   604→        answerIndex: 1,
+   605→   605→        explanation: "「生産過程に配慮がある分、値段が高くなりがち」と書かれています。"
+   606→   606→      },
+   607→   607→      {
+   608→   608→        q: "消費者に求められることは何ですか。",
+   609→   609→        choices: ["正しい情報を見極める目を持つこと", "すべてエシカルな商品を買うこと", "高い商品を買うこと", "商品を買わないこと"],
+   610→   610→        answerIndex: 0,
+   611→   611→        explanation: "「正しい情報を見極める目を持つことも求められる」と述べられています。"
+   612→   612→      },
+   613→   613→      {
+   614→   614→        q: "本文の主張として最も近いのはどれですか。",
+   615→   615→        choices: ["エシカル消費には完璧な正解がある", "一人が少しずつ意識を持つことで社会を良くできる", "エシカル商品は必ず買うべきだ", "エシカルという言葉は信じられない"],
+   616→   616→        answerIndex: 1,
+   617→   617→        explanation: "最後の段落で「一人一人が少しずつ意識を持ち、選択を変えることで、社会全体をより良くする大きな力になる」と述べています。"
+   618→   618→      }
+   619→   619→    ]
+   620→   620→  }
+   621→   621→];
+   622→   622→

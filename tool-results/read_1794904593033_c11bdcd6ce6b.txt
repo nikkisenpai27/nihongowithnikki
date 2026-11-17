@@ -1,0 +1,550 @@
+    50→        answerIndex: 0,
+    51→        explanation: "On the way back the writer took a train through the Seikan Tunnel (青函トンネル)."
+    52→      },
+    53→      {
+    54→        q: "What did the writer do at the small station?",
+    55→        choices: ["Bought a ticket", "Bought an ekiben", "Took a photo of the sea", "Met a friend"],
+    56→        answerIndex: 1,
+    57→        explanation: "At a small station the writer bought an ekiben (駅弁を買いました)."
+    58→      },
+    59→      {
+    60→        q: "What is the writer planning for next year?",
+    61→        choices: ["A trip around Kyushu", "A return trip to Hokkaido", "A trip to Tokyo", "A trip abroad"],
+    62→        answerIndex: 0,
+    63→        explanation: "Next year the writer plans a trip around Kyushu (九州を回る旅)."
+    64→      }
+    65→    ]
+    66→  },
+    67→
+    68→  // ───────────────────────────────────────────────────────────
+    69→  // r-n4-32 — 日本の礼儀と作法 (Japanese customs and etiquette)
+    70→  // ───────────────────────────────────────────────────────────
+    71→  {
+    72→    id: "r-n4-32",
+    73→    title: "日本[にほん]の礼儀[れいぎ]と作法[さほう]",
+    74→    titleReading: "にほんのれいぎとさほう",
+    75→    level: "N4",
+    76→    summary: "A foreign resident shares the Japanese customs and etiquette they have come to appreciate.",
+    77→    estMinutes: 6,
+    78→    tags: ["culture", "etiquette", "customs"],
+    79→    body: [
+    80→      "私[わたし]は外国[がいこく]から日本[にほん]に来[き]て、もう三年[さんねん]になります。日本[にほん]に来[く]る前[まえ]は、礼儀[れいぎ]正[ただ]しい文化[ぶんか]だと思[おも]っていました。実際[じっさい]に暮[く]らしてみると、その理由[りゆう]が分[わ]かりました。日常[にちじょう]の中[なか]に、相手[あいて]を気遣[づか]う習慣[しゅうかん]がたくさんあるからです。",
+    81→      "まず、挨拶[あいさつ]の文化[ぶんか]です。朝[あさ]に「おはようございます」と言[い]うだけで、その日[ひ]の気持[きも]ちが明[あか]るくなります。お店[みせ]に入[はい]る時[とき]も「いらっしゃいませ」と迎[むか]えられます。深[ふか]いお辞儀[じぎ]をすると、相手[あいて]への尊敬[そんけい]の気持[きも]ちが伝[つた]わります。小[ちい]さな挨拶[あいさつ]が関係[かんけい]を作[つく]ります。",
+    82→      "次[つぎ]に、靴[くつ]を脱[ぬ]ぐ習慣[しゅうかん]です。家[いえ]に上[あ]がる時[とき]、必[かなら]ず靴[くつ]を脱[ぬ]ぎます。これは、外[そと]の汚[よご]れを家[いえ]の中[なか]に持[も]ち込[こ]まないためです。学校[がっこう]や体育館[たいいくかん]でも同[おな]じです。最初[さいしょ]は不便[ふべん]に感[かん]じましたが、今[いま]は清潔[せいけつ]で良[よ]い習慣[しゅうかん]だと思[おも]います。",
+    83→      "また、公共[こうきょう]の場所[ばしょ]で静[しず]かにするのも大切[たいせつ]です。電車[でんしゃ]の中[なか]で電話[でんわ]をする人[ひと]は少[すく]ないです。他[ほか]の人[ひと]の迷惑[めいわく]にならないように、皆[みな]が気[き]をつけています。このような礼儀[れいぎ]のおかげで、日本[にほん]はとても住[す]みやすいと感[かん]じます。",
+    84→      "もちろん、全[すべ]てが完璧[かんぺき]ではありません。礼儀[れいぎ]が厳[きび]しすぎて、疲[つか]れることもあります。でも、相手[あいて]を尊重[そんちょう]する気持[きも]ちは、どの国[くに]でも大切[たいせつ]です。日本[にほん]の礼儀[れいぎ]を学[まな]びながら、自分[じぶん]の国[くに]の良[よ]いところも大切[たいせつ]にしたいです。"
+    85→    ],
+    86→    translation: [
+    87→      "I came to Japan from abroad, and it has already been three years. Before coming to Japan I thought it was a polite culture. Actually living here, I understood the reason. There are many habits in daily life that show consideration for others.",
+    88→      "First, the culture of greetings. Just saying \"good morning\" in the morning brightens my mood for the day. When entering a shop you are welcomed with \"welcome.\" A deep bow communicates your feeling of respect toward the other person. Small greetings build relationships.",
+    89→      "Next, the habit of taking off shoes. When entering a house, you always take off your shoes. This is so you do not bring outside dirt into the house. It is the same at schools and gymnasiums. At first it felt inconvenient, but now I think it is a clean and good habit.",
+    90→      "Also, being quiet in public places is important. Few people talk on the phone inside trains. Everyone is careful not to be a nuisance to others. Thanks to this kind of etiquette, I feel Japan is very easy to live in.",
+    91→      "Of course, not everything is perfect. Sometimes the etiquette is too strict and tiring. But the feeling of respecting the other person is important in any country. While learning Japanese etiquette, I want to treasure the good things about my own country too."
+    92→    ],
+    93→    questions: [
+    94→      {
+    95→        q: "How long has the writer been in Japan?",
+    96→        choices: ["One year", "Two years", "Three years", "Five years"],
+    97→        answerIndex: 2,
+    98→        explanation: "The writer has been in Japan for three years (もう三年になります)."
+    99→      },
+   100→      {
+   101→        q: "What does the writer say about greetings?",
+   102→        choices: ["They are unnecessary", "They brighten the day and build relationships", "They are only for business", "They are rude"],
+   103→        answerIndex: 1,
+   104→        explanation: "Greetings brighten the mood and small greetings build relationships (関係を作ります)."
+   105→      },
+   106→      {
+   107→        q: "Why do people take off their shoes in houses?",
+   108→        choices: ["To rest their feet", "To avoid bringing in outside dirt", "Because it is a law", "To save money"],
+   109→        answerIndex: 1,
+   110→        explanation: "Shoes are removed so as not to bring outside dirt into the house (外の汚れを持ち込まないため)."
+   111→      },
+   112→      {
+   113→        q: "What is mentioned about trains?",
+   114→        choices: ["People talk loudly", "People sell things", "Few people talk on the phone", "People eat big meals"],
+   115→        answerIndex: 2,
+   116→        explanation: "Few people use phones on trains (電話をする人は少ないです)."
+   117→      },
+   118→      {
+   119→        q: "What does the writer want to do going forward?",
+   120→        choices: ["Forget their own country", "Only follow Japanese rules", "Treasure both Japanese etiquette and their country's good points", "Move back home soon"],
+   121→        answerIndex: 2,
+   122→        explanation: "The writer wants to learn Japanese etiquette while treasuring the good things of their own country."
+   123→      }
+   124→    ]
+   125→  },
+   126→
+   127→  // ───────────────────────────────────────────────────────────
+   128→  // r-n4-33 — 健康の大切さ (The importance of health)
+   129→  // ───────────────────────────────────────────────────────────
+   130→  {
+   131→    id: "r-n4-33",
+   132→    title: "健康[けんこう]の大切[たいせつ]さ",
+   133→    titleReading: "けんこうのたいせつさ",
+   134→    level: "N4",
+   135→    summary: "After falling ill from overwork, the writer rebuilds daily habits to protect their health.",
+   136→    estMinutes: 6,
+   137→    tags: ["health", "lifestyle", "habits"],
+   138→    body: [
+   139→      "私[わたし]は先月[せんげつ]、風邪[かぜ]で一週間[いっしゅうかん]休[やす]みました。最初[さいしょ]はただの喉[のど]の痛[いた]みでしたが、熱[ねつ]が高[たか]くなって、起[お]きられなくなりました。病院[びょういん]に行[い]って、薬[くすり]をもらいました。その時[とき]、健康[けんこう]の大切[たいせつ]さを強[つよ]く感[かん]じました。",
+   140→      "健康[けんこう]は、失[うしな]ってから気[き]づくものだと言[い]われます。忙[いそが]しいと、つい無理[むり]をしてしまいます。夜[よる]遅[おそ]くまで仕事[しごと]をしたり、朝[あさ]ご飯[はん]を食[た]べなかったりしました。しかし、体[からだ]は正直[しょうじき]です。無理[むり]が続[つづ]くと、必[かなら]ず反動[はんどう]が来[き]ます。",
+   141→      "退院[たいいん]後[ご]、生活[せいかつ]を見直[みなお]しました。まず、毎日[まいにち]八時間[はちじかん]寝[ね]るようにしました。次[つぎ]に、三食[さんしょく]きちんと食[た]べるようにしました。特[とく]に朝[あさ]ご飯[はん]は、一日[いちにち]の力[ちから]になるので大切[たいせつ]です。野菜[やさい]を多[おお]く取[と]るようにしました。",
+   142→      "運動[うんどう]も始[はじ]めました。近[ちか]くの公園[こうえん]を三十分[さんじゅっぷん]歩[ある]くだけですが、続[つづ]けると体[からだ]が軽[かる]くなりました。休[やす]みの日[ひ]には、家族[かぞく]と一緒[いっしょ]に山[やま]に登[のぼ]ったりもします。運動[うんどう]すると、気持[きも]ちも前向[まえむ]きになります。",
+   143→      "ストレスも健康[けんこう]の敵[てき]です。仕事[しごと]で疲[つか]れた時[とき]、音楽[おんがく]を聴[き]いたり、友達[ともだち]と話[はな]したりしてリラックスします。健康[けんこう]でなければ、何[なに]もできないと分[わ]かりました。これからも、自分[じぶん]の体[からだ]を大切[たいせつ]にします。"
+   144→    ],
+   145→    translation: [
+   146→      "Last month I took a week off because of a cold. At first it was just a sore throat, but my fever rose and I could not get up. I went to the hospital and got medicine. At that time I strongly felt the importance of health.",
+   147→      "They say health is something you notice only after losing it. When busy, you end up overdoing it. I worked until late at night and sometimes skipped breakfast. But the body is honest. If you keep pushing, a backlash always comes.",
+   148→      "After leaving the hospital, I reviewed my lifestyle. First, I made sure to sleep eight hours every day. Next I made sure to eat three meals properly. Breakfast in particular is important because it becomes the energy for the day. I tried to take in more vegetables.",
+   149→      "I also started exercising. I just walk for thirty minutes in a nearby park, but continuing it made my body feel lighter. On days off I also climb mountains with my family. Exercising makes my mood more positive too.",
+   150→      "Stress is also an enemy of health. When tired from work, I relax by listening to music or talking with friends. I understood that without health, you can do nothing. From now on I will treasure my body."
+   151→    ],
+   152→    questions: [
+   153→      {
+   154→        q: "How long did the writer rest?",
+   155→        choices: ["One day", "Three days", "One week", "Two weeks"],
+   156→        answerIndex: 2,
+   157→        explanation: "The writer rested for one week due to a cold (一週間休みました)."
+   158→      },
+   159→      {
+   160→        q: "What is said about health?",
+   161→        choices: ["You notice it after losing it", "It is not important", "It comes naturally", "Money matters more"],
+   162→        answerIndex: 0,
+   163→        explanation: "Health is something you notice after losing it (失ってから気づくもの)."
+   164→      },
+   165→      {
+   166→        q: "What did the writer change first after leaving the hospital?",
+   167→        choices: ["Started running marathons", "Slept eight hours every day", "Quit their job", "Stopped eating dinner"],
+   168→        answerIndex: 1,
+   169→        explanation: "First the writer made sure to sleep eight hours every day (毎日八時間寝るようにしました)."
+   170→      },
+   171→      {
+   172→        q: "What exercise did the writer start?",
+   173→        choices: ["Swimming", "Walking 30 minutes in a park", "Cycling long distances", "Lifting weights"],
+   174→        answerIndex: 1,
+   175→        explanation: "The writer walks for thirty minutes in a nearby park (公園を三十分歩く)."
+   176→      },
+   177→      {
+   178→        q: "What is also described as an enemy of health?",
+   179→        choices: ["Vegetables", "Friends", "Stress", "Hospitals"],
+   180→        answerIndex: 2,
+   181→        explanation: "Stress is also an enemy of health (ストレスも健康の敵)."
+   182→      }
+   183→    ]
+   184→  },
+   185→
+   186→  // ───────────────────────────────────────────────────────────
+   187→  // r-n4-34 — 町内会のお祭り (A neighborhood festival)
+   188→  // ───────────────────────────────────────────────────────────
+   189→  {
+   190→    id: "r-n4-34",
+   191→    title: "町内会[ちょうないかい]のお祭[まつ]り",
+   192→    titleReading: "ちょうないかいのおまつり",
+   193→    level: "N4",
+   194→    summary: "A family joins the local summer festival and feels the warmth of their neighborhood.",
+   195→    estMinutes: 5,
+   196→    tags: ["festival", "community", "summer"],
+   197→    body: [
+   198→      "毎年[まいとし]八月[はちがつ]、私[わたし]の町[まち]では町内会[ちょうないかい]のお祭[まつ]りがあります。今年[ことし]は初[はじ]めて、家族[かぞく]みんなで参加[さんか]しました。午後[ごご]五時[ごじ]ごろ、神社[じんじゃ]の前[まえ]に集[あつ]まりました。色[いろ]とりどりの提灯[ちょうちん]が飾[かざ]られて、とてもきれいでした。",
+   199→      "神社[じんじゃ]の前[まえ]には、たくさん屋台[やたい]が並[なら]んでいました。たこ焼[や]き、焼[や]きそば、かき氷[ごおり]など、好[す]きなものが選[えら]べます。息子[むすこ]は綿菓子[わたがし]が欲[ほ]しいと言[い]いました。娘[むすめ]は金魚[きんぎょ]すくいをやりたがりました。私[わたし]は冷[つめ]たいビールと焼[や]き鳥[とり]で一杯[いっぱい]やりました。",
+   200→      "七時[しちじ]ごろから、盆踊[ぼんおど]りが始[はじ]まりました。中央[ちゅうおう]に櫓[やぐら]が立[た]てられて、太鼓[たいこ]の音[おと]が響[ひび]きました。お年寄[としよ]りも子供[こども]も、同[おな]じように輪[わ]になって踊[おど]りました。私[わたし]の家族[かぞく]も混[ま]じって踊[おど]りました。上手[じょうず]ではありませんでしたが、とても楽[たの]しかったです。",
+   201→      "お祭[まつ]りの準備[じゅんび]は大変[たいへん]だと聞[き]きました。町内会[ちょうないかい]の人[ひと]たちが、何日[なんにち]も前[まえ]から集[あつ]まって準備[じゅんび]します。当番[とうばん]の人[ひと]は朝[あさ]から夜[よる]まで働[はたら]きます。その努力[どりょく]があるからこそ、楽[たの]しいお祭[まつ]りができるのだと分[わ]かりました。",
+   202→      "帰[かえ]り道[みち]、子供[こども]たちは疲[つか]れて寝[ね]てしまいました。私[わたし]たちは、来年[らいねん]も参加[さんか]しようと話[はな]し合[あ]いました。お祭[まつ]りを通[とお]して、隣[となり]の人[ひと]たちと話[はな]せたのも良[よ]かったです。小[ちい]さな町[まち]の絆[きずな]を感[かん]じた一日[いちにち]でした。"
+   203→    ],
+   204→    translation: [
+   205→      "Every year in August, my town has a neighborhood association festival. This year my whole family participated for the first time. Around 5 PM we gathered in front of the shrine. Lanterns in various colors were decorated and it was very beautiful.",
+   206→      "In front of the shrine many food stalls were lined up. You can choose your favorites such as takoyaki, yakisoba, and shaved ice. My son said he wanted cotton candy. My daughter wanted to try goldfish scooping. I had a glass of cold beer and yakitori.",
+   207→      "Around 7 PM the bon dance began. A tower was set up in the center and the sound of drums echoed. Elderly people and children danced in a circle in the same way. My family joined and danced too. We were not good at it, but it was very fun.",
+   208→      "I heard that preparing for the festival is hard. People from the neighborhood association gather and prepare for many days in advance. The people on duty work from morning to night. I understood that it is because of that effort that a fun festival is possible.",
+   209→      "On the way home the children were tired and fell asleep. We talked about participating again next year. Being able to talk with our neighbors through the festival was also good. It was a day that made me feel the bonds of our small town."
+   210→    ],
+   211→    questions: [
+   212→      {
+   213→        q: "When does the festival happen?",
+   214→        choices: ["Every January", "Every August", "Every December", "Every week"],
+   215→        answerIndex: 1,
+   216→        explanation: "The festival happens every year in August (毎年八月)."
+   217→      },
+   218→      {
+   219→        q: "What did the son want?",
+   220→        choices: ["Takoyaki", "Goldfish scooping", "Cotton candy", "Shaved ice"],
+   221→        answerIndex: 2,
+   222→        explanation: "The son wanted cotton candy (綿菓子が欲しいと言いました)."
+   223→      },
+   224→      {
+   225→        q: "What started around 7 PM?",
+   226→        choices: ["Fireworks", "The bon dance", "A parade of cars", "A music concert"],
+   227→        answerIndex: 1,
+   228→        explanation: "The bon dance began around 7 PM (七時ごろから盆踊りが始まりました)."
+   229→      },
+   230→      {
+   231→        q: "Who prepares the festival?",
+   232→        choices: ["Only the city hall", "People from the neighborhood association", "The shrine priest alone", "Tourists"],
+   233→        answerIndex: 1,
+   234→        explanation: "People from the neighborhood association prepare it (町内会の人たちが準備します)."
+   235→      },
+   236→      {
+   237→        q: "How were the children on the way home?",
+   238→        choices: ["Energetic", "Hungry", "Tired and asleep", "Angry"],
+   239→        answerIndex: 2,
+   240→        explanation: "On the way home the children were tired and fell asleep (疲れて寝てしまいました)."
+   241→      }
+   242→    ]
+   243→  },
+   244→
+   245→  // ───────────────────────────────────────────────────────────
+   246→  // r-n4-35 — 仕事と生活のバランス (Work-life balance)
+   247→  // ───────────────────────────────────────────────────────────
+   248→  {
+   249→    id: "r-n4-35",
+   250→    title: "仕事[しごと]と生活[せいかつ]のバランス",
+   251→    titleReading: "しごととせいかつのばらんす",
+   252→    level: "N4",
+   253→    summary: "A busy office worker learns to set boundaries and protect time for family and self.",
+   254→    estMinutes: 7,
+   255→    tags: ["work", "lifestyle", "balance"],
+   256→    body: [
+   257→      "私[わたし]はIT会社[かいしゃ]で働[はたら]いています。入社[にゅうしゃ]してから二年[にねん]、毎日[まいにち]残業[ざんぎょう]していました。給料[きゅうりょう]は良[よ]いですが、自由[じゆう]な時間[じかん]がほとんどありません。先週[せんしゅう]、妻[つま]に「このままだと、子[こ]どもの成長[せいちょう]を見逃[みのが]してしまうよ」と言[い]われました。その言葉[ことば]にハッとしました。",
+   258→      "日本[にほん]では、長[なが]く働[はたら]くことが美徳[びとく]とされる文化[ぶんか]があります。「忙[いそが]しい人[ひと]は能力[のうりょく]がある」と誤解[ごかい]されることもあります。しかし、近年[きんねん]は働[はたら]き方[かた]を見直[みなお]す会社[かいしゃ]が増[ふ]えています。私[わたし]の会社[かいしゃ]も、残業[ざんぎょう]を減[へ]らす取[と]り組[く]みを始[はじ]めました。",
+   259→      "私[わたし]は、毎日[まいにち]の計画[けいかく]を立[た]てるようにしました。優先[ゆうせん]順位[じゅんい]をつけて、重要[じゅうよう]な仕事[しごと]を先[さき]に終[お]わらせます。定時[ていじ]に退社[たいしゃ]することを目標[もくひょう]にしました。最初[さいしょ]は難[むずか]しかったですが、続[つづ]けるうちに慣[な]れてきました。",
+   260→      "退社[たいしゃ]後[ご]は、家族[かぞく]と食事[しょくじ]を取[と]るようにしました。以前[いぜん]は、子[こ]どもが寝[ね]るまでに帰[かえ]れないことが多[おお]かったです。今[いま]は、子[こ]どもと本[ほん]を読[よ]んだり、ゲームをしたりできます。週末[しゅうまつ]は、家族[かぞく]で公園[こうえん]に出[で]かけます。笑顔[えがお]が増[ふ]えました。",
+   261→      "もちろん、仕事[しごと]は大切[たいせつ]です。でも、仕事[しごと]のためだけに生[い]きているわけではありません。健康[けんこう]、家族[かぞく]、趣味[しゅみ]、すべてがバランス良[よ]く必要[ひつよう]です。今[いま]の私[わたし]は、少[すこ]し幸福[こうふく]になった気[き]がします。働[はたら]き方[かた]を変[か]えて本当[ほんとう]に良[よ]かったです。"
+   262→    ],
+   263→    translation: [
+   264→      "I work at an IT company. For two years since joining, I worked overtime every day. The salary is good, but I have almost no free time. Last week my wife said to me, \"If you keep going like this, you'll miss watching our children grow up.\" Those words startled me.",
+   265→      "In Japan there is a culture where working long is regarded as a virtue. It is sometimes misunderstood that \"busy people are capable.\" But in recent years companies that review working styles are increasing. My company also started an effort to reduce overtime.",
+   266→      "I started making a daily plan. I set priorities and finish important work first. I set leaving on time as my goal. It was hard at first, but as I continued I got used to it.",
+   267→      "After leaving work I made sure to have meals with my family. Before, I often could not get home before the children went to sleep. Now I can read books and play games with my children. On weekends we go out to a park as a family. Smiles increased.",
+   268→      "Of course work is important. But I am not living only for work. Health, family, hobbies—everything needs good balance. I feel I have become a little happier now. Changing how I work was really good."
+   269→    ],
+   270→    questions: [
+   271→      {
+   272→        q: "How long has the writer worked at the IT company?",
+   273→        choices: ["Six months", "One year", "Two years", "Five years"],
+   274→        answerIndex: 2,
+   275→        explanation: "The writer has worked there for two years since joining (入社してから二年)."
+   276→      },
+   277→      {
+   278→        q: "What did the wife say?",
+   279→        choices: ["Quit your job", "You'll miss watching the children grow", "Get a higher salary", "Move to another city"],
+   280→        answerIndex: 1,
+   281→        explanation: "The wife warned the writer would miss watching the children grow (子どもの成長を見逃してしまうよ)."
+   282→      },
+   283→      {
+   284→        q: "What does the writer do to leave on time?",
+   285→        choices: ["Skip lunch", "Set priorities and finish important work first", "Work on weekends", "Stop taking notes"],
+   286→        answerIndex: 1,
+   287→        explanation: "The writer sets priorities and finishes important work first (優先順位をつけて...終わらせます)."
+   288→      },
+   289→      {
+   290→        q: "What increased after the change?",
+   291→        choices: ["Overtime", "Smiles", "Salary", "Stress"],
+   292→        answerIndex: 1,
+   293→        explanation: "After the change, smiles increased in the family (笑顔が増えました)."
+   294→      },
+   295→      {
+   296→        q: "What is the writer's conclusion?",
+   297→        choices: ["Work is the only thing that matters", "Health, family, hobbies all need balance", "Money is the most important", "Children should work too"],
+   298→        answerIndex: 1,
+   299→        explanation: "The writer concludes health, family, and hobbies all need good balance (すべてがバランス良く必要です)."
+   300→      }
+   301→    ]
+   302→  },
+   303→
+   304→  // ───────────────────────────────────────────────────────────
+   305→  // r-n4-36 — 懐かしい故郷 (A nostalgic hometown visit)
+   306→  // ───────────────────────────────────────────────────────────
+   307→  {
+   308→    id: "r-n4-36",
+   309→    title: "懐[なつ]かしい故郷[ふるさと]",
+   310→    titleReading: "なつかしいふるさと",
+   311→    level: "N4",
+   312→    summary: "After years in the city, the writer returns to their rural hometown and rediscovers its charm.",
+   313→    estMinutes: 6,
+   314→    tags: ["hometown", "family", "nostalgia"],
+   315→    body: [
+   316→      "私[わたし]は高校[こうこう]を卒業[そつぎょう]してから、ずっと東京[とうきょう]に住[す]んでいます。だから、故郷[ふるさと]に帰[かえ]るのは一年[いちねん]に一回[いっかい]だけです。今年[ことし]のお盆[ぼん]、五年[ごねん]ぶりに長[なが]く帰省[きせい]しました。新幹線[しんかんせん]を降[お]りて、ローカル線[せん]に乗[の]り換[か]えると、窓[まど]の外[そと]に田[た]んぼが広[ひろ]がっていました。",
+   317→      "駅[えき]に着[つ]くと、母[はは]が迎[むか]えに来[き]てくれました。「待[ま]っていたよ」と笑顔[えがお]で言[い]いました。家[いえ]に帰[かえ]ると、好物[こうぶつ]のカレーが用意[ようい]されていました。少[すこ]し太[ふと]っていると言[い]われましたが、嬉[うれ]しかったです。やっぱり、お母[かあ]さんの味[あじ]は一番[いちばん]です。",
+   318→      "次[つぎ]の日[ひ]、小[ちい]さい頃[ころ]によく遊[あそ]んだ川[かわ]に行[い]きました。水[みず]はとてもきれいで、小[ちい]さい魚[さかな]が泳[およ]いでいました。近[ちか]くの神社[じんじゃ]も昔[むかし]のままでした。参道[さんどう]の石[いし]は、子[こ]どもの頃[ころ]より小[ちい]さく感[かん]じました。私[わたし]が成長[せいちょう]した証拠[しょうこ]かもしれません。",
+   319→      "昔[むかし]の友達[ともだち]にも会[あ]いました。皆[みな]、東京[とうきょう]や大阪[おおさか]で働[はたら]いていましたが、お盆[ぼん]に帰[かえ]ってきていました。一緒[いっしょ]に夜[よる]遅[おそ]くまで話[はな]しました。色[いろ]いろな苦労[くろう]話[ばなし]や夢[ゆめ]の話[はなし]をして、時間[じかん]が経[た]つのを忘[わす]れました。",
+   320→      "故郷[ふるさと]は、変[か]わっていない部分[ぶぶん]と変[か]わっている部分[ぶぶん]があります。でも、ここは私[わたし]の心[こころ]の基地[きち]です。東京[とうきょう]で疲[つか]れた時[とき]、故郷[ふるさと]を思[おも]い出[だ]すだけで力[ちから]が出[で]ます。来年[らいねん]も、絶対[ぜったい]に帰[かえ]ろうと思[おも]いました。"
+   321→    ],
+   322→    translation: [
+   323→      "Since graduating from high school, I have always lived in Tokyo. So I return to my hometown only once a year. This year during the Obon holiday, I went home for a long visit for the first time in five years. After getting off the shinkansen and transferring to a local line, rice fields spread outside the window.",
+   324→      "When I arrived at the station, my mother came to pick me up. She said with a smile, \"I was waiting for you.\" When I got home, my favorite curry was ready. I was told I had gotten a little chubby, but I was happy. After all, my mother's cooking is the best.",
+   325→      "The next day I went to the river I often played at as a child. The water was very clean and small fish were swimming. The nearby shrine was also the same as before. The stones on the approach felt smaller than when I was a child. It might be proof that I have grown.",
+   326→      "I also met old friends. Everyone had been working in Tokyo or Osaka but came back for Obon. We talked together until late at night. We shared various hardships and dreams and forgot how time was passing.",
+   327→      "My hometown has parts that have not changed and parts that have changed. But this is the base of my heart. When I am tired in Tokyo, just remembering my hometown gives me strength. I decided I will absolutely go back next year too."
+   328→    ],
+   329→    questions: [
+   330→      {
+   331→        q: "How often does the writer usually return home?",
+   332→        choices: ["Once a month", "Once a year", "Once every five years", "Never"],
+   333→        answerIndex: 1,
+   334→        explanation: "The writer returns home only once a year (一年に一回だけ)."
+   335→      },
+   336→      {
+   337→        q: "What did the mother prepare?",
+   338→        choices: ["Sushi", "Curry", "Ramen", "Tempura"],
+   339→        answerIndex: 1,
+   340→        explanation: "The mother prepared the writer's favorite curry (好物のカレー)."
+   341→      },
+   342→      {
+   343→        q: "What did the writer notice about the shrine stones?",
+   344→        choices: ["They were gone", "They felt smaller than in childhood", "They were new", "They were painted"],
+   345→        answerIndex: 1,
+   346→        explanation: "The stones felt smaller than when the writer was a child (子どもの頃より小さく感じました)."
+   347→      },
+   348→      {
+   349→        q: "Where do the writer's old friends work?",
+   350→        choices: ["Only in the hometown", "In Tokyo or Osaka", "Abroad", "On farms"],
+   351→        answerIndex: 1,
+   352→        explanation: "The friends were working in Tokyo or Osaka (東京や大阪で働いていました)."
+   353→      },
+   354→      {
+   355→        q: "What does the writer feel about the hometown?",
+   356→        choices: ["It is the base of their heart", "It is boring", "It should be abandoned", "It is too far"],
+   357→        answerIndex: 0,
+   358→        explanation: "The hometown is the base of the writer's heart (私の心の基地です)."
+   359→      }
+   360→    ]
+   361→  },
+   362→
+   363→  // ───────────────────────────────────────────────────────────
+   364→  // r-n4-37 — 読書の習慣 (Reading habits)
+   365→  // ───────────────────────────────────────────────────────────
+   366→  {
+   367→    id: "r-n4-37",
+   368→    title: "読書[どくしょ]の習慣[しゅうかん]",
+   369→    titleReading: "どくしょのしゅうかん",
+   370→    level: "N4",
+   371→    summary: "A former non-reader builds a daily reading habit and discovers new worlds through books.",
+   372→    estMinutes: 5,
+   373→    tags: ["reading", "habits", "books"],
+   374→    body: [
+   375→      "私[わたし]は以前[いぜん]、本[ほん]を読[よ]むのが好[す]きではありませんでした。学校[がっこう]の教科書[きょうかしょ]以外[いがい]、ほとんど読[よ]みませんでした。しかし、先輩[せんぱい]に「本[ほん]は無料[むりょう]で他人[たにん]の経験[けいけん]がもらえる」と言[い]われて、読書[どくしょ]を始[はじ]めました。最初[さいしょ]は一冊[いっさつ]読[よ]み終[お]わるのに一[いっ]か月[げつ]かかりました。",
+   376→      "今[いま]は、毎晩[まいばん]寝[ね]る前[まえ]に三十[さんじゅう]分[ふん]読[よ]むようにしています。少[すこ]しずつでも続[つづ]けることが大切[たいせつ]です。本[ほん]を枕元[まくらもと]に置[お]いておくと、自然[しぜん]に手[て]に取[と]ります。最近[さいきん]は、電子[でんし]書籍[しょせき]も利用[りよう]しています。",
+   377→      "好[す]きなジャンルは、小説[しょうせつ]と自己[じこ]啓発[けいはつ]本[ほん]です。小説[しょうせつ]は、自分[じぶん]の知[し]らない人生[じんせい]を経験[けいけん]できるのが面白[おもしろ]いです。自己[じこ]啓発[けいはつ]本[ほん]は、新[あたら]しい視点[してん]をくれるので役[やく]に立[た]ちます。最近[さいきん]は、歴史[れきし]の本[ほん]にも興味[きょうみ]を持[も]ち始[はじ]めました。",
+   378→      "読書[どくしょ]の効果[こうか]は色[いろ]いろあります。語彙[ごい]が増[ふ]えました。文章[ぶんしょう]を書[か]くのも上達[じょうたつ]しました。何[なに]より、集中[しゅうちゅう]力[りょく]がつきました。スマホばかり見[み]ていると集中[しゅうちゅう]できませんが、本[ほん]を読[よ]むと深[ふか]く考[かんが]えることができます。",
+   379→      "来月[らいげつ]は、月[つき]に三冊[さんさつ]読[よ]むことを目標[もくひょう]にしています。読書[どくしょ]は、お金[かね]がかからない趣味[しゅみ]です。本[ほん]一冊[いっさつ]の中[なか]に、別[べつ]の世界[せかい]があります。これからも、本[ほん]と友達[ともだち]でいたいです。"
+   380→    ],
+   381→    translation: [
+   382→      "I used to not like reading books. Apart from school textbooks, I hardly read anything. But a senior colleague told me, \"Books let you get other people's experience for free,\" and I started reading. At first it took me a month to finish one book.",
+   383→      "Now I try to read for thirty minutes every night before sleeping. Continuing little by little is important. If I keep a book by my pillow, I naturally pick it up. Recently I have also started using e-books.",
+   384→      "My favorite genres are novels and self-help books. Novels are interesting because I can experience lives I do not know. Self-help books are useful because they give me new perspectives. Recently I have also begun to take interest in history books.",
+   385→      "Reading has various effects. My vocabulary increased. I also improved at writing. Above all, I gained concentration. When I only look at my phone I cannot concentrate, but reading books lets me think deeply.",
+   386→      "Next month my goal is to read three books a month. Reading is a hobby that does not cost much money. Inside a single book there is another world. From now on too I want to stay friends with books."
+   387→    ],
+   388→    questions: [
+   389→      {
+   390→        q: "Why did the writer start reading?",
+   391→        choices: ["A teacher forced them", "A senior said books give others' experience for free", "They needed to for an exam", "Their parents bought books"],
+   392→        answerIndex: 1,
+   393→        explanation: "A senior said books let you get others' experience for free (先輩に...と言われて)."
+   394→      },
+   395→      {
+   396→        q: "When does the writer read now?",
+   397→        choices: ["In the morning", "At lunch", "Before sleeping", "While commuting"],
+   398→        answerIndex: 2,
+   399→        explanation: "The writer reads for thirty minutes before sleeping every night (毎晩寝る前に)."
+   400→      },
+   401→      {
+   402→        q: "Which genre is NOT mentioned as a favorite?",
+   403→        choices: ["Novels", "Self-help books", "History books", "Cookbooks"],
+   404→        answerIndex: 3,
+   405→        explanation: "Novels, self-help books, and history books are mentioned, but not cookbooks."
+   406→      },
+   407→      {
+   408→        q: "What effect did reading have on the writer?",
+   409→        choices: ["Less vocabulary", "Worse writing", "Better concentration", "More phone use"],
+   410→        answerIndex: 2,
+   411→        explanation: "Above all, the writer gained concentration (集中力がつきました)."
+   412→      },
+   413→      {
+   414→        q: "What is the goal for next month?",
+   415→        choices: ["Read one book", "Read three books", "Read ten books", "Stop reading"],
+   416→        answerIndex: 1,
+   417→        explanation: "The goal is to read three books a month next month (月に三冊読むことを目標)."
+   418→      }
+   419→    ]
+   420→  },
+   421→
+   422→  // ───────────────────────────────────────────────────────────
+   423→  // r-n4-38 — ネットショッピングの便利さ (Online shopping convenience)
+   424→  // ───────────────────────────────────────────────────────────
+   425→  {
+   426→    id: "r-n4-38",
+   427→    title: "ネットショッピングの便利[べんり]さ",
+   428→    titleReading: "ねっとしょっぴんぐのべんりさ",
+   429→    level: "N4",
+   430→    summary: "A busy parent discovers online shopping and weighs its pros and cons for daily life.",
+   431→    estMinutes: 6,
+   432→    tags: ["shopping", "internet", "lifestyle"],
+   433→    body: [
+   434→      "私[わたし]は子[こ]どもが生[う]まれてから、ネットショッピングをよく利用[りよう]するようになりました。小[ちい]さい子[こ]どもを連[つ]れて店[みせ]に行[い]くのは大変[たいへん]だからです。特[とく]に夜[よる]、子[こ]どもが寝[ね]た後[あと]に買[か]い物[もの]できるのは助[たす]かります。",
+   435→      "先週[せんしゅう]、ネットで子[こ]ども服[ふく]を買[か]いました。色[いろ]やサイズを選[えら]んで、クリックするだけです。翌日[よくじつ]には届[とど]きました。値段[ねだん]も店[みせ]より安[やす]かったです。レビューを読[よ]んでから買[か]えるのも便利[べんり]です。他[ほか]の人[ひと]の意見[いけん]が参考[さんこう]になります。",
+   436→      "しかし、問題[もんだい]もあります。服[ふく]は実際[じっさい]に着[き]てみないと分[わ]からない部分[ぶぶん]があります。サイズが合[あ]わなかったり、色[いろ]が画像[がぞう]と違[ちが]ったりすることがあります。返品[へんぴん]もできますが、手間[てま]がかかります。また、簡単[かんたん]すぎて、つい衝動[しょうどう]買[が]いをしてしまうこともあります。",
+   437→      "食品[しょくひん]のネット注文[ちゅうもん]も便利[べんり]です。重[おも]いお米[こめ]や飲[の]み物[もの]を家[いえ]まで届[とど]けてもらえます。ただ、生[なま]ものは鮮度[せんど]が心配[しんぱい]です。最近[さいきん]は、冷蔵[れいぞう]便[びん]で届[とど]くサービスも増[ふ]えました。安心[あんしん]して利用[りよう]できます。",
+   438→      "ネットショッピングは便利[べんり]ですが、上手[じょうず]に使[つか]うことが大切[たいせつ]です。必要[ひつよう]なものをリストにして、予算[よさん]を決[き]めてから買[か]うようにしています。店[みせ]とネットを使[つか]い分[わ]けて、賢[かしこ]い消費者[しょうひしゃ]でありたいです。"
+   439→    ],
+   440→    translation: [
+   441→      "Since my child was born, I have come to use online shopping a lot. It is hard to go to the store with a small child. Especially being able to shop at night after the child falls asleep is helpful.",
+   442→      "Last week I bought children's clothes online. You just choose the color and size and click. It arrived the next day. The price was also cheaper than at the store. Being able to read reviews before buying is convenient too. Other people's opinions are useful references.",
+   443→      "But there are also problems. With clothes there are parts you do not understand until you actually wear them. Sometimes the size does not fit or the color differs from the image. You can return them, but it takes effort. Also, because it is too easy, I sometimes end up impulse buying.",
+   444→      "Ordering food online is also convenient. Heavy rice and drinks can be delivered to my house. However, with raw items freshness is a concern. Recently cold-delivery services have increased too. I can use them with peace of mind.",
+   445→      "Online shopping is convenient, but it is important to use it wisely. I make a list of necessary things and decide on a budget before buying. I want to use stores and online shopping appropriately and be a smart consumer."
+   446→    ],
+   447→    questions: [
+   448→      {
+   449→        q: "Why did the writer start using online shopping more?",
+   450→        choices: ["Their child was born", "They moved far from stores", "Stores closed down", "They got a discount"],
+   451→        answerIndex: 0,
+   452→        explanation: "The writer started using it more after their child was born (子どもが生まれてから)."
+   453→      },
+   454→      {
+   455→        q: "When does the writer often shop online?",
+   456→        choices: ["In the morning", "At lunch", "After the child falls asleep", "At work"],
+   457→        answerIndex: 2,
+   458→        explanation: "The writer shops at night after the child falls asleep (子どもが寝た後に買い物できる)."
+   459→      },
+   460→      {
+   461→        q: "What is a problem with buying clothes online?",
+   462→        choices: ["Reviews are fake", "The size may not fit", "Prices are too high", "Nothing can be returned"],
+   463→        answerIndex: 1,
+   464→        explanation: "Sometimes the size does not fit (サイズが合わなかったりすることがあります)."
+   465→      },
+   466→      {
+   467→        q: "What is a concern with raw food?",
+   468→        choices: ["Color", "Freshness", "Weight", "Brand"],
+   469→        answerIndex: 1,
+   470→        explanation: "With raw items, freshness is a concern (生ものは鮮度が心配)."
+   471→      },
+   472→      {
+   473→        q: "How does the writer shop wisely?",
+   474→        choices: ["By buying everything on impulse", "By making a list and setting a budget", "By never using stores", "By only buying cheap things"],
+   475→        answerIndex: 1,
+   476→        explanation: "The writer makes a list of necessary things and sets a budget before buying (リストにして、予算を決めてから買う)."
+   477→      }
+   478→    ]
+   479→  },
+   480→
+   481→  // ───────────────────────────────────────────────────────────
+   482→  // r-n4-39 — 試験への準備 (Preparing for an exam)
+   483→  // ───────────────────────────────────────────────────────────
+   484→  {
+   485→    id: "r-n4-39",
+   486→    title: "試験[しけん]への準備[じゅんび]",
+   487→    titleReading: "しけんへのじゅんび",
+   488→    level: "N4",
+   489→    summary: "A student preparing for the JLPT shares their study plan and mindset.",
+   490→    estMinutes: 7,
+   491→    tags: ["study", "exam", "JLPT"],
+   492→    body: [
+   493→      "私[わたし]は十二月[じゅうにがつ]に日本語[にほんご]の能力試験[のうりょくしけん]N4を受[う]ける予定[よてい]です。あと三[さん]か月[げつ]しかありません。初[はじ]めての受験[じゅけん]なので、どう勉強[べんきょう]すればいいか分[わ]かりませんでした。先輩[せんぱい]に相談[そうだん]して、計画[けいかく]を立[た]てることにしました。",
+   494→      "まず、過去[かこ]の問題[もんだい]を解[と]いて、自分[じぶん]の弱[よわ]い所[ところ]を見[み]つけました。文法[ぶんぽう]は得意[とくい]ですが、聴解[ちょうかい]が弱[よわ]いことが分[わ]かりました。そこで、毎日[まいにち]日本語[にほんご]のポッドキャストを聞[き]くようにしました。少[すこ]しずつ耳[みみ]が慣[な]れてきた気[き]がします。",
+   495→      "漢字[かんじ]も難[むずか]しいです。N4の漢字[かんじ]は約三百字[やくさんびゃくじ]あります。毎日[まいにち]十[じゅう]字[じ]ずつ覚[おぼ]えることにしました。書[か]きながら覚[おぼ]えると、覚[おぼ]えやすいです。忘[わす]れないように、週末[しゅうまつ]に復習[ふくしゅう]します。",
+   496→      "勉強[べんきょう]の合間[あいま]に、休憩[きゅうけい]も大切[たいせつ]です。長[なが]く続[つづ]けても、集中[しゅうちゅう]できなければ意味[いみ]がありません。私[わたし]は、二十五分[にじゅうごふん]勉強[べんきょう]して、五分[ごふん]休[やす]む「ポモドーロ法[ほう]」を使[つか]っています。効率[こうりつ]が良[よ]くなりました。",
+   497→      "試験[しけん]の結果[けっか]は分[わ]かりませんが、今[いま]はできることをやるだけです。合格[ごうかく]したら、来年[らいねん]はN3に挑戦[ちょうせん]したいです。勉強[べんきょう]の過程[かてい]自体[じたい]が、私[わたし]の日本語[にほんご]を成長[せいちょう]させてくれていると感[かん]じています。"
+   498→    ],
+   499→    translation: [
+   500→      "I plan to take the Japanese Language Proficiency Test N4 in December. There are only three months left. It was my first time taking it, so I did not know how to study. I consulted a senior and decided to make a plan.",
+   501→      "First I solved past problems and found my weak points. I am good at grammar, but I found listening comprehension is weak. So I made sure to listen to Japanese podcasts every day. I feel my ears are gradually getting used to it.",
+   502→      "Kanji is also difficult. N4 has about 300 kanji. I decided to memorize ten characters every day. I find it easier to remember when I write while memorizing. To not forget, I review on weekends.",
+   503→      "Rest between study sessions is also important. Even if you keep studying long, it is meaningless if you cannot concentrate. I use the \"Pomodoro Technique\" of studying for 25 minutes and resting for 5 minutes. My efficiency improved.",
+   504→      "I do not know the exam result yet, but for now I just do what I can. If I pass, I want to challenge N3 next year. I feel the studying process itself is growing my Japanese."
+   505→    ],
+   506→    questions: [
+   507→      {
+   508→        q: "What exam will the writer take?",
+   509→        choices: ["N5", "N4", "N3", "N2"],
+   510→        answerIndex: 1,
+   511→        explanation: "The writer will take the N4 (能力試験N4を受ける予定)."
+   512→      },
+   513→      {
+   514→        q: "How many months are left before the exam?",
+   515→        choices: ["One month", "Two months", "Three months", "Six months"],
+   516→        answerIndex: 2,
+   517→        explanation: "There are only three months left (あと三か月しかありません)."
+   518→      },
+   519→      {
+   520→        q: "What is the writer's weak point?",
+   521→        choices: ["Grammar", "Kanji", "Listening comprehension", "Vocabulary"],
+   522→        answerIndex: 2,
+   523→        explanation: "The writer found listening comprehension is weak (聴解が弱い)."
+   524→      },
+   525→      {
+   526→        q: "How many kanji does the writer memorize daily?",
+   527→        choices: ["Five", "Ten", "Twenty", "Fifty"],
+   528→        answerIndex: 1,
+   529→        explanation: "The writer memorizes ten kanji every day (毎日十字ずつ覚える)."
+   530→      },
+   531→      {
+   532→        q: "What technique does the writer use to study?",
+   533→        choices: ["Studying without breaks", "The Pomodoro Technique", "Only weekend study", "Only past papers"],
+   534→        answerIndex: 1,
+   535→        explanation: "The writer uses the Pomodoro Technique (ポモドーロ法を使っています)."
+   536→      }
+   537→    ]
+   538→  },
+   539→
+   540→  // ───────────────────────────────────────────────────────────
+   541→  // r-n4-40 — 言語交換の経験 (A language exchange)
+   542→  // ───────────────────────────────────────────────────────────
+   543→  {
+   544→    id: "r-n4-40",
+   545→    title: "言語[げんご]交換[こうかん]の経験[けいけん]",
+   546→    titleReading: "げんごこうかんのけいけん",
+   547→    level: "N4",
+   548→    summary: "A Japanese learner joins a language exchange and builds friendship and fluency.",
+   549→    estMinutes: 6,
+   550→    tags: ["language", "friendship", "exchange"],
+   551→    body: [
+   552→      "私[わたし]は六[ろっ]か月[げつ]前[まえ]から、言語交換[げんごこうかん]のアプリを使[つか]っています。相手[あいて]はカナダ人[じん]のエマです。彼女[かのじょ]は日本語[にほんご]を、私[わたし]は英語[えいご]を学[まな]んでいます。毎週[まいしゅう]金曜日[きんようび]に、三十分[さんじゅっぷん]ずつ話[はな]します。",
+   553→      "最初[さいしょ]は緊張[きんちょう]しました。自分[じぶん]の英語[えいご]が通[つう]じるか心配[しんぱい]だったからです。でも、エマは「間違[まちが]えても大丈夫[だいじょうぶ]だよ」と言[い]ってくれました。それから、少[すこ]しずつ話[はな]せるようになりました。お互[たが]いに優[やさ]しく訂正[ていせい]し合[あ]います。",
+   554→      "話題[わだい]は色[いろ]いろです。趣味[しゅみ]、映画[えいが]、食[た]べ物[もの]、文化[ぶんか]の違[ちが]いなどです。先週[せんしゅう]は、日本[にほん]とカナダの学校[がっこう]の違[ちが]いについて話[はな]しました。カナダでは、授業[じゅぎょう]中[ちゅう]に質問[しつもん]しやすいと聞[き]きました。文化[ぶんか]の違[ちが]いを知[し]るのは面白[おもしろ]いです。",
+   555→      "言語交換[げんごこうかん]の効果[こうか]は大[おお]きいです。教科書[きょうかしょ]では学[まな]べない生[なま]の表現[ひょうげん]が使[つか]えます。また、話[はな]すことへの恐怖[きょうふ]が減[へ]りました。エマが中国語[ちゅうごくご]を勉強[べんきょう]していると聞[き]いて、私[わたし]も中国語[ちゅうごくご]に興味[きょうみ]を持[も]ちました。",
+   556→      "来月[らいげつ]、エマが初[はじ]めて日本[にほん]に来[き]ます。東京[とうきょう]で会[あ]って、一緒[いっしょ]に観光[かんこう]する予定[よてい]です。言葉[ことば]の壁[かべ]を越[こ]えて、友達[ともだち]になれたのは嬉[うれ]しいです。言語交換[げんごこうかん]は、言葉[ことば]だけではなく、心[こころ]の交換[こうかん]だと感[かん]じています。"
+   557→    ],
+   558→    translation: [
+   559→      "I have been using a language exchange app for six months. My partner is Emma, a Canadian. She is learning Japanese and I am learning English. Every Friday we talk for thirty minutes each.",
+   560→      "At first I was nervous. I was worried whether my English would get through. But Emma told me, \"It's okay to make mistakes.\" Since then I have gradually come to be able to speak. We gently correct each other.",
+   561→      "Topics are various. Hobbies, movies, food, cultural differences, and so on. Last week we talked about the differences between Japanese and Canadian schools. I heard that in Canada it is easy to ask questions during class. Knowing cultural differences is interesting.",
+   562→      "The effect of language exchange is big. I can use live expressions that cannot be learned from textbooks. Also, my fear of speaking decreased. Hearing that Emma is studying Chinese, I also became interested in Chinese.",
+   563→      "Next month Emma is coming to Japan for the first time. We plan to meet in Tokyo and go sightseeing together. I am happy we could become friends beyond the language barrier. I feel language exchange is an exchange of hearts, not only of words."
+   564→    ],
+   565→    questions: [
+   566→      {
+   567→        q: "How long has the writer used the language exchange app?",
+   568→        choices: ["One month", "Three months", "Six months", "One year"],
+   569→        answerIndex: 2,
+   570→        explanation: "The writer has used the app for six months (六か月前から使っています)."
+   571→      },
+   572→      {
+   573→        q: "Where is Emma from?",
+   574→        choices: ["America", "Canada", "Australia", "England"],
+   575→        answerIndex: 1,
+   576→        explanation: "Emma is a Canadian (カナダ人のエマ)."
+   577→      },
+   578→      {
+   579→        q: "What did they talk about last week?",
+   580→        choices: ["Movies", "Food", "Differences between Japanese and Canadian schools", "Hobbies"],
+   581→        answerIndex: 2,
+   582→        explanation: "Last week they talked about differences between Japanese and Canadian schools (学校の違いについて話しました)."
+   583→      },
+   584→      {
+   585→        q: "What effect did the exchange have on the writer?",
+   586→        choices: ["More fear of speaking", "Less fear of speaking", "Worse grammar", "No change"],
+   587→        answerIndex: 1,
+   588→        explanation: "The writer's fear of speaking decreased (話すことへの恐怖が減りました)."
+   589→      },
+   590→      {
+   591→        q: "What will happen next month?",
+   592→        choices: ["Emma comes to Japan", "The writer moves to Canada", "They stop talking", "They take an exam together"],
+   593→        answerIndex: 0,
+   594→        explanation: "Next month Emma is coming to Japan for the first time (エマが初めて日本に来ます)."
+   595→      }
+   596→    ]
+   597→  }
+   598→];
+   599→

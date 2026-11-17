@@ -1,0 +1,599 @@
+     1→import type { ReadingPassage } from "@/lib/types";
+     2→
+     3→// Furigana notation: kanji readings are written inline as 漢字[かんじ].
+     4→// A [reading] immediately following a run of kanji attaches to that whole run.
+     5→// Kana, katakana, punctuation, and 々 have no brackets. See types.ts & furigana.tsx.
+     6→// 10 original N4-level reading passages with comprehension questions.
+     7→
+     8→export const readingN4C: ReadingPassage[] = [
+     9→  // ───────────────────────────────────────────────────────────
+    10→  // r-n4-21 — 東京での一人暮らし (Living alone in Tokyo)
+    11→  // ───────────────────────────────────────────────────────────
+    12→  {
+    13→    id: "r-n4-21",
+    14→    title: "東京[とうきょう]での一人暮[ひとりぐ]らし",
+    15→    titleReading: "とうきょうでのひとりぐらし",
+    16→    level: "N4",
+    17→    summary: "A university student shares the freedom and loneliness of living alone in Tokyo.",
+    18→    estMinutes: 6,
+    19→    tags: ["daily life", "Tokyo", "living alone"],
+    20→    body: [
+    21→      "私[わたし]は去年[きょねん]東京[とうきょう]に引[ひ]っ越[こ]しました。大学[だいがく]に通[かよ]うためです。初[はじ]めての一人暮[ひとりぐ]らしなので、最初[さいしょ]はとても緊張[きんちょう]しました。小[ちい]さいアパートに住[す]んでいます。駅[えき]から近[ちか]くて便利[べんり]ですが、家賃[やちん]が少[すこ]し高[たか]いです。",
+    22→      "一人暮[ひとりぐ]らしの良[よ]いところは、自由[じゆう]な時間[じかん]がたくさんあることです。誰[だれ]にも邪魔[じゃま]されずに勉強[べんきょう]できます。音楽[おんがく]を聴[き]きながら本[ほん]を読[よ]むのも楽[たの]しいです。しかし、食事[しょくじ]の準備[じゅんび]が大変[たいへん]です。毎日[まいにち]料理[りょうり]を作[つく]らなければなりません。疲[つか]れていると、ついコンビニで買[か]ってしまいます。",
+    23→      "最初[さいしょ]は料理[りょうり]が上手[じょうず]にできませんでした。でも、母[はは]に電話[でんわ]で聞[き]きながら、少[すこ]しずつ上達[じょうたつ]しました。今[いま]は簡単[かんたん]な料理[りょうり]なら作[つく]れます。掃除[そうじ]や洗濯[せんたく]も自分[じぶん]でするようになりました。部屋[へや]がきれいだと、気持[きも]ちも明[あか]るくなります。",
+    24→      "時[とき]々、寂[さび]しくなることがあります。特[とく]に夜[よる]は、部屋[へや]が静[しず]かすぎて不安[ふあん]になるかもしれません。そんな時[とき]、友達[ともだち]にメッセージを送[おく]ります。週末[しゅうまつ]は友達[ともだち]と会[あ]うようにしています。人[ひと]と話[はな]すと、元気[げんき]が出[で]ます。",
+    25→      "一人暮[ひとりぐ]らしを始[はじ]めて、私[わたし]は強[つよ]くなりました。自分[じぶん]のことは自分[じぶん]でする大切[たいせつ]さが分[わ]かりました。東京[とうきょう]の生活[せいかつ]は忙[いそが]しいですが、毎日[まいにち]が新[あたら]しい発見[はっけん]です。これからも頑張[がんば]ります。"
+    26→    ],
+    27→    translation: [
+    28→      "Last year I moved to Tokyo. It is to attend university. Because it was my first time living alone, I was very nervous at first. I live in a small apartment. It is close to the station and convenient, but the rent is a little high.",
+    29→      "The good thing about living alone is that I have a lot of free time. I can study without being interrupted by anyone. Listening to music while reading a book is also fun. However, preparing meals is hard. I have to cook every day. When I am tired, I end up buying food at a convenience store.",
+    30→      "At first I could not cook well. But while asking my mother by phone, I gradually improved. Now I can make simple dishes. I also came to clean and do laundry myself. When the room is clean, my mood brightens.",
+    31→      "Sometimes I feel lonely. Especially at night, the room might be too quiet and I might feel anxious. At such times, I send a message to a friend. On weekends I try to meet friends. Talking with people gives me energy.",
+    32→      "Since starting to live alone, I have become stronger. I understood the importance of doing my own things myself. Life in Tokyo is busy, but every day is a new discovery. I will keep doing my best."
+    33→    ],
+    34→    questions: [
+    35→      {
+    36→        q: "Why did the writer move to Tokyo?",
+    37→        choices: ["To start a new job", "To attend university", "To live with family", "To study cooking"],
+    38→        answerIndex: 1,
+    39→        explanation: "The writer moved to Tokyo in order to attend university (大学に通うため)."
+    40→      },
+    41→      {
+    42→        q: "What is mentioned as a good point of living alone?",
+    43→        choices: ["Cheap rent", "A large apartment", "A lot of free time", "Mother's cooking"],
+    44→        answerIndex: 2,
+    45→        explanation: "The writer says the good thing about living alone is having a lot of free time."
+    46→      },
+    47→      {
+    48→        q: "How did the writer improve at cooking?",
+    49→        choices: ["By taking a class", "By asking their mother by phone", "By watching TV", "By eating at restaurants"],
+    50→        answerIndex: 1,
+    51→        explanation: "The writer improved by asking their mother how to cook over the phone."
+    52→      },
+    53→      {
+    54→        q: "What might happen to the writer at night?",
+    55→        choices: ["The room might be too quiet and cause anxiety", "Friends might visit unannounced", "The rent might rise", "The train might stop"],
+    56→        answerIndex: 0,
+    57→        explanation: "At night, the room might be too quiet and the writer might feel anxious (不安になるかもしれません)."
+    58→      },
+    59→      {
+    60→        q: "What did the writer learn from living alone?",
+    61→        choices: ["Tokyo is too expensive", "Cooking is unnecessary", "The importance of doing things by themselves", "Friends are not needed"],
+    62→        answerIndex: 2,
+    63→        explanation: "The writer learned the importance of doing their own things by themselves."
+    64→      }
+    65→    ]
+    66→  },
+    67→
+    68→  // ───────────────────────────────────────────────────────────
+    69→  // r-n4-22 — アルバイトの経験 (A part-time job experience)
+    70→  // ───────────────────────────────────────────────────────────
+    71→  {
+    72→    id: "r-n4-22",
+    73→    title: "アルバイトの経験[けいけん]",
+    74→    titleReading: "あるばいとのけいけん",
+    75→    level: "N4",
+    76→    summary: "A high school student reflects on lessons learned while working at a convenience store.",
+    77→    estMinutes: 6,
+    78→    tags: ["work", "part-time job", "experience"],
+    79→    body: [
+    80→      "私[わたし]は高校[こうこう]生[せい]の時[とき]から、コンビニでアルバイトをしています。週[しゅう]に三回[さんかい]、夕方[ゆうがた]から夜[よる]まで働[はたら]きます。最初[さいしょ]はレジの操作[そうさ]が分[わ]からなくて、困[こま]りました。でも、先輩[せんぱい]が丁寧[ていねい]に教[おし]えてくれました。今[いま]では一人[ひとり]でできるようになりました。",
+    81→      "仕事[しごと]の内容[ないよう]は色[いろ]いろあります。商品[しょうひん]を並[なら]べたり、レジを打[う]ったり、掃除[そうじ]をしたりします。忙[いそが]しい時間[じかん]は、立[た]ち止[と]まる暇[ひま]がありません。でも、暇[ひま]な時間[じかん]に商品[しょうひん]を並[なら]べながら先輩[せんぱい]と話[はな]すのは楽[たの]しいです。",
+    82→      "お客[きゃく]さんの中[なか]には、元気[げんき]に挨拶[あいさつ]してくれる人[ひと]もいます。そんな人[ひと]に会[あ]うと嬉[うれ]しいです。しかし、時[とき]々怒[おこ]る人[ひと]もいます。お釣[つり]りを間違[まちが]えた時[とき]、文句[もんく]を言[い]われました。私[わたし]は深[ふか]く謝[あやま]りました。失敗[しっぱい]しないように、もっと注意[ちゅうい]しようと決[き]めました。",
+    83→      "アルバイトを通[とお]して、社会[しゃかい]のルールを学[まな]びました。挨拶[あいさつ]の大切[たいせつ]さ、時間[じかん]を守[まも]ること、責任[せきにん]を持[も]つことです。また、お金[かね]を稼[かせ]ぐことの大変[たいへん]さも分[わ]かりました。自分[じぶん]で稼[かせ]いだお金[かね]で買[か]った本[ほん]は、特別[とくべつ]に大切[たいせつ]に感[かん]じます。",
+    84→      "これからも、勉強[べんきょう]とアルバイトの両方[りょうほう]を頑張[がんば]りたいです。もしかすると、コンビニ以外[いがい]の仕事[しごと]も経験[けいけん]するかもしれません。色[いろ]いろな仕事[しごと]をしてみて、将来[しょうらい]の夢[ゆめ]を見[み]つけたいです。"
+    85→    ],
+    86→    translation: [
+    87→      "Since high school, I have been working part-time at a convenience store. Three times a week, I work from evening to night. At first I did not understand how to operate the register and struggled. But a senior colleague kindly taught me. Now I can do it by myself.",
+    88→      "There are various tasks. I arrange products, work the register, and clean. During busy hours, I have no time to stop. But during slow hours, talking with senior colleagues while arranging products is fun.",
+    89→      "Among customers, there are people who greet me cheerfully. I am happy when I meet such people. However, sometimes there are also people who get angry. When I gave the wrong change, I was complained to. I apologized deeply. I decided to be more careful so as not to fail.",
+    90→      "Through the part-time job, I learned society's rules. The importance of greetings, keeping time, and having responsibility. I also understood the difficulty of earning money. Books bought with money I earned myself feel especially precious.",
+    91→      "From now on too, I want to do my best in both studying and part-time work. Perhaps I might also experience work other than at a convenience store. I want to try various jobs and find my dream for the future."
+    92→    ],
+    93→    questions: [
+    94→      {
+    95→        q: "Where does the writer work part-time?",
+    96→        choices: ["A restaurant", "A convenience store", "A bookstore", "A school"],
+    97→        answerIndex: 1,
+    98→        explanation: "The writer works part-time at a convenience store (コンビニ)."
+    99→      },
+   100→      {
+   101→        q: "What did the writer not understand at first?",
+   102→        choices: ["How to clean the floor", "How to arrange products", "How to operate the register", "How to greet customers"],
+   103→        answerIndex: 2,
+   104→        explanation: "At first the writer did not know how to operate the register (レジの操作)."
+   105→      },
+   106→      {
+   107→        q: "What happened when the writer gave the wrong change?",
+   108→        choices: ["The customer smiled", "The customer complained", "The senior praised the writer", "Nothing happened"],
+   109→        answerIndex: 1,
+   110→        explanation: "When the writer gave the wrong change, a customer complained (文句を言われた)."
+   111→      },
+   112→      {
+   113→        q: "What did the writer learn through the part-time job?",
+   114→        choices: ["Society's rules and the difficulty of earning money", "How to cook", "How to drive a car", "How to speak English"],
+   115→        answerIndex: 0,
+   116→        explanation: "The writer learned society's rules and the difficulty of earning money."
+   117→      },
+   118→      {
+   119→        q: "What might the writer do in the future?",
+   120→        choices: ["Quit all part-time work", "Only study at home", "Experience work other than at a convenience store", "Move to another city"],
+   121→        answerIndex: 2,
+   122→        explanation: "The writer might also experience work other than at a convenience store (コンビニ以外の仕事も経験するかもしれません)."
+   123→      }
+   124→    ]
+   125→  },
+   126→
+   127→  // ───────────────────────────────────────────────────────────
+   128→  // r-n4-23 — 転職の経験 (Changing jobs)
+   129→  // ───────────────────────────────────────────────────────────
+   130→  {
+   131→    id: "r-n4-23",
+   132→    title: "転職[てんしょく]の経験[けいけん]",
+   133→    titleReading: "てんしょくのけいけん",
+   134→    level: "N4",
+   135→    summary: "After five years at one company, the writer takes the leap to change jobs and grows.",
+   136→    estMinutes: 7,
+   137→    tags: ["work", "career", "challenge"],
+   138→    body: [
+   139→      "私[わたし]は三[みっ]年[ねん]前[まえ]、同[おな]じ会社[かいしゃ]で五年[ごねん]働[はたら]いた後[あと]、転職[てんしょく]しました。最初[さいしょ]の会社[かいしゃ]は、給料[きゅうりょう]も悪[わる]くなかったし、同僚[どうりょう]も親切[しんせつ]でした。しかし、仕事[しごと]の内容[ないよう]に満足[まんぞく]できませんでした。毎日[まいにち]同[おな]じことの繰[く]り返[かえ]しで、成長[せいちょう]できないと感[かん]じたからです。",
+   140→      "転職[てんしょく]を決[き]めるまで、とても迷[まよ]いました。家族[かぞく]や友達[ともだち]に相談[そうだん]しました。父[ちち]は「若[わか]い時[とき]にチャレンジした方[ほう]がいい」と言[い]ってくれました。もし失敗[しっぱい]しても、また新[あたら]しい道[みち]が見[み]つかるかもしれないと思[おも]いました。それで、決心[けっしん]しました。",
+   141→      "転職[てんしょく]活動[かつどう]は大変[たいへん]でした。履歴書[りれきしょ]を書[か]き直[なお]したり、面接[めんせつ]の練習[れんしゅう]をしたりしました。面接[めんせつ]では、自分[じぶん]の強[つよ]みを上手[じょうず]に説明[せつめい]する必要[ひつよう]があります。緊張[きんちょう]しながら、何[なん]回[かい]も会社[かいしゃ]を受[う]けました。不合格[ふごうかく]の時[とき]は、落[お]ち込[こ]みました。",
+   142→      "しかし、失敗[しっぱい]からも学[まな]べました。面接[めんせつ]の後[あと]、自分[じぶん]の答[こた]えを振[ふ]り返[かえ]って、次[つぎ]の機会[きかい]に活[いか]かしました。続[つづ]けているうちに、やっと希望[きぼう]する会社[かいしゃ]から内定[ないてい]をもらいました。嬉[うれ]しくて泣[な]いてしまいました。",
+   143→      "今[いま]は新[あたら]しい会社[かいしゃ]で働[はたら]いています。仕事[しごと]が難[むずか]しいですが、毎日[まいにち]新[あたら]しいことを学[まな]べます。転職[てんしょく]して本当[ほんとう]に良[よ]かったと思[おも]います。変[か]わることを恐[おそ]れなければ、新[あたら]しい世界[せかい]が見[み]えるということを学[まな]びました。"
+   144→    ],
+   145→    translation: [
+   146→      "Three years ago, after working at the same company for five years, I changed jobs. At the first company, the salary was not bad and colleagues were kind. But I was not satisfied with the work content. It was the same thing repeated every day, and I felt I could not grow.",
+   147→      "Until deciding to change jobs, I was very lost. I consulted with my family and friends. My father said, \"It is better to challenge while you are young.\" I thought that even if I failed, I might find a new path. So, I made up my mind.",
+   148→      "Job hunting was hard. I rewrote my resume and practiced interviews. In interviews, I need to explain my strengths well. While nervous, I applied to many companies. When I was rejected, I was down.",
+   149→      "However, I also learned from failures. After interviews, I reflected on my answers and applied them to the next opportunity. As I continued, I finally got a job offer from my desired company. I was so happy I cried.",
+   150→      "Now I work at a new company. The work is hard, but I can learn new things every day. I truly think changing jobs was a good decision. I learned that if you do not fear change, you can see a new world."
+   151→    ],
+   152→    questions: [
+   153→      {
+   154→        q: "How long did the writer work at the first company?",
+   155→        choices: ["Three years", "Five years", "Ten years", "One year"],
+   156→        answerIndex: 1,
+   157→        explanation: "The writer worked at the first company for five years before changing jobs."
+   158→      },
+   159→      {
+   160→        q: "Why was the writer not satisfied with the first company?",
+   161→        choices: ["The salary was too low", "Colleagues were unkind", "The work was repetitive and did not allow growth", "The office was too far"],
+   162→        answerIndex: 2,
+   163→        explanation: "The work was the same thing repeated every day, and the writer felt they could not grow."
+   164→      },
+   165→      {
+   166→        q: "What did the writer's father say?",
+   167→        choices: ["Stay at the same company", "It is better to challenge while young", "Find a job with higher pay", "Stop working for a while"],
+   168→        answerIndex: 1,
+   169→        explanation: "The father said it is better to challenge while young (若い時にチャレンジした方がいい)."
+   170→      },
+   171→      {
+   172→        q: "How did the writer feel when getting the job offer?",
+   173→        choices: ["So happy they cried", "Calm and indifferent", "Angry about the salary", "Worried about the work"],
+   174→        answerIndex: 0,
+   175→        explanation: "When the writer got the offer from the desired company, they were so happy they cried."
+   176→      },
+   177→      {
+   178→        q: "What did the writer learn from changing jobs?",
+   179→        choices: ["Change is always bad", "If you do not fear change, you can see a new world", "Money is the most important thing", "Interviews are easy"],
+   180→        answerIndex: 1,
+   181→        explanation: "The writer learned that without fearing change, a new world can be seen."
+   182→      }
+   183→    ]
+   184→  },
+   185→
+   186→  // ───────────────────────────────────────────────────────────
+   187→  // r-n4-24 — 文化交流のイベント (A cultural exchange event)
+   188→  // ───────────────────────────────────────────────────────────
+   189→  {
+   190→    id: "r-n4-24",
+   191→    title: "文化交流[ぶんかこうりゅう]のイベント",
+   192→    titleReading: "ぶんかこうりゅうのいべんと",
+   193→    level: "N4",
+   194→    summary: "At a university cultural exchange event, students share food, dance, and calligraphy across borders.",
+   195→    estMinutes: 7,
+   196→    tags: ["culture", "event", "friendship"],
+   197→    body: [
+   198→      "先月[せんげつ]、大学[だいがく]で文化交流[ぶんかこうりゅう]のイベントがありました。色[いろ]いろな国[くに]の学生[がくせい]が集[あつ]まって、お互[たが]いの文化[ぶんか]を紹介[しょうかい]し合[あ]いました。私[わたし]は日本[にほん]の代表[だいひょう]として、書道[しょどう]を紹介[しょうかい]しました。緊張[きんちょう]しましたが、楽[たの]しい経験[けいけん]でした。",
+   199→      "会場[かいじょう]には、色[いろ]いろな国[くに]のブースがありました。韓国[かんこく]のブースではキムチを味[あじ]わえました。フランスのブースでは、簡単[かんたん]なフランス語[ご]を学[まな]びました。ブラジルの学生[がくせい]が、情熱[じょうねつ]的[てき]にダンスを披露[ひろう]していました。それぞれの文化[ぶんか]がとても魅力的[みりょくてき]でした。",
+   200→      "私[わたし]のブースでは、お客[きゃく]さんに自分[じぶん]の名前[なまえ]を漢字[かんじ]で書[か]いてあげました。中国[ちゅうごく]からの学生[がくせい]は、漢字[かんじ]を見[み]て「私[わたし]の国[くに]の字[じ]と似[に]ている！」と驚[おどろ]いていました。アメリカからの学生[がくせい]は、初[はじ]めて筆[ふで]を持[も]ったそうで、難[むずか]しいと言[い]いながらも嬉[うれ]しそうでした。",
+   201→      "文化[ぶんか]が違[ちが]っても、お互[たが]いに興味[きょうみ]を持[も]てば、すぐに友達[ともだち]になれると分[わ]かりました。言葉[ことば]が通[つう]じなくても、笑顔[えがお]や身振[みぶ]りで伝[つた]わることもたくさんあります。もしかすると、国[くに]が違[ちが]っても、人[ひと]の気持[きも]ちは変[か]わらないのかもしれません。",
+   202→      "このイベントをきっかけに、私[わたし]は外国[がいこく]の文化[ぶんか]に興味[きょうみ]を持[も]ちました。来年[らいねん]は、私[わたし]が外国[がいこく]に留学[りゅうがく]するかもしれません。色[いろ]いろな国[くに]の人[ひと]と交流[こうりゅう]して、視野[しや]を広[ひろ]げたいです。世界[せかい]は広[ひろ]いと実感[じっかん]しました。"
+   203→    ],
+   204→    translation: [
+   205→      "Last month, there was a cultural exchange event at the university. Students from various countries gathered and introduced each other's cultures. As Japan's representative, I introduced calligraphy. I was nervous, but it was a fun experience.",
+   206→      "At the venue, there were booths from various countries. At the Korean booth, I could taste kimchi. At the French booth, I learned simple French phrases. A student from Brazil passionately performed a dance. Each culture was very attractive.",
+   207→      "At my booth, I wrote visitors' names in kanji. A student from China was surprised, saying, \"It looks similar to the characters in my country!\" A student from America said it was their first time holding a brush, and although they said it was hard, they looked happy.",
+   208→      "I understood that even if cultures differ, if we have interest in each other, we can become friends quickly. Even if language does not communicate, there are many things conveyed through smiles and gestures. Perhaps, even if countries differ, people's feelings might not change.",
+   209→      "Triggered by this event, I became interested in foreign cultures. Next year, I might study abroad. I want to interact with people from various countries and broaden my perspective. I felt that the world is wide."
+   210→    ],
+   211→    questions: [
+   212→      {
+   213→        q: "What did the writer introduce at the event?",
+   214→        choices: ["Karate", "Calligraphy", "Cooking", "Tea ceremony"],
+   215→        answerIndex: 1,
+   216→        explanation: "As Japan's representative, the writer introduced calligraphy (書道)."
+   217→      },
+   218→      {
+   219→        q: "What could be enjoyed at the Korean booth?",
+   220→        choices: ["Sushi", "Kimchi", "Croissants", "Tacos"],
+   221→        answerIndex: 1,
+   222→        explanation: "At the Korean booth, visitors could taste kimchi."
+   223→      },
+   224→      {
+   225→        q: "What surprised the student from China?",
+   226→        choices: ["The kanji looked similar to their country's characters", "The brush was very cheap", "The writer spoke Chinese", "Calligraphy was easy"],
+   227→        answerIndex: 0,
+   228→        explanation: "The Chinese student was surprised that the kanji looked similar to the characters in their country."
+   229→      },
+   230→      {
+   231→        q: "What did the writer realize about people from different cultures?",
+   232→        choices: ["They cannot be friends", "They have completely different feelings", "Becoming friends is easy if there is mutual interest", "Only language matters"],
+   233→        answerIndex: 2,
+   234→        explanation: "The writer realized that even with cultural differences, becoming friends is easy if there is mutual interest."
+   235→      },
+   236→      {
+   237→        q: "What might the writer do next year?",
+   238→        choices: ["Quit university", "Study abroad", "Host another event alone", "Stop learning languages"],
+   239→        answerIndex: 1,
+   240→        explanation: "The writer might study abroad next year (留学するかもしれません)."
+   241→      }
+   242→    ]
+   243→  },
+   244→
+   245→  // ───────────────────────────────────────────────────────────
+   246→  // r-n4-25 — テクノロジーと毎日の生活 (Technology and daily life)
+   247→  // ───────────────────────────────────────────────────────────
+   248→  {
+   249→    id: "r-n4-25",
+   250→    title: "テクノロジーと毎日[まいにち]の生活[せいかつ]",
+   251→    titleReading: "てくのろじーとまいにちのせいかつ",
+   252→    level: "N4",
+   253→    summary: "A student reflects on how smartphones and online tools bring both convenience and concerns.",
+   254→    estMinutes: 6,
+   255→    tags: ["technology", "daily life", "balance"],
+   256→    body: [
+   257→      "最近[さいきん]、テクノロジーは私[わたし]たちの生活[せいかつ]を大[おお]きく変[か]えました。スマートフォン一[いっ]台[だい]で、色[いろ]いろなことができます。私[わたし]も毎日[まいにち]スマホを使[つか]っています。電車[でんしゃ]に乗[の]りながら、ニュースを読[よ]んだり、音楽[おんがく]を聴[き]いたりします。便利[べんり]な反面[はんめん]、時間[じかん]を使[つか]いすぎてしまうこともあります。",
+   258→      "特[とく]に便利[べんり]だと感[かん]じるのは、ネットショッピングです。欲[ほ]しいものがあれば、ボタン一[ひと]つで買[か]えます。重[おも]い荷物[にもつ]を持[も]って歩[ある]かなくても、家[いえ]まで届[とど]けてくれます。ただ、財布[さいふ]を見[み]ながら気[き]をつけないと、使[つか]いすぎるかもしれません。",
+   259→      "また、オンラインで勉強[べんきょう]することもできるようになりました。私[わたし]は英語[えいご]のオンラインレッスンを受[う]けています。先生[せんせい]は海外[かいがい]に住[す]んでいますが、画面[がめん]を通[とお]して話[はな]せます。自分[じぶん]の部屋[へや]にいながら、外国[がいこく]の文化[ぶんか]に触[ふ]れられるのは素晴[すば]らしいです。",
+   260→      "しかし、テクノロジーには問題[もんだい]もあります。目[め]が疲[つか]れるし、人[ひと]と直接[ちょくせつ]話[はな]す機会[きかい]が減[へ]りました。画面[がめん]ばかり見[み]ていると、周[まわ]りの人[ひと]の気持[きも]ちに気[き]づかないかもしれません。私[わたし]も、家族[かぞく]と食事[しょくじ]中[ちゅう]にスマホを見[み]てしまい、怒[おこ]られたことがあります。",
+   261→      "これからは、テクノロジーを上手[じょうず]に使[つか]いながら、人[ひと]との直接[ちょくせつ]交流[こうりゅう]も大切[たいせつ]にしたいです。便利[べんり]さに頼[たよ]りすぎず、時[とき]々スマホを置[お]いて、外[そと]に出[で]ようと思[おも]います。バランスの取[と]れた生活[せいかつ]が一番[いちばん]だと信[しん]じています。"
+   262→    ],
+   263→    translation: [
+   264→      "Recently, technology has greatly changed our lives. With one smartphone, you can do various things. I also use my smartphone every day. While riding the train, I read news and listen to music. Convenient on the other hand, I sometimes end up using too much time.",
+   265→      "What feels especially convenient is online shopping. If I want something, I can buy it with one button. I do not have to walk carrying heavy luggage; it gets delivered to my home. But if I do not watch my wallet, I might overspend.",
+   266→      "Also, I can now study online. I take English online lessons. The teacher lives overseas, but I can talk through the screen. Touching foreign culture while in my own room is wonderful.",
+   267→      "However, technology also has problems. My eyes get tired, and chances to talk directly with people have decreased. If I keep looking at the screen, I might not notice the feelings of people around me. I also once got scolded for looking at my smartphone during a family meal.",
+   268→      "From now on, while using technology well, I also want to cherish direct interaction with people. Not relying too much on convenience, I think I will sometimes put down the smartphone and go outside. I believe a balanced life is best."
+   269→    ],
+   270→    questions: [
+   271→      {
+   272→        q: "What does the writer do while riding the train?",
+   273→        choices: ["Sleep and eat", "Read news and listen to music", "Talk loudly on the phone", "Watch movies with sound on"],
+   274→        answerIndex: 1,
+   275→        explanation: "While riding the train, the writer reads news and listens to music."
+   276→      },
+   277→      {
+   278→        q: "What does the writer find especially convenient?",
+   279→        choices: ["Online shopping", "Paper letters", "Cassette tapes", "Public phones"],
+   280→        answerIndex: 0,
+   281→        explanation: "The writer finds online shopping especially convenient."
+   282→      },
+   283→      {
+   284→        q: "Where does the writer's online English teacher live?",
+   285→        choices: ["Next door", "In the same city", "Overseas", "At the university"],
+   286→        answerIndex: 2,
+   287→        explanation: "The online English teacher lives overseas."
+   288→      },
+   289→      {
+   290→        q: "Why was the writer scolded by family?",
+   291→        choices: ["For looking at the smartphone during a meal", "For arriving home too early", "For studying too much", "For buying too many books"],
+   292→        answerIndex: 0,
+   293→        explanation: "The writer was scolded for looking at the smartphone during a family meal."
+   294→      },
+   295→      {
+   296→        q: "What does the writer believe is best?",
+   297→        choices: ["Using technology all day", "Avoiding all technology", "A balanced life", "Only talking online"],
+   298→        answerIndex: 2,
+   299→        explanation: "The writer believes a balanced life is best (バランスの取れた生活)."
+   300→      }
+   301→    ]
+   302→  },
+   303→
+   304→  // ───────────────────────────────────────────────────────────
+   305→  // r-n4-26 — 環境への意識 (Environmental awareness)
+   306→  // ───────────────────────────────────────────────────────────
+   307→  {
+   308→    id: "r-n4-26",
+   309→    title: "環境[かんきょう]への意識[いしき]",
+   310→    titleReading: "かんきょうへのいしき",
+   311→    level: "N4",
+   312→    summary: "After seeing plastic waste on TV, the writer begins small eco-friendly habits that spread to friends.",
+   313→    estMinutes: 7,
+   314→    tags: ["environment", "habit", "lifestyle"],
+   315→    body: [
+   316→      "昔[むかし]、私[わたし]は環境[かんきょう]問題[もんだい]にあまり関心[かんしん]がありませんでした。でも、テレビで海[うみ]のプラスチックゴミのニュースを見[み]て、考[かんが]えが変[か]わりました。もし地球[ちきゅう]が汚[よご]れたままなら、未来[みらい]の子[こ]どもたちが困[こま]るかもしれないと思[おも]いました。それから、小[ちい]さいことから始[はじ]めました。",
+   317→      "まず、エコバッグを持[も]って歩[ある]くようにしました。スーパーで袋[ふくろ]をもらわないようにするためです。最初[さいしょ]は忘[わす]れることがありましたが、今[いま]は習慣[しゅうかん]になりました。また、マイボトルで飲[の]み物[もの]を持[も]っていくようにしています。プラスチックごみを減[へ]らすのは、意外[いがい]と簡単[かんたん]です。",
+   318→      "家[いえ]でも、節電[せつでん]と節水[せっすい]を心[こころ]がけています。使[つか]わない部屋[へや]の電気[でんき]を消[け]したり、お風呂[ふろ]の残[のこ]り湯[ゆ]を洗濯[せんたく]に使[つか]ったりします。夏[なつ]は冷房[れいぼう]の温度[おんど]を高[たか]めに設定[せってい]します。これだけでも、電気代[でんきだい]が安[やす]くなりました。",
+   319→      "食[た]べ物[もの]にも気[き]をつけています。肉[にく]の消費[しょうひ]を減[へ]らして、野菜[やさい]を多[おお]く食[た]べるようにしました。週[しゅう]に二[ふた]回[かい]はベジタリアンの日[ひ]にしています。最初[さいしょ]は物足[ものた]りなかったですが、今[いま]は慣[な]れました。環境[かんきょう]にも体[からだ]にも良[よ]いです。",
+   320→      "友達[ともだち]にも「一緒[いっしょ]にエコバッグを使[つか]おう」と誘[さそ]いました。最初[さいしょ]は面倒[めんどう]だと言[い]っていましたが、今[いま]は少[すこ]しずつ協力[きょうりょく]してくれています。一人[ひとり]の力[ちから]は小[ちい]さいですが、みんなが続[つづ]ければ大[おお]きな変化[へんか]になります。地球[ちきゅう]の未来[みらい]のために、これからも続[つづ]けたいです。"
+   321→    ],
+   322→    translation: [
+   323→      "In the past, I was not very interested in environmental problems. But watching TV news about plastic waste in the sea changed my thinking. I thought if Earth remains polluted, future children might be in trouble. After that, I started with small things.",
+   324→      "First, I started carrying an eco bag. This is so I do not receive a bag at the supermarket. At first I forgot sometimes, but now it has become a habit. Also, I bring drinks in a my-bottle. Reducing plastic waste is surprisingly easy.",
+   325→      "At home too, I am mindful of saving electricity and water. I turn off lights in unused rooms and use leftover bathwater for laundry. In summer, I set the air conditioning temperature a little higher. With just this, the electricity bill got cheaper.",
+   326→      "I also pay attention to food. I reduced meat consumption and try to eat more vegetables. Twice a week I make it a vegetarian day. At first it felt insufficient, but now I am used to it. It is good for both the environment and the body.",
+   327→      "I also invited friends, \"Let's use eco bags together.\" At first they said it was troublesome, but now they are gradually cooperating. One person's power is small, but if everyone continues, it becomes a big change. For the future of Earth, I want to continue from now on."
+   328→    ],
+   329→    questions: [
+   330→      {
+   331→        q: "What changed the writer's thinking?",
+   332→        choices: ["A book about animals", "TV news about plastic waste in the sea", "A school lecture", "A friend's advice"],
+   333→        answerIndex: 1,
+   334→        explanation: "TV news about plastic waste in the sea changed the writer's thinking."
+   335→      },
+   336→      {
+   337→        q: "What does the writer now carry?",
+   338→        choices: ["A paper bag", "An eco bag", "A plastic bottle", "A wallet only"],
+   339→        answerIndex: 1,
+   340→        explanation: "The writer now carries an eco bag instead of taking bags from the supermarket."
+   341→      },
+   342→      {
+   343→        q: "How does the writer save electricity in summer?",
+   344→        choices: ["Turning off the refrigerator", "Setting the air conditioning temperature higher", "Using candles only", "Never using lights"],
+   345→        answerIndex: 1,
+   346→        explanation: "In summer, the writer sets the air conditioning temperature higher to save electricity."
+   347→      },
+   348→      {
+   349→        q: "How many vegetarian days does the writer have per week?",
+   350→        choices: ["Once", "Twice", "Three times", "Every day"],
+   351→        answerIndex: 1,
+   352→        explanation: "The writer has vegetarian days twice a week."
+   353→      },
+   354→      {
+   355→        q: "What does the writer believe about small actions?",
+   356→        choices: ["They are useless", "If everyone continues, they become a big change", "Only big actions matter", "Friends should not join"],
+   357→        answerIndex: 1,
+   358→        explanation: "The writer believes that if everyone continues small actions, they become a big change."
+   359→      }
+   360→    ]
+   361→  },
+   362→
+   363→  // ───────────────────────────────────────────────────────────
+   364→  // r-n4-27 — 思い出の先生 (A memorable teacher)
+   365→  // ───────────────────────────────────────────────────────────
+   366→  {
+   367→    id: "r-n4-27",
+   368→    title: "思[おも]い出[で]の先生[せんせい]",
+   369→    titleReading: "おもいでのせんせい",
+   370→    level: "N4",
+   371→    summary: "A high school history teacher's words guide a student toward a future in teaching.",
+   372→    estMinutes: 6,
+   373→    tags: ["school", "teacher", "memory"],
+   374→    body: [
+   375→      "私[わたし]には、高校[こうこう]時代[じだい]の思[おも]い出[で]の先生[せんせい]がいます。田中[たなか]先生[せんせい]という、日本史[にほんし]の先生[せんせい]でした。田中[たなか]先生[せんせい]は厳[きび]しいですが、とても面白[おもしろ]い授業[じゅぎょう]をしていました。歴史[れきし]の事実[じじつ]を、まるで物語[ものがたり]のように話[はな]してくれました。私[わたし]は先生[せんせい]の授業[じゅぎょう]が大好[だいす]きでした。",
+   376→      "田中[たなか]先生[せんせい]は、ただ年号[ねんごう]を覚[おぼ]えさせるのではなく、なぜその出来事[できごと]が起[お]きたかを考[かんが]えさせました。私[わたし]たちが自分[じぶん]で考[かんが]えるように、質問[しつもん]を投[な]げかけてくれました。もし分[わ]からなくても、焦[あせ]らず待[ま]ってくれました。間違[まちが]えた答[こた]えでも、「その考[かんが]え方[かた]は面白[おもしろ]いね」と褒[ほ]めてくれました。",
+   377→      "特[とく]に忘[わす]れられないのは、私[わたし]が進路[しんろ]に迷[まよ]っていた時[とき]のことです。私[わたし]は自分[じぶん]に自信[じしん]がありませんでした。田中[たなか]先生[せんせい]は、「君[きみ]には、人[ひと]の気持[きも]ちを感[かん]じ取[と]る力[ちから]がある。その力[ちから]を生[い]かせる道[みち]を見[み]つけなさい」と言[い]ってくれました。その言葉[ことば]を聞[き]いた時[とき]、私[わたし]は泣[な]きそうになりました。",
+   378→      "その言葉[ことば]に励[はげ]まされて、私[わたし]は教師[きょうし]になることを決[き]めました。田中[たなか]先生[せんせい]のように、生徒[せいと]一人[ひとり]一人[ひとり]の可能性[かのうせい]を引[ひ]き出[だ]す先生[せんせい]になりたいです。今[いま]、私[わたし]は大学[だいがく]で教育学[きょういくがく]を勉強[べんきょう]しています。大変[たいへん]ですが、夢[ゆめ]に向[む]かって歩[ある]いています。",
+   379→      "田中[たなか]先生[せんせい]とは、今[いま]も年賀状[ねんがじょう]のやり取[と]りをしています。先生[せんせい]からの言葉[ことば]は、いつも私[わたし]に力[ちから]をくれます。もしかすると、いつか田中[たなか]先生[せんせい]に教[おし]えてもらったように、私[わたし]も誰[だれ]かの思[おも]い出[で]の先生[せんせい]になるかもしれません。"
+   380→    ],
+   381→    translation: [
+   382→      "I have a memorable teacher from high school days. It was a Japanese history teacher named Tanaka. Tanaka-sensei was strict but gave very interesting classes. He talked about historical facts as if telling a story. I loved his classes.",
+   383→      "Tanaka-sensei did not just have us memorize years; he made us think about why events happened. He threw out questions so that we would think for ourselves. Even if we did not understand, he waited without rushing. Even for wrong answers, he praised, \"That way of thinking is interesting.\"",
+   384→      "Particularly unforgettable was when I was lost about my future path. I lacked self-confidence. Tanaka-sensei told me, \"You have the power to sense people's feelings. Find a path that uses that power.\" When I heard those words, I almost cried.",
+   385→      "Encouraged by those words, I decided to become a teacher. Like Tanaka-sensei, I want to be a teacher who brings out the potential of each student. Now I study pedagogy at university. It is hard, but I am walking toward my dream.",
+   386→      "I still exchange New Year's cards with Tanaka-sensei. His words always give me strength. Perhaps someday, just as I was taught by Tanaka-sensei, I might become someone's memorable teacher too."
+   387→    ],
+   388→    questions: [
+   389→      {
+   390→        q: "What subject did Tanaka-sensei teach?",
+   391→        choices: ["Mathematics", "English", "Japanese history", "Science"],
+   392→        answerIndex: 2,
+   393→        explanation: "Tanaka-sensei was a Japanese history teacher (日本史の先生)."
+   394→      },
+   395→      {
+   396→        q: "How did Tanaka-sensei teach history?",
+   397→        choices: ["Only memorizing years", "Making students think why events happened", "Reading from a textbook silently", "Showing videos only"],
+   398→        answerIndex: 1,
+   399→        explanation: "Tanaka-sensei made students think about why events happened, not just memorize years."
+   400→      },
+   401→      {
+   402→        q: "What did the writer lack when lost about their future path?",
+   403→        choices: ["Money", "Time", "Self-confidence", "Friends"],
+   404→        answerIndex: 2,
+   405→        explanation: "When lost about the future path, the writer lacked self-confidence (自信がなかった)."
+   406→      },
+   407→      {
+   408→        q: "What did the writer decide to become?",
+   409→        choices: ["A doctor", "A teacher", "A lawyer", "A scientist"],
+   410→        answerIndex: 1,
+   411→        explanation: "Encouraged by Tanaka-sensei's words, the writer decided to become a teacher."
+   412→      },
+   413→      {
+   414→        q: "What might the writer become someday?",
+   415→        choices: ["A famous actor", "Someone's memorable teacher", "A history textbook author", "A principal quickly"],
+   416→        answerIndex: 1,
+   417→        explanation: "The writer might become someone's memorable teacher, just like Tanaka-sensei (誰かの思い出の先生になるかもしれません)."
+   418→      }
+   419→    ]
+   420→  },
+   421→
+   422→  // ───────────────────────────────────────────────────────────
+   423→  // r-n4-28 — 四季の変わり目 (The changing seasons)
+   424→  // ───────────────────────────────────────────────────────────
+   425→  {
+   426→    id: "r-n4-28",
+   427→    title: "四季[しき]の変[か]わり目[め]",
+   428→    titleReading: "しきのかわりめ",
+   429→    level: "N4",
+   430→    summary: "A nature lover describes how each turn of Japan's four seasons brings fresh discoveries.",
+   431→    estMinutes: 7,
+   432→    tags: ["nature", "seasons", "culture"],
+   433→    body: [
+   434→      "日本[にほん]には四季[しき]があります。私[わたし]は、季節[きせつ]の変[か]わり目[め]が好[す]きです。毎年[まいとし]同[おな]じ季節[きせつ]が来[く]るのに、そのたびに新[あたら]しい発見[はっけん]があります。自然[しぜん]が少[すこ]しずつ変[か]わっていく様子[ようす]を見[み]るのが楽[たの]しいです。",
+   435→      "春[はる]から夏[なつ]への変[か]わり目[め]は、桜[さくら]が散[ち]って、葉[は]が茂[しげ]る時[とき]です。暑[あつ]さがだんだん強[つよ]くなっていきます。私[わたし]は、半袖[はんそで]のシャツを出[だ]しながら、夏[なつ]の準備[じゅんび]をします。セミの声[こえ]が聞[き]こえると、いよいよ夏[なつ]だと感[かん]じます。もしかすると、夏[なつ]が一番[いちばん]好[す]きな季節[きせつ]かもしれません。",
+   436→      "夏[なつ]から秋[あき]への変[か]わり目[め]は、風[かぜ]が涼[すず]しくなる時[とき]です。セミの声[こえ]が止[や]み、虫[むし]の音[ね]が聞[き]こえ始[はじ]めます。空[そら]が高[たか]くなり、秋[あき]の雲[くも]が流[なが]れます。私[わたし]は、この時期[じき]の食[た]べ物[もの]が大好[だいす]きです。栗[くり]や柿[かき]など、秋[あき]の味[あじ]を楽[たの]しみながら、本[ほん]を読[よ]む時間[じかん]は最高[さいこう]です。",
+   437→      "秋[あき]から冬[ふゆ]への変[か]わり目[め]は、木[き]の葉[は]が落[お]ちて、空[そら]が灰色[はいいろ]になる時[とき]です。寒[さむ]くなると、家[いえ]で過[す]ごす時間[じかん]が増[ふ]えます。こたつに入[はい]りながら、みかんを食[た]べるのは、日本[にほん]の冬[ふゆ]の風物詩[ふうぶつし]です。年末[ねんまつ]になると、今年[ことし]を振[ふ]り返[かえ]り、来年[らいねん]の目標[もくひょう]を考[かんが]えます。",
+   438→      "四季[しき]があるからこそ、日本[にほん]の文化[ぶんか]は豊[ゆた]かだと私[わたし]は思[おも]います。和歌[わか]や俳句[はいく]にも、季節[きせつ]の言葉[ことば]がたくさん使[つか]われています。これからも、季節[きせつ]の移[うつ]り変[か]わりを感[かん]じながら、毎日[まいにち]を大切[たいせつ]に生[い]きたいです。"
+   439→    ],
+   440→    translation: [
+   441→      "Japan has four seasons. I like the changing of seasons. Every year the same seasons come, but each time there are new discoveries. Watching nature gradually change is fun.",
+   442→      "The change from spring to summer is when cherry blossoms scatter and leaves grow thick. The heat gradually increases. While taking out short-sleeve shirts, I prepare for summer. When I hear cicada voices, I feel it is finally summer. Perhaps summer might be my favorite season.",
+   443→      "The change from summer to autumn is when the wind becomes cool. Cicada voices stop, and insect sounds begin. The sky gets higher, and autumn clouds flow. I love food from this time. Enjoying autumn flavors like chestnuts and persimmons while reading a book is the best.",
+   444→      "The change from autumn to winter is when leaves fall and the sky turns gray. When it gets cold, time spent at home increases. Getting into a kotatsu while eating mandarin oranges is a Japanese winter tradition. At year-end, I look back on this year and think about next year's goals.",
+   445→      "Precisely because there are four seasons, I think Japanese culture is rich. In waka and haiku too, many seasonal words are used. From now on too, feeling the changing of seasons, I want to live each day preciously."
+   446→    ],
+   447→    questions: [
+   448→      {
+   449→        q: "What does the writer like?",
+   450→        choices: ["The heat of summer", "The changing of seasons", "Cold winter nights", "Only spring flowers"],
+   451→        answerIndex: 1,
+   452→        explanation: "The writer likes the changing of seasons (季節の変わり目)."
+   453→      },
+   454→      {
+   455→        q: "When does the writer feel it is finally summer?",
+   456→        choices: ["When cherry blossoms bloom", "When hearing cicada voices", "When snow falls", "When leaves turn red"],
+   457→        answerIndex: 1,
+   458→        explanation: "When the writer hears cicada voices (セミの声), they feel it is finally summer."
+   459→      },
+   460→      {
+   461→        q: "What food does the writer love in autumn?",
+   462→        choices: ["Watermelon and melon", "Chestnuts and persimmons", "Strawberries and cherries", "Peaches and grapes"],
+   463→        answerIndex: 1,
+   464→        explanation: "In autumn the writer loves chestnuts (栗) and persimmons (柿)."
+   465→      },
+   466→      {
+   467→        q: "What is described as a Japanese winter tradition?",
+   468→        choices: ["Eating watermelon", "Flying kites", "Kotatsu and mandarin oranges", "Swimming in the sea"],
+   469→        answerIndex: 2,
+   470→        explanation: "Getting into a kotatsu while eating mandarin oranges is a Japanese winter tradition (風物詩)."
+   471→      },
+   472→      {
+   473→        q: "Why does the writer think Japanese culture is rich?",
+   474→        choices: ["Because of fast trains", "Because there are four seasons", "Because of cheap food", "Because of large houses"],
+   475→        answerIndex: 1,
+   476→        explanation: "The writer thinks Japanese culture is rich precisely because there are four seasons."
+   477→      }
+   478→    ]
+   479→  },
+   480→
+   481→  // ───────────────────────────────────────────────────────────
+   482→  // r-n4-29 — 現代のコミュニケーション (Modern communication)
+   483→  // ───────────────────────────────────────────────────────────
+   484→  {
+   485→    id: "r-n4-29",
+   486→    title: "現代[げんだい]のコミュニケーション",
+   487→    titleReading: "げんだいのこみゅにけーしょん",
+   488→    level: "N4",
+   489→    summary: "A young person weighs the convenience of SNS against the warmth of letters and face-to-face talk.",
+   490→    estMinutes: 6,
+   491→    tags: ["communication", "technology", "relationships"],
+   492→    body: [
+   493→      "昔[むかし]は、手紙[てがみ]や電話[でんわ]が主[おも]なコミュニケーション方法[ほうほう]でした。今[いま]は、メッセージアプリやメールなど、色[いろ]いろな手段[しゅだん]があります。私[わたし]も毎日[まいにち]スマホで、友達[ともだち]や家族[かぞく]と連絡[れんらく]を取[と]っています。便利[べんり]になった反面[はんめん]、時[とき]々、本当[ほんとう]の気持[きも]ちが伝[つた]わらないと感[かん]じることがあります。",
+   494→      "メッセージアプリは便利[べんり]ですが、問題[もんだい]もあります。短[みじか]い文[ぶん]では、声[こえ]のトーンが分[わ]かりません。だから、冗談[じょうだん]が通[つう]じないことがあります。また、画面[がめん]越[ご]しで知[し]らない人[ひと]と話[はな]す時[とき]、相手[あいて]の本当[ほんとう]の表情[ひょうじょう]が見[み]えないので、誤解[ごかい]が生[しょう]じるかもしれません。",
+   495→      "それで、私[わたし]は大切[たいせつ]な話[はなし]の時[とき]は、直接[ちょくせつ]会[あ]うようにしています。会[あ]って話[はな]すと、相手[あいて]の目[め]を見[み]ながら、本当[ほんとう]の気持[きも]ちが分[わ]かります。遠[とお]くに住[す]む家族[かぞく]とは、ビデオ通話[つうわ]を使[つか]います。顔[かお]を見[み]ながら話[はな]すと、距離[きょり]を感[かん]じません。",
+   496→      "私[わたし]は、手紙[てがみ]を書[か]くのも好[す]きです。誕生日[たんじょうび]や特別[とくべつ]な日[ひ]には、手書[てが]きの手紙[てがみ]を送[おく]ります。手紙[てがみ]は、相手[あいて]のために時間[じかん]を使[つか]ったことが伝[つた]わるからです。もしかすると、手紙[てがみ]の文化[ぶんか]は、これからも残[のこ]るかもしれません。",
+   497→      "テクノロジーが発達[はったつ]しても、人[ひと]と人[ひと]の繋[つな]がりの本質[ほんしつ]は変[か]わりません。便利[べんり]な道具[どうぐ]を上手[じょうず]に使[つか]いながら、時[とき]々は直接[ちょくせつ]会[あ]って話[はな]すことを大切[たいせつ]にしたいです。本当[ほんとう]のコミュニケーションは、相手[あいて]を大切[たいせつ]にする気持[きも]ちから始[はじ]まると信[しん]じています。"
+   498→    ],
+   499→    translation: [
+   500→      "In the past, letters and phone calls were the main communication methods. Now, there are various means such as message apps and email. I also use my smartphone daily to contact friends and family. Convenient on the other hand, I sometimes feel that true feelings do not come across.",
+   501→      "Message apps are convenient, but they also have problems. In short sentences, you cannot tell the tone of voice. So jokes sometimes do not land. Also, when talking to strangers through a screen, you cannot see the other person's true expression, so misunderstandings might arise.",
+   502→      "Therefore, for important talks, I try to meet directly. When talking in person, looking into the other person's eyes, I can understand their true feelings. With family living far away, I use video calls. Talking while seeing their face, I do not feel the distance.",
+   503→      "I also like writing letters. On birthdays and special days, I send handwritten letters. Letters convey that you spent time for the other person. Perhaps the culture of letters might also remain from now on.",
+   504→      "Even if technology develops, the essence of human connection does not change. While skillfully using convenient tools, I want to sometimes value meeting directly to talk. I believe true communication starts from the feeling of cherishing the other person."
+   505→    ],
+   506→    questions: [
+   507→      {
+   508→        q: "What were the main communication methods in the past?",
+   509→        choices: ["Letters and phone calls", "Email and chat apps", "Video calls and SNS", "Postcards only"],
+   510→        answerIndex: 0,
+   511→        explanation: "In the past, letters (手紙) and phone calls (電話) were the main methods."
+   512→      },
+   513→      {
+   514→        q: "What problem does the writer mention about message apps?",
+   515→        choices: ["They are too slow", "You cannot tell the tone of voice", "They cost too much money", "They cannot send pictures"],
+   516→        answerIndex: 1,
+   517→        explanation: "In short messages, you cannot tell the voice tone, so jokes sometimes do not land."
+   518→      },
+   519→      {
+   520→        q: "How does the writer communicate with distant family?",
+   521→        choices: ["Only by letter", "Video calls", "Through a friend", "By telegram"],
+   522→        answerIndex: 1,
+   523→        explanation: "With distant family, the writer uses video calls (ビデオ通話)."
+   524→      },
+   525→      {
+   526→        q: "When does the writer send handwritten letters?",
+   527→        choices: ["Never", "On birthdays and special days", "Every day", "Only for work"],
+   528→        answerIndex: 1,
+   529→        explanation: "The writer sends handwritten letters on birthdays and special days."
+   530→      },
+   531→      {
+   532→        q: "What does the writer believe true communication starts from?",
+   533→        choices: ["Having a fast phone", "Using the newest app", "Cherishing the other person", "Writing long messages"],
+   534→        answerIndex: 2,
+   535→        explanation: "The writer believes true communication starts from the feeling of cherishing the other person (相手を大切にする気持ち)."
+   536→      }
+   537→    ]
+   538→  },
+   539→
+   540→  // ───────────────────────────────────────────────────────────
+   541→  // r-n4-30 — 動物センターでのボランティア (A volunteer experience)
+   542→  // ───────────────────────────────────────────────────────────
+   543→  {
+   544→    id: "r-n4-30",
+   545→    title: "動物[どうぶつ]センターでのボランティア",
+   546→    titleReading: "どうぶつせんたーでのぼらんてぃあ",
+   547→    level: "N4",
+   548→    summary: "Monthly volunteering at an animal shelter teaches a student about responsibility and the value of life.",
+   549→    estMinutes: 7,
+   550→    tags: ["volunteer", "animals", "experience"],
+   551→    body: [
+   552→      "私[わたし]は毎月[まいつき]、動物[どうぶつ]センターでボランティアをしています。捨[す]てられた犬[いぬ]や猫[ねこ]の世話[せわ]をする仕事[しごと]です。動物[どうぶつ]が好[す]きだったので、始[はじ]めました。最初[さいしょ]は大[おお]きな犬[いぬ]が怖[こわ]かったですが、慣[な]れるうちに楽[たの]しくなりました。",
+   553→      "仕事[しごと]は色[いろ]いろあります。犬[いぬ]を散歩[さんぽ]に連[つ]れて行[い]ったり、エサをあげたり、ケージを掃除[そうじ]したりします。犬[いぬ]と遊[あそ]びながら、信[しん]頼[らい]関係[かんけい]が築[きず]けます。疲[つか]れますが、犬[いぬ]が喜[よろこ]ぶ顔[かお]を見[み]ると、頑張[がんば]れます。",
+   554→      "特[とく]に心[こころ]に残[のこ]ったのは、シロという犬[いぬ]の話[はなし]です。シロは怯[おび]えて、人[ひと]に寄[よ]り付[つ]きませんでした。私[わたし]が毎週[まいしゅう]会[あ]いに行[い]って、優[やさ]しく話[はな]しかけるうちに、次第[しだい]に心[こころ]を開[ひら]いてくれました。先月[せんげつ]、シロは新[あたら]しい家族[かぞく]のもとに引[ひ]き取[と]られていきました。嬉[うれ]しくて、涙[なみだ]が出[で]ました。",
+   555→      "ボランティアを通[とお]して、命[いのち]の大切[たいせつ]さを学[まな]びました。動物[どうぶつ]を飼[か]うなら、最後[さいご]まで責任[せきにん]を持[も]つことが大切[たいせつ]です。簡単[かんたん]に捨[す]ててはいけません。もしかすると、私[わたし]が将来[しょうらい]、自分[じぶん]の犬[いぬ]を飼[か]うかもしれません。その時[とき]は、必[かなら]ず最後[さいご]まで世話[せわ]をすると誓[ちか]っています。",
+   556→      "これからも、ボランティアを続[つづ]けたいです。動物[どうぶつ]たちが新[あたら]しい家族[かぞく]を見[み]つける手伝[てつだ]いができるのは、喜[よろこ]びです。みんなにも、動物[どうぶつ]のために何[なに]かできることがあれば、やってみてほしいです。"
+   557→    ],
+   558→    translation: [
+   559→      "Every month, I volunteer at an animal center. My job is to care for abandoned dogs and cats. I started because I love animals. At first I was scared of big dogs, but as I got used to it, it became fun.",
+   560→      "There are various tasks. I take dogs for walks, feed them, and clean their cages. While playing with dogs, I can build a relationship of trust. It is tiring, but seeing the dogs' happy faces keeps me going.",
+   561→      "Particularly memorable was the story of a dog named Shiro. Shiro was frightened and would not come near people. As I visited every week and spoke gently, he gradually opened his heart. Last month, Shiro was taken in by a new family. I was so happy I cried.",
+   562→      "Through volunteering, I learned the importance of life. If you keep an animal, taking responsibility until the end is important. You must not abandon it easily. Perhaps I might keep my own dog in the future. At that time, I vow to care for it until the very end.",
+   563→      "From now on, I want to continue volunteering. Being able to help animals find new families is a joy. I want everyone to try doing something for animals if there is anything they can do."
+   564→    ],
+   565→    questions: [
+   566→      {
+   567→        q: "Where does the writer volunteer?",
+   568→        choices: ["A library", "An animal center", "A hospital", "A school"],
+   569→        answerIndex: 1,
+   570→        explanation: "The writer volunteers at an animal center (動物センター)."
+   571→      },
+   572→      {
+   573→        q: "Which of these is a task the writer does?",
+   574→        choices: ["Teaching dogs to read", "Taking dogs for walks", "Selling animals", "Cooking for staff"],
+   575→        answerIndex: 1,
+   576→        explanation: "The writer walks dogs, feeds them, and cleans cages."
+   577→      },
+   578→      {
+   579→        q: "What happened with Shiro last month?",
+   580→        choices: ["He ran away", "He was taken in by a new family", "He became ill", "He bit someone"],
+   581→        answerIndex: 1,
+   582→        explanation: "Shiro was taken in by a new family last month (引き取られていきました)."
+   583→      },
+   584→      {
+   585→        q: "What did the writer learn through volunteering?",
+   586→        choices: ["The importance of life and responsibility", "How to train animals for shows", "How to run a business", "That animals are easy to care for"],
+   587→        answerIndex: 0,
+   588→        explanation: "The writer learned the importance of life (命の大切さ) and responsibility."
+   589→      },
+   590→      {
+   591→        q: "What does the writer want everyone to do?",
+   592→        choices: ["Buy more pets", "Avoid animals", "Try doing something for animals if they can", "Visit the center only on weekends"],
+   593→        answerIndex: 2,
+   594→        explanation: "The writer wants everyone to try doing something for animals if there is anything they can do."
+   595→      }
+   596→    ]
+   597→  }
+   598→];
+   599→

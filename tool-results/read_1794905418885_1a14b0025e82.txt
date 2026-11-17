@@ -1,0 +1,616 @@
+     1→import type { ReadingPassage } from "@/lib/types";
+     2→
+     3→// Furigana notation: kanji readings are written inline as 漢字[かんじ].
+     4→// A [reading] immediately following a run of kanji attaches to that whole run.
+     5→// Kana, katakana, punctuation, and 々 have no brackets. See types.ts & furigana.tsx.
+     6→// 10 original N3-level reading passages with comprehension questions.
+     7→// Topics (chunk B): gig economy, gender equality in Japan, renewable energy,
+     8→// future of transportation, cultural heritage preservation, online education,
+     9→// food sustainability, urban planning, youth voting, mindfulness.
+    10→
+    11→export const readingN3B: ReadingPassage[] = [
+    12→  // ───────────────────────────────────────────────────────────
+    13→  // r-n3-11 — The Gig Economy
+    14→  // ───────────────────────────────────────────────────────────
+    15→  {
+    16→    id: "r-n3-11",
+    17→    title: "ギグ経済[けいざい]という働[はたら]き方[かた]",
+    18→    titleReading: "ぎぐけいざいというはたらきかた",
+    19→    level: "N3",
+    20→    summary: "An overview of the gig economy, its appeal to young workers, and the risks that come with freedom and flexibility.",
+    21→    estMinutes: 7,
+    22→    tags: ["work", "gig economy", "society"],
+    23→    body: [
+    24→      "最近[さいきん]、ギグ経済[けいざい]と呼[よ]ばれる働[はたら]き方[かた]が広[ひろ]がっています。ギグ経済[けいざい]とは、アプリなどを通[つう]じて、単発[たんぱつ]の仕事[しごと]を受[う]け取[と]る働[はたら]き方[かた]のことです。配達[はいたつ]や運転[うんてん]、デザインなど、さまざまな仕事[しごと]がギグとして行[おこな]われています。若[わか]い人[ひと]を中心[ちゅうしん]に、この働[はたら]き方[かた]に注目[ちゅうもく]する人[ひと]が増[ふ]えています。",
+    25→      "ギグ経済[けいざい]の魅力[みりょく]は、自由[じゆう]な時間[じかん]です。決[き]まった時間[じかん]に会社[かいしゃ]に行[い]く必要[ひつよう]がなく、自分[じぶん]の都合[つごう]に合[あ]わせて仕事[しごと]を選[えら]べます。朝[あさ]は配達[はいたつ]をして、午後[ごご]はデザインの仕事[しごと]をするというように、複数[ふくすう]の仕事[しごと]を掛[か]け持[も]つ人[ひと]も少[すく]なくありません。自分[じぶん]のペースで働[はたら]けるため、ストレスが少[すく]ないと感[かん]じる人[ひと]が多[おお]いです。",
+    26→      "しかし、ギグ経済[けいざい]には問題[もんだい]もあります。最[もっと]も大[おお]きな問題[もんだい]は、収入[しゅうにゅう]が不安定[ふあんてい]なことです。仕事[しごと]が受[う]け取[と]れなければ、その月[つき]の収入[しゅうにゅう]は大[おお]きく減[へ]ってしまいます。さらに、健康[けんこう]保険[ほけん]や年金[ねんきん]などの社会保障[しゃかいほしょう]が不十分[ふじゅうぶん]な場合[ばあい]が多[おお]いです。病気[びょうき]やけがで働[はたら]けなくなった時[とき]、困[こま]る人[ひと]が増[ふ]えています。",
+    27→      "もう一[ひと]つの問題[もんだい]は、キャリアアップが難[むずか]しいことです。ギグの仕事[しごと]は単発[たんぱつ]であるため、長[なが]く続[つづ]けても昇進[しょうしん]や給料[きゅうりょう]の上[あ]がりが期待[きたい]できません。会社[かいしゃ]に所属[しょぞく]しないことで、スキルを評価[ひょうか]される機会[きかい]が限[かぎ]られてしまいます。そのため、長[なが]期的[きゅうてき]な視点[してん]でキャリアを考[かんが]える人[ひと]には、ギグだけでは足[た]りないかもしれません。",
+    28→      "政府[せいふ]は最近[さいきん]、ギグ労働者[ろうどうしゃ]の保護[ほご]に向[む]けて新[あたら]しい法律[ほうりつ]の検討[けんとう]を始[はじ]めました。仕事[しごと]の条件[じょうけん]を明[あき]らかにすることや、最低[さいてい]の報酬[ほうしゅう]を設[もう]けることが議論[ぎろん]されています。一方[いっぽう]で、規則[きそく]を厳[きび]しくしすぎると、ギグの魅力[みりょく]である自由[じゆう]が失[うしな]われるという意見[いけん]もあります。バランスを取[と]ることが求[もと]められています。",
+    29→      "ギグ経済[けいざい]は、これからの働[はたら]き方[かた]の一[ひと]つの形[かたち]として定着[ていちゃく]しつつあります。自由[じゆう]と安定[あんてい]のどちらを重視[じゅうし]するかは、個人[こじん]の生活[せいかつ]状況[じょうきょう]によって異[こと]なります。ギグを選[えら]ぶ場合[ばあい]は、リスクを理解[りかい]した上[うえ]で、計画[けいかく]的[てき]に収入[しゅうにゅう]を管理[かんり]することが大切[たいせつ]です。"
+    30→    ],
+    31→    translation: [
+    32→      "Recently, a way of working called the gig economy has been spreading. The gig economy refers to a style of working in which people receive short-term jobs through apps and similar platforms. Delivery, driving, design, and many other jobs are performed as gigs. Especially among young people, more and more are paying attention to this way of working.",
+    33→      "The appeal of the gig economy is free time. There is no need to go to an office at fixed hours, and you can choose work according to your own schedule. Many people juggle several jobs, such as delivering in the morning and doing design work in the afternoon. Because you can work at your own pace, many people feel less stress.",
+    34→      "However, the gig economy also has problems. The biggest issue is unstable income. If you cannot get work, your income for that month drops significantly. Moreover, social security such as health insurance and pensions is often insufficient. When people become unable to work due to illness or injury, more of them end up in trouble.",
+    35→      "Another problem is that career advancement is difficult. Because gig work is short-term, even if you keep doing it for a long time, you cannot expect promotion or salary raises. Since you do not belong to a company, opportunities to have your skills evaluated are limited. Therefore, for people who think about their careers from a long-term perspective, gigs alone may not be enough.",
+    36→      "The government has recently begun considering new laws to protect gig workers. Making work conditions clear and setting minimum compensation are being discussed. On the other hand, some argue that if regulations become too strict, the freedom that is the appeal of gigs will be lost. Finding a balance is required.",
+    37→      "The gig economy is becoming established as one form of work for the future. Whether to prioritize freedom or stability differs depending on each person's life situation. When choosing gigs, it is important to understand the risks and manage income in a planned way."
+    38→    ],
+    39→    questions: [
+    40→      {
+    41→        q: "ギグ経済[けいざい]の最大[さいだい]の魅力[みりょく]は何[なん]ですか。",
+    42→        choices: ["高[たか]い給料[きゅうりょう]", "自由[じゆう]な時間[じかん]", "安定[あんてい]した収入[しゅうにゅう]", "昇進[しょうしん]の機会[きかい]"],
+    43→        answerIndex: 1,
+    44→        explanation: "本文第二段で「ギグ経済の魅力は、自由な時間です」と明記されています。"
+    45→      },
+    46→      {
+    47→        q: "ギグ労働者[ろうどうしゃ]が直面[ちょくめん]する大[おお]きな問題[もんだい]は何[なん]ですか。",
+    48→        choices: ["仕事[しごと]が多[おお]すぎること", "社会保障[しゃかいほしょう]が不十分[ふじゅうぶん]で収入[しゅうにゅう]が不安定[ふあんてい]なこと", "アプリの使い方[かた]が難[むずか]しいこと", "会社[かいしゃ]に通[かよ]う必要[ひつよう]があること"],
+    49→        answerIndex: 1,
+    50→        explanation: "第三段で収入の不安定さと社会保障の不十分さが大きな問題と説明されています。"
+    51→      },
+    52→      {
+    53→        q: "政府[せいふ]がギグ労働者[ろうどうしゃ]の保護[ほご]に向[む]けて議論[ぎろん]していることの一[ひと]つは何[なん]ですか。",
+    54→        choices: ["ギグの禁止[きんし]", "最低[さいてい]の報酬[ほうしゅう]の設[もう]定[てい]", "アプリの開発[かいはつ]", "会社[かいしゃ]の設立[せつりつ]"],
+    55→        answerIndex: 1,
+    56→        explanation: "第五段で「最低の報酬を設けることが議論されています」と書かれています。"
+    57→      },
+    58→      {
+    59→        q: "本文[ほんぶん]の内容[ないよう]と合[あ]っているものはどれですか。",
+    60→        choices: ["ギグ経済は若者に人気がない", "ギグだけでは長期的なキャリアアップが難しい", "政府はギグを完全に禁止しようとしている", "ギグ労働者は必ず昇進できる"],
+    61→        answerIndex: 1,
+    62→        explanation: "第四段で、ギグは単発であるため長期的なキャリアアップが期待できないと述べられています。"
+    63→      }
+    64→    ]
+    65→  },
+    66→
+    67→  // ───────────────────────────────────────────────────────────
+    68→  // r-n3-12 — Gender Equality in Japan
+    69→  // ───────────────────────────────────────────────────────────
+    70→  {
+    71→    id: "r-n3-12",
+    72→    title: "日本[にほん]のジェンダー平等[びょうどう]を考[かんが]える",
+    73→    titleReading: "にほんのじぇんだーびょうどうをかんがえる",
+    74→    level: "N3",
+    75→    summary: "A reflection on the slow progress of gender equality in Japan, workplace challenges for women, and signs of change.",
+    76→    estMinutes: 8,
+    77→    tags: ["society", "gender", "Japan"],
+    78→    body: [
+    79→      "日本[にほん]は経済[けいざい]的[てき]に先進国[せんしんこく]の一[ひと]つですが、ジェンダー平等[びょうどう]の面[めん]では他[ほか]の国[くに]に遅[おく]れていると言[い]われています。世界[せかい]経済[けいざい]フォーラムが毎年[まいとし]発表[はっぴょう]するジェンダーギャップ指数[しすう]で、日本[にほん]は順位[じゅんい]が低[ひく]く、改善[かいぜん]のペースも遅[おそ]いことが指摘[してき]されています。なぜ日本[にほん]では平等[びょうどう]の進[すす]みが遅[おそ]いのでしょうか。",
+    80→      "一[ひと]つの理由[りゆう]は、職場[しょくば]における女性[じょせい]の割合[わりあい]の低[ひく]さです。管理職[かんりしょく]や役員[やくいん]に女性[じょせい]が少[すく]なく、意思決定[いしけってい]の場[ば]に女性[じょせい]が参加[さんか]する機会[きかい]が限[かぎ]られています。出産[しゅっさん]や育児[いくじ]を機[き]に退職[たいしょく]する女性[じょせい]が多[おお]く、復帰[ふっき]後[ご]も正社員[せいしゃいん]として働[はたら]き続[つづ]けることが難[むずか]しい現状[げんじょう]があります。これが結果[けっか]として、男女[だんじょ]の賃金[ちんぎん]格差[かくさ]を生[う]んでいます。",
+    81→      "また、社会的[しゃかいてき]な意識[いしき]も大[おお]きな要因[よういん]です。「男性[だんせい]は外[そと]で働[はたら]き、女性[じょせい]は家庭[かてい]を守[まも]る」という伝統[でんとう]的[てき]な価値観[かちかん]が依然[いぜん]として残[のこ]っています。無意識[むいしき]のうちに、男性[だんせい]に仕事[しごと]を、女性[じょせい]に家事[かじ]を期待[きたい]する雰囲気[ふんいき]が根強[ねづよ]く存在[そんざい]します。このような意識[いしき]は、法律[ほうりつ]だけでは変[か]えることが難[むずか]しい部分[ぶぶん]があります。",
+    82→      "しかしながら、変化[へんか]の兆[きざ]しもあります。最近[さいきん]は、男性[だんせい]の育児休業[いくじきゅうぎょう]の取得[しゅとく]率[りつ]が少[すこ]しずつ上[あ]がっています。また、女性[じょせい]の管理職[かんりしょく]を目指[めざ]す学生[がくせい]も増[ふ]え、大学[だいがく]でリーダーシップを学[まな]ぶ人[ひと]が多[おお]くなりました。企業[きぎょう]も、女性[じょせい]の登用[とうよう]に取[と]り組[く]むことが評価[ひょうか]される時代[じだい]になりつつあります。",
+    83→      "学校教育[がっこうきょういく]の役割[やくわり]も見直[みなお]されています。子[こ]どもの頃[ころ]から、性別[せいべつ]に関係[かんけい]なく、だれでも夢[ゆめ]を持[も]てることを教[おし]えることが重視[じゅうし]されています。教科書[きょうかしょ]から男女[だんじょ]の固定観念[こていかんねん]をなくす努力[どりょく]も進[すす]んでいます。意識[いしき]の変化[へんか]を促[うなが]すには、長[なが]い時間[じかん]が必要[ひつよう]ですが、教育[きょういく]は重要[じゅうよう]な鍵[かぎ]となります。",
+    84→      "ジェンダー平等[びょうどう]は、女性[じょせい]のためだけの問題[もんだい]ではありません。男性[だんせい]にとっても、家事[かじ]や育児[いくじ]に参加[さんか]しやすい社会[しゃかい]は、より豊[ゆた]かな生活[せいかつ]をもたらします。個[こ]人[じん]の能力[のうりょく]が性別[せいべつ]にかかわらず発揮[はっき]される社会[しゃかい]を築[きず]くことが、日本[にほん]の未来[みらい]にとって必要[ひつよう]不可欠[ふかけつ]なのではないでしょうか。"
+    85→    ],
+    86→    translation: [
+    87→      "Japan is one of the economically advanced countries, but it is said to lag behind other nations in terms of gender equality. In the Gender Gap Index published every year by the World Economic Forum, Japan ranks low, and the slow pace of improvement is pointed out. Why is progress toward equality slow in Japan?",
+    88→      "One reason is the low proportion of women in the workplace. Few women hold managerial or board positions, and opportunities for women to participate in decision-making are limited. Many women leave their jobs when they give birth or raise children, and even after returning, it is difficult to continue working as full-time employees. As a result, this creates a wage gap between men and women.",
+    89→      "In addition, social awareness is a major factor. The traditional value that \"men work outside and women protect the home\" still remains. There is a deeply rooted atmosphere in which, unconsciously, work is expected of men and housework of women. Such awareness is a part that is difficult to change with laws alone.",
+    90→      "However, there are also signs of change. Recently, the rate of men taking childcare leave has been gradually increasing. Also, more students aim to become female managers, and more people study leadership at universities. Companies, too, are entering an era in which efforts to promote women are evaluated positively.",
+    91→      "The role of school education is also being reconsidered. From childhood, it is emphasized to teach that anyone, regardless of gender, can hold dreams. Efforts to remove fixed gender ideas from textbooks are also advancing. While changing awareness requires a long time, education becomes an important key.",
+    92→      "Gender equality is not a problem only for women. For men as well, a society that makes it easy to participate in housework and childcare brings a richer life. Building a society in which individual abilities are demonstrated regardless of gender is indispensable for Japan's future, isn't it?"
+    93→    ],
+    94→    questions: [
+    95→      {
+    96→        q: "日本[にほん]がジェンダー平等[びょうどう]の面[めん]で遅[おく]れている理由[りゆう]として、本文[ほんぶん]は何[なん]を挙[あ]げていますか。",
+    97→        choices: ["経済[けいざい]が弱[よわ]いから", "職場[しょくば]の女性[じょせい]の割合[わりあい]が低[ひく]く、社会[しゃかい]的[てき]意識[いしき]が残[のこ]っているから", "法律[ほうりつ]が多[おお]すぎるから", "外国人[がいこくじん]が多[おお]すぎるから"],
+    98→        answerIndex: 1,
+    99→        explanation: "第二・第三段で、管理職の女性の少なさと伝統的価値観の残存が理由として挙げられています。"
+   100→      },
+   101→      {
+   102→        q: "出産[しゅっさん]や育児[いくじ]を機[き]に何[なに]が起[お]こると書[か]かれていますか。",
+   103→        choices: ["給料[きゅうりょう]が上[あ]がる", "管理職[かんりしょく]に昇進[しょうしん]する", "退職[たいしょく]する女性[じょせい]が多[おお]く、復帰[ふっき]後[ご]も正社員[せいしゃいん]として働[はたら]き続[つづ]けることが難[むずか]しい", "大学[だいがく]に入学[にゅうがく]する"],
+   104→        answerIndex: 2,
+   105→        explanation: "第二段で、出産・育児を機に退職し、復帰後も正社員として働き続けることが難しいと書かれています。"
+   106→      },
+   107→      {
+   108→        q: "変化[へんか]の兆[きざ]しとして挙[あ]げられていないものはどれですか。",
+   109→        choices: ["男性[だんせい]の育児休業[いくじきゅうぎょう]の取得[しゅとく]率[りつ]の上昇[じょうしょう]", "女性[じょせい]の管理職[かんりしょく]を目指[めざ]す学生[がくせい]の増加[ぞうか]", "企業[きぎょう]が女性[じょせい]の登用[とうよう]に取[と]り組[く]むこと", "女性[じょせい]の給料[きゅうりょう]が男性[だんせい]より高[たか]くなること"],
+   110→        answerIndex: 3,
+   111→        explanation: "第四段で挙げられているのは育児休業取得率の上昇、女性管理職志望者の増加、企業の女性登用です。女性の給料が高くなることは書かれていません。"
+   112→      },
+   113→      {
+   114→        q: "本文[ほんぶん]によると、ジェンダー平等[びょうどう]はだれのための問題[もんだい]ですか。",
+   115→        choices: ["女性[じょせい]だけのため", "男性[だんせい]だけのため", "子[こ]どもだけのため", "男女[だんじょ]双方[そうほう]のため"],
+   116→        answerIndex: 3,
+   117→        explanation: "最終段で「ジェンダー平等は、女性のためだけの問題ではありません」と述べられています。"
+   118→      },
+   119→      {
+   120→        q: "筆者[ひっしゃ]は、意識[いしき]を変[か]えるために何[なに]が重要[じゅうよう]だと言[い]っていますか。",
+   121→        choices: ["法律[ほうりつ]の強化[きょうか]だけ", "教育[きょういく]", "経済[けいざい]の成長[せいちょう]", "外国人[がいこくじん]の増加[ぞうか]"],
+   122→        answerIndex: 1,
+   123→        explanation: "第五段で「意識の変化を促すには、長い時間が必要ですが、教育は重要な鍵となります」と書かれています。"
+   124→      }
+   125→    ]
+   126→  },
+   127→
+   128→  // ───────────────────────────────────────────────────────────
+   129→  // r-n3-13 — Renewable Energy
+   130→  // ───────────────────────────────────────────────────────────
+   131→  {
+   132→    id: "r-n3-13",
+   133→    title: "再生[さいせい]可能[かのう]エネルギーの未来[みらい]",
+   134→    titleReading: "さいせいかのうえねるぎーのみらい",
+   135→    level: "N3",
+   136→    summary: "An introduction to renewable energy in Japan, the barriers to adoption, and the role of individuals in the energy transition.",
+   137→    estMinutes: 7,
+   138→    tags: ["environment", "energy", "technology"],
+   139→    body: [
+   140→      "地球[ちきゅう]温暖化[おんだんか]が進[すす]む中[なか]、再生[さいせい]可能[かのう]エネルギーへの移行[いこう]が世界的[せかいてき]な課題[かだい]になっています。再生[さいせい]可能[かのう]エネルギーとは、太陽[たいよう]光[こう]や風力[ふうりょく]、水力[すいりょく]など、自然[しぜん]の力[ちから]を利用[りよう]して発電[はつでん]する方法[ほうほう]のことです。これらは枯渇[こかつ]することがなく、二酸化[にさんか]炭素[たんそ]の排出[はいしゅつ]量[りょう]も少[すく]ないため、未来[みらい]のエネルギーとして期待[きたい]されています。",
+   141→      "日本[にほん]は、資源[しげん]に乏[とぼ]しい国[くに]でありながら、再生[さいせい]可能[かのう]エネルギーの導入[どうにゅう]に積極[せっきょく]的[てき]に取[と]り組[く]んでいます。太陽[たいよう]光[こう]発電[はつでん]は家庭[かてい]でも普及[ふきゅう]し始[はじ]め、屋根[やね]にパネルを設置[せっち]する住宅[じゅうたく]が増[ふ]えています。一方[いっぽう]で、風力[ふうりょく]発電[はつでん]は地理[ちり]的[てき]条件[じょうけん]の制約[せいやく]があり、導入[どうにゅう]が遅[おく]れています。海域[かいいき]に風車[ふうしゃ]を立[た]てる洋上[ようじょう]風力[ふうりょく]が、新[あたら]しい可能性[かのうせい]として注目[ちゅうもく]されています。",
+   142→      "しかし、再生[さいせい]可能[かのう]エネルギーには課題[かだい]もあります。最大[さいだい]の問題[もんだい]は、発電[はつでん]量[りょう]が天候[てんこう]に左右[さゆう]されることです。太陽[たいよう]光[こう]は夜[よる]や雨[あめ]の日[ひ]には発電[はつでん]できず、風力[ふうりょく]は風[かぜ]が吹[ふ]かなければ動[うご]きません。この不安定[ふあんてい]さを解決[かいけつ]するため、大[おお]型[がた]の蓄電[ちくでん]池[ち]や、電力[でんりょく]を効率[こうりつ]的[てき]に運用[うんよう]する技術[ぎじゅつ]の開発[かいはつ]が進[すす]んでいます。",
+   143→      "もう一[ひと]つの課題[かだい]はコストです。再生[さいせい]可能[かのう]エネルギーの設備[せつび]を導入[どうにゅう]するには、多[おお]くの資金[しきん]が必要[ひつよう]です。初期[しょき]投資[とうし]が大[おお]きいため、企業[きぎょう]や自治体[じちたい]が敬遠[けいえん]する場合[ばあい]があります。ただし、技術[ぎじゅつ]の進歩[しんぽ]により、コストは毎年[まいとし]下[さ]がっており、長[なが]期的[てき]には経済[けいざい]的[てき]な利益[りえき]も期待[きたい]できるようになってきました。",
+   144→      "個[こ]人[じん]レベルでも、できることがあります。電力[でんりょく]会社[がいしゃ]を再生[さいせい]可能[かのう]エネルギーのプランに変更[へんこう]したり、家庭[かてい]で省電[しょうでん]化[か]に努[つと]めたりすることが一[ひと]つの方法[ほうほう]です。また、地元[じもと]で太陽[たいよう]光[こう]発電[はつでん]のプロジェクトに参加[さんか]する市民[しみん]も増[ふ]えています。消費[しょうひ]者[しゃ]の選択[せんたく]が、エネルギー政策[せいさく]を動[うご]かす力[ちから]になりつつあります。",
+   145→      "再生[さいせい]可能[かのう]エネルギーへの移行[いこう]は、一朝一夕[いっちょういっせき]には進[すす]みません。しかし、技術[ぎじゅつ]の開発[かいはつ]、政策[せいさく]の改善[かいぜん]、個[こ]人[じん]の意識[いしき]の変化[へんか]が重[かさ]なれば、確実[かくじつ]に前[まえ]に進[すす]むことができます。未来[みらい]の世代[せだい]に美[うつく]しい地球[ちきゅう]を残[のこ]すため、私[わたし]たち一人[ひとり]一人[ひとり]が考[かんが]え、行動[こうどう]することが求[もと]められています。"
+   146→    ],
+   147→    translation: [
+   148→      "As global warming advances, the transition to renewable energy has become a worldwide challenge. Renewable energy refers to methods of generating electricity that use the power of nature, such as sunlight, wind, and water. These sources do not run out and emit little carbon dioxide, so they are expected to be the energy of the future.",
+   149→      "Japan is a country poor in resources, yet it actively works to introduce renewable energy. Solar power has begun to spread even in homes, with more houses installing panels on their roofs. On the other hand, wind power faces constraints from geographical conditions, and its introduction lags behind. Offshore wind, which installs turbines in the sea, is attracting attention as a new possibility.",
+   150→      "However, renewable energy also has challenges. The biggest problem is that the amount of electricity generated is influenced by the weather. Solar power cannot generate at night or on rainy days, and wind turbines do not move unless the wind blows. To solve this instability, development of large storage batteries and technologies to manage electricity efficiently is advancing.",
+   151→      "Another challenge is cost. Introducing renewable energy facilities requires a great deal of funding. Because the initial investment is large, companies and local governments sometimes hesitate. However, thanks to technological progress, costs are decreasing year by year, and long-term economic benefits have become expected.",
+   152→      "Even at the individual level, there are things we can do. Changing to a renewable energy plan with an electric company or striving to save electricity at home is one method. Also, citizens participating in local solar power projects are increasing. Consumers' choices are becoming a force that moves energy policy.",
+   153→      "The transition to renewable energy will not proceed overnight. However, when technological development, policy improvement, and changes in individual awareness overlap, we can move forward steadily. To leave a beautiful Earth for future generations, each of us is required to think and act."
+   154→    ],
+   155→    questions: [
+   156→      {
+   157→        q: "再生[さいせい]可能[かのう]エネルギーの例[れい]として本文[ほんぶん]に挙[あ]げられていないものはどれですか。",
+   158→        choices: ["太陽[たいよう]光[こう]", "風力[ふうりょく]", "水力[すいりょく]", "石炭[せきたん]"],
+   159→        answerIndex: 3,
+   160→        explanation: "第一段で挙げられているのは太陽光・風力・水力です。石炭は化石燃料であり、再生可能エネルギーではありません。"
+   161→      },
+   162→      {
+   163→        q: "日本[にほん]で風力[ふうりょく]発電[はつでん]の導入[どうにゅう]が遅[おく]れている理由[りゆう]は何[なん]ですか。",
+   164→        choices: ["コストが高[たか]すぎるから", "技術[ぎじゅつ]がないから", "地理[ちり]的[てき]条件[じょうけん]の制約[せいやく]があるから", "風[かぜ]が強[つよ]すぎるから"],
+   165→        answerIndex: 2,
+   166→        explanation: "第二段で「風力発電は地理的条件の制約があり、導入が遅れています」と書かれています。"
+   167→      },
+   168→      {
+   169→        q: "再生[さいせい]可能[かのう]エネルギーの最大[さいだい]の問題[もんだい]は何[なん]ですか。",
+   170→        choices: ["二酸化[にさんか]炭素[たんそ]の排出[はいしゅつ]が多[おお]いこと", "発電[はつでん]量[りょう]が天候[てんこう]に左右[さゆう]されること", "資源[しげん]が枯渇[こかつ]すること", "夜[よる]にしか発電[はつでん]できないこと"],
+   171→        answerIndex: 1,
+   172→        explanation: "第三段で「最大の問題は、発電量が天候に左右されることです」と明記されています。"
+   173→      },
+   174→      {
+   175→        q: "個[こ]人[じん]ができることとして挙[あ]げられているのはどれですか。",
+   176→        choices: ["洋上[ようじょう]風力[ふうりょく]の建設[けんせつ]", "蓄電[ちくでん]池[ち]の開発[かいはつ]", "再生[さいせい]可能[かのう]エネルギーのプランへの変更[へんこう]", "法律[ほうりつ]の制定[せいてい]"],
+   177→        answerIndex: 2,
+   178→        explanation: "第五段で「電力会社を再生可能エネルギーのプランに変更したり、家庭で省電化に努めたりする」ことが個人の方法として挙げられています。"
+   179→      },
+   180→      {
+   181→        q: "筆者[ひっしゃ]は移行[いこう]を進[すす]めるために何[なに]が必要[ひつよう]だと言[い]っていますか。",
+   182→        choices: ["技術[ぎじゅつ]、政策[せいさく]、意識[いしき]の変化[へんか]が重[かさ]なること", "太陽[たいよう]光[こう]だけに頼[たよ]ること", "海外[かいがい]から資源[しげん]を輸入[ゆにゅう]すること", "個人[こじん]が何[なに]もしないこと"],
+   183→        answerIndex: 0,
+   184→        explanation: "最終段で「技術の開発、政策の改善、個人の意識の変化が重なれば」と述べられています。"
+   185→      }
+   186→    ]
+   187→  },
+   188→
+   189→  // ───────────────────────────────────────────────────────────
+   190→  // r-n3-14 — The Future of Transportation
+   191→  // ───────────────────────────────────────────────────────────
+   192→  {
+   193→    id: "r-n3-14",
+   194→    title: "交通[こうつう]の未来[みらい]：自動[じどう]運転[うんてん]とシェアリング",
+   195→    titleReading: "こうつうのみらい：じどううんてんとしぇありんぐ",
+   196→    level: "N3",
+   197→    summary: "How self-driving cars and sharing services are reshaping transportation, with benefits, risks, and societal implications.",
+   198→    estMinutes: 8,
+   199→    tags: ["technology", "transportation", "society"],
+   200→    body: [
+   201→      "交通[こうつう]のあり方[かた]が大[おお]きく変[か]わろうとしています。自動[じどう]運転[うんてん]技術[ぎじゅつ]の進歩[しんぽ]や、車[くるま]を所有[しょゆう]せずに使[つか]うシェアリングサービスの普及[ふきゅう]により、私[わたし]たちの移動[いどう]の仕方[しかた]は数十年[すうじゅうねん]後[ご]には全[まった]く違[ちが]ったものになっているかもしれません。この変化[へんか]は、社会[しゃかい]の仕組[しく]みそのものを変[か]える可能性[かのうせい]を秘[ひそ]めています。",
+   202→      "自動[じどう]運転[うんてん]の最大[さいだい]の利点[りてん]は、安全性[あんぜんせい]の向上[こうじょう]です。人間[にんげん]の運転[うんてん]は、疲[つか]れや不注意[ふちゅうい]から事故[じこ]を引[ひ]き起[お]こすことがあります。一方[いっぽう]で、コンピューターは疲[つか]れることがなく、瞬時[しゅんじ]に周囲[しゅうい]の状況[じょうきょう]を判断[はんだん]できます。もし自動[じどう]運転[うんてん]が普及[ふきゅう]すれば、交通事故[こうつうじこ]は大[おお]幅[はば]に減[へ]ると予想[よそう]されています。高齢[こうれい]者[しゃ]や体[からだ]の不自由[ふじゆう]な人[ひと]の移動[いどう]も支[ささ]えるようになるでしょう。",
+   203→      "しかしながら、技術[ぎじゅつ]的[てき]な壁[かべ]も残[のこ]っています。天候[てんこう]の悪化[あっか]や予測[よそく]不能[ふのう]な歩行者[ほこうしゃ]の動[うご]きに対応[たいおう]することは、まだ難[むずか]しい課題[かだい]です。さらに、万[まん]が一[いち]事故[じこ]が起[お]きた場合[ばあい]、だれが責任[せきにん]を負[お]うのかという法[ほう]的[てき]な問題[もんだい]も未解決[みかいけつ]です。運転[うんてん]者[しゃ]、メーカー、ソフトウェアの開発[かいはつ]者[しゃ]、そのどれもが責任[せきにん]を問[と]われる可能性[かのうせい]があります。",
+   204→      "シェアリングサービスも、交通[こうつう]の未来[みらい]を形[かたち]作[づく]る重要[じゅうよう]な要素[ようそ]です。若[わか]い世代[せだい]の間[あいだ]では、車[くるま]を所有[しょゆう]するよりも、必要[ひつよう]な時[とき]に必要[ひつよう]な分[ぶん]だけ使[つか]う方[ほう]が好[この]まれる傾向[けいこう]にあります。これは経済[けいざい]的[てき]な理由[りゆう]だけでなく、駐車[ちゅうしゃ]場[じょう]の不足[ぶそく]や環境[かんきょう]への配慮[はいりょ]からくるものです。都市[とし]部[ぶ]では、シェアリングによって交通量[こうつうりょう]が減[へ]り、渋滞[じゅうたい]の緩和[かんわ]も期待[きたい]されています。",
+   205→      "ただし、自動[じどう]運転[うんてん]とシェアリングが広[ひろ]がれば、すべての問題[もんだい]が解決[かいけつ]するわけではありません。運転[うんてん]の仕事[しごと]を持[も]つ人[ひと]が職[しょく]を失[うしな]う可能性[かのうせい]があります。タクシー運転[うんてん]手[しゅ]やトラック運転[うんてん]手[しゅ]の雇用[こよう]をどう守[まも]るかが、政策[せいさく]上[じょう]の課題[かだい]になっています。新[あたら]しい技術[ぎじゅつ]を導入[どうにゅう]する際[さい]、働[はたら]く人[ひと]の生活[せいかつ]を支[ささ]える制度[せいど]も同時[どうじ]に整備[せいび]する必要[ひつよう]があります。",
+   206→      "交通[こうつう]の未来[みらい]は、技術[ぎじゅつ]だけでは決[き]まりません。社会[しゃかい]がその技術[ぎじゅつ]をどう受[う]け入[い]れ、どのようなルールを設[もう]けるかが重要[じゅうよう]です。便利[べんり]さと安全[あんぜん]、効率[こうりつ]と雇用[こよう]、自由[じゆう]と責任[せきにん]のバランスを取[と]りながら、新[あたら]しい交通[こうつう]社会[しゃかい]を築[きず]いていく必要[ひつよう]があります。私[わたし]たち一人[ひとり]一人[ひとり]が、この変化[へんか]に参加[さんか]する意識[いしき]を持[も]つことが求[もと]められています。"
+   207→    ],
+   208→    translation: [
+   209→      "The way transportation works is about to change greatly. With the progress of self-driving technology and the spread of sharing services that let people use cars without owning them, the way we move may be completely different a few decades from now. This change holds the potential to transform the very structure of society.",
+   210→      "The greatest advantage of self-driving is improved safety. Human driving can cause accidents due to fatigue or inattention. Computers, on the other hand, do not get tired and can judge surrounding conditions instantly. If self-driving becomes widespread, traffic accidents are predicted to decrease dramatically. It will also support the mobility of elderly people and those with physical disabilities.",
+   211→      "However, technical barriers remain. Responding to worsening weather or unpredictable pedestrian movements is still a difficult challenge. Furthermore, in the event of an accident, the legal question of who bears responsibility remains unsolved. The driver, the manufacturer, and the software developer may all potentially be held responsible.",
+   212→      "Sharing services are also an important element shaping the future of transportation. Among younger generations, there is a tendency to prefer using a car only as much as needed when needed, rather than owning one. This is due not only to economic reasons but also to parking shortages and consideration for the environment. In urban areas, sharing is expected to reduce traffic volume and ease congestion.",
+   213→      "However, if self-driving and sharing spread, not all problems will be solved. People with driving jobs may lose their work. How to protect the employment of taxi and truck drivers has become a policy challenge. When introducing new technologies, systems to support the lives of working people must be prepared at the same time.",
+   214→      "The future of transportation is not decided by technology alone. How society accepts that technology and what rules it sets are important. While balancing convenience and safety, efficiency and employment, freedom and responsibility, we need to build a new transportation society. Each of us is required to have the awareness to participate in this change."
+   215→    ],
+   216→    questions: [
+   217→      {
+   218→        q: "自動[じどう]運転[うんてん]の最大[さいだい]の利点[りてん]は何[なん]ですか。",
+   219→        choices: ["速度[そくど]が上[あ]がること", "燃料[ねんりょう]が節約[せつやく]できること", "安全性[あんぜんせい]の向上[こうじょう]", "運転[うんてん]者[しゃ]の雇用[こよう]が増[ふ]えること"],
+   220→        answerIndex: 2,
+   221→        explanation: "第二段で「自動運転の最大の利点は、安全性の向上です」と書かれています。"
+   222→      },
+   223→      {
+   224→        q: "自動[じどう]運転[うんてん]の技術[ぎじゅつ]的[てき]な課題[かだい]として挙[あ]げられているのはどれですか。",
+   225→        choices: ["コストが低[ひく]すぎること", "天候[てんこう]の悪化[あっか]や予測[よそく]不能[ふのう]な歩行者[ほこうしゃ]の動[うご]きへの対応[たいおう]", "コンピューターが疲[つか]れること", "燃料[ねんりょう]が多[おお]すぎること"],
+   226→        answerIndex: 1,
+   227→        explanation: "第三段で「天候の悪化や予測不能な歩行者の動きに対応することは、まだ難しい課題です」と書かれています。"
+   228→      },
+   229→      {
+   230→        q: "若[わか]い世代[せだい]が車[くるま]の所有[しょゆう]よりシェアリングを好[この]む理由[りゆう]でないものはどれですか。",
+   231→        choices: ["経済[けいざい]的[てき]な理由[りゆう]", "駐車[ちゅうしゃ]場[じょう]の不足[ぶそく]", "環境[かんきょう]への配慮[はいりょ]", "運転[うんてん]技術[ぎじゅつ]の向上[こうじょう]"],
+   232→        answerIndex: 3,
+   233→        explanation: "第四段で挙げられているのは経済的理由、駐車場の不足、環境への配慮です。運転技術の向上は理由として挙げられていません。"
+   234→      },
+   235→      {
+   236→        q: "自動[じどう]運転[うんてん]の普及[ふきゅう]で懸念[けねん]されている雇用[こよう]問題[もんだい]は何[なん]ですか。",
+   237→        choices: ["運転[うんてん]の仕事[しごと]を持[も]つ人[ひと]が職[しょく]を失[うしな]うこと", "工場[こうじょう]労働者[ろうどうしゃ]が増[ふ]えすぎること", "プログラマーが不足[ぶそく]すること", "教師[きょうし]が減[へ]ること"],
+   238→        answerIndex: 0,
+   239→        explanation: "第五段で「運転の仕事を持つ人が職を失う可能性があります」と述べられています。"
+   240→      },
+   241→      {
+   242→        q: "筆者[ひっしゃ]は交通[こうつう]の未来[みらい]を決[き]める上[うえ]で何[なに]が重要[じゅうよう]だと言[い]っていますか。",
+   243→        choices: ["技術[ぎじゅつ]だけ", "社会[しゃかい]が技術[ぎじゅつ]を受[う]け入[い]れ、ルールを設[もう]けること", "車[くるま]の所有[しょゆう]を義務[ぎむ]化すること", "運転[うんてん]手[しゅ]を増[ふ]やすこと"],
+   244→        answerIndex: 1,
+   245→        explanation: "最終段で「社会がその技術を受け入れ、どのようなルールを設けるかが重要です」と書かれています。"
+   246→      }
+   247→    ]
+   248→  },
+   249→
+   250→  // ───────────────────────────────────────────────────────────
+   251→  // r-n3-15 — Cultural Heritage Preservation
+   252→  // ───────────────────────────────────────────────────────────
+   253→  {
+   254→    id: "r-n3-15",
+   255→    title: "文化[ぶんか]遺産[いさん]を未来[みらい]へ残[のこ]す",
+   256→    titleReading: "ぶんかいさんをみらいへのこす",
+   257→    level: "N3",
+   258→    summary: "The challenges of preserving cultural heritage in a modernizing world, with examples of efforts to protect traditional crafts and buildings.",
+   259→    estMinutes: 7,
+   260→    tags: ["culture", "heritage", "tradition"],
+   261→    body: [
+   262→      "長[なが]い歴史[れきし]の中[なか]で、人類[じんるい]は数多[かずおお]くの文化[ぶんか]を生[う]み出[だ]してきました。古[ふる]い建築[けんちく]や伝統[でんとう]芸能[げいのう]、手工芸[しゅこうげい]など、文化[ぶんか]遺産[いさん]は人[ひと]たちの生活[せいかつ]と信仰[しんこう]の結晶[けっしょう]です。しかし、近代化[きんだいか]と都市化[としか]の波[なみ]の中[なか]で、これらの貴重[きちょう]な遺産[いさん]が失[うしな]われつつあります。文化[ぶんか]遺産[いさん]を守[まも]ることは、過去[かこ]と未来[みらい]を結[むす]ぶ重要[じゅうよう]な役割[やくわり]を果[は]たします。",
+   263→      "日本[にほん]には、神社[じんじゃ]やお寺[てら]、古[ふる]い町並[まちな]みなど、多[おお]くの文化[ぶんか]遺産[いさん]があります。京都[きょうと]や奈良[なら]は、千年[せんねん]以上[いじょう]の歴史[れきし]を持[も]つ建築[けんちく]群[ぐん]で知[し]られ、国内外[こくないがい]から観光客[かんこうきゃく]が訪[おとず]れます。これらの建造物[けんぞうぶつ]は、木[き]と紙[かみ]で作[つく]られており、経年[けいねん]劣化[れっか]や火災[かさい]のリスクと常[つね]に戦[たたか]っています。定期的[ていきてき]な修復[しゅうふく]が不可欠[ふかけつ]ですが、伝統[でんとう]技術[ぎじゅつ]を持[も]つ職人[しょくにん]が減[へ]り、維持[いじ]が難[むずか]しくなっています。",
+   264→      "世界[せかい]でも同[おな]じ問題[もんだい]が起[お]きています。ユネスコの世界[せかい]遺産[いさん]リストには、保護[ほご]が必要[ひつよう]な遺産[いさん]が多数[たすう]登録[とうろく]されていますが、戦争[せんそう]や気候[きこう]変動[へんどう]、過度[かど]な観光[かんこう]化[か]により、被害[ひがい]を受[う]ける場所[ばしょ]も少[すく]なくありません。遺跡[いせき]が破壊[はかい]されれば、それを復元[ふくげん]することは不可能[ふかのう]に近[ちか]いです。遺産[いさん]は一度[いちど]失[うしな]えば、二度[にど]と戻[もど]らないという事実[じじつ]を、私[わたし]たちは認識[にんしき]しなければなりません。",
+   265→      "一方[いっぽう]で、技術[ぎじゅつ]が文化[ぶんか]遺産[いさん]の保存[ほぞん]に役立[やくだ]つ例[れい]も増[ふ]えています。三次[さんじ]元[げん]スキャンやデジタルアーカイブにより、遺産[いさん]の形状[けいじょう]や細部[さいぶ]を記録[きろく]し、後世[こうせい]に伝[つた]えることが可能[かのう]になりました。仮[かり]に実物[じつぶつ]が損傷[そんしょう]しても、デジタル上[じょう]で再現[さいげん]することで、研究[けんきゅう]や教育[きょういく]に役立[やくだ]てることができます。伝統[でんとう]技術[ぎじゅつ]の記録[きろく]映像[えいぞう]も、職人[しょくにん]の技[わざ]を未来[みらい]に残[のこ]す手段[しゅだん]として重視[じゅうし]されています。",
+   266→      "地域[ちいき]の取[と]り組[く]みも活発[かっぱつ]です。地元[じもと]の住民[じゅうみん]が主体[しゅたい]となって、祭[まつ]りや伝統[でんとう]工芸[こうげい]を守[まも]る活動[かつどう]が行[おこな]われています。子[こ]どもたちに昔[むかし]の遊[あそ]びや手芸[しゅげい]を教[おし]えることで、文化[ぶんか]への関心[かんしん]を育[はぐく]もうとする試[こころ]みです。観光客[かんこうきゃく]に体験[たいけん]プログラムを提供[ていきょう]し、収入[しゅうにゅう]を遺産[いさん]の維持[いじ]に充[あ]てる地域[ちいき]もあります。住民[じゅうみん]の誇[ほこ]りが、遺産[いさん]を守[まも]る力[ちから]となります。",
+   267→      "文化[ぶんか]遺産[いさん]は、単[たん]なる古[ふる]い物[もの]ではありません。それは、先人[せんじん]の知恵[ちえ]と美[び]の記録[きろく]であり、私[わたし]たちが誰[だれ]であるかを示[しめ]す鏡[かがみ]のような存在[そんざい]です。未来[みらい]の世代[せだい]にこの遺産[いさん]を引[ひ]き継[つ]ぐため、技術[ぎじゅつ]と地域[ちいき]、個[こ]人[じん]の努力[どりょく]が結集[けっしゅう]する必要[ひつよう]があります。過去[かこ]を尊[とうと]ぶ心[こころ]こそが、未来[みらい]を豊[ゆた]かにする力[ちから]なのです。"
+   268→    ],
+   269→    translation: [
+   270→      "Throughout long history, humanity has produced countless cultures. Old architecture, traditional performing arts, and handicrafts are crystallizations of people's lives and beliefs. However, amid the waves of modernization and urbanization, these precious heritages are being lost. Protecting cultural heritage plays an important role connecting past and future.",
+   271→      "Japan has many cultural heritages, such as shrines, temples, and old townscapes. Kyoto and Nara are known for groups of buildings with histories of over a thousand years, and tourists visit from inside and outside the country. These structures are made of wood and paper, and they constantly battle the risks of age-related deterioration and fire. Regular restoration is indispensable, but craftsmen with traditional skills are decreasing, making maintenance difficult.",
+   272→      "The same problem occurs around the world. UNESCO's World Heritage List registers many heritages in need of protection, but places damaged by war, climate change, and excessive tourism are not few. If a ruin is destroyed, restoring it is nearly impossible. We must recognize the fact that once a heritage is lost, it never returns.",
+   273→      "On the other hand, examples of technology helping preserve cultural heritage are increasing. With 3D scanning and digital archives, it has become possible to record the shape and details of heritages and pass them on to later generations. Even if the real object is damaged, reproducing it digitally can be useful for research and education. Video recordings of traditional techniques are also emphasized as a means to leave craftsmen's skills for the future.",
+   274→      "Local initiatives are also active. Residents themselves carry out activities to protect festivals and traditional crafts. By teaching children old games and handicrafts, they try to nurture interest in culture. Some regions offer experience programs to tourists and use the income to maintain heritages. Residents' pride becomes the power to protect heritages.",
+   275→      "Cultural heritage is not merely old things. It is a record of ancestors' wisdom and beauty, a mirror-like existence that shows who we are. To pass this heritage on to future generations, technology, local communities, and individual efforts must come together. The heart that respects the past is precisely the power that enriches the future."
+   276→    ],
+   277→    questions: [
+   278→      {
+   279→        q: "日本[にほん]の文化[ぶんか]遺産[いさん]の維持[いじ]が難[むずか]しくなっている理由[りゆう]は何[なん]ですか。",
+   280→        choices: ["観光客[かんこうきゃく]が少[すく]ないから", "伝統[でんとう]技術[ぎじゅつ]を持[も]つ職人[しょくにん]が減[へ]っているから", "木材[もくざい]が多[おお]すぎるから", "法律[ほうりつ]がないから"],
+   281→        answerIndex: 1,
+   282→        explanation: "第二段で「伝統技術を持つ職人が減り、維持が難しくなっています」と書かれています。"
+   283→      },
+   284→      {
+   285→        q: "本文[ほんぶん]によると、世界[せかい]遺産[いさん]が被害[ひがい]を受[う]ける原因[げんいん]として挙[あ]げられていないのはどれですか。",
+   286→        choices: ["戦争[せんそう]", "気候[きこう]変動[へんどう]", "過度[かど]な観光[かんこう]化[か]", "地震[じしん]の減少[げんしょう]"],
+   287→        answerIndex: 3,
+   288→        explanation: "第三段で挙げられているのは戦争、気候変動、過度な観光化です。地震の減少は原因として挙げられていません。"
+   289→      },
+   290→      {
+   291→        q: "技術[ぎじゅつ]が文化[ぶんか]遺産[いさん]の保存[ほぞん]に役立[やくだ]つ例[れい]として挙[あ]げられているのはどれですか。",
+   292→        choices: ["三次[さんじ]元[げん]スキャンとデジタルアーカイブ", "新[あたら]しい建築[けんちく]材料[ざいりょう]", "自動[じどう]運転[うんてん]車[しゃ]", "人工[じんこう]知能[ちのう]による翻訳[ほんやく]"],
+   293→        answerIndex: 0,
+   294→        explanation: "第四段で「三次元スキャンやデジタルアーカイブにより、遺産の形状や細部を記録し」と書かれています。"
+   295→      },
+   296→      {
+   297→        q: "地域[ちいき]の取[と]り組[く]みとして挙[あ]げられているのは何[なん]ですか。",
+   298→        choices: ["遺産[いさん]の破壊[はかい]", "外国人[がいこくじん]の排除[はいじょ]", "子[こ]どもに昔[むかし]の遊[あそ]びや手芸[しゅげい]を教[おし]えること", "観光[かんこう]客[きゃく]の制限[せいげん]だけを行[おこな]うこと"],
+   299→        answerIndex: 2,
+   300→        explanation: "第五段で「子どもたちに昔の遊びや手芸を教えることで、文化への関心を育もうとする試みです」と書かれています。"
+   301→      },
+   302→      {
+   303→        q: "筆者[ひっしゃ]によると、文化[ぶんか]遺産[いさん]とは何[なん]ですか。",
+   304→        choices: ["単[たん]なる古[ふる]い物[もの]", "先人[せんじん]の知恵[ちえ]と美[び]の記録[きろく]", "売[う]るための商品[しょうひん]", "観光[かんこう]の道具[どうぐ]"],
+   305→        answerIndex: 1,
+   306→        explanation: "最終段で「それは、先人の知恵と美の記録であり」と述べられています。"
+   307→      }
+   308→    ]
+   309→  },
+   310→
+   311→  // ───────────────────────────────────────────────────────────
+   312→  // r-n3-16 — Online Education
+   313→  // ───────────────────────────────────────────────────────────
+   314→  {
+   315→    id: "r-n3-16",
+   316→    title: "オンライン教育[きょういく]の光[ひかり]と影[かげ]",
+   317→    titleReading: "おんらいんきょういくのひかりとかげ",
+   318→    level: "N3",
+   319→    summary: "How online education has expanded access to learning, while also creating new gaps and challenges for learners and teachers.",
+   320→    estMinutes: 7,
+   321→    tags: ["education", "technology", "internet"],
+   322→    body: [
+   323→      "インターネットの普及[ふきゅう]に伴[ともな]い、オンライン教育[きょういく]が急速[きゅうそく]に広[ひろ]がりました。学校[がっこう]に通[かよ]わなくても、自宅[じたく]で世界中[せかいじゅう]の講座[こうざ]を受講[じゅこう]できる時代[じだい]になりました。プログラミングや語学[ごがく]、ビジネススキルまで、幅広[はばひろ]い分野[ぶんや]の学習[がくしゅう]が可能[かのう]です。場所[ばしょ]と時間[じかん]の制約[せいやく]から解放[かいほう]されたことは、教育[きょういく]の歴史[れきし]において大[おお]きな変革[へんかく]と言[い]えます。",
+   324→      "オンライン教育[きょういく]の最大[さいだい]の利点[りてん]は、アクセスの容易[ようい]さです。地方[ちほう]に住[す]む人[ひと]でも、都市[とし]の有名[ゆうめい]な大学[だいがく]の講義[こうぎ]を受[う]けることができます。働[はたら]きながら学[まな]ぶ社会人[しゃかいじん]も、自分[じぶん]の都合[つごう]に合[あ]わせて進[すす]めることができるため、生涯[しょうがい]学習[がくしゅう]の手段[しゅだん]として重宝[じゅうほう]されています。学費[がくひ]が比較[ひかく]的[てき]に安[やす]いことも、魅力[みりょく]の一[ひと]つです。",
+   325→      "しかしながら、課題[かだい]も存在[そんざい]します。最大[さいだい]の問題[もんだい]は、デジタル格差[かくさ]です。インターネット環境[かんきょう]や端末[たんまつ]を持[も]たない家庭[かてい]の子[こ]どもは、オンライン教育[きょういく]の恩恵[おんけい]を受[う]けることができません。貧困[ひんこん]の連鎖[れんさ]を断[た]ち切[き]るはずの教育[きょういく]が、逆[ぎゃく]に格差[かくさ]を拡大[かくだい]する結果[けっか]になっています。この矛盾[むじゅん]を解決[かいけつ]するために、国[くに]や自治体[じちたい]による支援[しえん]が求[もと]められています。",
+   326→      "もう一[ひと]つの課題[かだい]は、対人[たいじん]関係[かんけい]の機会[きかい]が減[へ]ることです。学校[がっこう]では、授業[じゅぎょう]以外[いがい]にも友達[ともだち]との交流[こうりゅう]や衝突[しょうとつ]を通[つう]じて、社会性[しゃかいせい]を身[み]につけます。画面[がめん]越[ご]しの学習[がくしゅう]だけでは、こうした経験[けいけん]を得[え]ることが難[むずか]しいです。また、孤独[こどく]を感[かん]じる学習[がくしゅう]者[しゃ]も少[すく]なくなく、メンタルヘルスへの影響[えいきょう]も懸念[けねん]されています。",
+   327→      "教師[きょうし]の役割[やくわり]も変[か]わりつつあります。知識[ちしき]を伝[つた]えるだけの存在[そんざい]から、学習[がくしゅう]者[しゃ]のモチベーションを支[ささ]え、個別[こべつ]に助言[じょげん]するコーチのような役割[やくわり]が求[もと]められています。技術[ぎじゅつ]に慣[な]れない教師[きょうし]にとって、この変化[へんか]は負担[ふたん]となる場合[ばあい]があります。教員[きょういん]研修[けんしゅう]やサポート体制[たいせい]の整備[せいび]が、これからの時代[じだい]に不可欠[ふかけつ]です。",
+   328→      "オンラインと対面[たいめん]、それぞれの長所[ちょうしょ]を活[い]かした混合[こんごう]型[がた]の授業[じゅぎょう]が、今後[こんご]主流[しゅりゅう]になると予想[よそう]されています。技術[ぎじゅつ]の便利[べんり]さを取[と]り入[い]れつつ、人間[にんげん]同士[どうし]のつながりを大切[たいせつ]にする教育[きょういく]のあり方[かた]を考[かんが]えることが、私[わたし]たちに課[か]された課題[かだい]です。教育[きょういく]は知識[ちしき]を伝[つた]えるだけでなく、人[ひと]を育[はぐく]むものだからです。"
+   329→    ],
+   330→    translation: [
+   331→      "With the spread of the internet, online education has expanded rapidly. We have entered an era in which you can take courses from all over the world at home without going to school. Learning in a wide range of fields, from programming and languages to business skills, is possible. Being freed from constraints of place and time is a major transformation in the history of education.",
+   332→      "The greatest advantage of online education is ease of access. Even people living in rural areas can take lectures at famous urban universities. Working adults can proceed according to their own schedules, so it is convenient as a means of lifelong learning. Relatively low tuition is also one of its appeals.",
+   333→      "However, challenges also exist. The biggest problem is the digital divide. Children in homes without internet access or devices cannot receive the benefits of online education. Education, which is supposed to break the cycle of poverty, has ironically resulted in expanding the gap. National and local government support is required to resolve this contradiction.",
+   334→      "Another challenge is the reduction of opportunities for interpersonal relationships. At school, students acquire social skills through interactions and conflicts with friends outside of class. With only screen-based learning, it is difficult to gain such experiences. Also, many learners feel lonely, and concerns about the impact on mental health have been raised.",
+   335→      "The role of teachers is also changing. Rather than merely conveying knowledge, they are now required to act like coaches who support learners' motivation and give individual advice. For teachers unfamiliar with technology, this change can be a burden. Training and support systems for teachers are indispensable in the coming era.",
+   336→      "Hybrid classes that combine the strengths of online and in-person learning are expected to become mainstream in the future. While incorporating the convenience of technology, considering what education should be that values human connections is a challenge assigned to us. Education is not only about conveying knowledge, but also about nurturing people."
+   337→    ],
+   338→    questions: [
+   339→      {
+   340→        q: "オンライン教育[きょういく]の最大[さいだい]の利点[りてん]は何[なん]ですか。",
+   341→        choices: ["学費[がくひ]が高[たか]いこと", "アクセスの容易[ようい]さ", "友達[ともだち]が増[ふ]えること", "運動[うんどう]ができること"],
+   342→        answerIndex: 1,
+   343→        explanation: "第二段で「オンライン教育の最大の利点は、アクセスの容易さです」と書かれています。"
+   344→      },
+   345→      {
+   346→        q: "デジタル格差[かくさ]が問題[もんだい]になる理由[りゆう]は何[なん]ですか。",
+   347→        choices: ["インターネットが速[はや]すぎるから", "端末[たんまつ]を持[も]たない家庭[かてい]の子[こ]どもが恩恵[おんけい]を受[う]けられず、格差[かくさ]が拡大[かくだい]するから", "オンライン教育[きょういく]が広[ひろ]がらないから", "学校[がっこう]がなくなるから"],
+   348→        answerIndex: 1,
+   349→        explanation: "第三段で「インターネット環境や端末を持たない家庭の子どもは、オンライン教育の恩恵を受けることができません」と書かれています。"
+   350→      },
+   351→      {
+   352→        q: "対面[たいめん]授業[じゅぎょう]でしか得[え]られない経験[けいけん]として挙[あ]げられているのは何[なん]ですか。",
+   353→        choices: ["プログラミングの技術[ぎじゅつ]", "語学[ごがく]の学習[がくしゅう]", "友達[ともだち]との交流[こうりゅう]や衝突[しょうとつ]を通[つう]じた社会性[しゃかいせい]", "ビジネススキル"],
+   354→        answerIndex: 2,
+   355→        explanation: "第四段で「友達との交流や衝突を通じて、社会性を身につけます」と書かれています。"
+   356→      },
+   357→      {
+   358→        q: "教師[きょうし]に新[あたら]しく求[もと]められる役割[やくわり]は何[なん]ですか。",
+   359→        choices: ["知識[ちしき]を伝[つた]えるだけの存在[そんざい]", "モチベーションを支[ささ]え、助言[じょげん]するコーチ", "プログラマー", "管理者[かんりしゃ]"],
+   360→        answerIndex: 1,
+   361→        explanation: "第五段で「モチベーションを支え、個別に助言するコーチのような役割が求められています」と書かれています。"
+   362→      },
+   363→      {
+   364→        q: "筆者[ひっしゃ]は今後[こんご]主流[しゅりゅう]になると予想[よそう]している授業[じゅぎょう]の形[かた]はどれですか。",
+   365→        choices: ["オンラインだけの授業[じゅぎょう]", "対面[たいめん]だけの授業[じゅぎょう]", "オンラインと対面[たいめん]の長所[ちょうしょ]を活[い]かした混合[こんごう]型[がた]", "ラジオの授業[じゅぎょう]"],
+   366→        answerIndex: 2,
+   367→        explanation: "最終段で「オンラインと対面、それぞれの長所を活かした混合型の授業が、今後主流になると予想されています」と書かれています。"
+   368→      }
+   369→    ]
+   370→  },
+   371→
+   372→  // ───────────────────────────────────────────────────────────
+   373→  // r-n3-17 — Food Sustainability
+   374→  // ───────────────────────────────────────────────────────────
+   375→  {
+   376→    id: "r-n3-17",
+   377→    title: "食[しょく]の持続[じぞく]可能性[かのうせい]を問[と]う",
+   378→    titleReading: "しょくのじぞくかのうせいをとう",
+   379→    level: "N3",
+   380→    summary: "The environmental cost of modern food systems, food waste, and how consumers can contribute to sustainable eating.",
+   381→    estMinutes: 8,
+   382→    tags: ["food", "environment", "sustainability"],
+   383→    body: [
+   384→      "毎日[まいにち]食[た]べる物[もの]が、実[じつ]は地球[ちきゅう]環境[かんきょう]に大[おお]きな影響[えいきょう]を与[あた]えていることを知[し]っていますか。現代[げんだい]の食[しょく]生活[せいかつ]は、便利[べんり]で豊[ゆた]かになった一方[いっぽう]で、環境[かんきょう]への負荷[ふか]を増[ま]しています。食[しょく]の持続[じぞく]可能性[かのうせい]を考[かんが]えることは、私[わたし]たちの未来[みらい]に直結[ちょっけつ]する重要[じゅうよう]なテーマです。",
+   385→      "食[しょく]肉[にく]の消費[しょうひ]が問題[もんだい]の一[ひと]つです。牛[ぎゅう]や豚[ぶた]などの家畜[かちく]を飼[か]うためには、多[おお]くの穀物[こくもつ]と水[みず]が必要[ひつよう]です。また、家畜[かちく]のげっぷや排泄物[はいせつぶつ]からメタンガスが発生[はっせい]し、温室[おんしつ]効果[こうか]ガスの原因[げんいん]になっています。肉[にく]中心[ちゅうしん]の食[しょく]生活[せいかつ]が地球[ちきゅう]温暖化[おんだんか]を加速[かそく]させているという事実[じじつ]は、あまり知[し]られていません。植物[しょくぶつ]中心[ちゅうしん]の食[しょく]事[ごはん]に変[か]えるだけでも、環境[かんきょう]負荷[ふか]は大[おお]きく減[へ]ります。",
+   386→      "食品[しょくひん]廃棄[はいき]物[ぶつ]、いわゆるフードロスも深刻[しんこく]な問題[もんだい]です。日本[にほん]では年間[ねんかん]約[やく]六百[ろっぴゃく]万[まん]トンの食品[しょくひん]が捨[す]てられており、その量[りょう]は世界[せかい]の食糧[しょくりょう]援助[えんじょ]量[りょう]の約[やく]二[に]倍[ばい]と言[い]われています。スーパーでの過剰[かじょう]な品揃[しなぞろ]えや、家庭[かてい]での買[か]いすぎが原因[げんいん]です。まだ食[た]べられる物[もの]が捨[す]てられることは、資源[しげん]の無駄遣[むづか]いであるだけでなく、生産[せいさん]に使[つか]われたエネルギーまで無駄[むだ]にしています。",
+   387→      "輸入[ゆにゅう]食品[しょくひん]への依存[いぞん]も考[かんが]えるべき課題[かだい]です。遠[とお]くの国[くに]から食[た]べ物[もの]を運[はこ]ぶには、船[ふね]や飛行機[ひこうき]の燃料[ねんりょう]が使[つか]われ、多[おお]くの二酸化[にさんか]炭素[たんそ]が排出[はいしゅつ]されます。地元[じもと]で取[と]れた旬[しゅん]の食材[しょくざい]を選[えら]ぶ「地産[ちさん]地消[ちしょう]」の取[と]り組[く]みが見直[みなお]されています。新鮮[しんせん]で栄養[えいよう]価[か]が高[たか]いだけでなく、輸送[ゆそう]による環境[かんきょう]負荷[ふか]も減[へ]らせるからです。",
+   388→      "漁業[ぎょぎょう]の現状[げんじょう]も無視[むし]できません。世界[せかい]の魚[さかな]の約[やく]三割[さんわり]が過度[かど]な漁獲[ぎょかく]により減[へ]り続[つづ]けていると報告[ほうこく]されています。海洋[かいよう]生態系[せいたいけい]のバランスが崩[くず]れると、将来[しょうらい]の食糧[しょくりょう]供給[きょうきゅう]にも影響[えいきょう]が出[で]ます。持続[じぞく]可能[かのう]な漁業[ぎょぎょう]の認証[にんしょう]制度[せいど]を活用[かつよう]し、資源[しげん]を守[まも]る漁業[ぎょぎょう]で獲[と]れた魚[さかな]を選[えら]ぶことが、消費[しょうひ]者[しゃ]にできる行動[こうどう]です。",
+   389→      "持続[じぞく]可能[かのう]な食[しょく]生活[せいかつ]は、特別[とくべつ]な努力[どりょく]を要[よう]するものではありません。必要[ひつよう]な分[ぶん]だけ買[か]い、残[のこ]さず食[た]べること。地元[じもと]の食材[しょくざい]を活用[かつよう]すること。植物[しょくぶつ]中心[ちゅうしん]のメニューを取[と]り入[い]れること。これら小[ちい]さな積[つみ]み重[かさ]ねが、地球[ちきゅう]の未来[みらい]を支[ささ]える力[ちから]になります。食[た]べるという日常[にちじょう]の行為[こうい]こそが、最[もっと]も身近[みぢか]な環境[かんきょう]保護[ほご]の機会[きかい]なのです。"
+   390→    ],
+   391→    translation: [
+   392→      "Do you know that what we eat every day actually has a great impact on the global environment? Modern eating habits have become convenient and rich, but on the other hand, they are increasing the burden on the environment. Considering the sustainability of food is an important theme directly linked to our future.",
+   393→      "Meat consumption is one problem. Raising livestock such as cows and pigs requires much grain and water. In addition, methane gas is produced from the burps and excrement of livestock, causing greenhouse gases. The fact that meat-centered diets accelerate global warming is not well known. Simply switching to plant-based meals greatly reduces environmental impact.",
+   394→      "Food waste is also a serious problem. In Japan, about six million tons of food are discarded annually, and the amount is said to be about twice the world's food aid. Excessive assortment at supermarkets and overbuying at home are the causes. Discarding food that can still be eaten is not only a waste of resources but also wastes the energy used in production.",
+   395→      "Dependence on imported food is also an issue to consider. Transporting food from distant countries uses fuel for ships and planes, and much carbon dioxide is emitted. The initiative of local production and consumption, choosing seasonal ingredients produced locally, is being reconsidered. It is not only fresh and highly nutritious, but also reduces the environmental impact of transport.",
+   396→      "The current state of fisheries cannot be ignored either. It is reported that about thirty percent of the world's fish are continuing to decrease due to overfishing. If the balance of the marine ecosystem collapses, it will affect future food supply. Utilizing certification systems for sustainable fisheries and choosing fish caught by fisheries that protect resources is an action consumers can take.",
+   397→      "Sustainable eating habits do not require special effort. Buying only what is needed and eating without leaving leftovers. Utilizing local ingredients. Incorporating plant-centered menus. These small accumulations become the power that supports the future of the Earth. The everyday act of eating is the most familiar opportunity for environmental protection."
+   398→    ],
+   399→    questions: [
+   400→      {
+   401→        q: "食[しょく]肉[にく]の消費[しょうひ]が環境[かんきょう]に悪[わる]い理由[りゆう]として挙[あ]げられていないのはどれですか。",
+   402→        choices: ["家畜[かちく]に多[おお]くの穀物[こくもつ]が必要[ひつよう]なこと", "多[おお]くの水[みず]が必要[ひつよう]なこと", "メタンガスが発生[はっせい]すること", "森林[しんりん]が増[ふ]えること"],
+   403→        answerIndex: 3,
+   404→        explanation: "第二段で挙げられているのは穀物・水の消費とメタンガスの発生です。森林が増えることは挙げられていません。"
+   405→      },
+   406→      {
+   407→        q: "日本[にほん]のフードロスは年間[ねんかん]どれくらいですか。",
+   408→        choices: ["約[やく]六百[ろっぴゃく]万[まん]トン", "約[やく]百[ひゃく]万[まん]トン", "約[やく]一万[いちまん]トン", "約[やく]三千[さんぜん]万[まん]トン"],
+   409→        answerIndex: 0,
+   410→        explanation: "第三段で「日本では年間約六百万トンの食品が捨てられている」と書かれています。"
+   411→      },
+   412→      {
+   413→        q: "「地産[ちさん]地消[ちしょう]」が見直[みなお]されている理由[りゆう]は何[なん]ですか。",
+   414→        choices: ["輸入[ゆにゅう]品[ひん]の方[ほう]が安[やす]いから", "新鮮[しんせん]で栄養[えいよう]価[か]が高[たか]く、輸送[ゆそう]の環境[かんきょう]負荷[ふか]も減[へ]らせるから", "地元[じもと]の食材[しょくざい]が高[たか]いから", "輸入[ゆにゅう]食品[しょくひん]が不要[ふよう]だから"],
+   415→        answerIndex: 1,
+   416→        explanation: "第四段で「新鮮で栄養価が高いだけでなく、輸送による環境負荷も減らせるからです」と書かれています。"
+   417→      },
+   418→      {
+   419→        q: "海洋[かいよう]生態系[せいたいけい]のバランスが崩[くず]れると何[なん]に影響[えいきょう]が出ますか。",
+   420→        choices: ["将来[しょうらい]の食糧[しょくりょう]供給[きょうきゅう]", "陸上[りくじょう]の動物[どうぶつ]", "航空[こうくう]産業[さんぎょう]", "インターネット"],
+   421→        answerIndex: 0,
+   422→        explanation: "第五段で「海洋生態系のバランスが崩れると、将来の食糧供給にも影響が出ます」と書かれています。"
+   423→      },
+   424→      {
+   425→        q: "筆者[ひっしゃ]が提案[ていあん]する持続[じぞく]可能[かのう]な食[しょく]生活[せいかつ]の行動[こうどう]でないものはどれですか。",
+   426→        choices: ["必要[ひつよう]な分[ぶん]だけ買[か]うこと", "地元[じもと]の食材[しょくざい]を活用[かつよう]すること", "植物[しょくぶつ]中心[ちゅうしん]のメニューを取[と]り入[い]れること", "肉[にく]を毎日[まいにち]大量[たいりょう]に食[た]べること"],
+   427→        answerIndex: 3,
+   428→        explanation: "最終段で提案されているのは必要な分だけ買う、地元食材の活用、植物中心メニューの導入です。肉を毎日大量に食べることは提案されていません。"
+   429→      }
+   430→    ]
+   431→  },
+   432→
+   433→  // ───────────────────────────────────────────────────────────
+   434→  // r-n3-18 — Urban Planning
+   435→  // ───────────────────────────────────────────────────────────
+   436→  {
+   437→    id: "r-n3-18",
+   438→    title: "これからの都市[とし]計画[けいかく]",
+   439→    titleReading: "これからのとしけいかく",
+   440→    level: "N3",
+   441→    summary: "How cities are being redesigned for sustainability, walkability, and resilience in the face of climate change and population decline.",
+   442→    estMinutes: 8,
+   443→    tags: ["urban planning", "city", "environment"],
+   444→    body: [
+   445→      "世界[せかい]の人口[じんこう]は都市[とし]部[ぶ]に集中[しゅうちゅう]し続[つづ]けています。人口[じんこう]の増加[ぞうか]に伴[ともな]い、住宅[じゅうたく]不足[ぶそく]、交通[こうつう]渋滞[じゅうたい]、環境[かんきょう]汚染[おせん]など、都市[とし]が抱[かか]える問題[もんだい]は複雑化[ふくざつか]しています。一方[いっぽう]で日本[にほん]では、少子[しょうし]高齢[こうれい]化[か]により逆[ぎゃく]に人口[じんこう]が減[へ]り、空[あ]き家[や]や空[あ]き店舗[てんぽ]が目立[めだ]つ都市[とし]も増[ふ]えています。都市[とし]計画[けいかく]は、この二[ふた]つの相反[あいはん]する課題[かだい]に同時[どうじ]に対応[たいおう]しなければなりません。",
+   446→      "歩[ある]きやすいまちづくりが、最近[さいきん]重視[じゅうし]されています。車[くるま]中心[ちゅうしん]の都市[とし]から、人[ひと]中心[ちゅうしん]の都市[とし]へと転換[てんかん]する動[うご]きです。歩道[ほどう]を広[ひろ]げ、車[くるま]の速度[そくど]を落[お]とすことで、歩行者[ほこうしゃ]の安全[あんぜん]が確保[かくほ]されます。また、公園[こうえん]や広場[ひろば]を増[ふ]やし、人[ひと]が集[あつ]まれる空間[くうかん]を作[つく]ることで、地域[ちいき]のつながりが生[う]まれます。歩[ある]ける距離[きょり]に商店[しょうてん]や学校[がっこう]があることは、生活[せいかつ]の質[しつ]を高[たか]めます。",
+   447→      "環境[かんきょう]への配慮[はいりょ]も欠[か]かせません。都市[とし]部[ぶ]は、ヒートアイランド現象[げんしょう]により夏[なつ]の気温[きおん]が周囲[しゅうい]より高[たか]くなります。建物[たてもの]の屋上[おくじょう]や壁[かべ]を緑化[りょっか]し、道路[どうろ]に打[う]ち水[みず]を行[おこな]うことで、気温[きおん]の上昇[じょうしょう]を抑[おさ]える取[と]り組[く]みが進[すす]んでいます。また、雨水[あまみず]を地下[ちか]に貯蔵[ちょぞう]し、渇水[かっすい]時[じ]の灌溉[かんがい]やトイレ用水[ようすい]に利用[りよう]する仕組[しく]みも導入[どうにゅう]されています。",
+   448→      "防災[ぼうさい]の観点[かんてん]も重要[じゅうよう]です。日本[にほん]は地震[じしん]や台風[たいふう]などの自然[しぜん]災害[さいがい]が多[おお]く、都市[とし]の脆弱[ぜいじゃく]性[せい]が問題[もんだい]になります。避難[ひなん]場所[ばしょ]となる公園[こうえん]や広場[ひろば]を適切[てきせつ]に配置[はいち]し、津波[つなみ]や洪水[こうずい]の危険[きけん]を示[しめ]すハザードマップを周知[しゅうち]することが求[もと]められます。建築[けんちく]物[ぶつ]の耐震[たいしん]化[か]も、都市[とし]計画[けいかく]の一環[いっかん]として進[すす]められています。",
+   449→      "人口[じんこう]減少[げんしょう]社会[しゃかい]に合[あ]わせた戦略[せんりゃく]も必要[ひつよう]です。すべての地域[ちいき]にインフラを維持[いじ]するのは困難[こんなん]になりつつあります。そこで、生活[せいかつ]に必要[ひつよう]な機能[きのう]を一[ひと]か所[しょ]に集[あつ]めたコンパクトシティへの移行[いこう]が検討[けんとう]されています。居住[きょじゅう]地[ち]を公共交通[こうつう]の沿線[えんせん]に集約[しゅうやく]することで、効率[こうりつ]的[てき]なサービス提供[ていきょう]が可能[かのう]になります。",
+   450→      "都市[とし]計画[けいかく]は、専門[せんもん]家[か]だけのものではありません。住民[じゅうみん]の声[こえ]を反映[はんえい]させることが成功[せいこう]の鍵[かぎ]です。誰[だれ]もが安全[あんぜん]に、快適[かいてき]に、持続[じぞく]可能[かのう]な方法[ほうほう]で暮[く]らせる都市[とし]を実現[じつげん]するためには、行政[ぎょうせい]と市民[しみん]が協働[きょうどう]することが不可欠[ふかけつ]です。これからの都市[とし]は、人[ひと]と環境[かんきょう]の調和[ちょうわ]を象徴[しょうちょう]する場所[ばしょ]であるべきです。"
+   451→    ],
+   452→    translation: [
+   453→      "The world's population continues to concentrate in urban areas. As the population grows, the problems cities face, such as housing shortages, traffic congestion, and environmental pollution, are becoming more complex. On the other hand, in Japan, the population is decreasing due to the declining birthrate and aging, and cities with noticeable vacant houses and shops are increasing. Urban planning must simultaneously address these two contradictory challenges.",
+   454→      "Walkable town development has been emphasized recently. It is a movement to shift from car-centered cities to people-centered cities. By widening sidewalks and slowing car speeds, pedestrian safety is secured. Also, by increasing parks and plazas and creating spaces where people can gather, local connections are born. Having shops and schools within walking distance improves the quality of life.",
+   455→      "Consideration for the environment is also indispensable. In urban areas, the heat island effect makes summer temperatures higher than the surroundings. Efforts to suppress temperature rise are advancing, such as greening the roofs and walls of buildings and sprinkling water on roads. Also, systems to store rainwater underground and use it for irrigation and toilet water during droughts have been introduced.",
+   456→      "The perspective of disaster prevention is also important. Japan has many natural disasters such as earthquakes and typhoons, and the vulnerability of cities becomes a problem. Properly placing parks and plazas that serve as evacuation sites and publicizing hazard maps that indicate tsunami and flood risks are required. Seismic reinforcement of buildings is also being advanced as part of urban planning.",
+   457→      "Strategies suited to a society with a declining population are also necessary. Maintaining infrastructure in all areas is becoming difficult. Therefore, transition to compact cities, which gather the functions necessary for life in one place, is being considered. By consolidating residential areas along public transportation lines, efficient service provision becomes possible.",
+   458→      "Urban planning is not only for specialists. Reflecting residents' voices is the key to success. To realize a city where everyone can live safely, comfortably, and sustainably, collaboration between administration and citizens is indispensable. The cities of the future should be places that symbolize the harmony of people and the environment."
+   459→    ],
+   460→    questions: [
+   461→      {
+   462→        q: "日本[にほん]が直面[ちょくめん]する二[ふた]つの相反[あいはん]する都市[とし]の課題[かだい]は何[なん]ですか。",
+   463→        choices: ["経済[けいざい]成長[せいちょう]と雇用[こよう]増加[ぞうか]", "人口[じんこう]増加[ぞうか]と人口[じんこう]減少[げんしょう]", "インフレとデフレ", "輸出[ゆしゅつ]と輸入[ゆにゅう]"],
+   464→        answerIndex: 1,
+   465→        explanation: "第一段で、世界的な人口集中と日本の少子高齢化による人口減少という二つの課題に言及されています。"
+   466→      },
+   467→      {
+   468→        q: "「人[ひと]中心[ちゅうしん]の都市[とし]」を実現[じつげん]するために何[なに]を行[おこな]っていますか。",
+   469→        choices: ["車[くるま]の速度[そくど]を上[あ]げること", "歩道[ほどう]を広[ひろ]げ、車[くるま]の速度[そくど]を落[お]とすこと", "公園[こうえん]をなくすこと", "歩道[ほどう]を狭[せば]めること"],
+   470→        answerIndex: 1,
+   471→        explanation: "第二段で「歩道を広げ、車の速度を落とすことで、歩行者の安全が確保されます」と書かれています。"
+   472→      },
+   473→      {
+   474→        q: "ヒートアイランド現象[げんしょう]を抑[おさ]える取[と]り組[く]みとして挙[あ]げられているのはどれですか。",
+   475→        choices: ["建物[たてもの]の屋上[おくじょう]や壁[かべ]の緑化[りょっか]", "車[くるま]の増加[ぞうか]", "工場[こうじょう]の建設[けんせつ]", "森林[しんりん]の伐採[ばっさい]"],
+   476→        answerIndex: 0,
+   477→        explanation: "第三段で「建物の屋上や壁を緑化し、道路に打ち水を行うことで、気温の上昇を抑える取り組みが進んでいます」と書かれています。"
+   478→      },
+   479→      {
+   480→        q: "コンパクトシティへの移行[いこう]が検討[けんとう]される理由[りゆう]は何[なん]ですか。",
+   481→        choices: ["人口[じんこう]が増[ふ]え続[つづ]けるから", "すべての地域[ちいき]にインフラを維持[いじ]するのが困難[こんなん]だから", "車[くるま]を増[ふ]やしたいから", "商店[しょうてん]をなくしたいから"],
+   482→        answerIndex: 1,
+   483→        explanation: "第五段で「すべての地域にインフラを維持するのは困難になりつつあります」と書かれています。"
+   484→      },
+   485→      {
+   486→        q: "筆者[ひっしゃ]が都市[とし]計画[けいかく]の成功[せいこう]の鍵[かぎ]だと言[い]っているのは何[なん]ですか。",
+   487→        choices: ["専門[せんもん]家[か]だけの判断[はんだん]", "住民[じゅうみん]の声[こえ]を反映[はんえい]させること", "外国[がいこく]の法律[ほうりつ]の輸入[ゆにゅう]", "インフラの削減[さくげん]"],
+   488→        answerIndex: 1,
+   489→        explanation: "最終段で「住民の声を反映させることが成功の鍵です」と書かれています。"
+   490→      }
+   491→    ]
+   492→  },
+   493→
+   494→  // ───────────────────────────────────────────────────────────
+   495→  // r-n3-19 — Youth Voting
+   496→  // ───────────────────────────────────────────────────────────
+   497→  {
+   498→    id: "r-n3-19",
+   499→    title: "若[わか]い人[ひと]の投票[とうひょう]と政治[せいじ]参加[さんか]",
+   500→    titleReading: "わかいひとのとうひょうとせいじさんか",
+   501→    level: "N3",
+   502→    summary: "Why young people vote less, how their abstention shapes politics, and efforts to encourage youth political participation.",
+   503→    estMinutes: 7,
+   504→    tags: ["politics", "society", "youth"],
+   505→    body: [
+   506→      "選挙[せんきょ]のたびに、若[わか]い世代[せだい]の投票[とうひょう]率[りつ]の低[ひく]さが問題[もんだい]にされます。日本[にほん]では、十八[じゅうはち]歳[さい]以上[いじょう]の国民[こくみん]に投票[とうひょう]権[けん]が与[あた]えられていますが、二十[にじゅう]代[だい]の投票[とうひょう]率[りつ]は高齢[こうれい]層[そう]に比[くら]べ大[おお]きく下[さ]がっています。若[わか]い人[ひと]の声[こえ]が政治[せいじ]に届[とど]かなければ、政策[せいさく]はどう傾[かたむ]いていくのでしょうか。",
+   507→      "若[わか]い人[ひと]が投票[とうひょう]に行[い]かない理由[りゆう]は多様[たよう]です。「一[ひと]票[ひょう]では何[なに]も変[か]わらない」という無力感[むりょくかん]を抱[いだ]く人[ひと]が多[おお]くいます。また、政治[せいじ]に対[たい]する不信感[ふしんかん]や、候補者[こうほしゃ]の主張[しゅちょう]への関心[かんしん]の低[ひく]さも指摘[してき]されます。仕事[しごと]や学業[がくぎょう]で忙[いそが]しく、投票[とうひょう]所[じょ]に行[い]く時間[じかん]が取[と]れないという現実的[げんじつてき]な理由[りゆう]もあります。",
+   508→      "しかしながら、投票[とうひょう]率[りつ]の低[ひく]さは深刻[しんこく]な結果[けっか]を招[まね]きます。高齢[こうれい]者[しゃ]の関心[かんしん]が高[たか]い年金[ねんきん]や医療[いりょう]制度[せいど]が優先[ゆうせん]される一方[いっぽう]で、教育[きょういく]や雇用[こよう]、気候[きこう]変動[へんどう]など若[わか]い世代[せだい]に関[かん]する政策[せいさく]が後回[あとまわ]しにされる傾向[けいこう]があります。これが結果[けっか]として、世代[せだい]間[かん]の格差[かくさ]を拡大[かくだい]させ、将来[しょうらい]の社会[しゃかい]の負担[ふたん]を若[わか]い人[ひと]に押[お]し付[つ]ける構造[こうぞう]を生[う]み出[だ]しています。",
+   509→      "若[わか]い人[ひと]の政治[せいじ]参加[さんか]を促[うなが]す取[と]り組[く]みが進[すす]んでいます。学校[がっこう]では主権[しゅけん]者[しゃ]教育[きょういく]の一環[いっかん]として、模擬[もぎ]選挙[せんきょ]や議論[ぎろん]の場[ば]を設[もう]ける高校[こうこう]が増[ふ]えました。また、期日前[きじつぜん]投票[とうひょう]や不在[ふざい]者[しゃ]投票[とうひょう]の制度[せいど]を周知[しゅうち]し、忙[いそが]しい人[ひと]でも投票[とうひょう]しやすい環境[かんきょう]を整備[せいび]する動[うご]きもあります。インターネットを活用[かつよう]した若者[わかもの]向[む]けの政治[せいじ]情報[じょうほう]サイトも、関心[かんしん]を高[たか]める役割[やくわり]を果[は]たしています。",
+   510→      "投票[とうひょう]以外[いがい]の参加[さんか]の形[かたち]もあります。SNSを通[つう]じて政治[せいじ]的[てき]な意見[いけん]を発信[はっしん]したり、デモや署名[しょめい]活動[かつどう]に参加[さんか]したりする若[わか]い人[ひと]が増[ふ]えています。これらの行動[こうどう]は、直接[ちょくせつ]投票[とうひょう]にはならないものの、社会[しゃかい]の関心[かんしん]を引[ひ]き起[お]こし、政策[せいさく]に影響[えいきょう]を与[あた]える力[ちから]を持[も]ちます。多様[たよう]な参加[さんか]の形[かたち]が認[みと]められる社会[しゃかい]は、健全[けんぜん]な民主[みんしゅ]主義[しゅぎ]の証[あかし]です。",
+   511→      "民主[みんしゅ]主義[しゅぎ]は、一朝一夕[いっちょういっせき]で成[な]り立[た]つものではありません。参加[さんか]する人[ひと]が多[おお]ければ多[おお]いほど、より代表[だいひょう]的[てき]な政治[せいじ]が実現[じつげん]します。若[わか]い人[ひと]が自[みずか]らの未来[みらい]を自[みずか]らの手[て]で決[き]めるためには、投票[とうひょう]所[じょ]に足[あし]を運[はこ]ぶこと、そして毎日[まいにち]の政治[せいじ]への関心[かんしん]を持[も]ち続[つづ]けることが大切[たいせつ]です。一[ひと]票[ひょう]は小[ちい]さく見[み]えますが、積[つみ]もれば大[おお]きな力[ちから]になります。"
+   512→    ],
+   513→    translation: [
+   514→      "Every election, the low voter turnout of young generations is raised as a problem. In Japan, citizens aged eighteen and over are granted the right to vote, but the turnout among people in their twenties is much lower compared to the elderly. If young people's voices do not reach politics, in which direction will policies lean?",
+   515→      "There are various reasons why young people do not go to vote. Many feel powerless, thinking that one vote will not change anything. Also, distrust of politics and low interest in candidates' arguments are pointed out. There are also practical reasons, such as being too busy with work or studies to find time to go to the polling station.",
+   516→      "However, low turnout leads to serious consequences. While pension and medical systems of high interest to the elderly are prioritized, policies related to younger generations, such as education, employment, and climate change, tend to be postponed. This as a result creates a structure that widens the gap between generations and shifts the burden of future society onto young people.",
+   517→      "Initiatives to encourage youth political participation are advancing. In schools, as part of sovereignty education, more high schools are setting up mock elections and discussion spaces. Also, there are movements to publicize early voting and absentee voting systems and to prepare an environment where busy people can vote easily. Websites providing political information for young people using the internet are also playing a role in raising interest.",
+   518→      "There are also forms of participation other than voting. More young people are expressing political opinions through social media and participating in demonstrations and signature campaigns. Although these actions do not directly become votes, they have the power to draw social attention and influence policy. A society that recognizes diverse forms of participation is proof of healthy democracy.",
+   519→      "Democracy is not established overnight. The more people who participate, the more representative politics is realized. For young people to decide their own future with their own hands, it is important to go to the polling station and to continue having interest in daily politics. One vote may seem small, but when accumulated, it becomes a great power."
+   520→    ],
+   521→    questions: [
+   522→      {
+   523→        q: "日本[にほん]で投票[とうひょう]権[けん]が与[あた]えられるのは何[なん]歳[さい]以上[いじょう]ですか。",
+   524→        choices: ["十六[じゅうろく]歳[さい]", "十八[じゅうはち]歳[さい]", "二十[にじゅう]歳[さい]", "二十五[にじゅうご]歳[さい]"],
+   525→        answerIndex: 1,
+   526→        explanation: "第一段で「十八歳以上の国民に投票権が与えられています」と書かれています。"
+   527→      },
+   528→      {
+   529→        q: "若[わか]い人[ひと]が投票[とうひょう]に行[い]かない理由[りゆう]として挙[あ]げられていないのはどれですか。",
+   530→        choices: ["一票[ひょう]では何[なに]も変[か]わらないという無力感[むりょくかん]", "政治[せいじ]への不信感[ふしんかん]", "仕事[しごと]や学業[がくぎょう]で忙[いそが]しいこと", "投票[とうひょう]所[じょ]が多[おお]すぎること"],
+   531→        answerIndex: 3,
+   532→        explanation: "第二段で挙げられているのは無力感、不信感、関心の低さ、時間が取れないことです。投票所が多すぎることは理由として挙げられていません。"
+   533→      },
+   534→      {
+   535→        q: "若[わか]い世代[せだい]の投票[とうひょう]率[りつ]が低[ひく]いとどのような結果[けっか]を招[まね]きますか。",
+   536→        choices: ["年金[ねんきん]制度[せいど]が廃止[はいし]される", "若[わか]い世代[せだい]に関[かん]する政策[せいさく]が後回[あとまわ]しにされ、世代[せだい]間[かん]の格差[かくさ]が拡大[かくだい]する", "高齢[こうれい]者[しゃ]の投票[とうひょう]率[りつ]も下[さ]がる", "選挙[せんきょ]がなくなる"],
+   537→        answerIndex: 1,
+   538→        explanation: "第三段で「若い世代に関する政策が後回しにされる傾向があり、世代間の格差を拡大させる」と述べられています。"
+   539→      },
+   540→      {
+   541→        q: "学校[がっこう]で行[おこな]われている主権[しゅけん]者[しゃ]教育[きょういく]の取[と]り組[く]みは何[なん]ですか。",
+   542→        choices: ["模擬[もぎ]選挙[せんきょ]や議論[ぎろん]の場[ば]を設[もう]けること", "投票[とうひょう]所[じょ]を閉[と]じること", "選挙[せんきょ]の禁止[きんし]", "候補者[こうほしゃ]の推薦[すいせん]"],
+   543→        answerIndex: 0,
+   544→        explanation: "第四段で「模擬選挙や議論の場を設ける高校が増えました」と書かれています。"
+   545→      },
+   546→      {
+   547→        q: "投票[とうひょう]以外[いがい]の政治[せいじ]参加[さんか]の形[かたち]として挙[あ]げられているのは何[なん]ですか。",
+   548→        choices: ["選挙[せんきょ]のボイコット", "SNSでの意見[いけん]発信[はっしん]やデモ・署名[しょめい]活動[かつどう]", "海外[かいがい]移住[いじゅう]", "会社[かいしゃ]の退職[たいしょく]"],
+   549→        answerIndex: 1,
+   550→        explanation: "第五段で「SNSを通じて政治的な意見を発信したり、デモや署名活動に参加したりする若い人が増えています」と書かれています。"
+   551→      }
+   552→    ]
+   553→  },
+   554→
+   555→  // ───────────────────────────────────────────────────────────
+   556→  // r-n3-20 — The Art of Mindfulness
+   557→  // ───────────────────────────────────────────────────────────
+   558→  {
+   559→    id: "r-n3-20",
+   560→    title: "マインドフルネス：今[いま]を生[い]きる技術[ぎじゅつ]",
+   561→    titleReading: "まいんどふるねす：いまをいきるぎじゅつ",
+   562→    level: "N3",
+   563→    summary: "An introduction to mindfulness practice, its benefits for mental health, and simple ways to incorporate it into daily life.",
+   564→    estMinutes: 6,
+   565→    tags: ["wellness", "mindfulness", "mental health"],
+   566→    body: [
+   567→      "忙[いそが]しい現代[げんだい]社会[しゃかい]において、心[こころ]の健康[けんこう]を保[たも]つことが難[むずか]しくなっています。常[つね]にスマートフォンを手[て]に持[も]ち、情報[じょうほう]の波[なみ]にさらされる生活[せいかつ]は、心[こころ]を休[やす]む暇[ひま]を奪[うば]っています。そのような中[なか]で注目[ちゅうもく]を集[あつ]めているのが、マインドフルネスという実践[じっせん]です。マインドフルネスとは、今[いま]この瞬間[しゅんかん]の自分[じぶん]の感覚[かんかく]や思[おも]いに、評価[ひょうか]せずに注意[ちゅうい]を向[む]ける練習[れんしゅう]のことです。",
+   568→      "マインドフルネスの起源[きげん]は仏教[ぶっきょう]の瞑想[めいそう]にありますが、現代[げんだい]では宗教[しゅうきょう]的[てき]な意味[いみ]合[あ]いを離[はな]れ、心理学[しんりがく]や医学[いがく]の分野[ぶんや]で研究[けんきゅう]されています。研究[けんきゅう]によれば、定期的[ていきてき]なマインドフルネスの実践[じっせん]は、ストレスの軽減[けいげん]、集中力[しゅうちゅうりょく]の向上[こうじょう]、感情[かんじょう]のコントロールなど、多[おお]くの効果[こうか]をもたらすと報告[ほうこく]されています。企業[きぎょう]が社員[しゃいん]のメンタルヘルス対策[たいさく]として取[と]り入[い]れる例[れい]も増[ふ]えています。",
+   569→      "実践[じっせん]の方法[ほうほう]は難[むずか]しくありません。最[もっと]も一般的[いっぱんてき]なのは、呼吸[こきゅう]に意識[いしき]を向[む]ける練習[れんしゅう]です。静[しず]かな場所[ばしょ]に座[すわ]り、息[いき]を吸[す]って吐[は]く感覚[かんかく]にだけ注意[ちゅうい]を向[む]けます。途中[とちゅう]で他[ほか]の考[かんが]えが浮[う]かんでも、それを否定[ひてい]せず、再[ふたた]び呼吸[こきゅう]に意識[いしき]を戻[もど]します。わずか五分[ごふん]でも、毎日[まいにち]続[つづ]けることが大切[たいせつ]です。",
+   570→      "毎日[まいにち]の生活[せいかつ]の中[なか]でも、マインドフルネスを取[と]り入[い]れることができます。食事[しょくじ]の際[さい]、一口[ひとくち]ずつ味[あじ]わいながら食[た]べること。歩[ある]く時[とき]、足[あし]の裏[うら]が地面[じめん]に触[ふ]れる感覚[かんかく]に注意[ちゅうい]を向[む]けること。日常[にちじょう]の当[あたり]前[まえ]の行動[こうどう]に意識[いしき]を向[む]けるだけで、心[こころ]がここに在[あ]る状態[じょうたい]を作[つく]ることができます。",
+   571→      "ただし、マインドフルネスは魔法[まほう]の解決策[かいけつさく]ではありません。深刻[しんこく]な心理[しんり]的[てき]問題[もんだい]を抱[かか]える人[ひと]にとっては、専門[せんもん]家[か]の治療[ちりょう]と並[なら]んで用[もち]いるべき補助[ほじょ]的[てき]な手段[しゅだん]です。また、効果[こうか]は一朝一夕[いっちょういっせき]では現[あらわ]れず、継続[けいぞく]が求[もと]められます。焦[あせ]らず、自分[じぶん]のペースで取[と]り組[く]むことが重要[じゅうよう]です。",
+   572→      "マインドフルネスは、生産性[せいさんせい]を高[たか]めるためだけの技術[ぎじゅつ]ではありません。むしろ、何[なに]もしない時間[じかん]を許[ゆる]し、自分[じぶん]と向[む]き合[あ]う勇気[ゆうき]を養[やしな]う実践[じっせん]です。私[わたし]たちはいつも過去[かこ]を後悔[こうかい]し、未来[みらい]を不安[ふあん]に思[おも]うことで、今[いま]を生[い]きることを忘[わす]れがちです。呼吸[こきゅう]を整[ととの]え、この瞬間[しゅんかん]に意識[いしき]を戻[もど]すとき、私[わたし]たちは初[はじ]めて本当[ほんとう]に生[い]きていると感[かん]じるかもしれません。"
+   573→    ],
+   574→    translation: [
+   575→      "In busy modern society, maintaining mental health has become difficult. Living constantly holding a smartphone and exposed to waves of information deprives us of time to rest our minds. In such a situation, what is gaining attention is the practice called mindfulness. Mindfulness is the practice of paying attention to one's sensations and thoughts in this very moment, without evaluating them.",
+   576→      "The origin of mindfulness lies in Buddhist meditation, but in modern times, apart from religious meaning, it is studied in fields such as psychology and medicine. According to research, regular practice of mindfulness is reported to bring many effects, such as stress reduction, improved concentration, and emotional control. Examples of companies incorporating it as a mental health measure for employees are also increasing.",
+   577→      "The method of practice is not difficult. The most common is the exercise of directing awareness to breathing. Sit in a quiet place and pay attention only to the sensation of inhaling and exhaling. Even if other thoughts arise on the way, do not deny them, and return awareness to the breath again. Even just five minutes, continuing every day is important.",
+   578→      "Even in daily life, you can incorporate mindfulness. When eating, savoring each bite. When walking, paying attention to the sensation of the soles of the feet touching the ground. Just by directing awareness to ordinary daily actions, you can create a state where the mind is present here.",
+   579→      "However, mindfulness is not a magical solution. For people with serious psychological problems, it is an auxiliary means to be used alongside professional treatment. Also, the effects do not appear overnight, and continuation is required. It is important to work at it without rushing, at your own pace.",
+   580→      "Mindfulness is not just a technique to increase productivity. Rather, it is a practice that allows time to do nothing and cultivates the courage to face oneself. We tend to forget to live in the present by always regretting the past and feeling anxious about the future. When we regulate our breathing and return awareness to this moment, we may for the first time feel that we are truly alive."
+   581→    ],
+   582→    questions: [
+   583→      {
+   584→        q: "マインドフルネスとは何[なん]ですか。",
+   585→        choices: ["未来[みらい]を予測[よそく]する技術[ぎじゅつ]", "今[いま]の瞬間[しゅんかん]の感覚[かんかく]に評価[ひょうか]せず注意[ちゅうい]を向[む]ける練習[れんしゅう]", "過去[かこ]を分析[ぶんせき]する方法[ほうほう]", "情報[じょうほう]を集[あつ]める技術[ぎじゅつ]"],
+   586→        answerIndex: 1,
+   587→        explanation: "第一段で「今この瞬間の自分の感覚や思いに、評価せずに注意を向ける練習のことです」と書かれています。"
+   588→      },
+   589→      {
+   590→        q: "マインドフルネスの起源[きげん]はどこにありますか。",
+   591→        choices: ["キリスト教[きょう]", "仏教[ぶっきょう]の瞑想[めいそう]", "イスラム教[きょう]", "現代[げんだい]の心理学[しんりがく]"],
+   592→        answerIndex: 1,
+   593→        explanation: "第二段で「マインドフルネスの起源は仏教の瞑想にあります」と書かれています。"
+   594→      },
+   595→      {
+   596→        q: "マインドフルネスの効果[こうか]として挙[あ]げられていないものはどれですか。",
+   597→        choices: ["ストレスの軽減[けいげん]", "集中力[しゅうちゅうりょく]の向上[こうじょう]", "感情[かんじょう]のコントロール", "身長[しんちょう]の伸[の]び"],
+   598→        answerIndex: 3,
+   599→        explanation: "第二段で挙げられているのはストレス軽減、集中力向上、感情のコントロールです。身長の伸びは効果として挙げられていません。"
+   600→      },
+   601→      {
+   602→        q: "最[もっと]も一般的[いっぱんてき]なマインドフルネスの実践[じっせん]方法[ほうほう]は何[なん]ですか。",
+   603→        choices: ["スマートフォンを使[つか]うこと", "呼吸[こきゅう]に意識[いしき]を向[む]けること", "速[はや]く走[はし]ること", "大[おお]きな声[こえ]を出[だ]すこと"],
+   604→        answerIndex: 1,
+   605→        explanation: "第三段で「最も一般的なのは、呼吸に意識を向ける練習です」と書かれています。"
+   606→      },
+   607→      {
+   608→        q: "筆者[ひっしゃ]によると、マインドフルネスはどのような実践[じっせん]ですか。",
+   609→        choices: ["生産性[せいさんせい]を高[たか]めるだけの技術[ぎじゅつ]", "何[なに]もしない時間[じかん]を許[ゆる]し、自分[じぶん]と向[む]き合[あ]う勇気[ゆうき]を養[やしな]う実践[じっせん]", "過去[かこ]を忘[わす]れるための方法[ほうほう]", "未来[みらい]を予測[よそく]する技術[ぎじゅつ]"],
+   610→        answerIndex: 1,
+   611→        explanation: "最終段で「何もしない時間を許し、自分と向き合う勇気を養う実践です」と書かれています。"
+   612→      }
+   613→    ]
+   614→  }
+   615→];
+   616→
