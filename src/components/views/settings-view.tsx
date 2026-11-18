@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   Settings as SettingsIcon,
   Palette,
@@ -15,6 +15,15 @@ import {
   Heart,
   Check,
   PartyPopper,
+  User as UserIcon,
+  Camera,
+  Image as ImageIcon,
+  FileText,
+  Trophy,
+  Flame,
+  TrendingUp,
+  BookOpen,
+  Languages,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -250,6 +259,9 @@ export function SettingsView() {
         <Onboarding onDone={() => settings.set("onboarded", true)} />
       )}
 
+      {/* Account & Progress */}
+      <AccountSection settings={settings} progress={progress} />
+
       {/* Appearance */}
       <Card className="p-5">
         <h3 className="mb-1 flex items-center gap-2 text-sm font-bold text-foreground">
@@ -415,5 +427,208 @@ export function SettingsView() {
         </div>
       </Card>
     </div>
+  );
+}
+
+function AccountSection({
+  settings,
+  progress,
+}: {
+  settings: ReturnType<typeof useSettings>;
+  progress: ReturnType<typeof useProgress>;
+}) {
+  const [pfp, setPfp] = useState<string | null>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
+  const [userInfo, setUserInfo] = useState<{ name: string; email: string } | null>(null);
+
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem("nikki-pfp");
+      if (stored) setPfp(stored);
+    } catch { /* ignore */ }
+    try {
+      const stored = localStorage.getItem("nikki-user");
+      if (stored) {
+        const u = JSON.parse(stored);
+        setUserInfo({ name: u.name || "Learner", email: u.email || "" });
+      } else {
+        setUserInfo({ name: "Guest", email: "" });
+      }
+    } catch {
+      setUserInfo({ name: "Guest", email: "" });
+    }
+  }, []);
+
+  function handlePfpUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    if (file.size > 2_000_000) { alert("Image must be under 2MB"); return; }
+    const reader = new FileReader();
+    reader.onload = () => {
+      const dataUrl = reader.result as string;
+      setPfp(dataUrl);
+      try { localStorage.setItem("nikki-pfp", dataUrl); } catch { /* ignore */ }
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function removePfp() {
+    setPfp(null);
+    try { localStorage.removeItem("nikki-pfp"); } catch { /* ignore */ }
+  }
+
+  const kanjiMastered = Object.values(progress.kanji).filter((v) => v === "mastered").length;
+  const vocabMastered = Object.values(progress.vocab).filter((v) => v === "mastered").length;
+  const grammarMastered = Object.values(progress.grammar).filter((v) => v === "mastered").length;
+  const storiesRead = progress.storiesRead.length;
+  const quizzesTaken = progress.quizHistory.length;
+  const avgScore = quizzesTaken > 0
+    ? Math.round(progress.quizHistory.reduce((a, q) => a + (q.score / q.total) * 100, 0) / quizzesTaken)
+    : 0;
+  const level = Math.floor(progress.xp / 100) + 1;
+
+  function downloadImage() {
+    const canvas = document.createElement("canvas");
+    canvas.width = 800; canvas.height = 1000;
+    const ctx = canvas.getContext("2d"); if (!ctx) return;
+    ctx.fillStyle = "#fff9f0"; ctx.fillRect(0, 0, 800, 1000);
+    ctx.fillStyle = "#ff8fab"; ctx.fillRect(0, 0, 800, 120);
+    ctx.fillStyle = "#fff"; ctx.font = "bold 36px sans-serif"; ctx.textAlign = "center";
+    ctx.fillText("Nihongo with Nikki", 400, 55);
+    ctx.font = "18px sans-serif"; ctx.fillText("Progress Report", 400, 85);
+    ctx.font = "14px sans-serif"; ctx.fillText(new Date().toLocaleDateString(), 400, 105);
+    ctx.textAlign = "left"; ctx.fillStyle = "#3d2b2e";
+    ctx.font = "bold 28px sans-serif"; ctx.fillText(userInfo?.name || "Learner", 50, 180);
+    ctx.font = "16px sans-serif"; ctx.fillStyle = "#9a7177";
+    ctx.fillText(userInfo?.email || "Guest", 50, 205);
+    const stats = [
+      ["Total XP", progress.xp.toLocaleString()],
+      ["Day Streak", String(progress.streak)],
+      ["Level", String(level)],
+      ["Kanji Mastered", `${kanjiMastered}/${kanjiData.length}`],
+      ["Vocab Mastered", `${vocabMastered}/${vocabData.length}`],
+      ["Grammar Mastered", `${grammarMastered}/${grammarData.length}`],
+      ["Stories Read", `${storiesRead}/${storiesData.length}`],
+      ["Quizzes Taken", String(quizzesTaken)],
+      ["Avg Score", `${avgScore}%`],
+    ];
+    stats.forEach(([label, value], i) => {
+      const y = 260 + i * 65;
+      ctx.fillStyle = i % 2 === 0 ? "#ffe4ec" : "#f3dde6";
+      ctx.fillRect(50, y - 25, 700, 50);
+      ctx.fillStyle = "#9a7177"; ctx.font = "14px sans-serif"; ctx.fillText(label, 70, y);
+      ctx.fillStyle = "#3d2b2e"; ctx.font = "bold 18px sans-serif";
+      ctx.textAlign = "right"; ctx.fillText(value, 720, y); ctx.textAlign = "left";
+    });
+    ctx.fillStyle = "#9a7177"; ctx.font = "12px sans-serif"; ctx.textAlign = "center";
+    ctx.fillText("Generated by Nihongo with Nikki", 400, 970);
+    const url = canvas.toDataURL("image/png");
+    const a = document.createElement("a"); a.href = url;
+    a.download = `nikki-progress-${new Date().toISOString().slice(0, 10)}.png`; a.click();
+  }
+
+  function downloadPDF() {
+    const w = window.open("", "_blank");
+    if (!w) return;
+    w.document.write(`<!DOCTYPE html><html><head><title>Nikki Progress</title><style>
+    body{font-family:sans-serif;background:#fff9f0;margin:0;padding:40px;color:#3d2b2e}
+    .h{background:#ff8fab;color:#fff;padding:30px;border-radius:16px;text-align:center;margin-bottom:30px}
+    .h h1{margin:0;font-size:28px}.h p{margin:5px 0 0;opacity:.9}
+    .u{margin-bottom:30px}.u h2{margin:0;font-size:22px}.u p{margin:4px 0 0;color:#9a7177}
+    .s{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .st{background:#fff;border:1px solid #f3dde6;border-radius:12px;padding:16px;display:flex;justify-content:space-between}
+    .sl{font-size:14px;color:#9a7177}.sv{font-size:20px;font-weight:bold;color:#ff8fab}
+    .f{text-align:center;margin-top:30px;color:#9a7177;font-size:12px}
+    </style></head><body>
+    <div class="h"><h1>Nihongo with Nikki</h1><p>Progress Report ・ ${new Date().toLocaleDateString()}</p></div>
+    <div class="u"><h2>${userInfo?.name||"Learner"}</h2><p>${userInfo?.email||"Guest"}</p></div>
+    <div class="s">${[
+      ["Total XP",progress.xp.toLocaleString()],["Streak",String(progress.streak)],["Level",String(level)],
+      ["Kanji",`${kanjiMastered}/${kanjiData.length}`],["Vocab",`${vocabMastered}/${vocabData.length}`],
+      ["Grammar",`${grammarMastered}/${grammarData.length}`],["Stories",`${storiesRead}/${storiesData.length}`],
+      ["Quizzes",String(quizzesTaken)],["Avg Score",`${avgScore}%`],
+    ].map(([l,v])=>`<div class="st"><span class="sl">${l}</span><span class="sv">${v}</span></div>`).join("")}</div>
+    <div class="f">Generated by Nihongo with Nikki</div></body></html>`);
+    w.document.close();
+    setTimeout(() => w.print(), 300);
+  }
+
+  return (
+    <Card className="p-5">
+      <h3 className="mb-1 flex items-center gap-2 text-sm font-bold text-foreground">
+        <UserIcon className="h-4 w-4 text-primary" /> Account & Progress
+        <span className="jp font-normal text-muted-foreground">アカウント</span>
+      </h3>
+      <p className="mb-4 text-xs text-muted-foreground">Your profile, progress stats, and export options</p>
+
+      {/* Profile + PFP */}
+      <div className="flex items-center gap-4 rounded-xl bg-muted/40 p-4">
+        <div className="relative shrink-0">
+          {pfp ? (
+            <img src={pfp} alt="Profile" className="h-20 w-20 rounded-full object-cover ring-2 ring-primary/30" />
+          ) : (
+            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/15 ring-2 ring-primary/30">
+              <UserIcon className="h-8 w-8 text-primary" />
+            </div>
+          )}
+          <button onClick={() => fileRef.current?.click()} className="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-md hover:scale-110 transition-transform" aria-label="Upload photo">
+            <Camera className="h-3.5 w-3.5" />
+          </button>
+          <input ref={fileRef} type="file" accept="image/png,image/jpeg,image/webp" onChange={handlePfpUpload} className="hidden" />
+        </div>
+        <div className="min-w-0 flex-1">
+          <p className="text-lg font-bold text-foreground">{userInfo?.name || "Learner"}</p>
+          <p className="text-xs text-muted-foreground">{userInfo?.email || "Guest"}</p>
+          <div className="mt-1 flex items-center gap-2">
+            <Badge variant="secondary" className="gap-1 text-[10px]"><Sparkles className="h-3 w-3" /> Level {level}</Badge>
+            <Badge variant="secondary" className="gap-1 text-[10px]"><Flame className="h-3 w-3" /> {progress.streak}d streak</Badge>
+          </div>
+          {pfp && <button onClick={removePfp} className="mt-1 text-xs text-muted-foreground hover:text-destructive underline">Remove photo</button>}
+        </div>
+      </div>
+
+      {/* Stats grid */}
+      <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+        {[
+          { icon: Sparkles, label: "Total XP", value: progress.xp.toLocaleString(), tint: "var(--soft-purple)" },
+          { icon: Flame, label: "Streak", value: `${progress.streak}d`, tint: "var(--warm-yellow)" },
+          { icon: TrendingUp, label: "Level", value: String(level), tint: "var(--matcha)" },
+          { icon: Languages, label: "Kanji", value: `${kanjiMastered}/${kanjiData.length}`, tint: "var(--sakura)" },
+          { icon: BookOpen, label: "Vocab", value: `${vocabMastered}/${vocabData.length}`, tint: "var(--matcha)" },
+          { icon: FileText, label: "Grammar", value: `${grammarMastered}/${grammarData.length}`, tint: "var(--indigo-deep)" },
+          { icon: BookOpen, label: "Stories", value: `${storiesRead}/${storiesData.length}`, tint: "var(--coral)" },
+          { icon: Trophy, label: "Quizzes", value: String(quizzesTaken), tint: "var(--warm-yellow)" },
+          { icon: TrendingUp, label: "Avg Score", value: `${avgScore}%`, tint: "var(--matcha)" },
+        ].map((s, i) => (
+          <div key={i} className="flex flex-col items-center rounded-xl border border-border bg-card p-3 text-center">
+            <span className="mb-1 flex h-8 w-8 items-center justify-center rounded-lg" style={{ backgroundColor: `color-mix(in srgb, ${s.tint} 15%, transparent)`, color: s.tint }}>
+              <s.icon className="h-4 w-4" />
+            </span>
+            <span className="text-base font-bold text-foreground">{s.value}</span>
+            <span className="text-[10px] text-muted-foreground">{s.label}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Export buttons */}
+      <div className="mt-4 flex flex-wrap items-center gap-2">
+        <Button size="sm" variant="outline" onClick={downloadImage} className="gap-2">
+          <ImageIcon className="h-3.5 w-3.5" /> Download Image
+        </Button>
+        <Button size="sm" variant="outline" onClick={downloadPDF} className="gap-2">
+          <FileText className="h-3.5 w-3.5" /> Download PDF
+        </Button>
+        <Button size="sm" variant="outline" onClick={() => {
+          const data = { exportedAt: new Date().toISOString(), user: userInfo, progress: { kanji: progress.kanji, vocab: progress.vocab, grammar: progress.grammar, storiesRead: progress.storiesRead, quizHistory: progress.quizHistory, xp: progress.xp, streak: progress.streak } };
+          const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a"); a.href = url;
+          a.download = `nikki-progress-${new Date().toISOString().slice(0, 10)}.json`; a.click();
+          URL.revokeObjectURL(url);
+        }} className="gap-2">
+          <Download className="h-3.5 w-3.5" /> Export JSON
+        </Button>
+      </div>
+    </Card>
   );
 }
