@@ -116,6 +116,80 @@ function StatBar({
   );
 }
 
+/** JLPT level metadata for the progress cards. */
+const LEVEL_META: {
+  level: "N5" | "N4" | "N3" | "N2" | "N1";
+  subtitle: string;
+  ringTint: string;
+}[] = [
+  { level: "N5", subtitle: "Foundation level", ringTint: "var(--sakura)" },
+  { level: "N4", subtitle: "Next step up", ringTint: "var(--matcha)" },
+  { level: "N3", subtitle: "Bridge to intermediate", ringTint: "var(--indigo-deep)" },
+  { level: "N2", subtitle: "Pre-advanced", ringTint: "var(--soft-purple)" },
+  { level: "N1", subtitle: "Advanced", ringTint: "var(--coral)" },
+];
+
+function LevelProgressCard({
+  level,
+  subtitle,
+  ringTint,
+  kanji,
+  vocab,
+  grammar,
+  stories,
+  kanjiMastery,
+  vocabMastery,
+  grammarMastery,
+  storiesRead,
+  storiesData,
+}: {
+  level: "N5" | "N4" | "N3" | "N2" | "N1";
+  subtitle: string;
+  ringTint: string;
+  kanji: { id: string }[];
+  vocab: { id: string }[];
+  grammar: { id: string }[];
+  stories: { id: string; level: string }[];
+  kanjiMastery: Record<string, string>;
+  vocabMastery: Record<string, string>;
+  grammarMastery: Record<string, string>;
+  storiesRead: string[];
+  storiesData: { id: string; level: string }[];
+}) {
+  const masteredIn = (arr: { id: string }[], map: Record<string, string>) =>
+    arr.filter((a) => map[a.id] === "mastered").length;
+
+  const kM = masteredIn(kanji, kanjiMastery);
+  const vM = masteredIn(vocab, vocabMastery);
+  const gM = masteredIn(grammar, grammarMastery);
+  const sM = storiesRead.filter((id) => storiesData.find((s) => s.id === id)?.level === level).length;
+
+  const total = kanji.length + vocab.length + grammar.length + stories.length;
+  const mastered = kM + vM + gM + sM;
+  const pct = total > 0 ? (mastered / total) * 100 : 0;
+
+  return (
+    <Card className="p-5">
+      <div className="mb-4 flex items-center justify-between">
+        <div>
+          <h3 className="text-base font-bold text-foreground">JLPT {level} Progress</h3>
+          <p className="text-xs text-muted-foreground">{subtitle}</p>
+        </div>
+        <ProgressRing value={pct} size={56} stroke={6} label={`${Math.round(pct)}%`} />
+      </div>
+      <div className="space-y-3">
+        <StatBar label="Kanji mastered" mastered={kM} total={kanji.length} tint="var(--sakura)" />
+        <StatBar label="Vocabulary mastered" mastered={vM} total={vocab.length} tint="var(--matcha)" />
+        <StatBar label="Grammar mastered" mastered={gM} total={grammar.length} tint="var(--indigo-deep)" />
+        <StatBar label="Stories read" mastered={sM} total={stories.length} tint="var(--coral)" />
+      </div>
+      <p className="mt-3 text-[11px] text-muted-foreground">
+        {kanji.length + vocab.length + grammar.length} items available
+      </p>
+    </Card>
+  );
+}
+
 export function DashboardView() {
   const setView = useNav((s) => s.setView);
   const kanjiMastery = useProgress((s) => s.kanji);
@@ -131,20 +205,14 @@ export function DashboardView() {
   const greeting = getGreeting();
   const tip = NIKKI_TIPS[new Date().getDate() % NIKKI_TIPS.length];
 
-  const n5Kanji = kanjiData.filter((k) => k.level === "N5");
-  const n4Kanji = kanjiData.filter((k) => k.level === "N4");
-  const n5Vocab = vocabData.filter((v) => v.level === "N5");
-  const n4Vocab = vocabData.filter((v) => v.level === "N4");
-  const n5Grammar = grammarData.filter((g) => g.level === "N5");
-  const n4Grammar = grammarData.filter((g) => g.level === "N4");
-
-  const masteredIn = (arr: { id: string }[], map: Record<string, string>) =>
-    arr.filter((a) => map[a.id] === "mastered").length;
-
-  const n5KanjiPct =
-    (masteredIn(n5Kanji, kanjiMastery) / Math.max(1, n5Kanji.length)) * 100;
-  const n4KanjiPct =
-    (masteredIn(n4Kanji, kanjiMastery) / Math.max(1, n4Kanji.length)) * 100;
+  // Pre-filter data by JLPT level so we don't re-filter on every render.
+  const levelData = (["N5", "N4", "N3", "N2", "N1"] as const).map((lvl) => ({
+    level: lvl,
+    kanji: kanjiData.filter((k) => k.level === lvl),
+    vocab: vocabData.filter((v) => v.level === lvl),
+    grammar: grammarData.filter((g) => g.level === lvl),
+    stories: storiesData.filter((s) => s.level === lvl),
+  }));
 
   const totalItems =
     kanjiData.length + vocabData.length + grammarData.length + storiesData.length;
@@ -342,39 +410,33 @@ export function DashboardView() {
         </div>
       </div>
 
-      {/* Level progress */}
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        <Card className="p-5">
-          <div className="mb-4 flex items-center justify-between">
-            <div>
-              <h3 className="text-base font-bold text-foreground">JLPT N5 Progress</h3>
-              <p className="text-xs text-muted-foreground">Foundation level</p>
-            </div>
-            <ProgressRing value={n5KanjiPct} size={56} stroke={6} label={`${Math.round(n5KanjiPct)}%`} />
-          </div>
-          <div className="space-y-3">
-            <StatBar label="Kanji mastered" mastered={masteredIn(n5Kanji, kanjiMastery)} total={n5Kanji.length} tint="var(--sakura)" />
-            <StatBar label="Vocabulary mastered" mastered={masteredIn(n5Vocab, vocabMastery)} total={n5Vocab.length} tint="var(--matcha)" />
-            <StatBar label="Grammar mastered" mastered={masteredIn(n5Grammar, grammarMastery)} total={n5Grammar.length} tint="var(--indigo-deep)" />
-            <StatBar label="Stories read" mastered={storiesRead.filter((id) => storiesData.find((s) => s.id === id)?.level === "N5").length} total={storiesData.filter((s) => s.level === "N5").length} tint="var(--coral)" />
-          </div>
-        </Card>
-
-        <Card className="p-5">
-          <div className="mb-4 flex items-center justify-between">
-            <div>
-              <h3 className="text-base font-bold text-foreground">JLPT N4 Progress</h3>
-              <p className="text-xs text-muted-foreground">Next step up</p>
-            </div>
-            <ProgressRing value={n4KanjiPct} size={56} stroke={6} label={`${Math.round(n4KanjiPct)}%`} />
-          </div>
-          <div className="space-y-3">
-            <StatBar label="Kanji mastered" mastered={masteredIn(n4Kanji, kanjiMastery)} total={n4Kanji.length} tint="var(--sakura)" />
-            <StatBar label="Vocabulary mastered" mastered={masteredIn(n4Vocab, vocabMastery)} total={n4Vocab.length} tint="var(--matcha)" />
-            <StatBar label="Grammar mastered" mastered={masteredIn(n4Grammar, grammarMastery)} total={n4Grammar.length} tint="var(--indigo-deep)" />
-            <StatBar label="Stories read" mastered={storiesRead.filter((id) => storiesData.find((s) => s.id === id)?.level === "N4").length} total={storiesData.filter((s) => s.level === "N4").length} tint="var(--coral)" />
-          </div>
-        </Card>
+      {/* Level progress — all JLPT levels N5 through N1 */}
+      <div>
+        <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+          JLPT Progress by Level
+        </h3>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {LEVEL_META.map((meta) => {
+            const ld = levelData.find((d) => d.level === meta.level)!;
+            return (
+              <LevelProgressCard
+                key={meta.level}
+                level={meta.level}
+                subtitle={meta.subtitle}
+                ringTint={meta.ringTint}
+                kanji={ld.kanji}
+                vocab={ld.vocab}
+                grammar={ld.grammar}
+                stories={ld.stories}
+                kanjiMastery={kanjiMastery}
+                vocabMastery={vocabMastery}
+                grammarMastery={grammarMastery}
+                storiesRead={storiesRead}
+                storiesData={storiesData}
+              />
+            );
+          })}
+        </div>
       </div>
 
       {/* Continue reading */}
