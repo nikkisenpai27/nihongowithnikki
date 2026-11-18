@@ -155,9 +155,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const onboarded = useSettings((s) => s.onboarded);
 
   return (
-    <div className="flex min-h-screen flex-col bg-background">
+    <div className="flex min-h-screen flex-col">
       {/* Desktop sidebar */}
-      <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col border-r border-border bg-sidebar lg:flex">
+      <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col border-r border-border bg-sidebar/95 backdrop-blur-sm lg:flex">
         <div className="px-4 pt-5 pb-2">
           <button onClick={() => setView("dashboard")} className="w-full text-left">
             <BrandHeader />

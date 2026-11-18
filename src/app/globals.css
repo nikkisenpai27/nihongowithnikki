@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-/* trigger recompile */
+/* recompile for aura opacity + layering fix */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -637,8 +637,8 @@
     hsl(300 80% 65%),
     hsl(360 80% 60%)
   );
-  filter: blur(120px) saturate(1.2);
-  opacity: 0.22;
+  filter: blur(100px) saturate(1.4);
+  opacity: 0.45;
   animation: rainbow-spin 24s linear infinite;
 }
 @keyframes rainbow-spin {
@@ -679,9 +679,17 @@ body.has-wallpaper::before {
   }
   html {
     scroll-behavior: smooth;
+    /* Background color lives on <html> so that body::before (wallpaper)
+       and body::after (rainbow aura) — both at negative z-index —
+       render ABOVE the base color but BELOW body content.
+       If the background were on <body>, its opaque background-color
+       would cover those pseudo-elements entirely. */
+    background-color: var(--background);
+    color: var(--foreground);
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: transparent;
+    @apply text-foreground;
     font-feature-settings: "kern", "liga";
   }
 }

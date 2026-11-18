@@ -143,7 +143,7 @@ export const useSettings = create<SettingsState>()(
       backgroundMode: "none",
       backgroundPreset: "japan-city",
       customBackground: null,
-      backgroundOpacity: 25,
+      backgroundOpacity: 40,
       backgroundBlur: 0,
       set: (key, value) => {
         set({ [key]: value } as Partial<SettingsState>);
