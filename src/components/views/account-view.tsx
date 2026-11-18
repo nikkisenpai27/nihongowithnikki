@@ -22,14 +22,20 @@ import {
   BookText,
   GraduationCap,
   Clock,
+  Edit3,
+  Save,
+  Mail,
+  LogOut,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch";
 import { Slider } from "@/components/ui/slider";
+import { Input } from "@/components/ui/input";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
 import { SectionHeader } from "../nikki/shared";
 import { NikkiAvatar } from "../nikki/nikki-avatar";
 import { useSettings, JP_FONT_OPTIONS, type ColorTheme, type JpFont } from "@/lib/stores/settings-store";
@@ -57,25 +63,33 @@ export function AccountView() {
   const progress = useProgress();
   const [pfp, setPfp] = useState<string | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
-  const [userInfo, setUserInfo] = useState<{ name: string; email: string } | null>(null);
+  const [userInfo, setUserInfo] = useState<{ name: string; email: string; provider?: string } | null>(null);
   const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
+  const [editingName, setEditingName] = useState(false);
+  const [nameInput, setNameInput] = useState("");
+  const [savedName, setSavedName] = useState(false);
+
+  // Reload user info from localStorage (called after name change, etc.)
+  function reloadUser() {
+    try {
+      const stored = localStorage.getItem("nikki-user");
+      if (stored) {
+        const u = JSON.parse(stored);
+        setUserInfo({ name: u.name || "Learner", email: u.email || "", provider: u.provider || "credentials" });
+      } else {
+        setUserInfo({ name: "Guest", email: "", provider: "guest" });
+      }
+    } catch {
+      setUserInfo({ name: "Guest", email: "", provider: "guest" });
+    }
+  }
 
   useEffect(() => {
     try {
       const stored = localStorage.getItem("nikki-pfp");
       if (stored) setPfp(stored);
     } catch { /* ignore */ }
-    try {
-      const stored = localStorage.getItem("nikki-user");
-      if (stored) {
-        const u = JSON.parse(stored);
-        setUserInfo({ name: u.name || "Learner", email: u.email || "" });
-      } else {
-        setUserInfo({ name: "Guest", email: "" });
-      }
-    } catch {
-      setUserInfo({ name: "Guest", email: "" });
-    }
+    reloadUser();
     // Load Japanese voices
     if (typeof window !== "undefined" && "speechSynthesis" in window) {
       const load = () => {
@@ -100,6 +114,44 @@ export function AccountView() {
     };
     reader.readAsDataURL(file);
   }
+
+  function saveName() {
+    if (!nameInput.trim()) return;
+    try {
+      const stored = localStorage.getItem("nikki-user");
+      if (stored) {
+        const u = JSON.parse(stored);
+        u.name = nameInput.trim();
+        localStorage.setItem("nikki-user", JSON.stringify(u));
+      }
+    } catch { /* ignore */ }
+    setEditingName(false);
+    setSavedName(true);
+    reloadUser();
+    setTimeout(() => setSavedName(false), 2000);
+  }
+
+  function handleLogout() {
+    fetch("/api/auth/logout", { method: "POST" }).catch(() => {});
+    localStorage.removeItem("nikki-user");
+    localStorage.removeItem("nikki-pfp");
+    window.location.reload();
+  }
+
+  function handleGoogleReconnect() {
+    fetch("/api/auth/google", { method: "POST" })
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.user) {
+          localStorage.setItem("nikki-user", JSON.stringify(data.user));
+          reloadUser();
+        }
+      })
+      .catch(() => {});
+  }
+
+  const isGoogleUser = userInfo?.provider === "google";
+  const isGuest = !userInfo || userInfo.provider === "guest" || userInfo.email === "";
 
   function removePfp() {
     setPfp(null);
@@ -235,15 +287,87 @@ export function AccountView() {
             <input ref={fileRef} type="file" accept="image/png,image/jpeg,image/webp" onChange={handlePfpUpload} className="hidden" />
           </div>
           <div className="min-w-0 flex-1">
-            <h2 className="text-2xl font-bold text-foreground">{userInfo?.name || "Learner"}</h2>
-            <p className="text-sm text-muted-foreground">{userInfo?.email || "Guest user"}</p>
+            {/* Name with edit button */}
+            {editingName ? (
+              <div className="flex items-center gap-2">
+                <Input
+                  value={nameInput}
+                  onChange={(e) => setNameInput(e.target.value)}
+                  onKeyDown={(e) => { if (e.key === "Enter") saveName(); if (e.key === "Escape") setEditingName(false); }}
+                  placeholder="Your name"
+                  className="h-9 max-w-[200px]"
+                  autoFocus
+                />
+                <Button size="sm" onClick={saveName} className="gap-1">
+                  <Save className="h-3.5 w-3.5" /> Save
+                </Button>
+                <Button size="sm" variant="ghost" onClick={() => setEditingName(false)}>Cancel</Button>
+              </div>
+            ) : (
+              <div className="flex items-center gap-2">
+                <h2 className="text-2xl font-bold text-foreground">{userInfo?.name || "Learner"}</h2>
+                {!isGuest && (
+                  <button
+                    onClick={() => { setNameInput(userInfo?.name || ""); setEditingName(true); }}
+                    className="inline-flex h-7 w-7 items-center justify-center rounded-full text-muted-foreground hover:bg-primary/10 hover:text-primary"
+                    aria-label="Edit name"
+                  >
+                    <Edit3 className="h-3.5 w-3.5" />
+                  </button>
+                )}
+                {savedName && (
+                  <span className="inline-flex items-center gap-1 text-xs font-medium text-matcha">
+                    <Check className="h-3.5 w-3.5" /> Saved!
+                  </span>
+                )}
+              </div>
+            )}
+            {/* Email with provider badge */}
+            <div className="mt-0.5 flex items-center gap-2">
+              {isGoogleUser ? (
+                <Badge className="gap-1 bg-[#4285F4]/15 text-[#4285F4]">
+                  <svg viewBox="0 0 24 24" className="h-3 w-3"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                  Google
+                </Badge>
+              ) : isGuest ? (
+                <Badge variant="outline" className="text-[10px]">Guest</Badge>
+              ) : (
+                <Badge variant="outline" className="gap-1 text-[10px]"><Mail className="h-3 w-3" /> Email</Badge>
+              )}
+              <p className="text-sm text-muted-foreground">{userInfo?.email || "Guest user"}</p>
+            </div>
             <div className="mt-2 flex flex-wrap items-center gap-2">
               <Badge className="gap-1 bg-primary/15 text-primary"><Sparkles className="h-3 w-3" /> Level {level}</Badge>
               <Badge className="gap-1 bg-warm-yellow/15 text-warm-yellow"><Flame className="h-3 w-3" /> {progress.streak}d streak</Badge>
               <Badge className="gap-1 bg-matcha/15 text-matcha"><TrendingUp className="h-3 w-3" /> {overallPct}% complete</Badge>
               <Badge variant="outline" className="text-[10px]">{xpToNext} XP to Level {level + 1}</Badge>
             </div>
-            {pfp && <button onClick={removePfp} className="mt-2 text-xs text-muted-foreground hover:text-destructive underline">Remove photo</button>}
+            <div className="mt-3 flex flex-wrap items-center gap-2">
+              {pfp && <button onClick={removePfp} className="text-xs text-muted-foreground hover:text-destructive underline">Remove photo</button>}
+              {isGuest && (
+                <button onClick={handleGoogleReconnect} className="inline-flex items-center gap-1.5 rounded-full bg-[#4285F4] px-3 py-1.5 text-xs font-semibold text-white hover:scale-105 transition-transform">
+                  <svg viewBox="0 0 24 24" className="h-3.5 w-3.5"><path fill="#fff" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#fff" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#fff" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#fff" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                  Connect Google
+                </button>
+              )}
+              <AlertDialog>
+                <AlertDialogTrigger asChild>
+                  <button className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-destructive underline">
+                    <LogOut className="h-3 w-3" /> Logout
+                  </button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>Logout?</AlertDialogTitle>
+                    <AlertDialogDescription>Your progress is saved locally and will be restored when you log back in.</AlertDialogDescription>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter>
+                    <AlertDialogCancel>Cancel</AlertDialogCancel>
+                    <AlertDialogAction onClick={handleLogout} className="bg-destructive text-white hover:bg-destructive/90">Logout</AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
+            </div>
           </div>
           <div className="hidden text-center sm:block">
             <div className="relative h-20 w-20">
