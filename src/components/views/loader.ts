@@ -9,4 +9,5 @@ export { ListeningView } from "./listening-view";
 export { StoriesView } from "./stories-view";
 export { QuizView } from "./quiz-view";
 export { DriveView } from "./drive-view";
+export { AccountView } from "./account-view";
 export { SettingsView } from "./settings-view";

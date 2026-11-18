@@ -259,9 +259,6 @@ export function SettingsView() {
         <Onboarding onDone={() => settings.set("onboarded", true)} />
       )}
 
-      {/* Account & Progress */}
-      <AccountSection settings={settings} progress={progress} />
-
       {/* Appearance */}
       <Card className="p-5">
         <h3 className="mb-1 flex items-center gap-2 text-sm font-bold text-foreground">

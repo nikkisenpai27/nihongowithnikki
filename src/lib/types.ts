@@ -108,6 +108,7 @@ export type ViewKey =
   | "stories"
   | "quiz"
   | "drive"
+  | "account"
   | "settings";
 
 export type QuizType =

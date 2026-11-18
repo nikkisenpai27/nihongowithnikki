@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { useNav } from "@/lib/stores/nav-store";
 import {
   DashboardView, KanjiView, KanaView, VocabView, GrammarView,
-  ReadingView, ListeningView, StoriesView, QuizView, DriveView, SettingsView,
+  ReadingView, ListeningView, StoriesView, QuizView, DriveView, AccountView, SettingsView,
 } from "@/components/views/loader";
 import { GlobalSearchResults } from "@/components/nikki/global-search";
 import { useSettings } from "@/lib/stores/settings-store";
@@ -69,6 +69,7 @@ const VIEWS: Record<string, () => React.ReactNode> = {
   stories: () => <StoriesView />,
   quiz: () => <QuizView />,
   drive: () => <DriveView />,
+  account: () => <AccountView />,
   settings: () => <SettingsView />,
 };
 
