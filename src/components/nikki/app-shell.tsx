@@ -157,7 +157,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Desktop sidebar */}
-      <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col border-r border-border bg-sidebar/95 backdrop-blur-sm lg:flex">
+      <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col border-r border-border bg-sidebar/75 backdrop-blur-md lg:flex">
         <div className="px-4 pt-5 pb-2">
           <button onClick={() => setView("dashboard")} className="w-full text-left">
             <BrandHeader />
@@ -172,7 +172,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       </aside>
 
       {/* Mobile header */}
-      <header className="sticky top-0 z-30 flex items-center gap-2 border-b border-border bg-card/80 px-3 py-2.5 backdrop-blur lg:hidden">
+      <header className="sticky top-0 z-30 flex items-center gap-2 border-b border-border bg-card/70 px-3 py-2.5 backdrop-blur-md lg:hidden">
         <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon" className="h-9 w-9" aria-label="Open menu">
@@ -202,7 +202,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       </header>
 
       {/* Desktop header */}
-      <header className="sticky top-0 z-20 hidden items-center gap-3 border-b border-border bg-card/70 px-6 py-3 backdrop-blur lg:flex lg:pl-[17rem]">
+      <header className="sticky top-0 z-20 hidden items-center gap-3 border-b border-border bg-card/60 px-6 py-3 backdrop-blur-md lg:flex lg:pl-[17rem]">
         <GlobalSearch />
         <div className="ml-auto flex items-center gap-2">
           {!onboarded && (
@@ -226,7 +226,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
       {/* Mobile bottom nav */}
       <nav
-        className="fixed bottom-0 left-0 right-0 z-30 flex items-stretch justify-around border-t border-border bg-card/95 px-1 pb-[env(safe-area-inset-bottom)] backdrop-blur lg:hidden"
+        className="fixed bottom-0 left-0 right-0 z-30 flex items-stretch justify-around border-t border-border bg-card/80 px-1 pb-[env(safe-area-inset-bottom)] backdrop-blur-md lg:hidden"
         aria-label="Mobile navigation"
       >
         {NAV.filter((n) =>
@@ -252,7 +252,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       </nav>
 
       {/* Footer */}
-      <footer className="mt-auto hidden border-t border-border bg-card/50 px-6 py-5 text-center text-xs text-muted-foreground lg:block lg:pl-[17rem]">
+      <footer className="mt-auto hidden border-t border-border bg-card/40 px-6 py-5 text-center text-xs text-muted-foreground backdrop-blur-sm lg:block lg:pl-[17rem]">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 sm:flex-row sm:justify-between">
           <span className="jp">日本語 with Nikki ・ やさしい日本語を一緒に学ぼう</span>
           <div className="flex items-center gap-3">

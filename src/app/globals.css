@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-/* recompile for aura opacity + layering fix */
+/* recompile: stronger transparency + backdrop */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -671,6 +671,25 @@ body.has-wallpaper::before {
   /* When a blur is applied the edges can show transparent seams —
      scale slightly to hide them. */
   transform: scale(calc(1 + var(--bg-blur) / 200));
+}
+
+/* ============ Frosted-glass effect when wallpaper is active ============ */
+/* When a wallpaper is active, make all card / panel backgrounds
+   semi-transparent with a backdrop blur, so the wallpaper is
+   clearly visible THROUGH the content (not just in gaps).
+   !important is needed to override Tailwind's layered utilities. */
+body.has-wallpaper [data-slot="card"],
+body.has-wallpaper .bg-card {
+  background-color: color-mix(in srgb, var(--card) 40%, transparent) !important;
+  backdrop-filter: blur(20px) saturate(1.3) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.3) !important;
+}
+body.has-wallpaper [data-slot="popover-content"],
+body.has-wallpaper [role="dialog"],
+body.has-wallpaper .bg-popover {
+  background-color: color-mix(in srgb, var(--popover) 75%, transparent) !important;
+  backdrop-filter: blur(24px) saturate(1.3) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(1.3) !important;
 }
 
 @layer base {
