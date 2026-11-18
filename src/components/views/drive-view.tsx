@@ -10,6 +10,7 @@ import {
   ArrowRight,
   Sparkles,
   CheckCircle2,
+  GraduationCap,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -63,7 +64,7 @@ export function DriveView() {
         title="Google Drive Resources"
         jp="ドライブ"
         icon={FolderOpen}
-        description="Nikki's handwritten grammar notes and study materials — available on Google Drive for free download. Detailed notes for N5, N4, and N3 grammar with examples, conjugation tables, and Nikki's personal study tips."
+        description="A complete collection of Japanese learning resources on Google Drive — handwritten grammar notes (N5/N4/N3), PDF textbooks, reference books, mock exams, vocabulary lists, kanji worksheets, listening practice audio, and more. Everything is free to download."
       />
 
       {/* Hero card with animation */}
@@ -83,13 +84,15 @@ export function DriveView() {
           </div>
           <div className="flex-1">
             <h2 className="text-2xl font-bold text-foreground" style={{ fontFamily: "var(--font-rounded), var(--font-sans)" }}>
-              Nikki&apos;s Handwritten Grammar Notes
-              <span className="jp ml-2 text-lg text-muted-foreground">手書きノート</span>
+              Nikki&apos;s Japanese Learning Resources
+              <span className="jp ml-2 text-lg text-muted-foreground">学習資料</span>
             </h2>
             <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-              A carefully organized collection of handwritten Japanese grammar notes covering JLPT N5, N4, and N3.
-              Each note set includes conjugation tables, example sentences, usage comparisons, and Nikki&apos;s personal
-              tips — all written by hand for a warm, personal study experience. Access everything for free on Google Drive.
+              A comprehensive collection of Japanese learning materials — all free on Google Drive.
+              Includes Nikki&apos;s handwritten grammar notes (N5/N4/N3), PDF textbooks, reference books, JLPT mock exams
+              with answer keys, vocabulary lists, kanji worksheets, listening practice audio, reading comprehension
+              drills, and conjugation charts. Whether you&apos;re starting from zero or aiming for N1, there&apos;s something
+              here for every level.
             </p>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-3 sm:justify-start">
               <a href={DRIVE_LINK} target="_blank" rel="noopener noreferrer">
@@ -100,10 +103,13 @@ export function DriveView() {
                 </Button>
               </a>
               <Badge variant="secondary" className="gap-1">
-                <FileText className="h-3 w-3" /> Free to download
+                <FileText className="h-3 w-3" /> PDFs & Books
               </Badge>
               <Badge variant="secondary" className="gap-1">
-                <PenLine className="h-3 w-3" /> Handwritten by Nikki
+                <PenLine className="h-3 w-3" /> Handwritten Notes
+              </Badge>
+              <Badge variant="secondary" className="gap-1">
+                <GraduationCap className="h-3 w-3" /> Mock Tests
               </Badge>
             </div>
           </div>
@@ -117,9 +123,9 @@ export function DriveView() {
           )}
         >
           {[
-            { label: "Note Sets", value: "3", jp: "ノート" },
-            { label: "Total Pages", value: "~185", jp: "ページ" },
-            { label: "Grammar Points", value: "200+", jp: "文法" },
+            { label: "Resource Types", value: "8+", jp: "資料" },
+            { label: "JLPT Levels", value: "N5–N1", jp: "レベル" },
+            { label: "Mock Tests", value: "5+", jp: "模試" },
           ].map((stat, i) => (
             <div
               key={i}
