@@ -26,6 +26,11 @@ import {
   Save,
   Mail,
   LogOut,
+  Wallpaper,
+  Upload,
+  X,
+  Eye,
+  Sparkle,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -38,7 +43,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
 import { SectionHeader } from "../nikki/shared";
 import { NikkiAvatar } from "../nikki/nikki-avatar";
-import { useSettings, JP_FONT_OPTIONS, type ColorTheme, type JpFont } from "@/lib/stores/settings-store";
+import { useSettings, JP_FONT_OPTIONS, BACKGROUND_PRESETS, type ColorTheme, type JpFont, type BackgroundMode, type BackgroundPreset } from "@/lib/stores/settings-store";
 import { useProgress } from "@/lib/stores/progress-store";
 import { useJapaneseAudio } from "../nikki/use-japanese-audio";
 import { LEVEL_COLORS } from "@/lib/data/kanji";
@@ -50,12 +55,15 @@ import { listeningData } from "@/lib/data/listening";
 import { readingData } from "@/lib/data/reading";
 import { cn } from "@/lib/utils";
 
-const THEMES: { id: ColorTheme; label: string; jp: string; swatch: string }[] = [
+const THEMES: { id: ColorTheme; label: string; jp: string; swatch: string; gradient?: boolean }[] = [
   { id: "sakura", label: "Sakura", jp: "桜", swatch: "#ff8fab" },
   { id: "matcha", label: "Matcha", jp: "茶", swatch: "#6b9b7a" },
   { id: "ocean", label: "Ocean", jp: "海", swatch: "#4a6fa5" },
   { id: "minimal", label: "Minimal", jp: "墨", swatch: "#2e2e2e" },
   { id: "night", label: "Night", jp: "夜", swatch: "#b39ddb" },
+  { id: "tokyo-night", label: "Tokyo Night", jp: "東京", swatch: "#7aa2f7" },
+  { id: "lavender", label: "Lavender", jp: "薫", swatch: "#9d7bd8" },
+  { id: "rainbow", label: "Rainbow", jp: "虹", swatch: "linear-gradient(135deg,#ff6b6b,#f6c453,#9ece6a,#7aa2f7,#bb9af7)", gradient: true },
 ];
 
 export function AccountView() {
@@ -63,6 +71,7 @@ export function AccountView() {
   const progress = useProgress();
   const [pfp, setPfp] = useState<string | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
+  const wallpaperRef = useRef<HTMLInputElement>(null);
   const [userInfo, setUserInfo] = useState<{ name: string; email: string; provider?: string } | null>(null);
   const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [editingName, setEditingName] = useState(false);
@@ -112,6 +121,22 @@ export function AccountView() {
       setPfp(dataUrl);
       try { localStorage.setItem("nikki-pfp", dataUrl); } catch { /* ignore */ }
     };
+    reader.readAsDataURL(file);
+  }
+
+  function handleWallpaperUpload(file: File) {
+    if (!file.type.startsWith("image/")) { alert("Please choose an image file"); return; }
+    if (file.size > 1_500_000) {
+      alert("Wallpaper is too large — please use an image under 1.5MB (try resizing or compressing).");
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      const dataUrl = reader.result as string;
+      settings.set("backgroundMode", "custom");
+      settings.set("customBackground", dataUrl);
+    };
+    reader.onerror = () => alert("Could not read that image — please try another file.");
     reader.readAsDataURL(file);
   }
 
@@ -431,12 +456,22 @@ export function AccountView() {
           <Palette className="h-4 w-4 text-primary" /> Theme & Color
           <span className="jp font-normal text-muted-foreground">テーマ</span>
         </h3>
-        <p className="mb-3 text-xs text-muted-foreground">Choose your color scheme</p>
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
+        <p className="mb-3 text-xs text-muted-foreground">Choose your color scheme — including the animated Rainbow theme</p>
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-8">
           {THEMES.map((t) => (
             <button key={t.id} onClick={() => settings.set("colorTheme", t.id)} className={cn("flex flex-col items-center gap-1.5 rounded-xl border-2 p-3 transition-all", settings.colorTheme === t.id ? "border-primary ring-2 ring-primary/20" : "border-border hover:bg-accent/40")}>
-              <span className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold text-white" style={{ backgroundColor: t.swatch }}>{t.jp}</span>
-              <span className="text-[11px] font-semibold text-foreground">{t.label}</span>
+              <span
+                className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold text-white shadow-sm"
+                style={t.gradient ? { backgroundImage: t.swatch } : { backgroundColor: t.swatch }}
+              >
+                {t.jp}
+              </span>
+              <span className="text-[11px] font-semibold text-foreground text-center leading-tight">{t.label}</span>
+              {t.id === "rainbow" && (
+                <span className="flex items-center gap-0.5 text-[9px] font-medium text-muted-foreground">
+                  <Sparkle className="h-2.5 w-2.5" /> animated
+                </span>
+              )}
             </button>
           ))}
         </div>
@@ -447,6 +482,145 @@ export function AccountView() {
           </div>
           <Switch checked={isDark} onCheckedChange={(v) => settings.set("mode", v ? "dark" : "light")} />
         </div>
+      </Card>
+
+      {/* Background & Wallpaper */}
+      <Card className="p-5">
+        <h3 className="mb-1 flex items-center gap-2 text-sm font-bold text-foreground">
+          <Wallpaper className="h-4 w-4 text-primary" /> Background & Wallpaper
+          <span className="jp font-normal text-muted-foreground">壁紙</span>
+        </h3>
+        <p className="mb-3 text-xs text-muted-foreground">Pick a built-in wallpaper or upload your own — applied behind the whole app</p>
+
+        {/* Mode toggle */}
+        <div className="mb-4">
+          <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted-foreground">Background mode</label>
+          <ToggleGroup
+            type="single"
+            value={settings.backgroundMode}
+            onValueChange={(v) => { if (v) settings.set("backgroundMode", v as BackgroundMode); }}
+            className="justify-start"
+          >
+            <ToggleGroupItem value="none" className="text-xs">None</ToggleGroupItem>
+            <ToggleGroupItem value="preset" className="text-xs">Preset gallery</ToggleGroupItem>
+            <ToggleGroupItem value="custom" className="text-xs">Upload my own</ToggleGroupItem>
+          </ToggleGroup>
+        </div>
+
+        {/* Preset gallery */}
+        {settings.backgroundMode === "preset" && (
+          <div className="mb-4">
+            <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted-foreground">Choose a wallpaper</label>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {BACKGROUND_PRESETS.map((p) => (
+                <button
+                  key={p.id}
+                  onClick={() => settings.set("backgroundPreset", p.id)}
+                  className={cn(
+                    "group relative aspect-video overflow-hidden rounded-xl border-2 transition-all",
+                    settings.backgroundPreset === p.id ? "border-primary ring-2 ring-primary/30" : "border-border hover:border-primary/40"
+                  )}
+                >
+                  <img src={p.url} alt={p.label} className="h-full w-full object-cover transition-transform group-hover:scale-105" />
+                  <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-2 py-1.5">
+                    <span className="text-[11px] font-semibold text-white">{p.label}</span>
+                    <span className="jp text-[11px] font-medium text-white/80">{p.jp}</span>
+                  </div>
+                  {settings.backgroundPreset === p.id && (
+                    <span className="absolute right-1.5 top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-primary-foreground shadow">
+                      <Check className="h-3 w-3" />
+                    </span>
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Custom upload */}
+        {settings.backgroundMode === "custom" && (
+          <div className="mb-4">
+            <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted-foreground">Upload wallpaper</label>
+            <div
+              onClick={() => wallpaperRef.current?.click()}
+              onDragOver={(e) => { e.preventDefault(); e.currentTarget.classList.add("border-primary", "bg-primary/5"); }}
+              onDragLeave={(e) => { e.currentTarget.classList.remove("border-primary", "bg-primary/5"); }}
+              onDrop={(e) => {
+                e.preventDefault();
+                e.currentTarget.classList.remove("border-primary", "bg-primary/5");
+                const file = e.dataTransfer.files?.[0];
+                if (file) handleWallpaperUpload(file);
+              }}
+              className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-border p-6 text-center transition-colors hover:border-primary/50 hover:bg-accent/30"
+            >
+              {settings.customBackground ? (
+                <div className="flex w-full flex-col items-center gap-3">
+                  <img src={settings.customBackground} alt="Your wallpaper" className="max-h-40 w-full max-w-md rounded-lg object-cover shadow" />
+                  <p className="text-xs font-medium text-matcha flex items-center gap-1"><Check className="h-3 w-3" /> Wallpaper uploaded — click to replace</p>
+                </div>
+              ) : (
+                <>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                    <Upload className="h-5 w-5 text-primary" />
+                  </div>
+                  <p className="text-sm font-medium text-foreground">Click to upload or drag & drop</p>
+                  <p className="text-[11px] text-muted-foreground">PNG, JPG, or WebP — keep under 1.5MB for best performance</p>
+                </>
+              )}
+              <input
+                ref={wallpaperRef}
+                type="file"
+                accept="image/png,image/jpeg,image/webp,image/gif,image/bmp"
+                onChange={(e) => { const f = e.target.files?.[0]; if (f) handleWallpaperUpload(f); }}
+                className="hidden"
+              />
+            </div>
+            {settings.customBackground && (
+              <Button size="sm" variant="outline" onClick={() => settings.set("customBackground", null)} className="mt-2 gap-2">
+                <X className="h-3.5 w-3.5" /> Remove wallpaper
+              </Button>
+            )}
+          </div>
+        )}
+
+        {/* Opacity + blur sliders — shown only when there's an actual image to tune */}
+        {(() => {
+          const hasImage =
+            settings.backgroundMode === "preset" ||
+            (settings.backgroundMode === "custom" && !!settings.customBackground);
+          if (!hasImage) return null;
+          return (
+          <div className="space-y-4 rounded-xl bg-muted/40 p-3">
+            <div>
+              <div className="mb-1.5 flex items-center justify-between">
+                <label className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  <Eye className="h-3 w-3" /> Opacity
+                </label>
+                <span className="text-xs font-medium text-foreground tabular-nums">{settings.backgroundOpacity}%</span>
+              </div>
+              <Slider
+                value={[settings.backgroundOpacity]}
+                onValueChange={(v) => settings.set("backgroundOpacity", v[0])}
+                min={5} max={100} step={5}
+              />
+            </div>
+            <div>
+              <div className="mb-1.5 flex items-center justify-between">
+                <label className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  <Sparkle className="h-3 w-3" /> Blur
+                </label>
+                <span className="text-xs font-medium text-foreground tabular-nums">{settings.backgroundBlur}px</span>
+              </div>
+              <Slider
+                value={[settings.backgroundBlur]}
+                onValueChange={(v) => settings.set("backgroundBlur", v[0])}
+                min={0} max={20} step={1}
+              />
+            </div>
+            <p className="text-[10px] text-muted-foreground">Tip: lower opacity + slight blur keeps text crisp while adding atmosphere</p>
+          </div>
+          );
+        })()}
       </Card>
 
       {/* Font Settings */}

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+/* trigger recompile */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -402,6 +403,274 @@
   --ring: #b39ddb;
   --sidebar: #0a0917;
   --sidebar-foreground: #e7e3f7;
+}
+
+/* ============ TOKYO NIGHT theme ============ */
+/* Inspired by the popular Tokyonight vim/colorscheme palette. */
+[data-theme="tokyo-night"] {
+  --radius: 0.875rem;
+  --background: #f3f6fb;
+  --foreground: #1a1b26;
+  --card: #ffffff;
+  --card-foreground: #1a1b26;
+  --popover: #ffffff;
+  --popover-foreground: #1a1b26;
+  --primary: #7aa2f7;
+  --primary-foreground: #ffffff;
+  --secondary: #e1ecff;
+  --secondary-foreground: #3b4261;
+  --muted: #eef3fb;
+  --muted-foreground: #565f89;
+  --accent: #d9e6ff;
+  --accent-foreground: #3b4261;
+  --destructive: #f7768e;
+  --border: #d7e0f0;
+  --input: #d7e0f0;
+  --ring: #7aa2f7;
+  --chart-1: #7aa2f7;
+  --chart-2: #e0af68;
+  --chart-3: #9ece6a;
+  --chart-4: #bb9af7;
+  --chart-5: #f7768e;
+  --sidebar: #eaf1fb;
+  --sidebar-foreground: #1a1b26;
+  --sidebar-primary: #7aa2f7;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e1ecff;
+  --sidebar-accent-foreground: #3b4261;
+  --sidebar-border: #d7e0f0;
+  --sidebar-ring: #7aa2f7;
+}
+[data-theme="tokyo-night"].dark {
+  --background: #1a1b26;
+  --foreground: #c0caf5;
+  --card: #24283b;
+  --card-foreground: #c0caf5;
+  --popover: #24283b;
+  --popover-foreground: #c0caf5;
+  --primary: #7aa2f7;
+  --primary-foreground: #1a1b26;
+  --secondary: #2e334d;
+  --secondary-foreground: #c0caf5;
+  --muted: #292e44;
+  --muted-foreground: #9aa5ce;
+  --accent: #2e334d;
+  --accent-foreground: #c0caf5;
+  --destructive: #f7768e;
+  --border: rgba(122, 162, 247, 0.18);
+  --input: rgba(122, 162, 247, 0.22);
+  --ring: #7aa2f7;
+  --chart-1: #7aa2f7;
+  --chart-2: #e0af68;
+  --chart-3: #9ece6a;
+  --chart-4: #bb9af7;
+  --chart-5: #f7768e;
+  --sidebar: #16161e;
+  --sidebar-foreground: #c0caf5;
+  --sidebar-primary: #7aa2f7;
+  --sidebar-primary-foreground: #1a1b26;
+  --sidebar-accent: #2e334d;
+  --sidebar-accent-foreground: #c0caf5;
+  --sidebar-border: rgba(122, 162, 247, 0.16);
+  --sidebar-ring: #7aa2f7;
+}
+
+/* ============ LAVENDER theme ============ */
+/* Soft pastel lavender — calm and floral. */
+[data-theme="lavender"] {
+  --radius: 0.875rem;
+  --background: #faf8ff;
+  --foreground: #2d2438;
+  --card: #ffffff;
+  --card-foreground: #2d2438;
+  --popover: #ffffff;
+  --popover-foreground: #2d2438;
+  --primary: #9d7bd8;
+  --primary-foreground: #ffffff;
+  --secondary: #ece4fb;
+  --secondary-foreground: #4a3a66;
+  --muted: #f4eefc;
+  --muted-foreground: #836b9e;
+  --accent: #e3d6f7;
+  --accent-foreground: #4a3a66;
+  --destructive: #e5484d;
+  --border: #e3d8f0;
+  --input: #e3d8f0;
+  --ring: #9d7bd8;
+  --chart-1: #9d7bd8;
+  --chart-2: #f6c453;
+  --chart-3: #a8d5ba;
+  --chart-4: #7da3d4;
+  --chart-5: #ff8fab;
+  --sidebar: #f5eefc;
+  --sidebar-foreground: #2d2438;
+  --sidebar-primary: #9d7bd8;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ece4fb;
+  --sidebar-accent-foreground: #4a3a66;
+  --sidebar-border: #e3d8f0;
+  --sidebar-ring: #9d7bd8;
+}
+[data-theme="lavender"].dark {
+  --background: #1c1729;
+  --foreground: #e8defc;
+  --card: #26203a;
+  --card-foreground: #e8defc;
+  --popover: #26203a;
+  --popover-foreground: #e8defc;
+  --primary: #c3a3f0;
+  --primary-foreground: #1c1729;
+  --secondary: #322a4d;
+  --secondary-foreground: #e8defc;
+  --muted: #2b2442;
+  --muted-foreground: #a896c4;
+  --accent: #322a4d;
+  --accent-foreground: #e8defc;
+  --destructive: #ff6b6b;
+  --border: rgba(195, 163, 240, 0.18);
+  --input: rgba(195, 163, 240, 0.22);
+  --ring: #c3a3f0;
+  --chart-1: #c3a3f0;
+  --chart-2: #f6c453;
+  --chart-3: #a8d5ba;
+  --chart-4: #7da3d4;
+  --chart-5: #ff8fab;
+  --sidebar: #15112a;
+  --sidebar-foreground: #e8defc;
+  --sidebar-primary: #c3a3f0;
+  --sidebar-primary-foreground: #1c1729;
+  --sidebar-accent: #322a4d;
+  --sidebar-accent-foreground: #e8defc;
+  --sidebar-border: rgba(195, 163, 240, 0.16);
+  --sidebar-ring: #c3a3f0;
+}
+
+/* ============ RAINBOW theme (animated) ============ */
+/* Dark base with a primary color that cycles through the rainbow.
+   Uses @property to animate the hue, plus an animated gradient aura
+   behind the page content. */
+@property --rainbow-hue {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+[data-theme="rainbow"] {
+  --radius: 0.875rem;
+  --rainbow-hue: 0;
+  --background: #1a1626;
+  --foreground: #f3f0ff;
+  --card: #25203a;
+  --card-foreground: #f3f0ff;
+  --popover: #25203a;
+  --popover-foreground: #f3f0ff;
+  --primary: hsl(var(--rainbow-hue) 80% 62%);
+  --primary-foreground: #1a1626;
+  --secondary: #2f2848;
+  --secondary-foreground: #f3f0ff;
+  --muted: #2a2440;
+  --muted-foreground: #b5acd6;
+  --accent: #2f2848;
+  --accent-foreground: #f3f0ff;
+  --destructive: #ff6b6b;
+  --border: hsl(var(--rainbow-hue) 80% 62% / 0.22);
+  --input: hsl(var(--rainbow-hue) 80% 62% / 0.26);
+  --ring: hsl(var(--rainbow-hue) 80% 62%);
+  --chart-1: #ff6b6b;
+  --chart-2: #f6c453;
+  --chart-3: #9ece6a;
+  --chart-4: #7aa2f7;
+  --chart-5: #bb9af7;
+  --sidebar: #15112a;
+  --sidebar-foreground: #f3f0ff;
+  --sidebar-primary: hsl(var(--rainbow-hue) 80% 62%);
+  --sidebar-primary-foreground: #1a1626;
+  --sidebar-accent: #2f2848;
+  --sidebar-accent-foreground: #f3f0ff;
+  --sidebar-border: hsl(var(--rainbow-hue) 80% 62% / 0.18);
+  --sidebar-ring: hsl(var(--rainbow-hue) 80% 62%);
+  animation: rainbow-hue 18s linear infinite;
+}
+[data-theme="rainbow"].dark {
+  --background: #110e1f;
+  --foreground: #f3f0ff;
+  --card: #1f1a33;
+  --card-foreground: #f3f0ff;
+  --popover: #1f1a33;
+  --popover-foreground: #f3f0ff;
+  --primary: hsl(var(--rainbow-hue) 85% 65%);
+  --primary-foreground: #110e1f;
+  --secondary: #29223f;
+  --secondary-foreground: #f3f0ff;
+  --muted: #231e36;
+  --muted-foreground: #9c92c4;
+  --accent: #29223f;
+  --accent-foreground: #f3f0ff;
+  --destructive: #ff6b6b;
+  --border: hsl(var(--rainbow-hue) 85% 65% / 0.20);
+  --input: hsl(var(--rainbow-hue) 85% 65% / 0.24);
+  --ring: hsl(var(--rainbow-hue) 85% 65%);
+  --sidebar: #0c0a18;
+  --sidebar-foreground: #f3f0ff;
+  animation: rainbow-hue 18s linear infinite;
+}
+
+@keyframes rainbow-hue {
+  from { --rainbow-hue: 0; }
+  to   { --rainbow-hue: 360; }
+}
+
+/* Animated rainbow aura for the rainbow theme — sits behind content. */
+[data-theme="rainbow"] body::after {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  z-index: -2;
+  pointer-events: none;
+  background: conic-gradient(
+    from 0deg,
+    hsl(0 80% 60%),
+    hsl(60 80% 60%),
+    hsl(120 70% 55%),
+    hsl(180 80% 55%),
+    hsl(240 80% 65%),
+    hsl(300 80% 65%),
+    hsl(360 80% 60%)
+  );
+  filter: blur(120px) saturate(1.2);
+  opacity: 0.22;
+  animation: rainbow-spin 24s linear infinite;
+}
+@keyframes rainbow-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ============ Wallpaper layer ============ */
+/* --bg-image, --bg-opacity, --bg-blur are written by applyBackground()
+   in settings-store.ts. When a wallpaper is active, body.has-wallpaper
+   renders a fixed, blurred image behind everything. */
+:root {
+  --bg-image: none;
+  --bg-opacity: 0.25;
+  --bg-blur: 0px;
+}
+body.has-wallpaper::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: var(--bg-opacity);
+  filter: blur(var(--bg-blur));
+  /* When a blur is applied the edges can show transparent seams —
+     scale slightly to hide them. */
+  transform: scale(calc(1 + var(--bg-blur) / 200));
 }
 
 @layer base {

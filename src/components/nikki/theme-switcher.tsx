@@ -19,6 +19,9 @@ const THEMES: { id: ColorTheme; label: string; jp: string; swatch: string }[] = 
   { id: "ocean", label: "Ocean", jp: "海", swatch: "#4a6fa5" },
   { id: "minimal", label: "Minimal", jp: "墨", swatch: "#2e2e2e" },
   { id: "night", label: "Night Mode", jp: "夜", swatch: "#b39ddb" },
+  { id: "tokyo-night", label: "Tokyo Night", jp: "東京", swatch: "#7aa2f7" },
+  { id: "lavender", label: "Lavender", jp: "薫", swatch: "#9d7bd8" },
+  { id: "rainbow", label: "Rainbow", jp: "虹", swatch: "linear-gradient(90deg,#ff6b6b,#f6c453,#9ece6a,#7aa2f7,#bb9af7)" },
 ];
 
 export function ThemeSwitcher() {
@@ -62,7 +65,7 @@ export function ThemeSwitcher() {
             >
               <span
                 className="flex h-5 w-5 items-center justify-center rounded-md text-xs font-bold text-white"
-                style={{ backgroundColor: t.swatch }}
+                style={t.swatch.startsWith("linear-gradient") ? { backgroundImage: t.swatch } : { backgroundColor: t.swatch }}
               >
                 {t.jp}
               </span>

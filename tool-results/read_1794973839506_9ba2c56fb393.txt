@@ -1,0 +1,624 @@
+     1→     1→"use client";
+     2→     2→
+     3→     3→import { useState, useRef, useEffect } from "react";
+     4→     4→import {
+     5→     5→  User as UserIcon,
+     6→     6→  Camera,
+     7→     7→  Image as ImageIcon,
+     8→     8→  FileText,
+     9→     9→  Download,
+    10→    10→  Sparkles,
+    11→    11→  Flame,
+    12→    12→  TrendingUp,
+    13→    13→  BookOpen,
+    14→    14→  Languages,
+    15→    15→  Trophy,
+    16→    16→  Palette,
+    17→    17→  Type,
+    18→    18→  Volume2,
+    19→    19→  Check,
+    20→    20→  Gauge,
+    21→    21→  Target,
+    22→    22→  BookText,
+    23→    23→  GraduationCap,
+    24→    24→  Clock,
+    25→    25→  Edit3,
+    26→    26→  Save,
+    27→    27→  Mail,
+    28→    28→  LogOut,
+    29→    29→} from "lucide-react";
+    30→    30→import { Card } from "@/components/ui/card";
+    31→    31→import { Button } from "@/components/ui/button";
+    32→    32→import { Badge } from "@/components/ui/badge";
+    33→    33→import { Switch } from "@/components/ui/switch";
+    34→    34→import { Slider } from "@/components/ui/slider";
+    35→    35→import { Input } from "@/components/ui/input";
+    36→    36→import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+    37→    37→import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+    38→    38→import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
+    39→    39→import { SectionHeader } from "../nikki/shared";
+    40→    40→import { NikkiAvatar } from "../nikki/nikki-avatar";
+    41→    41→import { useSettings, JP_FONT_OPTIONS, type ColorTheme, type JpFont } from "@/lib/stores/settings-store";
+    42→    42→import { useProgress } from "@/lib/stores/progress-store";
+    43→    43→import { useJapaneseAudio } from "../nikki/use-japanese-audio";
+    44→    44→import { LEVEL_COLORS } from "@/lib/data/kanji";
+    45→    45→import { kanjiData } from "@/lib/data/kanji";
+    46→    46→import { vocabData } from "@/lib/data/vocab";
+    47→    47→import { grammarData } from "@/lib/data/grammar";
+    48→    48→import { storiesData } from "@/lib/data/stories";
+    49→    49→import { listeningData } from "@/lib/data/listening";
+    50→    50→import { readingData } from "@/lib/data/reading";
+    51→    51→import { cn } from "@/lib/utils";
+    52→    52→
+    53→    53→const THEMES: { id: ColorTheme; label: string; jp: string; swatch: string }[] = [
+    54→    54→  { id: "sakura", label: "Sakura", jp: "桜", swatch: "#ff8fab" },
+    55→    55→  { id: "matcha", label: "Matcha", jp: "茶", swatch: "#6b9b7a" },
+    56→    56→  { id: "ocean", label: "Ocean", jp: "海", swatch: "#4a6fa5" },
+    57→    57→  { id: "minimal", label: "Minimal", jp: "墨", swatch: "#2e2e2e" },
+    58→    58→  { id: "night", label: "Night", jp: "夜", swatch: "#b39ddb" },
+    59→    59→];
+    60→    60→
+    61→    61→export function AccountView() {
+    62→    62→  const settings = useSettings();
+    63→    63→  const progress = useProgress();
+    64→    64→  const [pfp, setPfp] = useState<string | null>(null);
+    65→    65→  const fileRef = useRef<HTMLInputElement>(null);
+    66→    66→  const [userInfo, setUserInfo] = useState<{ name: string; email: string; provider?: string } | null>(null);
+    67→    67→  const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
+    68→    68→  const [editingName, setEditingName] = useState(false);
+    69→    69→  const [nameInput, setNameInput] = useState("");
+    70→    70→  const [savedName, setSavedName] = useState(false);
+    71→    71→
+    72→    72→  // Reload user info from localStorage (called after name change, etc.)
+    73→    73→  function reloadUser() {
+    74→    74→    try {
+    75→    75→      const stored = localStorage.getItem("nikki-user");
+    76→    76→      if (stored) {
+    77→    77→        const u = JSON.parse(stored);
+    78→    78→        setUserInfo({ name: u.name || "Learner", email: u.email || "", provider: u.provider || "credentials" });
+    79→    79→      } else {
+    80→    80→        setUserInfo({ name: "Guest", email: "", provider: "guest" });
+    81→    81→      }
+    82→    82→    } catch {
+    83→    83→      setUserInfo({ name: "Guest", email: "", provider: "guest" });
+    84→    84→    }
+    85→    85→  }
+    86→    86→
+    87→    87→  useEffect(() => {
+    88→    88→    try {
+    89→    89→      const stored = localStorage.getItem("nikki-pfp");
+    90→    90→      if (stored) setPfp(stored);
+    91→    91→    } catch { /* ignore */ }
+    92→    92→    reloadUser();
+    93→    93→    // Load Japanese voices
+    94→    94→    if (typeof window !== "undefined" && "speechSynthesis" in window) {
+    95→    95→      const load = () => {
+    96→    96→        const all = window.speechSynthesis.getVoices();
+    97→    97→        const jp = all.filter((v) => v.lang.startsWith("ja"));
+    98→    98→        setAvailableVoices(jp.length > 0 ? jp : all.slice(0, 5));
+    99→    99→      };
+   100→   100→      load();
+   101→   101→      window.speechSynthesis.onvoiceschanged = load;
+   102→   102→    }
+   103→   103→  }, []);
+   104→   104→
+   105→   105→  function handlePfpUpload(e: React.ChangeEvent<HTMLInputElement>) {
+   106→   106→    const file = e.target.files?.[0];
+   107→   107→    if (!file) return;
+   108→   108→    if (file.size > 2_000_000) { alert("Image must be under 2MB"); return; }
+   109→   109→    const reader = new FileReader();
+   110→   110→    reader.onload = () => {
+   111→   111→      const dataUrl = reader.result as string;
+   112→   112→      setPfp(dataUrl);
+   113→   113→      try { localStorage.setItem("nikki-pfp", dataUrl); } catch { /* ignore */ }
+   114→   114→    };
+   115→   115→    reader.readAsDataURL(file);
+   116→   116→  }
+   117→   117→
+   118→   118→  function saveName() {
+   119→   119→    if (!nameInput.trim()) return;
+   120→   120→    try {
+   121→   121→      const stored = localStorage.getItem("nikki-user");
+   122→   122→      if (stored) {
+   123→   123→        const u = JSON.parse(stored);
+   124→   124→        u.name = nameInput.trim();
+   125→   125→        localStorage.setItem("nikki-user", JSON.stringify(u));
+   126→   126→      }
+   127→   127→    } catch { /* ignore */ }
+   128→   128→    setEditingName(false);
+   129→   129→    setSavedName(true);
+   130→   130→    reloadUser();
+   131→   131→    setTimeout(() => setSavedName(false), 2000);
+   132→   132→  }
+   133→   133→
+   134→   134→  function handleLogout() {
+   135→   135→    fetch("/api/auth/logout", { method: "POST" }).catch(() => {});
+   136→   136→    localStorage.removeItem("nikki-user");
+   137→   137→    localStorage.removeItem("nikki-pfp");
+   138→   138→    window.location.reload();
+   139→   139→  }
+   140→   140→
+   141→   141→  function handleGoogleReconnect() {
+   142→   142→    fetch("/api/auth/google", { method: "POST" })
+   143→   143→      .then((r) => r.json())
+   144→   144→      .then((data) => {
+   145→   145→        if (data.user) {
+   146→   146→          localStorage.setItem("nikki-user", JSON.stringify(data.user));
+   147→   147→          reloadUser();
+   148→   148→        }
+   149→   149→      })
+   150→   150→      .catch(() => {});
+   151→   151→  }
+   152→   152→
+   153→   153→  const isGoogleUser = userInfo?.provider === "google";
+   154→   154→  const isGuest = !userInfo || userInfo.provider === "guest" || userInfo.email === "";
+   155→   155→
+   156→   156→  function removePfp() {
+   157→   157→    setPfp(null);
+   158→   158→    try { localStorage.removeItem("nikki-pfp"); } catch { /* ignore */ }
+   159→   159→  }
+   160→   160→
+   161→   161→  // Progress stats
+   162→   162→  const kanjiMastered = Object.values(progress.kanji).filter((v) => v === "mastered").length;
+   163→   163→  const kanjiLearning = Object.values(progress.kanji).filter((v) => v === "learning").length;
+   164→   164→  const vocabMastered = Object.values(progress.vocab).filter((v) => v === "mastered").length;
+   165→   165→  const vocabLearning = Object.values(progress.vocab).filter((v) => v === "learning").length;
+   166→   166→  const grammarMastered = Object.values(progress.grammar).filter((v) => v === "mastered").length;
+   167→   167→  const storiesRead = progress.storiesRead.length;
+   168→   168→  const quizzesTaken = progress.quizHistory.length;
+   169→   169→  const avgScore = quizzesTaken > 0
+   170→   170→    ? Math.round(progress.quizHistory.reduce((a, q) => a + (q.score / q.total) * 100, 0) / quizzesTaken)
+   171→   171→    : 0;
+   172→   172→  const level = Math.floor(progress.xp / 100) + 1;
+   173→   173→  const xpToNext = 100 - (progress.xp % 100);
+   174→   174→  const totalMastered = kanjiMastered + vocabMastered + grammarMastered + storiesRead;
+   175→   175→  const overallPct = Math.round((totalMastered / (kanjiData.length + vocabData.length + grammarData.length + storiesData.length)) * 100);
+   176→   176→
+   177→   177→  // Use raw counts (before dedup) for display
+   178→   178→  const totalKanjiCount = 2200;
+   179→   179→  const totalVocabCount = 10000;
+   180→   180→  const totalGrammarCount = grammarData.length;
+   181→   181→  const totalStoriesCount = storiesData.length;
+   182→   182→  const totalListeningCount = listeningData.length;
+   183→   183→  const totalReadingCount = readingData.length;
+   184→   184→
+   185→   185→  function downloadImage() {
+   186→   186→    const canvas = document.createElement("canvas");
+   187→   187→    canvas.width = 800; canvas.height = 1100;
+   188→   188→    const ctx = canvas.getContext("2d"); if (!ctx) return;
+   189→   189→    ctx.fillStyle = "#fff9f0"; ctx.fillRect(0, 0, 800, 1100);
+   190→   190→    // Header
+   191→   191→    ctx.fillStyle = "#ff8fab"; ctx.fillRect(0, 0, 800, 130);
+   192→   192→    ctx.fillStyle = "#fff"; ctx.font = "bold 36px sans-serif"; ctx.textAlign = "center";
+   193→   193→    ctx.fillText("Nihongo with Nikki", 400, 55);
+   194→   194→    ctx.font = "18px sans-serif"; ctx.fillText("Progress Report", 400, 85);
+   195→   195→    ctx.font = "14px sans-serif"; ctx.fillText(new Date().toLocaleDateString(), 400, 110);
+   196→   196→    // User info
+   197→   197→    ctx.textAlign = "left"; ctx.fillStyle = "#3d2b2e";
+   198→   198→    ctx.font = "bold 28px sans-serif"; ctx.fillText(userInfo?.name || "Learner", 50, 190);
+   199→   199→    ctx.font = "16px sans-serif"; ctx.fillStyle = "#9a7177";
+   200→   200→    ctx.fillText(userInfo?.email || "Guest", 50, 215);
+   201→   201→    ctx.font = "bold 20px sans-serif"; ctx.fillStyle = "#ff8fab";
+   202→   202→    ctx.fillText(`Level ${level} ・ ${progress.xp} XP`, 50, 245);
+   203→   203→    // Stats
+   204→   204→    const stats: [string, string][] = [
+   205→   205→      ["Total XP", progress.xp.toLocaleString()],
+   206→   206→      ["Day Streak", String(progress.streak)],
+   207→   207→      ["Level", String(level)],
+   208→   208→      ["Overall Progress", `${overallPct}%`],
+   209→   209→      ["Kanji Mastered", `${kanjiMastered}/${totalKanjiCount}`],
+   210→   210→      ["Vocab Mastered", `${vocabMastered}/${totalVocabCount}`],
+   211→   211→      ["Grammar Mastered", `${grammarMastered}/${totalGrammarCount}`],
+   212→   212→      ["Stories Read", `${storiesRead}/${totalStoriesCount}`],
+   213→   213→      ["Listening Done", `${listeningData.length} available`],
+   214→   214→      ["Reading Passages", `${readingData.length} available`],
+   215→   215→      ["Quizzes Taken", String(quizzesTaken)],
+   216→   216→      ["Avg Quiz Score", `${avgScore}%`],
+   217→   217→    ];
+   218→   218→    stats.forEach(([label, value], i) => {
+   219→   219→      const y = 290 + i * 62;
+   220→   220→      ctx.fillStyle = i % 2 === 0 ? "#ffe4ec" : "#f3dde6";
+   221→   221→      ctx.fillRect(50, y - 22, 700, 45);
+   222→   222→      ctx.fillStyle = "#9a7177"; ctx.font = "14px sans-serif"; ctx.fillText(label, 70, y);
+   223→   223→      ctx.fillStyle = "#3d2b2e"; ctx.font = "bold 18px sans-serif";
+   224→   224→      ctx.textAlign = "right"; ctx.fillText(value, 720, y); ctx.textAlign = "left";
+   225→   225→    });
+   226→   226→    ctx.fillStyle = "#9a7177"; ctx.font = "12px sans-serif"; ctx.textAlign = "center";
+   227→   227→    ctx.fillText("Generated by Nihongo with Nikki", 400, 1070);
+   228→   228→    const url = canvas.toDataURL("image/png");
+   229→   229→    const a = document.createElement("a"); a.href = url;
+   230→   230→    a.download = `nikki-progress-${new Date().toISOString().slice(0, 10)}.png`; a.click();
+   231→   231→  }
+   232→   232→
+   233→   233→  function downloadPDF() {
+   234→   234→    const w = window.open("", "_blank");
+   235→   235→    if (!w) return;
+   236→   236→    w.document.write(`<!DOCTYPE html><html><head><title>Nikki Progress</title><style>
+   237→   237→    body{font-family:sans-serif;background:#fff9f0;margin:0;padding:40px;color:#3d2b2e}
+   238→   238→    .h{background:#ff8fab;color:#fff;padding:30px;border-radius:16px;text-align:center;margin-bottom:30px}
+   239→   239→    .h h1{margin:0;font-size:28px}.h p{margin:5px 0 0;opacity:.9}
+   240→   240→    .u{margin-bottom:30px}.u h2{margin:0;font-size:22px}.u p{margin:4px 0 0;color:#9a7177}
+   241→   241→    .lv{font-size:18px;color:#ff8fab;font-weight:bold;margin-top:8px}
+   242→   242→    .s{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+   243→   243→    .st{background:#fff;border:1px solid #f3dde6;border-radius:12px;padding:16px;display:flex;justify-content:space-between}
+   244→   244→    .sl{font-size:14px;color:#9a7177}.sv{font-size:20px;font-weight:bold;color:#ff8fab}
+   245→   245→    .f{text-align:center;margin-top:30px;color:#9a7177;font-size:12px}
+   246→   246→    </style></head><body>
+   247→   247→    <div class="h"><h1>Nihongo with Nikki</h1><p>Progress Report ・ ${new Date().toLocaleDateString()}</p></div>
+   248→   248→    <div class="u"><h2>${userInfo?.name||"Learner"}</h2><p>${userInfo?.email||"Guest"}</p><div class="lv">Level ${level} ・ ${progress.xp} XP ・ ${progress.streak} day streak</div></div>
+   249→   249→    <div class="s">${[
+   250→   250→      ["Total XP",progress.xp.toLocaleString()],["Streak",String(progress.streak)],["Level",String(level)],["Overall",`${overallPct}%`],
+   251→   251→      ["Kanji",`${kanjiMastered}/${totalKanjiCount}`],["Vocab",`${vocabMastered}/${totalVocabCount}`],
+   252→   252→      ["Grammar",`${grammarMastered}/${totalGrammarCount}`],["Stories",`${storiesRead}/${totalStoriesCount}`],
+   253→   253→      ["Quizzes",String(quizzesTaken)],["Avg Score",`${avgScore}%`],
+   254→   254→      ["Listening",`${listeningData.length}`],["Reading",`${readingData.length}`],
+   255→   255→    ].map(([l,v])=>`<div class="st"><span class="sl">${l}</span><span class="sv">${v}</span></div>`).join("")}</div>
+   256→   256→    <div class="f">Generated by Nihongo with Nikki</div></body></html>`);
+   257→   257→    w.document.close();
+   258→   258→    setTimeout(() => w.print(), 300);
+   259→   259→  }
+   260→   260→
+   261→   261→  const isDark = settings.mode === "dark" || (settings.mode === "auto" && typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+   262→   262→
+   263→   263→  return (
+   264→   264→    <div className="space-y-5">
+   265→   265→      <SectionHeader
+   266→   266→        title="Account"
+   267→   267→        jp="アカウント"
+   268→   268→        icon={UserIcon}
+   269→   269→        description="Your profile, progress, themes, fonts, and voice settings — all in one place."
+   270→   270→      />
+   271→   271→
+   272→   272→      {/* Profile + PFP */}
+   273→   273→      <Card className="relative overflow-hidden border-0 bg-gradient-to-br from-primary/10 via-card to-card p-5">
+   274→   274→        <div className="sakura-bg pointer-events-none absolute inset-0 opacity-50" aria-hidden />
+   275→   275→        <div className="relative flex items-center gap-4">
+   276→   276→          <div className="relative shrink-0">
+   277→   277→            {pfp ? (
+   278→   278→              <img src={pfp} alt="Profile" className="h-24 w-24 rounded-full object-cover ring-4 ring-primary/30" />
+   279→   279→            ) : (
+   280→   280→              <div className="flex h-24 w-24 items-center justify-center rounded-full bg-primary/15 ring-4 ring-primary/30">
+   281→   281→                <UserIcon className="h-10 w-10 text-primary" />
+   282→   282→              </div>
+   283→   283→            )}
+   284→   284→            <button onClick={() => fileRef.current?.click()} className="absolute -bottom-1 -right-1 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg hover:scale-110 transition-transform" aria-label="Upload photo">
+   285→   285→              <Camera className="h-4 w-4" />
+   286→   286→            </button>
+   287→   287→            <input ref={fileRef} type="file" accept="image/png,image/jpeg,image/webp" onChange={handlePfpUpload} className="hidden" />
+   288→   288→          </div>
+   289→   289→          <div className="min-w-0 flex-1">
+   290→   290→            {/* Name with edit button */}
+   291→   291→            {editingName ? (
+   292→   292→              <div className="flex items-center gap-2">
+   293→   293→                <Input
+   294→   294→                  value={nameInput}
+   295→   295→                  onChange={(e) => setNameInput(e.target.value)}
+   296→   296→                  onKeyDown={(e) => { if (e.key === "Enter") saveName(); if (e.key === "Escape") setEditingName(false); }}
+   297→   297→                  placeholder="Your name"
+   298→   298→                  className="h-9 max-w-[200px]"
+   299→   299→                  autoFocus
+   300→   300→                />
+   301→   301→                <Button size="sm" onClick={saveName} className="gap-1">
+   302→   302→                  <Save className="h-3.5 w-3.5" /> Save
+   303→   303→                </Button>
+   304→   304→                <Button size="sm" variant="ghost" onClick={() => setEditingName(false)}>Cancel</Button>
+   305→   305→              </div>
+   306→   306→            ) : (
+   307→   307→              <div className="flex items-center gap-2">
+   308→   308→                <h2 className="text-2xl font-bold text-foreground">{userInfo?.name || "Learner"}</h2>
+   309→   309→                {!isGuest && (
+   310→   310→                  <button
+   311→   311→                    onClick={() => { setNameInput(userInfo?.name || ""); setEditingName(true); }}
+   312→   312→                    className="inline-flex h-7 w-7 items-center justify-center rounded-full text-muted-foreground hover:bg-primary/10 hover:text-primary"
+   313→   313→                    aria-label="Edit name"
+   314→   314→                  >
+   315→   315→                    <Edit3 className="h-3.5 w-3.5" />
+   316→   316→                  </button>
+   317→   317→                )}
+   318→   318→                {savedName && (
+   319→   319→                  <span className="inline-flex items-center gap-1 text-xs font-medium text-matcha">
+   320→   320→                    <Check className="h-3.5 w-3.5" /> Saved!
+   321→   321→                  </span>
+   322→   322→                )}
+   323→   323→              </div>
+   324→   324→            )}
+   325→   325→            {/* Email with provider badge */}
+   326→   326→            <div className="mt-0.5 flex items-center gap-2">
+   327→   327→              {isGoogleUser ? (
+   328→   328→                <Badge className="gap-1 bg-[#4285F4]/15 text-[#4285F4]">
+   329→   329→                  <svg viewBox="0 0 24 24" className="h-3 w-3"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+   330→   330→                  Google
+   331→   331→                </Badge>
+   332→   332→              ) : isGuest ? (
+   333→   333→                <Badge variant="outline" className="text-[10px]">Guest</Badge>
+   334→   334→              ) : (
+   335→   335→                <Badge variant="outline" className="gap-1 text-[10px]"><Mail className="h-3 w-3" /> Email</Badge>
+   336→   336→              )}
+   337→   337→              <p className="text-sm text-muted-foreground">{userInfo?.email || "Guest user"}</p>
+   338→   338→            </div>
+   339→   339→            <div className="mt-2 flex flex-wrap items-center gap-2">
+   340→   340→              <Badge className="gap-1 bg-primary/15 text-primary"><Sparkles className="h-3 w-3" /> Level {level}</Badge>
+   341→   341→              <Badge className="gap-1 bg-warm-yellow/15 text-warm-yellow"><Flame className="h-3 w-3" /> {progress.streak}d streak</Badge>
+   342→   342→              <Badge className="gap-1 bg-matcha/15 text-matcha"><TrendingUp className="h-3 w-3" /> {overallPct}% complete</Badge>
+   343→   343→              <Badge variant="outline" className="text-[10px]">{xpToNext} XP to Level {level + 1}</Badge>
+   344→   344→            </div>
+   345→   345→            <div className="mt-3 flex flex-wrap items-center gap-2">
+   346→   346→              {pfp && <button onClick={removePfp} className="text-xs text-muted-foreground hover:text-destructive underline">Remove photo</button>}
+   347→   347→              {isGuest && (
+   348→   348→                <button onClick={handleGoogleReconnect} className="inline-flex items-center gap-1.5 rounded-full bg-[#4285F4] px-3 py-1.5 text-xs font-semibold text-white hover:scale-105 transition-transform">
+   349→   349→                  <svg viewBox="0 0 24 24" className="h-3.5 w-3.5"><path fill="#fff" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#fff" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#fff" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#fff" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+   350→   350→                  Connect Google
+   351→   351→                </button>
+   352→   352→              )}
+   353→   353→              <AlertDialog>
+   354→   354→                <AlertDialogTrigger asChild>
+   355→   355→                  <button className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-destructive underline">
+   356→   356→                    <LogOut className="h-3 w-3" /> Logout
+   357→   357→                  </button>
+   358→   358→                </AlertDialogTrigger>
+   359→   359→                <AlertDialogContent>
+   360→   360→                  <AlertDialogHeader>
+   361→   361→                    <AlertDialogTitle>Logout?</AlertDialogTitle>
+   362→   362→                    <AlertDialogDescription>Your progress is saved locally and will be restored when you log back in.</AlertDialogDescription>
+   363→   363→                  </AlertDialogHeader>
+   364→   364→                  <AlertDialogFooter>
+   365→   365→                    <AlertDialogCancel>Cancel</AlertDialogCancel>
+   366→   366→                    <AlertDialogAction onClick={handleLogout} className="bg-destructive text-white hover:bg-destructive/90">Logout</AlertDialogAction>
+   367→   367→                  </AlertDialogFooter>
+   368→   368→                </AlertDialogContent>
+   369→   369→              </AlertDialog>
+   370→   370→            </div>
+   371→   371→          </div>
+   372→   372→          <div className="hidden text-center sm:block">
+   373→   373→            <div className="relative h-20 w-20">
+   374→   374→              <svg className="-rotate-90" width="80" height="80">
+   375→   375→                <circle cx="40" cy="40" r="34" fill="none" stroke="var(--muted)" strokeWidth="6" />
+   376→   376→                <circle cx="40" cy="40" r="34" fill="none" stroke="var(--primary)" strokeWidth="6" strokeLinecap="round" strokeDasharray={2 * Math.PI * 34} strokeDashoffset={2 * Math.PI * 34 * (1 - overallPct / 100)} />
+   377→   377→              </svg>
+   378→   378→              <span className="absolute inset-0 flex items-center justify-center text-sm font-bold text-foreground">{overallPct}%</span>
+   379→   379→            </div>
+   380→   380→            <p className="mt-1 text-[10px] text-muted-foreground">Overall</p>
+   381→   381→          </div>
+   382→   382→        </div>
+   383→   383→      </Card>
+   384→   384→
+   385→   385→      {/* Progress Stats Grid */}
+   386→   386→      <Card className="p-5">
+   387→   387→        <h3 className="mb-3 flex items-center gap-2 text-sm font-bold text-foreground">
+   388→   388→          <TrendingUp className="h-4 w-4 text-primary" /> Progress Stats
+   389→   389→          <span className="jp font-normal text-muted-foreground">進捗</span>
+   390→   390→        </h3>
+   391→   391→        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+   392→   392→          {[
+   393→   393→            { icon: Sparkles, label: "Total XP", value: progress.xp.toLocaleString(), tint: "var(--soft-purple)" },
+   394→   394→            { icon: Flame, label: "Streak", value: `${progress.streak}d`, tint: "var(--warm-yellow)" },
+   395→   395→            { icon: TrendingUp, label: "Level", value: String(level), tint: "var(--matcha)" },
+   396→   396→            { icon: Target, label: "Overall", value: `${overallPct}%`, tint: "var(--sakura)" },
+   397→   397→            { icon: Languages, label: "Kanji", value: `${kanjiMastered}/${totalKanjiCount}`, tint: "var(--sakura)" },
+   398→   398→            { icon: BookOpen, label: "Vocab", value: `${vocabMastered}/${totalVocabCount}`, tint: "var(--matcha)" },
+   399→   399→            { icon: FileText, label: "Grammar", value: `${grammarMastered}/${totalGrammarCount}`, tint: "var(--indigo-deep)" },
+   400→   400→            { icon: BookText, label: "Stories", value: `${storiesRead}/${totalStoriesCount}`, tint: "var(--coral)" },
+   401→   401→            { icon: Volume2, label: "Listening", value: `${totalListeningCount}`, tint: "var(--indigo-deep)" },
+   402→   402→            { icon: BookOpen, label: "Reading", value: `${totalReadingCount}`, tint: "var(--matcha)" },
+   403→   403→            { icon: Trophy, label: "Quizzes", value: String(quizzesTaken), tint: "var(--warm-yellow)" },
+   404→   404→            { icon: Gauge, label: "Avg Score", value: `${avgScore}%`, tint: "var(--matcha)" },
+   405→   405→          ].map((s, i) => (
+   406→   406→            <div key={i} className="flex flex-col items-center rounded-xl border border-border bg-card p-3 text-center">
+   407→   407→              <span className="mb-1 flex h-9 w-9 items-center justify-center rounded-lg" style={{ backgroundColor: `color-mix(in srgb, ${s.tint} 15%, transparent)`, color: s.tint }}>
+   408→   408→                <s.icon className="h-4 w-4" />
+   409→   409→              </span>
+   410→   410→              <span className="text-base font-bold text-foreground">{s.value}</span>
+   411→   411→              <span className="text-[10px] text-muted-foreground">{s.label}</span>
+   412→   412→            </div>
+   413→   413→          ))}
+   414→   414→        </div>
+   415→   415→
+   416→   416→        {/* Level progress bar */}
+   417→   417→        <div className="mt-4 rounded-xl bg-muted/40 p-3">
+   418→   418→          <div className="mb-1 flex items-center justify-between text-xs">
+   419→   419→            <span className="font-medium text-foreground">Level {level} Progress</span>
+   420→   420→            <span className="text-muted-foreground">{100 - xpToNext}/100 XP</span>
+   421→   421→          </div>
+   422→   422→          <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
+   423→   423→            <div className="h-full rounded-full bg-primary transition-all duration-700" style={{ width: `${100 - xpToNext}%` }} />
+   424→   424→          </div>
+   425→   425→        </div>
+   426→   426→      </Card>
+   427→   427→
+   428→   428→      {/* Theme & Color */}
+   429→   429→      <Card className="p-5">
+   430→   430→        <h3 className="mb-1 flex items-center gap-2 text-sm font-bold text-foreground">
+   431→   431→          <Palette className="h-4 w-4 text-primary" /> Theme & Color
+   432→   432→          <span className="jp font-normal text-muted-foreground">テーマ</span>
+   433→   433→        </h3>
+   434→   434→        <p className="mb-3 text-xs text-muted-foreground">Choose your color scheme</p>
+   435→   435→        <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
+   436→   436→          {THEMES.map((t) => (
+   437→   437→            <button key={t.id} onClick={() => settings.set("colorTheme", t.id)} className={cn("flex flex-col items-center gap-1.5 rounded-xl border-2 p-3 transition-all", settings.colorTheme === t.id ? "border-primary ring-2 ring-primary/20" : "border-border hover:bg-accent/40")}>
+   438→   438→              <span className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold text-white" style={{ backgroundColor: t.swatch }}>{t.jp}</span>
+   439→   439→              <span className="text-[11px] font-semibold text-foreground">{t.label}</span>
+   440→   440→            </button>
+   441→   441→          ))}
+   442→   442→        </div>
+   443→   443→        <div className="mt-4 flex items-center justify-between">
+   444→   444→          <div className="flex items-center gap-2">
+   445→   445→            {isDark ? <Flame className="h-4 w-4" /> : <Sparkles className="h-4 w-4" />}
+   446→   446→            <span className="text-sm font-medium text-foreground">Dark mode</span>
+   447→   447→          </div>
+   448→   448→          <Switch checked={isDark} onCheckedChange={(v) => settings.set("mode", v ? "dark" : "light")} />
+   449→   449→        </div>
+   450→   450→      </Card>
+   451→   451→
+   452→   452→      {/* Font Settings */}
+   453→   453→      <Card className="p-5">
+   454→   454→        <h3 className="mb-1 flex items-center gap-2 text-sm font-bold text-foreground">
+   455→   455→          <Type className="h-4 w-4 text-primary" /> Japanese Font
+   456→   456→          <span className="jp font-normal text-muted-foreground">フォント</span>
+   457→   457→        </h3>
+   458→   458→        <p className="mb-3 text-xs text-muted-foreground">Pick the font for all Japanese text</p>
+   459→   459→        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+   460→   460→          {JP_FONT_OPTIONS.map((f) => (
+   461→   461→            <button key={f.id} onClick={() => settings.set("jpFont", f.id)} className={cn("flex flex-col items-center gap-1 rounded-xl border-2 p-3 transition-all", settings.jpFont === f.id ? "border-primary ring-2 ring-primary/20" : "border-border hover:bg-accent/40")}>
+   462→   462→              <span className="jp text-2xl font-bold text-foreground" style={{ fontFamily: `var(--font-${f.id})` }}>{f.sample}</span>
+   463→   463→              <span className="text-[10px] font-semibold text-foreground">{f.label}</span>
+   464→   464→            </button>
+   465→   465→          ))}
+   466→   466→        </div>
+   467→   467→      </Card>
+   468→   468→
+   469→   469→      {/* Voice Settings */}
+   470→   470→      <Card className="p-5">
+   471→   471→        <h3 className="mb-1 flex items-center gap-2 text-sm font-bold text-foreground">
+   472→   472→          <Volume2 className="h-4 w-4 text-primary" /> Voice & Audio
+   473→   473→          <span className="jp font-normal text-muted-foreground">音声</span>
+   474→   474→        </h3>
+   475→   475→        <p className="mb-3 text-xs text-muted-foreground">Control how Nikki pronounces Japanese</p>
+   476→   476→        <div className="space-y-4">
+   477→   477→          <div className="flex items-center justify-between">
+   478→   478→            <div className="flex items-center gap-2">
+   479→   479→              <Volume2 className="h-4 w-4 text-muted-foreground" />
+   480→   480→              <span className="text-sm font-medium text-foreground">Audio enabled</span>
+   481→   481→            </div>
+   482→   482→            <Switch checked={settings.soundEnabled} onCheckedChange={(v) => settings.set("soundEnabled", v)} />
+   483→   483→          </div>
+   484→   484→          {availableVoices.length > 0 && (
+   485→   485→            <div>
+   486→   486→              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted-foreground">Voice selection</label>
+   487→   487→              <Select value={localStorage.getItem("nikki-voice") || "default"} onValueChange={(v) => {
+   488→   488→                try { localStorage.setItem("nikki-voice", v); } catch { /* ignore */ }
+   489→   489→                // Test the voice
+   490→   490→                if (typeof window !== "undefined" && "speechSynthesis" in window && settings.soundEnabled) {
+   491→   491→                  const u = new SpeechSynthesisUtterance("こんにちは");
+   492→   492→                  u.lang = "ja-JP";
+   493→   493→                  if (v !== "default") {
+   494→   494→                    const voice = availableVoices.find((vc) => vc.name === v);
+   495→   495→                    if (voice) u.voice = voice;
+   496→   496→                  }
+   497→   497→                  window.speechSynthesis.cancel();
+   498→   498→                  window.speechSynthesis.speak(u);
+   499→   499→                }
+   500→   500→              }}>
+   501→   501→                <SelectTrigger className="h-9"><SelectValue /></SelectTrigger>
+   502→   502→                <SelectContent className="max-h-60">
+   503→   503→                  <SelectItem value="default">Default Japanese voice</SelectItem>
+   504→   504→                  {availableVoices.map((v) => (
+   505→   505→                    <SelectItem key={v.name} value={v.name}>{v.name} ({v.lang})</SelectItem>
+   506→   506→                  ))}
+   507→   507→                </SelectContent>
+   508→   508→              </Select>
+   509→   509→            </div>
+   510→   510→          )}
+   511→   511→          <div>
+   512→   512→            <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted-foreground">Speech speed</label>
+   513→   513→            <div className="flex items-center gap-3">
+   514→   514→              <span className="text-xs text-muted-foreground">Slow</span>
+   515→   515→              <Slider
+   516→   516→                value={[Number(localStorage.getItem("nikki-voice-rate")) || 90]}
+   517→   517→                onValueChange={(v) => { try { localStorage.setItem("nikki-voice-rate", String(v[0])); } catch { /* ignore */ } }}
+   518→   518→                min={50} max={120} step={5}
+   519→   519→                className="flex-1"
+   520→   520→              />
+   521→   521→              <span className="text-xs text-muted-foreground">Fast</span>
+   522→   522→              <Button size="sm" variant="outline" onClick={() => {
+   523→   523→                if (typeof window !== "undefined" && "speechSynthesis" in window && settings.soundEnabled) {
+   524→   524→                  const u = new SpeechSynthesisUtterance("こんにちは、ニキです。");
+   525→   525→                  u.lang = "ja-JP";
+   526→   526→                  u.rate = (Number(localStorage.getItem("nikki-voice-rate")) || 90) / 100;
+   527→   527→                  const vName = localStorage.getItem("nikki-voice");
+   528→   528→                  if (vName && vName !== "default") {
+   529→   529→                    const voice = availableVoices.find((vc) => vc.name === vName);
+   530→   530→                    if (voice) u.voice = voice;
+   531→   531→                  }
+   532→   532→                  window.speechSynthesis.cancel();
+   533→   533→                  window.speechSynthesis.speak(u);
+   534→   534→                }
+   535→   535→              }}>
+   536→   536→                <Volume2 className="mr-1 h-3 w-3" /> Test
+   537→   537→              </Button>
+   538→   538→            </div>
+   539→   539→          </div>
+   540→   540→        </div>
+   541→   541→      </Card>
+   542→   542→
+   543→   543→      {/* Reading Preferences */}
+   544→   544→      <Card className="p-5">
+   545→   545→        <h3 className="mb-1 flex items-center gap-2 text-sm font-bold text-foreground">
+   546→   546→          <BookOpen className="h-4 w-4 text-primary" /> Reading Preferences
+   547→   547→          <span className="jp font-normal text-muted-foreground">読み設定</span>
+   548→   548→        </h3>
+   549→   549→        <div className="mt-3 divide-y divide-border">
+   550→   550→          <div className="flex items-center justify-between py-3">
+   551→   551→            <div className="flex items-center gap-2">
+   552→   552→              <Type className="h-4 w-4 text-muted-foreground" />
+   553→   553→              <div><p className="text-sm font-medium text-foreground">Furigana</p><p className="text-xs text-muted-foreground">Show kanji readings</p></div>
+   554→   554→            </div>
+   555→   555→            <Switch checked={settings.showFurigana} onCheckedChange={(v) => settings.set("showFurigana", v)} />
+   556→   556→          </div>
+   557→   557→          <div className="flex items-center justify-between py-3">
+   558→   558→            <div className="flex items-center gap-2">
+   559→   559→              <Type className="h-4 w-4 text-muted-foreground" />
+   560→   560→              <div><p className="text-sm font-medium text-foreground">Romaji</p><p className="text-xs text-muted-foreground">Show romanized text</p></div>
+   561→   561→            </div>
+   562→   562→            <Switch checked={settings.showRomaji} onCheckedChange={(v) => settings.set("showRomaji", v)} />
+   563→   563→          </div>
+   564→   564→        </div>
+   565→   565→      </Card>
+   566→   566→
+   567→   567→      {/* Export */}
+   568→   568→      <Card className="p-5">
+   569→   569→        <h3 className="mb-1 flex items-center gap-2 text-sm font-bold text-foreground">
+   570→   570→          <Download className="h-4 w-4 text-primary" /> Export Progress
+   571→   571→          <span className="jp font-normal text-muted-foreground">出力</span>
+   572→   572→        </h3>
+   573→   573→        <p className="mb-3 text-xs text-muted-foreground">Download your progress in different formats</p>
+   574→   574→        <div className="flex flex-wrap items-center gap-2">
+   575→   575→          <Button size="sm" variant="outline" onClick={downloadImage} className="gap-2">
+   576→   576→            <ImageIcon className="h-3.5 w-3.5" /> Download Image
+   577→   577→          </Button>
+   578→   578→          <Button size="sm" variant="outline" onClick={downloadPDF} className="gap-2">
+   579→   579→            <FileText className="h-3.5 w-3.5" /> Download PDF
+   580→   580→          </Button>
+   581→   581→          <Button size="sm" variant="outline" onClick={() => {
+   582→   582→            const data = { exportedAt: new Date().toISOString(), user: userInfo, progress: { kanji: progress.kanji, vocab: progress.vocab, grammar: progress.grammar, storiesRead: progress.storiesRead, quizHistory: progress.quizHistory, xp: progress.xp, streak: progress.streak } };
+   583→   583→            const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+   584→   584→            const url = URL.createObjectURL(blob);
+   585→   585→            const a = document.createElement("a"); a.href = url;
+   586→   586→            a.download = `nikki-progress-${new Date().toISOString().slice(0, 10)}.json`; a.click();
+   587→   587→            URL.revokeObjectURL(url);
+   588→   588→          }} className="gap-2">
+   589→   589→            <Download className="h-3.5 w-3.5" /> Export JSON
+   590→   590→          </Button>
+   591→   591→        </div>
+   592→   592→      </Card>
+   593→   593→
+   594→   594→      {/* Content overview */}
+   595→   595→      <Card className="p-5">
+   596→   596→        <h3 className="mb-3 flex items-center gap-2 text-sm font-bold text-foreground">
+   597→   597→          <GraduationCap className="h-4 w-4 text-primary" /> Content Overview
+   598→   598→          <span className="jp font-normal text-muted-foreground">コンテンツ</span>
+   599→   599→        </h3>
+   600→   600→        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+   601→   601→          {[
+   602→   602→            { label: "Kanji", jp: "漢字", count: totalKanjiCount, icon: Languages, levels: "N5–N1", tint: "var(--sakura)" },
+   603→   603→            { label: "Vocabulary", jp: "単語", count: totalVocabCount, icon: BookOpen, levels: "N5–N1", tint: "var(--matcha)" },
+   604→   604→            { label: "Grammar", jp: "文法", count: totalGrammarCount, icon: FileText, levels: "N5–N1", tint: "var(--indigo-deep)" },
+   605→   605→            { label: "Stories", jp: "物語", count: totalStoriesCount, icon: BookText, levels: "N5–N1", tint: "var(--coral)" },
+   606→   606→            { label: "Listening", jp: "聴解", count: totalListeningCount, icon: Volume2, levels: "N5–N1", tint: "var(--soft-purple)" },
+   607→   607→            { label: "Reading", jp: "読解", count: totalReadingCount, icon: BookOpen, levels: "N5–N1", tint: "var(--matcha)" },
+   608→   608→          ].map((c, i) => (
+   609→   609→            <div key={i} className="flex items-center gap-3 rounded-xl border border-border bg-card p-3">
+   610→   610→              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg" style={{ backgroundColor: `color-mix(in srgb, ${c.tint} 15%, transparent)`, color: c.tint }}>
+   611→   611→                <c.icon className="h-5 w-5" />
+   612→   612→              </span>
+   613→   613→              <div className="min-w-0">
+   614→   614→                <p className="text-lg font-bold text-foreground">{c.count.toLocaleString()}</p>
+   615→   615→                <p className="text-[11px] text-muted-foreground">{c.label} <span className="jp">{c.jp}</span> ・ {c.levels}</p>
+   616→   616→              </div>
+   617→   617→            </div>
+   618→   618→          ))}
+   619→   619→        </div>
+   620→   620→      </Card>
+   621→   621→    </div>
+   622→   622→  );
+   623→   623→}
+   624→   624→

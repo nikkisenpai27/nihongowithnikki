@@ -3,9 +3,29 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-export type ColorTheme = "sakura" | "matcha" | "ocean" | "minimal" | "night";
+export type ColorTheme =
+  | "sakura"
+  | "matcha"
+  | "ocean"
+  | "minimal"
+  | "night"
+  | "tokyo-night"
+  | "lavender"
+  | "rainbow";
 export type Mode = "light" | "dark" | "auto";
 export type JpFont = "notojp" | "rounded" | "klee" | "mincho" | "gothic" | "yuji" | "hina" | "dot";
+
+/** Background mode controls whether a wallpaper is shown and where it comes from. */
+export type BackgroundMode = "none" | "preset" | "custom";
+
+/** Built-in wallpaper presets. The actual image lives in /public/wallpapers/. */
+export type BackgroundPreset =
+  | "japan-city"
+  | "sakura-garden"
+  | "fuji-sunset"
+  | "tokyo-night"
+  | "lavender-field"
+  | "wave";
 
 export const JP_FONT_STACKS: Record<JpFont, string> = {
   notojp: "var(--font-notojp)",
@@ -29,6 +49,21 @@ export const JP_FONT_OPTIONS: { id: JpFont; label: string; jp: string; sample: s
   { id: "dot", label: "DotGothic16", jp: "どっと", sample: "日本語" },
 ];
 
+/** Metadata for each wallpaper preset (used by the picker UI). */
+export const BACKGROUND_PRESETS: {
+  id: BackgroundPreset;
+  label: string;
+  jp: string;
+  url: string;
+}[] = [
+  { id: "japan-city", label: "Japan City", jp: "街", url: "/japan-city-bg.jpeg" },
+  { id: "sakura-garden", label: "Sakura Garden", jp: "桜", url: "/wallpapers/sakura-garden.jpg" },
+  { id: "fuji-sunset", label: "Fuji Sunset", jp: "富士", url: "/wallpapers/fuji-sunset.jpg" },
+  { id: "tokyo-night", label: "Tokyo Night", jp: "夜", url: "/wallpapers/tokyo-night.jpg" },
+  { id: "lavender-field", label: "Lavender Field", jp: "薫衣草", url: "/wallpapers/lavender-field.jpg" },
+  { id: "wave", label: "Great Wave", jp: "波", url: "/wallpapers/wave.jpg" },
+];
+
 interface SettingsState {
   colorTheme: ColorTheme;
   mode: Mode;
@@ -38,6 +73,12 @@ interface SettingsState {
   studyMode: boolean;
   soundEnabled: boolean;
   onboarded: boolean;
+  // Background wallpaper
+  backgroundMode: BackgroundMode;
+  backgroundPreset: BackgroundPreset;
+  customBackground: string | null;
+  backgroundOpacity: number; // 0..100
+  backgroundBlur: number; // 0..20 (px)
   set: <K extends keyof SettingsState>(key: K, value: SettingsState[K]) => void;
   toggle: (key: "showFurigana" | "showRomaji" | "studyMode" | "soundEnabled") => void;
   applyTheme: () => void;
@@ -64,6 +105,30 @@ function applyToDocument(colorTheme: ColorTheme, mode: Mode, jpFont: JpFont) {
   root.style.setProperty("--font-jp", resolveJpFont(jpFont));
 }
 
+/** Applies the wallpaper to <body> via CSS variables consumed in globals.css. */
+export function applyBackground(s: Pick<SettingsState, "backgroundMode" | "backgroundPreset" | "customBackground" | "backgroundOpacity" | "backgroundBlur">) {
+  if (typeof document === "undefined") return;
+  const root = document.documentElement;
+  const body = document.body;
+  if (!body) return;
+
+  let imageUrl: string | null = null;
+  if (s.backgroundMode === "custom" && s.customBackground) {
+    imageUrl = s.customBackground;
+  } else if (s.backgroundMode === "preset") {
+    const preset = BACKGROUND_PRESETS.find((p) => p.id === s.backgroundPreset);
+    imageUrl = preset ? preset.url : null;
+  }
+
+  root.style.setProperty("--bg-image", imageUrl ? `url("${imageUrl}")` : "none");
+  root.style.setProperty("--bg-opacity", String(s.backgroundOpacity / 100));
+  root.style.setProperty("--bg-blur", `${s.backgroundBlur}px`);
+  // Only mount the wallpaper layer when there's an actual image to render,
+  // so opacity/blur have nothing to act on when the user is in "custom"
+  // mode but hasn't uploaded anything yet (or just removed their upload).
+  body.classList.toggle("has-wallpaper", !!imageUrl);
+}
+
 export const useSettings = create<SettingsState>()(
   persist(
     (set, get) => ({
@@ -75,10 +140,16 @@ export const useSettings = create<SettingsState>()(
       studyMode: false,
       soundEnabled: true,
       onboarded: false,
+      backgroundMode: "none",
+      backgroundPreset: "japan-city",
+      customBackground: null,
+      backgroundOpacity: 25,
+      backgroundBlur: 0,
       set: (key, value) => {
         set({ [key]: value } as Partial<SettingsState>);
         const s = get();
         applyToDocument(s.colorTheme, s.mode, s.jpFont);
+        applyBackground(s);
       },
       toggle: (key) => {
         set({ [key]: !get()[key] } as Partial<SettingsState>);
@@ -86,6 +157,7 @@ export const useSettings = create<SettingsState>()(
       applyTheme: () => {
         const s = get();
         applyToDocument(s.colorTheme, s.mode, s.jpFont);
+        applyBackground(s);
       },
     }),
     {
@@ -99,6 +171,11 @@ export const useSettings = create<SettingsState>()(
         studyMode: s.studyMode,
         soundEnabled: s.soundEnabled,
         onboarded: s.onboarded,
+        backgroundMode: s.backgroundMode,
+        backgroundPreset: s.backgroundPreset,
+        customBackground: s.customBackground,
+        backgroundOpacity: s.backgroundOpacity,
+        backgroundBlur: s.backgroundBlur,
       }),
     }
   )
@@ -114,6 +191,9 @@ if (typeof window !== "undefined") {
   // Mark as hydrated after the first paint (React hydration complete)
   requestAnimationFrame(() => { hydrated = true; });
   useSettings.subscribe((state) => {
-    if (hydrated) applyToDocument(state.colorTheme, state.mode, state.jpFont);
+    if (hydrated) {
+      applyToDocument(state.colorTheme, state.mode, state.jpFont);
+      applyBackground(state);
+    }
   });
 }
