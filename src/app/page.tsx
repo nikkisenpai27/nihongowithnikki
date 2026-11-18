@@ -1,97 +1,61 @@
 "use client";
 
-import { useState, useEffect, useSyncExternalStore } from "react";
+import { useState, useEffect, useRef } from "react";
 import { AppShell } from "@/components/nikki/app-shell";
 import { AuthPage } from "@/components/views/auth-page";
 import { LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNav } from "@/lib/stores/nav-store";
+import {
+  DashboardView, KanjiView, KanaView, VocabView, GrammarView,
+  ReadingView, ListeningView, StoriesView, QuizView, DriveView, SettingsView,
+} from "@/components/views/loader";
+import { GlobalSearchResults } from "@/components/nikki/global-search";
+import { useSettings } from "@/lib/stores/settings-store";
+import { createContext, useContext, type ReactNode } from "react";
 
-// Read user from localStorage without hydration mismatch (useSyncExternalStore)
-const emptyUser = null as { id: string; email: string; name: string } | null;
-function subscribeUser(cb: () => void) {
-  window.addEventListener("storage", cb);
-  return () => window.removeEventListener("storage", cb);
-}
-function getUserSnapshot() {
-  try {
-    const stored = localStorage.getItem("nikki-user");
-    if (stored) {
-      const u = JSON.parse(stored);
-      if (u && u.id) return u;
-    }
-  } catch { /* ignore */ }
-  return emptyUser;
-}
-function getUserServerSnapshot() { return emptyUser; }
+interface UserCtx { id: string; email: string; name: string; }
+const UserContext = createContext<UserCtx | null>(null);
+export function useCurrentUser() { return useContext(UserContext); }
 
 export default function Home() {
-  const storedUser = useSyncExternalStore(subscribeUser, getUserSnapshot, getUserServerSnapshot);
-  const [overrideUser, setOverrideUser] = useState<typeof storedUser>(null);
-  const user = overrideUser ?? storedUser;
-  const authed = !!user;
+  // Use a ref + state pattern to read localStorage after hydration.
+  // Server renders with user=null (auth page). After mount on client,
+  // we check localStorage and update — this is the standard React
+  // pattern for browser-only data, and the eslint-disable is warranted.
+  const [user, setUser] = useState<UserCtx | null>(null);
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem("nikki-user");
+      if (stored) {
+        const u = JSON.parse(stored);
+        if (u && u.id) setUser(u);
+      }
+    } catch { /* ignore */ }
+  }, []);
 
-  function handleAuth(u: { id: string; email: string; name: string }) {
-    setOverrideUser(u);
+  function handleAuth(u: UserCtx) {
+    setUser(u);
   }
 
   function handleLogout() {
     fetch("/api/auth/logout", { method: "POST" }).catch(() => {});
     localStorage.removeItem("nikki-user");
-    setOverrideUser(null);
+    setUser(null);
   }
 
-  if (!authed || !user) {
+  if (!user) {
     return <AuthPage onAuth={handleAuth} />;
   }
 
-  return <AuthedApp user={user} onLogout={handleLogout} />;
-}
-
-function AuthedApp({
-  user,
-  onLogout,
-}: {
-  user: { id: string; email: string; name: string };
-  onLogout: () => void;
-}) {
   return (
-    <AuthProvider user={user}>
+    <UserContext.Provider value={user}>
       <AppShell>
         <RouterView />
       </AppShell>
-      {/* Floating logout button */}
-      <FloatingLogout user={user} onLogout={onLogout} />
-    </AuthProvider>
+      <FloatingLogout user={user} onLogout={handleLogout} />
+    </UserContext.Provider>
   );
-}
-
-import { DashboardView } from "@/components/views/dashboard-view";
-import { KanjiView } from "@/components/views/kanji-view";
-import { KanaView } from "@/components/views/kana-view";
-import { VocabView } from "@/components/views/vocab-view";
-import { GrammarView } from "@/components/views/grammar-view";
-import { ReadingView } from "@/components/views/reading-view";
-import { ListeningView } from "@/components/views/listening-view";
-import { StoriesView } from "@/components/views/stories-view";
-import { QuizView } from "@/components/views/quiz-view";
-import { DriveView } from "@/components/views/drive-view";
-import { SettingsView } from "@/components/views/settings-view";
-import { GlobalSearchResults } from "@/components/nikki/global-search";
-import { useSettings } from "@/lib/stores/settings-store";
-import { createContext, useContext, ReactNode } from "react";
-
-interface UserCtx {
-  id: string;
-  email: string;
-  name: string;
-}
-const UserContext = createContext<UserCtx | null>(null);
-export function useCurrentUser() {
-  return useContext(UserContext);
-}
-function AuthProvider({ user, children }: { user: UserCtx; children: ReactNode }) {
-  return <UserContext.Provider value={user}>{children}</UserContext.Provider>;
 }
 
 const VIEWS: Record<string, () => React.ReactNode> = {
@@ -123,7 +87,6 @@ function RouterView() {
   const openGrammar = useNav((s) => s.openGrammar);
   const openStory = useNav((s) => s.openStory);
   const openReading = useNav((s) => s.openReading);
-  const openListening = useNav((s) => s.openListening);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -151,7 +114,6 @@ function RouterView() {
           onSelectGrammar={(id) => { setSearch(""); setView("grammar"); openGrammar(id); }}
           onSelectStory={(id) => { setSearch(""); setView("stories"); openStory(id); }}
           onSelectReading={(id) => { setSearch(""); setView("reading"); openReading(id); }}
-          onSelectListening={(id) => { setSearch(""); setView("listening"); openListening(id); }}
           onClear={() => setSearch("")}
         />
       ) : (
@@ -165,7 +127,7 @@ function FloatingLogout({
   user,
   onLogout,
 }: {
-  user: { id: string; email: string; name: string };
+  user: UserCtx;
   onLogout: () => void;
 }) {
   return (
