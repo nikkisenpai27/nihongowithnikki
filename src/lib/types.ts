@@ -107,6 +107,7 @@ export type ViewKey =
   | "listening"
   | "stories"
   | "quiz"
+  | "drive"
   | "settings";
 
 export type QuizType =

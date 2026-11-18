@@ -13,6 +13,7 @@ import { ReadingView } from "@/components/views/reading-view";
 import { ListeningView } from "@/components/views/listening-view";
 import { StoriesView } from "@/components/views/stories-view";
 import { QuizView } from "@/components/views/quiz-view";
+import { DriveView } from "@/components/views/drive-view";
 import { SettingsView } from "@/components/views/settings-view";
 import { GlobalSearchResults } from "@/components/nikki/global-search";
 
@@ -26,6 +27,7 @@ const VIEWS: Record<ViewKey, () => React.ReactNode> = {
   listening: () => <ListeningView />,
   stories: () => <StoriesView />,
   quiz: () => <QuizView />,
+  drive: () => <DriveView />,
   settings: () => <SettingsView />,
 };
 

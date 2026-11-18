@@ -9,6 +9,7 @@ import {
   BookText,
   FileText,
   Headphones,
+  FolderOpen,
   GraduationCap,
   Settings as SettingsIcon,
   Search,
@@ -45,6 +46,7 @@ const NAV: NavItem[] = [
   { view: "listening", label: "Listening", jp: "聴解", icon: Headphones, desc: "Audio & questions" },
   { view: "stories", label: "Stories", jp: "物語", icon: BookText, desc: "Read with Nikki" },
   { view: "quiz", label: "Quiz", jp: "クイズ", icon: GraduationCap, desc: "Test yourself" },
+  { view: "drive", label: "Drive", jp: "ドライブ", icon: FolderOpen, desc: "Free study notes" },
   { view: "settings", label: "Settings", jp: "設定", icon: SettingsIcon, desc: "Preferences" },
 ];
 
