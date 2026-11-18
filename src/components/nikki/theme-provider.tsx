@@ -6,12 +6,14 @@ import { useSettings } from "@/lib/stores/settings-store";
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const colorTheme = useSettings((s) => s.colorTheme);
   const mode = useSettings((s) => s.mode);
+  const jpFont = useSettings((s) => s.jpFont);
   const applyTheme = useSettings((s) => s.applyTheme);
 
-  // Apply on mount and whenever theme/mode changes
+  // Apply theme on mount and whenever any setting changes.
+  // This runs AFTER hydration so server/client render identically.
   useEffect(() => {
     applyTheme();
-  }, [colorTheme, mode, applyTheme]);
+  }, [colorTheme, mode, jpFont, applyTheme]);
 
   // React to system preference changes when in auto mode
   useEffect(() => {

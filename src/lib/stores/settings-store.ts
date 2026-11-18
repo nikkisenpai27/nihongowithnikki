@@ -104,9 +104,16 @@ export const useSettings = create<SettingsState>()(
   )
 );
 
-// Global subscription: keep the DOM theme + font in sync with the store at ALL times.
+// Global subscription: keep the DOM theme + font in sync with the store.
+// Delay until after hydration to avoid SSR mismatch — React hydrates
+// the <html> element first, and modifying its attributes during hydration
+// causes a mismatch error. Using requestAnimationFrame ensures the
+// subscription fires AFTER React has finished hydrating.
 if (typeof window !== "undefined") {
+  let hydrated = false;
+  // Mark as hydrated after the first paint (React hydration complete)
+  requestAnimationFrame(() => { hydrated = true; });
   useSettings.subscribe((state) => {
-    applyToDocument(state.colorTheme, state.mode, state.jpFont);
+    if (hydrated) applyToDocument(state.colorTheme, state.mode, state.jpFont);
   });
 }

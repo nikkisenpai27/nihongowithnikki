@@ -68,12 +68,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Apply theme before paint to avoid flash */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var s=JSON.parse(localStorage.getItem('nikki-settings')||'{}');var state=s.state||{};var ct=state.colorTheme||'sakura';var m=state.mode||'auto';var jf=state.jpFont||'notojp';var d=m==='dark'||(m==='auto'&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.setAttribute('data-theme',ct);document.documentElement.classList.toggle('dark',d);var fs={notojp:'var(--font-notojp)',rounded:'var(--font-rounded)',klee:'var(--font-klee)',mincho:'var(--font-mincho)',gothic:'var(--font-gothic)',yuji:'var(--font-yuji)',hina:'var(--font-hina)',dot:'var(--font-dot)'};document.documentElement.style.setProperty('--font-jp',fs[jf]||fs.notojp);}catch(e){document.documentElement.setAttribute('data-theme','sakura');}})();`,
-          }}
-        />
       </head>
       <body
         className={`${inter.variable} ${notojp.variable} ${rounded.variable} ${geistMono.variable} ${klee.variable} ${mincho.variable} ${gothic.variable} ${yuji.variable} ${hina.variable} ${dot.variable} antialiased`}

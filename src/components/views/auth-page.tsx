@@ -107,13 +107,13 @@ export function AuthPage({ onAuth }: AuthPageProps) {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: "url(/japan-city-bg.jpeg)",
-          filter: "brightness(0.4)",
+          filter: "brightness(0.7)",
         }}
         aria-hidden
       />
       {/* Gradient overlay */}
       <div
-        className="absolute inset-0 bg-gradient-to-br from-primary/30 via-background/50 to-indigo-deep/30"
+        className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/60 to-background/70"
         aria-hidden
       />
 
@@ -142,7 +142,7 @@ export function AuthPage({ onAuth }: AuthPageProps) {
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           className={cn(
-            "w-full max-w-md rounded-3xl border border-white/20 bg-card/80 p-8 shadow-2xl backdrop-blur-xl transition-all duration-500",
+            "w-full max-w-md rounded-3xl border border-border bg-card p-8 shadow-2xl transition-all duration-500",
             mounted ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           )}
           style={{
