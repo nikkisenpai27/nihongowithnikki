@@ -28,6 +28,7 @@ const NOTES = [
     desc: "Nikki's handwritten grammar notes covering all essential N5 grammar points — particles, verb conjugation (ます/て-form), copula (です), basic conditionals, and sentence structure. Each point includes example sentences written in Nikki's own hand with clear stroke-by-stroke explanations.",
     items: ["Particles (は, が, を, に, で)", "Verb forms (〜ます, 〜て, 〜た)", "Copula (です, じゃない)", "Adjectives (い/な)", "Basic conditionals (〜たら)", "Question forms (〜か, 〜の)"],
     pages: "~45 pages",
+    link: "https://drive.google.com/drive/folders/1VNm7LO7YBSdtGsa89TtJfhmTXBgzHYon",
   },
   {
     level: "N4",
@@ -37,6 +38,7 @@ const NOTES = [
     desc: "Building on N5, these handwritten notes cover N4 grammar patterns — giving/receiving verbs (〜てあげる/くれる/もらう), conditionals (〜ば, 〜と, 〜たら), passive/causative forms, honorific expressions, and more complex sentence structures. Nikki's notes include conjugation tables and usage comparisons drawn by hand.",
     items: ["Giving/receiving (あげる/くれる/もらう)", "Conditionals (〜ば, 〜と, 〜たら, 〜なら)", "Passive voice (〜られる/〜れる)", "Causative (〜させる)", "Honorific/humble forms", "Nominalization (〜の, 〜こと)"],
     pages: "~60 pages",
+    link: "https://drive.google.com/drive/folders/1DfQkk2g1gZJg71zqpdzn3dZAn-g3jb_U",
   },
   {
     level: "N3",
@@ -46,6 +48,7 @@ const NOTES = [
     desc: "Advanced handwritten notes bridging intermediate to upper-intermediate Japanese. Covers N3 patterns like 〜うちに, 〜に対して, 〜どころか, 〜一方で, 〜に違いない, and more. Each pattern is illustrated with Nikki's hand-drawn example sentences, conjugation diagrams, and comparison charts with similar grammar points.",
     items: ["Time/sequence (〜うちに, 〜たびに, 〜際に)", "Contrast (〜一方で, 〜どころか, 〜にひきかえ)", "Certainty (〜に違いない, 〜に決まっている)", "Cause/reason (〜あまり, 〜以上)", "Assumption (〜かねない, 〜っこない)", "Modifiers (〜向き, 〜向け, 〜がち)"],
     pages: "~80 pages",
+    link: "https://drive.google.com/drive/folders/1Gz3viZAgb7PMeYOBrn79Vz7Kx9xsHhTO",
   },
 ];
 
@@ -189,7 +192,7 @@ export function DriveView() {
                 </div>
 
                 {/* Download button */}
-                <a href={DRIVE_LINK} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block">
+                <a href={note.link} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block">
                   <Button size="sm" variant="outline" className="gap-2" style={{ borderColor: note.color, color: note.color }}>
                     <Download className="h-3.5 w-3.5" />
                     Download {note.level} Notes
