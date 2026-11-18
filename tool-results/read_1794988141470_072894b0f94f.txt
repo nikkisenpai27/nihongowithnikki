@@ -1,0 +1,2002 @@
+     1→import type { VocabData } from "@/lib/types";
+     2→
+     3→// JLPT N3 vocabulary — Shinzaizen Master style, chapter-wise by part of speech.
+     4→// Furigana notation: kanji readings inline as 漢字[かんじ] (compound runs).
+     5→// Total: 180 words (60 Nouns, 40 Verbs, 25 Adjectives, 15 Adverbs, 5 Particles,
+     6→// 10 Conjunctions, 15 Onomatopoeia, 10 Idioms).
+     7→// IDs: vn3-901 .. vn3-1080.
+     8→// Deliberately avoids duplicating any word taught in vocabN3A..vocabN3E.
+     9→
+    10→export const vocabN3F: VocabData[] = [
+    11→  // ============================================================
+    12→  // Nouns — 60 words (vn3-901 .. vn3-960)
+    13→  // ============================================================
+    14→  {
+    15→    id: "vn3-901",
+    16→    word: "旅券",
+    17→    reading: "りょけん",
+    18→    romaji: "ryoken",
+    19→    meaning: "passport",
+    20→    level: "N3",
+    21→    theme: "Nouns",
+    22→    partOfSpeech: "noun",
+    23→    example: {
+    24→      jp: "旅券[りょけん]を見[み]せる。",
+    25→      en: "Show the passport."
+    26→    }
+    27→  },
+    28→  {
+    29→    id: "vn3-902",
+    30→    word: "査証",
+    31→    reading: "さしょう",
+    32→    romaji: "sashou",
+    33→    meaning: "visa",
+    34→    level: "N3",
+    35→    theme: "Nouns",
+    36→    partOfSpeech: "noun",
+    37→    example: {
+    38→      jp: "査証[さしょう]を受[う]ける。",
+    39→      en: "Receive a visa."
+    40→    }
+    41→  },
+    42→  {
+    43→    id: "vn3-903",
+    44→    word: "税関",
+    45→    reading: "ぜいかん",
+    46→    romaji: "zeikan",
+    47→    meaning: "customs",
+    48→    level: "N3",
+    49→    theme: "Nouns",
+    50→    partOfSpeech: "noun",
+    51→    example: {
+    52→      jp: "税関[ぜいかん]を通[とお]る。",
+    53→      en: "Pass through customs."
+    54→    }
+    55→  },
+    56→  {
+    57→    id: "vn3-904",
+    58→    word: "手荷物",
+    59→    reading: "てにもつ",
+    60→    romaji: "tenimotsu",
+    61→    meaning: "hand luggage",
+    62→    level: "N3",
+    63→    theme: "Nouns",
+    64→    partOfSpeech: "noun",
+    65→    example: {
+    66→      jp: "手荷物[てにもつ]を預[あず]ける。",
+    67→      en: "Check in hand luggage."
+    68→    }
+    69→  },
+    70→  {
+    71→    id: "vn3-905",
+    72→    word: "搭乗",
+    73→    reading: "とうじょう",
+    74→    romaji: "toujou",
+    75→    meaning: "boarding",
+    76→    level: "N3",
+    77→    theme: "Nouns",
+    78→    partOfSpeech: "noun",
+    79→    example: {
+    80→      jp: "搭乗[とうじょう]ゲートに向[む]く。",
+    81→      en: "Head to the boarding gate."
+    82→    }
+    83→  },
+    84→  {
+    85→    id: "vn3-906",
+    86→    word: "出発",
+    87→    reading: "しゅっぱつ",
+    88→    romaji: "shuppatsu",
+    89→    meaning: "departure",
+    90→    level: "N3",
+    91→    theme: "Nouns",
+    92→    partOfSpeech: "noun",
+    93→    example: {
+    94→      jp: "出発[しゅっぱつ]時刻[じこく]を確認[かくにん]する。",
+    95→      en: "Confirm the departure time."
+    96→    }
+    97→  },
+    98→  {
+    99→    id: "vn3-907",
+   100→    word: "到着",
+   101→    reading: "とうちゃく",
+   102→    romaji: "touchaku",
+   103→    meaning: "arrival",
+   104→    level: "N3",
+   105→    theme: "Nouns",
+   106→    partOfSpeech: "noun",
+   107→    example: {
+   108→      jp: "到着[とうちゃく]が遅[おく]れる。",
+   109→      en: "Arrival is delayed."
+   110→    }
+   111→  },
+   112→  {
+   113→    id: "vn3-908",
+   114→    word: "運賃",
+   115→    reading: "うんちん",
+   116→    romaji: "unchin",
+   117→    meaning: "fare",
+   118→    level: "N3",
+   119→    theme: "Nouns",
+   120→    partOfSpeech: "noun",
+   121→    example: {
+   122→      jp: "運賃[うんちん]を払[はら]う。",
+   123→      en: "Pay the fare."
+   124→    }
+   125→  },
+   126→  {
+   127→    id: "vn3-909",
+   128→    word: "片道",
+   129→    reading: "かたみち",
+   130→    romaji: "katamichi",
+   131→    meaning: "one-way",
+   132→    level: "N3",
+   133→    theme: "Nouns",
+   134→    partOfSpeech: "noun",
+   135→    example: {
+   136→      jp: "片道[かたみち]切符[きっぷ]を買[か]う。",
+   137→      en: "Buy a one-way ticket."
+   138→    }
+   139→  },
+   140→  {
+   141→    id: "vn3-910",
+   142→    word: "往復",
+   143→    reading: "おうふく",
+   144→    romaji: "oufuku",
+   145→    meaning: "round trip",
+   146→    level: "N3",
+   147→    theme: "Nouns",
+   148→    partOfSpeech: "noun",
+   149→    example: {
+   150→      jp: "往復[おうふく]で行[い]く。",
+   151→      en: "Go on a round trip."
+   152→    }
+   153→  },
+   154→  {
+   155→    id: "vn3-911",
+   156→    word: "連休",
+   157→    reading: "れんきゅう",
+   158→    romaji: "renkyuu",
+   159→    meaning: "consecutive holidays",
+   160→    level: "N3",
+   161→    theme: "Nouns",
+   162→    partOfSpeech: "noun",
+   163→    example: {
+   164→      jp: "連休[れんきゅう]に旅行[りょこう]する。",
+   165→      en: "Travel during the holidays."
+   166→    }
+   167→  },
+   168→  {
+   169→    id: "vn3-912",
+   170→    word: "滞在",
+   171→    reading: "たいざい",
+   172→    romaji: "taizai",
+   173→    meaning: "stay",
+   174→    level: "N3",
+   175→    theme: "Nouns",
+   176→    partOfSpeech: "noun",
+   177→    example: {
+   178→      jp: "海外[かいがい]に滞在[たいざい]する。",
+   179→      en: "Stay overseas."
+   180→    }
+   181→  },
+   182→  {
+   183→    id: "vn3-913",
+   184→    word: "信号",
+   185→    reading: "しんごう",
+   186→    romaji: "shingou",
+   187→    meaning: "traffic signal",
+   188→    level: "N3",
+   189→    theme: "Nouns",
+   190→    partOfSpeech: "noun",
+   191→    example: {
+   192→      jp: "信号[しんごう]で止[と]まる。",
+   193→      en: "Stop at the traffic light."
+   194→    }
+   195→  },
+   196→  {
+   197→    id: "vn3-914",
+   198→    word: "交差点",
+   199→    reading: "こうさてん",
+   200→    romaji: "kousaten",
+   201→    meaning: "intersection",
+   202→    level: "N3",
+   203→    theme: "Nouns",
+   204→    partOfSpeech: "noun",
+   205→    example: {
+   206→      jp: "交差点[こうさてん]を渡[わた]る。",
+   207→      en: "Cross the intersection."
+   208→    }
+   209→  },
+   210→  {
+   211→    id: "vn3-915",
+   212→    word: "歩道",
+   213→    reading: "ほどう",
+   214→    romaji: "hodou",
+   215→    meaning: "sidewalk",
+   216→    level: "N3",
+   217→    theme: "Nouns",
+   218→    partOfSpeech: "noun",
+   219→    example: {
+   220→      jp: "歩道[ほどう]を歩[ある]く。",
+   221→      en: "Walk on the sidewalk."
+   222→    }
+   223→  },
+   224→  {
+   225→    id: "vn3-916",
+   226→    word: "車道",
+   227→    reading: "しゃどう",
+   228→    romaji: "shadou",
+   229→    meaning: "roadway",
+   230→    level: "N3",
+   231→    theme: "Nouns",
+   232→    partOfSpeech: "noun",
+   233→    example: {
+   234→      jp: "車道[しゃどう]に出[で]る。",
+   235→      en: "Step onto the roadway."
+   236→    }
+   237→  },
+   238→  {
+   239→    id: "vn3-917",
+   240→    word: "横断歩道",
+   241→    reading: "おうだんほどう",
+   242→    romaji: "oudanhodou",
+   243→    meaning: "pedestrian crossing",
+   244→    level: "N3",
+   245→    theme: "Nouns",
+   246→    partOfSpeech: "noun",
+   247→    example: {
+   248→      jp: "横断歩道[おうだんほどう]を渡[わた]る。",
+   249→      en: "Cross at the pedestrian crossing."
+   250→    }
+   251→  },
+   252→  {
+   253→    id: "vn3-918",
+   254→    word: "標識",
+   255→    reading: "ひょうしき",
+   256→    romaji: "hyoushiki",
+   257→    meaning: "sign",
+   258→    level: "N3",
+   259→    theme: "Nouns",
+   260→    partOfSpeech: "noun",
+   261→    example: {
+   262→      jp: "標識[ひょうしき]に従[したが]う。",
+   263→      en: "Follow the sign."
+   264→    }
+   265→  },
+   266→  {
+   267→    id: "vn3-919",
+   268→    word: "救急車",
+   269→    reading: "きゅうきゅうしゃ",
+   270→    romaji: "kyuukyuusha",
+   271→    meaning: "ambulance",
+   272→    level: "N3",
+   273→    theme: "Nouns",
+   274→    partOfSpeech: "noun",
+   275→    example: {
+   276→      jp: "救急車[きゅうきゅうしゃ]を呼[よ]ぶ。",
+   277→      en: "Call an ambulance."
+   278→    }
+   279→  },
+   280→  {
+   281→    id: "vn3-920",
+   282→    word: "消防車",
+   283→    reading: "しょうぼうしゃ",
+   284→    romaji: "shoubousha",
+   285→    meaning: "fire engine",
+   286→    level: "N3",
+   287→    theme: "Nouns",
+   288→    partOfSpeech: "noun",
+   289→    example: {
+   290→      jp: "消防車[しょうぼうしゃ]が通[とお]り過[す]ぎる。",
+   291→      en: "A fire engine passes by."
+   292→    }
+   293→  },
+   294→  {
+   295→    id: "vn3-921",
+   296→    word: "消防署",
+   297→    reading: "しょうぼうしょ",
+   298→    romaji: "shoubousho",
+   299→    meaning: "fire station",
+   300→    level: "N3",
+   301→    theme: "Nouns",
+   302→    partOfSpeech: "noun",
+   303→    example: {
+   304→      jp: "消防署[しょうぼうしょ]に勤[つと]める。",
+   305→      en: "Work at a fire station."
+   306→    }
+   307→  },
+   308→  {
+   309→    id: "vn3-922",
+   310→    word: "警察署",
+   311→    reading: "けいさつしょ",
+   312→    romaji: "keisatsusho",
+   313→    meaning: "police station",
+   314→    level: "N3",
+   315→    theme: "Nouns",
+   316→    partOfSpeech: "noun",
+   317→    example: {
+   318→      jp: "警察署[けいさつしょ]に行[い]く。",
+   319→      en: "Go to the police station."
+   320→    }
+   321→  },
+   322→  {
+   323→    id: "vn3-923",
+   324→    word: "交番",
+   325→    reading: "こうばん",
+   326→    romaji: "kouban",
+   327→    meaning: "police box",
+   328→    level: "N3",
+   329→    theme: "Nouns",
+   330→    partOfSpeech: "noun",
+   331→    example: {
+   332→      jp: "交番[こうばん]で聞[き]く。",
+   333→      en: "Ask at the police box."
+   334→    }
+   335→  },
+   336→  {
+   337→    id: "vn3-924",
+   338→    word: "容疑者",
+   339→    reading: "ようぎしゃ",
+   340→    romaji: "yougisha",
+   341→    meaning: "suspect",
+   342→    level: "N3",
+   343→    theme: "Nouns",
+   344→    partOfSpeech: "noun",
+   345→    example: {
+   346→      jp: "容疑者[ようぎしゃ]を逮捕[たいほ]する。",
+   347→      en: "Arrest the suspect."
+   348→    }
+   349→  },
+   350→  {
+   351→    id: "vn3-925",
+   352→    word: "証拠",
+   353→    reading: "しょうこ",
+   354→    romaji: "shouko",
+   355→    meaning: "evidence",
+   356→    level: "N3",
+   357→    theme: "Nouns",
+   358→    partOfSpeech: "noun",
+   359→    example: {
+   360→      jp: "証拠[しょうこ]を集[あつ]める。",
+   361→      en: "Gather evidence."
+   362→    }
+   363→  },
+   364→  {
+   365→    id: "vn3-926",
+   366→    word: "裁判",
+   367→    reading: "さいばん",
+   368→    romaji: "saiban",
+   369→    meaning: "trial",
+   370→    level: "N3",
+   371→    theme: "Nouns",
+   372→    partOfSpeech: "noun",
+   373→    example: {
+   374→      jp: "裁判[さいばん]に勝[か]つ。",
+   375→      en: "Win the trial."
+   376→    }
+   377→  },
+   378→  {
+   379→    id: "vn3-927",
+   380→    word: "弁護士",
+   381→    reading: "べんごし",
+   382→    romaji: "bengoshi",
+   383→    meaning: "lawyer",
+   384→    level: "N3",
+   385→    theme: "Nouns",
+   386→    partOfSpeech: "noun",
+   387→    example: {
+   388→      jp: "弁護士[べんごし]に相談[そうだん]する。",
+   389→      en: "Consult a lawyer."
+   390→    }
+   391→  },
+   392→  {
+   393→    id: "vn3-928",
+   394→    word: "検察",
+   395→    reading: "けんさつ",
+   396→    romaji: "kensatsu",
+   397→    meaning: "prosecution",
+   398→    level: "N3",
+   399→    theme: "Nouns",
+   400→    partOfSpeech: "noun",
+   401→    example: {
+   402→      jp: "検察[けんさつ]が捜査[そうさ]する。",
+   403→      en: "The prosecution investigates."
+   404→    }
+   405→  },
+   406→  {
+   407→    id: "vn3-929",
+   408→    word: "裁判官",
+   409→    reading: "さいばんかん",
+   410→    romaji: "saibankan",
+   411→    meaning: "judge",
+   412→    level: "N3",
+   413→    theme: "Nouns",
+   414→    partOfSpeech: "noun",
+   415→    example: {
+   416→      jp: "裁判官[さいばんかん]が判決[はんけつ]を下[くだ]す。",
+   417→      en: "The judge hands down a verdict."
+   418→    }
+   419→  },
+   420→  {
+   421→    id: "vn3-930",
+   422→    word: "証人",
+   423→    reading: "しょうにん",
+   424→    romaji: "shounin",
+   425→    meaning: "witness",
+   426→    level: "N3",
+   427→    theme: "Nouns",
+   428→    partOfSpeech: "noun",
+   429→    example: {
+   430→      jp: "証人[しょうにん]として出廷[しゅってい]する。",
+   431→      en: "Appear in court as a witness."
+   432→    }
+   433→  },
+   434→  {
+   435→    id: "vn3-931",
+   436→    word: "判決",
+   437→    reading: "はんけつ",
+   438→    romaji: "hanketsu",
+   439→    meaning: "verdict",
+   440→    level: "N3",
+   441→    theme: "Nouns",
+   442→    partOfSpeech: "noun",
+   443→    example: {
+   444→      jp: "判決[はんけつ]を待[ま]つ。",
+   445→      en: "Await the verdict."
+   446→    }
+   447→  },
+   448→  {
+   449→    id: "vn3-932",
+   450→    word: "罰金",
+   451→    reading: "ばっきん",
+   452→    romaji: "bakkin",
+   453→    meaning: "fine",
+   454→    level: "N3",
+   455→    theme: "Nouns",
+   456→    partOfSpeech: "noun",
+   457→    example: {
+   458→      jp: "罰金[ばっきん]を払[はら]う。",
+   459→      en: "Pay a fine."
+   460→    }
+   461→  },
+   462→  {
+   463→    id: "vn3-933",
+   464→    word: "犯行",
+   465→    reading: "はんこう",
+   466→    romaji: "hankou",
+   467→    meaning: "offense",
+   468→    level: "N3",
+   469→    theme: "Nouns",
+   470→    partOfSpeech: "noun",
+   471→    example: {
+   472→      jp: "犯行[はんこう]を自白[じはく]する。",
+   473→      en: "Confess to the offense."
+   474→    }
+   475→  },
+   476→  {
+   477→    id: "vn3-934",
+   478→    word: "犯罪",
+   479→    reading: "はんざい",
+   480→    romaji: "hanzai",
+   481→    meaning: "crime",
+   482→    level: "N3",
+   483→    theme: "Nouns",
+   484→    partOfSpeech: "noun",
+   485→    example: {
+   486→      jp: "犯罪[はんざい]を防[ふせ]ぐ。",
+   487→      en: "Prevent crime."
+   488→    }
+   489→  },
+   490→  {
+   491→    id: "vn3-935",
+   492→    word: "被害者",
+   493→    reading: "ひがいしゃ",
+   494→    romaji: "higaisha",
+   495→    meaning: "victim",
+   496→    level: "N3",
+   497→    theme: "Nouns",
+   498→    partOfSpeech: "noun",
+   499→    example: {
+   500→      jp: "被害者[ひがいしゃ]を救[すく]う。",
+   501→      en: "Rescue the victim."
+   502→    }
+   503→  },
+   504→  {
+   505→    id: "vn3-936",
+   506→    word: "加害者",
+   507→    reading: "かがいしゃ",
+   508→    romaji: "kagaisha",
+   509→    meaning: "perpetrator",
+   510→    level: "N3",
+   511→    theme: "Nouns",
+   512→    partOfSpeech: "noun",
+   513→    example: {
+   514→      jp: "加害者[かがいしゃ]を特定[とくてい]する。",
+   515→      en: "Identify the perpetrator."
+   516→    }
+   517→  },
+   518→  {
+   519→    id: "vn3-937",
+   520→    word: "救助",
+   521→    reading: "きゅうじょ",
+   522→    romaji: "kyuujo",
+   523→    meaning: "rescue",
+   524→    level: "N3",
+   525→    theme: "Nouns",
+   526→    partOfSpeech: "noun",
+   527→    example: {
+   528→      jp: "救助[きゅうじょ]を求[もと]める。",
+   529→      en: "Call for rescue."
+   530→    }
+   531→  },
+   532→  {
+   533→    id: "vn3-938",
+   534→    word: "警報",
+   535→    reading: "けいほう",
+   536→    romaji: "keihou",
+   537→    meaning: "warning",
+   538→    level: "N3",
+   539→    theme: "Nouns",
+   540→    partOfSpeech: "noun",
+   541→    example: {
+   542→      jp: "警報[けいほう]が出[で]る。",
+   543→      en: "A warning is issued."
+   544→    }
+   545→  },
+   546→  {
+   547→    id: "vn3-939",
+   548→    word: "注意報",
+   549→    reading: "ちゅういほう",
+   550→    romaji: "chuuihou",
+   551→    meaning: "advisory",
+   552→    level: "N3",
+   553→    theme: "Nouns",
+   554→    partOfSpeech: "noun",
+   555→    example: {
+   556→      jp: "注意報[ちゅういほう]が発表[はっぴょう]される。",
+   557→      en: "An advisory is issued."
+   558→    }
+   559→  },
+   560→  {
+   561→    id: "vn3-940",
+   562→    word: "台風",
+   563→    reading: "たいふう",
+   564→    romaji: "taifuu",
+   565→    meaning: "typhoon",
+   566→    level: "N3",
+   567→    theme: "Nouns",
+   568→    partOfSpeech: "noun",
+   569→    example: {
+   570→      jp: "台風[たいふう]が接近[せっきん]する。",
+   571→      en: "A typhoon approaches."
+   572→    }
+   573→  },
+   574→  {
+   575→    id: "vn3-941",
+   576→    word: "津波",
+   577→    reading: "つなみ",
+   578→    romaji: "tsunami",
+   579→    meaning: "tsunami",
+   580→    level: "N3",
+   581→    theme: "Nouns",
+   582→    partOfSpeech: "noun",
+   583→    example: {
+   584→      jp: "津波[つなみ]に警戒[けいかい]する。",
+   585→      en: "Beware of a tsunami."
+   586→    }
+   587→  },
+   588→  {
+   589→    id: "vn3-942",
+   590→    word: "地震",
+   591→    reading: "じしん",
+   592→    romaji: "jishin",
+   593→    meaning: "earthquake",
+   594→    level: "N3",
+   595→    theme: "Nouns",
+   596→    partOfSpeech: "noun",
+   597→    example: {
+   598→      jp: "地震[じしん]が起[お]きる。",
+   599→      en: "An earthquake occurs."
+   600→    }
+   601→  },
+   602→  {
+   603→    id: "vn3-943",
+   604→    word: "震度",
+   605→    reading: "しんど",
+   606→    romaji: "shindo",
+   607→    meaning: "seismic intensity",
+   608→    level: "N3",
+   609→    theme: "Nouns",
+   610→    partOfSpeech: "noun",
+   611→    example: {
+   612→      jp: "震度[しんど]を測[はか]る。",
+   613→      en: "Measure seismic intensity."
+   614→    }
+   615→  },
+   616→  {
+   617→    id: "vn3-944",
+   618→    word: "被害",
+   619→    reading: "ひがい",
+   620→    romaji: "higai",
+   621→    meaning: "damage",
+   622→    level: "N3",
+   623→    theme: "Nouns",
+   624→    partOfSpeech: "noun",
+   625→    example: {
+   626→      jp: "被害[ひがい]が広[ひろ]がる。",
+   627→      en: "Damage spreads."
+   628→    }
+   629→  },
+   630→  {
+   631→    id: "vn3-945",
+   632→    word: "災害",
+   633→    reading: "さいがい",
+   634→    romaji: "saigai",
+   635→    meaning: "disaster",
+   636→    level: "N3",
+   637→    theme: "Nouns",
+   638→    partOfSpeech: "noun",
+   639→    example: {
+   640→      jp: "災害[さいがい]に備[そな]える。",
+   641→      en: "Prepare for a disaster."
+   642→    }
+   643→  },
+   644→  {
+   645→    id: "vn3-946",
+   646→    word: "復興",
+   647→    reading: "ふっこう",
+   648→    romaji: "fukkou",
+   649→    meaning: "reconstruction",
+   650→    level: "N3",
+   651→    theme: "Nouns",
+   652→    partOfSpeech: "noun",
+   653→    example: {
+   654→      jp: "復興[ふっこう]を支援[しえん]する。",
+   655→      en: "Support reconstruction."
+   656→    }
+   657→  },
+   658→  {
+   659→    id: "vn3-947",
+   660→    word: "義援金",
+   661→    reading: "ぎえんきん",
+   662→    romaji: "gienkin",
+   663→    meaning: "donation",
+   664→    level: "N3",
+   665→    theme: "Nouns",
+   666→    partOfSpeech: "noun",
+   667→    example: {
+   668→      jp: "義援金[ぎえんきん]を送[おく]る。",
+   669→      en: "Send a donation."
+   670→    }
+   671→  },
+   672→  {
+   673→    id: "vn3-948",
+   674→    word: "避難",
+   675→    reading: "ひなん",
+   676→    romaji: "hinan",
+   677→    meaning: "evacuation",
+   678→    level: "N3",
+   679→    theme: "Nouns",
+   680→    partOfSpeech: "noun",
+   681→    example: {
+   682→      jp: "避難[ひなん]する。",
+   683→      en: "Evacuate."
+   684→    }
+   685→  },
+   686→  {
+   687→    id: "vn3-949",
+   688→    word: "避難所",
+   689→    reading: "ひなんじょ",
+   690→    romaji: "hinanjo",
+   691→    meaning: "shelter",
+   692→    level: "N3",
+   693→    theme: "Nouns",
+   694→    partOfSpeech: "noun",
+   695→    example: {
+   696→      jp: "避難所[ひなんじょ]に集[あつ]まる。",
+   697→      en: "Gather at the shelter."
+   698→    }
+   699→  },
+   700→  {
+   701→    id: "vn3-950",
+   702→    word: "防災",
+   703→    reading: "ぼうさい",
+   704→    romaji: "bousai",
+   705→    meaning: "disaster prevention",
+   706→    level: "N3",
+   707→    theme: "Nouns",
+   708→    partOfSpeech: "noun",
+   709→    example: {
+   710→      jp: "防災[ぼうさい]の訓練[くんれん]をする。",
+   711→      en: "Conduct disaster-prevention training."
+   712→    }
+   713→  },
+   714→  {
+   715→    id: "vn3-951",
+   716→    word: "防犯",
+   717→    reading: "ぼうはん",
+   718→    romaji: "bouhan",
+   719→    meaning: "crime prevention",
+   720→    level: "N3",
+   721→    theme: "Nouns",
+   722→    partOfSpeech: "noun",
+   723→    example: {
+   724→      jp: "防犯[ぼうはん]カメラを設置[せっち]する。",
+   725→      en: "Install a crime-prevention camera."
+   726→    }
+   727→  },
+   728→  {
+   729→    id: "vn3-952",
+   730→    word: "警備",
+   731→    reading: "けいび",
+   732→    romaji: "keibi",
+   733→    meaning: "security",
+   734→    level: "N3",
+   735→    theme: "Nouns",
+   736→    partOfSpeech: "noun",
+   737→    example: {
+   738→      jp: "警備[けいび]を強化[きょうか]する。",
+   739→      en: "Strengthen security."
+   740→    }
+   741→  },
+   742→  {
+   743→    id: "vn3-953",
+   744→    word: "警備員",
+   745→    reading: "けいびいん",
+   746→    romaji: "keibiin",
+   747→    meaning: "security guard",
+   748→    level: "N3",
+   749→    theme: "Nouns",
+   750→    partOfSpeech: "noun",
+   751→    example: {
+   752→      jp: "警備員[けいびいん]が夜[よる]を見張[みは]る。",
+   753→      en: "A security guard keeps watch at night."
+   754→    }
+   755→  },
+   756→  {
+   757→    id: "vn3-954",
+   758→    word: "施設",
+   759→    reading: "しせつ",
+   760→    romaji: "shisetsu",
+   761→    meaning: "facility",
+   762→    level: "N3",
+   763→    theme: "Nouns",
+   764→    partOfSpeech: "noun",
+   765→    example: {
+   766→      jp: "施設[しせつ]を利用[りよう]する。",
+   767→      en: "Use a facility."
+   768→    }
+   769→  },
+   770→  {
+   771→    id: "vn3-955",
+   772→    word: "公園",
+   773→    reading: "こうえん",
+   774→    romaji: "kouen",
+   775→    meaning: "park",
+   776→    level: "N3",
+   777→    theme: "Nouns",
+   778→    partOfSpeech: "noun",
+   779→    example: {
+   780→      jp: "公園[こうえん]を散歩[さんぽ]する。",
+   781→      en: "Stroll in a park."
+   782→    }
+   783→  },
+   784→  {
+   785→    id: "vn3-956",
+   786→    word: "広場",
+   787→    reading: "ひろば",
+   788→    romaji: "hiroba",
+   789→    meaning: "plaza",
+   790→    level: "N3",
+   791→    theme: "Nouns",
+   792→    partOfSpeech: "noun",
+   793→    example: {
+   794→      jp: "広場[ひろば]に集[あつ]まる。",
+   795→      en: "Gather at the plaza."
+   796→    }
+   797→  },
+   798→  {
+   799→    id: "vn3-957",
+   800→    word: "遊歩道",
+   801→    reading: "ゆうほどう",
+   802→    romaji: "yuuhodou",
+   803→    meaning: "promenade",
+   804→    level: "N3",
+   805→    theme: "Nouns",
+   806→    partOfSpeech: "noun",
+   807→    example: {
+   808→      jp: "遊歩道[ゆうほどう]を歩[ある]く。",
+   809→      en: "Walk along the promenade."
+   810→    }
+   811→  },
+   812→  {
+   813→    id: "vn3-958",
+   814→    word: "景色",
+   815→    reading: "けしき",
+   816→    romaji: "keshiki",
+   817→    meaning: "scenery",
+   818→    level: "N3",
+   819→    theme: "Nouns",
+   820→    partOfSpeech: "noun",
+   821→    example: {
+   822→      jp: "景色[けしき]を楽[たの]しむ。",
+   823→      en: "Enjoy the scenery."
+   824→    }
+   825→  },
+   826→  {
+   827→    id: "vn3-959",
+   828→    word: "展望台",
+   829→    reading: "てんぼうだい",
+   830→    romaji: "tenboudai",
+   831→    meaning: "observatory",
+   832→    level: "N3",
+   833→    theme: "Nouns",
+   834→    partOfSpeech: "noun",
+   835→    example: {
+   836→      jp: "展望台[てんぼうだい]に登[のぼ]る。",
+   837→      en: "Climb the observatory."
+   838→    }
+   839→  },
+   840→  {
+   841→    id: "vn3-960",
+   842→    word: "展覧会",
+   843→    reading: "てんらんかい",
+   844→    romaji: "tenrankai",
+   845→    meaning: "exhibition",
+   846→    level: "N3",
+   847→    theme: "Nouns",
+   848→    partOfSpeech: "noun",
+   849→    example: {
+   850→      jp: "展覧会[てんらんかい]に行[い]く。",
+   851→      en: "Go to an exhibition."
+   852→    }
+   853→  },
+   854→  // ============================================================
+   855→  // Verbs — 40 words (vn3-961 .. vn3-1000)
+   856→  // ============================================================
+   857→  {
+   858→    id: "vn3-961",
+   859→    word: "引き下がる",
+   860→    reading: "ひきさがる",
+   861→    romaji: "hikisagaru",
+   862→    meaning: "to back down",
+   863→    level: "N3",
+   864→    theme: "Verbs",
+   865→    partOfSpeech: "verb",
+   866→    example: {
+   867→      jp: "議論[ぎろん]から引[ひ]き下[さ]がる。",
+   868→      en: "Back down from the discussion."
+   869→    }
+   870→  },
+   871→  {
+   872→    id: "vn3-962",
+   873→    word: "引き継ぐ",
+   874→    reading: "ひきつぐ",
+   875→    romaji: "hikitsugu",
+   876→    meaning: "to take over",
+   877→    level: "N3",
+   878→    theme: "Verbs",
+   879→    partOfSpeech: "verb",
+   880→    example: {
+   881→      jp: "仕事[しごと]を引[ひ]き継[つ]ぐ。",
+   882→      en: "Take over the work."
+   883→    }
+   884→  },
+   885→  {
+   886→    id: "vn3-963",
+   887→    word: "引き起こす",
+   888→    reading: "ひきおこす",
+   889→    romaji: "hikiokosu",
+   890→    meaning: "to cause",
+   891→    level: "N3",
+   892→    theme: "Verbs",
+   893→    partOfSpeech: "verb",
+   894→    example: {
+   895→      jp: "問題[もんだい]を引[ひ]き起[お]こす。",
+   896→      en: "Cause a problem."
+   897→    }
+   898→  },
+   899→  {
+   900→    id: "vn3-964",
+   901→    word: "引き落とす",
+   902→    reading: "ひきおとす",
+   903→    romaji: "hikiotosu",
+   904→    meaning: "to withdraw (money)",
+   905→    level: "N3",
+   906→    theme: "Verbs",
+   907→    partOfSpeech: "verb",
+   908→    example: {
+   909→      jp: "口座[こうざ]から引[ひ]き落[お]とす。",
+   910→      en: "Withdraw from the account."
+   911→    }
+   912→  },
+   913→  {
+   914→    id: "vn3-965",
+   915→    word: "取り立てる",
+   916→    reading: "とりたてる",
+   917→    romaji: "toritateru",
+   918→    meaning: "to collect",
+   919→    level: "N3",
+   920→    theme: "Verbs",
+   921→    partOfSpeech: "verb",
+   922→    example: {
+   923→      jp: "借金[しゃっきん]を取[と]り立[た]てる。",
+   924→      en: "Collect a debt."
+   925→    }
+   926→  },
+   927→  {
+   928→    id: "vn3-966",
+   929→    word: "取り残す",
+   930→    reading: "とりのこす",
+   931→    romaji: "torinokosu",
+   932→    meaning: "to leave behind",
+   933→    level: "N3",
+   934→    theme: "Verbs",
+   935→    partOfSpeech: "verb",
+   936→    example: {
+   937→      jp: "友[とも]を取[と]り残[のこ]す。",
+   938→      en: "Leave a friend behind."
+   939→    }
+   940→  },
+   941→  {
+   942→    id: "vn3-967",
+   943→    word: "取り壊す",
+   944→    reading: "とりこわす",
+   945→    romaji: "torikowasu",
+   946→    meaning: "to demolish",
+   947→    level: "N3",
+   948→    theme: "Verbs",
+   949→    partOfSpeech: "verb",
+   950→    example: {
+   951→      jp: "古[ふる]い建物[たてもの]を取[と]り壊[こわ]す。",
+   952→      en: "Demolish an old building."
+   953→    }
+   954→  },
+   955→  {
+   956→    id: "vn3-968",
+   957→    word: "取り巻く",
+   958→    reading: "とりまく",
+   959→    romaji: "torimaku",
+   960→    meaning: "to surround",
+   961→    level: "N3",
+   962→    theme: "Verbs",
+   963→    partOfSpeech: "verb",
+   964→    example: {
+   965→      jp: "記者[きしゃ]が取[と]り巻[ま]く。",
+   966→      en: "Reporters surround."
+   967→    }
+   968→  },
+   969→  {
+   970→    id: "vn3-969",
+   971→    word: "取り入れる",
+   972→    reading: "とりいれる",
+   973→    romaji: "toriireru",
+   974→    meaning: "to adopt",
+   975→    level: "N3",
+   976→    theme: "Verbs",
+   977→    partOfSpeech: "verb",
+   978→    example: {
+   979→      jp: "新[あたら]しい技術[ぎじゅつ]を取[と]り入[い]れる。",
+   980→      en: "Adopt new technology."
+   981→    }
+   982→  },
+   983→  {
+   984→    id: "vn3-970",
+   985→    word: "受け止める",
+   986→    reading: "うけとめる",
+   987→    romaji: "uketomeru",
+   988→    meaning: "to catch, accept",
+   989→    level: "N3",
+   990→    theme: "Verbs",
+   991→    partOfSpeech: "verb",
+   992→    example: {
+   993→      jp: "ボールを受[う]け止[と]める。",
+   994→      en: "Catch the ball."
+   995→    }
+   996→  },
+   997→  {
+   998→    id: "vn3-971",
+   999→    word: "受け流す",
+  1000→    reading: "うけながす",
+  1001→    romaji: "ukenagasu",
+  1002→    meaning: "to parry, brush off",
+  1003→    level: "N3",
+  1004→    theme: "Verbs",
+  1005→    partOfSpeech: "verb",
+  1006→    example: {
+  1007→      jp: "冗談[じょうだん]を受[う]け流[なが]す。",
+  1008→      en: "Brush off a joke."
+  1009→    }
+  1010→  },
+  1011→  {
+  1012→    id: "vn3-972",
+  1013→    word: "見極める",
+  1014→    reading: "みきわめる",
+  1015→    romaji: "mikiwameru",
+  1016→    meaning: "to ascertain",
+  1017→    level: "N3",
+  1018→    theme: "Verbs",
+  1019→    partOfSpeech: "verb",
+  1020→    example: {
+  1021→      jp: "真実[しんじつ]を見[み]極[きわ]める。",
+  1022→      en: "Ascertain the truth."
+  1023→    }
+  1024→  },
+  1025→  {
+  1026→    id: "vn3-973",
+  1027→    word: "見込む",
+  1028→    reading: "みこむ",
+  1029→    romaji: "mikomu",
+  1030→    meaning: "to expect, anticipate",
+  1031→    level: "N3",
+  1032→    theme: "Verbs",
+  1033→    partOfSpeech: "verb",
+  1034→    example: {
+  1035→      jp: "成功[せいこう]を見[み]込[こ]む。",
+  1036→      en: "Expect success."
+  1037→    }
+  1038→  },
+  1039→  {
+  1040→    id: "vn3-974",
+  1041→    word: "見出す",
+  1042→    reading: "みいだす",
+  1043→    romaji: "miidasu",
+  1044→    meaning: "to discover",
+  1045→    level: "N3",
+  1046→    theme: "Verbs",
+  1047→    partOfSpeech: "verb",
+  1048→    example: {
+  1049→      jp: "解決策[かいけつさく]を見[み]出[だ]す。",
+  1050→      en: "Find a solution."
+  1051→    }
+  1052→  },
+  1053→  {
+  1054→    id: "vn3-975",
+  1055→    word: "見渡す",
+  1056→    reading: "みわたす",
+  1057→    romaji: "miwatasu",
+  1058→    meaning: "to look out over",
+  1059→    level: "N3",
+  1060→    theme: "Verbs",
+  1061→    partOfSpeech: "verb",
+  1062→    example: {
+  1063→      jp: "全体[ぜんたい]を見[み]渡[わた]す。",
+  1064→      en: "Look over the whole."
+  1065→    }
+  1066→  },
+  1067→  {
+  1068→    id: "vn3-976",
+  1069→    word: "思いやる",
+  1070→    reading: "おもいやる",
+  1071→    romaji: "omoiyaru",
+  1072→    meaning: "to be considerate of",
+  1073→    level: "N3",
+  1074→    theme: "Verbs",
+  1075→    partOfSpeech: "verb",
+  1076→    example: {
+  1077→      jp: "人[ひと]を思[おも]いやる。",
+  1078→      en: "Be considerate of others."
+  1079→    }
+  1080→  },
+  1081→  {
+  1082→    id: "vn3-977",
+  1083→    word: "思い当たる",
+  1084→    reading: "おもいあたる",
+  1085→    romaji: "omoiataru",
+  1086→    meaning: "to think of (a possibility)",
+  1087→    level: "N3",
+  1088→    theme: "Verbs",
+  1089→    partOfSpeech: "verb",
+  1090→    example: {
+  1091→      jp: "理由[りゆう]が思[おも]い当[あ]たる。",
+  1092→      en: "Think of a reason."
+  1093→    }
+  1094→  },
+  1095→  {
+  1096→    id: "vn3-978",
+  1097→    word: "思い浮かぶ",
+  1098→    reading: "おもいうかぶ",
+  1099→    romaji: "omoiukabu",
+  1100→    meaning: "to come to mind",
+  1101→    level: "N3",
+  1102→    theme: "Verbs",
+  1103→    partOfSpeech: "verb",
+  1104→    example: {
+  1105→      jp: "昔[むかし]が思[おも]い浮[うか]ぶ。",
+  1106→      en: "Old times come to mind."
+  1107→    }
+  1108→  },
+  1109→  {
+  1110→    id: "vn3-979",
+  1111→    word: "打ち明ける",
+  1112→    reading: "うちあける",
+  1113→    romaji: "uchiakeru",
+  1114→    meaning: "to confide",
+  1115→    level: "N3",
+  1116→    theme: "Verbs",
+  1117→    partOfSpeech: "verb",
+  1118→    example: {
+  1119→      jp: "秘密[ひみつ]を打[う]ち明[あ]ける。",
+  1120→      en: "Confide a secret."
+  1121→    }
+  1122→  },
+  1123→  {
+  1124→    id: "vn3-980",
+  1125→    word: "打ち消す",
+  1126→    reading: "うちけす",
+  1127→    romaji: "uchikesu",
+  1128→    meaning: "to deny",
+  1129→    level: "N3",
+  1130→    theme: "Verbs",
+  1131→    partOfSpeech: "verb",
+  1132→    example: {
+  1133→      jp: "噂[うわさ]を打[う]ち消[け]す。",
+  1134→      en: "Deny a rumor."
+  1135→    }
+  1136→  },
+  1137→  {
+  1138→    id: "vn3-981",
+  1139→    word: "打ち込む",
+  1140→    reading: "うちこむ",
+  1141→    romaji: "uchikomu",
+  1142→    meaning: "to be absorbed in",
+  1143→    level: "N3",
+  1144→    theme: "Verbs",
+  1145→    partOfSpeech: "verb",
+  1146→    example: {
+  1147→      jp: "仕事[しごと]に打[う]ち込[こ]む。",
+  1148→      en: "Be absorbed in work."
+  1149→    }
+  1150→  },
+  1151→  {
+  1152→    id: "vn3-982",
+  1153→    word: "打ち勝つ",
+  1154→    reading: "うちかつ",
+  1155→    romaji: "uchikatsu",
+  1156→    meaning: "to overcome",
+  1157→    level: "N3",
+  1158→    theme: "Verbs",
+  1159→    partOfSpeech: "verb",
+  1160→    example: {
+  1161→      jp: "困難[こんなん]に打[う]ち勝[か]つ。",
+  1162→      en: "Overcome difficulty."
+  1163→    }
+  1164→  },
+  1165→  {
+  1166→    id: "vn3-983",
+  1167→    word: "立ち去る",
+  1168→    reading: "たちさる",
+  1169→    romaji: "tachisaru",
+  1170→    meaning: "to walk away",
+  1171→    level: "N3",
+  1172→    theme: "Verbs",
+  1173→    partOfSpeech: "verb",
+  1174→    example: {
+  1175→      jp: "現場[げんば]から立[た]ち去[さ]る。",
+  1176→      en: "Leave the scene."
+  1177→    }
+  1178→  },
+  1179→  {
+  1180→    id: "vn3-984",
+  1181→    word: "立ち入る",
+  1182→    reading: "たちいる",
+  1183→    romaji: "tachiiru",
+  1184→    meaning: "to step in",
+  1185→    level: "N3",
+  1186→    theme: "Verbs",
+  1187→    partOfSpeech: "verb",
+  1188→    example: {
+  1189→      jp: "他人[たにん]の領域[りょういき]に立[た]ち入[い]る。",
+  1190→      en: "Step into others' territory."
+  1191→    }
+  1192→  },
+  1193→  {
+  1194→    id: "vn3-985",
+  1195→    word: "立ち向かう",
+  1196→    reading: "たちむかう",
+  1197→    romaji: "tachimukau",
+  1198→    meaning: "to confront",
+  1199→    level: "N3",
+  1200→    theme: "Verbs",
+  1201→    partOfSpeech: "verb",
+  1202→    example: {
+  1203→      jp: "敵[てき]に立[た]ち向[むか]う。",
+  1204→      en: "Confront the enemy."
+  1205→    }
+  1206→  },
+  1207→  {
+  1208→    id: "vn3-986",
+  1209→    word: "立ち振る舞う",
+  1210→    reading: "たちふるまう",
+  1211→    romaji: "tachifurumau",
+  1212→    meaning: "to behave",
+  1213→    level: "N3",
+  1214→    theme: "Verbs",
+  1215→    partOfSpeech: "verb",
+  1216→    example: {
+  1217→      jp: "礼儀[れいぎ]正[ただ]しく立[た]ち振[ふる]舞[ま]う。",
+  1218→      en: "Behave politely."
+  1219→    }
+  1220→  },
+  1221→  {
+  1222→    id: "vn3-987",
+  1223→    word: "切り替える",
+  1224→    reading: "きりかえる",
+  1225→    romaji: "kirikaeru",
+  1226→    meaning: "to switch over",
+  1227→    level: "N3",
+  1228→    theme: "Verbs",
+  1229→    partOfSpeech: "verb",
+  1230→    example: {
+  1231→      jp: "考[かんが]えを切[き]り替[か]える。",
+  1232→      en: "Switch one's thinking."
+  1233→    }
+  1234→  },
+  1235→  {
+  1236→    id: "vn3-988",
+  1237→    word: "切り上げる",
+  1238→    reading: "きりあげる",
+  1239→    romaji: "kiriageru",
+  1240→    meaning: "to wrap up, close",
+  1241→    level: "N3",
+  1242→    theme: "Verbs",
+  1243→    partOfSpeech: "verb",
+  1244→    example: {
+  1245→      jp: "仕事[しごと]を切[き]り上[あ]げる。",
+  1246→      en: "Wrap up work."
+  1247→    }
+  1248→  },
+  1249→  {
+  1250→    id: "vn3-989",
+  1251→    word: "切り出す",
+  1252→    reading: "きりだす",
+  1253→    romaji: "kiridasu",
+  1254→    meaning: "to begin to say",
+  1255→    level: "N3",
+  1256→    theme: "Verbs",
+  1257→    partOfSpeech: "verb",
+  1258→    example: {
+  1259→      jp: "挨拶[あいさつ]から切[き]り出[だ]す。",
+  1260→      en: "Start with a greeting."
+  1261→    }
+  1262→  },
+  1263→  {
+  1264→    id: "vn3-990",
+  1265→    word: "切り下げる",
+  1266→    reading: "きりさげる",
+  1267→    romaji: "kirisageru",
+  1268→    meaning: "to lower, reduce",
+  1269→    level: "N3",
+  1270→    theme: "Verbs",
+  1271→    partOfSpeech: "verb",
+  1272→    example: {
+  1273→      jp: "価格[かかく]を切[き]り下[さ]げる。",
+  1274→      en: "Lower the price."
+  1275→    }
+  1276→  },
+  1277→  {
+  1278→    id: "vn3-991",
+  1279→    word: "組み立てる",
+  1280→    reading: "くみたてる",
+  1281→    romaji: "kumitateru",
+  1282→    meaning: "to assemble",
+  1283→    level: "N3",
+  1284→    theme: "Verbs",
+  1285→    partOfSpeech: "verb",
+  1286→    example: {
+  1287→      jp: "棚[たな]を組[く]み立[た]てる。",
+  1288→      en: "Assemble a shelf."
+  1289→    }
+  1290→  },
+  1291→  {
+  1292→    id: "vn3-992",
+  1293→    word: "組み込む",
+  1294→    reading: "くみこむ",
+  1295→    romaji: "kumikomu",
+  1296→    meaning: "to incorporate",
+  1297→    level: "N3",
+  1298→    theme: "Verbs",
+  1299→    partOfSpeech: "verb",
+  1300→    example: {
+  1301→      jp: "計画[けいかく]に組[く]み込[こ]む。",
+  1302→      en: "Incorporate into the plan."
+  1303→    }
+  1304→  },
+  1305→  {
+  1306→    id: "vn3-993",
+  1307→    word: "組み合わせる",
+  1308→    reading: "くみあわせる",
+  1309→    romaji: "kumiawaseru",
+  1310→    meaning: "to combine",
+  1311→    level: "N3",
+  1312→    theme: "Verbs",
+  1313→    partOfSpeech: "verb",
+  1314→    example: {
+  1315→      jp: "部品[ぶひん]を組[く]み合[あ]わせる。",
+  1316→      en: "Combine the parts."
+  1317→    }
+  1318→  },
+  1319→  {
+  1320→    id: "vn3-994",
+  1321→    word: "書き込む",
+  1322→    reading: "かきこむ",
+  1323→    romaji: "kakikomu",
+  1324→    meaning: "to write in",
+  1325→    level: "N3",
+  1326→    theme: "Verbs",
+  1327→    partOfSpeech: "verb",
+  1328→    example: {
+  1329→      jp: "欄[らん]に書[か]き込[こ]む。",
+  1330→      en: "Write in the column."
+  1331→    }
+  1332→  },
+  1333→  {
+  1334→    id: "vn3-995",
+  1335→    word: "書き留める",
+  1336→    reading: "かきとめる",
+  1337→    romaji: "kakitomeru",
+  1338→    meaning: "to write down",
+  1339→    level: "N3",
+  1340→    theme: "Verbs",
+  1341→    partOfSpeech: "verb",
+  1342→    example: {
+  1343→      jp: "日記[にっき]に書[か]き留[と]める。",
+  1344→      en: "Write down in a diary."
+  1345→    }
+  1346→  },
+  1347→  {
+  1348→    id: "vn3-996",
+  1349→    word: "書き直す",
+  1350→    reading: "かきなおす",
+  1351→    romaji: "kakinaosu",
+  1352→    meaning: "to rewrite",
+  1353→    level: "N3",
+  1354→    theme: "Verbs",
+  1355→    partOfSpeech: "verb",
+  1356→    example: {
+  1357→      jp: "文章[ぶんしょう]を書[か]き直[なお]す。",
+  1358→      en: "Rewrite the text."
+  1359→    }
+  1360→  },
+  1361→  {
+  1362→    id: "vn3-997",
+  1363→    word: "書き抜く",
+  1364→    reading: "かきぬく",
+  1365→    romaji: "kakinuku",
+  1366→    meaning: "to extract (a passage)",
+  1367→    level: "N3",
+  1368→    theme: "Verbs",
+  1369→    partOfSpeech: "verb",
+  1370→    example: {
+  1371→      jp: "句[く]を書[か]き抜[ぬ]く。",
+  1372→      en: "Extract a phrase."
+  1373→    }
+  1374→  },
+  1375→  {
+  1376→    id: "vn3-998",
+  1377→    word: "読み上げる",
+  1378→    reading: "よみあげる",
+  1379→    romaji: "yomiageru",
+  1380→    meaning: "to read aloud",
+  1381→    level: "N3",
+  1382→    theme: "Verbs",
+  1383→    partOfSpeech: "verb",
+  1384→    example: {
+  1385→      jp: "名前[なまえ]を読[よ]み上[あ]げる。",
+  1386→      en: "Read aloud the names."
+  1387→    }
+  1388→  },
+  1389→  {
+  1390→    id: "vn3-999",
+  1391→    word: "読み取る",
+  1392→    reading: "よみとる",
+  1393→    romaji: "yomitoru",
+  1394→    meaning: "to comprehend by reading",
+  1395→    level: "N3",
+  1396→    theme: "Verbs",
+  1397→    partOfSpeech: "verb",
+  1398→    example: {
+  1399→      jp: "意図[いと]を読[よ]み取[と]る。",
+  1400→      en: "Read the intent."
+  1401→    }
+  1402→  },
+  1403→  {
+  1404→    id: "vn3-1000",
+  1405→    word: "読み込む",
+  1406→    reading: "よみこむ",
+  1407→    romaji: "yomikomu",
+  1408→    meaning: "to load (data)",
+  1409→    level: "N3",
+  1410→    theme: "Verbs",
+  1411→    partOfSpeech: "verb",
+  1412→    example: {
+  1413→      jp: "データを読[よ]み込[こ]む。",
+  1414→      en: "Load data."
+  1415→    }
+  1416→  },
+  1417→  // ============================================================
+  1418→  // Adjectives — 25 words (vn3-1001 .. vn3-1025)
+  1419→  // ============================================================
+  1420→  {
+  1421→    id: "vn3-1001",
+  1422→    word: "穏やか",
+  1423→    reading: "おだやか",
+  1424→    romaji: "odayaka",
+  1425→    meaning: "calm, gentle",
+  1426→    level: "N3",
+  1427→    theme: "Adjectives",
+  1428→    partOfSpeech: "na-adjective",
+  1429→    example: {
+  1430→      jp: "海[うみ]が穏[おだ]やかだ。",
+  1431→      en: "The sea is calm."
+  1432→    }
+  1433→  },
+  1434→  {
+  1435→    id: "vn3-1002",
+  1436→    word: "和やか",
+  1437→    reading: "なごやか",
+  1438→    romaji: "nagoyaka",
+  1439→    meaning: "harmonious",
+  1440→    level: "N3",
+  1441→    theme: "Adjectives",
+  1442→    partOfSpeech: "na-adjective",
+  1443→    example: {
+  1444→      jp: "雰囲気[ふんいき]が和[なご]やかだ。",
+  1445→      en: "The atmosphere is harmonious."
+  1446→    }
+  1447→  },
+  1448→  {
+  1449→    id: "vn3-1003",
+  1450→    word: "賑やか",
+  1451→    reading: "にぎやか",
+  1452→    romaji: "nigiyaka",
+  1453→    meaning: "lively",
+  1454→    level: "N3",
+  1455→    theme: "Adjectives",
+  1456→    partOfSpeech: "na-adjective",
+  1457→    example: {
+  1458→      jp: "町[まち]が賑[にぎ]やかだ。",
+  1459→      en: "The town is lively."
+  1460→    }
+  1461→  },
+  1462→  {
+  1463→    id: "vn3-1004",
+  1464→    word: "鮮やか",
+  1465→    reading: "あざやか",
+  1466→    romaji: "azayaka",
+  1467→    meaning: "vivid, bright",
+  1468→    level: "N3",
+  1469→    theme: "Adjectives",
+  1470→    partOfSpeech: "na-adjective",
+  1471→    example: {
+  1472→      jp: "色[いろ]が鮮[あざ]やかだ。",
+  1473→      en: "The color is vivid."
+  1474→    }
+  1475→  },
+  1476→  {
+  1477→    id: "vn3-1005",
+  1478→    word: "滑らか",
+  1479→    reading: "なめらか",
+  1480→    romaji: "nameraka",
+  1481→    meaning: "smooth",
+  1482→    level: "N3",
+  1483→    theme: "Adjectives",
+  1484→    partOfSpeech: "na-adjective",
+  1485→    example: {
+  1486→      jp: "肌[はだ]が滑[なめ]らかだ。",
+  1487→      en: "The skin is smooth."
+  1488→    }
+  1489→  },
+  1490→  {
+  1491→    id: "vn3-1006",
+  1492→    word: "豪華",
+  1493→    reading: "ごうか",
+  1494→    romaji: "gouka",
+  1495→    meaning: "gorgeous",
+  1496→    level: "N3",
+  1497→    theme: "Adjectives",
+  1498→    partOfSpeech: "na-adjective",
+  1499→    example: {
+  1500→      jp: "料理[りょうり]が豪華[ごうか]だ。",
+  1501→      en: "The cuisine is gorgeous."
+  1502→    }
+  1503→  },
+  1504→  {
+  1505→    id: "vn3-1007",
+  1506→    word: "上品",
+  1507→    reading: "じょうひん",
+  1508→    romaji: "jouhin",
+  1509→    meaning: "elegant, refined",
+  1510→    level: "N3",
+  1511→    theme: "Adjectives",
+  1512→    partOfSpeech: "na-adjective",
+  1513→    example: {
+  1514→      jp: "振[ふる]舞[ま]いが上品[じょうひん]だ。",
+  1515→      en: "The behavior is elegant."
+  1516→    }
+  1517→  },
+  1518→  {
+  1519→    id: "vn3-1008",
+  1520→    word: "下品",
+  1521→    reading: "げひん",
+  1522→    romaji: "gehin",
+  1523→    meaning: "vulgar, coarse",
+  1524→    level: "N3",
+  1525→    theme: "Adjectives",
+  1526→    partOfSpeech: "na-adjective",
+  1527→    example: {
+  1528→      jp: "言[い]葉[ことば]が下品[げひん]だ。",
+  1529→      en: "The words are vulgar."
+  1530→    }
+  1531→  },
+  1532→  {
+  1533→    id: "vn3-1009",
+  1534→    word: "大雑把",
+  1535→    reading: "おおざっぱ",
+  1536→    romaji: "oozappa",
+  1537→    meaning: "rough, approximate",
+  1538→    level: "N3",
+  1539→    theme: "Adjectives",
+  1540→    partOfSpeech: "na-adjective",
+  1541→    example: {
+  1542→      jp: "説明[せつめい]が大雑把[おおざっぱ]だ。",
+  1543→      en: "The explanation is rough."
+  1544→    }
+  1545→  },
+  1546→  {
+  1547→    id: "vn3-1010",
+  1548→    word: "大幅",
+  1549→    reading: "おおはば",
+  1550→    romaji: "oohaba",
+  1551→    meaning: "large-scale",
+  1552→    level: "N3",
+  1553→    theme: "Adjectives",
+  1554→    partOfSpeech: "na-adjective",
+  1555→    example: {
+  1556→      jp: "改善[かいぜん]が大幅[おおはば]だ。",
+  1557→      en: "The improvement is large-scale."
+  1558→    }
+  1559→  },
+  1560→  {
+  1561→    id: "vn3-1011",
+  1562→    word: "膨大",
+  1563→    reading: "ぼうだい",
+  1564→    romaji: "boudai",
+  1565→    meaning: "enormous, vast",
+  1566→    level: "N3",
+  1567→    theme: "Adjectives",
+  1568→    partOfSpeech: "na-adjective",
+  1569→    example: {
+  1570→      jp: "量[りょう]が膨大[ぼうだい]だ。",
+  1571→      en: "The amount is enormous."
+  1572→    }
+  1573→  },
+  1574→  {
+  1575→    id: "vn3-1012",
+  1576→    word: "巨大",
+  1577→    reading: "きょだい",
+  1578→    romaji: "kyodai",
+  1579→    meaning: "huge",
+  1580→    level: "N3",
+  1581→    theme: "Adjectives",
+  1582→    partOfSpeech: "na-adjective",
+  1583→    example: {
+  1584→      jp: "建物[たてもの]が巨大[きょだい]だ。",
+  1585→      en: "The building is huge."
+  1586→    }
+  1587→  },
+  1588→  {
+  1589→    id: "vn3-1013",
+  1590→    word: "繊細",
+  1591→    reading: "せんさい",
+  1592→    romaji: "sensai",
+  1593→    meaning: "delicate, sensitive",
+  1594→    level: "N3",
+  1595→    theme: "Adjectives",
+  1596→    partOfSpeech: "na-adjective",
+  1597→    example: {
+  1598→      jp: "神経[しんけい]が繊細[せんさい]だ。",
+  1599→      en: "The nerves are delicate."
+  1600→    }
+  1601→  },
+  1602→  {
+  1603→    id: "vn3-1014",
+  1604→    word: "愚か",
+  1605→    reading: "おろか",
+  1606→    romaji: "oroka",
+  1607→    meaning: "foolish",
+  1608→    level: "N3",
+  1609→    theme: "Adjectives",
+  1610→    partOfSpeech: "na-adjective",
+  1611→    example: {
+  1612→      jp: "行[おこな]いが愚[おろ]かだ。",
+  1613→      en: "The behavior is foolish."
+  1614→    }
+  1615→  },
+  1616→  {
+  1617→    id: "vn3-1015",
+  1618→    word: "無邪気",
+  1619→    reading: "むじゃき",
+  1620→    romaji: "mujaki",
+  1621→    meaning: "innocent, naive",
+  1622→    level: "N3",
+  1623→    theme: "Adjectives",
+  1624→    partOfSpeech: "na-adjective",
+  1625→    example: {
+  1626→      jp: "笑顔[えがお]が無邪気[むじゃき]だ。",
+  1627→      en: "The smile is innocent."
+  1628→    }
+  1629→  },
+  1630→  {
+  1631→    id: "vn3-1016",
+  1632→    word: "残酷",
+  1633→    reading: "ざんこく",
+  1634→    romaji: "zankoku",
+  1635→    meaning: "cruel",
+  1636→    level: "N3",
+  1637→    theme: "Adjectives",
+  1638→    partOfSpeech: "na-adjective",
+  1639→    example: {
+  1640→      jp: "戦争[せんそう]が残酷[ざんこく]だ。",
+  1641→      en: "War is cruel."
+  1642→    }
+  1643→  },
+  1644→  {
+  1645→    id: "vn3-1017",
+  1646→    word: "冷酷",
+  1647→    reading: "れいこく",
+  1648→    romaji: "reikoku",
+  1649→    meaning: "cold-hearted",
+  1650→    level: "N3",
+  1651→    theme: "Adjectives",
+  1652→    partOfSpeech: "na-adjective",
+  1653→    example: {
+  1654→      jp: "彼[かれ]は冷酷[れいこく]だ。",
+  1655→      en: "He is cold-hearted."
+  1656→    }
+  1657→  },
+  1658→  {
+  1659→    id: "vn3-1018",
+  1660→    word: "厳格",
+  1661→    reading: "げんかく",
+  1662→    romaji: "genkaku",
+  1663→    meaning: "strict",
+  1664→    level: "N3",
+  1665→    theme: "Adjectives",
+  1666→    partOfSpeech: "na-adjective",
+  1667→    example: {
+  1668→      jp: "父[ちち]は厳格[げんかく]だ。",
+  1669→      en: "Father is strict."
+  1670→    }
+  1671→  },
+  1672→  {
+  1673→    id: "vn3-1019",
+  1674→    word: "寛大",
+  1675→    reading: "かんだい",
+  1676→    romaji: "kandai",
+  1677→    meaning: "generous",
+  1678→    level: "N3",
+  1679→    theme: "Adjectives",
+  1680→    partOfSpeech: "na-adjective",
+  1681→    example: {
+  1682→      jp: "彼[かれ]は寛大[かんだい]だ。",
+  1683→      en: "He is generous."
+  1684→    }
+  1685→  },
+  1686→  {
+  1687→    id: "vn3-1020",
+  1688→    word: "柔軟",
+  1689→    reading: "じゅうなん",
+  1690→    romaji: "juunan",
+  1691→    meaning: "flexible",
+  1692→    level: "N3",
+  1693→    theme: "Adjectives",
+  1694→    partOfSpeech: "na-adjective",
+  1695→    example: {
+  1696→      jp: "考[かんが]えが柔軟[じゅうなん]だ。",
+  1697→      en: "The thinking is flexible."
+  1698→    }
+  1699→  },
+  1700→  {
+  1701→    id: "vn3-1021",
+  1702→    word: "単調",
+  1703→    reading: "たんちょう",
+  1704→    romaji: "tanchou",
+  1705→    meaning: "monotonous",
+  1706→    level: "N3",
+  1707→    theme: "Adjectives",
+  1708→    partOfSpeech: "na-adjective",
+  1709→    example: {
+  1710→      jp: "声[こえ]が単調[たんちょう]だ。",
+  1711→      en: "The voice is monotonous."
+  1712→    }
+  1713→  },
+  1714→  {
+  1715→    id: "vn3-1022",
+  1716→    word: "粗末",
+  1717→    reading: "そまつ",
+  1718→    romaji: "somatsu",
+  1719→    meaning: "shabby, poor",
+  1720→    level: "N3",
+  1721→    theme: "Adjectives",
+  1722→    partOfSpeech: "na-adjective",
+  1723→    example: {
+  1724→      jp: "部屋[へや]が粗末[そまつ]だ。",
+  1725→      en: "The room is shabby."
+  1726→    }
+  1727→  },
+  1728→  {
+  1729→    id: "vn3-1023",
+  1730→    word: "誠実",
+  1731→    reading: "せいじつ",
+  1732→    romaji: "seijitsu",
+  1733→    meaning: "sincere",
+  1734→    level: "N3",
+  1735→    theme: "Adjectives",
+  1736→    partOfSpeech: "na-adjective",
+  1737→    example: {
+  1738→      jp: "態度[たいど]が誠実[せいじつ]だ。",
+  1739→      en: "The attitude is sincere."
+  1740→    }
+  1741→  },
+  1742→  {
+  1743→    id: "vn3-1024",
+  1744→    word: "望ましい",
+  1745→    reading: "のぞましい",
+  1746→    romaji: "nozomashii",
+  1747→    meaning: "desirable",
+  1748→    level: "N3",
+  1749→    theme: "Adjectives",
+  1750→    partOfSpeech: "i-adjective",
+  1751→    example: {
+  1752→      jp: "結果[けっか]が望[のぞ]ましい。",
+  1753→      en: "The result is desirable."
+  1754→    }
+  1755→  },
+  1756→  {
+  1757→    id: "vn3-1025",
+  1758→    word: "恋しい",
+  1759→    reading: "こいしい",
+  1760→    romaji: "koishii",
+  1761→    meaning: "longed-for, missed",
+  1762→    level: "N3",
+  1763→    theme: "Adjectives",
+  1764→    partOfSpeech: "i-adjective",
+  1765→    example: {
+  1766→      jp: "故郷[こきょう]が恋[こい]しい。",
+  1767→      en: "I miss my hometown."
+  1768→    }
+  1769→  },
+  1770→  // ============================================================
+  1771→  // Adverbs — 15 words (vn3-1026 .. vn3-1040)
+  1772→  // ============================================================
+  1773→  {
+  1774→    id: "vn3-1026",
+  1775→    word: "かつて",
+  1776→    reading: "かつて",
+  1777→    romaji: "katsute",
+  1778→    meaning: "once, formerly",
+  1779→    level: "N3",
+  1780→    theme: "Adverbs",
+  1781→    partOfSpeech: "adverb",
+  1782→    example: {
+  1783→      jp: "かつてここに住[す]んでいた。",
+  1784→      en: "I once lived here."
+  1785→    }
+  1786→  },
+  1787→  {
+  1788→    id: "vn3-1027",
+  1789→    word: "かえって",
+  1790→    reading: "かえって",
+  1791→    romaji: "kaette",
+  1792→    meaning: "rather, on the contrary",
+  1793→    level: "N3",
+  1794→    theme: "Adverbs",
+  1795→    partOfSpeech: "adverb",
+  1796→    example: {
+  1797→      jp: "かえって悪[わる]くなる。",
+  1798→      en: "It rather gets worse."
+  1799→    }
+  1800→  },
+  1801→  {
+  1802→    id: "vn3-1028",
+  1803→    word: "極めて",
+  1804→    reading: "きわめて",
+  1805→    romaji: "kiwamete",
+  1806→    meaning: "extremely",
+  1807→    level: "N3",
+  1808→    theme: "Adverbs",
+  1809→    partOfSpeech: "adverb",
+  1810→    example: {
+  1811→      jp: "極[きわ]めて大[おお]きい。",
+  1812→      en: "Extremely big."
+  1813→    }
+  1814→  },
+  1815→  {
+  1816→    id: "vn3-1029",
+  1817→    word: "くれぐれも",
+  1818→    reading: "くれぐれも",
+  1819→    romaji: "kureguremo",
+  1820→    meaning: "earnestly, repeatedly",
+  1821→    level: "N3",
+  1822→    theme: "Adverbs",
+  1823→    partOfSpeech: "adverb",
+  1824→    example: {
+  1825→      jp: "くれぐれも宜[よろ]しく。",
+  1826→      en: "Please take care."
+  1827→    }
+  1828→  },
+  1829→  {
+  1830→    id: "vn3-1030",
+  1831→    word: "先ほど",
+  1832→    reading: "さきほど",
+  1833→    romaji: "sakihodo",
+  1834→    meaning: "a while ago",
+  1835→    level: "N3",
+  1836→    theme: "Adverbs",
+  1837→    partOfSpeech: "adverb",
+  1838→    example: {
+  1839→      jp: "先[さき]ほど来[き]た客[きゃく]。",
+  1840→      en: "A guest who came a while ago."
+  1841→    }
+  1842→  },
+  1843→  {
+  1844→    id: "vn3-1031",
+  1845→    word: "さしあたり",
+  1846→    reading: "さしあたり",
+  1847→    romaji: "sashiatari",
+  1848→    meaning: "for the present",
+  1849→    level: "N3",
+  1850→    theme: "Adverbs",
+  1851→    partOfSpeech: "adverb",
+  1852→    example: {
+  1853→      jp: "さしあたり困[こま]らない。",
+  1854→      en: "I have no trouble for now."
+  1855→    }
+  1856→  },
+  1857→  {
+  1858→    id: "vn3-1032",
+  1859→    word: "しばしば",
+  1860→    reading: "しばしば",
+  1861→    romaji: "shibashiba",
+  1862→    meaning: "often, repeatedly",
+  1863→    level: "N3",
+  1864→    theme: "Adverbs",
+  1865→    partOfSpeech: "adverb",
+  1866→    example: {
+  1867→      jp: "しばしば起[お]こる。",
+  1868→      en: "It happens often."
+  1869→    }
+  1870→  },
+  1871→  {
+  1872→    id: "vn3-1033",
+  1873→    word: "じきに",
+  1874→    reading: "じきに",
+  1875→    romaji: "jikini",
+  1876→    meaning: "soon, before long",
+  1877→    level: "N3",
+  1878→    theme: "Adverbs",
+  1879→    partOfSpeech: "adverb",
+  1880→    example: {
+  1881→      jp: "じきに春[はる]が来[く]る。",
+  1882→      en: "Spring will come soon."
+  1883→    }
+  1884→  },
+  1885→  {
+  1886→    id: "vn3-1034",
+  1887→    word: "じわじわ",
+  1888→    reading: "じわじわ",
+  1889→    romaji: "jiwajiwa",
+  1890→    meaning: "gradually, slowly",
+  1891→    level: "N3",
+  1892→    theme: "Adverbs",
+  1893→    partOfSpeech: "adverb",
+  1894→    example: {
+  1895→      jp: "じわじわと進[すす]む。",
+  1896→      en: "Progress gradually."
+  1897→    }
+  1898→  },
+  1899→  {
+  1900→    id: "vn3-1035",
+  1901→    word: "直ちに",
+  1902→    reading: "ただちに",
+  1903→    romaji: "tadachini",
+  1904→    meaning: "immediately",
+  1905→    level: "N3",
+  1906→    theme: "Adverbs",
+  1907→    partOfSpeech: "adverb",
+  1908→    example: {
+  1909→      jp: "直[ただ]ちに実行[じっこう]する。",
+  1910→      en: "Execute immediately."
+  1911→    }
+  1912→  },
+  1913→  {
+  1914→    id: "vn3-1036",
+  1915→    word: "たちまち",
+  1916→    reading: "たちまち",
+  1917→    romaji: "tachimachi",
+  1918→    meaning: "in an instant",
+  1919→    level: "N3",
+  1920→    theme: "Adverbs",
+  1921→    partOfSpeech: "adverb",
+  1922→    example: {
+  1923→      jp: "たちまち集[あつ]まる。",
+  1924→      en: "Gather in an instant."
+  1925→    }
+  1926→  },
+  1927→  {
+  1928→    id: "vn3-1037",
+  1929→    word: "たびたび",
+  1930→    reading: "たびたび",
+  1931→    romaji: "tabitabi",
+  1932→    meaning: "repeatedly, often",
+  1933→    level: "N3",
+  1934→    theme: "Adverbs",
+  1935→    partOfSpeech: "adverb",
+  1936→    example: {
+  1937→      jp: "たびたび訪[おとず]れる。",
+  1938→      en: "Visit repeatedly."
+  1939→    }
+  1940→  },
+  1941→  {
+  1942→    id: "vn3-1038",
+  1943→    word: "近頃",
+  1944→    reading: "ちかごろ",
+  1945→    romaji: "chikagoro",
+  1946→    meaning: "recently",
+  1947→    level: "N3",
+  1948→    theme: "Adverbs",
+  1949→    partOfSpeech: "adverb",
+  1950→    example: {
+  1951→      jp: "近頃[ちかごろ]寒[さむ]い。",
+  1952→      en: "It is cold lately."
+  1953→    }
+  1954→  },
+  1955→  {
+  1956→    id: "vn3-1039",
+  1957→    word: "とっくに",
+  1958→    reading: "とっくに",
+  1959→    romaji: "tokkuni",
+  1960→    meaning: "long ago",
+  1961→    level: "N3",
+  1962→    theme: "Adverbs",
+  1963→    partOfSpeech: "adverb",
+  1964→    example: {
+  1965→      jp: "とっくに終[お]わった。",
+  1966→      en: "It finished long ago."
+  1967→    }
+  1968→  },
+  1969→  {
+  1970→    id: "vn3-1040",
+  1971→    word: "なんとか",
+  1972→    reading: "なんとか",
+  1973→    romaji: "nantoka",
+  1974→    meaning: "somehow, one way or another",
+  1975→    level: "N3",
+  1976→    theme: "Adverbs",
+  1977→    partOfSpeech: "adverb",
+  1978→    example: {
+  1979→      jp: "なんとか成[な]り立[た]つ。",
+  1980→      en: "It somehow works."
+  1981→    }
+  1982→  },
+  1983→  // ============================================================
+  1984→  // Particles — 5 words (vn3-1041 .. vn3-1045)
+  1985→  // ============================================================
+  1986→  {
+  1987→    id: "vn3-1041",
+  1988→    word: "すら",
+  1989→    reading: "すら",
+  1990→    romaji: "sura",
+  1991→    meaning: "even (more formal than さえ)",
+  1992→    level: "N3",
+  1993→    theme: "Particles",
+  1994→    partOfSpeech: "particle",
+  1995→    example: {
+  1996→      jp: "子[こ]供[ども]ですら知[し]っている。",
+  1997→      en: "Even a child knows."
+  1998→    }
+  1999→  },
+  2000→  {
+
+[showing lines 1-2000 of 2556; use offset=2001 with limit to continue reading]
