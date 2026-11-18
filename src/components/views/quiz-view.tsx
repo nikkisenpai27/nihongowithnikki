@@ -317,6 +317,9 @@ export function QuizView() {
               >
                 <ToggleGroupItem value="N5">N5</ToggleGroupItem>
                 <ToggleGroupItem value="N4">N4</ToggleGroupItem>
+                <ToggleGroupItem value="N3">N3</ToggleGroupItem>
+                <ToggleGroupItem value="N2">N2</ToggleGroupItem>
+                <ToggleGroupItem value="N1">N1</ToggleGroupItem>
               </ToggleGroup>
             </div>
             <div>
