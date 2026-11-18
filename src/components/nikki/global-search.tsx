@@ -21,6 +21,7 @@ interface Props {
   onSelectGrammar: (id: string) => void;
   onSelectStory: (id: string) => void;
   onSelectReading: (id: string) => void;
+  onSelectListening?: (id: string) => void;
   onClear: () => void;
 }
 

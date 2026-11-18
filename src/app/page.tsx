@@ -1,9 +1,71 @@
 "use client";
 
-import { useEffect } from "react";
+import { useState, useEffect, useSyncExternalStore } from "react";
 import { AppShell } from "@/components/nikki/app-shell";
-import { useNav, type ViewKey } from "@/lib/stores/nav-store";
-import { useSettings } from "@/lib/stores/settings-store";
+import { AuthPage } from "@/components/views/auth-page";
+import { LogOut } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useNav } from "@/lib/stores/nav-store";
+
+// Read user from localStorage without hydration mismatch (useSyncExternalStore)
+const emptyUser = null as { id: string; email: string; name: string } | null;
+function subscribeUser(cb: () => void) {
+  window.addEventListener("storage", cb);
+  return () => window.removeEventListener("storage", cb);
+}
+function getUserSnapshot() {
+  try {
+    const stored = localStorage.getItem("nikki-user");
+    if (stored) {
+      const u = JSON.parse(stored);
+      if (u && u.id) return u;
+    }
+  } catch { /* ignore */ }
+  return emptyUser;
+}
+function getUserServerSnapshot() { return emptyUser; }
+
+export default function Home() {
+  const storedUser = useSyncExternalStore(subscribeUser, getUserSnapshot, getUserServerSnapshot);
+  const [overrideUser, setOverrideUser] = useState<typeof storedUser>(null);
+  const user = overrideUser ?? storedUser;
+  const authed = !!user;
+
+  function handleAuth(u: { id: string; email: string; name: string }) {
+    setOverrideUser(u);
+  }
+
+  function handleLogout() {
+    fetch("/api/auth/logout", { method: "POST" }).catch(() => {});
+    localStorage.removeItem("nikki-user");
+    setOverrideUser(null);
+  }
+
+  if (!authed || !user) {
+    return <AuthPage onAuth={handleAuth} />;
+  }
+
+  return <AuthedApp user={user} onLogout={handleLogout} />;
+}
+
+function AuthedApp({
+  user,
+  onLogout,
+}: {
+  user: { id: string; email: string; name: string };
+  onLogout: () => void;
+}) {
+  return (
+    <AuthProvider user={user}>
+      <AppShell>
+        <RouterView />
+      </AppShell>
+      {/* Floating logout button */}
+      <FloatingLogout user={user} onLogout={onLogout} />
+    </AuthProvider>
+  );
+}
+
 import { DashboardView } from "@/components/views/dashboard-view";
 import { KanjiView } from "@/components/views/kanji-view";
 import { KanaView } from "@/components/views/kana-view";
@@ -16,8 +78,23 @@ import { QuizView } from "@/components/views/quiz-view";
 import { DriveView } from "@/components/views/drive-view";
 import { SettingsView } from "@/components/views/settings-view";
 import { GlobalSearchResults } from "@/components/nikki/global-search";
+import { useSettings } from "@/lib/stores/settings-store";
+import { createContext, useContext, ReactNode } from "react";
 
-const VIEWS: Record<ViewKey, () => React.ReactNode> = {
+interface UserCtx {
+  id: string;
+  email: string;
+  name: string;
+}
+const UserContext = createContext<UserCtx | null>(null);
+export function useCurrentUser() {
+  return useContext(UserContext);
+}
+function AuthProvider({ user, children }: { user: UserCtx; children: ReactNode }) {
+  return <UserContext.Provider value={user}>{children}</UserContext.Provider>;
+}
+
+const VIEWS: Record<string, () => React.ReactNode> = {
   dashboard: () => <DashboardView />,
   kanji: () => <KanjiView />,
   kana: () => <KanaView />,
@@ -31,60 +108,41 @@ const VIEWS: Record<ViewKey, () => React.ReactNode> = {
   settings: () => <SettingsView />,
 };
 
-const KEY_TO_VIEW: Record<string, ViewKey> = {
-  "1": "dashboard",
-  "2": "kanji",
-  "3": "vocab",
-  "4": "grammar",
-  "5": "reading",
-  "6": "stories",
-  "7": "quiz",
-  "8": "settings",
+const KEY_TO_VIEW: Record<string, string> = {
+  "1": "dashboard", "2": "kanji", "3": "kana", "4": "vocab", "5": "grammar",
+  "6": "reading", "7": "listening", "8": "stories", "9": "quiz", "0": "settings",
 };
 
-export default function Home() {
+function RouterView() {
   const view = useNav((s) => s.view);
-  const setView = useNav((s) => s.setView);
   const search = useNav((s) => s.search);
+  const setView = useNav((s) => s.setView);
   const setSearch = useNav((s) => s.setSearch);
   const toggleFurigana = useSettings((s) => s.toggle);
   const openKanji = useNav((s) => s.openKanji);
   const openGrammar = useNav((s) => s.openGrammar);
   const openStory = useNav((s) => s.openStory);
   const openReading = useNav((s) => s.openReading);
+  const openListening = useNav((s) => s.openListening);
 
-  // Keyboard shortcuts (power users)
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       const t = e.target as HTMLElement;
       if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable)) return;
       if (e.metaKey || e.ctrlKey || e.altKey) return;
-      if (KEY_TO_VIEW[e.key]) {
-        setView(KEY_TO_VIEW[e.key]);
-        return;
-      }
-      if (e.key.toLowerCase() === "f") {
-        e.preventDefault();
-        toggleFurigana("showFurigana");
-      }
-      if (e.key === "/") {
-        e.preventDefault();
-        const input = document.querySelector<HTMLInputElement>('input[aria-label="Global search"]');
-        input?.focus();
-      }
-      if (e.key === "Escape") {
-        setSearch("");
-      }
+      if (KEY_TO_VIEW[e.key]) { setView(KEY_TO_VIEW[e.key]); return; }
+      if (e.key.toLowerCase() === "f") { e.preventDefault(); toggleFurigana("showFurigana"); }
+      if (e.key === "/") { e.preventDefault(); document.querySelector<HTMLInputElement>('input[aria-label="Global search"]')?.focus(); }
+      if (e.key === "Escape") setSearch("");
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [setView, toggleFurigana, setSearch]);
 
-  // When global search has text, show search results overlay regardless of view
   const showingSearch = search.trim().length > 0;
 
   return (
-    <AppShell>
+    <>
       {showingSearch ? (
         <GlobalSearchResults
           query={search}
@@ -93,19 +151,31 @@ export default function Home() {
           onSelectGrammar={(id) => { setSearch(""); setView("grammar"); openGrammar(id); }}
           onSelectStory={(id) => { setSearch(""); setView("stories"); openStory(id); }}
           onSelectReading={(id) => { setSearch(""); setView("reading"); openReading(id); }}
+          onSelectListening={(id) => { setSearch(""); setView("listening"); openListening(id); }}
           onClear={() => setSearch("")}
         />
       ) : (
-        VIEWS[view]()
+        VIEWS[view]?.() ?? <DashboardView />
       )}
+    </>
+  );
+}
 
-      {/* Keyboard hint footer (desktop) */}
-      <div className="mt-8 hidden text-center text-[10px] text-muted-foreground lg:block">
-        Keyboard: <kbd className="rounded bg-muted px-1">1–8</kbd> switch views ・{" "}
-        <kbd className="rounded bg-muted px-1">/</kbd> search ・{" "}
-        <kbd className="rounded bg-muted px-1">F</kbd> toggle furigana ・{" "}
-        <kbd className="rounded bg-muted px-1">Esc</kbd> clear search
-      </div>
-    </AppShell>
+function FloatingLogout({
+  user,
+  onLogout,
+}: {
+  user: { id: string; email: string; name: string };
+  onLogout: () => void;
+}) {
+  return (
+    <div className="fixed bottom-4 right-4 z-50 flex items-center gap-2 rounded-full border border-border bg-card/90 px-3 py-1.5 shadow-lg backdrop-blur">
+      <span className="text-xs font-medium text-foreground">
+        {user.name || user.email || "Guest"}
+      </span>
+      <Button size="sm" variant="ghost" className="h-7 px-2 text-xs" onClick={onLogout}>
+        <LogOut className="mr-1 h-3 w-3" /> Logout
+      </Button>
+    </div>
   );
 }

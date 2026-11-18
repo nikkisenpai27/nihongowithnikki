@@ -1,0 +1,334 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+import {
+  Mail,
+  Lock,
+  User as UserIcon,
+  Eye,
+  EyeOff,
+  ArrowRight,
+  Sparkles,
+  Loader2,
+  CheckCircle2,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { NikkiAvatar } from "../nikki/nikki-avatar";
+import { cn } from "@/lib/utils";
+
+interface AuthPageProps {
+  onAuth: (user: { id: string; email: string; name: string }) => void;
+}
+
+export function AuthPage({ onAuth }: AuthPageProps) {
+  const [mode, setMode] = useState<"login" | "signup">("signup");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [mounted, setMounted] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Trigger entrance animation
+    const t = setTimeout(() => setMounted(true), 100);
+    return () => clearTimeout(t);
+  }, []);
+
+  // 3D tilt effect on mouse move
+  function handleMouseMove(e: React.MouseEvent) {
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -8;
+    const rotateY = ((x - centerX) / centerX) * 8;
+    cardRef.current.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+  }
+
+  function handleMouseLeave() {
+    if (!cardRef.current) return;
+    cardRef.current.style.transform = "perspective(1200px) rotateX(0deg) rotateY(0deg) scale(1)";
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+    try {
+      const endpoint = mode === "signup" ? "/api/auth/signup" : "/api/auth/login";
+      const body =
+        mode === "signup"
+          ? { email, password, name }
+          : { email, password };
+      const res = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Authentication failed");
+      // Store token in localStorage
+      localStorage.setItem("nikki-user", JSON.stringify(data.user));
+      onAuth(data.user);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong");
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  function handleGoogleLogin() {
+    // In production, this would redirect to Google OAuth.
+    // For now, we simulate a Google login via the API.
+    setLoading(true);
+    setError("");
+    fetch("/api/auth/google", { method: "POST" })
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.error) throw new Error(data.error);
+        localStorage.setItem("nikki-user", JSON.stringify(data.user));
+        onAuth(data.user);
+      })
+      .catch((err) => setError(err.message || "Google login failed"))
+      .finally(() => setLoading(false));
+  }
+
+  return (
+    <div className="relative min-h-screen w-full overflow-hidden">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: "url(/japan-city-bg.jpeg)",
+          filter: "brightness(0.4)",
+        }}
+        aria-hidden
+      />
+      {/* Gradient overlay */}
+      <div
+        className="absolute inset-0 bg-gradient-to-br from-primary/30 via-background/50 to-indigo-deep/30"
+        aria-hidden
+      />
+
+      {/* Floating particles */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden>
+        {[...Array(12)].map((_, i) => (
+          <span
+            key={i}
+            className="absolute rounded-full bg-primary/20"
+            style={{
+              width: `${4 + Math.random() * 8}px`,
+              height: `${4 + Math.random() * 8}px`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animation: `float-soft ${4 + Math.random() * 4}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 2}s`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Content */}
+      <div className="relative flex min-h-screen items-center justify-center p-4">
+        <div
+          ref={cardRef}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          className={cn(
+            "w-full max-w-md rounded-3xl border border-white/20 bg-card/80 p-8 shadow-2xl backdrop-blur-xl transition-all duration-500",
+            mounted ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          )}
+          style={{
+            transformStyle: "preserve-3d",
+            transition: "transform 0.15s ease-out, opacity 0.5s ease, translate 0.5s ease",
+          }}
+        >
+          {/* Logo + heading */}
+          <div className="mb-6 flex flex-col items-center gap-3" style={{ transform: "translateZ(40px)" }}>
+            <NikkiAvatar size={72} withHalo />
+            <div className="text-center">
+              <h1
+                className="text-2xl font-bold text-foreground"
+                style={{ fontFamily: "var(--font-rounded), var(--font-sans)" }}
+              >
+                Nihongo with Nikki
+              </h1>
+              <p className="jp mt-0.5 text-sm text-muted-foreground">
+                {mode === "signup" ? "アカウントを作成" : "ログイン"}
+              </p>
+            </div>
+          </div>
+
+          {/* Mode toggle */}
+          <div className="mb-6 flex rounded-xl bg-muted/50 p-1" style={{ transform: "translateZ(30px)" }}>
+            <button
+              onClick={() => setMode("signup")}
+              className={cn(
+                "flex-1 rounded-lg py-2 text-sm font-semibold transition-all",
+                mode === "signup" ? "bg-primary text-primary-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              Sign Up
+            </button>
+            <button
+              onClick={() => setMode("login")}
+              className={cn(
+                "flex-1 rounded-lg py-2 text-sm font-semibold transition-all",
+                mode === "login" ? "bg-primary text-primary-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              Login
+            </button>
+          </div>
+
+          {/* Google sign-in button */}
+          <button
+            onClick={handleGoogleLogin}
+            disabled={loading}
+            className="mb-4 flex w-full items-center justify-center gap-3 rounded-xl border-2 border-border bg-card px-4 py-3 text-sm font-semibold text-foreground transition-all hover:bg-accent/40 disabled:opacity-50"
+            style={{ transform: "translateZ(20px)" }}
+          >
+            <GoogleIcon className="h-5 w-5" />
+            {mode === "signup" ? "Sign up with Google" : "Login with Google"}
+          </button>
+
+          {/* Divider */}
+          <div className="mb-4 flex items-center gap-3">
+            <div className="h-px flex-1 bg-border" />
+            <span className="text-xs text-muted-foreground">or</span>
+            <div className="h-px flex-1 bg-border" />
+          </div>
+
+          {/* Form */}
+          <form onSubmit={handleSubmit} className="space-y-4" style={{ transform: "translateZ(20px)" }}>
+            {mode === "signup" && (
+              <div className="space-y-2">
+                <Label htmlFor="name" className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  Name
+                </Label>
+                <div className="relative">
+                  <UserIcon className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                  <Input
+                    id="name"
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Your name"
+                    required
+                    className="pl-9"
+                  />
+                </div>
+              </div>
+            )}
+            <div className="space-y-2">
+              <Label htmlFor="email" className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Email
+              </Label>
+              <div className="relative">
+                <Mail className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                <Input
+                  id="email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="you@example.com"
+                  required
+                  className="pl-9"
+                />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="password" className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Password
+              </Label>
+              <div className="relative">
+                <Lock className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                <Input
+                  id="password"
+                  type={showPassword ? "text" : "password"}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="••••••••"
+                  required
+                  minLength={6}
+                  className="pl-9 pr-9"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword((s) => !s)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                >
+                  {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                </button>
+              </div>
+            </div>
+
+            {error && (
+              <p className="rounded-lg bg-destructive/10 px-3 py-2 text-xs font-medium text-destructive">
+                {error}
+              </p>
+            )}
+
+            <Button type="submit" disabled={loading} className="w-full gap-2" size="lg">
+              {loading ? (
+                <>
+                  <Loader2 className="h-4 w-4 animate-spin" /> Please wait…
+                </>
+              ) : (
+                <>
+                  {mode === "signup" ? "Create Account" : "Login"}
+                  <ArrowRight className="h-4 w-4" />
+                </>
+              )}
+            </Button>
+          </form>
+
+          {/* Feature highlights */}
+          <div className="mt-6 space-y-2" style={{ transform: "translateZ(15px)" }}>
+            {[
+              "Free access to all JLPT N5–N1 resources",
+              "Track your progress across kanji, vocab & grammar",
+              "Sync your streaks, XP, and study history",
+            ].map((feat, i) => (
+              <div key={i} className="flex items-center gap-2 text-xs text-muted-foreground">
+                <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-matcha" />
+                {feat}
+              </div>
+            ))}
+          </div>
+
+          {/* Guest link */}
+          <button
+            onClick={() => onAuth({ id: "guest", email: "", name: "Guest" })}
+            className="mt-4 w-full text-center text-xs text-muted-foreground underline-offset-2 hover:text-primary hover:underline"
+          >
+            Continue as guest →
+          </button>
+        </div>
+      </div>
+
+      {/* Bottom text */}
+      <div className="absolute bottom-4 left-0 right-0 text-center text-xs text-white/50">
+        <p className="jp">日本語を一緒に学ぼう ・ Nihongo with Nikki</p>
+      </div>
+    </div>
+  );
+}
+
+function GoogleIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden>
+      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+    </svg>
+  );
+}
