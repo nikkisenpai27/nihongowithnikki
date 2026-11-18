@@ -15,6 +15,7 @@ import {
   Sparkles,
   Quote,
   Instagram,
+  Github,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -217,6 +218,14 @@ export function DashboardView() {
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#feda75] via-[#fa7e1e] to-[#d62976] px-4 py-2 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
           >
             <Instagram className="h-4 w-4" /> Instagram
+          </a>
+          <a
+            href="https://github.com/nikkisenpai27"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[#24292f] px-4 py-2 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+          >
+            <Github className="h-4 w-4" /> GitHub
           </a>
         </div>
       </Card>

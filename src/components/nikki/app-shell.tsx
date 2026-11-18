@@ -16,6 +16,7 @@ import {
   Menu,
   Heart,
   Instagram,
+  Github,
 } from "lucide-react";
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
@@ -275,6 +276,15 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               className="inline-flex h-7 w-7 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-primary"
             >
               <Instagram className="h-4 w-4" />
+            </a>
+            <a
+              href="https://github.com/nikkisenpai27"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="inline-flex h-7 w-7 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-primary"
+            >
+              <Github className="h-4 w-4" />
             </a>
           </div>
         </div>
