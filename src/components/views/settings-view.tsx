@@ -411,7 +411,7 @@ export function SettingsView() {
               <Heart className="h-4 w-4 fill-primary text-primary" /> About Nikki
             </h3>
             <p className="mt-1 text-sm text-muted-foreground">
-              Nihongo with Nikki is a warm, friendly Japanese learning platform focused on JLPT N5 & N4.
+              Nihongo with Nikki is a warm, friendly Japanese learning platform focused on JLPT N5 to N1.
               Nikki believes learning should feel kind, visual, and a little playful. いっしょにがんばろう！
             </p>
             <div className="mt-3 flex flex-wrap gap-1.5">

@@ -28,7 +28,7 @@ const hina = Hina_Mincho({ variable: "--font-hina", subsets: ["latin"], weight: 
 const dot = DotGothic16({ variable: "--font-dot", subsets: ["latin"], weight: ["400"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Nihongo with Nikki — Learn JLPT N5 & N4 with Nikki",
+  title: "Nihongo with Nikki — Learn JLPT N5 to N1 with Nikki",
   description:
     "A warm, friendly Japanese learning platform for JLPT N5 and N4. Study kanji, vocabulary, grammar, reading, and stories with Nikki, your personal tutor.",
   keywords: [
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Nihongo with Nikki",
-    description: "Learn JLPT N5 & N4 Japanese with Nikki — your friendly tutor.",
+    description: "Learn JLPT N5 to N1 Japanese with Nikki — your friendly tutor.",
     type: "website",
   },
   manifest: "/manifest.webmanifest",

@@ -43,7 +43,7 @@ const NAV: NavItem[] = [
   { view: "dashboard", label: "Home", jp: "ホーム", icon: Home, desc: "Your daily dashboard" },
   { view: "kanji", label: "Kanji", jp: "漢字", icon: Languages, desc: "Heatmap & mastery" },
   { view: "kana", label: "Kana", jp: "仮名", icon: Type, desc: "Hiragana & Katakana" },
-  { view: "vocab", label: "Vocabulary", jp: "単語", icon: BookOpen, desc: "N5 & N4 words" },
+  { view: "vocab", label: "Vocabulary", jp: "単語", icon: BookOpen, desc: "N5 to N1 words" },
   { view: "grammar", label: "Grammar", jp: "文法", icon: SpellCheck, desc: "Grammar points" },
   { view: "reading", label: "Reading", jp: "読解", icon: FileText, desc: "Passages & questions" },
   { view: "listening", label: "Listening", jp: "聴解", icon: Headphones, desc: "Audio & questions" },
@@ -69,7 +69,7 @@ function BrandHeader({ compact = false }: { compact?: boolean }) {
           Nihongo with Nikki
         </div>
         <div className="text-[11px] text-muted-foreground jp">
-          日本語 with Nikki ・ JLPT N5 & N4
+          日本語 with Nikki ・ JLPT N5 to N1
         </div>
       </div>
     </div>
@@ -258,7 +258,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <span className="jp">日本語 with Nikki ・ やさしい日本語を一緒に学ぼう</span>
           <div className="flex items-center gap-3">
             <span>
-              JLPT N5 & N4 ・ <span className="text-primary font-semibold">Nikki</span> is your friendly tutor
+              JLPT N5 to N1 ・ <span className="text-primary font-semibold">Nikki</span> is your friendly tutor
             </span>
             <a
               href="https://discord.gg/S8ghkzPErv"
