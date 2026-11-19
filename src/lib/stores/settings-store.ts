@@ -41,7 +41,15 @@ export type BackgroundPreset =
   | "upload-5-reze-bw"
   | "upload-6-onepiece-hd"
   | "upload-7"
-  | "upload-8";
+  | "upload-8"
+  | "upload-9"
+  | "upload-10"
+  | "upload-11"
+  | "upload-12"
+  | "upload-13"
+  | "upload-14"
+  | "upload-15"
+  | "upload-16-fate";
 
 export const JP_FONT_STACKS: Record<JpFont, string> = {
   notojp: "var(--font-notojp)",
@@ -95,6 +103,14 @@ export const BACKGROUND_PRESETS: {
   { id: "upload-6-onepiece-hd", label: "One Piece HD", jp: "HD", url: "/wallpapers/uploaded-6-onepiece-hd.jpeg" },
   { id: "upload-7", label: "Custom Wallpaper 7", jp: "壁紙7", url: "/wallpapers/uploaded-7.jpeg" },
   { id: "upload-8", label: "Custom Wallpaper 8", jp: "壁紙8", url: "/wallpapers/uploaded-8.jpeg" },
+  { id: "upload-9", label: "Custom Wallpaper 9", jp: "壁紙9", url: "/wallpapers/uploaded-9.jpeg" },
+  { id: "upload-10", label: "Custom Wallpaper 10", jp: "壁紙10", url: "/wallpapers/uploaded-10.jpeg" },
+  { id: "upload-11", label: "Custom Wallpaper 11", jp: "壁紙11", url: "/wallpapers/uploaded-11.jpeg" },
+  { id: "upload-12", label: "Custom Wallpaper 12", jp: "壁紙12", url: "/wallpapers/uploaded-12.jpeg" },
+  { id: "upload-13", label: "Custom Wallpaper 13", jp: "壁紙13", url: "/wallpapers/uploaded-13.jpeg" },
+  { id: "upload-14", label: "Custom Wallpaper 14", jp: "壁紙14", url: "/wallpapers/uploaded-14.jpeg" },
+  { id: "upload-15", label: "Custom Wallpaper 15", jp: "壁紙15", url: "/wallpapers/uploaded-15.jpeg" },
+  { id: "upload-16-fate", label: "Fate Anime", jp: "運命", url: "/wallpapers/uploaded-16-fate.jpeg" },
 ];
 
 interface SettingsState {
