@@ -20,7 +20,8 @@ import {
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { useNav, type ViewKey } from "@/lib/stores/nav-store";
+import { useNav } from "@/lib/stores/nav-store";
+import type { ViewKey } from "@/lib/types";
 import { useProgress, masteryCount } from "@/lib/stores/progress-store";
 import { useSettings } from "@/lib/stores/settings-store";
 import { kanjiData } from "@/lib/data/kanji";

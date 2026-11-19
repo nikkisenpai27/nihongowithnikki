@@ -6,6 +6,7 @@ import { AuthPage } from "@/components/views/auth-page";
 import { LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNav } from "@/lib/stores/nav-store";
+import type { ViewKey } from "@/lib/types";
 import {
   DashboardView, KanjiView, KanaView, VocabView, GrammarView,
   ReadingView, ListeningView, StoriesView, QuizView, DriveView, AccountView, SettingsView,
@@ -94,7 +95,7 @@ function RouterView() {
       const t = e.target as HTMLElement;
       if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable)) return;
       if (e.metaKey || e.ctrlKey || e.altKey) return;
-      if (KEY_TO_VIEW[e.key]) { setView(KEY_TO_VIEW[e.key]); return; }
+      if (KEY_TO_VIEW[e.key]) { setView(KEY_TO_VIEW[e.key] as ViewKey); return; }
       if (e.key.toLowerCase() === "f") { e.preventDefault(); toggleFurigana("showFurigana"); }
       if (e.key === "/") { e.preventDefault(); document.querySelector<HTMLInputElement>('input[aria-label="Global search"]')?.focus(); }
       if (e.key === "Escape") setSearch("");

@@ -24,7 +24,8 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import { useNav, type ViewKey } from "@/lib/stores/nav-store";
+import { useNav } from "@/lib/stores/nav-store";
+import type { ViewKey } from "@/lib/types";
 import { ThemeSwitcher } from "./theme-switcher";
 import { NikkiAvatar } from "./nikki-avatar";
 import { useProgress } from "@/lib/stores/progress-store";
