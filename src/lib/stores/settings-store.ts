@@ -49,7 +49,9 @@ export type BackgroundPreset =
   | "upload-13"
   | "upload-14"
   | "upload-15"
-  | "upload-16-fate";
+  | "upload-16-fate"
+  | "upload-17-fox-girl"
+  | "upload-18-anime-girl";
 
 export const JP_FONT_STACKS: Record<JpFont, string> = {
   notojp: "var(--font-notojp)",
@@ -111,6 +113,8 @@ export const BACKGROUND_PRESETS: {
   { id: "upload-14", label: "Custom Wallpaper 14", jp: "壁紙14", url: "/wallpapers/uploaded-14.jpeg" },
   { id: "upload-15", label: "Custom Wallpaper 15", jp: "壁紙15", url: "/wallpapers/uploaded-15.jpeg" },
   { id: "upload-16-fate", label: "Fate Anime", jp: "運命", url: "/wallpapers/uploaded-16-fate.jpeg" },
+  { id: "upload-17-fox-girl", label: "Fox Girl", jp: "狐娘", url: "/wallpapers/uploaded-17-fox-girl.jpg" },
+  { id: "upload-18-anime-girl", label: "Anime Girl", jp: "美少女", url: "/wallpapers/uploaded-18-anime-girl.jpg" },
 ];
 
 interface SettingsState {
