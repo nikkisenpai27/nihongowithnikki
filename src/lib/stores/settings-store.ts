@@ -51,7 +51,13 @@ export type BackgroundPreset =
   | "upload-15"
   | "upload-16-fate"
   | "upload-17-fox-girl"
-  | "upload-18-anime-girl";
+  | "upload-18-anime-girl"
+  | "upload-19-cat-girl"
+  | "upload-20-fox-vtuber"
+  | "upload-21-anime-girl-4k"
+  | "upload-22-in-bed"
+  | "upload-23-night-room"
+  | "upload-24-summer-room";
 
 export const JP_FONT_STACKS: Record<JpFont, string> = {
   notojp: "var(--font-notojp)",
@@ -115,6 +121,12 @@ export const BACKGROUND_PRESETS: {
   { id: "upload-16-fate", label: "Fate Anime", jp: "運命", url: "/wallpapers/uploaded-16-fate.jpeg" },
   { id: "upload-17-fox-girl", label: "Fox Girl", jp: "狐娘", url: "/wallpapers/uploaded-17-fox-girl.jpg" },
   { id: "upload-18-anime-girl", label: "Anime Girl", jp: "美少女", url: "/wallpapers/uploaded-18-anime-girl.jpg" },
+  { id: "upload-19-cat-girl", label: "Cat Girl", jp: "猫娘", url: "/wallpapers/uploaded-19-cat-girl.jpg" },
+  { id: "upload-20-fox-vtuber", label: "Fox VTuber", jp: "狐配信者", url: "/wallpapers/uploaded-20-fox-vtuber.jpg" },
+  { id: "upload-21-anime-girl-4k", label: "Anime Girl 4K", jp: "美少女4K", url: "/wallpapers/uploaded-21-anime-girl-4k.jpg" },
+  { id: "upload-22-in-bed", label: "Cozy Room", jp: "部屋", url: "/wallpapers/uploaded-22-in-bed.jpg" },
+  { id: "upload-23-night-room", label: "Night Room", jp: "夜部屋", url: "/wallpapers/uploaded-23-night-room.jpg" },
+  { id: "upload-24-summer-room", label: "Summer Room", jp: "夏部屋", url: "/wallpapers/uploaded-24-summer-room.jpg" },
 ];
 
 interface SettingsState {
