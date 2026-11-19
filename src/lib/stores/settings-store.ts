@@ -25,7 +25,23 @@ export type BackgroundPreset =
   | "fuji-sunset"
   | "tokyo-night"
   | "lavender-field"
-  | "wave";
+  | "wave"
+  | "autumn-maple"
+  | "bamboo-forest"
+  | "snowy-fuji"
+  | "zen-garden"
+  | "starry-night"
+  | "ocean-sunset"
+  | "sakura-night"
+  | "kyoto-street"
+  | "upload-1"
+  | "upload-2"
+  | "upload-3-onepiece"
+  | "upload-4-reze"
+  | "upload-5-reze-bw"
+  | "upload-6-onepiece-hd"
+  | "upload-7"
+  | "upload-8";
 
 export const JP_FONT_STACKS: Record<JpFont, string> = {
   notojp: "var(--font-notojp)",
@@ -62,6 +78,23 @@ export const BACKGROUND_PRESETS: {
   { id: "tokyo-night", label: "Tokyo Night", jp: "夜", url: "/wallpapers/tokyo-night.jpg" },
   { id: "lavender-field", label: "Lavender Field", jp: "薫衣草", url: "/wallpapers/lavender-field.jpg" },
   { id: "wave", label: "Great Wave", jp: "波", url: "/wallpapers/wave.jpg" },
+  { id: "autumn-maple", label: "Autumn Maple", jp: "紅葉", url: "/wallpapers/autumn-maple.jpg" },
+  { id: "bamboo-forest", label: "Bamboo Forest", jp: "竹", url: "/wallpapers/bamboo-forest.jpg" },
+  { id: "snowy-fuji", label: "Snowy Fuji", jp: "雪富士", url: "/wallpapers/snowy-fuji.jpg" },
+  { id: "zen-garden", label: "Zen Garden", jp: "庭園", url: "/wallpapers/zen-garden.jpg" },
+  { id: "starry-night", label: "Starry Night", jp: "星空", url: "/wallpapers/starry-night.jpg" },
+  { id: "ocean-sunset", label: "Ocean Sunset", jp: "海", url: "/wallpapers/ocean-sunset.jpg" },
+  { id: "sakura-night", label: "Sakura Night", jp: "夜桜", url: "/wallpapers/sakura-night.jpg" },
+  { id: "kyoto-street", label: "Kyoto Street", jp: "京都", url: "/wallpapers/kyoto-street.jpg" },
+  // User-uploaded wallpapers
+  { id: "upload-1", label: "Custom Wallpaper 1", jp: "壁紙1", url: "/wallpapers/uploaded-1.jpeg" },
+  { id: "upload-2", label: "Custom Wallpaper 2", jp: "壁紙2", url: "/wallpapers/uploaded-2.jpeg" },
+  { id: "upload-3-onepiece", label: "One Piece", jp: "アニメ", url: "/wallpapers/uploaded-3-onepiece.jpeg" },
+  { id: "upload-4-reze", label: "Reze", jp: "リゼ", url: "/wallpapers/uploaded-4-reze.jpeg" },
+  { id: "upload-5-reze-bw", label: "Reze B&W", jp: "白黒", url: "/wallpapers/uploaded-5-reze-bw.jpeg" },
+  { id: "upload-6-onepiece-hd", label: "One Piece HD", jp: "HD", url: "/wallpapers/uploaded-6-onepiece-hd.jpeg" },
+  { id: "upload-7", label: "Custom Wallpaper 7", jp: "壁紙7", url: "/wallpapers/uploaded-7.jpeg" },
+  { id: "upload-8", label: "Custom Wallpaper 8", jp: "壁紙8", url: "/wallpapers/uploaded-8.jpeg" },
 ];
 
 interface SettingsState {

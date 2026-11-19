@@ -507,33 +507,65 @@ export function AccountView() {
           </ToggleGroup>
         </div>
 
-        {/* Preset gallery */}
+        {/* Preset gallery — scrollable carousel */}
         {settings.backgroundMode === "preset" && (
           <div className="mb-4">
-            <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted-foreground">Choose a wallpaper</label>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+            <div className="mb-2 flex items-center justify-between">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-muted-foreground">Wallpaper Gallery ({BACKGROUND_PRESETS.length} wallpapers)</label>
+              <span className="text-[10px] text-muted-foreground">← scroll →</span>
+            </div>
+            {/* Horizontal scrollable gallery */}
+            <div className="flex gap-3 overflow-x-auto pb-3 scroll-pretty snap-x snap-mandatory">
               {BACKGROUND_PRESETS.map((p) => (
                 <button
                   key={p.id}
                   onClick={() => settings.set("backgroundPreset", p.id)}
                   className={cn(
-                    "group relative aspect-video overflow-hidden rounded-xl border-2 transition-all",
-                    settings.backgroundPreset === p.id ? "border-primary ring-2 ring-primary/30" : "border-border hover:border-primary/40"
+                    "group relative h-40 w-64 shrink-0 snap-start overflow-hidden rounded-xl border-2 transition-all",
+                    settings.backgroundPreset === p.id ? "border-primary ring-2 ring-primary/40" : "border-border hover:border-primary/40"
                   )}
                 >
-                  <img src={p.url} alt={p.label} className="h-full w-full object-cover transition-transform group-hover:scale-105" />
-                  <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-2 py-1.5">
-                    <span className="text-[11px] font-semibold text-white">{p.label}</span>
-                    <span className="jp text-[11px] font-medium text-white/80">{p.jp}</span>
+                  <img src={p.url} alt={p.label} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 flex items-center justify-between px-3 py-2">
+                    <span className="text-xs font-bold text-white drop-shadow">{p.label}</span>
+                    <span className="jp text-xs font-medium text-white/80 drop-shadow">{p.jp}</span>
                   </div>
                   {settings.backgroundPreset === p.id && (
-                    <span className="absolute right-1.5 top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-primary-foreground shadow">
-                      <Check className="h-3 w-3" />
+                    <span className="absolute right-2 top-2 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
+                      <Check className="h-3.5 w-3.5" />
                     </span>
                   )}
+                  <span className="absolute left-2 top-2 rounded-md bg-black/50 px-1.5 py-0.5 text-[9px] font-medium text-white backdrop-blur-sm">
+                    {BACKGROUND_PRESETS.findIndex(x => x.id === p.id) + 1}/{BACKGROUND_PRESETS.length}
+                  </span>
                 </button>
               ))}
             </div>
+            {/* Quick select grid below the carousel for easy access */}
+            <details className="mt-2">
+              <summary className="cursor-pointer text-xs font-medium text-muted-foreground hover:text-foreground">Show all as grid</summary>
+              <div className="mt-2 grid grid-cols-3 gap-2 sm:grid-cols-4 lg:grid-cols-5">
+                {BACKGROUND_PRESETS.map((p) => (
+                  <button
+                    key={p.id}
+                    onClick={() => settings.set("backgroundPreset", p.id)}
+                    className={cn(
+                      "group relative aspect-video overflow-hidden rounded-lg border transition-all",
+                      settings.backgroundPreset === p.id ? "border-primary ring-1 ring-primary/30" : "border-border hover:border-primary/40"
+                    )}
+                    title={p.label}
+                  >
+                    <img src={p.url} alt={p.label} className="h-full w-full object-cover transition-transform group-hover:scale-105" />
+                    {settings.backgroundPreset === p.id && (
+                      <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                        <Check className="h-2.5 w-2.5" />
+                      </span>
+                    )}
+                  </button>
+                ))}
+              </div>
+            </details>
           </div>
         )}
 
