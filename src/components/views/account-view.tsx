@@ -187,8 +187,8 @@ export function AccountView() {
   const overallPct = Math.round((totalMastered / (kanjiData.length + vocabData.length + grammarData.length + storiesData.length)) * 100);
 
   // Use raw counts (before dedup) for display
-  const totalKanjiCount = 2200;
-  const totalVocabCount = 10000;
+  const totalKanjiCount = kanjiData.length;
+  const totalVocabCount = vocabData.length;
   const totalGrammarCount = grammarData.length;
   const totalStoriesCount = storiesData.length;
   const totalListeningCount = listeningData.length;
