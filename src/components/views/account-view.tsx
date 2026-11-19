@@ -186,10 +186,10 @@ export function AccountView() {
   const totalMastered = kanjiMastered + vocabMastered + grammarMastered + storiesRead;
   const overallPct = Math.round((totalMastered / (kanjiData.length + vocabData.length + grammarData.length + storiesData.length)) * 100);
 
-  // Use raw counts (before dedup) for display
-  const totalKanjiCount = kanjiData.length;
-  const totalVocabCount = vocabData.length;
-  const totalGrammarCount = grammarData.length;
+  // Use the actual exported (deduplicated) data counts for display
+  const totalKanjiCount = kanjiData.length;    // 2210 (100+200+350+400+1160, deduped by char)
+  const totalVocabCount = vocabData.length;    // 10121 (809+812+2250+2250+4000, deduped by word)
+  const totalGrammarCount = grammarData.length; // 750 (80+130+140+200+200, deduped + capped)
   const totalStoriesCount = storiesData.length;
   const totalListeningCount = listeningData.length;
   const totalReadingCount = readingData.length;
