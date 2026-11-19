@@ -130,6 +130,16 @@ const LEVEL_META: {
   { level: "N1", subtitle: "Advanced", ringTint: "var(--coral)" },
 ];
 
+/**
+ * Per-level target counts for display.
+ * Kanji total: 2200, Vocab total: 10000, Grammar total: 720
+ */
+const TARGET_COUNTS: Record<string, Record<string, number>> = {
+  kanji:   { N5: 100,  N4: 200,  N3: 350,  N2: 350,  N1: 1200 },
+  vocab:   { N5: 800,  N4: 700,  N3: 2250, N2: 2250, N1: 4000 },
+  grammar: { N5: 80,   N4: 130,  N3: 140,  N2: 200,  N1: 170  },
+};
+
 function LevelProgressCard({
   level,
   subtitle,
@@ -165,7 +175,14 @@ function LevelProgressCard({
   const gM = masteredIn(grammar, grammarMastery);
   const sM = storiesRead.filter((id) => storiesData.find((s) => s.id === id)?.level === level).length;
 
-  const total = kanji.length + vocab.length + grammar.length + stories.length;
+  // Use target counts (not data lengths) so progress bars show the
+  // intended JLPT totals: kanji=2200, vocab=10000, grammar=720
+  const kTarget = TARGET_COUNTS.kanji[level];
+  const vTarget = TARGET_COUNTS.vocab[level];
+  const gTarget = TARGET_COUNTS.grammar[level];
+  const sTarget = stories.length;
+
+  const total = kTarget + vTarget + gTarget + sTarget;
   const mastered = kM + vM + gM + sM;
   const pct = total > 0 ? (mastered / total) * 100 : 0;
 
@@ -179,10 +196,10 @@ function LevelProgressCard({
         <ProgressRing value={pct} size={56} stroke={6} label={`${Math.round(pct)}%`} />
       </div>
       <div className="space-y-3">
-        <StatBar label="Kanji mastered" mastered={kM} total={kanji.length} tint="var(--sakura)" />
-        <StatBar label="Vocabulary mastered" mastered={vM} total={vocab.length} tint="var(--matcha)" />
-        <StatBar label="Grammar mastered" mastered={gM} total={grammar.length} tint="var(--indigo-deep)" />
-        <StatBar label="Stories read" mastered={sM} total={stories.length} tint="var(--coral)" />
+        <StatBar label="Kanji mastered" mastered={kM} total={kTarget} tint="var(--sakura)" />
+        <StatBar label="Vocabulary mastered" mastered={vM} total={vTarget} tint="var(--matcha)" />
+        <StatBar label="Grammar mastered" mastered={gM} total={gTarget} tint="var(--indigo-deep)" />
+        <StatBar label="Stories read" mastered={sM} total={sTarget} tint="var(--coral)" />
       </div>
       <p className="mt-3 text-[11px] text-muted-foreground">
         {kanji.length + vocab.length + grammar.length} items available
