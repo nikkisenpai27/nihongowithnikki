@@ -13,9 +13,11 @@ import { grammarN1B } from "./grammar-n1-b";
 import { grammarN1C } from "./grammar-n1-c";
 import { grammarN1D } from "./grammar-n1-d";
 
-// Grammar: N5/N4 (Minna) + N3/N2/N1 (Shinzaizen Master style, chapter-wise)
-// N3: 150, N2: 200, N1: 200 — full Shinzaizen Master coverage
-// Deduplicated by point (some patterns appear across levels)
+// Grammar: N5/N4 (Minna no Nihongo) + N3/N2/N1 (Shinzaizen Master / try! series)
+// Target counts aligned with official JLPT grammar point expectations:
+//   N5: 80, N4: 130, N3: 140, N2: 200, N1: 200  (total 750)
+// Deduplicated by point, then capped per level so the exported
+// grammarData respects the target counts above.
 const allGrammar: GrammarData[] = [
   ...grammarN5,
   ...grammarN4,
@@ -31,10 +33,26 @@ const allGrammar: GrammarData[] = [
   ...grammarN1C,
   ...grammarN1D,
 ];
+
+/** Per-level caps — first N unique points per level are kept. */
+const LEVEL_LIMITS: Record<string, number> = {
+  N5: 80,
+  N4: 130,
+  N3: 140,
+  N2: 200,
+  N1: 200,
+};
+
 const _seenPoints = new Set<string>();
+const _levelCounts: Record<string, number> = {};
 export const grammarData: GrammarData[] = allGrammar.filter((g) => {
+  // Skip duplicate grammar points across levels (keep first occurrence)
   if (_seenPoints.has(g.point)) return false;
   _seenPoints.add(g.point);
+  // Enforce per-level cap
+  const lvl = g.level;
+  _levelCounts[lvl] = (_levelCounts[lvl] || 0) + 1;
+  if (_levelCounts[lvl] > LEVEL_LIMITS[lvl]) return false;
   return true;
 });
 
