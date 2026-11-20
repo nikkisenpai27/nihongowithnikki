@@ -4,7 +4,6 @@ import { useMemo, useState } from "react";
 import {
   BookOpen,
   Search,
-  Layers,
   Sparkles,
   Download,
   BookMarked,
@@ -26,7 +25,7 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { vocabData, vocabThemes } from "@/lib/data/vocab";
+import { vocabData } from "@/lib/data/vocab";
 import { levelColor } from "@/lib/data/kanji";
 import { minnaLessons, lessonsForLevel } from "@/lib/data/lessons";
 import { useProgress } from "@/lib/stores/progress-store";
@@ -37,7 +36,6 @@ import { SectionHeader, EmptyState, LevelBadge } from "../nikki/shared";
 import { FuriganaText } from "../nikki/furigana";
 import { AudioButton } from "../nikki/audio-button";
 import { FlashcardDialog } from "../nikki/flashcard-dialog";
-import { getLucideIcon } from "../nikki/icon-map";
 import type { JLPTLevel, VocabData } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -72,7 +70,6 @@ export function VocabView() {
 
   const [level, setLevel] = useState<LevelFilter>("all");
   const [lesson, setLesson] = useState<string>("1");
-  const [theme, setTheme] = useState<string>("all");
   const [query, setQuery] = useState("");
   const [flashOpen, setFlashOpen] = useState(false);
   const [detailId, setDetailId] = useState<string | null>(null);
@@ -86,14 +83,13 @@ export function VocabView() {
     return vocabData.filter((v) => {
       if (level !== "all" && v.level !== level) return false;
       if (lessonNum !== null && v.lesson !== lessonNum) return false;
-      if (theme !== "all" && v.theme !== theme) return false;
       if (q) {
         const hay = [v.word, v.reading, v.romaji, v.meaning].join(" ").toLowerCase();
         if (!hay.includes(q)) return false;
       }
       return true;
     });
-  }, [level, lessonNum, theme, q]);
+  }, [level, lessonNum, q]);
 
   function masteryColor(id: string) {
     const st = mastery[id] ?? "new";
@@ -106,7 +102,6 @@ export function VocabView() {
     const lv = (v as LevelFilter) || "all";
     setLevel(lv);
     setLesson(firstLessonForLevel(lv));
-    setTheme("all");
   }
 
   const detailWord = detailId ? vocabData.find((v) => v.id === detailId) : null;
@@ -197,29 +192,11 @@ export function VocabView() {
         </div>
       )}
 
-      {/* Theme chips */}
-      <div className="mb-5 flex flex-wrap gap-1.5">
-        <ThemeChip active={theme === "all"} onClick={() => setTheme("all")} label="All themes" jp="全部" icon={Layers} />
-        {vocabThemes.map((t) => {
-          const Icon = getLucideIcon(t.icon);
-          return (
-            <ThemeChip
-              key={t.name}
-              active={theme === t.name}
-              onClick={() => setTheme(t.name)}
-              label={t.name}
-              jp={t.jp}
-              icon={Icon}
-            />
-          );
-        })}
-      </div>
-
       {filtered.length === 0 ? (
         <EmptyState
           icon={Search}
           title="No words found"
-          description="Try a different lesson, theme, level, or search term."
+          description="Try a different lesson, level, or search term."
         />
       ) : (
         /* Grammar-style horizontal list */
@@ -261,7 +238,6 @@ export function VocabView() {
                   </p>
                   <div className="mt-1.5 flex flex-wrap gap-1">
                     <Badge variant="outline" className="text-[10px] font-normal">{v.partOfSpeech}</Badge>
-                    <Badge variant="outline" className="text-[10px] font-normal">{v.theme}</Badge>
                     {v.lesson && <Badge variant="secondary" className="text-[10px] font-normal">L{v.lesson}</Badge>}
                   </div>
                 </div>
@@ -327,7 +303,6 @@ function VocabDetail({
           <LevelBadge level={v.level} />
           <Badge variant="outline">{v.partOfSpeech}</Badge>
           {v.lesson && <Badge variant="secondary">Minna L{v.lesson}</Badge>}
-          <Badge variant="outline">{v.theme}</Badge>
         </div>
         <div className="flex items-center gap-3">
           <FuriganaText text={v.word} showFurigana={showFurigana} className="jp text-4xl font-bold" style={{ color: levelColor(v.level) }} />
@@ -413,36 +388,6 @@ function VocabDetail({
         )}
       </div>
     </div>
-  );
-}
-
-function ThemeChip({
-  active,
-  onClick,
-  label,
-  jp,
-  icon: Icon,
-}: {
-  active: boolean;
-  onClick: () => void;
-  label: string;
-  jp: string;
-  icon: React.ComponentType<{ className?: string }>;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      className={cn(
-        "inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium transition-colors",
-        active
-          ? "border-primary bg-primary text-primary-foreground"
-          : "border-border bg-card text-foreground/80 hover:bg-accent"
-      )}
-    >
-      <Icon className="h-3.5 w-3.5" />
-      {label}
-      {jp && <span className={cn("jp", active ? "opacity-80" : "text-muted-foreground")}>{jp}</span>}
-    </button>
   );
 }
 
