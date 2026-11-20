@@ -56,7 +56,7 @@ const POS_INFO: Record<string, { jp: string; en: string }> = {
 function firstLessonForLevel(level: LevelFilter): string {
   if (level === "N4") return "26";
   if (level === "N5") return "1";
-  if (level === "N3") return "51"; // N3 has lessons 51-72
+  if (level === "N3") return "1"; // N3 has its own lessons 1-22
   return "all"; // N2/N1 use chapter themes, not lessons
 }
 
@@ -106,11 +106,11 @@ export function VocabView() {
   }
 
   const detailWord = detailId ? vocabData.find((v) => v.id === detailId) : null;
-  // More examples: other words from the same lesson
+  // More examples: other words from the same lesson AND same level
   const moreExamples = useMemo(() => {
     if (!detailWord) return [];
     return vocabData
-      .filter((v) => v.id !== detailWord.id && v.lesson === detailWord.lesson)
+      .filter((v) => v.id !== detailWord.id && v.lesson === detailWord.lesson && v.level === detailWord.level)
       .slice(0, 6);
   }, [detailWord]);
 
@@ -165,7 +165,7 @@ export function VocabView() {
           <SelectContent className="max-h-72">
             <SelectItem value="all">All lessons</SelectItem>
             {lessonOptions.map((l) => (
-              <SelectItem key={l.lesson} value={String(l.lesson)}>
+              <SelectItem key={`${l.level}-${l.lesson}`} value={String(l.lesson)}>
                 <span className="jp text-xs text-muted-foreground">L{l.lesson}</span> {l.title}
                 <span className="ml-1.5 inline-flex rounded px-1 text-[9px] font-bold uppercase text-muted-foreground">{l.level}</span>
               </SelectItem>
