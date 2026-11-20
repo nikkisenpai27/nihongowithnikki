@@ -56,7 +56,8 @@ const POS_INFO: Record<string, { jp: string; en: string }> = {
 function firstLessonForLevel(level: LevelFilter): string {
   if (level === "N4") return "26";
   if (level === "N5") return "1";
-  return "all"; // N3/N2/N1 use chapter themes (Shinzaizen), not Minna lessons
+  if (level === "N3") return "51"; // N3 has lessons 51-72
+  return "all"; // N2/N1 use chapter themes, not lessons
 }
 
 export function VocabView() {
