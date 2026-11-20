@@ -11,9 +11,11 @@ import { kanjiN4ExtraD } from "./kanji-n4-extra-d";
 import { kanjiN3A } from "./kanji-n3-a";
 import { kanjiN3B } from "./kanji-n3-b";
 import { kanjiN3C } from "./kanji-n3-c";
+import { kanjiN3D } from "./kanji-n3-d";
 import { kanjiN2A } from "./kanji-n2-a";
 import { kanjiN2B } from "./kanji-n2-b";
 import { kanjiN2C } from "./kanji-n2-c";
+import { kanjiN2D } from "./kanji-n2-d";
 import { kanjiN1A } from "./kanji-n1-a";
 import { kanjiN1B } from "./kanji-n1-b";
 import { kanjiN1C } from "./kanji-n1-c";
@@ -24,15 +26,21 @@ import { kanjiN1G } from "./kanji-n1-g";
 import { kanjiN1H } from "./kanji-n1-h";
 import { kanjiN1I } from "./kanji-n1-i";
 import { kanjiN1J } from "./kanji-n1-j";
+import { kanjiN1K } from "./kanji-n1-k";
+import { kanjiN1L } from "./kanji-n1-l";
+import { kanjiN1M } from "./kanji-n1-m";
+import { kanjiN1N } from "./kanji-n1-n";
+import { kanjiN1O } from "./kanji-n1-o";
 
-// Total: 100 N5 + 200 N4 + 350 N3 + 400 N2 + 1160 N1 = 2210 kanji (deduped by char)
+// Total: 100 N5 + 200 N4 + 350 N3 + 400 N2 + 1210 N1 = 2260 kanji (deduped by char)
 const allKanji: KanjiData[] = [
   ...kanjiN5A, ...kanjiN5B, ...kanjiN5C, ...kanjiN5D,
   ...kanjiN4, ...kanjiN4ExtraA, ...kanjiN4ExtraB, ...kanjiN4ExtraC, ...kanjiN4ExtraD,
-  ...kanjiN3A, ...kanjiN3B, ...kanjiN3C,
-  ...kanjiN2A, ...kanjiN2B, ...kanjiN2C,
+  ...kanjiN3A, ...kanjiN3B, ...kanjiN3C, ...kanjiN3D,
+  ...kanjiN2A, ...kanjiN2B, ...kanjiN2C, ...kanjiN2D,
   ...kanjiN1A, ...kanjiN1B, ...kanjiN1C, ...kanjiN1D, ...kanjiN1E,
-  ...kanjiN1F, ...kanjiN1G, ...kanjiN1H, ...kanjiN1I, ...kanjiN1J,
+  ...kanjiN1F, ...kanjiN1G, ...kanjiN1H, ...kanjiN1I, ...kanjiN1J, ...kanjiN1K,
+  ...kanjiN1L, ...kanjiN1M, ...kanjiN1N, ...kanjiN1O,
 ];
 
 // Deduplicate per-level (not globally) — same approach as vocab.
