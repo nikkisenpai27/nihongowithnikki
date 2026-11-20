@@ -18,6 +18,7 @@ import { vocabN3J } from "./vocab-n3-j";
 import { vocabN3K } from "./vocab-n3-k";
 import { vocabN3L } from "./vocab-n3-l";
 import { vocabN3M } from "./vocab-n3-m";
+import { vocabN3N } from "./vocab-n3-n";
 import { vocabN2A } from "./vocab-n2-a";
 import { vocabN2B } from "./vocab-n2-b";
 import { vocabN2C } from "./vocab-n2-c";
@@ -81,6 +82,7 @@ const allVocab: VocabData[] = [
   ...vocabN3K,
   ...vocabN3L,
   ...vocabN3M,
+  ...vocabN3N,
   ...vocabN2A,
   ...vocabN2B,
   ...vocabN2C,
@@ -122,10 +124,14 @@ const allVocab: VocabData[] = [
   ...vocabN1Y,
   ...vocabN1Z,
 ];
+// Deduplicate per-level (not globally) — a word can appear in
+// multiple JLPT levels with different nuances, so we only remove
+// exact duplicates within the same level, not across levels.
 const _seenWords = new Set<string>();
 export const vocabData: VocabData[] = allVocab.filter((v) => {
-  if (_seenWords.has(v.word)) return false;
-  _seenWords.add(v.word);
+  const key = `${v.level}:${v.word}`;
+  if (_seenWords.has(key)) return false;
+  _seenWords.add(key);
   return true;
 });
 
