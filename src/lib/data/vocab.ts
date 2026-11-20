@@ -2,6 +2,7 @@ import type { VocabData } from "@/lib/types";
 import { vocabN5A } from "./vocab-n5-a";
 import { vocabN5B } from "./vocab-n5-b";
 import { vocabN5C } from "./vocab-n5-c";
+import { vocabN5D } from "./vocab-n5-d";
 import { vocabN4A } from "./vocab-n4-a";
 import { vocabN4B } from "./vocab-n4-b";
 import { vocabN4C } from "./vocab-n4-c";
@@ -66,6 +67,7 @@ const allVocab: VocabData[] = [
   ...vocabN5A,
   ...vocabN5B,
   ...vocabN5C,
+  ...vocabN5D,
   ...vocabN4A,
   ...vocabN4B,
   ...vocabN4C,
