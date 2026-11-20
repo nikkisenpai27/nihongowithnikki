@@ -60,6 +60,7 @@ import { vocabN1W } from "./vocab-n1-w";
 import { vocabN1X } from "./vocab-n1-x";
 import { vocabN1Y } from "./vocab-n1-y";
 import { vocabN1Z } from "./vocab-n1-z";
+import { vocabN1AA } from "./vocab-n1-aa";
 
 // Vocabulary: N5/N4 (Minna no Nihongo) + N3/N2/N1 (Shinzaizen Master style, chapter-wise)
 // Deduplicated by word (common particles/expressions appear across multiple levels)
@@ -125,6 +126,7 @@ const allVocab: VocabData[] = [
   ...vocabN1X,
   ...vocabN1Y,
   ...vocabN1Z,
+  ...vocabN1AA,
 ];
 // Deduplicate per-level (not globally) — a word can appear in
 // multiple JLPT levels with different nuances, so we only remove
