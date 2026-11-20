@@ -305,34 +305,45 @@ export function KanjiView() {
         flashcard, or click to see readings, vocab, examples, and practice writing.
       </p>
 
-      {/* Floating hover flashcard */}
+      {/* Floating hover flashcard — bigger, solid background */}
       {hovered && (
         <div
-          className="pointer-events-none fixed z-50 w-60 rounded-xl border border-border bg-card p-3 shadow-2xl"
+          className="pointer-events-none fixed z-50 w-96 rounded-2xl border-2 border-border bg-card p-5 shadow-2xl"
           style={{
-            left: Math.min(hovered.x, (typeof window !== "undefined" ? window.innerWidth : 9999) - 250),
-            top: Math.min(hovered.y, (typeof window !== "undefined" ? window.innerHeight : 9999) - 200),
+            left: Math.min(hovered.x, (typeof window !== "undefined" ? window.innerWidth : 9999) - 400),
+            top: Math.min(hovered.y, (typeof window !== "undefined" ? window.innerHeight : 9999) - 350),
           }}
         >
-          <div className="flex items-center gap-3">
-            <span className="jp text-6xl font-bold leading-none" style={{ color: levelColor(hovered.k.level), fontFamily: "var(--font-jp)" }}>
+          <div className="flex items-center gap-4">
+            <span className="jp text-8xl font-bold leading-none" style={{ color: levelColor(hovered.k.level), fontFamily: "var(--font-jp)" }}>
               {hovered.k.char}
             </span>
             <div className="min-w-0 flex-1">
               <span
-                className="inline-block rounded-full px-2 py-0.5 text-[9px] font-bold uppercase text-white"
+                className="inline-block rounded-full px-2.5 py-1 text-[10px] font-bold uppercase text-white"
                 style={{ backgroundColor: levelColor(hovered.k.level) }}
               >
                 {hovered.k.level}
               </span>
-              <p className="mt-1 text-sm font-bold text-foreground">{hovered.k.meaning.join(", ")}</p>
+              <p className="mt-1.5 text-base font-bold text-foreground">{hovered.k.meaning.join(", ")}</p>
+              <p className="mt-0.5 text-xs text-muted-foreground">{hovered.k.strokes} strokes ・ radical {hovered.k.radical}</p>
             </div>
           </div>
-          <div className="mt-2 space-y-0.5 text-xs text-muted-foreground">
-            <p>on&apos;yomi: <span className="jp text-indigo-deep">{hovered.k.onyomi.join("、") || "—"}</span></p>
-            <p>kun&apos;yomi: <span className="jp text-matcha">{hovered.k.kunyomi.map(cleanKun).join("、") || "—"}</span></p>
-            <p>{hovered.k.strokes} strokes ・ radical <span className="jp">{hovered.k.radical}</span> ({hovered.k.radicalMeaning})</p>
+          <div className="mt-3 space-y-1 text-sm text-muted-foreground">
+            <p>on&apos;yomi: <span className="jp font-medium text-indigo-deep">{hovered.k.onyomi.join("、") || "—"}</span></p>
+            <p>kun&apos;yomi: <span className="jp font-medium text-matcha">{hovered.k.kunyomi.map(cleanKun).join("、") || "—"}</span></p>
           </div>
+          {hovered.k.vocab.length > 0 && (
+            <div className="mt-2 space-y-0.5 border-t border-border pt-2">
+              {hovered.k.vocab.slice(0, 3).map((v, i) => (
+                <p key={i} className="text-xs text-muted-foreground">
+                  <span className="jp font-medium text-foreground">{v.word}</span>{" "}
+                  <span className="text-muted-foreground">{v.reading}</span>{" "}
+                  — {v.meaning}
+                </p>
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>

@@ -119,29 +119,36 @@ export function FlashcardDialog({ open, onOpenChange, cards, title = "Flashcards
             )}
           </div>
 
-          <div className="mt-4 flex items-center justify-between gap-2">
-            <Button variant="outline" size="icon" onClick={prev} aria-label="Previous">
-              <ChevronLeft className="h-4 w-4" />
+          {/* Navigation buttons — separate row */}
+          <div className="mt-4 flex items-center justify-between gap-3">
+            <Button variant="outline" size="icon" onClick={prev} aria-label="Previous" className="h-10 w-10">
+              <ChevronLeft className="h-5 w-5" />
             </Button>
-            <div className="flex flex-1 justify-center gap-2">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => { setMastery("vocab", card.id, "learning"); next(); }}
-                className={cn(card && "border-warm-yellow/40 text-warm-yellow")}
-              >
-                Still learning
-              </Button>
-              <Button
-                size="sm"
-                onClick={() => { setMastery("vocab", card.id, "mastered"); next(); }}
-                className="bg-matcha text-white hover:bg-matcha/90"
-              >
-                <Check className="mr-1 h-3.5 w-3.5" /> Got it
-              </Button>
-            </div>
-            <Button variant="outline" size="icon" onClick={next} aria-label="Next">
-              <ChevronRight className="h-4 w-4" />
+            <span className="text-xs font-medium text-muted-foreground tabular-nums">
+              {pos + 1} / {order.length}
+            </span>
+            <Button variant="outline" size="icon" onClick={next} aria-label="Next" className="h-10 w-10">
+              <ChevronRight className="h-5 w-5" />
+            </Button>
+          </div>
+
+          {/* Action buttons — separate row with clear gap */}
+          <div className="mt-3 flex items-center justify-center gap-3">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => { setMastery("vocab", card.id, "learning"); next(); }}
+              className="gap-1.5 border-warm-yellow/40 text-warm-yellow"
+            >
+              <RotateCcw className="h-4 w-4" />
+              Still learning
+            </Button>
+            <Button
+              size="sm"
+              onClick={() => { setMastery("vocab", card.id, "mastered"); next(); }}
+              className="gap-1.5 bg-matcha text-white hover:bg-matcha/90"
+            >
+              <Check className="h-4 w-4" /> Got it
             </Button>
           </div>
         </div>

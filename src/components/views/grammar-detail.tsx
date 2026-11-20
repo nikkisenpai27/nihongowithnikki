@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft, Lightbulb, Link2, ListTree, BookText, GraduationCap } from "lucide-react";
+import { ArrowLeft, Lightbulb, Link2, ListTree, BookText, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -9,14 +9,13 @@ import { AudioButton } from "../nikki/audio-button";
 import { LevelBadge } from "../nikki/shared";
 import { useSettings } from "@/lib/stores/settings-store";
 import { useProgress } from "@/lib/stores/progress-store";
-import { useNav } from "@/lib/stores/nav-store";
 import { grammarData } from "@/lib/data/grammar";
+import { levelColor } from "@/lib/data/kanji";
 import type { GrammarData } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 export function GrammarDetail({ point, onBack }: { point: GrammarData; onBack?: () => void }) {
   const showFurigana = useSettings((s) => s.showFurigana);
-  const setView = useNav((s) => s.setView);
   const grammarMastery = useProgress((s) => s.grammar);
   const cycleMastery = useProgress((s) => s.cycleMastery);
   const st = grammarMastery[point.id] ?? "new";
@@ -122,15 +121,100 @@ export function GrammarDetail({ point, onBack }: { point: GrammarData; onBack?: 
 
       <Separator />
 
-      <div className="flex items-center justify-between rounded-2xl border border-primary/30 bg-primary/5 p-4">
-        <div>
-          <p className="text-sm font-semibold text-foreground">Ready to test this point?</p>
-          <p className="text-xs text-muted-foreground">Take a grammar quiz to lock it in.</p>
-        </div>
-        <Button size="sm" onClick={() => setView("quiz")}>
-          <GraduationCap className="mr-1 h-4 w-4" /> Quiz me
-        </Button>
-      </div>
+      {/* Download flashcard button */}
+      <Button
+        size="sm"
+        variant="outline"
+        className="w-full gap-2"
+        onClick={() => downloadSingleGrammarFlashcard(point)}
+      >
+        <Download className="h-4 w-4" /> Download Flashcard
+      </Button>
     </div>
   );
+}
+
+/** Download a single grammar flashcard as a PNG image */
+function downloadSingleGrammarFlashcard(g: GrammarData) {
+  const canvas = document.createElement("canvas");
+  canvas.width = 600;
+  canvas.height = 800;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  const lvlColor: Record<string, string> = {
+    N5: "#ff8fab", N4: "#6b9b7a", N3: "#4a6fa5", N2: "#b39ddb", N1: "#ff8c7a",
+  };
+  const color = lvlColor[g.level] || "#ff8fab";
+
+  // Background
+  ctx.fillStyle = "#fff9f0";
+  ctx.fillRect(0, 0, 600, 800);
+
+  // Header
+  ctx.fillStyle = color;
+  ctx.fillRect(0, 0, 600, 80);
+  ctx.fillStyle = "#fff";
+  ctx.font = "bold 20px sans-serif";
+  ctx.textAlign = "center";
+  ctx.fillText(`${g.level} Grammar`, 300, 50);
+
+  // Grammar point (large)
+  ctx.fillStyle = color;
+  ctx.font = "bold 64px sans-serif";
+  ctx.fillText(g.point, 300, 220);
+
+  // Reading
+  ctx.fillStyle = "#717a63";
+  ctx.font = "28px sans-serif";
+  ctx.fillText(g.reading, 300, 270);
+
+  // Divider
+  ctx.strokeStyle = "#e2e6d4";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(100, 320);
+  ctx.lineTo(500, 320);
+  ctx.stroke();
+
+  // Meaning
+  ctx.fillStyle = "#3a4a32";
+  ctx.font = "bold 32px sans-serif";
+  const meaning = g.meaning.length > 40 ? g.meaning.slice(0, 40) + "…" : g.meaning;
+  ctx.fillText(meaning, 300, 380);
+
+  // Category
+  ctx.fillStyle = "#7a7a73";
+  ctx.font = "18px sans-serif";
+  ctx.fillText(g.category, 300, 420);
+
+  // Structure
+  ctx.fillStyle = "#5a6b4a";
+  ctx.font = "20px sans-serif";
+  const structure = g.structure.slice(0, 45);
+  ctx.fillText(structure, 300, 470);
+
+  // Example
+  if (g.examples[0]) {
+    ctx.fillStyle = "#3d2b2e";
+    ctx.font = "22px sans-serif";
+    const exJp = g.examples[0].jp.replace(/\[[^\]]+\]/g, "").slice(0, 30);
+    ctx.fillText(exJp, 300, 540);
+    ctx.fillStyle = "#9a9a8a";
+    ctx.font = "16px sans-serif";
+    const exEn = g.examples[0].en.slice(0, 45);
+    ctx.fillText(exEn, 300, 575);
+  }
+
+  // Footer
+  ctx.fillStyle = "#9a7177";
+  ctx.font = "14px sans-serif";
+  ctx.fillText("Nihongo with Nikki", 300, 750);
+
+  // Download
+  const url = canvas.toDataURL("image/png");
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `flashcard-${g.point}-${g.level}.png`;
+  a.click();
 }

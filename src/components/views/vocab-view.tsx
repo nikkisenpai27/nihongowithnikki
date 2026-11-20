@@ -239,7 +239,7 @@ export function VocabView() {
                     setDetailId(v.id);
                   }
                 }}
-                className="group flex cursor-pointer items-center gap-4 rounded-2xl border border-border bg-card p-4 text-left transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="group flex cursor-pointer items-center gap-5 rounded-2xl border border-border bg-card p-5 text-left transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 <div className="flex w-44 shrink-0 flex-col items-start gap-1">
                   <FuriganaText text={v.word} showFurigana={showFurigana} className="jp text-xl font-bold" style={{ color: levelColor(v.level) }} />
@@ -284,10 +284,7 @@ export function VocabView() {
       )}
 
       <p className="mt-4 text-center text-xs text-muted-foreground">
-        {filtered.length} words ・ Click any word for more examples and explanation ・{" "}
-        <button onClick={() => setView("quiz")} className="font-semibold text-primary underline-offset-2 hover:underline">
-          Take a vocab quiz →
-        </button>
+        {filtered.length} words
       </p>
 
       <FlashcardDialog open={flashOpen} onOpenChange={setFlashOpen} cards={filtered} title="Vocabulary Flashcards" />
@@ -350,6 +347,16 @@ function VocabDetail({
       </div>
 
       <div className="space-y-4 p-5">
+        {/* Download flashcard button */}
+        <Button
+          size="sm"
+          variant="outline"
+          className="w-full gap-2"
+          onClick={() => downloadSingleVocabFlashcard(v)}
+        >
+          <Download className="h-4 w-4" /> Download Flashcard
+        </Button>
+
         {pos && (
           <div className="rounded-xl bg-muted/40 p-3">
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -510,5 +517,91 @@ function downloadVocabFlashcards(items: import("@/lib/types").VocabData[]) {
   const a = document.createElement("a");
   a.href = url;
   a.download = `vocab-flashcards-${new Date().toISOString().slice(0, 10)}.png`;
+  a.click();
+}
+
+/** Download a single vocab flashcard as a PNG image */
+function downloadSingleVocabFlashcard(v: import("@/lib/types").VocabData) {
+  const canvas = document.createElement("canvas");
+  canvas.width = 600;
+  canvas.height = 800;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  // Background
+  ctx.fillStyle = "#fff9f0";
+  ctx.fillRect(0, 0, 600, 800);
+
+  // Header with level color
+  const lvlColor: Record<string, string> = {
+    N5: "#ff8fab", N4: "#6b9b7a", N3: "#4a6fa5", N2: "#b39ddb", N1: "#ff8c7a",
+  };
+  const color = lvlColor[v.level] || "#ff8fab";
+  ctx.fillStyle = color;
+  ctx.fillRect(0, 0, 600, 80);
+
+  // Level badge
+  ctx.fillStyle = "#fff";
+  ctx.font = "bold 20px sans-serif";
+  ctx.textAlign = "center";
+  ctx.fillText(`${v.level} Vocabulary`, 300, 50);
+
+  // Word (large)
+  ctx.fillStyle = "#3d2b2e";
+  ctx.font = "bold 80px sans-serif";
+  ctx.textAlign = "center";
+  ctx.fillText(v.word, 300, 250);
+
+  // Reading
+  ctx.fillStyle = "#717a63";
+  ctx.font = "32px sans-serif";
+  ctx.fillText(v.reading, 300, 310);
+
+  // Romaji
+  ctx.fillStyle = "#9a9a8a";
+  ctx.font = "italic 24px sans-serif";
+  ctx.fillText(v.romaji, 300, 350);
+
+  // Divider
+  ctx.strokeStyle = "#e2e6d4";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(100, 400);
+  ctx.lineTo(500, 400);
+  ctx.stroke();
+
+  // Meaning
+  ctx.fillStyle = "#3a4a32";
+  ctx.font = "bold 36px sans-serif";
+  const meaning = v.meaning.length > 35 ? v.meaning.slice(0, 35) + "…" : v.meaning;
+  ctx.fillText(meaning, 300, 460);
+
+  // Part of speech
+  ctx.fillStyle = "#7a7a73";
+  ctx.font = "20px sans-serif";
+  ctx.fillText(v.partOfSpeech, 300, 500);
+
+  // Example
+  if (v.example) {
+    ctx.fillStyle = "#5a6b4a";
+    ctx.font = "24px sans-serif";
+    const exJp = v.example.jp.replace(/\[[^\]]+\]/g, "");
+    ctx.fillText(exJp.slice(0, 25), 300, 580);
+    ctx.fillStyle = "#9a9a8a";
+    ctx.font = "18px sans-serif";
+    const exEn = v.example.en.slice(0, 40);
+    ctx.fillText(exEn, 300, 620);
+  }
+
+  // Footer
+  ctx.fillStyle = "#9a7177";
+  ctx.font = "14px sans-serif";
+  ctx.fillText("Nihongo with Nikki", 300, 750);
+
+  // Download
+  const url = canvas.toDataURL("image/png");
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `flashcard-${v.word}-${v.level}.png`;
   a.click();
 }

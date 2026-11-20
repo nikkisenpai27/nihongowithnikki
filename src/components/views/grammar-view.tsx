@@ -179,7 +179,7 @@ export function GrammarView() {
             <button
               key={g.id}
               onClick={() => openGrammar(g.id)}
-              className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-4 text-left transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="group flex items-center gap-5 rounded-2xl border border-border bg-card p-5 text-left transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
               <div className="flex w-28 shrink-0 flex-col items-start gap-1">
                 <FuriganaText text={g.point} showFurigana={false} className="jp text-lg font-bold" style={{ color: levelColor(g.level) }} />
@@ -199,7 +199,7 @@ export function GrammarView() {
       )}
 
       <p className="mt-4 text-center text-xs text-muted-foreground">
-        {filtered.length} grammar points ・ Click any point to see formation, examples, and notes.
+        {filtered.length} grammar points
       </p>
 
       {/* Grammar Flashcards */}
