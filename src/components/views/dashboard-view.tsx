@@ -137,7 +137,7 @@ const LEVEL_META: {
 const TARGET_COUNTS: Record<string, Record<string, number>> = {
   kanji:   { N5: 100,  N4: 200,  N3: 350,  N2: 350,  N1: 1200 },
   vocab:   { N5: 800,  N4: 700,  N3: 2250, N2: 2250, N1: 4000 },
-  grammar: { N5: 80,   N4: 130,  N3: 140,  N2: 200,  N1: 170  },
+  grammar: { N5: 80,   N4: 120,  N3: 120,  N2: 200,  N1: 200  },
 };
 
 function LevelProgressCard({

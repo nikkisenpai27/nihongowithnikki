@@ -37,8 +37,8 @@ const allGrammar: GrammarData[] = [
 /** Per-level caps — first N unique points per level are kept. */
 const LEVEL_LIMITS: Record<string, number> = {
   N5: 80,
-  N4: 130,
-  N3: 140,
+  N4: 120,
+  N3: 120,
   N2: 200,
   N1: 200,
 };
