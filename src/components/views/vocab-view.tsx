@@ -6,6 +6,7 @@ import {
   Search,
   Layers,
   Sparkles,
+  Download,
   BookMarked,
   Volume2,
   ArrowRight,
@@ -125,9 +126,14 @@ export function VocabView() {
         icon={BookOpen}
         description={`${vocabData.length} words organized by Minna no Nihongo lessons. Each entry shows the kanji with furigana, the hiragana/katakana reading, meaning, and an example sentence — click any word for more examples.`}
         action={
-          <Button size="sm" onClick={() => setFlashOpen(true)} disabled={filtered.length === 0}>
-            <Sparkles className="mr-1 h-4 w-4" /> Flashcards ({filtered.length})
-          </Button>
+          <div className="flex gap-2">
+            <Button size="sm" onClick={() => setFlashOpen(true)} disabled={filtered.length === 0}>
+              <Sparkles className="mr-1 h-4 w-4" /> Flashcards ({filtered.length})
+            </Button>
+            <Button size="sm" variant="outline" onClick={() => downloadVocabFlashcards(filtered)} disabled={filtered.length === 0}>
+              <Download className="mr-1 h-4 w-4" /> Download
+            </Button>
+          </div>
         }
       />
 
@@ -431,4 +437,78 @@ function ThemeChip({
       {jp && <span className={cn("jp", active ? "opacity-80" : "text-muted-foreground")}>{jp}</span>}
     </button>
   );
+}
+
+/** Generate a downloadable image of vocabulary flashcards */
+function downloadVocabFlashcards(items: import("@/lib/types").VocabData[]) {
+  if (items.length === 0) return;
+  const canvas = document.createElement("canvas");
+  const cols = 2;
+  const rows = Math.ceil(items.length / cols);
+  const cellW = 500;
+  const cellH = 220;
+  canvas.width = cols * cellW + 40;
+  canvas.height = rows * cellH + 80;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  ctx.fillStyle = "#fff9f0";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#6b9b7a";
+  ctx.fillRect(0, 0, canvas.width, 60);
+  ctx.fillStyle = "#fff";
+  ctx.font = "bold 24px sans-serif";
+  ctx.textAlign = "center";
+  ctx.fillText("Vocabulary Flashcards ・ 単語", canvas.width / 2, 38);
+
+  ctx.textAlign = "left";
+  items.forEach((v, i) => {
+    const col = i % cols;
+    const row = Math.floor(i / cols);
+    const x = 20 + col * cellW;
+    const y = 70 + row * cellH;
+
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(x, y, cellW - 20, cellH - 20);
+    ctx.strokeStyle = "#e2e6d4";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(x, y, cellW - 20, cellH - 20);
+
+    ctx.fillStyle = "#2c3327";
+    ctx.font = "bold 28px sans-serif";
+    ctx.fillText(v.word.slice(0, 20), x + 20, y + 42);
+
+    ctx.fillStyle = "#717a63";
+    ctx.font = "16px sans-serif";
+    ctx.fillText(v.reading.slice(0, 25), x + 20, y + 65);
+
+    ctx.fillStyle = "#3a4a32";
+    ctx.font = "bold 16px sans-serif";
+    const meaning = v.meaning.length > 45 ? v.meaning.slice(0, 45) + "…" : v.meaning;
+    ctx.fillText(meaning, x + 20, y + 90);
+
+    if (v.example) {
+      ctx.fillStyle = "#5a6b4a";
+      ctx.font = "13px sans-serif";
+      const exJp = v.example.jp.replace(/\[[^\]]+\]/g, "").slice(0, 35);
+      ctx.fillText(exJp, x + 20, y + 120);
+      ctx.fillStyle = "#9a9a8a";
+      ctx.font = "11px sans-serif";
+      ctx.fillText(v.example.en.slice(0, 40), x + 20, y + 138);
+    }
+
+    ctx.fillStyle = "#717a63";
+    ctx.fillRect(x + cellW - 75, y + 10, 35, 18);
+    ctx.fillStyle = "#fff";
+    ctx.font = "bold 11px sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText(v.level, x + cellW - 57, y + 22);
+    ctx.textAlign = "left";
+  });
+
+  const url = canvas.toDataURL("image/png");
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `vocab-flashcards-${new Date().toISOString().slice(0, 10)}.png`;
+  a.click();
 }

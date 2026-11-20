@@ -54,7 +54,7 @@ export function FlashcardDialog({ open, onOpenChange, cards, title = "Flashcards
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-md p-0 overflow-hidden">
+      <DialogContent className="max-w-2xl p-0 overflow-hidden">
         <DialogTitle className="sr-only">{title}</DialogTitle>
         <div className="flex items-center justify-between border-b border-border px-4 py-2.5">
           <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -71,13 +71,13 @@ export function FlashcardDialog({ open, onOpenChange, cards, title = "Flashcards
         </div>
         <Progress value={((pos + 1) / order.length) * 100} className="h-1 rounded-none" />
 
-        <div className="p-5">
+        <div className="p-6">
           <div
             role="button"
             tabIndex={0}
             onClick={() => setFlipped((f) => !f)}
             onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setFlipped((f) => !f); } }}
-            className="relative flex min-h-[260px] w-full cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-border bg-gradient-to-br from-primary/8 via-card to-card p-6 text-center transition-all hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="relative flex min-h-[420px] w-full cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-border bg-card p-8 text-center shadow-sm transition-all hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             {!flipped ? (
               <>
@@ -86,10 +86,10 @@ export function FlashcardDialog({ open, onOpenChange, cards, title = "Flashcards
                 </span>
                 <FuriganaText
                   text={card.word}
-                  className="jp text-4xl font-bold text-foreground"
+                  className="jp text-6xl font-bold text-foreground"
                 />
                 {showRomaji && (
-                  <span className="mt-2 text-sm italic text-muted-foreground">{card.romaji}</span>
+                  <span className="mt-3 text-lg italic text-muted-foreground">{card.romaji}</span>
                 )}
                 <span className="mt-3 inline-flex items-center gap-1 text-xs text-muted-foreground">
                   <Eye className="h-3 w-3" /> Tap to reveal meaning
@@ -100,7 +100,7 @@ export function FlashcardDialog({ open, onOpenChange, cards, title = "Flashcards
                 <span className="mb-2 text-[10px] font-semibold uppercase tracking-wider text-primary">
                   Meaning
                 </span>
-                <span className="text-xl font-bold text-foreground">{card.meaning}</span>
+                <span className="text-2xl font-bold text-foreground">{card.meaning}</span>
                 <span className="mt-1 text-xs text-muted-foreground">{card.partOfSpeech}</span>
                 <div className="mt-4 w-full rounded-xl bg-muted/50 p-3 text-left">
                   <div className="mb-1 flex items-start justify-between gap-2">

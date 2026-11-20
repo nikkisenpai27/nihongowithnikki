@@ -24,7 +24,6 @@ import {
   Clock,
   Edit3,
   Save,
-  Mail,
   LogOut,
   Wallpaper,
   Upload,
@@ -210,7 +209,6 @@ export function AccountView() {
     ctx.textAlign = "left"; ctx.fillStyle = "#3d2b2e";
     ctx.font = "bold 28px sans-serif"; ctx.fillText(userInfo?.name || "Learner", 50, 190);
     ctx.font = "16px sans-serif"; ctx.fillStyle = "#9a7177";
-    ctx.fillText(userInfo?.email || "Guest", 50, 215);
     ctx.font = "bold 20px sans-serif"; ctx.fillStyle = "#ff8fab";
     ctx.fillText(`Level ${level} ・ ${progress.xp} XP`, 50, 245);
     // Stats
@@ -258,7 +256,6 @@ export function AccountView() {
     .f{text-align:center;margin-top:30px;color:#9a7177;font-size:12px}
     </style></head><body>
     <div class="h"><h1>Nihongo with Nikki</h1><p>Progress Report ・ ${new Date().toLocaleDateString()}</p></div>
-    <div class="u"><h2>${userInfo?.name||"Learner"}</h2><p>${userInfo?.email||"Guest"}</p><div class="lv">Level ${level} ・ ${progress.xp} XP ・ ${progress.streak} day streak</div></div>
     <div class="s">${[
       ["Total XP",progress.xp.toLocaleString()],["Streak",String(progress.streak)],["Level",String(level)],["Overall",`${overallPct}%`],
       ["Kanji",`${kanjiMastered}/${totalKanjiCount}`],["Vocab",`${vocabMastered}/${totalVocabCount}`],
@@ -335,14 +332,13 @@ export function AccountView() {
                 )}
               </div>
             )}
-            {/* Email with provider badge */}
+            {/* Provider badge (no email shown) */}
             <div className="mt-0.5 flex items-center gap-2">
               {isGuest ? (
                 <Badge variant="outline" className="text-[10px]">Guest</Badge>
               ) : (
-                <Badge variant="outline" className="gap-1 text-[10px]"><Mail className="h-3 w-3" /> Email</Badge>
+                <Badge variant="outline" className="gap-1 text-[10px]"><UserIcon className="h-3 w-3" /> Member</Badge>
               )}
-              <p className="text-sm text-muted-foreground">{userInfo?.email || "Guest user"}</p>
             </div>
             <div className="mt-2 flex flex-wrap items-center gap-2">
               <Badge className="gap-1 bg-primary/15 text-primary"><Sparkles className="h-3 w-3" /> Level {level}</Badge>
