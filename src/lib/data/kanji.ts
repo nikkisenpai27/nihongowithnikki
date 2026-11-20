@@ -35,11 +35,14 @@ const allKanji: KanjiData[] = [
   ...kanjiN1F, ...kanjiN1G, ...kanjiN1H, ...kanjiN1I, ...kanjiN1J,
 ];
 
-// Deduplicate by char (keep first occurrence — lower levels take priority)
+// Deduplicate per-level (not globally) — same approach as vocab.
+// A char can appear in multiple JLPT levels with different data,
+// so we only remove exact duplicates within the same level.
 const _seenChars = new Set<string>();
 export const kanjiData: KanjiData[] = allKanji.filter((k) => {
-  if (_seenChars.has(k.char)) return false;
-  _seenChars.add(k.char);
+  const key = `${k.level}:${k.char}`;
+  if (_seenChars.has(key)) return false;
+  _seenChars.add(key);
   return true;
 });
 
