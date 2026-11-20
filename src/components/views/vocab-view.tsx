@@ -57,7 +57,8 @@ function firstLessonForLevel(level: LevelFilter): string {
   if (level === "N4") return "26";
   if (level === "N5") return "1";
   if (level === "N3") return "1"; // N3 has its own lessons 1-22
-  return "all"; // N2/N1 use chapter themes, not lessons
+  if (level === "N2") return "1"; // N2 has its own lessons 1-22
+  return "all"; // N1 uses chapter themes, not lessons
 }
 
 export function VocabView() {
