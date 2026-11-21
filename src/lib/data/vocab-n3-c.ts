@@ -18,7 +18,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kenkou",
     meaning: "health",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -33,7 +33,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "byouki",
     meaning: "illness; disease",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -48,7 +48,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "chiryou",
     meaning: "medical treatment",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -63,7 +63,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kusuri",
     meaning: "medicine",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -78,7 +78,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kega",
     meaning: "injury",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -93,7 +93,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "taion",
     meaning: "body temperature",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -108,7 +108,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "taijuu",
     meaning: "body weight",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -123,7 +123,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "tairyoku",
     meaning: "physical strength",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -138,7 +138,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "shiryoku",
     meaning: "eyesight",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -153,7 +153,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kiokuryoku",
     meaning: "memory; ability to remember",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -168,7 +168,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "chuuriryoku",
     meaning: "attention; concentration",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -183,7 +183,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "handanryoku",
     meaning: "judgment",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -198,7 +198,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "souzouryoku",
     meaning: "imagination",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -213,7 +213,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "hyougenryoku",
     meaning: "expressiveness",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -228,7 +228,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "sekinin",
     meaning: "responsibility",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -243,7 +243,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "gimu",
     meaning: "obligation; duty",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -258,7 +258,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kenri",
     meaning: "right",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -273,7 +273,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "giri",
     meaning: "social obligation",
     level: "N3",
-    lesson: 4,
+    lesson: 7,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -288,7 +288,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "ninjou",
     meaning: "human kindness",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -303,7 +303,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "doujou",
     meaning: "sympathy",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -318,7 +318,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "hyoujou",
     meaning: "facial expression",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -333,7 +333,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kankaku",
     meaning: "sense; sensation",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -348,7 +348,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "chokkan",
     meaning: "intuition",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -363,7 +363,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kuusou",
     meaning: "fantasy; daydream",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -378,7 +378,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "genjitsu",
     meaning: "reality",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -393,7 +393,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "genshou",
     meaning: "phenomenon",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -408,7 +408,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kibo",
     meaning: "scale; scope",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -423,7 +423,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "han'i",
     meaning: "range; scope",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -438,7 +438,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "genkai",
     meaning: "limit",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -453,7 +453,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "gendo",
     meaning: "bounds; limit",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -468,7 +468,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "jouken",
     meaning: "condition",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -483,7 +483,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kijun",
     meaning: "criterion; standard",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -498,7 +498,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "hyoujun",
     meaning: "standard",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -513,7 +513,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "heikin",
     meaning: "average",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -528,7 +528,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "suijun",
     meaning: "level; standard",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -543,7 +543,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "meyasu",
     meaning: "rough guide; target",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -558,7 +558,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kentou",
     meaning: "estimate; guess",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -573,7 +573,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "yosoku",
     meaning: "forecast; prediction",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -588,7 +588,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "yosou",
     meaning: "expectation; prediction",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -603,7 +603,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kitai",
     meaning: "expectation",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -618,7 +618,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "shitsubou",
     meaning: "disappointment",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -633,7 +633,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "zetsubou",
     meaning: "despair",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -648,7 +648,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "manzoku",
     meaning: "satisfaction",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -663,7 +663,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "fuman",
     meaning: "dissatisfaction",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -678,7 +678,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "tanoshimi",
     meaning: "enjoyment; pleasure",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -693,7 +693,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "yorokobi",
     meaning: "joy; delight",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -708,7 +708,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kanashimi",
     meaning: "sadness",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -723,7 +723,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kurushimi",
     meaning: "suffering",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -738,7 +738,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kurou",
     meaning: "hardship",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -753,7 +753,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kunou",
     meaning: "agony; distress",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -768,7 +768,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "fuan",
     meaning: "anxiety",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -783,7 +783,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "anshin",
     meaning: "peace of mind",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -798,7 +798,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kinchou",
     meaning: "tension",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -813,7 +813,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "odoroki",
     meaning: "surprise",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -828,7 +828,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "ikari",
     meaning: "anger",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -843,7 +843,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "osore",
     meaning: "fear",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -858,7 +858,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "haji",
     meaning: "shame",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -873,7 +873,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "hokori",
     meaning: "pride",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -888,7 +888,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "on",
     meaning: "favor; kindness received",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -903,7 +903,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "urami",
     meaning: "grudge",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -918,7 +918,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "koi",
     meaning: "romantic love",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -933,7 +933,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "ai",
     meaning: "love",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -948,7 +948,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "yuujou",
     meaning: "friendship",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -963,7 +963,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "shinrai",
     meaning: "trust",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -978,7 +978,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "uragiri",
     meaning: "betrayal",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -993,7 +993,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "chikai",
     meaning: "vow; oath",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -1008,7 +1008,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "seiyaku",
     meaning: "pledge",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -1023,7 +1023,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kyoukun",
     meaning: "lesson learned",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -1038,7 +1038,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "keii",
     meaning: "circumstances; sequence of events",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -1053,7 +1053,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "keika",
     meaning: "passage; progress",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Nouns",
     partOfSpeech: "noun",
     example: {
@@ -1072,7 +1072,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "ukeru",
     meaning: "to receive; to take (an exam)",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1087,7 +1087,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "ataeru",
     meaning: "to give; to grant",
     level: "N3",
-    lesson: 4,
+    lesson: 8,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1102,7 +1102,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "motomeru",
     meaning: "to seek; to request",
     level: "N3",
-    lesson: 4,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1117,7 +1117,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "mousu",
     meaning: "to say (humble)",
     level: "N3",
-    lesson: 4,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1132,7 +1132,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "mairu",
     meaning: "to go (humble)",
     level: "N3",
-    lesson: 4,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1147,7 +1147,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "ukagau",
     meaning: "to visit; to ask (humble)",
     level: "N3",
-    lesson: 4,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1162,7 +1162,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "haikensuru",
     meaning: "to look at (humble)",
     level: "N3",
-    lesson: 4,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1177,7 +1177,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "moushiageru",
     meaning: "to say (humble)",
     level: "N3",
-    lesson: 4,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1192,7 +1192,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "itasu",
     meaning: "to do (humble)",
     level: "N3",
-    lesson: 4,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1207,7 +1207,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "itadaku",
     meaning: "to receive (humble)",
     level: "N3",
-    lesson: 4,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1222,7 +1222,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "sashiageru",
     meaning: "to give (humble)",
     level: "N3",
-    lesson: 4,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1237,7 +1237,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "zonjiru",
     meaning: "to know (humble)",
     level: "N3",
-    lesson: 4,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1252,7 +1252,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "uketamawaru",
     meaning: "to hear; to accept (humble)",
     level: "N3",
-    lesson: 4,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1267,7 +1267,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "haishakusuru",
     meaning: "to borrow (humble)",
     level: "N3",
-    lesson: 4,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1282,7 +1282,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "oru",
     meaning: "to be (humble)",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1297,7 +1297,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "meshiagaru",
     meaning: "to eat; to drink (honorific)",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1312,7 +1312,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "nasaru",
     meaning: "to do (honorific)",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1327,7 +1327,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kudasaru",
     meaning: "to give (honorific)",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1342,7 +1342,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "goranninaru",
     meaning: "to look (honorific)",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1357,7 +1357,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "ossharu",
     meaning: "to say (honorific)",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1372,7 +1372,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "irassharu",
     meaning: "to be; to go; to come (honorific)",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1387,7 +1387,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "ayamaru",
     meaning: "to apologize",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1402,7 +1402,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "yurusu",
     meaning: "to forgive; to permit",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1417,7 +1417,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kakushinsuru",
     meaning: "to be certain of",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1432,7 +1432,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kotowaru",
     meaning: "to refuse; to decline",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1447,7 +1447,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "shouchisuru",
     meaning: "to consent; to agree",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1462,7 +1462,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "ukeireru",
     meaning: "to accept",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1477,7 +1477,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "uketoru",
     meaning: "to receive",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1492,7 +1492,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "hikiukeru",
     meaning: "to undertake",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1507,7 +1507,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "torikumu",
     meaning: "to tackle",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1522,7 +1522,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "torikaeru",
     meaning: "to exchange; to replace",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1537,7 +1537,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "hikidasu",
     meaning: "to draw out",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1552,7 +1552,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "omoikomu",
     meaning: "to be convinced",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1567,7 +1567,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "minaosu",
     meaning: "to review; to revise",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1582,7 +1582,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "miokuru",
     meaning: "to see off",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1597,7 +1597,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "minarau",
     meaning: "to model after",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1612,7 +1612,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "mioboeru",
     meaning: "to recognize as familiar",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1627,7 +1627,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "omoikiru",
     meaning: "to resolve to",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1642,7 +1642,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "ukemotsu",
     meaning: "to take charge of",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1657,7 +1657,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "torimodosu",
     meaning: "to recover",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1672,7 +1672,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "torinozoku",
     meaning: "to remove",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1687,7 +1687,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "hikikaesu",
     meaning: "to turn back",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1702,7 +1702,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "hikitomeru",
     meaning: "to detain",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1717,7 +1717,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "toriageru",
     meaning: "to take up; to confiscate",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1732,7 +1732,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "uketsugu",
     meaning: "to inherit",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Verbs",
     partOfSpeech: "verb",
     example: {
@@ -1751,7 +1751,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kibishii",
     meaning: "strict; severe",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Adjectives",
     partOfSpeech: "i-adjective",
     example: {
@@ -1766,7 +1766,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "mezurashii",
     meaning: "rare; unusual",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Adjectives",
     partOfSpeech: "i-adjective",
     example: {
@@ -1781,7 +1781,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "mabushii",
     meaning: "dazzling",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Adjectives",
     partOfSpeech: "i-adjective",
     example: {
@@ -1796,7 +1796,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "tanomoshii",
     meaning: "reliable; dependable",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Adjectives",
     partOfSpeech: "i-adjective",
     example: {
@@ -1811,7 +1811,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "memagurushii",
     meaning: "dizzying; rapid",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Adjectives",
     partOfSpeech: "i-adjective",
     example: {
@@ -1826,7 +1826,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "takumashii",
     meaning: "sturdy; robust",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Adjectives",
     partOfSpeech: "i-adjective",
     example: {
@@ -1841,7 +1841,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kokorobosoi",
     meaning: "helpless; anxious",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Adjectives",
     partOfSpeech: "i-adjective",
     example: {
@@ -1856,7 +1856,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kokorozuyoi",
     meaning: "reassuring",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Adjectives",
     partOfSpeech: "i-adjective",
     example: {
@@ -1871,7 +1871,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "machidooshii",
     meaning: "looking forward to",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Adjectives",
     partOfSpeech: "i-adjective",
     example: {
@@ -1886,7 +1886,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kimazui",
     meaning: "awkward",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Adjectives",
     partOfSpeech: "i-adjective",
     example: {
@@ -1901,7 +1901,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "mazui",
     meaning: "unpleasant; bad (in taste)",
     level: "N3",
-    lesson: 5,
+    lesson: 9,
     theme: "Adjectives",
     partOfSpeech: "i-adjective",
     example: {
@@ -1916,7 +1916,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kuyashii",
     meaning: "frustrating",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adjectives",
     partOfSpeech: "i-adjective",
     example: {
@@ -1931,7 +1931,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kusai",
     meaning: "smelly",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adjectives",
     partOfSpeech: "i-adjective",
     example: {
@@ -1946,7 +1946,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "toboshii",
     meaning: "scarce; poor",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adjectives",
     partOfSpeech: "i-adjective",
     example: {
@@ -1961,7 +1961,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "mazushii",
     meaning: "poor",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adjectives",
     partOfSpeech: "i-adjective",
     example: {
@@ -1976,7 +1976,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "hanayaka",
     meaning: "gorgeous; flashy",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adjectives",
     partOfSpeech: "na-adjective",
     example: {
@@ -1991,7 +1991,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "sawayaka",
     meaning: "fresh; refreshing",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adjectives",
     partOfSpeech: "na-adjective",
     example: {
@@ -2006,7 +2006,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kirabiyaka",
     meaning: "dazzling; gorgeous",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adjectives",
     partOfSpeech: "na-adjective",
     example: {
@@ -2021,7 +2021,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "daitan",
     meaning: "bold; daring",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adjectives",
     partOfSpeech: "na-adjective",
     example: {
@@ -2036,7 +2036,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "gouin",
     meaning: "forceful; pushy",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adjectives",
     partOfSpeech: "na-adjective",
     example: {
@@ -2051,7 +2051,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "youki",
     meaning: "cheerful",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adjectives",
     partOfSpeech: "na-adjective",
     example: {
@@ -2066,7 +2066,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "inki",
     meaning: "gloomy",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adjectives",
     partOfSpeech: "na-adjective",
     example: {
@@ -2081,7 +2081,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "karei",
     meaning: "splendid; magnificent",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adjectives",
     partOfSpeech: "na-adjective",
     example: {
@@ -2096,7 +2096,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "hade",
     meaning: "showy; flashy",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adjectives",
     partOfSpeech: "na-adjective",
     example: {
@@ -2111,7 +2111,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "jimi",
     meaning: "plain; sober",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adjectives",
     partOfSpeech: "na-adjective",
     example: {
@@ -2130,7 +2130,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "sassoku",
     meaning: "immediately; at once",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adverbs",
     partOfSpeech: "adverb",
     example: {
@@ -2145,7 +2145,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "man'ichi",
     meaning: "by any chance; just in case",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adverbs",
     partOfSpeech: "adverb",
     example: {
@@ -2160,7 +2160,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "izen",
     meaning: "previously; before",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adverbs",
     partOfSpeech: "adverb",
     example: {
@@ -2175,7 +2175,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "igo",
     meaning: "hereafter; after",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adverbs",
     partOfSpeech: "adverb",
     example: {
@@ -2190,7 +2190,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "ikou",
     meaning: "since",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adverbs",
     partOfSpeech: "adverb",
     example: {
@@ -2205,7 +2205,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kongo",
     meaning: "from now on",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adverbs",
     partOfSpeech: "adverb",
     example: {
@@ -2220,7 +2220,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "tousho",
     meaning: "originally",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adverbs",
     partOfSpeech: "adverb",
     example: {
@@ -2235,7 +2235,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "ganrai",
     meaning: "originally; by nature",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adverbs",
     partOfSpeech: "adverb",
     example: {
@@ -2250,7 +2250,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "honrai",
     meaning: "inherently; originally",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adverbs",
     partOfSpeech: "adverb",
     example: {
@@ -2265,7 +2265,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "genni",
     meaning: "actually; in fact",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adverbs",
     partOfSpeech: "adverb",
     example: {
@@ -2280,7 +2280,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "jitsunotokoro",
     meaning: "as a matter of fact",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adverbs",
     partOfSpeech: "adverb",
     example: {
@@ -2295,7 +2295,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "jissaini",
     meaning: "actually; really",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adverbs",
     partOfSpeech: "adverb",
     example: {
@@ -2310,7 +2310,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "ooini",
     meaning: "greatly; very much",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adverbs",
     partOfSpeech: "adverb",
     example: {
@@ -2325,7 +2325,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "sukunakarazu",
     meaning: "not a little; quite",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adverbs",
     partOfSpeech: "adverb",
     example: {
@@ -2340,7 +2340,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "tomoni",
     meaning: "together",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Adverbs",
     partOfSpeech: "adverb",
     example: {
@@ -2359,7 +2359,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "nante",
     meaning: "such as; how (surprised)",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Particles",
     partOfSpeech: "particle",
     example: {
@@ -2374,7 +2374,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "nanka",
     meaning: "things like; such as",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Particles",
     partOfSpeech: "particle",
     example: {
@@ -2389,7 +2389,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "datte",
     meaning: "even; because",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Particles",
     partOfSpeech: "particle",
     example: {
@@ -2404,7 +2404,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "nari",
     meaning: "as soon as; or",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Particles",
     partOfSpeech: "particle",
     example: {
@@ -2419,7 +2419,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "yara",
     meaning: "whether...or; wondering",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Particles",
     partOfSpeech: "particle",
     example: {
@@ -2438,7 +2438,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "keredomo",
     meaning: "however; but",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Conjunctions",
     partOfSpeech: "conjunction",
     example: {
@@ -2453,7 +2453,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "sorede",
     meaning: "and then; so",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Conjunctions",
     partOfSpeech: "conjunction",
     example: {
@@ -2468,7 +2468,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "sorekara",
     meaning: "and then",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Conjunctions",
     partOfSpeech: "conjunction",
     example: {
@@ -2483,7 +2483,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "soshite",
     meaning: "and; then",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Conjunctions",
     partOfSpeech: "conjunction",
     example: {
@@ -2498,7 +2498,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "sokode",
     meaning: "therefore; then",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Conjunctions",
     partOfSpeech: "conjunction",
     example: {
@@ -2513,7 +2513,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "soretomo",
     meaning: "or (alternative)",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Conjunctions",
     partOfSpeech: "conjunction",
     example: {
@@ -2528,7 +2528,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "nazenara",
     meaning: "because",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Conjunctions",
     partOfSpeech: "conjunction",
     example: {
@@ -2543,7 +2543,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "sonokekka",
     meaning: "as a result",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Conjunctions",
     partOfSpeech: "conjunction",
     example: {
@@ -2562,7 +2562,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kirakira",
     meaning: "glittering; sparkling",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Onomatopoeia",
     partOfSpeech: "adverb",
     example: {
@@ -2577,7 +2577,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "sappari",
     meaning: "refreshing; completely (not at all)",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Onomatopoeia",
     partOfSpeech: "adverb",
     example: {
@@ -2592,7 +2592,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "sukkiri",
     meaning: "clear; refreshing",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Onomatopoeia",
     partOfSpeech: "adverb",
     example: {
@@ -2607,7 +2607,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "tekipaki",
     meaning: "promptly; efficiently",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Onomatopoeia",
     partOfSpeech: "adverb",
     example: {
@@ -2622,7 +2622,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "donyori",
     meaning: "heavily clouded; gloomy",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Onomatopoeia",
     partOfSpeech: "adverb",
     example: {
@@ -2637,7 +2637,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "bonyari",
     meaning: "dimly; vaguely",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Onomatopoeia",
     partOfSpeech: "adverb",
     example: {
@@ -2652,7 +2652,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "mechakucha",
     meaning: "chaotic; in disorder",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Onomatopoeia",
     partOfSpeech: "adverb",
     example: {
@@ -2671,7 +2671,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kiwotorinaosu",
     meaning: "to recover one's spirits",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Idioms",
     partOfSpeech: "expression",
     example: {
@@ -2686,7 +2686,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "kiwoyurusu",
     meaning: "to let one's guard down",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Idioms",
     partOfSpeech: "expression",
     example: {
@@ -2701,7 +2701,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "menihairu",
     meaning: "to come into view",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Idioms",
     partOfSpeech: "expression",
     example: {
@@ -2716,7 +2716,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "mimiwokatamukeru",
     meaning: "to listen attentively",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Idioms",
     partOfSpeech: "expression",
     example: {
@@ -2731,7 +2731,7 @@ export const vocabN3C: VocabData[] = [
     romaji: "tewonuku",
     meaning: "to cut corners; to do sloppy work",
     level: "N3",
-    lesson: 5,
+    lesson: 10,
     theme: "Idioms",
     partOfSpeech: "expression",
     example: {

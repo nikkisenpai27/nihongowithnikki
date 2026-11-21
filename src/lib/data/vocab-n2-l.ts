@@ -15,7 +15,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reisei",
     meaning: "calmness",
     level: "N2",
-    lesson: 18,
+    lesson: 41,
     theme: "Mind & State",
     partOfSpeech: "na-adjective",
     example: {
@@ -30,7 +30,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reitou",
     meaning: "freezing",
     level: "N2",
-    lesson: 18,
+    lesson: 41,
     theme: "Science & Food",
     partOfSpeech: "noun",
     example: {
@@ -45,7 +45,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reikyaku",
     meaning: "cooling",
     level: "N2",
-    lesson: 18,
+    lesson: 41,
     theme: "Science & Industry",
     partOfSpeech: "noun",
     example: {
@@ -60,7 +60,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reibou",
     meaning: "air conditioning",
     level: "N2",
-    lesson: 18,
+    lesson: 41,
     theme: "Daily Life",
     partOfSpeech: "noun",
     example: {
@@ -75,7 +75,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reizou",
     meaning: "refrigeration",
     level: "N2",
-    lesson: 18,
+    lesson: 41,
     theme: "Daily Life",
     partOfSpeech: "noun",
     example: {
@@ -90,7 +90,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reiguu",
     meaning: "cold treatment",
     level: "N2",
-    lesson: 18,
+    lesson: 41,
     theme: "Society & Relations",
     partOfSpeech: "noun",
     example: {
@@ -105,7 +105,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reishou",
     meaning: "sneer",
     level: "N2",
-    lesson: 19,
+    lesson: 41,
     theme: "Communication & Emotion",
     partOfSpeech: "noun",
     example: {
@@ -120,7 +120,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reisai",
     meaning: "small-scale",
     level: "N2",
-    lesson: 19,
+    lesson: 41,
     theme: "Business & Finance",
     partOfSpeech: "na-adjective",
     example: {
@@ -135,7 +135,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reiraku",
     meaning: "decline, fall",
     level: "N2",
-    lesson: 19,
+    lesson: 41,
     theme: "Life & Society",
     partOfSpeech: "noun",
     example: {
@@ -150,7 +150,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reika",
     meaning: "below zero",
     level: "N2",
-    lesson: 19,
+    lesson: 41,
     theme: "Science & Weather",
     partOfSpeech: "noun",
     example: {
@@ -165,7 +165,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reinen",
     meaning: "every year",
     level: "N2",
-    lesson: 19,
+    lesson: 41,
     theme: "Time & Frequency",
     partOfSpeech: "noun",
     example: {
@@ -180,7 +180,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reiji",
     meaning: "illustration by example",
     level: "N2",
-    lesson: 19,
+    lesson: 41,
     theme: "Method & Documents",
     partOfSpeech: "noun",
     example: {
@@ -195,7 +195,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reigai",
     meaning: "exception",
     level: "N2",
-    lesson: 19,
+    lesson: 41,
     theme: "Logic & Law",
     partOfSpeech: "noun",
     example: {
@@ -210,7 +210,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reibun",
     meaning: "example sentence",
     level: "N2",
-    lesson: 19,
+    lesson: 41,
     theme: "Education & Language",
     partOfSpeech: "noun",
     example: {
@@ -225,7 +225,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "koyomi",
     meaning: "calendar",
     level: "N2",
-    lesson: 19,
+    lesson: 41,
     theme: "Time & Culture",
     partOfSpeech: "noun",
     example: {
@@ -240,7 +240,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rekidai",
     meaning: "successive generations",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "History & Politics",
     partOfSpeech: "noun",
     example: {
@@ -255,7 +255,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rekihou",
     meaning: "tour, visiting places",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Diplomacy & Travel",
     partOfSpeech: "noun",
     example: {
@@ -270,7 +270,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryuuiki",
     meaning: "river basin",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Geography & Nature",
     partOfSpeech: "noun",
     example: {
@@ -285,7 +285,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryuunyuu",
     meaning: "inflow",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Economy & Movement",
     partOfSpeech: "noun",
     example: {
@@ -300,7 +300,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryuuchou",
     meaning: "fluent",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Quality & Language",
     partOfSpeech: "na-adjective",
     example: {
@@ -315,7 +315,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryuusei",
     meaning: "meteor",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Science & Nature",
     partOfSpeech: "noun",
     example: {
@@ -330,7 +330,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryuuhyou",
     meaning: "drift ice",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Nature & Geography",
     partOfSpeech: "noun",
     example: {
@@ -345,7 +345,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryuuyou",
     meaning: "diversion, misuse of funds",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Finance & Administration",
     partOfSpeech: "noun",
     example: {
@@ -360,7 +360,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryuuho",
     meaning: "reservation, retention",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Law & Administration",
     partOfSpeech: "noun",
     example: {
@@ -375,7 +375,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryuunin",
     meaning: "remaining in office",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Politics & Career",
     partOfSpeech: "noun",
     example: {
@@ -390,7 +390,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryuuchi",
     meaning: "detention",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Law & Police",
     partOfSpeech: "noun",
     example: {
@@ -405,7 +405,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rusuban",
     meaning: "house-sitting",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Daily Life",
     partOfSpeech: "noun",
     example: {
@@ -420,7 +420,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "iou",
     meaning: "sulfur",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Science & Chemistry",
     partOfSpeech: "noun",
     example: {
@@ -435,7 +435,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryuuki",
     meaning: "uplift",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Science & Geology",
     partOfSpeech: "noun",
     example: {
@@ -450,7 +450,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "tatsumaki",
     meaning: "tornado",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Nature & Disaster",
     partOfSpeech: "noun",
     example: {
@@ -465,7 +465,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryuushi",
     meaning: "particle",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Science & Physics",
     partOfSpeech: "noun",
     example: {
@@ -480,7 +480,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ruishin",
     meaning: "progression",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Mathematics & Finance",
     partOfSpeech: "noun",
     example: {
@@ -495,7 +495,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ruiseki",
     meaning: "accumulation",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Change & Process",
     partOfSpeech: "noun",
     example: {
@@ -510,7 +510,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ruigo",
     meaning: "synonym",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Language",
     partOfSpeech: "noun",
     example: {
@@ -525,7 +525,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ruiji",
     meaning: "similarity",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Comparison & Analysis",
     partOfSpeech: "noun",
     example: {
@@ -540,7 +540,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ruirei",
     meaning: "similar example",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Method & Logic",
     partOfSpeech: "noun",
     example: {
@@ -555,7 +555,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ruikei",
     meaning: "pattern, model",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Abstract Concepts",
     partOfSpeech: "noun",
     example: {
@@ -570,7 +570,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ruisui",
     meaning: "analogy",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Logic & Method",
     partOfSpeech: "noun",
     example: {
@@ -585,7 +585,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryokaku",
     meaning: "passenger",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Transport",
     partOfSpeech: "noun",
     example: {
@@ -600,7 +600,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryoken",
     meaning: "passport",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Travel & Administration",
     partOfSpeech: "noun",
     example: {
@@ -615,7 +615,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryotei",
     meaning: "itinerary",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Travel",
     partOfSpeech: "noun",
     example: {
@@ -630,7 +630,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryohi",
     meaning: "travel expenses",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Finance & Travel",
     partOfSpeech: "noun",
     example: {
@@ -645,7 +645,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "tabisaki",
     meaning: "travel destination",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Travel",
     partOfSpeech: "noun",
     example: {
@@ -660,7 +660,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "tabiji",
     meaning: "journey",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Travel & Literature",
     partOfSpeech: "noun",
     example: {
@@ -675,7 +675,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryojou",
     meaning: "travel sentiment",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Emotion & Travel",
     partOfSpeech: "noun",
     example: {
@@ -690,7 +690,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rishuu",
     meaning: "completing a course",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Education",
     partOfSpeech: "noun",
     example: {
@@ -705,7 +705,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rireki",
     meaning: "personal history",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Administration & Documents",
     partOfSpeech: "noun",
     example: {
@@ -720,7 +720,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "hakimono",
     meaning: "footwear",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Daily Life",
     partOfSpeech: "noun",
     example: {
@@ -735,7 +735,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryoushuu",
     meaning: "receipt",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Finance & Business",
     partOfSpeech: "noun",
     example: {
@@ -750,7 +750,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryoudo",
     meaning: "territory",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Politics & Geography",
     partOfSpeech: "noun",
     example: {
@@ -765,7 +765,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryouchi",
     meaning: "domain, territory",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "History & Geography",
     partOfSpeech: "noun",
     example: {
@@ -780,7 +780,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryoukai",
     meaning: "territorial waters",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Politics & Geography",
     partOfSpeech: "noun",
     example: {
@@ -795,7 +795,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryoukuu",
     meaning: "airspace",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Politics & Security",
     partOfSpeech: "noun",
     example: {
@@ -810,7 +810,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryoushi",
     meaning: "consul",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Diplomacy",
     partOfSpeech: "noun",
     example: {
@@ -825,7 +825,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryoukou",
     meaning: "favorable",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Quality & State",
     partOfSpeech: "na-adjective",
     example: {
@@ -840,7 +840,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryoushitsu",
     meaning: "good quality",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Quality & Property",
     partOfSpeech: "na-adjective",
     example: {
@@ -855,7 +855,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryousha",
     meaning: "both parties",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Abstract & Society",
     partOfSpeech: "noun",
     example: {
@@ -870,7 +870,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryoumen",
     meaning: "both sides",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Abstract Concepts",
     partOfSpeech: "noun",
     example: {
@@ -885,7 +885,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryousan",
     meaning: "mass production",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Industry & Manufacturing",
     partOfSpeech: "noun",
     example: {
@@ -900,7 +900,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rakurai",
     meaning: "lightning strike",
     level: "N2",
-    lesson: 19,
+    lesson: 42,
     theme: "Nature & Disaster",
     partOfSpeech: "noun",
     example: {
@@ -915,7 +915,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rakuyou",
     meaning: "fallen leaves",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Nature & Seasons",
     partOfSpeech: "noun",
     example: {
@@ -930,7 +930,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rakudai",
     meaning: "failing a grade",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Education",
     partOfSpeech: "noun",
     example: {
@@ -945,7 +945,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rakusatsu",
     meaning: "winning a bid",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Business & Trade",
     partOfSpeech: "noun",
     example: {
@@ -960,7 +960,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rakusei",
     meaning: "completion",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Construction & Industry",
     partOfSpeech: "noun",
     example: {
@@ -975,7 +975,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rakugo",
     meaning: "rakugo, comic storytelling",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Arts & Culture",
     partOfSpeech: "noun",
     example: {
@@ -990,7 +990,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rakuen",
     meaning: "paradise",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Abstract & Nature",
     partOfSpeech: "noun",
     example: {
@@ -1005,7 +1005,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "gakufu",
     meaning: "musical score",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Arts & Music",
     partOfSpeech: "noun",
     example: {
@@ -1020,7 +1020,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rakushou",
     meaning: "easy win",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Sports & Result",
     partOfSpeech: "noun",
     example: {
@@ -1035,7 +1035,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rakunou",
     meaning: "dairy farming",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Agriculture & Industry",
     partOfSpeech: "noun",
     example: {
@@ -1050,7 +1050,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "raretsu",
     meaning: "enumeration",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Method & Documents",
     partOfSpeech: "noun",
     example: {
@@ -1065,7 +1065,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rasen",
     meaning: "spiral",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Science & Shape",
     partOfSpeech: "noun",
     example: {
@@ -1080,7 +1080,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ranyou",
     meaning: "abuse, misuse",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Law & Ethics",
     partOfSpeech: "noun",
     example: {
@@ -1095,7 +1095,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ranpatsu",
     meaning: "random firing or issuing",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Actions & Behavior",
     partOfSpeech: "noun",
     example: {
@@ -1110,7 +1110,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ranpaku",
     meaning: "egg white",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Food & Science",
     partOfSpeech: "noun",
     example: {
@@ -1125,7 +1125,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ran'ou",
     meaning: "egg yolk",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Food & Science",
     partOfSpeech: "noun",
     example: {
@@ -1140,7 +1140,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "hadashi",
     meaning: "barefoot",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Body & Daily Life",
     partOfSpeech: "noun",
     example: {
@@ -1155,7 +1155,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "roudou",
     meaning: "labor",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Society & Economy",
     partOfSpeech: "noun",
     example: {
@@ -1170,7 +1170,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rouryoku",
     meaning: "labor, effort",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Effort & Work",
     partOfSpeech: "noun",
     example: {
@@ -1185,7 +1185,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "roushi",
     meaning: "labor and management",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Business & Labor",
     partOfSpeech: "noun",
     example: {
@@ -1200,7 +1200,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "roukyuu",
     meaning: "aging, dilapidation",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Industry & State",
     partOfSpeech: "noun",
     example: {
@@ -1215,7 +1215,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rouka",
     meaning: "aging",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Health & Biology",
     partOfSpeech: "noun",
     example: {
@@ -1230,7 +1230,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "roujin",
     meaning: "elderly person",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Society",
     partOfSpeech: "noun",
     example: {
@@ -1245,7 +1245,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rourei",
     meaning: "old age",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Society & Life",
     partOfSpeech: "noun",
     example: {
@@ -1260,7 +1260,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "shinise",
     meaning: "long-established shop",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Business & Culture",
     partOfSpeech: "noun",
     example: {
@@ -1275,7 +1275,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rouhi",
     meaning: "waste",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Finance & Behavior",
     partOfSpeech: "noun",
     example: {
@@ -1290,7 +1290,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rounin",
     meaning: "ronin, unemployed",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Society & Education",
     partOfSpeech: "noun",
     example: {
@@ -1305,7 +1305,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rouei",
     meaning: "leakage",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Security & Administration",
     partOfSpeech: "noun",
     example: {
@@ -1320,7 +1320,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rouden",
     meaning: "electric leakage",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Daily Life & Science",
     partOfSpeech: "noun",
     example: {
@@ -1335,7 +1335,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rousoku",
     meaning: "candle",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Daily Life",
     partOfSpeech: "noun",
     example: {
@@ -1350,7 +1350,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rokuon",
     meaning: "recording",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Technology & Media",
     partOfSpeech: "noun",
     example: {
@@ -1365,7 +1365,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rokuga",
     meaning: "video recording",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Technology & Media",
     partOfSpeech: "noun",
     example: {
@@ -1380,7 +1380,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rikugun",
     meaning: "army",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Military",
     partOfSpeech: "noun",
     example: {
@@ -1395,7 +1395,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rikuun",
     meaning: "land transport",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Industry & Transport",
     partOfSpeech: "noun",
     example: {
@@ -1410,7 +1410,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rikkyou",
     meaning: "overpass",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Transport & Architecture",
     partOfSpeech: "noun",
     example: {
@@ -1425,7 +1425,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rikuro",
     meaning: "land route",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Transport",
     partOfSpeech: "noun",
     example: {
@@ -1440,7 +1440,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rinjin",
     meaning: "neighbor",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Society & Daily Life",
     partOfSpeech: "noun",
     example: {
@@ -1455,7 +1455,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rinkoku",
     meaning: "neighboring country",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Geography & Politics",
     partOfSpeech: "noun",
     example: {
@@ -1470,7 +1470,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rinka",
     meaning: "neighboring house",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Daily Life",
     partOfSpeech: "noun",
     example: {
@@ -1485,7 +1485,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rindou",
     meaning: "forest road",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Nature & Transport",
     partOfSpeech: "noun",
     example: {
@@ -1500,7 +1500,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rinshou",
     meaning: "round (music)",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Arts & Music",
     partOfSpeech: "noun",
     example: {
@@ -1515,7 +1515,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rinban",
     meaning: "taking turns",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Method & Society",
     partOfSpeech: "noun",
     example: {
@@ -1530,7 +1530,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "renchuu",
     meaning: "group, gang",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Society",
     partOfSpeech: "noun",
     example: {
@@ -1545,7 +1545,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "renkyuu",
     meaning: "consecutive holidays",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Time & Daily Life",
     partOfSpeech: "noun",
     example: {
@@ -1560,7 +1560,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rendou",
     meaning: "linkage",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Technology & Method",
     partOfSpeech: "noun",
     example: {
@@ -1575,7 +1575,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rentai",
     meaning: "solidarity",
     level: "N2",
-    lesson: 19,
+    lesson: 43,
     theme: "Society",
     partOfSpeech: "noun",
     example: {
@@ -1590,7 +1590,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "renso",
     meaning: "association",
     level: "N2",
-    lesson: 19,
+    lesson: 44,
     theme: "Mind & Thought",
     partOfSpeech: "noun",
     example: {
@@ -1605,7 +1605,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "renpatsu",
     meaning: "succession of shots",
     level: "N2",
-    lesson: 19,
+    lesson: 44,
     theme: "Actions & Process",
     partOfSpeech: "noun",
     example: {
@@ -1620,7 +1620,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "renmei",
     meaning: "league, federation",
     level: "N2",
-    lesson: 19,
+    lesson: 44,
     theme: "Society & Politics",
     partOfSpeech: "noun",
     example: {
@@ -1635,7 +1635,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rensai",
     meaning: "serialization",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Media & Writing",
     partOfSpeech: "noun",
     example: {
@@ -1650,7 +1650,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "renpou",
     meaning: "federation",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Politics & Government",
     partOfSpeech: "noun",
     example: {
@@ -1665,7 +1665,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ronsou",
     meaning: "controversy",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Media & Society",
     partOfSpeech: "noun",
     example: {
@@ -1680,7 +1680,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ronkyuu",
     meaning: "touching on, referring to",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Writing & Logic",
     partOfSpeech: "noun",
     example: {
@@ -1695,7 +1695,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ronkaku",
     meaning: "commentator",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Media & Society",
     partOfSpeech: "noun",
     example: {
@@ -1710,7 +1710,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ronsen",
     meaning: "debate",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Politics & Media",
     partOfSpeech: "noun",
     example: {
@@ -1725,7 +1725,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ronbun",
     meaning: "thesis",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Education & Writing",
     partOfSpeech: "noun",
     example: {
@@ -1740,7 +1740,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ronshi",
     meaning: "purport of an argument",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Logic & Philosophy",
     partOfSpeech: "noun",
     example: {
@@ -1755,7 +1755,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ronpa",
     meaning: "refutation",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Logic & Debate",
     partOfSpeech: "noun",
     example: {
@@ -1770,7 +1770,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ronshou",
     meaning: "demonstration",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Logic & Philosophy",
     partOfSpeech: "noun",
     example: {
@@ -1785,7 +1785,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ronpyou",
     meaning: "review, commentary",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Media & Writing",
     partOfSpeech: "noun",
     example: {
@@ -1800,7 +1800,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rongi",
     meaning: "debate, discussion",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Communication & Politics",
     partOfSpeech: "noun",
     example: {
@@ -1815,7 +1815,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ronjutsu",
     meaning: "discourse, exposition",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Writing & Documents",
     partOfSpeech: "noun",
     example: {
@@ -1830,7 +1830,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "raiu",
     meaning: "thunderstorm",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Weather & Nature",
     partOfSpeech: "noun",
     example: {
@@ -1845,7 +1845,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "raimei",
     meaning: "thunder",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Nature & Sound",
     partOfSpeech: "noun",
     example: {
@@ -1860,7 +1860,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "raikou",
     meaning: "lightning flash",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Nature & Weather",
     partOfSpeech: "noun",
     example: {
@@ -1875,7 +1875,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reien",
     meaning: "cemetery",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Society & Culture",
     partOfSpeech: "noun",
     example: {
@@ -1890,7 +1890,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reikan",
     meaning: "inspiration, spiritual sense",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Mind & Religion",
     partOfSpeech: "noun",
     example: {
@@ -1905,7 +1905,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rinri",
     meaning: "ethics",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Philosophy & Society",
     partOfSpeech: "noun",
     example: {
@@ -1920,7 +1920,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rekkyou",
     meaning: "great powers",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Politics & History",
     partOfSpeech: "noun",
     example: {
@@ -1935,7 +1935,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rettou",
     meaning: "archipelago",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Geography",
     partOfSpeech: "noun",
     example: {
@@ -1950,7 +1950,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "resseki",
     meaning: "attending",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Events & Ceremony",
     partOfSpeech: "noun",
     example: {
@@ -1965,7 +1965,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rekkoku",
     meaning: "nations",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Politics & Diplomacy",
     partOfSpeech: "noun",
     example: {
@@ -1980,7 +1980,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rekkyo",
     meaning: "enumeration",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Method & Documents",
     partOfSpeech: "noun",
     example: {
@@ -1995,7 +1995,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ressei",
     meaning: "inferior position",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Competition & State",
     partOfSpeech: "noun",
     example: {
@@ -2010,7 +2010,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rekka",
     meaning: "deterioration",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Quality & Process",
     partOfSpeech: "noun",
     example: {
@@ -2025,7 +2025,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "retsuaku",
     meaning: "poor quality",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Quality & Property",
     partOfSpeech: "na-adjective",
     example: {
@@ -2040,7 +2040,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rettou",
     meaning: "inferior",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Quality & Judgment",
     partOfSpeech: "noun",
     example: {
@@ -2055,7 +2055,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "reikou",
     meaning: "observance",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Society & Administration",
     partOfSpeech: "noun",
     example: {
@@ -2070,7 +2070,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ren'ai",
     meaning: "love, romance",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Emotion & Life",
     partOfSpeech: "noun",
     example: {
@@ -2085,7 +2085,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "renbo",
     meaning: "admiration, love",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Emotion",
     partOfSpeech: "noun",
     example: {
@@ -2100,7 +2100,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "gyokai",
     meaning: "fish and shellfish",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Food & Nature",
     partOfSpeech: "noun",
     example: {
@@ -2115,7 +2115,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "gyorai",
     meaning: "torpedo",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Military",
     partOfSpeech: "noun",
     example: {
@@ -2130,7 +2130,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "gyoson",
     meaning: "fishing village",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Geography & Society",
     partOfSpeech: "noun",
     example: {
@@ -2145,7 +2145,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "gyokou",
     meaning: "fishing port",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Geography & Industry",
     partOfSpeech: "noun",
     example: {
@@ -2160,7 +2160,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "gyokaku",
     meaning: "catch",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Industry & Agriculture",
     partOfSpeech: "noun",
     example: {
@@ -2175,7 +2175,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "ryoushi",
     meaning: "hunter",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Occupation",
     partOfSpeech: "noun",
     example: {
@@ -2190,7 +2190,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "resshou",
     meaning: "laceration",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Health & Body",
     partOfSpeech: "noun",
     example: {
@@ -2205,7 +2205,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rinkai",
     meaning: "coastal",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Geography",
     partOfSpeech: "noun",
     example: {
@@ -2220,7 +2220,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rinji",
     meaning: "temporary, extra",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Administration & Daily Life",
     partOfSpeech: "noun",
     example: {
@@ -2235,7 +2235,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rinshou",
     meaning: "clinical",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Health & Science",
     partOfSpeech: "noun",
     example: {
@@ -2250,7 +2250,7 @@ export const vocabN2L: VocabData[] = [
     romaji: "rinjuu",
     meaning: "deathbed",
     level: "N2",
-    lesson: 20,
+    lesson: 44,
     theme: "Life & Event",
     partOfSpeech: "noun",
     example: {

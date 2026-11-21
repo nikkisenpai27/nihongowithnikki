@@ -56,9 +56,10 @@ const POS_INFO: Record<string, { jp: string; en: string }> = {
 function firstLessonForLevel(level: LevelFilter): string {
   if (level === "N4") return "26";
   if (level === "N5") return "1";
-  if (level === "N3") return "1"; // N3 has its own lessons 1-22
-  if (level === "N2") return "1"; // N2 has its own lessons 1-22
-  return "all"; // N1 uses chapter themes, not lessons
+  if (level === "N3") return "1"; // N3 has 45 lessons 1-45
+  if (level === "N2") return "1"; // N2 has 50 lessons 1-50
+  if (level === "N1") return "1"; // N1 has 120 lessons 1-120
+  return "all";
 }
 
 export function VocabView() {
