@@ -34,6 +34,7 @@ import { vocabN2K } from "./vocab-n2-k";
 import { vocabN2L } from "./vocab-n2-l";
 import { vocabN2M } from "./vocab-n2-m";
 import { vocabN2N } from "./vocab-n2-n";
+import { vocabN2O } from "./vocab-n2-o";
 import { vocabN1A } from "./vocab-n1-a";
 import { vocabN1B } from "./vocab-n1-b";
 import { vocabN1C } from "./vocab-n1-c";
@@ -100,6 +101,7 @@ const allVocab: VocabData[] = [
   ...vocabN2L,
   ...vocabN2M,
   ...vocabN2N,
+  ...vocabN2O,
   ...vocabN1A,
   ...vocabN1B,
   ...vocabN1C,
