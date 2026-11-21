@@ -1,0 +1,1100 @@
+     1→import type { GrammarData } from "@/lib/types";
+     2→
+     3→// Furigana notation: kanji readings are written inline as 漢字[かんじ].
+     4→// A [reading] immediately following a run of kanji attaches to that whole run.
+     5→// Verb okurigana stays outside the bracket: 食[た]べる, 読[よ]んだり.
+     6→//
+     7→// This file covers N2-level grammar points (Shinzaizen Master style),
+     8→// chunk D, IDs gn2-151 .. gn2-200. No lesson field. Distinct from chunks A, B, C.
+     9→// 50 grammar points across 10 categories: Conditionals, Cause/Reason,
+    10→// Time/Sequence, Contrast, Assumption, Passive/Causative, Honorific,
+    11→// Particles, Conjunctions, Modifiers.
+    12→
+    13→export const grammarN2D: GrammarData[] = [
+    14→  // ────────────────────────────────────────────────────────────────
+    15→  // CONDITIONALS — 条件
+    16→  // ────────────────────────────────────────────────────────────────
+    17→
+    18→  {
+    19→    id: "gn2-151",
+    20→    point: "〜ことなしに",
+    21→    reading: "〜ことなしに",
+    22→    level: "N2",
+    23→    category: "Conditionals",
+    24→    meaning: "Without doing X (the main clause cannot be realized)",
+    25→    structure: "V辞書形 + ことなしに",
+    26→    explanation:
+    27→      "Indicates that without doing X, the result in the main clause cannot be achieved. A formal, written-style equivalent of 〜ないで / 〜ずに, often paired with a negative or impossibility statement.",
+    28→    formation:
+    29→      "V辞書形 + ことなしに (努力[どりょく]することなしに / 理解[りかい]することなしに)",
+    30→    examples: [
+    31→      { jp: "努力[どりょく]することなしに、成功[せいこう]はおぼつかない。", en: "Without making an effort, success is uncertain." },
+    32→      { jp: "相手[あいて]の立場[たちば]を考[かんが]えることなしに、本当[ほんとう]の解決[かいけつ]はできない。", en: "Without considering the other party's standpoint, a true resolution cannot be reached." }
+    33→    ],
+    34→    notes:
+    35→      "硬い書き言葉で、「〜ないで / 〜ずに」とほぼ同じ。後件に不可能・困難を示す表現が来ることが多い。",
+    36→    related: ["gn2-156"]
+    37→  },
+    38→
+    39→  {
+    40→    id: "gn2-152",
+    41→    point: "〜にしろ",
+    42→    reading: "〜にしろ",
+    43→    level: "N2",
+    44→    category: "Conditionals",
+    45→    meaning: "Even if; whether or not (single form, concessive)",
+    46→    structure: "V普通形 + にしろ / N + にしろ / Na-adj + にしろ / I-adj + にしろ",
+    47→    explanation:
+    48→      "A concessive expression meaning 'even if' or 'even assuming that...'. Used alone to acknowledge a hypothetical case before stating the main point. Distinct from the doubled 〜にしろ〜にしろ pattern (covered in chunk B).",
+    49→    formation:
+    50→      "V辞書形 + にしろ (行[い]くにしろ)\nV-ない形 + にしろ (行[い]かないにしろ)\nN + にしろ (学生[がくせい]にしろ)\nI-adj + にしろ (忙[いそが]しいにしろ)",
+    51→    examples: [
+    52→      { jp: "忙[いそが]しいにしろ、毎日[まいにち]少[すこ]しは運動[うんどう]した方[ほう]がいい。", en: "Even if you are busy, it is better to exercise a little every day." },
+    53→      { jp: "彼[かれ]の言[い]うことが本当[ほんとう]にしろ、確認[かくにん]なしに信用[しんよう]するわけにはいかない。", en: "Even if what he says is true, I cannot trust him without verification." }
+    54→    ],
+    55→    notes:
+    56→      "単独でも「〜にしろ〜にしろ」の重複形でも使う。本項では単独用法を中心に扱う。「〜にせよ」(D)よりやや口頭的。",
+    57→    related: ["gn2-153", "gn2-154"]
+    58→  },
+    59→
+    60→  {
+    61→    id: "gn2-153",
+    62→    point: "〜にせよ",
+    63→    reading: "〜にせよ",
+    64→    level: "N2",
+    65→    category: "Conditionals",
+    66→    meaning: "Even if; even assuming that",
+    67→    structure: "V普通形 + にせよ / N + にせよ / Na-adj + にせよ / I-adj + にせよ",
+    68→    explanation:
+    69→      "A concessive expression meaning 'even if' or 'even assuming that...'. Slightly more formal than 〜にしろ; both are largely interchangeable. Used to acknowledge a situation (real or hypothetical) before a contrasting main clause.",
+    70→    formation:
+    71→      "V辞書形 + にせよ (行[い]くにせよ)\nV-ない形 + にせよ (行[い]かないにせよ)\nN + にせよ (雨[あめ]にせよ)\nI-adj + にせよ (難[むずか]しいにせよ)",
+    72→    examples: [
+    73→      { jp: "結果[けっか]が悪[わる]かったにせよ、最後[さいご]まで諦[あきら]めなかったことは評価[ひょうか]できる。", en: "Even if the result was bad, the fact that you did not give up until the end deserves appreciation." },
+    74→      { jp: "忙[いそが]しいにせよ、連絡[れんらく]くらいはするべきだった。", en: "Even if you were busy, you should have at least contacted me." }
+    75→    ],
+    76→    notes:
+    77→      "「〜にしろ」(D)と同じく譲歩を表すが、やや改まった硬い表現。重複形「〜にせよ〜にせよ」は chunk B で扱う。",
+    78→    related: ["gn2-152", "gn2-154"]
+    79→  },
+    80→
+    81→  {
+    82→    id: "gn2-154",
+    83→    point: "〜にしても",
+    84→    reading: "〜にしても",
+    85→    level: "N2",
+    86→    category: "Conditionals",
+    87→    meaning: "Even if; even so; whether or not",
+    88→    structure: "V普通形 + にしても / N + だ + にしても / Na-adj + だ + にしても / I-adj + にしても",
+    89→    explanation:
+    90→      "A common concessive meaning 'even if' or 'even so'. Used to acknowledge a situation (real or hypothetical) before stating a contrasting main clause. More conversational than 〜にせよ / 〜にしろ.",
+    91→    formation:
+    92→      "V辞書形 + にしても (行[い]くにしても)\nV-た形 + にしても (行[い]ったにしても)\nN + にしても (学生[がくせい]にしても)\nI-adj + にしても (高[たか]いにしても)",
+    93→    examples: [
+    94→      { jp: "雨[あめ]が降[ふ]るにしても、大会[たいかい]は予定[よてい]どおり行[おこな]う。", en: "Even if it rains, the tournament will be held as scheduled." },
+    95→      { jp: "高[たか]いにしても、品質[ひんしつ]がよければ買[か]いたい。", en: "Even if it is expensive, I would like to buy it if the quality is good." }
+    96→    ],
+    97→    notes:
+    98→      "「〜ても」よりやや硬い譲歩表現。「〜にしては」(B)は基準との不一致を示す別表現で混同しやすい。",
+    99→    related: ["gn2-152", "gn2-153"]
+   100→  },
+   101→
+   102→  {
+   103→    id: "gn2-155",
+   104→    point: "〜とあれば",
+   105→    reading: "〜とあれば",
+   106→    level: "N2",
+   107→    category: "Conditionals",
+   108→    meaning: "If it is the case that; since (a special situation calls for it)",
+   109→    structure: "V普通形 + とあれば / N + (だ)とあれば / Na-adj + だとあれば / I-adj + とあれば",
+   110→    explanation:
+   111→      "Used when a special circumstance or request makes the condition necessary: 'if it is the case that..., since... is requested'. Implies willingness to make an exception or take special action because of the situation.",
+   112→    formation:
+   113→      "V辞書形 + とあれば (行[い]くとあれば)\nN + だとあれば / N + とあれば (子供[こども]のためだとあれば)\nI-adj + とあれば (必要[ひつよう]だとあれば)",
+   114→    examples: [
+   115→      { jp: "子供[こども]の将来[しょうらい]のためだとあれば、多少[たしょう]の犠牲[ぎせい]は払[はら]うつもりだ。", en: "If it is for the children's future, I intend to make some sacrifices." },
+   116→      { jp: "皆[みな]さんがそう望[のぞ]むとあれば、計画[けいかく]を変更[へんこう]しましょう。", en: "If that is what everyone wishes, let us change the plan." }
+   117→    ],
+   118→    notes:
+   119→      "「〜なら」に近いが、特別な事情・要望・条件を提示し、それに応えるというニュアンスを持つ。硬い表現。",
+   120→    related: ["gn2-152", "gn2-154"]
+   121→  },
+   122→
+   123→  {
+   124→    id: "gn2-156",
+   125→    point: "〜てからでないと〜ない",
+   126→    reading: "〜てからでないと〜ない",
+   127→    level: "N2",
+   128→    category: "Conditionals",
+   129→    meaning: "Unless one does X first, (Y cannot happen)",
+   130→    structure: "V-て形 + からでないと + 〜ない / V-て形 + からでなければ + 〜ない",
+   131→    explanation:
+   132→      "Indicates that an action must be completed before another can take place. The following clause is always negative, expressing that without the prior action, the subsequent one is impossible.",
+   133→    formation:
+   134→      "V-て + からでないと + 否定 (調[しら]べてからでないと分[わ]からない)\nV-て + からでなければ + 否定 (会[あ]ってからでなければ決[き]められない)",
+   135→    examples: [
+   136→      { jp: "詳[くわ]しい内容[ないよう]を聞[き]いてからでないと、返事[へんじ]のしようがない。", en: "Unless I hear the details first, I cannot possibly reply." },
+   137→      { jp: "現地[げんち]に行[い]ってからでなければ、本当[ほんとう]の状況[じょうきょう]は分[わ]からない。", en: "Unless I actually go to the site, I cannot know the true situation." }
+   138→    ],
+   139→    notes:
+   140→      "「〜てから」に否定が重なり、「〜なければ〜ない」と同じ制約を表す。類義: 〜ないことには(A・B)、〜ことなしに(D)。",
+   141→    related: ["gn2-151"]
+   142→  },
+   143→
+   144→  // ────────────────────────────────────────────────────────────────
+   145→  // CAUSE / REASON — 原因・理由
+   146→  // ────────────────────────────────────────────────────────────────
+   147→
+   148→  {
+   149→    id: "gn2-157",
+   150→    point: "〜とあって",
+   151→    reading: "〜とあって",
+   152→    level: "N2",
+   153→    category: "Cause/Reason",
+   154→    meaning: "Because; since (a special circumstance is producing a noticeable result)",
+   155→    structure: "V普通形 + とあって / N + だとあって / Na-adj + だとあって / I-adj + とあって",
+   156→    explanation:
+   157→      "Indicates a special or notable cause that produces an understandable result. Often used in narration to explain why a particular scene is unfolding, with a nuance of 'as one would expect, given that...'.",
+   158→    formation:
+   159→      "V辞書形 + とあって (夏[なつ]休[やす]みが始[はじ]まるとあって)\nN + だとあって (祭典[さいてん]だとあって)\nI-adj + とあって (忙[いそが]しいとあって)",
+   160→    examples: [
+   161→      { jp: "夏休[なつやす]み最初[さいしょ]の週末[しゅうまつ]とあって、遊園地[ゆうえんち]は家族連[かぞくづ]れで賑[にぎ]わっていた。", en: "Because it was the first weekend of summer vacation, the amusement park was crowded with families." },
+   162→      { jp: "人気[にんき]歌手[かしゅ]のコンサートとあって、チケットはすぐに売[う]り切[き]れた。", en: "Because it was a popular singer's concert, the tickets sold out immediately." }
+   163→    ],
+   164→    notes:
+   165→      "客観的・第三者的に理由を述べる書き言葉表現。「〜だから」と同義だが、特別な事情を強調するニュアンスがある。",
+   166→    related: ["gn2-158", "gn2-159"]
+   167→  },
+   168→
+   169→  {
+   170→    id: "gn2-158",
+   171→    point: "〜ことから",
+   172→    reading: "〜ことから",
+   173→    level: "N2",
+   174→    category: "Cause/Reason",
+   175→    meaning: "Because; judging from the fact that...",
+   176→    structure: "V普通形 + ことから / Nである + ことから / Na-adj(である) + ことから / I-adj + ことから",
+   177→    explanation:
+   178→      "Used to state a reason or basis for an inference: 'from the fact that..., it can be concluded that...'. Commonly appears in explanatory or analytical writing.",
+   179→    formation:
+   180→      "V辞書形 + ことから (証拠[しょうこ]が見[み]つからないことから)\nN + である + ことから (事実[じじつ]であることから)\nI-adj + ことから (大[おお]きいことから)",
+   181→    examples: [
+   182→      { jp: "現場[げんば]に指紋[しもん]が残[のこ]されていなかったことから、犯人[はんにん]は手袋[てぶくろ]をしていたと推測[すいそく]される。", en: "From the fact that no fingerprints were left at the scene, it is inferred that the culprit wore gloves." },
+   183→      { jp: "この地域[ちいき]は地震[じしん]が多[おお]いことから、建物[たてもの]の耐震性[たいしんせい]が高[たか]い。", en: "Because earthquakes are frequent in this area, the buildings have high seismic resistance." }
+   184→    ],
+   185→    notes:
+   186→      "「〜から」と同義だが、客観的な事実を根拠として結論を導くときに使う書き言葉。後件には推量・判断が来る。",
+   187→    related: ["gn2-157"]
+   188→  },
+   189→
+   190→  {
+   191→    id: "gn2-159",
+   192→    point: "〜ゆえ(に)",
+   193→    reading: "〜ゆえ(に)",
+   194→    level: "N2",
+   195→    category: "Cause/Reason",
+   196→    meaning: "Because; due to (formal/literary)",
+   197→    structure: "N + の + ゆえ(に) / Na-adj + な + ゆえ(に) / I-adj + ゆえ(に) / V普通形 + ゆえ(に)",
+   198→    explanation:
+   199→      "A formal, somewhat literary expression of cause or reason: 'because of, on account of'. Often used in fixed phrases like 貧困ゆえに (because of poverty) or in written/solemn contexts.",
+   200→    formation:
+   201→      "N + の + ゆえに / N + ゆえに (若[わか]さゆえに / 愛[あい]のゆえに)\nNa-adj + な + ゆえに (静[しず]かなゆえに)\nI-adj + ゆえに (悲[かな]しいゆえに)",
+   202→    examples: [
+   203→      { jp: "若[わか]さゆえに過[あやま]ちを犯[おか]してしまうことがある。", en: "There are times when one makes mistakes because of youth." },
+   204→      { jp: "貧困[ひんこん]ゆえに教育[きょういく]を受[う]けられない子[こ]どもがまだいる。", en: "There are still children who cannot receive education because of poverty." }
+   205→    ],
+   206→    notes:
+   207→      "「〜ため(に)」の古風で硬い表現。詩的・文学的文脈や格言で好まれる。「ゆえ」単独で「理由」の意。",
+   208→    related: ["gn2-157", "gn2-160"]
+   209→  },
+   210→
+   211→  {
+   212→    id: "gn2-160",
+   213→    point: "〜こととて",
+   214→    reading: "〜こととて",
+   215→    level: "N2",
+   216→    category: "Cause/Reason",
+   217→    meaning: "Because; given that (with a nuance of excuse or asking for understanding)",
+   218→    structure: "N + の + こととて / Na-adj + な + こととて / I-adj + こととて / V普通形 + こととて",
+   219→    explanation:
+   220→      "An old-fashioned expression of reason, often used to excuse or explain a shortcoming: 'since it is the case that...'. Suggests the speaker acknowledges a weakness or limitation inherent in the situation.",
+   221→    formation:
+   222→      "N + の + こととて (子供[こども]のこととて)\nV辞書形 + こととて (初[はじ]めてのこととて)\nI-adj + こととて (忙[いそが]しいこととて)",
+   223→    examples: [
+   224→      { jp: "初[はじ]めての経験[けいけん]のこととて、不慣[ふな]れな点[てん]も多々[たた]あると存[ぞん]じます。", en: "Since this is a first experience, there are many points where I am unused to it." },
+   225→      { jp: "子供[こども]のこととて、少[すこ]しのことで泣[な]いてしまった。", en: "Because he is a child, he cried over a small thing." }
+   226→    ],
+   227→    notes:
+   228→      "硬い言い訳がましい表現。「〜だから」と同義だが、許しを求めたり事情を察してもらいたいニュアンスがある。手紙文でよく見られる。",
+   229→    related: ["gn2-159"]
+   230→  },
+   231→
+   232→  {
+   233→    id: "gn2-161",
+   234→    point: "〜につき",
+   235→    reading: "〜につき",
+   236→    level: "N2",
+   237→    category: "Cause/Reason",
+   238→    meaning: "Due to; because of (formal written notices)",
+   239→    structure: "N + につき",
+   240→    explanation:
+   241→      "A formal written expression used in notices, signs, and official announcements to state a cause: 'due to..., because of...'. Commonly seen on store closing signs, suspension notices, and the like.",
+   242→    formation: "N + につき (工事[こうじ]につき / 店内[てんない]改装[かいそう]につき)",
+   243→    examples: [
+   244→      { jp: "店内[てんない]改装[かいそう]につき、月末[げつまつ]まで休業[きゅうぎょう]いたします。", en: "Due to interior renovation, we will be closed until the end of the month." },
+   245→      { jp: "台風[たいふう]接近[せっきん]につき、本日[ほんじつ]の試合[しあい]は中止[ちゅうし]となりました。", en: "Due to the approaching typhoon, today's match has been cancelled." }
+   246→    ],
+   247→    notes:
+   248→      "お知らせ・掲示文で使われる硬い理由表現。「〜のため」と同じ。後件は休業・中止・変更など公的なアナウンスが来る。",
+   249→    related: ["gn2-157"]
+   250→  },
+   251→
+   252→  // ────────────────────────────────────────────────────────────────
+   253→  // TIME / SEQUENCE — 時・順序
+   254→  // ────────────────────────────────────────────────────────────────
+   255→
+   256→  {
+   257→    id: "gn2-162",
+   258→    point: "〜ながら (同時進行)",
+   259→    reading: "〜ながら",
+   260→    level: "N2",
+   261→    category: "Time/Sequence",
+   262→    meaning: "While doing; doing X at the same time as Y",
+   263→    structure: "V-ます形(幹) + ながら / N + ながら / I-adj + ながら",
+   264→    explanation:
+   265→      "Indicates two actions performed simultaneously: 'while doing X, also do Y'. The subject of both clauses is the same. Distinct from 〜ながら(も) (chunk A), which means 'although'.",
+   266→    formation:
+   267→      "V-ます幹 + ながら (食[た]べながら / 歩[ある]きながら)\nN + ながら (昔[むか]しながら / いつもながら)\nI-adj + ながら (悪[わる]いながら)",
+   268→    examples: [
+   269→      { jp: "テレビを見[み]ながらご飯[はん]を食[た]べるのはよくないと言[い]われている。", en: "It is said that eating while watching television is not good." },
+   270→      { jp: "彼[かれ]はいつも音楽[おんがく]を聞[き]きながら勉強[べんきょう]している。", en: "He always studies while listening to music." }
+   271→    ],
+   272→    notes:
+   273→      "同時進行を表す基本表現。主語は同一で、動詞のます形(幹)に接続。「〜ながら(も)」(A)は逆接で別表現。",
+   274→    related: ["gn2-163", "gn2-164"]
+   275→  },
+   276→
+   277→  {
+   278→    id: "gn2-163",
+   279→    point: "〜に伴って",
+   280→    reading: "〜にともなって",
+   281→    level: "N2",
+   282→    category: "Time/Sequence",
+   283→    meaning: "As; along with; in proportion to (as X changes, Y also changes)",
+   284→    structure: "V辞書形 + に伴って / N + に伴って",
+   285→    explanation:
+   286→      "Indicates that as one change occurs, another change occurs in tandem or proportionally. Common in news and formal writing for describing correlated changes.",
+   287→    formation:
+   288→      "N + に伴って (時間[じかん]の経過[けいか]に伴って)\nV辞書形 + に伴って (人口[じんこう]が増[ふ]えるに伴って)",
+   289→    examples: [
+   290→      { jp: "高齢化[こうれいか]の進行[しんこう]に伴[ともな]って、医療[いりょう]費[ひ]の増加[ぞうか]が問題[もんだい]になっている。", en: "As the aging of the population progresses, the increase in medical costs has become a problem." },
+   291→      { jp: "都市[とし]の発展[はってん]に伴[ともな]って、周辺[しゅうへん]の自然[しぜん]が失[うしな]われてきた。", en: "As the city developed, the surrounding nature has been lost." }
+   292→    ],
+   293→    notes:
+   294→      "変化が並行して起きることを示す硬い表現。「〜とともに」(D)と類義。「Aに伴ってB」でAの変化に応じてBも変化する。",
+   295→    related: ["gn2-164", "gn2-165"]
+   296→  },
+   297→
+   298→  {
+   299→    id: "gn2-164",
+   300→    point: "〜とともに",
+   301→    reading: "〜とともに",
+   302→    level: "N2",
+   303→    category: "Time/Sequence",
+   304→    meaning: "Together with; as X happens/changes, Y also happens/changes",
+   305→    structure: "V辞書形 + とともに / N + とともに",
+   306→    explanation:
+   307→      "Indicates two things happening together, or one change occurring in parallel with another. Also used to mean 'along with' (someone/something accompanying) or 'as... at the same time'.",
+   308→    formation:
+   309→      "N + とともに (時代[じだい]とともに / 家族[かぞく]とともに)\nV辞書形 + とともに (年[とし]をとるとともに)",
+   310→    examples: [
+   311→      { jp: "時代[じだい]とともに、人々[ひとびと]の価値観[かちかん]も変[か]わってきた。", en: "Along with the times, people's values have also changed." },
+   312→      { jp: "彼[かれ]は家族[かぞく]とともに新[あたら]しい国[くに]へ移住[いじゅう]した。", en: "He emigrated to a new country together with his family." }
+   313→    ],
+   314→    notes:
+   315→      "並行・同時・付随を表す。「〜と一緒[いっしょ]に」の硬い言い方でもある。変化以外にも単に「〜と一緒に」も表す。",
+   316→    related: ["gn2-163", "gn2-165"]
+   317→  },
+   318→
+   319→  {
+   320→    id: "gn2-165",
+   321→    point: "〜と同時に",
+   322→    reading: "〜とどうじに",
+   323→    level: "N2",
+   324→    category: "Time/Sequence",
+   325→    meaning: "At the same time as; simultaneously with",
+   326→    structure: "V辞書形 + と同時に / V-た形 + と同時に / N + と同時に",
+   327→    explanation:
+   328→      "Indicates that two actions or events occur at exactly the same time, or that one thing accompanies another as a simultaneous effect. Emphasizes precise simultaneity.",
+   329→    formation:
+   330→      "V辞書形 + と同時に (終[お]わると同時に)\nV-た形 + と同時に (着[つ]いたと同時に)\nN + と同時に (開始[かいし]と同時に)",
+   331→    examples: [
+   332→      { jp: "彼[かれ]は部屋[へや]に入[はい]ると同時[どうじ]に、大[おお]きな声[こえ]で挨拶[あいさつ]した。", en: "As soon as he entered the room, he greeted in a loud voice." },
+   333→      { jp: "この薬[くすり]は熱[ねつ]を下[さ]げると同時[どうじ]に、痛[いた]みも和[やわ]らげる。", en: "This medicine lowers fever and at the same time eases pain." }
+   334→    ],
+   335→    notes:
+   336→      "完全な同時性を強調。「〜たとたん(に)」(A・B)と近いが、同時性そのものを問う点が異なる。",
+   337→    related: ["gn2-163", "gn2-164"]
+   338→  },
+   339→
+   340→  {
+   341→    id: "gn2-166",
+   342→    point: "〜ついでに",
+   343→    reading: "〜ついでに",
+   344→    level: "N2",
+   345→    category: "Time/Sequence",
+   346→    meaning: "While at it; taking the opportunity to; on the occasion of",
+   347→    structure: "V辞書形 + ついでに / V-た形 + ついでに / N + の + ついでに",
+   348→    explanation:
+   349→      "Indicates doing something in passing while doing the main action: 'while I'm at it, I'll also...'. The subsidiary action is not the main purpose but is conveniently done along the way.",
+   350→    formation:
+   351→      "V辞書形 + ついでに (買[か]い物[もの]に行[い]くついでに)\nV-た形 + ついでに (郵便局[ゆうびんきょく]に行[い]ったついでに)\nN + の + ついでに (出張[しゅっちょう]のついでに)",
+   352→    examples: [
+   353→      { jp: "スーパーへ買[か]い物[もの]に行[い]くついでに、本屋[ほんや]に寄[よ]って雑誌[ざっし]を買[か]った。", en: "While going to the supermarket to shop, I dropped by a bookstore and bought a magazine." },
+   354→      { jp: "出張[しゅっちょう]のついでに、昔[むか]しの友人[ゆうじん]に会[あ]いに行[い]った。", en: "While on a business trip, I went to see an old friend." }
+   355→    ],
+   356→    notes:
+   357→      "主目的のついでに別の用事を済[す]ませることを示す日常的な表現。類義: 〜かたがた、〜がてら(やや硬い)。",
+   358→    related: ["gn2-162"]
+   359→  },
+   360→
+   361→  {
+   362→    id: "gn2-167",
+   363→    point: "〜上で",
+   364→    reading: "〜うえで",
+   365→    level: "N2",
+   366→    category: "Time/Sequence",
+   367→    meaning: "After doing X (then judge/decide); based on doing X",
+   368→    structure: "V-た形 + 上で / V辞書形 + 上で / N + の + 上で",
+   369→    explanation:
+   370→      "When following the た-form, indicates that an action is completed first before a decision or next step: 'after doing X, [then]...'. When following the dictionary form, it means 'in the process of doing X' or 'for the purpose of X'.",
+   371→    formation:
+   372→      "V-た形 + 上で (考[かんが]えた上で / 調[しら]べた上で)\nV辞書形 + 上で (買[か]う上で / 考[かんが]える上で)\nN + の + 上で (契約[けいやく]の上で)",
+   373→    examples: [
+   374→      { jp: "詳[くわ]しく話[はなし]を聞[き]いた上[うえ]で、対応[たいおう]を決[き]めたいと思[おも]います。", en: "After hearing the details, I would like to decide how to respond." },
+   375→      { jp: "この仕事[しごと]を引[ひ]き受[う]けるかどうか、家族[かぞく]と相談[そうだん]した上[うえ]で返事[へんじ]します。", en: "I will reply after consulting with my family about whether to take on this work." }
+   376→    ],
+   377→    notes:
+   378→      "「〜てから」と類義。た形接続は「〜した後[のち]に」、辞書形接続は「〜する際[さい]に / 過程[かてい]で」となる。「〜上は」(A)・「〜上」(D)とは別表現。",
+   379→    related: ["gn2-168", "gn2-169", "gn2-200"]
+   380→  },
+   381→
+   382→  {
+   383→    id: "gn2-168",
+   384→    point: "〜際 / 〜際に",
+   385→    reading: "〜さい / 〜さいに",
+   386→    level: "N2",
+   387→    category: "Time/Sequence",
+   388→    meaning: "On the occasion of; when; at the time of",
+   389→    structure: "V辞書形 + 際(に) / V-た形 + 際(に) / N + の + 際(に)",
+   390→    explanation:
+   391→      "A formal expression indicating a specific occasion or situation in which something happens: 'on the occasion of..., when...'. Common in business and written contexts; somewhat more formal than 〜時.",
+   392→    formation:
+   393→      "V辞書形 + 際に (お問[と]い合[あ]わせの際に)\nV-た形 + 際に (お越[こ]しの際に)\nN + の + 際に (退院[たいいん]の際に)",
+   394→    examples: [
+   395→      { jp: "お問[と]い合[あ]わせの際[さい]は、受付番号[うけつけばんごう]をお控[ひか]えください。", en: "When making an inquiry, please note down your reception number." },
+   396→      { jp: "非常[ひじょう]の際[さい]には、エレベーターを使[つか]わず階段[かいだん]をご利用[りよう]ください。", en: "In case of emergency, please use the stairs instead of the elevator." }
+   397→    ],
+   398→    notes:
+   399→      "「〜時」の硬い表現。「際」単独は名詞「場合・機会」の意。アナウンス・案内文・マニュアルで好まれる。",
+   400→    related: ["gn2-167", "gn2-169", "gn2-170"]
+   401→  },
+   402→
+   403→  {
+   404→    id: "gn2-169",
+   405→    point: "〜場合 / 〜場合に",
+   406→    reading: "〜ばあい / 〜ばあいに",
+   407→    level: "N2",
+   408→    category: "Time/Sequence",
+   409→    meaning: "In the case of; when; if",
+   410→    structure: "V普通形 + 場合(に) / N + の + 場合(に) / Na-adj + な + 場合(に) / I-adj + 場合(に)",
+   411→    explanation:
+   412→      "Used to specify a particular situation or condition and what happens in that case: 'in the case of..., when...'. Often followed by instructions, warnings, or alternative actions.",
+   413→    formation:
+   414→      "V辞書形 + 場合 (雨[あめ]が降[ふ]る場合)\nV-た形 + 場合 (失敗[しっぱい]した場合)\nN + の + 場合 (地震[じしん]の場合)\nNa-adj + な + 場合 (必要[ひつよう]な場合)",
+   415→    examples: [
+   416→      { jp: "地震[じしん]が起[お]きた場合[ばあい]には、机[つくえ]の下[した]に隠[かく]れてください。", en: "In the event of an earthquake, please hide under a desk." },
+   417→      { jp: "商品[しょうひん]に欠陥[けっかん]があった場合[ばあい]は、無料[むりょう]で交換[こうかん]いたします。", en: "In case the product is defective, we will replace it free of charge." }
+   418→    ],
+   419→    notes:
+   420→      "「〜とき」より客観的で、条件・場合分けを示す。「〜場合には」の形も多くなされる。",
+   421→    related: ["gn2-167", "gn2-168", "gn2-170"]
+   422→  },
+   423→
+   424→  {
+   425→    id: "gn2-170",
+   426→    point: "〜とき / 〜時に",
+   427→    reading: "〜とき / 〜ときに",
+   428→    level: "N2",
+   429→    category: "Time/Sequence",
+   430→    meaning: "When; at the time of",
+   431→    structure: "V普通形 + とき(に) / N + の + とき(に) / Na-adj + な + とき(に) / I-adj + とき(に)",
+   432→    explanation:
+   433→      "The basic expression for 'when' or 'at the time of', indicating temporal coincidence. The に is optional and slightly emphasizes a specific point in time. Used across all registers.",
+   434→    formation:
+   435→      "V辞書形 + とき (食[た]べるとき)\nV-た形 + とき (食[た]べたとき)\nN + の + とき (学生[がくせい]のとき)\nI-adj + とき (寒[さむ]いとき)",
+   436→    examples: [
+   437→      { jp: "日本[にほん]に来[き]たとき、最初[さいしょ]は言葉[ことば]の壁[かべ]に困[こま]った。", en: "When I came to Japan, I was at first troubled by the language barrier." },
+   438→      { jp: "子供[こども]のときに、よく祖母[そぼ]の家[いえ]へ遊[あそ]びに行[い]ったものだ。", en: "When I was a child, I often used to go to my grandmother's house to play." }
+   439→    ],
+   440→    notes:
+   441→      "基本的な時間表現。「〜時に」はやや硬く、特定の時点を指す。「〜際」(D)・「〜場合」(D)は更に硬い。",
+   442→    related: ["gn2-168", "gn2-169"]
+   443→  },
+   444→
+   445→  // ────────────────────────────────────────────────────────────────
+   446→  // CONTRAST — 対比・逆接
+   447→  // ────────────────────────────────────────────────────────────────
+   448→
+   449→  {
+   450→    id: "gn2-171",
+   451→    point: "〜にかかわらず",
+   452→    reading: "〜にかかわらず",
+   453→    level: "N2",
+   454→    category: "Contrast",
+   455→    meaning: "Regardless of; irrespective of; no matter...",
+   456→    structure: "N + にかかわらず / V辞書形 + にかかわらず / [反義ペア] + にかかわらず",
+   457→    explanation:
+   458→      "Indicates that something applies without regard to a particular factor: 'regardless of, no matter whether or not...'. Often used with opposing pairs (e.g., 有無・男女・昼夜) to state that the outcome is the same.",
+   459→    formation:
+   460→      "N + にかかわらず (天候[てんこう]にかかわらず)\n反義ペア + にかかわらず (男女[だんじょ]にかかわらず / 有無[うむ]にかかわらず)\nV辞書形 + にかかわらず (賛成[さんせい]するかにかかわらず)",
+   461→    examples: [
+   462→      { jp: "天候[てんこう]にかかわらず、試合[しあい]は予定[よてい]どおり行[おこな]われます。", en: "Regardless of the weather, the match will be held as scheduled." },
+   463→      { jp: "年齢[ねんれい]や性別[せいべつ]にかかわらず、誰[だれ]でも応募[おうぼ]できる。", en: "Anyone can apply, regardless of age or gender." }
+   464→    ],
+   465→    notes:
+   466→      "「〜に関係[かんけい]なく」と同義。条件・状況に関わらず後件が成り立つことを示す。対義語ペアと一緒に使われることが多い。「〜にもかかわらず」(A)とは別表現。",
+   467→    related: ["gn2-172"]
+   468→  },
+   469→
+   470→  {
+   471→    id: "gn2-172",
+   472→    point: "〜をよそに",
+   473→    reading: "〜をよそに",
+   474→    level: "N2",
+   475→    category: "Contrast",
+   476→    meaning: "Ignoring; disregarding; despite (someone's feelings or wishes)",
+   477→    structure: "N + をよそに",
+   478→    explanation:
+   479→      "Indicates that something is done without regard to, or in defiance of, someone's feelings, concerns, or expectations: 'ignoring..., disregarding...'. Has a critical nuance.",
+   480→    formation: "N + をよそに (親[おや]の心配[しんぱい]をよそに / 周囲[しゅうい]の批判[ひはん]をよそに)",
+   481→    examples: [
+   482→      { jp: "親[おや]の心配[しんぱい]をよそに、彼[かれ]は一人[ひとり]で世界[せかい]旅行[りょこう]に出[で]かけた。", en: "Ignoring his parents' worries, he set off alone on a trip around the world." },
+   483→      { jp: "周囲[しゅうい]の反対[はんたい]をよそに、彼女[かのじょ]は自分[じぶん]の夢[ゆめ]を追[お]い続[つづ]けた。", en: "Disregarding the opposition around her, she continued to pursue her dream." }
+   484→    ],
+   485→    notes:
+   486→      "「〜を無視[むし]して」「〜にもかかわらず」(A)に近いが、感情・期待を顧[かえり]みない非難のニュアンスが強い。",
+   487→    related: ["gn2-171"]
+   488→  },
+   489→
+   490→  {
+   491→    id: "gn2-173",
+   492→    point: "〜はともかく(として)",
+   493→    reading: "〜はともかく(として)",
+   494→    level: "N2",
+   495→    category: "Contrast",
+   496→    meaning: "Setting aside; leaving aside; regardless of",
+   497→    structure: "N + はともかく(として)",
+   498→    explanation:
+   499→      "Used to temporarily put aside a particular point in order to focus on another: 'setting X aside for now, ...'. Implies that X may be important but is not the immediate concern.",
+   500→    formation:
+   501→      "N + はともかく (見[み]かけはともかく)\nN + はともかくとして (値段[ねだん]はともかくとして)",
+   502→    examples: [
+   503→      { jp: "味[あじ]はともかく、見[み]た目[め]はとてもいい。", en: "Setting aside the taste, it looks very good." },
+   504→      { jp: "値段[ねだん]はともかくとして、品質[ひんしつ]は保証[ほしょう]できる。", en: "Leaving aside the price, I can guarantee the quality." }
+   505→    ],
+   506→    notes:
+   507→      "「〜は別[べつ]として」に同じ。まずある事柄[ことがら]を保留し、別の観点を優先する。",
+   508→    related: ["gn2-174", "gn2-175"]
+   509→  },
+   510→
+   511→  {
+   512→    id: "gn2-174",
+   513→    point: "〜はさておき",
+   514→    reading: "〜はさておき",
+   515→    level: "N2",
+   516→    category: "Contrast",
+   517→    meaning: "Setting aside; putting aside for now",
+   518→    structure: "N + はさておき",
+   519→    explanation:
+   520→      "Used to set a topic aside in order to move on to the main point: 'leaving X aside, ...'. Slightly more formal and decisive than 〜はともかく(として), with a sense of 'let's not dwell on that and move on'.",
+   521→    formation: "N + はさておき (冗談[じょうだん]はさておき / 問題[もんだい]はさておき)",
+   522→    examples: [
+   523→      { jp: "冗談[じょうだん]はさておき、本題[ほんだい]に入[はい]ろう。", en: "Jokes aside, let's get to the main topic." },
+   524→      { jp: "難[むずか]しい話[はなし]はさておき、まずは乾杯[かんぱい]しましょう。", en: "Setting aside the difficult talk, let's first have a toast." }
+   525→    ],
+   526→    notes:
+   527→      "「〜はともかく」(D)より硬い。本題に進む前の保留として使われることが多い。",
+   528→    related: ["gn2-173"]
+   529→  },
+   530→
+   531→  {
+   532→    id: "gn2-175",
+   533→    point: "〜もさることながら",
+   534→    reading: "〜もさることながら",
+   535→    level: "N2",
+   536→    category: "Contrast",
+   537→    meaning: "...is also significant, but (something else is more so)",
+   538→    structure: "N + もさることながら",
+   539→    explanation:
+   540→      "Acknowledges one thing as important while emphasizing that another is even more so: 'X is also significant, but Y is even more...'. Used to contrast two related items, with the latter receiving more emphasis.",
+   541→    formation: "N + もさることながら (才能[さいのう]もさることながら / 見[み]かけもさることながら)",
+   542→    examples: [
+   543→      { jp: "彼[かれ]は才能[さいのう]もさることながら、努力[どりょく]家[か]でもある。", en: "He has talent, to be sure, but above all he is a hard worker." },
+   544→      { jp: "この料理[りょうり]は味[あじ]もさることながら、見[み]た目[め]も素晴[すば]らしい。", en: "This dish has great taste, to be sure, but its appearance is also wonderful." }
+   545→    ],
+   546→    notes:
+   547→      "「〜も確[たし]かにそうだが、それ以上[いじょう]に〜」という譲歩強調構文。「〜はもちろん〜も」(類義)とは強調の方向が逆。",
+   548→    related: ["gn2-173", "gn2-174"]
+   549→  },
+   550→
+   551→  // ────────────────────────────────────────────────────────────────
+   552→  // ASSUMPTION — 推量・推測・可能性
+   553→  // ────────────────────────────────────────────────────────────────
+   554→
+   555→  {
+   556→    id: "gn2-176",
+   557→    point: "〜得る / 〜得ない",
+   558→    reading: "〜うる / 〜えない",
+   559→    level: "N2",
+   560→    category: "Assumption",
+   561→    meaning: "Can happen; is possible / cannot happen; is impossible",
+   562→    structure: "V-ます形(幹) + 得る / V-ます形(幹) + 得ない",
+   563→    explanation:
+   564→      "A formal expression indicating possibility or impossibility: 'can occur, is possible' / 'cannot occur, is impossible'. Often used in written, journalistic, or analytical contexts to evaluate likelihood.",
+   565→    formation:
+   566→      "V-ます幹 + 得る (起[お]こり得る / あり得る)\nV-ます幹 + 得ない (起[お]こり得ない / あり得ない)",
+   567→    examples: [
+   568→      { jp: "こんな事故[じこ]は起[お]こり得[え]ないと誰[だれ]も思[おも]っていた。", en: "Everyone thought that such an accident could not happen." },
+   569→      { jp: "長期[ちょうき]の不景気[ふけいき]は十分[じゅうぶん]にあり得[う]ることだ。", en: "A long-term recession is fully possible." }
+   570→    ],
+   571→    notes:
+   572→      "読みは辞書形で「うる」、活用形では「える」と読む。書き言葉的で可能性を客観的に評価する。類義: 〜可能性がある(D)。",
+   573→    related: ["gn2-177", "gn2-178"]
+   574→  },
+   575→
+   576→  {
+   577→    id: "gn2-177",
+   578→    point: "〜可能性がある",
+   579→    reading: "〜かのうせいがある",
+   580→    level: "N2",
+   581→    category: "Assumption",
+   582→    meaning: "There is a possibility that; might (happen)",
+   583→    structure: "V普通形 + 可能性がある / N + の + 可能性がある / Na-adj + な + 可能性がある",
+   584→    explanation:
+   585→      "States that something is possible, often with attention to risk or future outcome: 'there is a possibility that...'. Commonly used in news, analysis, and warnings.",
+   586→    formation:
+   587→      "V辞書形 + 可能性がある (失敗[しっぱい]する可能性がある)\nV-た形 + 可能性がある (故障[こしょう]していた可能性がある)\nN + の + 可能性がある (地震[じしん]の可能性がある)",
+   588→    examples: [
+   589→      { jp: "明日[あした]は午後[ごご]から雨[あめ]が降[ふ]る可能性[かのうせい]がある。", en: "There is a possibility that it will rain from tomorrow afternoon." },
+   590→      { jp: "この薬[くすり]には副作用[ふくさよう]が出[で]る可能性[かのうせい]がある。", en: "There is a possibility that this medicine may cause side effects." }
+   591→    ],
+   592→    notes:
+   593→      "「〜かもしれない」の硬い表現。客観的可能性を示し、リスク・注意を伝える文脈で好まれる。類義: 〜おそれがある(A)。",
+   594→    related: ["gn2-176", "gn2-178"]
+   595→  },
+   596→
+   597→  {
+   598→    id: "gn2-178",
+   599→    point: "〜そうにない / 〜そうもない",
+   600→    reading: "〜そうにない / 〜そうもない",
+   601→    level: "N2",
+   602→    category: "Assumption",
+   603→    meaning: "Unlikely to; does not look like it will",
+   604→    structure: "V-ます形(幹) + そうにない / V-ます形(幹) + そうもない",
+   605→    explanation:
+   606→      "Indicates a strong judgment that something is unlikely to happen: 'doesn't look like it will..., is unlikely to...'. そうもない is slightly stronger than そうにない.",
+   607→    formation:
+   608→      "V-ます幹 + そうにない (降[ふ]りそうにない / 寒[さむ]くなりそうにない)\nV-ます幹 + そうもない (間[ま]に合[あ]いそうもない)",
+   609→    examples: [
+   610→      { jp: "空[そら]が晴[は]れているので、午後[ごご]から雨[あめ]は降[ふ]りそうにない。", en: "The sky is clear, so it does not look like it will rain in the afternoon." },
+   611→      { jp: "準備[じゅんび]が全然[ぜんぜん]できていないから、明日[あした]の試合[しあい]に勝[か]てそうもない。", en: "Since I am not prepared at all, it seems unlikely that I will win tomorrow's match." }
+   612→    ],
+   613→    notes:
+   614→      "「〜そうもない」の方が「〜そうにない」より否定的判断が強い。様態[ようたい]の「〜そうだ」の否定形で可能性の低さを表す。",
+   615→    related: ["gn2-176", "gn2-177"]
+   616→  },
+   617→
+   618→  {
+   619→    id: "gn2-179",
+   620→    point: "〜まい",
+   621→    reading: "〜まい",
+   622→    level: "N2",
+   623→    category: "Assumption",
+   624→    meaning: "Will not; intend not to; probably will not",
+   625→    structure: "V辞書形 + まい / V-ます形(幹) + まい (vowel-stem verbs) / N + ではあるまい",
+   626→    explanation:
+   627→      "A negative volitional or conjecture form meaning 'will not do X' or 'probably will not do X'. Used to express strong determination not to do something, or a guess that something will not happen.",
+   628→    formation:
+   629→      "V辞書形 + まい (行[い]くまい / 食[た]べまい)\nV-ます幹 + まい (見[み]まい / 来[こ]まい)\nN + ではあるまい (学生[がくせい]ではあるまい)",
+   630→    examples: [
+   631→      { jp: "二度[にど]と同[おな]じ過[あやま]ちを繰[く]り返[かえ]すまいと誓[ちか]った。", en: "I vowed never to repeat the same mistake again." },
+   632→      { jp: "彼[かれ]の言[い]うことを信用[しんよう]するまい。", en: "I will not trust what he says." }
+   633→    ],
+   634→    notes:
+   635→      "否定意志・否定推量を表す硬い表現。古風で文語的。「〜ないだろう」の推量にも使う。",
+   636→    related: ["gn2-176", "gn2-178"]
+   637→  },
+   638→
+   639→  {
+   640→    id: "gn2-180",
+   641→    point: "〜にかたくない",
+   642→    reading: "〜にかたくない",
+   643→    level: "N2",
+   644→    category: "Assumption",
+   645→    meaning: "Not hard to [imagine/guess]; it is not difficult to...",
+   646→    structure: "V辞書形 + にかたくない / N + にかたくない",
+   647→    explanation:
+   648→      "Used to state that something is easy to imagine or understand: 'it is not hard to...'. Most commonly appears in fixed expressions like 想像にかたくない and 理解にかたくない.",
+   649→    formation:
+   650→      "V辞書形 + にかたくない (想像[そうぞう]するにかたくない)\nN + にかたくない (理解[りかい]にかたくない / 想像[そうぞう]にかたくない)",
+   651→    examples: [
+   652→      { jp: "彼[かれ]がどれほど悲[かな]しんだか、想像[そうぞう]にかたくない。", en: "It is not hard to imagine how sad he was." },
+   653→      { jp: "彼女[かのじょ]が怒[おこ]った理由[りゆう]は理解[りかい]にかたくない。", en: "It is not difficult to understand why she got angry." }
+   654→    ],
+   655→    notes:
+   656→      "「〜するのは難[むずか]しくない」の硬い表現。「想像にかたくない」「理解にかたくない」の形で使われることがほとんど。",
+   657→    related: ["gn2-176"]
+   658→  },
+   659→
+   660→  // ────────────────────────────────────────────────────────────────
+   661→  // PASSIVE / CAUSATIVE — 受身・使役
+   662→  // ────────────────────────────────────────────────────────────────
+   663→
+   664→  {
+   665→    id: "gn2-181",
+   666→    point: "〜(さ)せてもらう",
+   667→    reading: "〜(さ)せてもらう",
+   668→    level: "N2",
+   669→    category: "Passive/Causative",
+   670→    meaning: "Have someone let me do; receive permission to do",
+   671→    structure: "V-(さ)せて + もらう / V-(さ)せて + いただく (more humble)",
+   672→    explanation:
+   673→      "A causative + receiving pattern indicating that one receives permission or cooperation to do something: 'have someone let me do X, be allowed to do X'. Often used to express doing something on one's own initiative with implicit permission.",
+   674→    formation:
+   675→      "V-させ + て + もらう (やらせてもらう / 食[た]べさせてもらう)\nV-せ + て + もらう (来[こ]させてもらう)",
+   676→    examples: [
+   677→      { jp: "今日[きょう]は早[はや]く帰[かえ]らせてもらいます。", en: "I will be allowed to go home early today." },
+   678→      { jp: "私[わたし]にこの仕事[しごと]をやらせてもらえませんか。", en: "Won't you let me do this work?" }
+   679→    ],
+   680→    notes:
+   681→      "使役受給表現で、「人[ひと]に〜してもらう」に使役が入った形。謙譲[けんじょ]の「〜(さ)せていただく」(A・B)はより改まった言い方。",
+   682→    related: ["gn2-35", "gn2-79"]
+   683→  },
+   684→
+   685→  // ────────────────────────────────────────────────────────────────
+   686→  // HONORIFIC — 敬語
+   687→  // ────────────────────────────────────────────────────────────────
+   688→
+   689→  {
+   690→    id: "gn2-182",
+   691→    point: "〜でございます",
+   692→    reading: "〜でございます",
+   693→    level: "N2",
+   694→    category: "Honorific",
+   695→    meaning: "Humble copula; formal 'is/are/am' (polite/humble)",
+   696→    structure: "N + でございます / Na-adj + でございます / ご/お + N + でございます",
+   697→    explanation:
+   698→      "A humble equivalent of です, used by the speaker to refer politely to their own side or to address customers/listeners respectfully. Common in customer service, formal letters, and announcements.",
+   699→    formation:
+   700→      "N + でございます (私[わたし]でございます / 山田[やまだ]でございます)\nNa-adj + でございます (静[しず]かでございます)\nご/お + N + でございます (ご案内[あんない]でございます)",
+   701→    examples: [
+   702→      { jp: "はい、田中[たなか]でございます。", en: "Yes, this is Tanaka speaking." },
+   703→      { jp: "こちらが新[あたら]しいメニューでございます。", en: "Here is the new menu." }
+   704→    ],
+   705→    notes:
+   706→      "「です」の謙譲[けんじょ]表現で、接客[せっきゃく]・アナウンス・手紙で好まれる。丁寧[ていねい]語[ご]の「です」と謙譲語の両方[りょうほう]の性質[せいしつ]を持[も]つ。",
+   707→    related: ["gn2-183"]
+   708→  },
+   709→
+   710→  {
+   711→    id: "gn2-183",
+   712→    point: "〜ております",
+   713→    reading: "〜ております",
+   714→    level: "N2",
+   715→    category: "Honorific",
+   716→    meaning: "Humble -te iru; ongoing state or action (humble)",
+   717→    structure: "V-て形 + おります",
+   718→    explanation:
+   719→      "A humble equivalent of 〜ている, used to refer to one's own ongoing action or state in a polite, humble manner toward the listener. Common in business and customer-facing speech.",
+   720→    formation:
+   721→      "V-て + おります (住[す]んでおります / 待[ま]っております / 存[ぞん]じております)",
+   722→    examples: [
+   723→      { jp: "私[わたし]は東京[とうきょう]に住[す]んでおります。", en: "I live in Tokyo." },
+   724→      { jp: "お客様[きゃくさま]をお待[ま]ちしております。", en: "We are waiting for you (the customer)." }
+   725→    ],
+   726→    notes:
+   727→      "「〜ている」の謙譲[けんじょ]表現。「〜ています」より一段[いちだん]謙虚[けんきょ]で、ビジネス・接客[せっきゃく]で好まれる。",
+   728→    related: ["gn2-182"]
+   729→  },
+   730→
+   731→  // ────────────────────────────────────────────────────────────────
+   732→  // PARTICLES — 助詞・複合助詞・接尾辞
+   733→  // ────────────────────────────────────────────────────────────────
+   734→
+   735→  {
+   736→    id: "gn2-184",
+   737→    point: "〜気味",
+   738→    reading: "〜ぎみ",
+   739→    level: "N2",
+   740→    category: "Particles",
+   741→    meaning: "Slightly; -ish; showing signs of; a touch of",
+   742→    structure: "V-ます形(幹) + 気味 / N + 気味",
+   743→    explanation:
+   744→      "A suffix indicating a slight degree or tendency of something, often an undesirable condition: 'slightly..., a bit -ish, showing signs of...'. Used when the speaker perceives a mild symptom or tendency.",
+   745→    formation:
+   746→      "V-ます幹 + 気味 (疲[つか]れ気味 / 太[ふと]り気味)\nN + 気味 (風邪[かぜ]気味 / 緊張[きんちょう]気味)",
+   747→    examples: [
+   748→      { jp: "最近[さいきん]少[すこ]し疲[つか]れ気味[ぎみ]なので、早[はや]く寝[ね]ようと思[おも]っている。", en: "I have been feeling a bit tired lately, so I'm thinking of going to bed early." },
+   749→      { jp: "彼[かれ]は少[すこ]し太[ふと]り気味[ぎみ]だ。", en: "He is a bit on the chubby side." }
+   750→    ],
+   751→    notes:
+   752→      "マイナス傾向を微[かす]かに示す接尾辞[せつびじ]。「少し〜の傾向[けいこう]がある」という程度[ていど]の軽[かる]さが特徴[とくちょう]。「〜がち」(D)は頻度[ひんど]を示す。",
+   753→    related: ["gn2-185", "gn2-188"]
+   754→  },
+   755→
+   756→  {
+   757→    id: "gn2-185",
+   758→    point: "〜がち",
+   759→    reading: "〜がち",
+   760→    level: "N2",
+   761→    category: "Particles",
+   762→    meaning: "Tend to; apt to; often (with negative connotation)",
+   763→    structure: "V-ます形(幹) + がち / N + がち",
+   764→    explanation:
+   765→      "A suffix indicating a tendency or frequency of occurrence, usually of something undesirable: 'tend to..., often..., are prone to...'. Commonly used for bad habits, negative states, or recurring mistakes.",
+   766→    formation:
+   767→      "V-ます幹 + がち (忘[わす]れがち / 遅[おく]れがち)\nN + がち (病気[びょうき]がち / 遅刻[ちこく]がち)",
+   768→    examples: [
+   769→      { jp: "彼[かれ]は授業[じゅぎょう]を休[やす]みがちだ。", en: "He tends to be absent from class." },
+   770→      { jp: "冬[ふゆ]は風邪[かぜ]をひきがちなので、気[き]をつけてください。", en: "In winter one is prone to catching colds, so please be careful." }
+   771→    ],
+   772→    notes:
+   773→      "マイナス傾向を頻発[ひんぱつ]として示す接尾辞[せつびじ]。「〜気味」(D)が程度の軽さを示すのに対し、「〜がち」は頻度[ひんど]を示す。",
+   774→    related: ["gn2-184", "gn2-188"]
+   775→  },
+   776→
+   777→  {
+   778→    id: "gn2-186",
+   779→    point: "〜向き",
+   780→    reading: "〜むき",
+   781→    level: "N2",
+   782→    category: "Particles",
+   783→    meaning: "Suitable for; oriented toward; meant for",
+   784→    structure: "N + 向き",
+   785→    explanation:
+   786→      "A suffix indicating that something is suitable for or directed toward a particular group, type, or purpose: 'suitable for..., meant for..., oriented toward...'.",
+   787→    formation:
+   788→      "N + 向き (初心者[しょしんしゃ]向き / 若者[わかもの]向き / 上級者[じょうきゅうしゃ]向き)",
+   789→    examples: [
+   790→      { jp: "この本[ほん]は初心者[しょしんしゃ]向[む]きに書[か]かれている。", en: "This book is written for beginners." },
+   791→      { jp: "この料理[りょうり]は子供[こども]向[む]きの味付[あじつ]けだ。", en: "This dish is seasoned to suit children." }
+   792→    ],
+   793→    notes:
+   794→      "対象[たいしょう]・目的[もくてき]に適[てき]していることを示す接尾辞[せつびじ]。類義: 〜向け(D)(対象を絞[しば]った意図[いと])。",
+   795→    related: ["gn2-187"]
+   796→  },
+   797→
+   798→  {
+   799→    id: "gn2-187",
+   800→    point: "〜向け",
+   801→    reading: "〜むけ",
+   802→    level: "N2",
+   803→    category: "Particles",
+   804→    meaning: "Intended for; aimed at; targeted at",
+   805→    structure: "N + 向け",
+   806→    explanation:
+   807→      "A suffix indicating that something has been intentionally designed, produced, or directed for a particular audience or purpose: 'intended for..., aimed at...'. Slightly stronger than 〜向き, implying intent in production.",
+   808→    formation:
+   809→      "N + 向け (外国人[がいこくじん]向け / 海外[かいがい]向け / 高齢者[こうれいしゃ]向け)",
+   810→    examples: [
+   811→      { jp: "この製品[せいひん]は海外[かいがい]向[む]けに開発[かいはつ]された。", en: "This product was developed for overseas markets." },
+   812→      { jp: "子供[こども]向[む]けのアニメだけど、大人[おとな]も楽しめる。", en: "It is an anime for children, but adults can enjoy it too." }
+   813→    ],
+   814→    notes:
+   815→      "意図的[いとてき]に対象を絞[しば]って作[つく]られたことを示す接尾辞[せつびじ]。「〜向き」(D)は適[てき]しているかどうか、「〜向け」は意図[いと]の有無[うむ]が違う。",
+   816→    related: ["gn2-186"]
+   817→  },
+   818→
+   819→  {
+   820→    id: "gn2-188",
+   821→    point: "〜っぱなし",
+   822→    reading: "〜っぱなし",
+   823→    level: "N2",
+   824→    category: "Particles",
+   825→    meaning: "Leaving something in a state; doing continuously (often with mild criticism)",
+   826→    structure: "V-ます形(幹) + っぱなし",
+   827→    explanation:
+   828→      "A suffix indicating either (1) leaving something in an unfinished or neglected state, or (2) an action continuing non-stop for a long time. Often carries a nuance of complaint or criticism.",
+   829→    formation:
+   830→      "V-ます幹 + っぱなし (開[あ]けっぱなし / 立[た]ちっぱなし)\nV-て + っぱなし (開[あ]けてっぱなし - colloquial variant)",
+   831→    examples: [
+   832→      { jp: "弟[おとうと]はテレビを消[け]さずにつけっぱなしで出[で]かけてしまった。", en: "My younger brother left the television on without turning it off and went out." },
+   833→      { jp: "昨日[きのう]は一日中[いちにちじゅう]立[た]ちっぱなしで足[あし]が疲[つか]れた。", en: "Yesterday I stood all day long and my legs got tired." }
+   834→    ],
+   835→    notes:
+   836→      "未完[みかん]の状態[じょうたい]を放置[ほうち]するか、動作[どうさ]が続[つづ]いていることを示す接尾辞[せつびじ]。叱責[しっせき]・不満[ふまん]のニュアンスを含[ふく]むことが多[おお]い。",
+   837→    related: ["gn2-184", "gn2-185"]
+   838→  },
+   839→
+   840→  // ────────────────────────────────────────────────────────────────
+   841→  // CONJUNCTIONS — 接続詞
+   842→  // ────────────────────────────────────────────────────────────────
+   843→
+   844→  {
+   845→    id: "gn2-189",
+   846→    point: "つまり",
+   847→    reading: "つまり",
+   848→    level: "N2",
+   849→    category: "Conjunctions",
+   850→    meaning: "In other words; that is to say; ultimately",
+   851→    structure: "(sentence-initial) つまり、...",
+   852→    explanation:
+   853→      "A conjunction used to restate, summarize, or draw a conclusion from what was just said: 'in other words, that is to say, ultimately'. More conversational than すなわち.",
+   854→    formation:
+   855→      "つまり + 文 (つまり、こういうことだ / つまり、〜ということだ)",
+   856→    examples: [
+   857→      { jp: "彼[かれ]は一言[ひとこと]も言[い]わなかった。つまり、反対[はんたい]だという意味[いみ]だ。", en: "He did not say a word. In other words, that means he is opposed." },
+   858→      { jp: "つまり、私[わたし]の計画[けいかく]は却下[きゃっか]されたということですか。", en: "In other words, does that mean my plan has been rejected?" }
+   859→    ],
+   860→    notes:
+   861→      "言[い]い換[か]え・結論[けつろん]を導く接続詞。「すなわち」(A・B)の口頭[こうとう]的表現で、話し言葉で好まれる。",
+   862→    related: []
+   863→  },
+   864→
+   865→  {
+   866→    id: "gn2-190",
+   867→    point: "いずれにしても / いずれにせよ",
+   868→    reading: "いずれにしても / いずれにせよ",
+   869→    level: "N2",
+   870→    category: "Conjunctions",
+   871→    meaning: "In any case; either way; whatever the case",
+   872→    structure: "(sentence-initial) いずれにしても / いずれにせよ、...",
+   873→    explanation:
+   874→      "A conjunction meaning 'in any case, either way, no matter what'. Used to indicate that the conclusion holds regardless of which alternative is chosen.",
+   875→    formation:
+   876→      "いずれにしても + 文 (いずれにしても、明日[あした]行[い]きます)\nいずれにせよ + 文 (いずれにせよ、結論[けつろん]は同[おな]じだ)",
+   877→    examples: [
+   878→      { jp: "いずれにしても、明日[あした]の会議[かいぎ]には出席[しゅっせき]しなければならない。", en: "In any case, I must attend tomorrow's meeting." },
+   879→      { jp: "賛成[さんせい]するか反対[はんたい]するか、いずれにせよ理由[りゆう]を説明[せつめい]してほしい。", en: "Whether you agree or oppose, either way I want you to explain your reasons." }
+   880→    ],
+   881→    notes:
+   882→      "「どちらにしても」と同義の硬い表現。「いずれにせよ」は更に改まった言い方。",
+   883→    related: ["gn2-191"]
+   884→  },
+   885→
+   886→  {
+   887→    id: "gn2-191",
+   888→    point: "それにしても",
+   889→    reading: "それにしても",
+   890→    level: "N2",
+   891→    category: "Conjunctions",
+   892→    meaning: "Even so; be that as it may; nevertheless",
+   893→    structure: "(sentence-initial) それにしても、...",
+   894→    explanation:
+   895→      "A conjunction used to acknowledge the previous point while introducing a new, sometimes contrasting, thought: 'even so, be that as it may, that aside'. Often expresses mild surprise or a shift in perspective.",
+   896→    formation:
+   897→      "それにしても + 文 (それにしても、すごいな)",
+   898→    examples: [
+   899→      { jp: "天気[てんき]予報[よほう]では雨[あめ]と言[い]っていたが、それにしても降[ふ]りすぎだ。", en: "The forecast said rain, but even so, this is too much." },
+   900→      { jp: "彼[かれ]はよく働[はたら]く。それにしても、最近[さいきん]少[すこ]し疲[つか]れ気味[ぎみ]のようだ。", en: "He works hard. Even so, he seems a bit tired lately." }
+   901→    ],
+   902→    notes:
+   903→      "前文[ぜんぶん]を受[う]けつつ新[あたら]しい感想[かんそう]や意外[いがい]性[せい]を示す接続詞。「〜とはいえ」(A)に近いが、より口頭[こうとう]的[てき]。",
+   904→    related: ["gn2-190"]
+   905→  },
+   906→
+   907→  // ────────────────────────────────────────────────────────────────
+   908→  // MODIFIERS — 修飾・複合助詞
+   909→  // ────────────────────────────────────────────────────────────────
+   910→
+   911→  {
+   912→    id: "gn2-192",
+   913→    point: "〜に応じて / 〜に応じた + N",
+   914→    reading: "〜におうじて / 〜におうじた",
+   915→    level: "N2",
+   916→    category: "Modifiers",
+   917→    meaning: "In accordance with; in response to; depending on",
+   918→    structure: "N + に応じて / N + に応じた + N",
+   919→    explanation:
+   920→      "Indicates that an action or state changes in proportion or response to something: 'in accordance with..., in response to..., depending on...'. Common in formal, business, and policy contexts.",
+   921→    formation:
+   922→      "N + に応じて (状況[じょうきょう]に応じて / 収入[しゅうにゅう]に応じて)\nN + に応じた + N (状況[じょうきょう]に応じた対応[たいおう])",
+   923→    examples: [
+   924→      { jp: "状況[じょうきょう]に応[おう]じて、計画[けいかく]を柔軟[じゅうなん]に変更[へんこう]する必要[ひつよう]がある。", en: "It is necessary to flexibly change the plan in accordance with the situation." },
+   925→      { jp: "売上[うりあげ]に応[おう]じて、ボーナスの額[がく]が決[き]まる。", en: "The bonus amount is decided according to sales." }
+   926→    ],
+   927→    notes:
+   928→      "変化に対応して別[べつ]の変化が起[お]きることを示す。「〜によって」(D)と近いが、応答[おうとう]・比例[ひれい]のニュアンスが強い。",
+   929→    related: ["gn2-193"]
+   930→  },
+   931→
+   932→  {
+   933→    id: "gn2-193",
+   934→    point: "〜によって / 〜による + N",
+   935→    reading: "〜によって / 〜による",
+   936→    level: "N2",
+   937→    category: "Modifiers",
+   938→    meaning: "By means of; due to; depending on; through",
+   939→    structure: "N + によって / N + による + N",
+   940→    explanation:
+   941→      "A multi-purpose compound particle meaning 'by means of, due to, depending on, through'. による is the attributive (modifying) form used before a noun. Covers means, cause, agent (in passive), and variation depending on a factor.",
+   942→    formation:
+   943→      "N + によって (インターネットによって / 地震[じしん]によって)\nN + による + N (地震[じしん]による被害[ひがい] / 先生[せんせい]による説明[せつめい])",
+   944→    examples: [
+   945→      { jp: "この村[むら]は地震[じしん]によって大[おお]きな被害[ひがい]を受[う]けた。", en: "This village suffered great damage due to the earthquake." },
+   946→      { jp: "ルールは国[くに]によって違[ちが]う。", en: "Rules differ depending on the country." }
+   947→    ],
+   948→    notes:
+   949→      "手段[しゅだん]・原因[げんいん]・受身[うけみ]の動作主[どうさしゅ]・依拠[いきょ]を表す複合助詞[ふくごうじょし]。「〜により」「〜を通じて」(D)などと類義[るいぎ]の場面あり。",
+   950→    related: ["gn2-194", "gn2-192"]
+   951→  },
+   952→
+   953→  {
+   954→    id: "gn2-194",
+   955→    point: "〜を通じて / 〜を通して",
+   956→    reading: "〜をつうじて / 〜をとおして",
+   957→    level: "N2",
+   958→    category: "Modifiers",
+   959→    meaning: "Through; via; over (a period/range)",
+   960→    structure: "N + を通じて / N + を通して",
+   961→    explanation:
+   962→      "Indicates a medium, channel, or means by which something is done: 'through, via'. When used with time periods, it means 'throughout, over the whole span of'.",
+   963→    formation:
+   964→      "N + を通じて (テレビを通じて / 一年[いちねん]を通じて)\nN + を通して (人[ひと]を通して / 一生[いっしょう]を通して)",
+   965→    examples: [
+   966→      { jp: "彼[かれ]とは仕事[しごと]を通[つう]じて知[し]り合[あ]った。", en: "I got to know him through work." },
+   967→      { jp: "この地域[ちいき]は一年[いちねん]を通[つう]じて気候[きこう]が穏[おだ]やかだ。", en: "The climate in this region is mild throughout the year." }
+   968→    ],
+   969→    notes:
+   970→      "媒体[ばいたい]・経路[けいろ]、または期間[きかん]の全範囲[ぜんはんい]を示す。「〜によって」(D)と手段[しゅだん]の用法[ようほう]で重なる。",
+   971→    related: ["gn2-193"]
+   972→  },
+   973→
+   974→  {
+   975→    id: "gn2-195",
+   976→    point: "〜に沿って / 〜に沿った + N",
+   977→    reading: "〜にそって / 〜にそった",
+   978→    level: "N2",
+   979→    category: "Modifiers",
+   980→    meaning: "Along; in accordance with; following",
+   981→    structure: "N + に沿って / N + に沿った + N",
+   982→    explanation:
+   983→      "Indicates following a line, plan, rule, or guideline: 'along, in accordance with'. Used both for physical paths (along a river) and abstract principles (along the plan).",
+   984→    formation:
+   985→      "N + に沿って (道[みち]に沿って / 計画[けいかく]に沿って)\nN + に沿った + N (方針[ほうしん]に沿った対応[たいおう])",
+   986→    examples: [
+   987→      { jp: "この道[みち]に沿[そ]って桜[さくら]の木[き]が植[う]えられている。", en: "Cherry trees are planted along this road." },
+   988→      { jp: "政府[せいふ]は法律[ほうりつ]に沿[そ]って対応[たいおう]すると表明[ひょうめい]した。", en: "The government stated that it would respond in accordance with the law." }
+   989→    ],
+   990→    notes:
+   991→      "物理[ぶつり]的[てき]な線[せん]に沿う場合と、方針[ほうしん]・計画[けいかく]などの抽象的[ちゅうしょうてき]な線に沿う場合がある。",
+   992→    related: ["gn2-196"]
+   993→  },
+   994→
+   995→  {
+   996→    id: "gn2-196",
+   997→    point: "〜に基づいて / 〜に基づく + N",
+   998→    reading: "〜にもとづいて / 〜にもとづく",
+   999→    level: "N2",
+  1000→    category: "Modifiers",
+  1001→    meaning: "Based on; in accordance with; according to",
+  1002→    structure: "N + に基づいて / N + に基づく + N",
+  1003→    explanation:
+  1004→      "Indicates that something is done based on a particular foundation, rule, evidence, or data: 'based on..., according to...'. Used for objective, evidence-based decisions or actions.",
+  1005→    formation:
+  1006→      "N + に基づいて (法律[ほうりつ]に基づいて / データに基づいて)\nN + に基づく + N (事実[じじつ]に基づく報道[ほうどう])",
+  1007→    examples: [
+  1008→      { jp: "警察[けいさつ]は証拠[しょうこ]に基[もと]づいて彼[かれ]を逮捕[たいほ]した。", en: "The police arrested him based on evidence." },
+  1009→      { jp: "この小説[しょうせつ]は史実[しじつ]に基[もと]づいて書[か]かれている。", en: "This novel is written based on historical facts." }
+  1010→    ],
+  1011→    notes:
+  1012→      "根拠[こんきょ]・基準[きじゅん]を示す複合助詞。「〜をもとに」(D)より硬く、「改[あらた]まって〜を土台[どだい]にする」ニュアンス。",
+  1013→    related: ["gn2-195", "gn2-197"]
+  1014→  },
+  1015→
+  1016→  {
+  1017→    id: "gn2-197",
+  1018→    point: "〜をもとに / 〜をもとにした + N",
+  1019→    reading: "〜をもとに / 〜をもとにした",
+  1020→    level: "N2",
+  1021→    category: "Modifiers",
+  1022→    meaning: "Based on; using as material or inspiration",
+  1023→    structure: "N + をもとに / N + をもとにして + V / N + をもとにした + N",
+  1024→    explanation:
+  1025→      "Indicates that something is created, made, or developed using something as material, source, or inspiration: 'based on, using as material'. Softer than 〜に基づいて, often used for creative works derived from a source.",
+  1026→    formation:
+  1027→      "N + をもとに (伝説[でんせつ]をもとに / データをもとに)\nN + をもとにした + N (体験[たいけん]をもとにした小説[しょうせつ])",
+  1028→    examples: [
+  1029→      { jp: "この映画[えいが]は実[じつ]話[わ]をもとにしている。", en: "This movie is based on a true story." },
+  1030→      { jp: "先生[せんせい]のアドバイスをもとにして、計画[けいかく]を修正[しゅうせい]した。", en: "Based on the teacher's advice, I revised the plan." }
+  1031→    ],
+  1032→    notes:
+  1033→      "「〜を材料[ざいりょう]・ヒントにして」の意で、創作[そうさく]・改良[かいりょう]の場面で多用[たよう]。「〜に基づいて」(D)より口頭[こうとう]的[てき]。",
+  1034→    related: ["gn2-196"]
+  1035→  },
+  1036→
+  1037→  {
+  1038→    id: "gn2-198",
+  1039→    point: "〜を中心に(して) / 〜を中心とする + N",
+  1040→    reading: "〜をちゅうしんに(して) / 〜をちゅうしんとする",
+  1041→    level: "N2",
+  1042→    category: "Modifiers",
+  1043→    meaning: "Centered on; focusing on; with... as the core",
+  1044→    structure: "N + を中心に(して) / N + を中心とする + N",
+  1045→    explanation:
+  1046→      "Indicates that something is centered on or primarily focused on a particular thing: 'centered on, focusing on, with... as the main element'.",
+  1047→    formation:
+  1048→      "N + を中心に (首都[しゅと]を中心に / 若者[わかもの]を中心に)\nN + を中心にして (東京[とうきょう]を中心にして)\nN + を中心とする + N (東京[とうきょう]を中心とする地域[ちいき])",
+  1049→    examples: [
+  1050→      { jp: "首都[しゅと]を中心[ちゅうしん]に、経済[けいざい]が発展[はってん]している。", en: "Centered on the capital, the economy is developing." },
+  1051→      { jp: "今晚[こんばん]の会議[かいぎ]は、環境問題[かんきょうもんだい]を中心[ちゅうしん]に話[はな]し合[あ]う予定[よてい]だ。", en: "Tonight's meeting is planned to discuss environmental issues as the main focus." }
+  1052→    ],
+  1053→    notes:
+  1054→      "中心[ちゅうしん]となる対象[たいしょう]を示す。「〜をはじめ」(D)と一部近いが、中心軸[じく]のニュアンスが強い。",
+  1055→    related: ["gn2-199"]
+  1056→  },
+  1057→
+  1058→  {
+  1059→    id: "gn2-199",
+  1060→    point: "〜をはじめ / 〜をはじめとする + N",
+  1061→    reading: "〜をはじめ / 〜をはじめとする",
+  1062→    level: "N2",
+  1063→    category: "Modifiers",
+  1064→    meaning: "Starting with; including... and others; chief among which is...",
+  1065→    structure: "N + をはじめ / N + をはじめとする + N",
+  1066→    explanation:
+  1067→      "Indicates that something is the foremost or representative example among a group: 'starting with..., including... and others'. The noun before をはじめ is the most prominent or representative member.",
+  1068→    formation:
+  1069→      "N + をはじめ (社長[しゃちょう]をはじめ)\nN + をはじめとする + N (社長[しゃちょう]をはじめとする幹部[かんぶ])",
+  1070→    examples: [
+  1071→      { jp: "社長[しゃちょう]をはじめ、社員[しゃいん]全員[ぜんいん]が式典[しきてん]に参加[さんか]した。", en: "Starting with the president, all employees participated in the ceremony." },
+  1072→      { jp: "東京[とうきょう]をはじめとする大都市[だいとし]では、家賃[やちん]が高騰[こうとう]している。", en: "In large cities including Tokyo, rent prices are soaring." }
+  1073→    ],
+  1074→    notes:
+  1075→      "代表例[だいひょうれい]を先[さき]に挙[あ]げ、他[ほか]にも同種[どうしゅ]のものがあることを示す。「〜を中心に」(D)とは異[こと]なる。",
+  1076→    related: ["gn2-198"]
+  1077→  },
+  1078→
+  1079→  {
+  1080→    id: "gn2-200",
+  1081→    point: "〜上 / 〜上の + N",
+  1082→    reading: "〜じょう / 〜じょうの",
+  1083→    level: "N2",
+  1084→    category: "Modifiers",
+  1085→    meaning: "In terms of; from the standpoint of; on",
+  1086→    structure: "N + 上 / N + 上の + N",
+  1087→    explanation:
+  1088→      "A suffix indicating a standpoint, aspect, or domain in which something holds: 'in terms of..., from the standpoint of...'. Common with Sino-Japanese nouns like 経験上, 法律上, 歴史上, 事実上.",
+  1089→    formation:
+  1090→      "N + 上 (経験[けいけん]上 / 法律[ほうりつ]上 / 事実[じじつ]上)\nN + 上の + N (法律[ほうりつ]上の問題[もんだい] / 健康[けんこう]上の理由[りゆう])",
+  1091→    examples: [
+  1092→      { jp: "経験上[けいけんじょう]、この方法[ほうほう]が一番[いちばん]効率[こうりつ]がいい。", en: "In my experience, this method is the most efficient." },
+  1093→      { jp: "その計画[けいかく]は法律上[ほうりつじょう]問題[もんだい]がないか確認[かくにん]する必要[ひつよう]がある。", en: "It is necessary to confirm whether the plan has no legal problems." }
+  1094→    ],
+  1095→    notes:
+  1096→      "名詞[めいし]に付[つ]き「〜の観点[かんてん]から」「〜の範囲[はんい]で」を示す。「〜上で」(D)とは別[べつ]表現で混同[こんどう]しやすい。",
+  1097→    related: ["gn2-167"]
+  1098→  }
+  1099→];
+  1100→

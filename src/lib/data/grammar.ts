@@ -12,6 +12,7 @@ import { grammarN2A } from "./grammar-n2-a";
 import { grammarN2B } from "./grammar-n2-b";
 import { grammarN2C } from "./grammar-n2-c";
 import { grammarN2D } from "./grammar-n2-d";
+import { grammarN2E } from "./grammar-n2-e";
 import { grammarN1A } from "./grammar-n1-a";
 import { grammarN1B } from "./grammar-n1-b";
 import { grammarN1C } from "./grammar-n1-c";
@@ -36,6 +37,7 @@ const allGrammar: GrammarData[] = [
   ...grammarN2B,
   ...grammarN2C,
   ...grammarN2D,
+  ...grammarN2E,
   ...grammarN1A,
   ...grammarN1B,
   ...grammarN1C,
@@ -51,13 +53,14 @@ const LEVEL_LIMITS: Record<string, number> = {
   N1: 200,
 };
 
+// Deduplicate per-level (not globally) — same approach as vocab/kanji.
+// A grammar point can appear in multiple JLPT levels with different nuances.
 const _seenPoints = new Set<string>();
 const _levelCounts: Record<string, number> = {};
 export const grammarData: GrammarData[] = allGrammar.filter((g) => {
-  // Skip duplicate grammar points across levels (keep first occurrence)
-  if (_seenPoints.has(g.point)) return false;
-  _seenPoints.add(g.point);
-  // Enforce per-level cap
+  const key = `${g.level}:${g.point}`;
+  if (_seenPoints.has(key)) return false;
+  _seenPoints.add(key);
   const lvl = g.level;
   _levelCounts[lvl] = (_levelCounts[lvl] || 0) + 1;
   if (_levelCounts[lvl] > LEVEL_LIMITS[lvl]) return false;
