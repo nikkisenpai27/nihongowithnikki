@@ -17,8 +17,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜ことにする",
     reading: "〜koto ni suru",
     level: "N4",
+    lesson: 33,
     category: "Verb forms",
-    lesson: 14,
     meaning: "Decide to do something (one's own decision)",
     structure: "V-辞書形 / V-ない形 + ことにする",
     explanation:
@@ -40,8 +40,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜ことになる",
     reading: "〜koto ni naru",
     level: "N4",
+    lesson: 33,
     category: "Verb forms",
-    lesson: 14,
     meaning: "Be decided / scheduled to (result of a decision)",
     structure: "V-辞書形 / V-ない形 + ことになる",
     explanation:
@@ -63,8 +63,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜ことにしている",
     reading: "〜koto ni shite iru",
     level: "N4",
+    lesson: 33,
     category: "Verb forms",
-    lesson: 14,
     meaning: "Make it a habit / rule to do something",
     structure: "V-辞書形 / V-ない形 + ことにしている",
     explanation:
@@ -90,8 +90,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜し (理由の列举)",
     reading: "〜shi",
     level: "N4",
+    lesson: 33,
     category: "Conjunctions",
-    lesson: 15,
     meaning: "And / besides (listing a reason)",
     structure: "V / い-adj / な-adj + な / N + だ (plain) + し",
     explanation:
@@ -113,8 +113,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜し、〜し (複数理由)",
     reading: "〜shi, 〜shi",
     level: "N4",
+    lesson: 34,
     category: "Conjunctions",
-    lesson: 15,
     meaning: "Among other things; (reason 1), (reason 2), so...",
     structure: "Clause A + し、Clause B + し + main clause",
     explanation:
@@ -136,8 +136,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜し (文末・追加理由)",
     reading: "〜shi",
     level: "N4",
+    lesson: 34,
     category: "Conjunctions",
-    lesson: 15,
     meaning: "Besides / what's more (sentence-final softener)",
     structure: "Sentence (plain) + し",
     explanation:
@@ -163,8 +163,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜ながら",
     reading: "〜nagara",
     level: "N4",
+    lesson: 34,
     category: "Verb forms",
-    lesson: 16,
     meaning: "While doing; two actions at the same time",
     structure: "V-ます stem + ながら",
     explanation:
@@ -186,8 +186,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜間に",
     reading: "〜aida ni",
     level: "N4",
+    lesson: 34,
     category: "Modifying",
-    lesson: 16,
     meaning: "During (a time span); while (something happens)",
     structure: "V-辞書形 / V-ている / N の + 間に",
     explanation:
@@ -209,8 +209,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜間",
     reading: "〜aida",
     level: "N4",
+    lesson: 34,
     category: "Modifying",
-    lesson: 16,
     meaning: "During (the whole duration of); while",
     structure: "V-辞書形 / V-ている / N の + 間",
     explanation:
@@ -236,8 +236,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜てくれる? / 〜てくれない?",
     reading: "〜te kureru? / 〜te kurenai?",
     level: "N4",
+    lesson: 35,
     category: "Giving/Receiving",
-    lesson: 17,
     meaning: "Will you ... for me? (casual request)",
     structure: "V-て + くれる? / くれない?",
     explanation:
@@ -259,8 +259,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜てもらえませんか",
     reading: "〜te moraemasen ka",
     level: "N4",
+    lesson: 35,
     category: "Giving/Receiving",
-    lesson: 17,
     meaning: "Could you please do X for me? (polite request)",
     structure: "V-て + もらえませんか",
     explanation:
@@ -282,8 +282,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜てくれませんか",
     reading: "〜te kuremasen ka",
     level: "N4",
+    lesson: 35,
     category: "Giving/Receiving",
-    lesson: 17,
     meaning: "Won't you please ... for me? (polite request)",
     structure: "V-て + くれませんか",
     explanation:
@@ -309,8 +309,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜させる (使役)",
     reading: "〜saseru",
     level: "N4",
+    lesson: 35,
     category: "Causative",
-    lesson: 18,
     meaning: "Make / let someone do something (causative)",
     structure: "V-causative (Group 1: 〜せる / Group 2: 〜させる)",
     explanation:
@@ -332,8 +332,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜させられる (使役受身)",
     reading: "〜saserareru",
     level: "N4",
+    lesson: 35,
     category: "Causative",
-    lesson: 18,
     meaning: "Be made to do something (causative-passive)",
     structure: "V-causative-passive (Group 1: 〜される / Group 2: 〜させられる)",
     explanation:
@@ -355,8 +355,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜させてください",
     reading: "〜sasete kudasai",
     level: "N4",
+    lesson: 36,
     category: "Causative",
-    lesson: 18,
     meaning: "Please let me do X (request for permission to act)",
     structure: "V-causative て-form (させて) + ください",
     explanation:
@@ -378,8 +378,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜させてもらう / 〜させていただく",
     reading: "〜sasete morau / 〜sasete itadaku",
     level: "N4",
+    lesson: 36,
     category: "Causative",
-    lesson: 18,
     meaning: "Have someone let me do X (receive permission)",
     structure: "V-causative て-form (させて) + もらう / いただく",
     explanation:
@@ -405,8 +405,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜れる/〜られる (直接受身)",
     reading: "〜reru/〜rareru",
     level: "N4",
+    lesson: 36,
     category: "Passive",
-    lesson: 19,
     meaning: "Be done; passive voice (direct passive)",
     structure: "V-passive: Group 1 〜れる / Group 2 〜られる / する→される",
     explanation:
@@ -428,8 +428,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜れる/〜られる (迷惑の受身)",
     reading: "〜reru/〜rareru",
     level: "N4",
+    lesson: 36,
     category: "Passive",
-    lesson: 19,
     meaning: "Have something done to one's belongings (suffering passive)",
     structure: "N(possessor) は N(possessed) を V-passive (by に)",
     explanation:
@@ -451,8 +451,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜られる (可能・一段動詞)",
     reading: "〜rareru",
     level: "N4",
+    lesson: 36,
     category: "Verb forms",
-    lesson: 19,
     meaning: "Can do; be able to do (potential, Group 2 & 来る)",
     structure: "Group 2: V stem + られる / 来る → 来られる",
     explanation:
@@ -474,8 +474,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜される (するの受身)",
     reading: "〜sareru",
     level: "N4",
+    lesson: 37,
     category: "Passive",
-    lesson: 19,
     meaning: "Be done; passive of する (irregular)",
     structure: "する → される (passive) / N + される",
     explanation:
@@ -501,8 +501,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜ことができる",
     reading: "〜koto ga dekiru",
     level: "N4",
+    lesson: 37,
     category: "Verb forms",
-    lesson: 20,
     meaning: "Can do; be able to do (formal potential)",
     structure: "V-辞書形 + ことができる",
     explanation:
@@ -524,8 +524,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜できる (可能)",
     reading: "〜dekiru",
     level: "N4",
+    lesson: 37,
     category: "Verb forms",
-    lesson: 20,
     meaning: "Can / be possible (potential verb できる)",
     structure: "Noun + が + できる",
     explanation:
@@ -547,8 +547,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜ことができる vs 可能形",
     reading: "〜koto ga dekiru / kanou-kei",
     level: "N4",
+    lesson: 37,
     category: "Verb forms",
-    lesson: 20,
     meaning: "Formal potential 〜ことができる vs potential verb form",
     structure: "V-辞書形 + ことができる  vs  V-potential",
     explanation:
@@ -574,8 +574,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜ば (条件・復習)",
     reading: "〜ba",
     level: "N4",
+    lesson: 37,
     category: "Conditionals",
-    lesson: 21,
     meaning: "If ... (conditional ば-form, review)",
     structure: "V-ば / い-adj-ければ / な-adj + なら(ば) / N + なら(ば)",
     explanation:
@@ -597,8 +597,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜なら",
     reading: "〜nara",
     level: "N4",
+    lesson: 38,
     category: "Conditionals",
-    lesson: 21,
     meaning: "If / given that; as for (conditional なら)",
     structure: "N / な-adj (plain) + なら（ば） / V-plain + なら",
     explanation:
@@ -620,8 +620,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜と (条件・復習)",
     reading: "〜to",
     level: "N4",
+    lesson: 38,
     category: "Conditionals",
-    lesson: 21,
     meaning: "Whenever / if (general & natural conditional, review)",
     structure: "V-辞書形/た / い-adj / な-adj + だ / N + だ + と",
     explanation:
@@ -647,8 +647,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜って (伝聞・カジュアル)",
     reading: "〜tte",
     level: "N4",
+    lesson: 38,
     category: "Conjecture",
-    lesson: 22,
     meaning: "I heard that...; they say... (casual hearsay)",
     structure: "Sentence (plain) + って",
     explanation:
@@ -670,8 +670,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜そうです (伝聞)",
     reading: "〜sou desu",
     level: "N4",
+    lesson: 38,
     category: "Conjecture",
-    lesson: 22,
     meaning: "I heard that... / it is said that... (hearsay)",
     structure: "Sentence (plain) + そうです",
     explanation:
@@ -693,8 +693,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜ということだ",
     reading: "〜to iu koto da",
     level: "N4",
+    lesson: 38,
     category: "Conjecture",
-    lesson: 22,
     meaning: "It means that... / the report is that... (formal hearsay)",
     structure: "Sentence (plain) + ということだ",
     explanation:
@@ -720,8 +720,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜ために (目的)",
     reading: "〜tame ni",
     level: "N4",
+    lesson: 39,
     category: "Purpose",
-    lesson: 23,
     meaning: "In order to; for the purpose of",
     structure: "V-辞書形 + ために / N の + ために",
     explanation:
@@ -743,8 +743,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜ように",
     reading: "〜you ni",
     level: "N4",
+    lesson: 39,
     category: "Purpose",
-    lesson: 23,
     meaning: "So that; in such a way that",
     structure: "V-辞書形 / V-ない形 / V-potential + ように / N の + ように",
     explanation:
@@ -766,8 +766,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜ために (原因)",
     reading: "〜tame ni",
     level: "N4",
+    lesson: 39,
     category: "Purpose",
-    lesson: 23,
     meaning: "Because of; due to (cause / reason)",
     structure: "N の + ために / V-た + ために",
     explanation:
@@ -793,8 +793,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜ておく",
     reading: "〜te oku",
     level: "N4",
+    lesson: 39,
     category: "Verb forms",
-    lesson: 24,
     meaning: "Do something in advance / leave it done",
     structure: "V-て + おく",
     explanation:
@@ -816,8 +816,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜てある",
     reading: "〜te aru",
     level: "N4",
+    lesson: 39,
     category: "Verb forms",
-    lesson: 24,
     meaning: "Has been done; is in a resultant state",
     structure: "V-て + ある (transitive verbs only)",
     explanation:
@@ -839,8 +839,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜てしまう",
     reading: "〜te shimau",
     level: "N4",
+    lesson: 40,
     category: "Verb forms",
-    lesson: 24,
     meaning: "Finish doing / do completely (often with regret)",
     structure: "V-て + しまう",
     explanation:
@@ -862,8 +862,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜たまま",
     reading: "〜ta mama",
     level: "N4",
+    lesson: 40,
     category: "Verb forms",
-    lesson: 24,
     meaning: "Leaving something as it is; remaining in a state",
     structure: "V-た + まま / N の + まま / な-adj + な + まま",
     explanation:
@@ -889,8 +889,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜のだ / 〜んです",
     reading: "〜no da / 〜n desu",
     level: "N4",
+    lesson: 40,
     category: "Modifying",
-    lesson: 25,
     meaning: "It is that...; the fact is... (explanatory の)",
     structure: "Sentence (plain) + のだ / んです",
     explanation:
@@ -912,8 +912,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜んですか",
     reading: "〜n desu ka",
     level: "N4",
+    lesson: 40,
     category: "Modifying",
-    lesson: 25,
     meaning: "Why? / How come?; seeking an explanation",
     structure: "Sentence (plain) + んですか / のですか",
     explanation:
@@ -935,8 +935,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜でしょうか",
     reading: "〜deshou ka",
     level: "N4",
+    lesson: 40,
     category: "Honorific",
-    lesson: 25,
     meaning: "I wonder if...?; perhaps...? (polite, soft conjecture)",
     structure: "Sentence (polite/plain) + でしょうか / N + でしょうか",
     explanation:
@@ -958,8 +958,8 @@ export const grammarN4_2: GrammarData[] = [
     point: "〜お〜になる / 〜ご〜する",
     reading: "o〜ni naru / go〜suru",
     level: "N4",
+    lesson: 41,
     category: "Honorific",
-    lesson: 25,
     meaning: "Honorific and humble verb forms (respectful & humble speech)",
     structure: "お + V-ます stem + になる (honorific) / お + V-ます stem + する (humble)",
     explanation:
@@ -978,16 +978,16 @@ export const grammarN4_2: GrammarData[] = [
 ];
 
 export const minnaN4LessonTitles2: { lesson: number; title: string; topic: string }[] = [
-  { lesson: 14, title: "第14課", topic: "決定: ことにする・ことになる" },
-  { lesson: 15, title: "第15課", topic: "理由列举: 〜し・〜し、〜し" },
-  { lesson: 16, title: "第16課", topic: "同時・期間: ながら・間に・間" },
-  { lesson: 17, title: "第17課", topic: "依頼: てくれる?・てもらえませんか" },
-  { lesson: 18, title: "第18課", topic: "使役: させる・させられる" },
-  { lesson: 19, title: "第19課", topic: "受身・可能: れる・られる" },
-  { lesson: 20, title: "第20課", topic: "能力: ことができる・できる" },
-  { lesson: 21, title: "第21課", topic: "条件・復習: ば・なら・と" },
-  { lesson: 22, title: "第22課", topic: "伝聞: って・そうです・ということだ" },
-  { lesson: 23, title: "第23課", topic: "目的・原因: ために・ように" },
-  { lesson: 24, title: "第24課", topic: "準備・状態: ておく・てある・てしまう" },
-  { lesson: 25, title: "第25課", topic: "説明・敬語: のだ・でしょうか・お〜になる" }
+  { title: "第14課", topic: "決定: ことにする・ことになる" },
+  { title: "第15課", topic: "理由列举: 〜し・〜し、〜し" },
+  { title: "第16課", topic: "同時・期間: ながら・間に・間" },
+  { title: "第17課", topic: "依頼: てくれる?・てもらえませんか" },
+  { title: "第18課", topic: "使役: させる・させられる" },
+  { title: "第19課", topic: "受身・可能: れる・られる" },
+  { title: "第20課", topic: "能力: ことができる・できる" },
+  { title: "第21課", topic: "条件・復習: ば・なら・と" },
+  { title: "第22課", topic: "伝聞: って・そうです・ということだ" },
+  { title: "第23課", topic: "目的・原因: ために・ように" },
+  { title: "第24課", topic: "準備・状態: ておく・てある・てしまう" },
+  { title: "第25課", topic: "説明・敬語: のだ・でしょうか・お〜になる" }
 ];

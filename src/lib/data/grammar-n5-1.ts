@@ -14,8 +14,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "〜は〜です",
     reading: "〜wa〜desu",
     level: "N5",
-    category: "Copula",
     lesson: 1,
+    category: "Copula",
     meaning: "A is B (equational / identity statement)",
     structure: "N1 + は + N2 + です",
     explanation:
@@ -37,8 +37,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "〜じゃないです / 〜ではありません",
     reading: "〜janai desu / 〜dewa arimasen",
     level: "N5",
-    category: "Copula",
     lesson: 1,
+    category: "Copula",
     meaning: "A is not B (polite negative copula)",
     structure: "N + は + N + じゃないです / ではありません",
     explanation:
@@ -60,8 +60,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "〜ですか",
     reading: "〜desu ka",
     level: "N5",
-    category: "Copula",
     lesson: 1,
+    category: "Copula",
     meaning: "Is A B? (yes/no question)",
     structure: "N + は + N + ですか",
     explanation:
@@ -83,8 +83,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "はじめまして",
     reading: "hajimemashite",
     level: "N5",
-    category: "Expression",
     lesson: 1,
+    category: "Expression",
     meaning: "How do you do? (first-meeting greeting)",
     structure: "はじめまして (+ self-introduction with 〜は〜です)",
     explanation:
@@ -107,8 +107,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "これ / それ / あれ / どれ",
     reading: "kore / sore / are / dore",
     level: "N5",
+    lesson: 1,
     category: "Demonstratives",
-    lesson: 2,
     meaning: "this / that / that over there / which (thing)",
     structure: "これ・それ・あれ + は + N + です / どれ + が + N + ですか",
     explanation:
@@ -130,8 +130,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "この / その / あの / どの + N",
     reading: "kono / sono / ano / dono + N",
     level: "N5",
-    category: "Demonstratives",
     lesson: 2,
+    category: "Demonstratives",
     meaning: "this N / that N / that N over there / which N",
     structure: "この・その・あの・どの + Noun + は + N + です",
     explanation:
@@ -153,8 +153,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "そうです / そうじゃありません",
     reading: "sou desu / sou ja arimasen",
     level: "N5",
-    category: "Expression",
     lesson: 2,
+    category: "Expression",
     meaning: "That's right. / That's not right.",
     structure: "そう + です / じゃありません",
     explanation:
@@ -176,8 +176,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "だれ / どなた",
     reading: "dare / donata",
     level: "N5",
-    category: "Demonstratives",
     lesson: 2,
+    category: "Demonstratives",
     meaning: "who (plain) / who (polite)",
     structure: "だれ・どなた + ですか / だれの + N",
     explanation:
@@ -200,8 +200,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "ここ / そこ / あそこ / どこ",
     reading: "koko / soko / asoko / doko",
     level: "N5",
+    lesson: 2,
     category: "Demonstratives",
-    lesson: 3,
     meaning: "here / there / over there / where (place)",
     structure: "ここ・そこ・あそこ + は + N + です / N + は + ここ・そこ・あそこ・どこ + です",
     explanation:
@@ -223,8 +223,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "こちら / そちら / あちら / どちら",
     reading: "kochira / sochira / achira / dochira",
     level: "N5",
+    lesson: 2,
     category: "Demonstratives",
-    lesson: 3,
     meaning: "this way / that way / that way over there / which way (polite)",
     structure: "こちら・そちら・あちら + は + N + です / N + は + どちら + ですか",
     explanation:
@@ -246,8 +246,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "N はどこですか",
     reading: "N wa doko desu ka",
     level: "N5",
-    category: "Demonstratives",
     lesson: 3,
+    category: "Demonstratives",
     meaning: "Where is N?",
     structure: "Noun + は + どこ + ですか",
     explanation:
@@ -270,8 +270,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "〜は何時ですか",
     reading: "〜wa nanji desu ka",
     level: "N5",
+    lesson: 3,
     category: "Time",
-    lesson: 4,
     meaning: "What time is ~? / What time does ~ start?",
     structure: "N + は + 何時[なんじ] + ですか",
     explanation:
@@ -293,8 +293,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "〜に (clock time / day)",
     reading: "〜ni",
     level: "N5",
+    lesson: 3,
     category: "Time",
-    lesson: 4,
     meaning: "at / on (specific time or day)",
     structure: "Time-N / Day-N + に + (verb)",
     explanation:
@@ -316,8 +316,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "〜から〜まで",
     reading: "〜kara 〜made",
     level: "N5",
+    lesson: 3,
     category: "Time",
-    lesson: 4,
     meaning: "from ~ to ~ (time or place span)",
     structure: "N1 + から + N2 + まで",
     explanation:
@@ -340,8 +340,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "V ます (polite non-past)",
     reading: "V masu",
     level: "N5",
+    lesson: 3,
     category: "Verb forms",
-    lesson: 5,
     meaning: "polite present / future affirmative verb",
     structure: "Verb-stem + ます",
     explanation:
@@ -363,8 +363,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "〜へ (destination / direction)",
     reading: "〜e",
     level: "N5",
+    lesson: 4,
     category: "Particles",
-    lesson: 5,
     meaning: "to (destination of motion)",
     structure: "Place-N + へ + motion-verb",
     explanation:
@@ -386,8 +386,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "〜で (means of transport)",
     reading: "〜de",
     level: "N5",
+    lesson: 4,
     category: "Particles",
-    lesson: 5,
     meaning: "by (means of transportation)",
     structure: "Vehicle / Route-N + で + motion-verb",
     explanation:
@@ -410,8 +410,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "〜を (direct object)",
     reading: "〜o",
     level: "N5",
+    lesson: 4,
     category: "Particles",
-    lesson: 6,
     meaning: "(marks the direct object of a verb)",
     structure: "Noun + を + transitive-verb",
     explanation:
@@ -433,8 +433,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "〜で (means / tool / language)",
     reading: "〜de",
     level: "N5",
+    lesson: 4,
     category: "Particles",
-    lesson: 6,
     meaning: "with / by means of / in (a language)",
     structure: "Tool-N / Language-N + で + verb",
     explanation:
@@ -456,8 +456,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "何をしますか (object question)",
     reading: "nani o shimasu ka",
     level: "N5",
+    lesson: 4,
     category: "Particles",
-    lesson: 6,
     meaning: "What do you do? / What will you do with N?",
     structure: "何[なに] + を + V-ますか / N + を + 何[なに] + V-ますか",
     explanation:
@@ -480,8 +480,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "毎〜 (every ~)",
     reading: "mai~",
     level: "N5",
+    lesson: 5,
     category: "Time",
-    lesson: 7,
     meaning: "every (day / morning / evening / week)",
     structure: "毎 + time-word",
     explanation:
@@ -503,8 +503,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "〜曜日に (on a day of the week)",
     reading: "〜youbi ni",
     level: "N5",
+    lesson: 5,
     category: "Time",
-    lesson: 7,
     meaning: "on (a specific weekday)",
     structure: "曜日[ようび]-N + に + verb",
     explanation:
@@ -526,8 +526,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "Particles に / で / へ / を (daily-life review)",
     reading: "ni / de / e / o",
     level: "N5",
+    lesson: 5,
     category: "Particles",
-    lesson: 7,
     meaning: "combined particle use for daily activities",
     structure: "Time + に, Means + で, Destination + へ, Object + を",
     explanation:
@@ -550,8 +550,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "い-adjective (present affirmative 〜いです)",
     reading: "i-adjective ~i desu",
     level: "N5",
+    lesson: 5,
     category: "Adjectives",
-    lesson: 8,
     meaning: "polite present affirmative of い-adjectives",
     structure: "い-adj stem + い + です",
     explanation:
@@ -573,8 +573,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "い-adjective (negative 〜くないです)",
     reading: "i-adjective ~kunai desu",
     level: "N5",
+    lesson: 5,
     category: "Adjectives",
-    lesson: 8,
     meaning: "polite negative of い-adjectives",
     structure: "い-adj stem (drop い) + くないです",
     explanation:
@@ -596,8 +596,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "〜くて (い-adjective て-form)",
     reading: "〜kute",
     level: "N5",
+    lesson: 6,
     category: "Adjectives",
-    lesson: 8,
     meaning: "and (joining two い-adjectives)",
     structure: "い-adj stem (drop い) + くて",
     explanation:
@@ -620,8 +620,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "な-adjective (〜な N / 〜です)",
     reading: "na-adjective",
     level: "N5",
+    lesson: 6,
     category: "Adjectives",
-    lesson: 9,
     meaning: "polite present of な-adjectives",
     structure: "な-adj stem + です / な-adj stem + な + N",
     explanation:
@@ -643,8 +643,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "好きです / 嫌いです",
     reading: "suki desu / kirai desu",
     level: "N5",
+    lesson: 6,
     category: "Adjectives",
-    lesson: 9,
     meaning: "(I) like / (I) dislike",
     structure: "Topic + は + Object + が + 好[す]きです / 嫌[きら]いです",
     explanation:
@@ -666,8 +666,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "〜が (subject of 好き / 上手)",
     reading: "〜ga",
     level: "N5",
+    lesson: 6,
     category: "Particles",
-    lesson: 9,
     meaning: "marks the thing liked / skill object",
     structure: "Person + は + N + が + 好[す]きです / 上手[じょうず]です",
     explanation:
@@ -690,8 +690,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "N の N (possessive / modifier)",
     reading: "N no N",
     level: "N5",
+    lesson: 6,
     category: "Modifying",
-    lesson: 10,
     meaning: "N's N / N modifying N",
     structure: "N1 + の + N2",
     explanation:
@@ -713,8 +713,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "〜に あります / います (existence)",
     reading: "〜ni arimasu / imasu",
     level: "N5",
+    lesson: 7,
     category: "Verb forms",
-    lesson: 10,
     meaning: "(a thing) is at ~ / (a person/animal) is at ~",
     structure: "Subject + は + Place + に + あります / います",
     explanation:
@@ -736,8 +736,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "ご〜 / お〜 (honorific prefix, family)",
     reading: "go~ / o~",
     level: "N5",
+    lesson: 7,
     category: "Modifying",
-    lesson: 10,
     meaning: "polite prefix for family terms / nouns",
     structure: "ご / お + family-N (referring to others' family)",
     explanation:
@@ -760,8 +760,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "V ます / V ません (daily routine)",
     reading: "V masu / V masen",
     level: "N5",
+    lesson: 7,
     category: "Verb forms",
-    lesson: 11,
     meaning: "polite present affirmative / negative verb",
     structure: "V-stem + ます / V-stem + ません",
     explanation:
@@ -783,8 +783,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "〜に (time + verb of routine)",
     reading: "〜ni",
     level: "N5",
+    lesson: 7,
     category: "Time",
-    lesson: 11,
     meaning: "at (a clock time for a routine action)",
     structure: "Clock-time + に + routine-verb",
     explanation:
@@ -806,8 +806,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "Particles に / で / へ / を (routine review)",
     reading: "ni / de / e / o",
     level: "N5",
+    lesson: 7,
     category: "Particles",
-    lesson: 11,
     meaning: "combined particle use for daily routine",
     structure: "Time に, Means で, Destination へ, Object を",
     explanation:
@@ -830,8 +830,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "V ました (past affirmative)",
     reading: "V mashita",
     level: "N5",
+    lesson: 8,
     category: "Tense",
-    lesson: 12,
     meaning: "polite past affirmative verb",
     structure: "V-stem + ました",
     explanation:
@@ -853,8 +853,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "V ませんでした (past negative)",
     reading: "V masen deshita",
     level: "N5",
+    lesson: 8,
     category: "Tense",
-    lesson: 12,
     meaning: "polite past negative verb",
     structure: "V-stem + ませんでした",
     explanation:
@@ -876,8 +876,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "い-adjective past 〜かったです",
     reading: "i-adjective ~katta desu",
     level: "N5",
+    lesson: 8,
     category: "Tense",
-    lesson: 12,
     meaning: "polite past of い-adjectives",
     structure: "い-adj stem (drop い) + かったです",
     explanation:
@@ -899,8 +899,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "な-adjective / N past 〜でした / じゃなかったです",
     reading: "na-adj / N ~deshita / ~janakatta desu",
     level: "N5",
+    lesson: 8,
     category: "Tense",
-    lesson: 12,
     meaning: "polite past of な-adjectives and nouns",
     structure: "な-adj stem + でした / N + でした / 〜じゃなかったです",
     explanation:
@@ -923,8 +923,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "frequency adverbs: よく / 時々 / あまり〜ない",
     reading: "yoku / tokidoki / amari~nai",
     level: "N5",
+    lesson: 8,
     category: "Time",
-    lesson: 13,
     meaning: "often / sometimes / not often",
     structure: "よく V-ます / 時々 V-ます / あまり V-ません",
     explanation:
@@ -946,8 +946,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "〜に会う (meet someone)",
     reading: "〜ni au",
     level: "N5",
+    lesson: 9,
     category: "Particles",
-    lesson: 13,
     meaning: "to meet / see (a person)",
     structure: "Person-N + に + 会[あ]います",
     explanation:
@@ -969,8 +969,8 @@ export const grammarN5_1: GrammarData[] = [
     point: "Particles に / で / へ / を (final review)",
     reading: "ni / de / e / o",
     level: "N5",
+    lesson: 9,
     category: "Particles",
-    lesson: 13,
     meaning: "consolidated use of core N5 particles",
     structure: "Time に, Means で, Destination へ, Object を, Frequency + V",
     explanation:
@@ -989,17 +989,17 @@ export const grammarN5_1: GrammarData[] = [
 ];
 
 export const minnaN5LessonTitles: { lesson: number; title: string; topic: string }[] = [
-  { lesson: 1, title: "はじめまして", topic: "Greetings & self-introduction (は〜です copula)" },
-  { lesson: 2, title: "これ・それ・あれ", topic: "Demonstratives: これ/それ/あれ & この/その/あの" },
-  { lesson: 3, title: "ここ・そこ・あそこ", topic: "Place demonstratives & こちら/そちら/あちら" },
-  { lesson: 4, title: "何時ですか", topic: "Telling time, 〜から〜まで, に for clock time" },
-  { lesson: 5, title: "どこへ行きますか", topic: "Polite verbs (ます), へ destination, で transport" },
-  { lesson: 6, title: "何をしますか", topic: "Direct object を, means/tool で, 何を question" },
-  { lesson: 7, title: "まいにち", topic: "毎〜 frequency, days of week に, particle review" },
-  { lesson: 8, title: "どうですか", topic: "い-adjectives: present, negative, 〜くて" },
-  { lesson: 9, title: "好きですか", topic: "な-adjectives, 好き/嫌い, が subject of preference" },
-  { lesson: 10, title: "家族", topic: "Possessive/modifying の, family terms, ご/お prefixes" },
-  { lesson: 11, title: "何時に起きますか", topic: "Daily routine verbs, time + に, particle review" },
-  { lesson: 12, title: "先週何をしましたか", topic: "Past tense: ました/ませんでした, かった/だった" },
-  { lesson: 13, title: "毎日何をしますか", topic: "Frequency adverbs, 〜に会う, particle consolidation" }
+  { title: "はじめまして", topic: "Greetings & self-introduction (は〜です copula)" },
+  { title: "これ・それ・あれ", topic: "Demonstratives: これ/それ/あれ & この/その/あの" },
+  { title: "ここ・そこ・あそこ", topic: "Place demonstratives & こちら/そちら/あちら" },
+  { title: "何時ですか", topic: "Telling time, 〜から〜まで, に for clock time" },
+  { title: "どこへ行きますか", topic: "Polite verbs (ます), へ destination, で transport" },
+  { title: "何をしますか", topic: "Direct object を, means/tool で, 何を question" },
+  { title: "まいにち", topic: "毎〜 frequency, days of week に, particle review" },
+  { title: "どうですか", topic: "い-adjectives: present, negative, 〜くて" },
+  { title: "好きですか", topic: "な-adjectives, 好き/嫌い, が subject of preference" },
+  { title: "家族", topic: "Possessive/modifying の, family terms, ご/お prefixes" },
+  { title: "何時に起きますか", topic: "Daily routine verbs, time + に, particle review" },
+  { title: "先週何をしましたか", topic: "Past tense: ました/ませんでした, かった/だった" },
+  { title: "毎日何をしますか", topic: "Frequency adverbs, 〜に会う, particle consolidation" }
 ];

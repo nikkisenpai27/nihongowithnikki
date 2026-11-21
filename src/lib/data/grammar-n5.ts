@@ -13,8 +13,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜は〜です",
     reading: "〜wa 〜desu",
     level: "N5",
+    lesson: 17,
     category: "Copula",
-    lesson: 1,
     meaning: "A is B (polite equational statement)",
     structure: "N1 + は + N2 + です",
     explanation:
@@ -35,8 +35,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜じゃないです / 〜ではありません",
     reading: "〜janai desu / 〜dewa arimasen",
     level: "N5",
+    lesson: 17,
     category: "Copula",
-    lesson: 1,
     meaning: "A is not B (polite negative copula)",
     structure: "N + は + N + じゃないです / ではありません",
     explanation:
@@ -57,8 +57,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜ですか",
     reading: "〜desu ka",
     level: "N5",
+    lesson: 17,
     category: "Copula",
-    lesson: 1,
     meaning: "Is A B? (yes/no question)",
     structure: "N + は + N + ですか",
     explanation:
@@ -81,8 +81,8 @@ export const grammarN5: GrammarData[] = [
     point: "これ / それ / あれ",
     reading: "kore / sore / are",
     level: "N5",
+    lesson: 18,
     category: "Particles",
-    lesson: 2,
     meaning: "this / that / that over there (demonstrative pronouns)",
     structure: "これ / それ / あれ + です",
     explanation:
@@ -103,8 +103,8 @@ export const grammarN5: GrammarData[] = [
     point: "この / その / あの + N",
     reading: "kono / sono / ano + N",
     level: "N5",
+    lesson: 18,
     category: "Modifying",
-    lesson: 2,
     meaning: "this / that / that N (demonstrative modifiers)",
     structure: "この / その / あの + Noun",
     explanation:
@@ -125,8 +125,8 @@ export const grammarN5: GrammarData[] = [
     point: "N1 の N2",
     reading: "N1 no N2",
     level: "N5",
+    lesson: 18,
     category: "Modifying",
-    lesson: 2,
     meaning: "N2 belonging to / of N1 (possessive の)",
     structure: "Noun1 + の + Noun2",
     explanation:
@@ -149,8 +149,8 @@ export const grammarN5: GrammarData[] = [
     point: "ここ / そこ / あそこ",
     reading: "koko / soko / asoko",
     level: "N5",
+    lesson: 18,
     category: "Particles",
-    lesson: 3,
     meaning: "here / there / over there (place demonstratives)",
     structure: "ここ / そこ / あそこ + です",
     explanation:
@@ -171,8 +171,8 @@ export const grammarN5: GrammarData[] = [
     point: "こちら / そちら / あちら",
     reading: "kochira / sochira / achira",
     level: "N5",
+    lesson: 18,
     category: "Particles",
-    lesson: 3,
     meaning: "this way / that way / that way over there (polite direction)",
     structure: "こちら / そちら / あちら + です",
     explanation:
@@ -195,8 +195,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜は何時ですか",
     reading: "〜wa nan-ji desu ka",
     level: "N5",
+    lesson: 19,
     category: "Copula",
-    lesson: 4,
     meaning: "What time is ~?",
     structure: "Topic + は + 何時 + ですか",
     explanation:
@@ -217,8 +217,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜から〜まで",
     reading: "〜kara 〜made",
     level: "N5",
+    lesson: 19,
     category: "Particles",
-    lesson: 4,
     meaning: "from ~ to / until ~ (time or place range)",
     structure: "N1 + から + N2 + まで",
     explanation:
@@ -241,8 +241,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜へ / に 行きます",
     reading: "〜e / ni ikimasu",
     level: "N5",
+    lesson: 19,
     category: "Particles",
-    lesson: 5,
     meaning: "go to ~ (destination)",
     structure: "Place + へ / に + 行きます / 来ます / 帰ります",
     explanation:
@@ -263,8 +263,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜から来ました",
     reading: "〜kara kimashita",
     level: "N5",
+    lesson: 19,
     category: "Particles",
-    lesson: 5,
     meaning: "I come from ~ (origin / nationality)",
     structure: "Place + から + 来ました",
     explanation:
@@ -287,8 +287,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜を〜ます",
     reading: "〜o 〜masu",
     level: "N5",
+    lesson: 19,
     category: "Particles",
-    lesson: 6,
     meaning: "do ~ to/with (direct object marker)",
     structure: "Noun + を + Verb (masu-form)",
     explanation:
@@ -309,8 +309,8 @@ export const grammarN5: GrammarData[] = [
     point: "何をしますか",
     reading: "nani o shimasu ka",
     level: "N5",
+    lesson: 20,
     category: "Particles",
-    lesson: 6,
     meaning: "What will (you) do?",
     structure: "何 + を + しますか",
     explanation:
@@ -333,8 +333,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜で (方法・交通手段)",
     reading: "〜de (method / transport)",
     level: "N5",
+    lesson: 20,
     category: "Particles",
-    lesson: 7,
     meaning: "by ~ (means of transport or method)",
     structure: "Vehicle / Method + で + 行きます / 帰ります",
     explanation:
@@ -355,8 +355,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜で (道具・手段)",
     reading: "〜de (tool / instrument)",
     level: "N5",
+    lesson: 20,
     category: "Particles",
-    lesson: 7,
     meaning: "with ~ (tool or instrument)",
     structure: "Tool + で + Verb",
     explanation:
@@ -379,8 +379,8 @@ export const grammarN5: GrammarData[] = [
     point: "い形容詞 + です",
     reading: "i-keiyoushi + desu",
     level: "N5",
+    lesson: 20,
     category: "Adjectives",
-    lesson: 8,
     meaning: "is ~ (i-adjective, present affirmative)",
     structure: "い-adj (stem + い) + です",
     explanation:
@@ -401,8 +401,8 @@ export const grammarN5: GrammarData[] = [
     point: "い形容詞 〜くないです",
     reading: "i-keiyoushi ~kunai desu",
     level: "N5",
+    lesson: 20,
     category: "Adjectives",
-    lesson: 8,
     meaning: "is not ~ (i-adjective negative)",
     structure: "い-adj stem + くないです / くありません",
     explanation:
@@ -423,8 +423,8 @@ export const grammarN5: GrammarData[] = [
     point: "い形容詞 + 名詞",
     reading: "i-keiyoushi + meishi",
     level: "N5",
+    lesson: 21,
     category: "Modifying",
-    lesson: 8,
     meaning: "(adj) N (i-adjective modifying a noun)",
     structure: "い-adj (dictionary form) + Noun",
     explanation:
@@ -447,8 +447,8 @@ export const grammarN5: GrammarData[] = [
     point: "な形容詞 + です",
     reading: "na-keiyoushi + desu",
     level: "N5",
+    lesson: 21,
     category: "Adjectives",
-    lesson: 9,
     meaning: "is ~ (na-adjective, present affirmative)",
     structure: "na-adj stem + です",
     explanation:
@@ -469,8 +469,8 @@ export const grammarN5: GrammarData[] = [
     point: "な形容詞 + な + 名詞",
     reading: "na-keiyoushi + na + meishi",
     level: "N5",
+    lesson: 21,
     category: "Modifying",
-    lesson: 9,
     meaning: "(adj) N (na-adjective modifying a noun)",
     structure: "na-adj stem + な + Noun",
     explanation:
@@ -491,8 +491,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜が好きです / 〜が嫌いです",
     reading: "〜ga suki desu / 〜ga kirai desu",
     level: "N5",
+    lesson: 21,
     category: "Adjectives",
-    lesson: 9,
     meaning: "(I) like / dislike ~",
     structure: "Noun + が + 好きです / 嫌いです / 上手です / 下手です",
     explanation:
@@ -515,8 +515,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜でした",
     reading: "〜deshita",
     level: "N5",
+    lesson: 21,
     category: "Tense",
-    lesson: 10,
     meaning: "was / were (past copula affirmative)",
     structure: "N + は + N + でした",
     explanation:
@@ -537,8 +537,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜じゃなかったです / 〜ではありませんでした",
     reading: "〜janakatta desu / 〜dewa arimasen deshita",
     level: "N5",
+    lesson: 22,
     category: "Tense",
-    lesson: 10,
     meaning: "was not / were not (past copula negative)",
     structure: "N + は + N + じゃなかったです / ではありませんでした",
     explanation:
@@ -559,8 +559,8 @@ export const grammarN5: GrammarData[] = [
     point: "い形容詞 〜かったです",
     reading: "i-keiyoushi ~katta desu",
     level: "N5",
+    lesson: 22,
     category: "Tense",
-    lesson: 10,
     meaning: "was ~ (i-adjective past affirmative)",
     structure: "い-adj stem + かったです",
     explanation:
@@ -583,8 +583,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜に〜があります / 〜がいます",
     reading: "〜ni 〜ga arimasu / imasu",
     level: "N5",
+    lesson: 22,
     category: "Particles",
-    lesson: 11,
     meaning: "there is ~ in/at ~ (existence)",
     structure: "Place + に + N + が + あります / います",
     explanation:
@@ -605,8 +605,8 @@ export const grammarN5: GrammarData[] = [
     point: "助数詞 (〜つ / 個 / 枚 / 人 / はい)",
     reading: "josuushi (tsu / ko / mai / nin / hai)",
     level: "N5",
+    lesson: 22,
     category: "Particles",
-    lesson: 11,
     meaning: "counters for things and people",
     structure: "Number + counter (+ の + Noun)",
     explanation:
@@ -627,8 +627,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜は〜にあります / 〜にいます",
     reading: "〜wa 〜ni arimasu / imasu",
     level: "N5",
+    lesson: 22,
     category: "Particles",
-    lesson: 11,
     meaning: "~ is in/at ~ (location statement)",
     structure: "Topic + は + Place + に + あります / います",
     explanation:
@@ -651,8 +651,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜ました",
     reading: "〜mashita",
     level: "N5",
+    lesson: 23,
     category: "Tense",
-    lesson: 12,
     meaning: "did ~ (past affirmative verb)",
     structure: "Verb stem (masu-form) + ました",
     explanation:
@@ -673,8 +673,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜ませんでした",
     reading: "〜masen deshita",
     level: "N5",
+    lesson: 23,
     category: "Tense",
-    lesson: 12,
     meaning: "did not ~ (past negative verb)",
     structure: "Verb stem (masu-form) + ませんでした",
     explanation:
@@ -697,8 +697,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜たいです",
     reading: "〜tai desu",
     level: "N5",
+    lesson: 23,
     category: "Want-Desire",
-    lesson: 13,
     meaning: "want to ~ (desire for one's own action)",
     structure: "Verb stem (masu-stem) + たいです",
     explanation:
@@ -719,8 +719,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜たくないです / 〜たくありません",
     reading: "〜takunai desu / 〜taku arimasen",
     level: "N5",
+    lesson: 23,
     category: "Want-Desire",
-    lesson: 13,
     meaning: "do not want to ~ (negative desire)",
     structure: "Verb stem + たくないです / たくありません",
     explanation:
@@ -743,8 +743,8 @@ export const grammarN5: GrammarData[] = [
     point: "て形 (テ形)",
     reading: "te-kei",
     level: "N5",
+    lesson: 23,
     category: "Verb forms",
-    lesson: 14,
     meaning: "te-form (intermediate connective form of verbs)",
     structure: "Verb → te-form (group-dependent conjugation)",
     explanation:
@@ -765,8 +765,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜てください",
     reading: "〜te kudasai",
     level: "N5",
+    lesson: 24,
     category: "Suggestions",
-    lesson: 14,
     meaning: "please do ~ (soft request)",
     structure: "Verb te-form + ください",
     explanation:
@@ -787,8 +787,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜て、〜ます (動作の連続)",
     reading: "〜te, 〜masu (action sequence)",
     level: "N5",
+    lesson: 24,
     category: "Conjunctions",
-    lesson: 14,
     meaning: "do ~ and (then) do ~ (sequential actions)",
     structure: "V1 te-form + 、 + V2 (masu-form)",
     explanation:
@@ -811,8 +811,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜てもいいです",
     reading: "〜te mo ii desu",
     level: "N5",
+    lesson: 24,
     category: "Permission",
-    lesson: 15,
     meaning: "you may ~ (permission granted)",
     structure: "Verb te-form + も + いいです",
     explanation:
@@ -833,8 +833,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜てもいいですか",
     reading: "〜te mo ii desu ka",
     level: "N5",
+    lesson: 24,
     category: "Permission",
-    lesson: 15,
     meaning: "may I ~? (asking permission)",
     structure: "Verb te-form + も + いいですか",
     explanation:
@@ -855,8 +855,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜てはいけません",
     reading: "〜te wa ikemasen",
     level: "N5",
+    lesson: 24,
     category: "Obligation",
-    lesson: 15,
     meaning: "must not ~ (prohibition)",
     structure: "Verb te-form + は + いけません",
     explanation:
@@ -879,8 +879,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜てから",
     reading: "〜te kara",
     level: "N5",
+    lesson: 25,
     category: "Conjunctions",
-    lesson: 16,
     meaning: "after doing ~ (then ~)",
     structure: "Verb te-form + から + Verb2",
     explanation:
@@ -901,8 +901,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜ないでください",
     reading: "〜nai de kudasai",
     level: "N5",
+    lesson: 25,
     category: "Suggestions",
-    lesson: 16,
     meaning: "please do not ~ (negative request)",
     structure: "Verb nai-form + で + ください",
     explanation:
@@ -925,8 +925,8 @@ export const grammarN5: GrammarData[] = [
     point: "N1 より N2 のほうが〜です",
     reading: "N1 yori N2 no hou ga ~desu",
     level: "N5",
+    lesson: 25,
     category: "Comparisons",
-    lesson: 17,
     meaning: "N2 is more ~ than N1",
     structure: "N1 + より + N2 + のほうが + Adj です",
     explanation:
@@ -947,8 +947,8 @@ export const grammarN5: GrammarData[] = [
     point: "N1 と N2 とどちらが〜ですか",
     reading: "N1 to N2 to dochira ga ~desu ka",
     level: "N5",
+    lesson: 25,
     category: "Comparisons",
-    lesson: 17,
     meaning: "which is more ~, N1 or N2?",
     structure: "N1 + と + N2 + と + どちらが + Adj ですか",
     explanation:
@@ -969,8 +969,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜でいちばん〜です",
     reading: "〜de ichiban ~desu",
     level: "N5",
+    lesson: 25,
     category: "Comparisons",
-    lesson: 17,
     meaning: "~ is the most ~ in/among ~ (superlative)",
     structure: "Category + の + 中で + N + が + いちばん + Adj です",
     explanation:
@@ -993,8 +993,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜ています (動作の進行)",
     reading: "〜te imasu (action in progress)",
     level: "N5",
+    lesson: 25,
     category: "Verb forms",
-    lesson: 18,
     meaning: "is ~ing (ongoing action)",
     structure: "Verb te-form + います",
     explanation:
@@ -1015,8 +1015,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜ています (結果の状態)",
     reading: "〜te imasu (resultant state)",
     level: "N5",
+    lesson: 25,
     category: "Verb forms",
-    lesson: 18,
     meaning: "has ~ed (state resulting from past action)",
     structure: "Verb te-form + います (with punctual verbs)",
     explanation:
@@ -1039,8 +1039,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜たことがあります",
     reading: "〜ta koto ga arimasu",
     level: "N5",
+    lesson: 25,
     category: "Verb forms",
-    lesson: 19,
     meaning: "have experienced ~ (past experience)",
     structure: "Verb ta-form + ことがあります",
     explanation:
@@ -1061,8 +1061,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜たことがありません",
     reading: "〜ta koto ga arimasen",
     level: "N5",
+    lesson: 25,
     category: "Verb forms",
-    lesson: 19,
     meaning: "have never ~ (no experience)",
     structure: "Verb ta-form + ことがありません",
     explanation:
@@ -1085,8 +1085,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜から (理由)",
     reading: "〜kara (reason)",
     level: "N5",
+    lesson: 25,
     category: "Conjunctions",
-    lesson: 20,
     meaning: "because ~ (gives reason)",
     structure: "[Sentence / N / Adj] + から",
     explanation:
@@ -1107,8 +1107,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜ましょうか",
     reading: "〜mashou ka",
     level: "N5",
+    lesson: 25,
     category: "Suggestions",
-    lesson: 20,
     meaning: "shall I ~? (offer to do for someone)",
     structure: "Verb stem (masu-stem) + ましょうか",
     explanation:
@@ -1131,8 +1131,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜ましょう",
     reading: "〜mashou",
     level: "N5",
+    lesson: 25,
     category: "Suggestions",
-    lesson: 21,
     meaning: "let's ~ (inclusive suggestion)",
     structure: "Verb stem (masu-stem) + ましょう",
     explanation:
@@ -1153,8 +1153,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜ませんか",
     reading: "〜masen ka",
     level: "N5",
+    lesson: 25,
     category: "Suggestions",
-    lesson: 21,
     meaning: "won't you ~? / how about ~ (invitation)",
     structure: "Verb stem (masu-stem) + ませんか",
     explanation:
@@ -1177,8 +1177,8 @@ export const grammarN5: GrammarData[] = [
     point: "N の N (修飾)",
     reading: "N no N (modifying)",
     level: "N5",
+    lesson: 25,
     category: "Modifying",
-    lesson: 22,
     meaning: "N that is ~ (noun modifying a noun)",
     structure: "Noun1 + の + Noun2",
     explanation:
@@ -1199,8 +1199,8 @@ export const grammarN5: GrammarData[] = [
     point: "V辞書形 + の (名詞化)",
     reading: "V-jishokei + no (meishika)",
     level: "N5",
+    lesson: 25,
     category: "Modifying",
-    lesson: 22,
     meaning: "to ~ / ~ing (nominalising a verb with の)",
     structure: "Verb dictionary form + の",
     explanation:
@@ -1223,8 +1223,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜てあげる",
     reading: "〜te ageru",
     level: "N5",
+    lesson: 25,
     category: "Giving-Receiving",
-    lesson: 23,
     meaning: "(I) do ~ for (someone)",
     structure: "Verb te-form + あげます",
     explanation:
@@ -1245,8 +1245,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜てくれる",
     reading: "〜te kureru",
     level: "N5",
+    lesson: 25,
     category: "Giving-Receiving",
-    lesson: 23,
     meaning: "(someone) does ~ for me",
     structure: "Verb te-form + くれます",
     explanation:
@@ -1267,8 +1267,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜てもらう",
     reading: "〜te morau",
     level: "N5",
+    lesson: 25,
     category: "Giving-Receiving",
-    lesson: 23,
     meaning: "(I) have (someone) do ~ for me",
     structure: "N + に + Verb te-form + もらいます",
     explanation:
@@ -1291,8 +1291,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜たら (条件)",
     reading: "〜tara (conditional)",
     level: "N5",
+    lesson: 25,
     category: "Conditionals",
-    lesson: 24,
     meaning: "if / when ~ (past conditional)",
     structure: "Verb ta-form + ら + result clause",
     explanation:
@@ -1313,8 +1313,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜たらどうですか",
     reading: "〜tara dou desu ka",
     level: "N5",
+    lesson: 25,
     category: "Suggestions",
-    lesson: 24,
     meaning: "how about ~ing? / why don't you ~?",
     structure: "Verb ta-form + ら + どうですか",
     explanation:
@@ -1337,8 +1337,8 @@ export const grammarN5: GrammarData[] = [
     point: "普通形 (動詞の辞書形・た形・ない形)",
     reading: "futsuu-kei (verb jisho/ta/nai)",
     level: "N5",
-    category: "Verb forms",
     lesson: 25,
+    category: "Verb forms",
     meaning: "casual verb forms (dictionary, past, negative)",
     structure: "Verb plain forms: 辞書形 / た形 / ない形",
     explanation:
@@ -1359,8 +1359,8 @@ export const grammarN5: GrammarData[] = [
     point: "普通形 (形容詞・名詞の普通形)",
     reading: "futsuu-kei (adj / noun plain forms)",
     level: "N5",
-    category: "Adjectives",
     lesson: 25,
+    category: "Adjectives",
     meaning: "casual adjective and noun forms (だ / だった / じゃない)",
     structure: "Plain forms: い-adj / な-adj + だ / N + だ",
     explanation:
@@ -1381,8 +1381,8 @@ export const grammarN5: GrammarData[] = [
     point: "〜と思う (普通形 + と)",
     reading: "〜to omou (futsuu-kei + to)",
     level: "N5",
-    category: "Verb forms",
     lesson: 25,
+    category: "Verb forms",
     meaning: "I think that ~ (quoting thought with と)",
     structure: "Plain form + と + 思います",
     explanation:

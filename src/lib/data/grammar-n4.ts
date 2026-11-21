@@ -17,8 +17,8 @@ export const grammarN4: GrammarData[] = [
     point: "普通体・丁寧体",
     reading: "ふつうたい・ていねいたい",
     level: "N4",
+    lesson: 41,
     category: "Modifying",
-    lesson: 26,
     meaning: "Plain (casual) and polite (desu/masu) predicate forms",
     structure: "Plain: N/Na-adj + だ, I-adj + い, V-辞書形/ない/た; Polite: 〜です/〜ます",
     explanation:
@@ -40,8 +40,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜と思う",
     reading: "〜とおもう",
     level: "N4",
+    lesson: 41,
     category: "Modifying",
-    lesson: 26,
     meaning: "I think that... (opinion with plain form)",
     structure: "普通体 + と思う",
     explanation:
@@ -63,8 +63,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜と言う / 〜と聞く",
     reading: "〜という / ときく",
     level: "N4",
+    lesson: 41,
     category: "Modifying",
-    lesson: 26,
     meaning: "Say that... / hear that... (quoted speech)",
     structure: "普通体 + と言う / と聞く",
     explanation:
@@ -90,8 +90,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜られる / 〜れる (potential)",
     reading: "〜られる / 〜れる (かのう)",
     level: "N4",
+    lesson: 41,
     category: "Verb forms",
-    lesson: 27,
     meaning: "Can do / be able to do (potential form of verbs)",
     structure: "V-潜在形 (Group I: 書く→書ける; Group II: 食べる→食べられる; する→できる; くる→こられる)",
     explanation:
@@ -113,8 +113,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ことができる",
     reading: "〜ことができる",
     level: "N4",
+    lesson: 42,
     category: "Verb forms",
-    lesson: 27,
     meaning: "Can do / be able to do (periphrastic potential)",
     structure: "V-辞書形 + ことができる",
     explanation:
@@ -136,8 +136,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜見える / 〜聞こえる",
     reading: "〜みえる / 〜きこえる",
     level: "N4",
+    lesson: 42,
     category: "Verb forms",
-    lesson: 27,
     meaning: "Can see / can hear (spontaneous perception)",
     structure: "N + が + 見える / 聞こえる",
     explanation:
@@ -163,8 +163,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ながら",
     reading: "〜ながら",
     level: "N4",
+    lesson: 42,
     category: "Conjunctions",
-    lesson: 28,
     meaning: "While doing... / doing two things at the same time",
     structure: "V-ます stem + ながら",
     explanation:
@@ -186,8 +186,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜間に / 〜間",
     reading: "〜あいだに / 〜あいだ",
     level: "N4",
+    lesson: 42,
     category: "Conjunctions",
-    lesson: 28,
     meaning: "During / while (time interval)",
     structure: "N + の間(に) / V-辞書形・ている間(に)",
     explanation:
@@ -213,8 +213,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜やすい / 〜にくい",
     reading: "〜やすい / 〜にくい",
     level: "N4",
+    lesson: 42,
     category: "Modifying",
-    lesson: 29,
     meaning: "Easy to... / hard to... (quality of an action)",
     structure: "V-ます stem + やすい / にくい",
     explanation:
@@ -236,8 +236,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜づらい / 〜がたい",
     reading: "〜づらい / 〜がたい",
     level: "N4",
+    lesson: 43,
     category: "Modifying",
-    lesson: 29,
     meaning: "Hard to do / difficult to (emotional or formal difficulty)",
     structure: "V-ます stem + づらい / がたい",
     explanation:
@@ -263,8 +263,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ても",
     reading: "〜ても",
     level: "N4",
+    lesson: 43,
     category: "Conditionals",
-    lesson: 30,
     meaning: "Even if... / no matter if... (concessive conditional)",
     structure: "V-て + も / 〜くても / 〜でも",
     explanation:
@@ -286,8 +286,8 @@ export const grammarN4: GrammarData[] = [
     point: "疑問詞 + 〜でも",
     reading: "ぎもんし + 〜でも",
     level: "N4",
+    lesson: 43,
     category: "Particles",
-    lesson: 30,
     meaning: "Any... / no matter what/who/when",
     structure: "疑問詞 (だれ・なに・いつ・どこ・どれ) + でも",
     explanation:
@@ -309,8 +309,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜のに (concessive)",
     reading: "〜のに (ゆに)",
     level: "N4",
+    lesson: 43,
     category: "Conjunctions",
-    lesson: 30,
     meaning: "Even though... / despite the fact that...",
     structure: "普通体 + のに (Na-adj/N: 〜なのに)",
     explanation:
@@ -336,8 +336,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜つもりだ",
     reading: "〜つもりだ",
     level: "N4",
+    lesson: 43,
     category: "Want-Desire",
-    lesson: 31,
     meaning: "I intend to... (current intention)",
     structure: "V-辞書形 + つもりだ / V-ない + つもりだ",
     explanation:
@@ -359,8 +359,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜予定だ",
     reading: "〜よていだ",
     level: "N4",
+    lesson: 44,
     category: "Tense",
-    lesson: 31,
     meaning: "Scheduled to / plan to (formal schedule)",
     structure: "V-辞書形 + 予定だ / N + の予定だ",
     explanation:
@@ -382,8 +382,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜と思う (intention)",
     reading: "〜とおもう (いこう)",
     level: "N4",
+    lesson: 44,
     category: "Want-Desire",
-    lesson: 31,
     meaning: "I think I will... (softer intention with volitional)",
     structure: "V-意向形 + と思っている / と思う",
     explanation:
@@ -409,8 +409,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜なさい",
     reading: "〜なさい",
     level: "N4",
+    lesson: 44,
     category: "Suggestions",
-    lesson: 32,
     meaning: "Do...! (mild command to children or subordinates)",
     structure: "V-ます stem + なさい",
     explanation:
@@ -432,8 +432,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ようにする",
     reading: "〜ようにする",
     level: "N4",
+    lesson: 44,
     category: "Suggestions",
-    lesson: 32,
     meaning: "Try to... / make sure to... (effort or habit)",
     structure: "V-辞書形 / V-ない + ようにする",
     explanation:
@@ -455,8 +455,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ないようにする",
     reading: "〜ないようにする",
     level: "N4",
+    lesson: 44,
     category: "Suggestions",
-    lesson: 32,
     meaning: "Try not to... / be careful not to...",
     structure: "V-ない + ようにする",
     explanation:
@@ -482,8 +482,8 @@ export const grammarN4: GrammarData[] = [
     point: "受身の形",
     reading: "うけみのかたち",
     level: "N4",
+    lesson: 45,
     category: "Verb forms",
-    lesson: 33,
     meaning: "Passive form of verbs (れる/られる)",
     structure: "Group I: V-ない stem + れる; Group II: V-ない stem + られる; する→される; くる→こられる",
     explanation:
@@ -505,8 +505,8 @@ export const grammarN4: GrammarData[] = [
     point: "直接受身",
     reading: "ちょくせつうけみ",
     level: "N4",
+    lesson: 45,
     category: "Verb forms",
-    lesson: 33,
     meaning: "Direct passive (subject becomes patient)",
     structure: "N(患者) + は + N(動作主) + に + V-受身",
     explanation:
@@ -528,8 +528,8 @@ export const grammarN4: GrammarData[] = [
     point: "迷惑の受身",
     reading: "めいわくのうけみ",
     level: "N4",
+    lesson: 45,
     category: "Verb forms",
-    lesson: 33,
     meaning: "Suffering passive (adversely affected by someone's action)",
     structure: "N(被害者) + は + N(動作主) + に + V-受身",
     explanation:
@@ -555,8 +555,8 @@ export const grammarN4: GrammarData[] = [
     point: "使役の形",
     reading: "しえきのかたち",
     level: "N4",
+    lesson: 45,
     category: "Verb forms",
-    lesson: 34,
     meaning: "Causative form of verbs (せる/させる)",
     structure: "Group I: V-ない stem + せる; Group II: V-ない stem + させる; する→させる; くる→こさせる",
     explanation:
@@ -578,8 +578,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜に〜を〜させる",
     reading: "〜に〜を〜させる",
     level: "N4",
+    lesson: 45,
     category: "Verb forms",
-    lesson: 34,
     meaning: "Make / let someone do something (causative with object)",
     structure: "N(causee) + に + N(object) + を + V-使役",
     explanation:
@@ -601,8 +601,8 @@ export const grammarN4: GrammarData[] = [
     point: "使役受身 (させられる)",
     reading: "しえきうけみ (させられる)",
     level: "N4",
+    lesson: 46,
     category: "Verb forms",
-    lesson: 34,
     meaning: "Be made to do something (causative-passive)",
     structure: "Group I: V-ない stem + される; Group II/する/くる: V-させる + られる",
     explanation:
@@ -628,8 +628,8 @@ export const grammarN4: GrammarData[] = [
     point: "お〜になる",
     reading: "お〜になる",
     level: "N4",
+    lesson: 46,
     category: "Honorific",
-    lesson: 35,
     meaning: "Respectful (honorific) verb form for another's action",
     structure: "お + V-ます stem + になる / ご + 漢語N + になる",
     explanation:
@@ -651,8 +651,8 @@ export const grammarN4: GrammarData[] = [
     point: "特殊な尊敬語 (いらっしゃる etc.)",
     reading: "とくしゅなそんけいご",
     level: "N4",
+    lesson: 46,
     category: "Honorific",
-    lesson: 35,
     meaning: "Special honorific verbs with dedicated forms",
     structure: "Plain → Honorific: 行く/来る/いる→いらっしゃる; 言う→おっしゃる; する→なさる; 見る→ごらんになる",
     explanation:
@@ -674,8 +674,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ていらっしゃる",
     reading: "〜ていらっしゃる",
     level: "N4",
+    lesson: 46,
     category: "Honorific",
-    lesson: 35,
     meaning: "Be doing... (honorific ている)",
     structure: "V-て + いらっしゃる",
     explanation:
@@ -701,8 +701,8 @@ export const grammarN4: GrammarData[] = [
     point: "お〜する / ご〜する",
     reading: "お〜する / ご〜する",
     level: "N4",
+    lesson: 46,
     category: "Honorific",
-    lesson: 36,
     meaning: "Humble verb form for one's own action toward a respected party",
     structure: "お + V-ます stem + する / ご + 漢語N + する",
     explanation:
@@ -724,8 +724,8 @@ export const grammarN4: GrammarData[] = [
     point: "特殊な謙譲語 (まいる etc.)",
     reading: "とくしゅなけんじょうご",
     level: "N4",
+    lesson: 47,
     category: "Honorific",
-    lesson: 36,
     meaning: "Special humble verbs with dedicated forms",
     structure: "Plain → Humble: 行く/来る→まいる; 言う→申す; する→いたす; 食べる/飲む→いただく",
     explanation:
@@ -747,8 +747,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ていただく",
     reading: "〜ていただく",
     level: "N4",
+    lesson: 47,
     category: "Honorific",
-    lesson: 36,
     meaning: "Humbly receive the favor of someone doing...",
     structure: "V-て + いただく",
     explanation:
@@ -774,8 +774,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ていただけませんか",
     reading: "〜ていただけませんか",
     level: "N4",
+    lesson: 47,
     category: "Giving-Receiving",
-    lesson: 37,
     meaning: "Could you please...? (very polite request)",
     structure: "V-て + いただけませんか",
     explanation:
@@ -797,8 +797,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜てもらえませんか",
     reading: "〜てもらえませんか",
     level: "N4",
+    lesson: 47,
     category: "Giving-Receiving",
-    lesson: 37,
     meaning: "Could you...? (polite request, slightly less formal)",
     structure: "V-て + もらえませんか",
     explanation:
@@ -824,8 +824,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ことにする",
     reading: "〜ことにする",
     level: "N4",
+    lesson: 47,
     category: "Verb forms",
-    lesson: 38,
     meaning: "Decide to... (one's own decision)",
     structure: "V-辞書形 / V-ない + ことにする",
     explanation:
@@ -847,8 +847,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ことになる",
     reading: "〜ことになる",
     level: "N4",
+    lesson: 48,
     category: "Verb forms",
-    lesson: 38,
     meaning: "It has been decided that... (external/collective decision)",
     structure: "V-辞書形 / V-ない + ことになる",
     explanation:
@@ -870,8 +870,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ということだ",
     reading: "〜ということだ",
     level: "N4",
+    lesson: 48,
     category: "Modifying",
-    lesson: 38,
     meaning: "It means that... / I heard that... (explanation or hearsay)",
     structure: "普通体 + ということだ",
     explanation:
@@ -897,8 +897,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜そうだ (conjecture)",
     reading: "〜そうだ (すいそく)",
     level: "N4",
+    lesson: 48,
     category: "Modifying",
-    lesson: 39,
     meaning: "Looks like... / seems... (based on appearance)",
     structure: "V-ます stem + そうだ / I-adj stem + そうだ / Na-adj stem + そうだ",
     explanation:
@@ -920,8 +920,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ようだ (conjecture)",
     reading: "〜ようだ (すいそく)",
     level: "N4",
+    lesson: 48,
     category: "Modifying",
-    lesson: 39,
     meaning: "It seems that... / it appears that... (inference from evidence)",
     structure: "普通体 + ようだ (N + のようだ, Na-adj + なようだ)",
     explanation:
@@ -943,8 +943,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜らしい (conjecture)",
     reading: "〜らしい (すいそく)",
     level: "N4",
+    lesson: 48,
     category: "Modifying",
-    lesson: 39,
     meaning: "It seems that... / appears to be... (based on hearsay or typicality)",
     structure: "普通体 + らしい (N + らしい, Na-adj stem + らしい)",
     explanation:
@@ -970,8 +970,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ば (conditional)",
     reading: "〜ば (じょうけん)",
     level: "N4",
+    lesson: 49,
     category: "Conditionals",
-    lesson: 40,
     meaning: "If... (general conditional, hypothetical)",
     structure: "Group I: V-え段 + ば; Group II: V-れ + ば; する→すれば; くる→くれば",
     explanation:
@@ -993,8 +993,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜なら",
     reading: "〜なら",
     level: "N4",
+    lesson: 49,
     category: "Conditionals",
-    lesson: 40,
     meaning: "If it is the case that... / as for...",
     structure: "N + なら / V-普通体 + なら / Na-adj + なら",
     explanation:
@@ -1016,8 +1016,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ば〜ほど",
     reading: "〜ば〜ほど",
     level: "N4",
+    lesson: 49,
     category: "Conditionals",
-    lesson: 40,
     meaning: "The more... the more... (proportional condition)",
     structure: "V-ば + V-辞書形 + ほど / I-adj-ければ + I-adj + ほど",
     explanation:
@@ -1043,8 +1043,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜そうです (hearsay)",
     reading: "〜そうです (でんぶん)",
     level: "N4",
+    lesson: 49,
     category: "Modifying",
-    lesson: 41,
     meaning: "I heard that... / they say that... (reported information)",
     structure: "普通体 + そうです",
     explanation:
@@ -1066,8 +1066,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜って (colloquial hearsay)",
     reading: "〜って (かいわ・でんぶん)",
     level: "N4",
+    lesson: 49,
     category: "Modifying",
-    lesson: 41,
     meaning: "I heard that... / said that... (casual quote marker)",
     structure: "普通体 + って",
     explanation:
@@ -1093,8 +1093,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜べきだ / べきではない",
     reading: "〜べきだ / べきではない",
     level: "N4",
+    lesson: 50,
     category: "Obligation",
-    lesson: 42,
     meaning: "Should... / ought to... (moral or rational obligation)",
     structure: "V-辞書形 + べきだ / する → するべき (or すべき)",
     explanation:
@@ -1116,8 +1116,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ばよかった",
     reading: "〜ばよかった",
     level: "N4",
+    lesson: 50,
     category: "Conditionals",
-    lesson: 42,
     meaning: "I should have... / it would have been better if... (regret)",
     structure: "V-ば + よかった / I-adj-ければ + よかった",
     explanation:
@@ -1139,8 +1139,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜たらよかった",
     reading: "〜たらよかった",
     level: "N4",
+    lesson: 50,
     category: "Conditionals",
-    lesson: 42,
     meaning: "I should have... (regret, alternative to 〜ばよかった)",
     structure: "V-た + ら + よかった",
     explanation:
@@ -1166,8 +1166,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜のに (unexpected)",
     reading: "〜のに (ふきそく)",
     level: "N4",
+    lesson: 50,
     category: "Conjunctions",
-    lesson: 43,
     meaning: "Even though... (unexpected / contrary to expectation)",
     structure: "普通体 + のに (Na-adj/N: 〜なのに)",
     explanation:
@@ -1189,8 +1189,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜はずだ",
     reading: "〜はずだ",
     level: "N4",
+    lesson: 50,
     category: "Modifying",
-    lesson: 43,
     meaning: "It is expected that... / should be... (logical expectation)",
     structure: "普通体 + はずだ (Na-adj/N: 〜なはずだ, N + のはずだ)",
     explanation:
@@ -1212,8 +1212,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜はずがない",
     reading: "〜はずがない",
     level: "N4",
+    lesson: 50,
     category: "Modifying",
-    lesson: 43,
     meaning: "Cannot be... / there is no way that... (strong denial)",
     structure: "普通体 + はずがない",
     explanation:
@@ -1239,8 +1239,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜んです / 〜のだ",
     reading: "〜んです / 〜のだ",
     level: "N4",
+    lesson: 50,
     category: "Modifying",
-    lesson: 44,
     meaning: "Explanatory tone / the situation is that...",
     structure: "普通体 + んだ / のだ (polite: 〜んです / 〜のです)",
     explanation:
@@ -1262,8 +1262,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜かしら / 〜かな",
     reading: "〜かしら / 〜かな",
     level: "N4",
+    lesson: 50,
     category: "Modifying",
-    lesson: 44,
     meaning: "I wonder... (casual question to oneself)",
     structure: "普通体 + かしら (female) / かな (male or neutral)",
     explanation:
@@ -1285,8 +1285,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜でしょう / 〜だろう (probably)",
     reading: "〜でしょう / 〜だろう (すいそく)",
     level: "N4",
+    lesson: 50,
     category: "Modifying",
-    lesson: 44,
     meaning: "Probably... / I suppose... (soft conjecture or confirmation)",
     structure: "普通体 + でしょう (polite) / だろう (casual)",
     explanation:
@@ -1312,8 +1312,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜かもしれない",
     reading: "〜かもしれない",
     level: "N4",
+    lesson: 50,
     category: "Modifying",
-    lesson: 45,
     meaning: "May / might / perhaps (low certainty possibility)",
     structure: "普通体 + かもしれない (N + かもしれない, Na-adj stem + かもしれない)",
     explanation:
@@ -1335,8 +1335,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜にちがいない",
     reading: "〜にちがいない",
     level: "N4",
+    lesson: 50,
     category: "Modifying",
-    lesson: 45,
     meaning: "I'm sure that... / definitely... (strong certainty)",
     structure: "普通体 + にちがいない (N + にちがいない, Na-adj stem + にちがいない)",
     explanation:
@@ -1358,8 +1358,8 @@ export const grammarN4: GrammarData[] = [
     point: "きっと / おそらく (adverbs of certainty)",
     reading: "きっと / おそらく",
     level: "N4",
+    lesson: 50,
     category: "Modifying",
-    lesson: 45,
     meaning: "Surely / probably (adverbs expressing certainty levels)",
     structure: "きっと / おそらく / たぶん + predicate",
     explanation:
@@ -1385,8 +1385,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ておく",
     reading: "〜ておく",
     level: "N4",
+    lesson: 50,
     category: "Verb forms",
-    lesson: 46,
     meaning: "Do in advance / leave as is (for future use)",
     structure: "V-て + おく",
     explanation:
@@ -1408,8 +1408,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜てしまう",
     reading: "〜てしまう",
     level: "N4",
+    lesson: 50,
     category: "Verb forms",
-    lesson: 46,
     meaning: "Finish doing / do completely (often with regret)",
     structure: "V-て + しまう",
     explanation:
@@ -1431,8 +1431,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ちゃう / 〜じゃう (colloquial)",
     reading: "〜ちゃう / 〜じゃう",
     level: "N4",
+    lesson: 50,
     category: "Verb forms",
-    lesson: 46,
     meaning: "End up doing / finish doing (casual contraction of 〜てしまう)",
     structure: "V-て → 〜ちゃう (Group I: V-て → ちゃう); V-で → 〜じゃう",
     explanation:
@@ -1458,8 +1458,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜べきだった / べきではなかった",
     reading: "〜べきだった / べきではなかった",
     level: "N4",
+    lesson: 50,
     category: "Obligation",
-    lesson: 47,
     meaning: "Should have... / should not have... (past obligation, regret)",
     structure: "V-辞書形 + べきだった / V-辞書形 + べきではなかった",
     explanation:
@@ -1481,8 +1481,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜てよかった / 〜なくてよかった (relief)",
     reading: "〜てよかった / 〜なくてよかった",
     level: "N4",
+    lesson: 50,
     category: "Conditionals",
-    lesson: 47,
     meaning: "I'm glad I... / I'm glad I didn't... (past relief)",
     structure: "V-て + よかった / V-なくて + よかった",
     explanation:
@@ -1508,8 +1508,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜だけ",
     reading: "〜だけ",
     level: "N4",
+    lesson: 50,
     category: "Particles",
-    lesson: 48,
     meaning: "Only / just (limiting to a quantity or kind)",
     structure: "N + だけ / V-普通体 + だけ / Quantity + だけ",
     explanation:
@@ -1531,8 +1531,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ばかり",
     reading: "〜ばかり",
     level: "N4",
+    lesson: 50,
     category: "Particles",
-    lesson: 48,
     meaning: "Only / nothing but / just (with nuance of excess)",
     structure: "N + ばかり / V-て + ばかり + いる / V-辞書形 + ばかり",
     explanation:
@@ -1554,8 +1554,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜しか〜ない",
     reading: "〜しか〜ない",
     level: "N4",
+    lesson: 50,
     category: "Particles",
-    lesson: 48,
     meaning: "Only / nothing but (with negative predicate, limiting)",
     structure: "N + しか + 否定形",
     explanation:
@@ -1581,8 +1581,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ようになる",
     reading: "〜ようになる",
     level: "N4",
+    lesson: 50,
     category: "Verb forms",
-    lesson: 49,
     meaning: "Come to... / reach the state of doing (gradual change)",
     structure: "V-辞書形 / V-ない + ようになる",
     explanation:
@@ -1604,8 +1604,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜てある",
     reading: "〜てある",
     level: "N4",
+    lesson: 50,
     category: "Verb forms",
-    lesson: 49,
     meaning: "Has been done (resultant state, intentional)",
     structure: "V-て + ある (他動詞 only)",
     explanation:
@@ -1627,8 +1627,8 @@ export const grammarN4: GrammarData[] = [
     point: "〜ている (state / continuation)",
     reading: "〜ている (じょうたい・けいぞく)",
     level: "N4",
+    lesson: 50,
     category: "Verb forms",
-    lesson: 49,
     meaning: "Is doing (ongoing) / has been done (resultant state of intransitive)",
     structure: "V-て + いる",
     explanation:
@@ -1654,8 +1654,8 @@ export const grammarN4: GrammarData[] = [
     point: "復習: 普通体・丁寧体",
     reading: "ふくしゅう: ふつうたい・ていねいたい",
     level: "N4",
-    category: "Modifying",
     lesson: 50,
+    category: "Modifying",
     meaning: "Review: plain and polite form usage across styles",
     structure: "Plain form + と/そう/と思う/ようだ/らしい; Polite form in formal speech",
     explanation:
@@ -1677,8 +1677,8 @@ export const grammarN4: GrammarData[] = [
     point: "復習: 条件形 (と/ば/たら/なら)",
     reading: "ふくしゅう: じょうけんけい",
     level: "N4",
-    category: "Conditionals",
     lesson: 50,
+    category: "Conditionals",
     meaning: "Review of four conditional forms and their nuances",
     structure: "と (general trigger) / 〜ば (hypothetical) / 〜たら (specific past-aware) / 〜なら (topic-based)",
     explanation:
@@ -1700,8 +1700,8 @@ export const grammarN4: GrammarData[] = [
     point: "復習: やりもらい (あげる/くれる/もらう)",
     reading: "ふくしゅう: やりもらい",
     level: "N4",
-    category: "Giving-Receiving",
     lesson: 50,
+    category: "Giving-Receiving",
     meaning: "Review of giving and receiving verbs and their direction",
     structure: "私→他: あげる / 他→私: くれる / 私が(他に)〜てもらう: receive",
     explanation:

@@ -1,6 +1,10 @@
 import type { GrammarData } from "@/lib/types";
 import { grammarN5 } from "./grammar-n5";
+import { grammarN5_1 } from "./grammar-n5-1";
+import { grammarN5_2 } from "./grammar-n5-2";
 import { grammarN4 } from "./grammar-n4";
+import { grammarN4_1 } from "./grammar-n4-1";
+import { grammarN4_2 } from "./grammar-n4-2";
 import { grammarN3A } from "./grammar-n3-a";
 import { grammarN3B } from "./grammar-n3-b";
 import { grammarN3C } from "./grammar-n3-c";
@@ -20,7 +24,11 @@ import { grammarN1D } from "./grammar-n1-d";
 // grammarData respects the target counts above.
 const allGrammar: GrammarData[] = [
   ...grammarN5,
+  ...grammarN5_1,
+  ...grammarN5_2,
   ...grammarN4,
+  ...grammarN4_1,
+  ...grammarN4_2,
   ...grammarN3A,
   ...grammarN3B,
   ...grammarN3C,

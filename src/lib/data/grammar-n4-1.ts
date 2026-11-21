@@ -18,8 +18,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜たり〜たりします",
     reading: "〜tari 〜tari shimasu",
     level: "N4",
+    lesson: 26,
     category: "Verb forms",
-    lesson: 1,
     meaning: "Listing actions (doing things like A, B, etc.)",
     structure: "V(た形)り、V(た形)り します",
     explanation:
@@ -41,8 +41,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜て (means/method)",
     reading: "〜te",
     level: "N4",
+    lesson: 26,
     category: "Verb forms",
-    lesson: 1,
     meaning: "By means of / by doing (method of action)",
     structure: "V(て形) + V(移動)",
     explanation:
@@ -64,8 +64,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜ないで (without doing)",
     reading: "〜naide",
     level: "N4",
+    lesson: 26,
     category: "Verb forms",
-    lesson: 1,
     meaning: "Doing something without doing X (absence of action)",
     structure: "V(ない形) + で + V(主文)",
     explanation:
@@ -91,8 +91,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜てから",
     reading: "〜te kara",
     level: "N4",
+    lesson: 26,
     category: "Sequence",
-    lesson: 2,
     meaning: "After doing X (then does Y)",
     structure: "V(て形) + から + V(主文)",
     explanation:
@@ -114,8 +114,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜たあとで",
     reading: "〜ta ato de",
     level: "N4",
+    lesson: 26,
     category: "Sequence",
-    lesson: 2,
     meaning: "After doing X / after X happened",
     structure: "V(た形) + あとで / N の + あとで",
     explanation:
@@ -137,8 +137,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜前に",
     reading: "〜mae ni",
     level: "N4",
+    lesson: 27,
     category: "Sequence",
-    lesson: 2,
     meaning: "Before doing X",
     structure: "V(辞書形) + 前[まえ]に / N の + 前[まえ]に",
     explanation:
@@ -164,8 +164,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜てあげる",
     reading: "〜te ageru",
     level: "N4",
+    lesson: 27,
     category: "Giving-Receiving",
-    lesson: 3,
     meaning: "I (or someone on my side) do a favor for someone else",
     structure: " giver が receiver に V(て形) + あげる",
     explanation:
@@ -187,8 +187,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜てくれる",
     reading: "〜te kureru",
     level: "N4",
+    lesson: 27,
     category: "Giving-Receiving",
-    lesson: 3,
     meaning: "Someone does a favor for me (or my in-group)",
     structure: " giver が (receiver に) V(て形) + くれる",
     explanation:
@@ -210,8 +210,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜てもらう",
     reading: "〜te morau",
     level: "N4",
+    lesson: 27,
     category: "Giving-Receiving",
-    lesson: 3,
     meaning: "I have someone do a favor for me (receive an action)",
     structure: " receiver が giver に V(て形) + もらう",
     explanation:
@@ -237,8 +237,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜ている (ongoing action)",
     reading: "〜te iru",
     level: "N4",
+    lesson: 27,
     category: "Verb forms",
-    lesson: 4,
     meaning: "Currently doing / ongoing action in progress",
     structure: "V(て形) + いる",
     explanation:
@@ -260,8 +260,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜ている (resultative state)",
     reading: "〜te iru",
     level: "N4",
+    lesson: 28,
     category: "Verb forms",
-    lesson: 4,
     meaning: "State resulting from a past action (continuing state)",
     structure: "V(て形) + いる (punctual verbs)",
     explanation:
@@ -283,8 +283,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜てある",
     reading: "〜te aru",
     level: "N4",
+    lesson: 28,
     category: "Verb forms",
-    lesson: 4,
     meaning: "State resulting from someone's intentional action",
     structure: "N が V(て形) + ある (transitive verbs)",
     explanation:
@@ -310,8 +310,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜ましょうか",
     reading: "〜mashou ka",
     level: "N4",
+    lesson: 28,
     category: "Giving-Receiving",
-    lesson: 5,
     meaning: "Shall I do X? (offering assistance)",
     structure: "V(ます形 stem) + ましょうか",
     explanation:
@@ -333,8 +333,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜てあげましょうか",
     reading: "〜te agemashou ka",
     level: "N4",
+    lesson: 28,
     category: "Giving-Receiving",
-    lesson: 5,
     meaning: "Shall I do X for you? (offering a favor action)",
     structure: "V(て形) + あげましょうか",
     explanation:
@@ -360,8 +360,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜たら",
     reading: "〜tara",
     level: "N4",
+    lesson: 28,
     category: "Conditionals",
-    lesson: 6,
     meaning: "If/when X happens (then Y)",
     structure: "V(た形) + ら / Adj(過去) + ら / N だったら",
     explanation:
@@ -383,8 +383,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜ば",
     reading: "〜ba",
     level: "N4",
+    lesson: 29,
     category: "Conditionals",
-    lesson: 6,
     meaning: "If X (conditional, general/hypothetical)",
     structure: "V(仮定形) + ば / Adj(仮定形) + ば",
     explanation:
@@ -406,8 +406,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜ば...いい",
     reading: "〜ba...ii",
     level: "N4",
+    lesson: 29,
     category: "Conditionals",
-    lesson: 6,
     meaning: "Should do X / it would be good to do X (advice)",
     structure: "V(仮定形) + ば + いい(です)",
     explanation:
@@ -433,8 +433,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜ても",
     reading: "〜te mo",
     level: "N4",
+    lesson: 29,
     category: "Conditionals",
-    lesson: 7,
     meaning: "Even if X (Y still happens / despite X)",
     structure: "V(て形) + も / Adj(て形) + も",
     explanation:
@@ -456,8 +456,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜て (cause/reason)",
     reading: "〜te",
     level: "N4",
+    lesson: 29,
     category: "Verb forms",
-    lesson: 7,
     meaning: "Reason for apology, thanks, or request",
     structure: "Sentence(理由) + て / V(て形) + [apology/thanks/request]",
     explanation:
@@ -483,8 +483,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜ないで (obligation context)",
     reading: "〜naide",
     level: "N4",
+    lesson: 29,
     category: "Obligation",
-    lesson: 8,
     meaning: "Without doing X (review with obligation set)",
     structure: "V(ない形) + で + V(主文)",
     explanation:
@@ -506,8 +506,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜なくてもいい",
     reading: "〜nakutemo ii",
     level: "N4",
+    lesson: 30,
     category: "Obligation",
-    lesson: 8,
     meaning: "Don't have to do X / no need to do X",
     structure: "V(ない形) + くても + いい(です)",
     explanation:
@@ -529,8 +529,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜なければならない",
     reading: "〜nakereba naranai",
     level: "N4",
+    lesson: 30,
     category: "Obligation",
-    lesson: 8,
     meaning: "Must do X / have to do X (obligation)",
     structure: "V(ない形) + ければ + ならない / なりません",
     explanation:
@@ -556,8 +556,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜かもしれません",
     reading: "〜kamo shiremasen",
     level: "N4",
+    lesson: 30,
     category: "Conjecture",
-    lesson: 9,
     meaning: "Might / perhaps / maybe (uncertain possibility)",
     structure: "V(普通形) + かもしれない / N + かもしれない / Adj + かもしれない",
     explanation:
@@ -579,8 +579,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜でしょう",
     reading: "〜deshou",
     level: "N4",
+    lesson: 30,
     category: "Conjecture",
-    lesson: 9,
     meaning: "Probably / I think (probability conjecture)",
     structure: "V(普通形) + でしょう / N + でしょう / Adj + でしょう",
     explanation:
@@ -602,8 +602,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜でしょうか",
     reading: "〜deshou ka",
     level: "N4",
+    lesson: 30,
     category: "Conjecture",
-    lesson: 9,
     meaning: "I wonder if...? (polite conjecture question)",
     structure: "V(普通形) + でしょうか / N + でしょうか",
     explanation:
@@ -629,8 +629,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜そうだ (appearance)",
     reading: "〜sou da",
     level: "N4",
+    lesson: 31,
     category: "Conjecture",
-    lesson: 10,
     meaning: "Looks like / appears to be (visual appearance)",
     structure: "V(ます形 stem) + そうだ / Adj(語幹) + そうだ",
     explanation:
@@ -652,8 +652,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜ようだ (conjecture)",
     reading: "〜you da",
     level: "N4",
+    lesson: 31,
     category: "Conjecture",
-    lesson: 10,
     meaning: "Seems like / it appears that (reasoned conjecture)",
     structure: "V(普通形) + ようだ / N の + ようだ / Adj(普通形) + ようだ",
     explanation:
@@ -675,8 +675,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜ようだ (comparison/simile)",
     reading: "〜you da",
     level: "N4",
+    lesson: 31,
     category: "Modifying",
-    lesson: 10,
     meaning: "Like X / as if X (simile / comparison)",
     structure: "N の + ようだ / V(普通形) + ようだ",
     explanation:
@@ -702,8 +702,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜らしい",
     reading: "〜rashii",
     level: "N4",
+    lesson: 31,
     category: "Conjecture",
-    lesson: 11,
     meaning: "Seems/typical of X (conjecture or typical quality)",
     structure: "V(普通形) + らしい / N + らしい",
     explanation:
@@ -725,8 +725,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜って (hearsay/quotation)",
     reading: "〜tte",
     level: "N4",
+    lesson: 31,
     category: "Quotation",
-    lesson: 11,
     meaning: "I heard that / they say that (casual hearsay)",
     structure: "Sentence + って",
     explanation:
@@ -752,8 +752,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜はずです",
     reading: "〜hazu desu",
     level: "N4",
+    lesson: 32,
     category: "Modifying",
-    lesson: 12,
     meaning: "Should be / is expected to be (logical expectation)",
     structure: "V(普通形) + はずだ / N の + はずだ / Adj + はずだ",
     explanation:
@@ -775,8 +775,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜はずがありません",
     reading: "〜hazu ga arimasen",
     level: "N4",
+    lesson: 32,
     category: "Modifying",
-    lesson: 12,
     meaning: "No way / cannot be (strong negative expectation)",
     structure: "V(普通形) + はずがない / N の + はずがない",
     explanation:
@@ -798,8 +798,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜はずだった",
     reading: "〜hazu datta",
     level: "N4",
+    lesson: 32,
     category: "Modifying",
-    lesson: 12,
     meaning: "Was supposed to (past expectation, often unfulfilled)",
     structure: "V(普通形) + はずだった / N の + はずだった",
     explanation:
@@ -825,8 +825,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜ようにする",
     reading: "〜you ni suru",
     level: "N4",
+    lesson: 32,
     category: "Verb forms",
-    lesson: 13,
     meaning: "Try to / make sure to / make an effort to do X",
     structure: "V(辞書形 / ない形) + ようにする",
     explanation:
@@ -848,8 +848,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜ようになる",
     reading: "〜you ni naru",
     level: "N4",
+    lesson: 32,
     category: "Verb forms",
-    lesson: 13,
     meaning: "Come to be able to / reach the point of doing X (change)",
     structure: "V(辞書形 / 可能形 / ない形) + ようになる",
     explanation:
@@ -871,8 +871,8 @@ export const grammarN4_1: GrammarData[] = [
     point: "〜ように (purpose/so that)",
     reading: "〜you ni",
     level: "N4",
+    lesson: 33,
     category: "Modifying",
-    lesson: 13,
     meaning: "So that / in order that (purpose or desired result)",
     structure: "V(辞書形 / ない形) + ように + V(主文)",
     explanation:
@@ -896,17 +896,17 @@ export const grammarN4_1: GrammarData[] = [
 // ───────────────────────────────────────────────────────────
 
 export const minnaN4LessonTitles: { lesson: number; title: string; topic: string }[] = [
-  { lesson: 1, title: "〜たり〜たりします / 〜て・〜ないで", topic: "Listing actions; means/method; without doing" },
-  { lesson: 2, title: "〜てから / 〜たあとで / 〜前に", topic: "Temporal sequence: after doing, before doing" },
-  { lesson: 3, title: "〜てあげる / 〜てくれる / 〜てもらう", topic: "Giving and receiving of actions/favors" },
-  { lesson: 4, title: "〜ている / 〜てある", topic: "Resultative states and resulting states" },
-  { lesson: 5, title: "〜ましょうか / 〜てあげましょうか", topic: "Offering assistance politely" },
-  { lesson: 6, title: "〜たら / 〜ば / 〜ば...いい", topic: "Conditional forms: if/when, should" },
-  { lesson: 7, title: "〜ても / 〜て (reason)", topic: "Concessive 'even if'; reason for apology/thanks/request" },
-  { lesson: 8, title: "〜ないで / 〜なくてもいい / 〜なければならない", topic: "Obligation and exemption: without, don't have to, must" },
-  { lesson: 9, title: "〜かもしれません / 〜でしょう / 〜でしょうか", topic: "Conjecture: might, probably, I wonder" },
-  { lesson: 10, title: "〜そうだ / 〜ようだ", topic: "Appearance 'looks like' and conjecture/seems/comparison" },
-  { lesson: 11, title: "〜らしい / 〜って", topic: "Typical/seems; hearsay and quotation" },
-  { lesson: 12, title: "〜はずです / 〜はずがありません / 〜はずだった", topic: "Expectation: should be, no way, was supposed to" },
-  { lesson: 13, title: "〜ようにする / 〜ようになる / 〜ように", topic: "Effort, change, and purpose: try to, come to be able to, so that" }
+  { title: "〜たり〜たりします / 〜て・〜ないで", topic: "Listing actions; means/method; without doing" },
+  { title: "〜てから / 〜たあとで / 〜前に", topic: "Temporal sequence: after doing, before doing" },
+  { title: "〜てあげる / 〜てくれる / 〜てもらう", topic: "Giving and receiving of actions/favors" },
+  { title: "〜ている / 〜てある", topic: "Resultative states and resulting states" },
+  { title: "〜ましょうか / 〜てあげましょうか", topic: "Offering assistance politely" },
+  { title: "〜たら / 〜ば / 〜ば...いい", topic: "Conditional forms: if/when, should" },
+  { title: "〜ても / 〜て (reason)", topic: "Concessive 'even if'; reason for apology/thanks/request" },
+  { title: "〜ないで / 〜なくてもいい / 〜なければならない", topic: "Obligation and exemption: without, don't have to, must" },
+  { title: "〜かもしれません / 〜でしょう / 〜でしょうか", topic: "Conjecture: might, probably, I wonder" },
+  { title: "〜そうだ / 〜ようだ", topic: "Appearance 'looks like' and conjecture/seems/comparison" },
+  { title: "〜らしい / 〜って", topic: "Typical/seems; hearsay and quotation" },
+  { title: "〜はずです / 〜はずがありません / 〜はずだった", topic: "Expectation: should be, no way, was supposed to" },
+  { title: "〜ようにする / 〜ようになる / 〜ように", topic: "Effort, change, and purpose: try to, come to be able to, so that" }
 ];
