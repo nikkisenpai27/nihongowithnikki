@@ -78,7 +78,6 @@ export type BackgroundPreset =
   | "upload-34-frieren" | "upload-35-pc-girl" | "upload-36-violet-evergarden"
   | "upload-37-yoru" | "upload-38-discord-gg" | "upload-39-dubstepgutter"
   | "upload-40-fubuki-opm" | "upload-41-gojo-jjk" | "upload-42-wallpaperflare"
-  | "upload-43-wp-girl1" | "upload-44-wp-girl2" | "upload-45-ykjsd" | "upload-46-yuki-jjk";
 
 export const JP_FONT_STACKS: Record<JpFont, string> = {
   notojp: "var(--font-notojp)",

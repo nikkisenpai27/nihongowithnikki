@@ -12,7 +12,7 @@ export function NikkiAvatar({ size = 48, className, withHalo = false }: NikkiAva
   return (
     <span
       className={cn("relative inline-block shrink-0", className)}
-      style={{ width: size, height: size }}
+      style={{ width: size, height: size, minWidth: size, minHeight: size }}
     >
       {withHalo && (
         <span
@@ -26,13 +26,15 @@ export function NikkiAvatar({ size = 48, className, withHalo = false }: NikkiAva
         />
       )}
       <span
-        className="relative block overflow-hidden rounded-full ring-2 ring-primary/30 bg-card"
-        style={{ width: size, height: size }}
+        className="relative block overflow-hidden rounded-full ring-2 ring-primary/30"
+        style={{ width: size, height: size, minWidth: size, minHeight: size }}
       >
         <img
           src="/nikki-logo.png"
           alt="Nikki, your Japanese tutor"
-          className="h-full w-full object-cover"
+          width={size}
+          height={size}
+          style={{ width: size, height: size, minWidth: size, minHeight: size, objectFit: "cover", display: "block" }}
         />
       </span>
     </span>
