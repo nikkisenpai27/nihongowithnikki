@@ -57,7 +57,14 @@ export type BackgroundPreset =
   | "upload-21-anime-girl-4k"
   | "upload-22-in-bed"
   | "upload-23-night-room"
-  | "upload-24-summer-room";
+  | "upload-24-summer-room"
+  | "upload-25-torii-gate"
+  | "upload-26-wink-katana"
+  | "upload-27-long-hair-ears"
+  | "upload-28-hatsune-miku"
+  | "upload-29-chainsaw-man"
+  | "upload-30-cherry-blossom"
+  | "upload-31-belmode";
 
 export const JP_FONT_STACKS: Record<JpFont, string> = {
   notojp: "var(--font-notojp)",
@@ -127,6 +134,13 @@ export const BACKGROUND_PRESETS: {
   { id: "upload-22-in-bed", label: "Cozy Room", jp: "部屋", url: "/wallpapers/uploaded-22-in-bed.jpg" },
   { id: "upload-23-night-room", label: "Night Room", jp: "夜部屋", url: "/wallpapers/uploaded-23-night-room.jpg" },
   { id: "upload-24-summer-room", label: "Summer Room", jp: "夏部屋", url: "/wallpapers/uploaded-24-summer-room.jpg" },
+  { id: "upload-25-torii-gate", label: "Torii Gate", jp: "鳥居", url: "/wallpapers/uploaded-25-torii-gate.jpg" },
+  { id: "upload-26-wink-katana", label: "Wink Katana", jp: "刀", url: "/wallpapers/uploaded-26-wink-katana.jpg" },
+  { id: "upload-27-long-hair-ears", label: "Animal Ears", jp: "獣耳", url: "/wallpapers/uploaded-27-long-hair-ears.jpg" },
+  { id: "upload-28-hatsune-miku", label: "Hatsune Miku", jp: "初音ミク", url: "/wallpapers/uploaded-28-hatsune-miku.jpg" },
+  { id: "upload-29-chainsaw-man", label: "Chainsaw Man", jp: "チェンソー", url: "/wallpapers/uploaded-29-chainsaw-man.jpg" },
+  { id: "upload-30-cherry-blossom", label: "Cherry Blossom Girl", jp: "桜少女", url: "/wallpapers/uploaded-30-cherry-blossom.jpg" },
+  { id: "upload-31-belmode", label: "Belmode", jp: "ベルモード", url: "/wallpapers/uploaded-31-belmode.jpeg" },
 ];
 
 interface SettingsState {
