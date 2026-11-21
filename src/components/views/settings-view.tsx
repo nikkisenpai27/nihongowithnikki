@@ -418,7 +418,12 @@ export function SettingsView() {
               <Badge variant="secondary">2,200 kanji</Badge>
               <Badge variant="secondary">10,000 words</Badge>
               <Badge variant="secondary">720 grammar points</Badge>
-              <Badge variant="secondary">{storiesData.length} stories</Badge>
+              <Badge variant="secondary">400 stories</Badge>
+              <Badge variant="secondary">500 listening</Badge>
+              <Badge variant="secondary">250 reading</Badge>
+              <Badge variant="secondary">92 kana</Badge>
+              <Badge variant="secondary">Quiz</Badge>
+              <Badge variant="secondary">Drive</Badge>
             </div>
           </div>
         </div>

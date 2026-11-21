@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface NikkiAvatarProps {
@@ -30,13 +29,10 @@ export function NikkiAvatar({ size = 48, className, withHalo = false }: NikkiAva
         className="relative block overflow-hidden rounded-full ring-2 ring-primary/30 bg-card"
         style={{ width: size, height: size }}
       >
-        <Image
+        <img
           src="/nikki-logo.png"
           alt="Nikki, your Japanese tutor"
-          width={size}
-          height={size}
           className="h-full w-full object-cover"
-          priority
         />
       </span>
     </span>

@@ -15,6 +15,7 @@ import {
   Trophy,
   Palette,
   Type,
+  FolderOpen,
   Volume2,
   Check,
   Gauge,
@@ -784,6 +785,9 @@ export function AccountView() {
             { label: "Stories", jp: "物語", count: totalStoriesCount, icon: BookText, levels: "N5–N1", tint: "var(--coral)" },
             { label: "Listening", jp: "聴解", count: totalListeningCount, icon: Volume2, levels: "N5–N1", tint: "var(--soft-purple)" },
             { label: "Reading", jp: "読解", count: totalReadingCount, icon: BookOpen, levels: "N5–N1", tint: "var(--matcha)" },
+            { label: "Kana", jp: "仮名", count: 92, icon: Type, levels: "Hiragana & Katakana", tint: "var(--coral)" },
+            { label: "Quizzes", jp: "クイズ", count: quizzesTaken, icon: Trophy, levels: "All levels", tint: "var(--warm-yellow)" },
+            { label: "Drive", jp: "ドライブ", count: "Free", icon: FolderOpen, levels: "Study notes", tint: "var(--indigo-deep)" },
           ].map((c, i) => (
             <div key={i} className="flex items-center gap-3 rounded-xl border border-border bg-card p-3">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg" style={{ backgroundColor: `color-mix(in srgb, ${c.tint} 15%, transparent)`, color: c.tint }}>
