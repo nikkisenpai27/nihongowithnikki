@@ -20,6 +20,7 @@ import { vocabN3K } from "./vocab-n3-k";
 import { vocabN3L } from "./vocab-n3-l";
 import { vocabN3M } from "./vocab-n3-m";
 import { vocabN3N } from "./vocab-n3-n";
+import { vocabN3O } from "./vocab-n3-o";
 import { vocabN2A } from "./vocab-n2-a";
 import { vocabN2B } from "./vocab-n2-b";
 import { vocabN2C } from "./vocab-n2-c";
@@ -87,6 +88,7 @@ const allVocab: VocabData[] = [
   ...vocabN3L,
   ...vocabN3M,
   ...vocabN3N,
+  ...vocabN3O,
   ...vocabN2A,
   ...vocabN2B,
   ...vocabN2C,
@@ -133,11 +135,23 @@ const allVocab: VocabData[] = [
 // Deduplicate per-level (not globally) — a word can appear in
 // multiple JLPT levels with different nuances, so we only remove
 // exact duplicates within the same level, not across levels.
+// Per-level caps limit the exported count to match JLPT targets.
+const VOCAB_LEVEL_LIMITS: Record<string, number> = {
+  N5: 800,
+  N4: 700,
+  N3: 2250,
+  N2: 2250,
+  N1: 4000,
+};
 const _seenWords = new Set<string>();
+const _vocabLevelCounts: Record<string, number> = {};
 export const vocabData: VocabData[] = allVocab.filter((v) => {
   const key = `${v.level}:${v.word}`;
   if (_seenWords.has(key)) return false;
   _seenWords.add(key);
+  const lvl = v.level;
+  _vocabLevelCounts[lvl] = (_vocabLevelCounts[lvl] || 0) + 1;
+  if (_vocabLevelCounts[lvl] > VOCAB_LEVEL_LIMITS[lvl]) return false;
   return true;
 });
 
