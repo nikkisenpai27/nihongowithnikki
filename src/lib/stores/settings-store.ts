@@ -66,7 +66,19 @@ export type BackgroundPreset =
   | "upload-30-cherry-blossom"
   | "upload-31-belmode"
   | "upload-32-gxplas"
-  | "upload-33-anime-bed";
+  | "upload-33-anime-bed"
+  | "anime-girl-1" | "anime-girl-2" | "anime-girl-3" | "anime-girl-4" | "anime-girl-5"
+  | "anime-girl-6" | "anime-girl-7" | "anime-girl-8" | "anime-girl-9" | "anime-girl-10"
+  | "anime-girl-11" | "anime-girl-12" | "anime-girl-13" | "anime-girl-14" | "anime-girl-15"
+  | "anime-girl-16" | "anime-girl-17" | "anime-girl-18" | "anime-girl-19" | "anime-girl-20"
+  | "anime-girl-21" | "anime-girl-22" | "anime-girl-23" | "anime-girl-24" | "anime-girl-25"
+  | "anime-girl-26" | "anime-girl-27" | "anime-girl-28" | "anime-girl-29" | "anime-girl-30"
+  | "anime-girl-31" | "anime-girl-32" | "anime-girl-33" | "anime-girl-34" | "anime-girl-35"
+  | "anime-girl-36" | "anime-girl-37" | "anime-girl-38" | "anime-girl-39" | "anime-girl-40"
+  | "upload-34-frieren" | "upload-35-pc-girl" | "upload-36-violet-evergarden"
+  | "upload-37-yoru" | "upload-38-discord-gg" | "upload-39-dubstepgutter"
+  | "upload-40-fubuki-opm" | "upload-41-gojo-jjk" | "upload-42-wallpaperflare"
+  | "upload-43-wp-girl1" | "upload-44-wp-girl2" | "upload-45-ykjsd" | "upload-46-yuki-jjk";
 
 export const JP_FONT_STACKS: Record<JpFont, string> = {
   notojp: "var(--font-notojp)",
@@ -145,6 +157,61 @@ export const BACKGROUND_PRESETS: {
   { id: "upload-31-belmode", label: "Belmode", jp: "ベルモード", url: "/wallpapers/uploaded-31-belmode.jpeg" },
   { id: "upload-32-gxplas", label: "GX Plas", jp: "壁紙", url: "/wallpapers/uploaded-32-gxplas.jpg" },
   { id: "upload-33-anime-bed", label: "Cozy Bed", jp: "ベッド", url: "/wallpapers/uploaded-33-anime-bed.jpg" },
+  // AI-generated anime girl wallpapers
+  { id: "anime-girl-1", label: "Anime Girl 1", jp: "美少女1", url: "/wallpapers/anime-girl-1.jpg" },
+  { id: "anime-girl-2", label: "Anime Girl 2", jp: "美少女2", url: "/wallpapers/anime-girl-2.jpg" },
+  { id: "anime-girl-3", label: "Anime Girl 3", jp: "美少女3", url: "/wallpapers/anime-girl-3.jpg" },
+  { id: "anime-girl-4", label: "Anime Girl 4", jp: "美少女4", url: "/wallpapers/anime-girl-4.jpg" },
+  { id: "anime-girl-5", label: "Anime Girl 5", jp: "美少女5", url: "/wallpapers/anime-girl-5.jpg" },
+  { id: "anime-girl-6", label: "Anime Girl 6", jp: "美少女6", url: "/wallpapers/anime-girl-6.jpg" },
+  { id: "anime-girl-7", label: "Anime Girl 7", jp: "美少女7", url: "/wallpapers/anime-girl-7.jpg" },
+  { id: "anime-girl-8", label: "Anime Girl 8", jp: "美少女8", url: "/wallpapers/anime-girl-8.jpg" },
+  { id: "anime-girl-9", label: "Anime Girl 9", jp: "美少女9", url: "/wallpapers/anime-girl-9.jpg" },
+  { id: "anime-girl-10", label: "Anime Girl 10", jp: "美少女10", url: "/wallpapers/anime-girl-10.jpg" },
+  { id: "anime-girl-11", label: "Anime Girl 11", jp: "美少女11", url: "/wallpapers/anime-girl-11.jpg" },
+  { id: "anime-girl-12", label: "Anime Girl 12", jp: "美少女12", url: "/wallpapers/anime-girl-12.jpg" },
+  { id: "anime-girl-13", label: "Anime Girl 13", jp: "美少女13", url: "/wallpapers/anime-girl-13.jpg" },
+  { id: "anime-girl-14", label: "Anime Girl 14", jp: "美少女14", url: "/wallpapers/anime-girl-14.jpg" },
+  { id: "anime-girl-15", label: "Anime Girl 15", jp: "美少女15", url: "/wallpapers/anime-girl-15.jpg" },
+  { id: "anime-girl-16", label: "Anime Girl 16", jp: "美少女16", url: "/wallpapers/anime-girl-16.jpg" },
+  { id: "anime-girl-17", label: "Anime Girl 17", jp: "美少女17", url: "/wallpapers/anime-girl-17.jpg" },
+  { id: "anime-girl-18", label: "Anime Girl 18", jp: "美少女18", url: "/wallpapers/anime-girl-18.jpg" },
+  { id: "anime-girl-19", label: "Anime Girl 19", jp: "美少女19", url: "/wallpapers/anime-girl-19.jpg" },
+  { id: "anime-girl-20", label: "Anime Girl 20", jp: "美少女20", url: "/wallpapers/anime-girl-20.jpg" },
+  { id: "anime-girl-21", label: "Anime Girl 21", jp: "美少女21", url: "/wallpapers/anime-girl-21.jpg" },
+  { id: "anime-girl-22", label: "Anime Girl 22", jp: "美少女22", url: "/wallpapers/anime-girl-22.jpg" },
+  { id: "anime-girl-23", label: "Anime Girl 23", jp: "美少女23", url: "/wallpapers/anime-girl-23.jpg" },
+  { id: "anime-girl-24", label: "Anime Girl 24", jp: "美少女24", url: "/wallpapers/anime-girl-24.jpg" },
+  { id: "anime-girl-25", label: "Anime Girl 25", jp: "美少女25", url: "/wallpapers/anime-girl-25.jpg" },
+  { id: "anime-girl-26", label: "Anime Girl 26", jp: "美少女26", url: "/wallpapers/anime-girl-26.jpg" },
+  { id: "anime-girl-27", label: "Anime Girl 27", jp: "美少女27", url: "/wallpapers/anime-girl-27.jpg" },
+  { id: "anime-girl-28", label: "Anime Girl 28", jp: "美少女28", url: "/wallpapers/anime-girl-28.jpg" },
+  { id: "anime-girl-29", label: "Anime Girl 29", jp: "美少女29", url: "/wallpapers/anime-girl-29.jpg" },
+  { id: "anime-girl-30", label: "Anime Girl 30", jp: "美少女30", url: "/wallpapers/anime-girl-30.jpg" },
+  { id: "anime-girl-31", label: "Anime Girl 31", jp: "美少女31", url: "/wallpapers/anime-girl-31.jpg" },
+  { id: "anime-girl-32", label: "Anime Girl 32", jp: "美少女32", url: "/wallpapers/anime-girl-32.jpg" },
+  { id: "anime-girl-33", label: "Anime Girl 33", jp: "美少女33", url: "/wallpapers/anime-girl-33.jpg" },
+  { id: "anime-girl-34", label: "Anime Girl 34", jp: "美少女34", url: "/wallpapers/anime-girl-34.jpg" },
+  { id: "anime-girl-35", label: "Anime Girl 35", jp: "美少女35", url: "/wallpapers/anime-girl-35.jpg" },
+  { id: "anime-girl-36", label: "Anime Girl 36", jp: "美少女36", url: "/wallpapers/anime-girl-36.jpg" },
+  { id: "anime-girl-37", label: "Anime Girl 37", jp: "美少女37", url: "/wallpapers/anime-girl-37.jpg" },
+  { id: "anime-girl-38", label: "Anime Girl 38", jp: "美少女38", url: "/wallpapers/anime-girl-38.jpg" },
+  { id: "anime-girl-39", label: "Anime Girl 39", jp: "美少女39", url: "/wallpapers/anime-girl-39.jpg" },
+  { id: "anime-girl-40", label: "Anime Girl 40", jp: "美少女40", url: "/wallpapers/anime-girl-40.jpg" },
+  // Additional user-uploaded wallpapers
+  { id: "upload-34-frieren", label: "Frieren", jp: "フリーレン", url: "/wallpapers/uploaded-34-frieren.jpg" },
+  { id: "upload-35-pc-girl", label: "PC Girl 4K", jp: "美少女", url: "/wallpapers/uploaded-35-pc-girl.jpg" },
+  { id: "upload-36-violet-evergarden", label: "Violet Evergarden", jp: "ヴァイオレット", url: "/wallpapers/uploaded-36-violet-evergarden.jpg" },
+  { id: "upload-37-yoru", label: "Yoru", jp: "夜", url: "/wallpapers/uploaded-37-yoru.jpg" },
+  { id: "upload-38-discord-gg", label: "Discord Girl", jp: "美少女", url: "/wallpapers/uploaded-38-discord-gg.jpg" },
+  { id: "upload-39-dubstepgutter", label: "Dubstepgutter", jp: "美少女", url: "/wallpapers/uploaded-39-dubstepgutter.jpg" },
+  { id: "upload-40-fubuki-opm", label: "Fubuki OPM", jp: "吹雪", url: "/wallpapers/uploaded-40-fubuki-opm.jpg" },
+  { id: "upload-41-gojo-jjk", label: "Gojo JJK", jp: "五条", url: "/wallpapers/uploaded-41-gojo-jjk.jpg" },
+  { id: "upload-42-wallpaperflare", label: "Wallpaperflare", jp: "壁紙", url: "/wallpapers/uploaded-42-wallpaperflare.jpg" },
+  { id: "upload-43-wp-girl1", label: "Anime Girl WP1", jp: "美少女1", url: "/wallpapers/uploaded-43-wp-girl1.jpg" },
+  { id: "upload-44-wp-girl2", label: "Anime Girl WP2", jp: "美少女2", url: "/wallpapers/uploaded-44-wp-girl2.jpg" },
+  { id: "upload-45-ykjsd", label: "Anime Art", jp: "アニメ", url: "/wallpapers/uploaded-45-ykjsd.jpg" },
+  { id: "upload-46-yuki-jjk", label: "Yuki JJK", jp: "雪", url: "/wallpapers/uploaded-46-yuki-jjk.jpg" },
 ];
 
 interface SettingsState {
