@@ -64,7 +64,9 @@ export type BackgroundPreset =
   | "upload-28-hatsune-miku"
   | "upload-29-chainsaw-man"
   | "upload-30-cherry-blossom"
-  | "upload-31-belmode";
+  | "upload-31-belmode"
+  | "upload-32-gxplas"
+  | "upload-33-anime-bed";
 
 export const JP_FONT_STACKS: Record<JpFont, string> = {
   notojp: "var(--font-notojp)",
@@ -141,6 +143,8 @@ export const BACKGROUND_PRESETS: {
   { id: "upload-29-chainsaw-man", label: "Chainsaw Man", jp: "チェンソー", url: "/wallpapers/uploaded-29-chainsaw-man.jpg" },
   { id: "upload-30-cherry-blossom", label: "Cherry Blossom Girl", jp: "桜少女", url: "/wallpapers/uploaded-30-cherry-blossom.jpg" },
   { id: "upload-31-belmode", label: "Belmode", jp: "ベルモード", url: "/wallpapers/uploaded-31-belmode.jpeg" },
+  { id: "upload-32-gxplas", label: "GX Plas", jp: "壁紙", url: "/wallpapers/uploaded-32-gxplas.jpg" },
+  { id: "upload-33-anime-bed", label: "Cozy Bed", jp: "ベッド", url: "/wallpapers/uploaded-33-anime-bed.jpg" },
 ];
 
 interface SettingsState {
