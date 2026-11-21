@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { assetUrl } from "@/lib/asset";
 
 interface NikkiAvatarProps {
   size?: number;
@@ -30,11 +31,11 @@ export function NikkiAvatar({ size = 48, className, withHalo = false }: NikkiAva
         style={{ width: size, height: size, minWidth: size, minHeight: size }}
       >
         <img
-          src="/nikki-logo.png"
+          src={assetUrl("/nikki-logo.png")}
           alt="Nikki, your Japanese tutor"
           width={size}
           height={size}
-          style={{ width: size, height: size, minWidth: size, minHeight: size, objectFit: "cover", display: "block" }}
+          style={{ width: size, height: size, objectFit: "cover", display: "block" }}
         />
       </span>
     </span>

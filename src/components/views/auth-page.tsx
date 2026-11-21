@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { NikkiAvatar } from "../nikki/nikki-avatar";
 import { cn } from "@/lib/utils";
+import { assetUrl } from "@/lib/asset";
 
 interface AuthPageProps {
   onAuth: (user: { id: string; email: string; name: string }) => void;
@@ -101,7 +102,7 @@ export function AuthPage({ onAuth }: AuthPageProps) {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url(/japan-city-bg.jpeg)",
+          backgroundImage: `url(${assetUrl("/japan-city-bg.jpeg")})`,
           filter: "brightness(0.7)",
         }}
         aria-hidden

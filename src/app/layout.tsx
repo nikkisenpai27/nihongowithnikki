@@ -12,6 +12,7 @@ import {
   DotGothic16,
 } from "next/font/google";
 import "./globals.css";
+import { assetUrl } from "@/lib/asset";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as SonnerToaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/nikki/theme-provider";
@@ -44,8 +45,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Nikki" }],
   icons: {
-    icon: "/nikki-logo.png",
-    apple: "/nikki-logo.png",
+    icon: assetUrl("/nikki-logo.png"),
+    apple: assetUrl("/nikki-logo.png"),
   },
   openGraph: {
     title: "Nihongo with Nikki",
