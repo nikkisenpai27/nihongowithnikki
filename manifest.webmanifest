@@ -1,0 +1,12 @@
+{
+  "name": "Nihongo with Nikki",
+  "short_name": "Nikki",
+  "description": "Learn JLPT N5 & N4 Japanese with Nikki — your friendly tutor.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff9f0",
+  "theme_color": "#ff8fab",
+  "icons": [
+    { "src": "/nikki-logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
