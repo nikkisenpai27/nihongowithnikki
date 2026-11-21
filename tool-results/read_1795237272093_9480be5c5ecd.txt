@@ -1,0 +1,1082 @@
+     1→import type { GrammarData } from "@/lib/types";
+     2→
+     3→// JLPT N1 grammar — Shinzaizen Master style, chunk D.
+     4→// Furigana notation: kanji readings inline as 漢字[かんじ].
+     5→// Verb okurigana stays outside the bracket: 食[た]べる, 読[よ]んだり.
+     6→// Each contiguous kanji run is given one bracket with its full reading.
+     7→// Total: 50 points across 5 categories.
+     8→// IDs: gn1-151 .. gn1-200.
+     9→// All points are NEW — distinct from chunks A and B.
+    10→
+    11→export const grammarN1D: GrammarData[] = [
+    12→  // ───────────────────────────────────────────────────────────
+    13→  // CONTRAST — 12 points
+    14→  // ───────────────────────────────────────────────────────────
+    15→
+    16→  {
+    17→    id: "gn1-151",
+    18→    point: "〜うが",
+    19→    reading: "...u ga",
+    20→    level: "N1",
+    21→    category: "Contrast",
+    22→    meaning: "no matter whether one does...; even if one does...",
+    23→    structure: "V（意向形）+ う/よう + が",
+    24→    explanation:
+    25→      "Indicates that regardless of what action is taken or what state arises, the conclusion does not change. A literary and emphatic counterpart to 〜ても, frequently paired with interrogatives such as どんなに, いくら, or 何.",
+    26→    formation:
+    27→      "V-意向形 + が\n例: 行[い]こうが / 食[た]べようが / なろうが",
+    28→    examples: [
+    29→      { jp: "どんな困難[こんなん]が待[ま]っていようが、諦[あきら]めない。", en: "No matter what difficulty awaits, I will not give up." },
+    30→      { jp: "何[なに]を言[い]われようが、私[わたし]の信念[しんねん]は揺[ゆ]るがない。", en: "No matter what is said to me, my convictions will not waver." }
+    31→    ],
+    32→    notes:
+    33→      "More literary than 〜ても. Often combined with 疑問詞 (何, 誰, どんなに) to mean 'no matter how/what.' Closely related to 〜うが〜まいが and 〜うと.",
+    34→    related: ["gn1-152", "gn1-153", "gn1-154"]
+    35→  },
+    36→
+    37→  {
+    38→    id: "gn1-152",
+    39→    point: "〜うが〜まいが",
+    40→    reading: "...u ga...mai ga",
+    41→    level: "N1",
+    42→    category: "Contrast",
+    43→    meaning: "whether one does... or does not... (the result is the same)",
+    44→    structure: "V（意向形）+ う/よう + が、V（辞書形）+ まい + が",
+    45→    explanation:
+    46→      "Pairs a volitional form with its negative まい form to indicate that either outcome produces the same result. The speaker emphasizes that the choice is irrelevant to the conclusion.",
+    47→    formation:
+    48→      "V-意向形 + が、V-辞書形 + まい + が\n例: 行[い]こうが行[い]くまいが / しようがするまいが / 来[こ]ようが来[こ]るまいが",
+    49→    examples: [
+    50→      { jp: "彼[かれ]が来[こ]ようが来[こ]るまいが、私[わたし]は出発[しゅっぱつ]する。", en: "Whether he comes or not, I am leaving." },
+    51→      { jp: "君[きみ]が信[しん]じようが信[しん]じまいが、これは事実[じじつ]だ。", en: "Whether you believe it or not, this is a fact." }
+    52→    ],
+    53→    notes:
+    54→      "Equivalent to 〜ても〜なくても but more formal and literary. The まい form attaches to the dictionary form for vowel-stem verbs (来[く]るまい, するまい) and may also attach to the ます-stem for consonant-stem verbs (書[か]くまい / 書[か]きまい).",
+    55→    related: ["gn1-151", "gn1-153", "gn1-154"]
+    56→  },
+    57→
+    58→  {
+    59→    id: "gn1-153",
+    60→    point: "〜うと",
+    61→    reading: "...u to",
+    62→    level: "N1",
+    63→    category: "Contrast",
+    64→    meaning: "even if one tries to...; no matter if one...",
+    65→    structure: "V（意向形）+ う/よう + と",
+    66→    explanation:
+    67→      "Equivalent in meaning to 〜うが, indicating that whatever action or state occurs, the conclusion holds. Slightly less formal than 〜うが but still appears frequently in written N1 texts, often with interrogatives.",
+    68→    formation:
+    69→      "V-意向形 + と\n例: 行[い]こうと / 食[た]べようと / 思[おも]おうと",
+    70→    examples: [
+    71→      { jp: "いくら勉強[べんきょう]しようと、才能[さいのう]がなければ伸[の]びない。", en: "No matter how much you study, without talent you will not improve." },
+    72→      { jp: "何度[なんど]挑戦[ちょうせん]しようと、結果[けっか]は同[おな]じだった。", en: "No matter how many times I tried, the result was the same." }
+    73→    ],
+    74→    notes:
+    75→      "Often paired with いくら, 何度, どんなに. The difference from 〜うが is mostly stylistic—〜うと is slightly softer but still formal. Can also form 〜うと〜まいと.",
+    76→    related: ["gn1-151", "gn1-152"]
+    77→  },
+    78→
+    79→  {
+    80→    id: "gn1-154",
+    81→    point: "〜うが〜うが",
+    82→    reading: "...u ga...u ga",
+    83→    level: "N1",
+    84→    category: "Contrast",
+    85→    meaning: "whether one does A or does B (either way, the same holds)",
+    86→    structure: "V1（意向形）+ う/よう + が、V2（意向形）+ う/よう + が",
+    87→    explanation:
+    88→      "Lists two different volitional actions to show that whichever is chosen, the conclusion is unchanged. Unlike 〜うが〜まいが, both verbs are positive forms (different actions, not affirmative/negative).",
+    89→    formation:
+    90→      "V1-意向形 + が、V2-意向形 + が\n例: 行[い]こうが残[のこ]ろうが / 泣[な]こうが怒[いか]ろうが",
+    91→    examples: [
+    92→      { jp: "転[ころ]ぼうが走[はし]ろうが、とにかくゴールまで行[い]く。", en: "Whether I fall or run, I will reach the goal somehow." },
+    93→      { jp: "賛成[さんせい]しようが反対[はんたい]しようが、計画[けいかく]は進[すす]む。", en: "Whether one agrees or opposes, the plan will proceed." }
+    94→    ],
+    95→    notes:
+    96→      "Both verbs are volitional (positive form), which distinguishes it from 〜うが〜まいが. Used to present two alternatives and dismiss both as irrelevant to the outcome.",
+    97→    related: ["gn1-151", "gn1-152"]
+    98→  },
+    99→
+   100→  {
+   101→    id: "gn1-155",
+   102→    point: "〜にしろ",
+   103→    reading: "...ni shiro",
+   104→    level: "N1",
+   105→    category: "Contrast",
+   106→    meaning: "even if...; even assuming...; whether it be...",
+   107→    structure: "V（辞書形）/ N + にしろ",
+   108→    explanation:
+   109→      "A concessive pattern meaning 'even if / even assuming.' Often follows nouns or dictionary-form verbs to present an extreme or hypothetical case, with the main clause asserting something that holds regardless.",
+   110→    formation:
+   111→      "N + にしろ / V-辞書形 + にしろ\n例: 学生[がくせい]にしろ / 行[い]くにしろ / 先生[せんせい]にしろ",
+   112→    examples: [
+   113→      { jp: "親[おや]にしろ、子[こ]にしろ、お互[たが]いの気持[きも]ちを考[かんが]えるべきだ。", en: "Whether parent or child, both should consider each other's feelings." },
+   114→      { jp: "簡単[かんたん]なことにしろ、油断[ゆだん]すれば失敗[しっぱい]する。", en: "Even for something simple, you will fail if you let your guard down." }
+   115→    ],
+   116→    notes:
+   117→      "Equivalent to 〜にせよ and 〜でも. More emphatic than 〜ても. When doubled as 〜にしろ〜にしろ it lists multiple items explicitly.",
+   118→    related: ["gn1-156"]
+   119→  },
+   120→
+   121→  {
+   122→    id: "gn1-156",
+   123→    point: "〜にせよ",
+   124→    reading: "...ni seyo",
+   125→    level: "N1",
+   126→    category: "Contrast",
+   127→    meaning: "even if...; even assuming...; even granting that...",
+   128→    structure: "V（辞書形）/ N + にせよ",
+   129→    explanation:
+   130→      "Functionally identical to 〜にしろ—a concessive meaning 'even if / even granting that.' Often used to acknowledge a condition before asserting a contrary or additional point.",
+   131→    formation:
+   132→      "N + にせよ / V-辞書形 + にせよ\n例: 先生[せんせい]にせよ / 行[い]くにせよ / 難[むずか]しいにせよ",
+   133→    examples: [
+   134→      { jp: "忙[いそが]しいにせよ、連絡[れんらく]くらいはできるだろう。", en: "Even if you are busy, you could at least get in touch." },
+   135→      { jp: "どんな理由[りゆう]にせよ、暴力[ぼうりょく]は許[ゆる]されない。", en: "Whatever the reason, violence is not tolerated." }
+   136→    ],
+   137→    notes:
+   138→      "Interchangeable with 〜にしろ in most cases. 〜にせよ is considered slightly softer and more polite. Also used doubled as 〜にせよ〜にせよ to list alternatives.",
+   139→    related: ["gn1-155"]
+   140→  },
+   141→
+   142→  {
+   143→    id: "gn1-157",
+   144→    point: "〜にあっても",
+   145→    reading: "...ni atte mo",
+   146→    level: "N1",
+   147→    category: "Contrast",
+   148→    meaning: "even in/under (a situation); even though one is in...",
+   149→    structure: "N + にあっても",
+   150→    explanation:
+   151→      "Indicates that even within a particular situation, condition, or role, the stated outcome holds. Emphasizes that the circumstance does not change the conclusion. Formal/literary counterpart to 〜でも.",
+   152→    formation:
+   153→      "N + にあっても\n例: 困難[こんなん]にあっても / 現代[げんだい]にあっても / 戦時[せんじ]にあっても",
+   154→    examples: [
+   155→      { jp: "この困難[こんなん]な状況[じょうきょう]にあっても、彼[かれ]は希望[きぼう]を捨[す]てない。", en: "Even in this difficult situation, he does not abandon hope." },
+   156→      { jp: "現代[げんだい]にあっても、古[ふる]い習慣[しゅうかん]は残[のこ]っている。", en: "Even in modern times, old customs remain." }
+   157→    ],
+   158→    notes:
+   159→      "Formal/literary concessive form of 〜にあって (see gn1-192). The 〜にあって form means 'in/under (a situation)' while 〜にあっても adds the concessive 'even in/under.' Common in essays and formal writing.",
+   160→    related: ["gn1-192"]
+   161→  },
+   162→
+   163→  {
+   164→    id: "gn1-158",
+   165→    point: "〜をよそに",
+   166→    reading: "...o yoso ni",
+   167→    level: "N1",
+   168→    category: "Contrast",
+   169→    meaning: "ignoring...; disregarding...; in spite of...",
+   170→    structure: "N + をよそに",
+   171→    explanation:
+   172→      "Indicates that someone ignores or disregards something—often others' feelings, expectations, or warnings—and proceeds with an action. Carries a critical tone toward the subject.",
+   173→    formation:
+   174→      "N + をよそに\n例: 親[おや]の心配[しんぱい]をよそに / 周[まわ]りの批判[ひはん]をよそに / 規則[きそく]をよそに",
+   175→    examples: [
+   176→      { jp: "親[おや]の心配[しんぱい]をよそに、彼[かれ]は毎晩[まいばん]遅[おそ]くまで遊[あそ]んでいる。", en: "Disregarding his parents' worries, he plays until late every night." },
+   177→      { jp: "周[まわ]りの批判[ひはん]をよそに、彼女[かのじょ]は自分[じぶん]の道[みち]を進[すす]んだ。", en: "Ignoring the criticism around her, she pursued her own path." }
+   178→    ],
+   179→    notes:
+   180→      "Carries a negative/critical nuance—the subject ignores something they probably should heed. Similar to 〜を顧みず but focuses on disregarding external feelings/expectations rather than personal risk.",
+   181→    related: ["gn1-159", "gn1-160", "gn1-161"]
+   182→  },
+   183→
+   184→  {
+   185→    id: "gn1-159",
+   186→    point: "〜をものともせず",
+   187→    reading: "...o mono tomo sezu",
+   188→    level: "N1",
+   189→    category: "Contrast",
+   190→    meaning: "without paying any mind to...; defying (hardship/opposition)",
+   191→    structure: "N + をものともせず（に）",
+   192→    explanation:
+   193→      "Indicates that someone pushes forward without being deterred by a difficulty, obstacle, or opposition. Carries an admiring tone, unlike 〜をよそに.",
+   194→    formation:
+   195→      "N + をものともせず（に）\n例: 怪我[けが]をものともせず / 猛暑[もうしょ]をものともせず / 批判[ひはん]をものともせず",
+   196→    examples: [
+   197→      { jp: "怪我[けが]をものともせず、彼[かれ]は最後[さいご]まで試合[しあい]に出[で]た。", en: "Undeterred by his injury, he played until the very end of the match." },
+   198→      { jp: "猛暑[もうしょ]をものともせず、ファンは会場[かいじょう]に詰[つ]めかけた。", en: "Braving the fierce heat, fans packed into the venue." }
+   199→    ],
+   200→    notes:
+   201→      "Conveys admiration—overcoming hardship bravely. Differs from 〜をよそに (ignoring external concerns) and 〜を顧みず (not looking back at consequences). The ものとも is a fixed emphatic expression.",
+   202→    related: ["gn1-158", "gn1-160", "gn1-161"]
+   203→  },
+   204→
+   205→  {
+   206→    id: "gn1-160",
+   207→    point: "〜を顧みず",
+   208→    reading: "...o kaerimizu",
+   209→    level: "N1",
+   210→    category: "Contrast",
+   211→    meaning: "without regard for...; disregarding (risk/consequences)",
+   212→    structure: "N + を顧[かえり]みず（に）",
+   213→    explanation:
+   214→      "Indicates that someone acts without considering or paying attention to something—often risks, consequences, or personal safety. Can be admiring or neutral; 顧みる means 'to look back / consider.'",
+   215→    formation:
+   216→      "N + を顧[かえり]みず（に）\n例: 危険[きけん]を顧[かえり]みず / 身[み]の安全[あんぜん]を顧[かえり]みず / 後果[こうか]を顧[かえり]みず",
+   217→    examples: [
+   218→      { jp: "自分[じぶん]の危険[きけん]を顧[かえり]みず、彼[かれ]は川[かわ]に飛[と]び込[こ]んだ。", en: "Without regard for his own danger, he jumped into the river." },
+   219→      { jp: "身[み]の安全[あんぜん]を顧[かえり]みず、医師[いし]は患者[かんじゃ]を救[すく]った。", en: "Disregarding their own safety, the doctor saved the patient." }
+   220→    ],
+   221→    notes:
+   222→      "Often used for selfless or heroic acts. 顧みる = 'to look back / consider.' Differs from 〜をものともせず (defying hardship) in focusing on ignoring consequences rather than obstacles.",
+   223→    related: ["gn1-158", "gn1-159", "gn1-161"]
+   224→  },
+   225→
+   226→  {
+   227→    id: "gn1-161",
+   228→    point: "〜を不惜（いとわず）",
+   229→    reading: "...o itowazu",
+   230→    level: "N1",
+   231→    category: "Contrast",
+   232→    meaning: "without hesitating to...; not begrudging...; ungrudgingly",
+   233→    structure: "N + を惜[お]しまず / N + をいとわず（不惜）",
+   234→    explanation:
+   235→      "Indicates that one does not hesitate or begrudge the noun—often effort, time, or hardship—willingly undertaking it. The kanji form 不惜 is a literary rendering; in modern N1 usage the kana forms いとわず and 惜しまず are common.",
+   236→    formation:
+   237→      "N + を惜[お]しまず / N + をいとわず\n例: 努力[どりょく]を惜しまず / 苦労[くろう]をいとわず / 時間[じかん]を惜しまず",
+   238→    examples: [
+   239→      { jp: "苦労[くろう]をいとわず、彼[かれ]は仕事[しごと]に打[う]ち込[こ]んだ。", en: "Without hesitating at hardship, he threw himself into his work." },
+   240→      { jp: "努力[どりょく]を惜[お]しまず、彼女[かのじょ]は研究[けんきゅう]を続[つづ]けた。", en: "Sparing no effort, she continued her research." }
+   241→    ],
+   242→    notes:
+   243→      "〜を惜しまず (not sparing) and 〜をいとわず (not hesitating) are similar but subtly different; the literary kanji 不惜 covers both senses. Common in formal writing and biographical praise.",
+   244→    related: ["gn1-158", "gn1-159", "gn1-160"]
+   245→  },
+   246→
+   247→  {
+   248→    id: "gn1-162",
+   249→    point: "〜どころか",
+   250→    reading: "...dokoro ka",
+   251→    level: "N1",
+   252→    category: "Contrast",
+   253→    meaning: "far from...; rather than...; on the contrary...",
+   254→    structure: "N / V（辞書形・た形）/ イ-adj / Na-adj + どころか",
+   255→    explanation:
+   256→      "Indicates that the actual situation is not merely the negation of what was expected, but the opposite extreme. Strongly emphasizes contrast—what follows is usually surprising or contrary.",
+   257→    formation:
+   258→      "N + どころか / V-辞書形・た + どころか / イ-adj + どころか / Na-adj + な + どころか\n例: 楽[らく]などころか / 行[い]ったどころか / 簡単[かんたん]などころか",
+   259→    examples: [
+   260→      { jp: "彼[かれ]は謝[あやま]るどころか、逆[ぎゃく]に文句[もんく]を言[い]ってきた。", en: "Far from apologizing, he actually complained instead." },
+   261→      { jp: "この仕事[しごと]は楽[らく]などころか、想像[そうぞう]以上[いじょう]に大変[たいへん]だ。", en: "This job is far from easy—it is tougher than imagined." }
+   262→    ],
+   263→    notes:
+   264→      "Stronger than simple negation—it asserts the opposite. Often used when expectations are completely betrayed. Common in both speech and writing; pairs with 〜ばかりか for layered contrast.",
+   265→    related: ["gn1-177"]
+   266→  },
+   267→
+   268→  // ───────────────────────────────────────────────────────────
+   269→  // PARTICLES — 2 points
+   270→  // ───────────────────────────────────────────────────────────
+   271→
+   272→  {
+   273→    id: "gn1-163",
+   274→    point: "〜とか",
+   275→    reading: "...toka",
+   276→    level: "N1",
+   277→    category: "Particles",
+   278→    meaning: "things like...; for example...; such as...",
+   279→    structure: "N / V（辞書形・た形）/ イ-adj + とか",
+   280→    explanation:
+   281→      "An informal particle used to give examples non-exhaustively, similar to 〜や but with a vaguer, more conversational tone. Can follow nouns, verbs, or adjectives and implies an unspoken continuation.",
+   282→    formation:
+   283→      "N + とか / V-辞書形・た + とか / イ-adj + とか\n例: 寿司[すし]とか / 行[い]くとか / 忙[いそが]しいとか",
+   284→    examples: [
+   285→      { jp: "休[やす]みの日[ひ]は、本[ほん]を読[よ]んだりとか散歩[さんぽ]したりとかする。", en: "On my days off I do things like reading books and taking walks." },
+   286→      { jp: "甘[あま]いものとか辛[から]いものとか、色々[いろいろ]好[す]きだ。", en: "I like all sorts of things—sweet ones, spicy ones, and so on." }
+   287→    ],
+   288→    notes:
+   289→      "Conversational and non-exhaustive. Often combined with 〜たり. Reviewed at N1 for its flexible use across parts of speech. Differs from 〜や in being more colloquial and able to follow verbs/adjectives.",
+   290→    related: ["gn1-164"]
+   291→  },
+   292→
+   293→  {
+   294→    id: "gn1-164",
+   295→    point: "〜とか〜とか",
+   296→    reading: "...toka...toka",
+   297→    level: "N1",
+   298→    category: "Particles",
+   299→    meaning: "things like A and B; for instance A, B, and so on",
+   300→    structure: "N1 + とか、N2 + とか",
+   301→    explanation:
+   302→      "Lists multiple examples non-exhaustively in a casual register. Equivalent to 〜や〜や but more conversational and flexible—it can attach to verbs and adjectives as well as nouns.",
+   303→    formation:
+   304→      "N1 + とか、N2 + とか\n例: 寿司[すし]とかラーメンとか / 行[い]くとか行[い]かないとか / 赤[あか]とか青[あお]とか",
+   305→    examples: [
+   306→      { jp: "寿司[すし]とかラーメンとか、日本[にほん]の料理[りょうり]は美味[おい]しい。", en: "Sushi, ramen, and such—Japanese food is delicious." },
+   307→      { jp: "行[い]くとか行[い]かないとか、皆[みな]の意見[いけん]が分[わ]かれている。", en: "Going or not going—everyone's opinions are divided." }
+   308→    ],
+   309→    notes:
+   310→      "More flexible than 〜や〜や (which only takes nouns). Commonly used in speech. The final とか can be omitted for brevity. The pattern also accepts verb phrases, making it broader than 〜や.",
+   311→    related: ["gn1-163"]
+   312→  },
+   313→
+   314→  // ───────────────────────────────────────────────────────────
+   315→  // MODIFIERS — 25 points
+   316→  // ───────────────────────────────────────────────────────────
+   317→
+   318→  {
+   319→    id: "gn1-165",
+   320→    point: "〜といい〜といい",
+   321→    reading: "...to ii...to ii",
+   322→    level: "N1",
+   323→    category: "Modifiers",
+   324→    meaning: "both A and B are (equally...); whether A or B, both...",
+   325→    structure: "N1 + といい、N2 + といい",
+   326→    explanation:
+   327→      "Presents two nouns as examples that share a common evaluation (good or bad). The subsequent clause expresses a judgment that applies to both. Often followed by も.",
+   328→    formation:
+   329→      "N1 + といい、N2 + といい\n例: デザインといい機能[きのう]といい / 声[こえ]といい姿[すがた]といい / 味[あじ]といい値段[ねだん]といい",
+   330→    examples: [
+   331→      { jp: "デザインといい機能[きのう]といい、この製品[せいひん]は完璧[かんぺき]だ。", en: "Both in design and in function, this product is perfect." },
+   332→      { jp: "声[こえ]といい姿[すがた]といい、彼女[かのじょ]は天才的[てんさいてき]だ。", en: "Both her voice and her appearance—she is a genius." }
+   333→    ],
+   334→    notes:
+   335→      "Both items are evaluated together, usually positively or negatively. Differs from 〜なり〜なり (which offers a choice)—here both are cited as examples supporting one judgment.",
+   336→    related: ["gn1-166", "gn1-167"]
+   337→  },
+   338→
+   339→  {
+   340→    id: "gn1-166",
+   341→    point: "〜なり〜なり",
+   342→    reading: "...nari...nari",
+   343→    level: "N1",
+   344→    category: "Modifiers",
+   345→    meaning: "either A or B; for example A or B",
+   346→    structure: "N1 / V（辞書形）+ なり、N2 / V（辞書形）+ なり",
+   347→    explanation:
+   348→      "Lists two (or more) options from which one may choose, or gives representative examples. Similar to 〜たり〜たり but more concise and slightly formal; the main clause suggests selecting one.",
+   349→    formation:
+   350→      "N1 + なり、N2 + なり / V1-辞書形 + なり、V2-辞書形 + なり\n例: 先生[せんせい]なり友達[ともだち]なり / 聞[き]くなり相談[そうだん]するなり / 飲[の]むなり食[た]べるなり",
+   351→    examples: [
+   352→      { jp: "分[わ]からないことがあれば、先生[せんせい]に聞[き]くなり友達[ともだち]に相談[そうだん]するなりする。", en: "If there is something you don't understand, do something like ask the teacher or talk it over with a friend." },
+   353→      { jp: "飲[の]むなり食[た]べるなり、好[す]きにしていいよ。", en: "Drink or eat—do whatever you like." }
+   354→    ],
+   355→    notes:
+   356→      "Suggests choosing one of the listed options. Often followed by する / しなさい / 〜てください. Differs from 〜といい〜といい (no choice, both evaluated) and 〜だの〜だの (listing without choice).",
+   357→    related: ["gn1-165", "gn1-167"]
+   358→  },
+   359→
+   360→  {
+   361→    id: "gn1-167",
+   362→    point: "〜だの〜だの",
+   363→    reading: "...dano...dano",
+   364→    level: "N1",
+   365→    category: "Modifiers",
+   366→    meaning: "things like A and B; A and B and so on (often with mild complaint)",
+   367→    structure: "N1 / イ-adj / V（た形）+ だの、N2 / イ-adj / V（た形）+ だの",
+   368→    explanation:
+   369→      "Lists items non-exhaustively, often with a nuance of enumerating complaints or excess. More colloquial than 〜や〜や and can carry a slightly exasperated or dismissive tone.",
+   370→    formation:
+   371→      "N1 + だの、N2 + だの / イ-adj + だの / V-た + だの\n例: 果物[くだもの]だのお菓子[かし]だの / 痛[いた]いだの疲[つか]れただの / 雨[あめ]だの風[かぜ]だの",
+   372→    examples: [
+   373→      { jp: "痛[いた]いだの疲[つか]れただの、言[い]い訳[わけ]ばかりしている。", en: "It hurts, I'm tired, and so on—he makes nothing but excuses." },
+   374→      { jp: "果物[くだもの]だのお菓子[かし]だの、買い[かい]すぎてしまった。", en: "Fruit, snacks, and so on—I ended up buying too much." }
+   375→    ],
+   376→    notes:
+   377→      "Often implies the list is excessive or the speaker is mildly annoyed. More emotive than 〜とか〜とか. Can attach to adjectives and verbs in past tense as well as nouns.",
+   378→    related: ["gn1-168", "gn1-163"]
+   379→  },
+   380→
+   381→  {
+   382→    id: "gn1-168",
+   383→    point: "〜だの",
+   384→    reading: "...dano",
+   385→    level: "N1",
+   386→    category: "Modifiers",
+   387→    meaning: "things like...; for instance... (non-exhaustive listing)",
+   388→    structure: "N / V / イ-adj + だの",
+   389→    explanation:
+   390→      "A single-instance listing particle giving one representative example among others. Similar to 〜とか but with a slightly older, more written feel; often implies an unspoken continuation.",
+   391→    formation:
+   392→      "N + だの / V + だの / イ-adj + だの\n例: 忙[いそが]しいだの / 雨[あめ]だの / お金[かね]がないだの",
+   393→    examples: [
+   394→      { jp: "忙[いそが]しいだのお金[かね]がないだの、彼[かれ]はいつも言[い]い訳[わけ]をする。", en: "He is always making excuses—I'm busy, I have no money, and so on." },
+   395→      { jp: "雨[あめ]だの風[かぜ]だの、天気[てんき]が悪[わる]い日[ひ]が続[つづ]いた。", en: "Rain, wind, and such—days of bad weather continued." }
+   396→    ],
+   397→    notes:
+   398→      "Can stand alone to give one example implying more follow. The doubled 〜だの〜だの is more common, but the single form appears in lists ending with 〜など or in enumerative strings.",
+   399→    related: ["gn1-167"]
+   400→  },
+   401→
+   402→  {
+   403→    id: "gn1-169",
+   404→    point: "〜たる",
+   405→    reading: "...taru",
+   406→    level: "N1",
+   407→    category: "Modifiers",
+   408→    meaning: "being (a role/status) as befits; as a...",
+   409→    structure: "N + たる",
+   410→    explanation:
+   411→      "Indicates that someone, holding a particular position or status, should behave in a manner worthy of it. Formal and somewhat literary; implies the duty or dignity attached to the role.",
+   412→    formation:
+   413→      "N + たる（+ 者[もの]）\n例: 教師[きょうし]たる / リーダーたる / 医者[いしゃ]たる",
+   414→    examples: [
+   415→      { jp: "教師[きょうし]たる者[もの]は、学生[がくせい]の手本[てほん]でなければならない。", en: "One who is a teacher must be a model for students." },
+   416→      { jp: "リーダーたる者[もの]は、決断力[けつだんりょく]が求[もと]められる。", en: "One who is a leader is required to have decisiveness." }
+   417→    ],
+   418→    notes:
+   419→      "Almost always followed by 者[もの] (e.g., 教師たる者). Implies that the role carries responsibility. Differs from 〜である (simple 'is') by emphasizing the dignity/expectation of the role.",
+   420→    related: ["gn1-170", "gn1-171", "gn1-174"]
+   421→  },
+   422→
+   423→  {
+   424→    id: "gn1-170",
+   425→    point: "〜なる",
+   426→    reading: "...naru",
+   427→    level: "N1",
+   428→    category: "Modifiers",
+   429→    meaning: "which is...; being...; that which is...",
+   430→    structure: "N + なる + N",
+   431→    explanation:
+   432→      "A literary attributive linker equivalent to 〜である / 〜という. Used to modify a noun with a phrase that describes its nature or identity. Common in formal writing and classical-style prose.",
+   433→    formation:
+   434→      "N + なる + N\n例: 私[わたし]の友人[ゆうじん]なる彼[かれ] / これなる由緒[ゆいしょ] / 神聖[しんせい]なるもの",
+   435→    examples: [
+   436→      { jp: "私[わたし]の友人[ゆうじん]なる彼[かれ]は、著名[ちょめい]な科学者[かがくしゃ]だ。", en: "My friend, who is a renowned scientist, is someone I know." },
+   437→      { jp: "これなる由緒[ゆいしょ]ある建物[たてもの]は、江戸[えど]時代[じだい]のものだ。", en: "This historic building dates from the Edo period." }
+   438→    ],
+   439→    notes:
+   440→      "Classical/literary equivalent of 〜である. Used in formal contexts like history, literature, and official documents. The copula なり (attributive form なる) is the origin; the predicated form is 〜にあり (gn1-173).",
+   441→    related: ["gn1-169", "gn1-171", "gn1-173"]
+   442→  },
+   443→
+   444→  {
+   445→    id: "gn1-171",
+   446→    point: "〜なるもの",
+   447→    reading: "...naru mono",
+   448→    level: "N1",
+   449→    category: "Modifiers",
+   450→    meaning: "a thing that is...; one which is... (emphatic)",
+   451→    structure: "N + なる + もの",
+   452→    explanation:
+   453→      "Combines 〜なる with もの to emphasize the essence or nature of something. Used to define or highlight what something truly is, often with a philosophical or definitive tone.",
+   454→    formation:
+   455→      "N + なる + もの\n例: 時[とき]なるもの / 真実[しんじつ]なるもの / 愛なるもの",
+   456→    examples: [
+   457→      { jp: "時[とき]なるものは、人[ひと]を変[か]える力[ちから]を持[も]っている。", en: "Time—that which is time—has the power to change people." },
+   458→      { jp: "真実[しんじつ]なるものは、いつか必[かなら]ず明[あき]らかになる。", en: "That which is the truth will surely come to light someday." }
+   459→    ],
+   460→    notes:
+   461→      "なる + もの highlights the inherent nature. Common in literary or reflective writing. Differs from 〜たるもの (which focuses on a person in a role)—here it can refer to abstract concepts.",
+   462→    related: ["gn1-169", "gn1-170"]
+   463→  },
+   464→
+   465→  {
+   466→    id: "gn1-172",
+   467→    point: "〜にある",
+   468→    reading: "...ni aru",
+   469→    level: "N1",
+   470→    category: "Modifiers",
+   471→    meaning: "lies in...; consists in...; is found in...",
+   472→    structure: "N + に（は）+ ある",
+   473→    explanation:
+   474→      "Indicates that the essence, cause, or true nature of something resides in the noun that follows. Used to identify where the core of a matter lies. Formal and analytical.",
+   475→    formation:
+   476→      "N + に（は）ある\n例: 問題[もんだい]の根本[こんぽん]にある / 幸福[こうふく]の秘訣[ひけつ]にある / 目的[もくてき]にある",
+   477→    examples: [
+   478→      { jp: "問題[もんだい]の根本[こんぽん]は、彼[かれ]の怠慢[たいまん]にある。", en: "The root of the problem lies in his negligence." },
+   479→      { jp: "幸福[こうふく]の秘訣[ひけつ]は、小[ちい]さな喜[よろこ]びに感謝[かんしゃ]する心[こころ]にある。", en: "The secret of happiness lies in a heart that is grateful for small joys." }
+   480→    ],
+   481→    notes:
+   482→      "Formal phrasing meaning 'consists in / lies in.' Often pairs with abstract nouns like 本質[ほんしつ], 原因[げんいん], 目的[もくてき]. The predicated form is 〜にあり (see gn1-173).",
+   483→    related: ["gn1-173"]
+   484→  },
+   485→
+   486→  {
+   487→    id: "gn1-173",
+   488→    point: "〜にあり",
+   489→    reading: "...ni ari",
+   490→    level: "N1",
+   491→    category: "Modifiers",
+   492→    meaning: "lies in...; resides in... (predicated form)",
+   493→    structure: "N + にあり",
+   494→    explanation:
+   495→      "The predicated form of 〜にある, used at the end of a clause to state where the essence or cause lies. Formal and somewhat literary, common in essays and academic writing.",
+   496→    formation:
+   497→      "N + にあり\n例: 真[しん]の責任[せきにん]は指導[しどう]者[しゃ]にあり / 解決[かいけつ]の鍵[かぎ]は対話[たいわ]にあり / 目的[もくてき]はそこにあり",
+   498→    examples: [
+   499→      { jp: "真[しん]の責任[せきにん]は、指導[しどう]者[しゃ]にあり。", en: "The true responsibility lies with the leaders." },
+   500→      { jp: "解決[かいけつ]の鍵[かぎ]は、対話[たいわ]にあり。", en: "The key to a solution lies in dialogue." }
+   501→    ],
+   502→    notes:
+   503→      "Predicated/literary form of 〜にある. Appears in formal statements and maxims. Often written with は before: 〜は〜にあり. The attributive form is 〜なる (gn1-170) when modifying a noun.",
+   504→    related: ["gn1-170", "gn1-172"]
+   505→  },
+   506→
+   507→  {
+   508→    id: "gn1-174",
+   509→    point: "〜たるや",
+   510→    reading: "...taru ya",
+   511→    level: "N1",
+   512→    category: "Modifiers",
+   513→    meaning: "as for the... (it is astonishingly...); when it comes to...",
+   514→    structure: "N + たるや",
+   515→    explanation:
+   516→      "A dramatic introducer meaning 'as for N, [astonishing statement].' Sets up a noun for an emphatic or surprising description that follows. Literary and emphatic; the や is an old conjunctive particle.",
+   517→    formation:
+   518→      "N + たるや\n例: 彼[かれ]の実力[じつりょく]たるや / その景色[けしき]たるや / 状況[じょうきょう]たるや",
+   519→    examples: [
+   520→      { jp: "彼[かれ]の実力[じつりょく]たるや、プロをも凌[しの]ぐほどだ。", en: "As for his ability, it is enough to surpass even professionals." },
+   521→      { jp: "その景色[けしき]たるや、言葉[ことば]では表現[ひょうげん]できないほど美[うつく]しかった。", en: "As for that scenery, it was too beautiful to express in words." }
+   522→    ],
+   523→    notes:
+   524→      "Used to set up a striking or impressive statement about the noun. The や is an old conjunctive particle. Common in literary and journalistic writing for dramatic emphasis.",
+   525→    related: ["gn1-169", "gn1-170"]
+   526→  },
+   527→
+   528→  {
+   529→    id: "gn1-175",
+   530→    point: "〜はもとより",
+   531→    reading: "...wa moto yori",
+   532→    level: "N1",
+   533→    category: "Modifiers",
+   534→    meaning: "not to mention...; ...as well as; let alone...",
+   535→    structure: "N + はもとより",
+   536→    explanation:
+   537→      "Indicates that the noun is naturally included, and additional items follow in the main clause. Means 'X is of course included, and also Y.' Formal equivalent of 〜はもちろん.",
+   538→    formation:
+   539→      "N + はもとより\n例: 英語[えいご]はもとより / 都市[とし]はもとより / 親[おや]はもとより",
+   540→    examples: [
+   541→      { jp: "彼[かれ]は英語[えいご]はもとより、フランス語[ご]も堪能[たんのう]だ。", en: "Not only English, he is also fluent in French." },
+   542→      { jp: "都市[とし]はもとより、地方[ちほう]でもインターネットが普及[ふきゅう]した。", en: "Not only in the cities, the Internet spread even in rural areas." }
+   543→    ],
+   544→    notes:
+   545→      "Equivalent to 〜はもちろん / 〜は言うまでもなく. Formal, common in writing. The pattern is additive—X is obvious, and Y is added. Differs from 〜ばかりか in tone (more about natural inclusion).",
+   546→    related: ["gn1-176", "gn1-179", "gn1-181"]
+   547→  },
+   548→
+   549→  {
+   550→    id: "gn1-176",
+   551→    point: "〜は言うに及ばず",
+   552→    reading: "...wa iu ni oyobazu",
+   553→    level: "N1",
+   554→    category: "Modifiers",
+   555→    meaning: "not to mention...; ...goes without saying, and...",
+   556→    structure: "N + は言[い]うに及[およ]ばず",
+   557→    explanation:
+   558→      "Indicates that the noun is so obviously the case that mentioning it is unnecessary, and something even more notable follows. Formal and emphatic; equivalent to 〜はもちろん.",
+   559→    formation:
+   560→      "N + は言[い]うに及[およ]ばず\n例: 歌[うた]は言[い]うに及[およ]ばず / 自然[しぜん]は言[い]うに及[およ]ばず / 親[おや]は言[い]うに及[およ]ばず",
+   561→    examples: [
+   562→      { jp: "彼[かれ]は歌[うた]は言[い]うに及[およ]ばず、ダンスも抜群[ばつぐん]だ。", en: "Not to mention singing, his dancing is also outstanding." },
+   563→      { jp: "自然[しぜん]は言[い]うに及[およ]ばず、文化[ぶんか]も豊[ゆた]かな国[くに]だ。", en: "Not to mention nature, it is a country rich in culture as well." }
+   564→    ],
+   565→    notes:
+   566→      "Very formal; common in written evaluations. The literal meaning is 'mentioning it does not reach as far as necessary.' Equivalent to 〜はもとより and 〜は言うまでもない.",
+   567→    related: ["gn1-175", "gn1-181"]
+   568→  },
+   569→
+   570→  {
+   571→    id: "gn1-177",
+   572→    point: "〜ばかりか",
+   573→    reading: "...bakari ka",
+   574→    level: "N1",
+   575→    category: "Modifiers",
+   576→    meaning: "not only... but also...",
+   577→    structure: "N / V（普通形）/ イ-adj / Na-adj + ばかりか",
+   578→    explanation:
+   579→      "Indicates that not only the stated item is true, but something additional (often greater or surprising) also holds. Stronger and more written than 〜だけでなく.",
+   580→    formation:
+   581→      "N + ばかりか / V-普通形 + ばかりか / イ-adj + ばかりか / Na-adj + な + ばかりか\n例: 英語[えいご]ばかりか / 面白[おもしろ]いばかりか / 学生[がくせい]であるばかりか",
+   582→    examples: [
+   583→      { jp: "彼[かれ]は英語[えいご]ばかりか、中国語[ちゅうごくご]も話[はな]せる。", en: "Not only English, he can also speak Chinese." },
+   584→      { jp: "その映画[えいが]は面白[おもしろ]いばかりか、教育的[きょういくてき]な価値[かち]もある。", en: "That movie is not only interesting, it also has educational value." }
+   585→    ],
+   586→    notes:
+   587→      "Equivalent to 〜だけでなく but more formal/written. The second clause often states something that exceeds expectations—can be positive or negative. Pairs with 〜どころか for layered contrast.",
+   588→    related: ["gn1-162", "gn1-178", "gn1-175"]
+   589→  },
+   590→
+   591→  {
+   592→    id: "gn1-178",
+   593→    point: "〜ばかりでなく",
+   594→    reading: "...bakari de naku",
+   595→    level: "N1",
+   596→    category: "Modifiers",
+   597→    meaning: "not only... but also...",
+   598→    structure: "N / V（普通形）/ イ-adj / Na-adj + ばかりでなく",
+   599→    explanation:
+   600→      "A less formal variant of 〜ばかりか, indicating that the stated item is not the only one—something additional also applies. Common in both speech and writing.",
+   601→    formation:
+   602→      "N + ばかりでなく / V-普通形 + ばかりでなく / イ-adj + ばかりでなく / Na-adj + な + ばかりでなく\n例: 歌手[かしゅ]であるばかりでなく / 安[やす]いばかりでなく / 忙[いそが]しいばかりでなく",
+   603→    examples: [
+   604→      { jp: "彼[かれ]は歌手[かしゅ]であるばかりでなく、俳優[はいゆう]でもある。", en: "He is not only a singer but also an actor." },
+   605→      { jp: "この店[みせ]は安[やす]いばかりでなく、量[りょう]も多[おお]い。", en: "This shop is not only cheap, the portions are also large." }
+   606→    ],
+   607→    notes:
+   608→      "Slightly less formal than 〜ばかりか. The second clause typically adds something parallel or additional. Interchangeable with 〜だけでなく in most everyday contexts.",
+   609→    related: ["gn1-177"]
+   610→  },
+   611→
+   612→  {
+   613→    id: "gn1-179",
+   614→    point: "〜はもちろん",
+   615→    reading: "...wa mochiron",
+   616→    level: "N1",
+   617→    category: "Modifiers",
+   618→    meaning: "of course...; needless to say...; not only... but also...",
+   619→    structure: "N + はもちろん（のこと）",
+   620→    explanation:
+   621→      "Indicates that the noun is naturally/obviously included, and additional items follow. The standard, moderately formal equivalent of 〜はもとより. Common in both speech and writing.",
+   622→    formation:
+   623→      "N + はもちろん\n例: スポーツはもちろん / 日本語[にほんご]はもちろん / 社長[しゃちょう]はもちろん",
+   624→    examples: [
+   625→      { jp: "彼[かれ]はスポーツはもちろん、勉強[べんきょう]もよくできる。", en: "He is good not only at sports but also at studies." },
+   626→      { jp: "日本語[にほんご]はもちろん、英語[えいご]も流暢[りゅうちょう]に話[はな]せる。", en: "Not only Japanese, he can also speak English fluently." }
+   627→    ],
+   628→    notes:
+   629→      "Equivalent to 〜はもとより but more common in everyday use. The noun is the 'obvious' case, and the main clause adds the 'surprising additional' case. See also the expanded form 〜はもちろんのこと (gn1-180).",
+   630→    related: ["gn1-175", "gn1-180", "gn1-181"]
+   631→  },
+   632→
+   633→  {
+   634→    id: "gn1-180",
+   635→    point: "〜はもちろんのこと",
+   636→    reading: "...wa mochiron no koto",
+   637→    level: "N1",
+   638→    category: "Modifiers",
+   639→    meaning: "of course; needless to say (formal expansion)",
+   640→    structure: "N + はもちろんのこと",
+   641→    explanation:
+   642→      "A slightly more formal, expanded version of 〜はもちろん, used in polite writing or speech. Functions identically: the noun is obviously included, with more following.",
+   643→    formation:
+   644→      "N + はもちろんのこと\n例: 社長[しゃちょう]はもちろんのこと / 都心[としん]はもちろんのこと / 親[おや]はもちろんのこと",
+   645→    examples: [
+   646→      { jp: "社長[しゃちょう]はもちろんのこと、社員[しゃいん]全員[ぜんいん]が参加[さんか]した。", en: "Not only the president, all employees participated." },
+   647→      { jp: "都心[としん]はもちろんのこと、郊外[こうがい]でも混雑[こんざつ]が続[つづ]いた。", en: "Not only the city center, congestion continued even in the suburbs." }
+   648→    ],
+   649→    notes:
+   650→      "A formal expansion of 〜はもちろん. The のこと adds emphasis and formality. Common in news and business writing. Functionally equivalent to 〜はもとより and 〜は言うに及ばず.",
+   651→    related: ["gn1-179"]
+   652→  },
+   653→
+   654→  {
+   655→    id: "gn1-181",
+   656→    point: "〜は言うまでもない",
+   657→    reading: "...wa iu made mo nai",
+   658→    level: "N1",
+   659→    category: "Modifiers",
+   660→    meaning: "it goes without saying that...; needless to say...",
+   661→    structure: "N / Sentence + は言[い]うまでもない",
+   662→    explanation:
+   663→      "States that something is so obvious it needs no mention. Can conclude a sentence or introduce an obvious point before adding more. Formal and emphatic.",
+   664→    formation:
+   665→      "N + は言[い]うまでもない / Sentence + のは言[い]うまでもない\n例: 健康[けんこう]の重要性[じゅうようせい]は言[い]うまでもない / 規則[きそく]を守[まも]るのは言[い]うまでもない",
+   666→    examples: [
+   667→      { jp: "健康[けんこう]の重要性[じゅうようせい]は、言[い]うまでもない。", en: "The importance of health goes without saying." },
+   668→      { jp: "規則[きそく]を守[まも]るのは、言[い]うまでもないことだ。", en: "Observing the rules is a matter that goes without saying." }
+   669→    ],
+   670→    notes:
+   671→      "Conclusive form meaning 'it goes without saying.' Can be used as a predicate (〜は言うまでもない) or as a modifier (〜は言うまでもないことだ). Equivalent to 〜は言うに及ばず and 〜はもとより.",
+   672→    related: ["gn1-176", "gn1-175", "gn1-183"]
+   673→  },
+   674→
+   675→  {
+   676→    id: "gn1-182",
+   677→    point: "〜に限って",
+   678→    reading: "...ni kagitte",
+   679→    level: "N1",
+   680→    category: "Modifiers",
+   681→    meaning: "precisely when/as for...; especially in the case of...",
+   682→    structure: "N + に限[かぎ]って",
+   683→    explanation:
+   684→      "Highlights a specific case, often one that is an exception or contrary to expectation. Can mean 'especially when it comes to N' or 'precisely in N's case (something unexpected happened).'",
+   685→    formation:
+   686→      "N + に限[かぎ]って\n例: 忙[いそが]しい時に限[かぎ]って / 彼[かれ]に限[かぎ]って / 夏[なつ]に限[かぎ]って",
+   687→    examples: [
+   688→      { jp: "忙[いそが]しい時に限[かぎ]って、客[きゃく]が来[く]る。", en: "Precisely when I'm busy, customers come." },
+   689→      { jp: "彼[かれ]に限[かぎ]って、そんなミスはしないはずだ。", en: "He, of all people, would not make such a mistake." }
+   690→    ],
+   691→    notes:
+   692→      "Two main uses: (1) 'especially/precisely for N' implying N is an exception; (2) 'of all times, precisely when N' implying bad timing. Often carries a sense of irony or special trust.",
+   693→    related: ["gn1-187"]
+   694→  },
+   695→
+   696→  {
+   697→    id: "gn1-183",
+   698→    point: "〜までもない",
+   699→    reading: "...made mo nai",
+   700→    level: "N1",
+   701→    category: "Modifiers",
+   702→    meaning: "no need to...; not necessary to...",
+   703→    structure: "V（辞書形）+ までもない",
+   704→    explanation:
+   705→      "Indicates that an action is unnecessary—often because it is obvious, already known, or excessive. Formal equivalent of 〜する必要[ひつよう]はない. The phrase 言[い]うまでもない is a fixed expression.",
+   706→    formation:
+   707→      "V-辞書形 + までもない\n例: 言[い]うまでもない / 行[い]くまでもない / 説明[せつめい]するまでもない",
+   708→    examples: [
+   709→      { jp: "言[い]うまでもないことだが、安全[あんぜん]が第一[だいいち]だ。", en: "It goes without saying, but safety comes first." },
+   710→      { jp: "わざわざ行[い]くまでもない、電話[でんわ]で済[す]ませよう。", en: "There is no need to go out of my way; I'll settle it by phone." }
+   711→    ],
+   712→    notes:
+   713→      "Means 'there is no need to do.' Common in formal speech and writing. The phrase 言うまでもない is a fixed expression meaning 'it goes without saying,' related to gn1-181.",
+   714→    related: ["gn1-181"]
+   715→  },
+   716→
+   717→  {
+   718→    id: "gn1-184",
+   719→    point: "〜に足る / 〜に足りる",
+   720→    reading: "...ni taru / ...ni tariru",
+   721→    level: "N1",
+   722→    category: "Modifiers",
+   723→    meaning: "worth...; sufficient to...; deserving of...",
+   724→    structure: "V（辞書形）/ N + に足[た]る / に足[た]りる",
+   725→    explanation:
+   726→      "Indicates that something is worthy or sufficient for a certain evaluation or action. Often used with words like 信頼[しんらい], 注目[ちゅうもく], 賞賛[しょうさん]. Formal.",
+   727→    formation:
+   728→      "V-辞書形 + に足[た]る / N + に足[た]る\n例: 賞賛[しょうさん]に足[た]る / 注目[ちゅうもく]に足[た]りる / 信頼[しんらい]に足[た]る",
+   729→    examples: [
+   730→      { jp: "彼[かれ]の努力[どりょく]は、賞賛[しょうさん]に足[た]る。", en: "His effort is worthy of praise." },
+   731→      { jp: "この問題[もんだい]は注目[ちゅうもく]に足[た]りる重要性[じゅうようせい]を持[も]つ。", en: "This issue holds importance worthy of attention." }
+   732→    ],
+   733→    notes:
+   734→      "〜に足る is more literary; 〜に足りる is slightly more common in speech. Common collocations: 信頼に足る, 注目に足る, 賞賛に足る, 検討[けんとう]に足る. 足る is the literary form of 足りる.",
+   735→    related: ["gn1-185"]
+   736→  },
+   737→
+   738→  {
+   739→    id: "gn1-185",
+   740→    point: "〜に忍びない",
+   741→    reading: "...ni shinobinai",
+   742→    level: "N1",
+   743→    category: "Modifiers",
+   744→    meaning: "cannot bear to...; feel too sorry/painful to...",
+   745→    structure: "V（ます形）+ に忍[しの]びない",
+   746→    explanation:
+   747→      "Indicates that the speaker cannot bring themselves to do something because it would be too painful, cruel, or pitiable. Empathetic and formal; often used with 見[み]る, 聞[き]く, 別[わか]れる.",
+   748→    formation:
+   749→      "V-ます形 + に忍[しの]びない\n例: 見[み]るに忍[しの]びない / 聞[き]くに忍[しの]びない / 放[はな]つに忍[しの]びない",
+   750→    examples: [
+   751→      { jp: "悲[かな]惨[さん]な現場[げんば]は、見[み]るに忍[しの]びない。", en: "The tragic scene is unbearable to look at." },
+   752→      { jp: "親[おや]の涙[なみだ]を見[み]るのは、忍[しの]びない。", en: "It is unbearable to see one's parents in tears." }
+   753→    ],
+   754→    notes:
+   755→      "Empathetic expression of 'cannot bear to.' Common collocations: 見るに忍びない, 聞くに忍びない. Differs from 〜にたえない (cannot endure—often sensory overload); 〜に忍びない focuses on compassion.",
+   756→    related: ["gn1-184"]
+   757→  },
+   758→
+   759→  {
+   760→    id: "gn1-186",
+   761→    point: "〜の至り",
+   762→    reading: "...no itari",
+   763→    level: "N1",
+   764→    category: "Modifiers",
+   765→    meaning: "the height of...; the extreme of... (very...)",
+   766→    structure: "N + の至[いた]り",
+   767→    explanation:
+   768→      "Indicates that something has reached an extreme degree, usually used for strong emotions or states. Formal and somewhat dramatic; common collocations include 若気[わかげ]の至り, 恐縮[きょうしゅく]の至り, 光栄[こうえい]の至り.",
+   769→    formation:
+   770→      "N + の至[いた]り\n例: 若気[わかげ]の至[いた]り / 光栄[こうえい]の至[いた]り / 恐縮[きょうしゅく]の至[いた]り",
+   771→    examples: [
+   772→      { jp: "若気[わかげ]の至[いた]りで、取[と]り返[かえ]しのつかないことをした。", en: "In the extremity of youthful folly, I did something I cannot undo." },
+   773→      { jp: "ご褒美[ほうび]をいただき、光栄[こうえい]の至[いた]りです。", en: "Receiving this reward is the height of honor for me." }
+   774→    ],
+   775→    notes:
+   776→      "Fixed expression indicating an extreme state. Common phrases: 若気の至り (youthful indiscretion), 恐縮の至り (deeply honored/humbled), 光栄の至り (a great honor). Often used in formal acknowledgments.",
+   777→    related: []
+   778→  },
+   779→
+   780→  {
+   781→    id: "gn1-187",
+   782→    point: "〜に照らして",
+   783→    reading: "...ni terashite",
+   784→    level: "N1",
+   785→    category: "Modifiers",
+   786→    meaning: "in light of...; considering...; judged against...",
+   787→    structure: "N + に照[て]らして",
+   788→    explanation:
+   789→      "Indicates that something is considered or evaluated in light of a standard, law, precedent, or fact. Formal; common in legal, academic, and analytical writing.",
+   790→    formation:
+   791→      "N + に照[て]らして（／照[て]らせば）\n例: 法律[ほうりつ]に照[て]らして / 歴史[れきし]に照[て]らして / 事実[じじつ]に照[て]らして",
+   792→    examples: [
+   793→      { jp: "法律[ほうりつ]に照[て]らして、その行為[こうい]は違法[いほう]だ。", en: "Judged against the law, that act is illegal." },
+   794→      { jp: "歴史[れきし]に照[て]らして考[かんが]えると、今回[こんかい]の出来事[できごと]も理解[りかい]できる。", en: "Considering it in light of history, this event too can be understood." }
+   795→    ],
+   796→    notes:
+   797→      "Means 'in light of / judged against.' Common with standards, laws, precedents. Differs from 〜に基づいて (based on) in emphasizing comparison/evaluation rather than direct application.",
+   798→    related: ["gn1-188"]
+   799→  },
+   800→
+   801→  {
+   802→    id: "gn1-188",
+   803→    point: "〜を踏まえて",
+   804→    reading: "...o fumae te",
+   805→    level: "N1",
+   806→    category: "Modifiers",
+   807→    meaning: "based on...; taking... into consideration; in light of...",
+   808→    structure: "N + を踏[ふ]まえて",
+   809→    explanation:
+   810→      "Indicates that an action or judgment is made taking the noun into account as a foundation. Formal; common in policy, business, and analytical contexts.",
+   811→    formation:
+   812→      "N + を踏[ふ]まえて（／踏[ふ]まえた + N）\n例: 現状[げんじょう]を踏[ふ]まえて / 過去[かこ]の失敗[しっぱい]を踏[ふ]まえて / データを踏[ふ]まえて",
+   813→    examples: [
+   814→      { jp: "現状[げんじょう]を踏[ふ]まえて、新[あたら]しい計画[けいかく]を立[た]てる。", en: "Taking the current situation into account, we will draw up a new plan." },
+   815→      { jp: "過去[かこ]の失敗[しっぱい]を踏[ふ]まえて、対策[たいさく]を練[ね]った。", en: "Basing ourselves on past failures, we worked out countermeasures." }
+   816→    ],
+   817→    notes:
+   818→      "Means 'taking into consideration / based on.' Common in formal and business Japanese. Similar to 〜に基づいて but emphasizes incorporating prior facts/context into a new decision.",
+   819→    related: ["gn1-187", "gn1-189"]
+   820→  },
+   821→
+   822→  {
+   823→    id: "gn1-189",
+   824→    point: "〜をはじめ（とする）",
+   825→    reading: "...o hajime (to suru)",
+   826→    level: "N1",
+   827→    category: "Modifiers",
+   828→    meaning: "starting with...; ...and others; ...and so on",
+   829→    structure: "N + をはじめ（とする / として）",
+   830→    explanation:
+   831→      "Introduces a representative, primary item from a group, implying others follow. Used to highlight the most important example while acknowledging the existence of others.",
+   832→    formation:
+   833→      "N + をはじめ / N + をはじめとする + N\n例: 社長[しゃちょう]をはじめ / 東京[とうきょう]をはじめとする大都市[だいとし] / 先生[せんせい]をはじめとして",
+   834→    examples: [
+   835→      { jp: "社長[しゃちょう]をはじめ、社員[しゃいん]全員[ぜんいん]が式典[しきてん]に出席[しゅっせき]した。", en: "Starting with the president, all employees attended the ceremony." },
+   836→      { jp: "東京[とうきょう]をはじめとする大都市[だいとし]では、人口[じんこう]が減少[げんしょう]している。", en: "In major cities starting with Tokyo, the population is declining." }
+   837→    ],
+   838→    notes:
+   839→      "Highlights a representative example. The form 〜をはじめとする modifies a noun (XをはじめとするY = 'Y, starting with X'). 〜をはじめ alone can conclude a list introduction.",
+   840→    related: ["gn1-175"]
+   841→  },
+   842→
+   843→  // ───────────────────────────────────────────────────────────
+   844→  // CONDITIONALS — 2 points
+   845→  // ───────────────────────────────────────────────────────────
+   846→
+   847→  {
+   848→    id: "gn1-190",
+   849→    point: "〜ことなしに（は）",
+   850→    reading: "...koto nashi ni (wa)",
+   851→    level: "N1",
+   852→    category: "Conditionals",
+   853→    meaning: "without doing...; never doing... (and then...)",
+   854→    structure: "V（辞書形）+ ことなしに（は）",
+   855→    explanation:
+   856→      "Indicates that an action is not performed without doing the preceding action—i.e., the first is a necessary condition for the second. Formal and somewhat literary; equivalent to 〜しないで.",
+   857→    formation:
+   858→      "V-辞書形 + ことなしに（は）\n例: 努力[どりょく]することなしに / 失敗[しっぱい]することなしに / 経験[けいけん]することなしに",
+   859→    examples: [
+   860→      { jp: "努力[どりょく]することなしに、成功[せいこう]はあり得[え]ない。", en: "Without making an effort, success is impossible." },
+   861→      { jp: "失敗[しっぱい]することなしに、本当[ほんとう]の学習[がくしゅう]はない。", en: "Without failing, there is no real learning." }
+   862→    ],
+   863→    notes:
+   864→      "Formal equivalent of 〜しないで / 〜せずに. With は (〜ことなしには) the main clause is negative, meaning 'without X, Y cannot happen.' Similar to 〜なくしては (gn1-191).",
+   865→    related: ["gn1-191"]
+   866→  },
+   867→
+   868→  {
+   869→    id: "gn1-191",
+   870→    point: "〜なくして（は）",
+   871→    reading: "...naku shite (wa)",
+   872→    level: "N1",
+   873→    category: "Conditionals",
+   874→    meaning: "without...; absent... (something cannot happen)",
+   875→    structure: "N + なくして（は）",
+   876→    explanation:
+   877→      "Indicates that without the noun (an essential condition), the main clause cannot be realized. Stronger and more abstract than 〜なしでは; common in formal and philosophical writing.",
+   878→    formation:
+   879→      "N + なくして（は）\n例: 愛なくして / 信頼[しんらい]なくして / 自由[じゆう]なくして",
+   880→    examples: [
+   881→      { jp: "愛なくして、真[しん]の幸福[こうふく]はない。", en: "Without love, there is no true happiness." },
+   882→      { jp: "信頼[しんらい]なくして、友情[ゆうじょう]は成[な]り立[た]たない。", en: "Without trust, friendship cannot exist." }
+   883→    ],
+   884→    notes:
+   885→      "Stronger and more literary than 〜なしでは. Almost always paired with a negative main clause. Used for abstract essential conditions like 愛, 信頼, 努力, 自由. Differs from 〜ことなしに in taking a noun rather than a verb.",
+   886→    related: ["gn1-190"]
+   887→  },
+   888→
+   889→  // ───────────────────────────────────────────────────────────
+   890→  // TIME / SEQUENCE — 9 points
+   891→  // ───────────────────────────────────────────────────────────
+   892→
+   893→  {
+   894→    id: "gn1-192",
+   895→    point: "〜にあって",
+   896→    reading: "...ni atte",
+   897→    level: "N1",
+   898→    category: "Time/Sequence",
+   899→    meaning: "in/under (a situation); during (a period)",
+   900→    structure: "N + にあって",
+   901→    explanation:
+   902→      "Indicates a particular situation, era, or condition in which something holds. Formal and literary; emphasizes the context. The concessive form is 〜にあっても (gn1-157).",
+   903→    formation:
+   904→      "N + にあって\n例: 現代[げんだい]にあって / 戦時[せんじ]にあって / この時代[じだい]にあって",
+   905→    examples: [
+   906→      { jp: "現代[げんだい]にあって、情報[じょうほう]は最[もっと]も重要[じゅうよう]な資源[しげん]だ。", en: "In the modern age, information is the most important resource." },
+   907→      { jp: "戦時[せんじ]にあって、人々[ひとびと]は団結[だんけつ]した。", en: "In wartime, the people united." }
+   908→    ],
+   909→    notes:
+   910→      "Formal/literary equivalent of 〜において / 〜の時[とき]. Common in essays and historical writing. The concessive 〜にあっても means 'even in/under such a situation.'",
+   911→    related: ["gn1-157"]
+   912→  },
+   913→
+   914→  {
+   915→    id: "gn1-193",
+   916→    point: "〜を限りに",
+   917→    reading: "...o kagiri ni",
+   918→    level: "N1",
+   919→    category: "Time/Sequence",
+   920→    meaning: "as of...; from... on; ending with...",
+   921→    structure: "N（時間・日）+ を限[かぎ]りに",
+   922→    explanation:
+   923→      "Indicates that something ends or changes at the specified time—today is the last day, or from this point things differ. Used for endings, departures, or shifts.",
+   924→    formation:
+   925→      "N（時間・日）+ を限[かぎ]りに\n例: 今日[きょう]を限[かぎ]りに / 今月[こんげつ]を限[かぎ]りに / 今[いま]を限[かぎ]りに",
+   926→    examples: [
+   927→      { jp: "今日[きょう]を限[かぎ]りに、この店[みせ]は閉店[へいてん]する。", en: "As of today, this shop will close." },
+   928→      { jp: "今月[こんげつ]を限[かぎ]りに、喫煙[きつえん]をやめることにした。", en: "As of this month, I have decided to quit smoking." }
+   929→    ],
+   930→    notes:
+   931→      "Indicates a cutoff point—an action ends or a new state begins as of the specified time. Differs from 〜を最[さい]後に (similar but more colloquial). Often used for retirements, closures, last meetings.",
+   932→    related: ["gn1-194"]
+   933→  },
+   934→
+   935→  {
+   936→    id: "gn1-194",
+   937→    point: "〜を経て",
+   938→    reading: "...o hete",
+   939→    level: "N1",
+   940→    category: "Time/Sequence",
+   941→    meaning: "after passing through...; through (a process)",
+   942→    structure: "N + を経[へ]て",
+   943→    explanation:
+   944→      "Indicates that something is reached after passing through a process, stage, or experience. Formal; common in narratives of development, negotiation, or transition.",
+   945→    formation:
+   946→      "N + を経[へ]て\n例: 多[おお]くの困難[こんなん]を経[へ]て / 交渉[こうしょう]を経[へ]て / 歳月[さいげつ]を経[へ]て",
+   947→    examples: [
+   948→      { jp: "多[おお]くの困難[こんなん]を経[へ]て、ついに成功[せいこう]を収[おさ]めた。", en: "After passing through many difficulties, they finally achieved success." },
+   949→      { jp: "両国[りょうこく]は交渉[こうしょう]を経[へ]て、合意[ごうい]に達[たっ]した。", en: "After negotiations, the two countries reached an agreement." }
+   950→    ],
+   951→    notes:
+   952→      "Means 'after going through / via.' Used for processes, experiences, stages. Common in formal and journalistic writing. Similar to 〜を通じて but emphasizes sequential process rather than continuity.",
+   953→    related: ["gn1-195", "gn1-198"]
+   954→  },
+   955→
+   956→  {
+   957→    id: "gn1-195",
+   958→    point: "〜かたわら",
+   959→    reading: "...katawara",
+   960→    level: "N1",
+   961→    category: "Time/Sequence",
+   962→    meaning: "while doing...; besides doing... (two sustained parallel activities)",
+   963→    structure: "V（辞書形）/ N + の + かたわら",
+   964→    explanation:
+   965→      "Indicates that someone engages in one main activity while simultaneously pursuing another (often a side pursuit). Formal; differs from 〜ながら in that both activities are usually substantial and ongoing.",
+   966→    formation:
+   967→      "V-辞書形 + かたわら / N + の + かたわら\n例: 働[はたら]くかたわら / 家事[かじ]のかたわら / 研究[けんきゅう]するかたわら",
+   968→    examples: [
+   969→      { jp: "彼[かれ]は会社[かいしゃ]で働[はたら]くかたわら、小説[しょうせつ]も書[か]いている。", en: "While working at a company, he also writes novels." },
+   970→      { jp: "母[はは]は家事[かじ]のかたわら、地域[ちいき]の活動[かつどう]にも参加[さんか]している。", en: "While doing housework, my mother also participates in community activities." }
+   971→    ],
+   972→    notes:
+   973→      "Indicates two sustained parallel activities, often a main job and a side pursuit. Differs from 〜ながら (which is for momentary simultaneous actions). Formal/literary tone; both roles persist over time.",
+   974→    related: ["gn1-196"]
+   975→  },
+   976→
+   977→  {
+   978→    id: "gn1-196",
+   979→    point: "〜がてら",
+   980→    reading: "...gatera",
+   981→    level: "N1",
+   982→    category: "Time/Sequence",
+   983→    meaning: "while doing...; on the occasion of doing... (and also)",
+   984→    structure: "V（ます形）/ N + がてら",
+   985→    explanation:
+   986→      "Indicates that one does something while doing another—often a secondary action done opportunistically during a main outing. Formal/light; common with 散歩[さんぽ], 買い物[かいもの], 出張[しゅっちょう].",
+   987→    formation:
+   988→      "V-ます形 + がてら / N + がてら\n例: 散歩[さんぽ]がてら / 買[か]い物[もの]がてら / 挨拶[あいさつ]がてら",
+   989→    examples: [
+   990→      { jp: "散歩[さんぽ]がてら、本屋[ほんや]に寄[よ]ってみた。", en: "While taking a walk, I dropped by a bookstore." },
+   991→      { jp: "買[か]い物[もの]がてら、友達[ともだち]の家[いえ]に立ち寄った。", en: "While shopping, I dropped in at a friend's house." }
+   992→    ],
+   993→    notes:
+   994→      "Means 'while doing X, also do Y.' The secondary action is opportunistic, not the main purpose. Differs from 〜かたわら (long-term parallel)—〜がてら is for single occasions and brief side actions.",
+   995→    related: ["gn1-195"]
+   996→  },
+   997→
+   998→  {
+   999→    id: "gn1-197",
+  1000→    point: "〜か〜ないかのうちに",
+  1001→    reading: "...ka...nai ka no uchi ni",
+  1002→    level: "N1",
+  1003→    category: "Time/Sequence",
+  1004→    meaning: "just as... was about to / had barely... when...",
+  1005→    structure: "V（辞書形）+ か、V（ない形）+ ないかのうちに",
+  1006→    explanation:
+  1007→      "Indicates that something happens immediately after or simultaneously with the moment an action begins or has barely begun. Conveys a sense of 'no sooner had... than...'. Formal.",
+  1008→    formation:
+  1009→      "V-辞書形 + か、V-ない形 + ないかのうちに\n例: 着[つ]くか着[つ]かないかのうちに / 降[ふ]るか降[ふ]らないかのうちに / 始[はじ]まるか始[はじ]まらないかのうちに",
+  1010→    examples: [
+  1011→      { jp: "彼[かれ]は席[せき]に着[つ]くか着[つ]かないかのうちに、質問[しつもん]を始[はじ]めた。", en: "No sooner had he taken his seat than he began asking questions." },
+  1012→      { jp: "雨[あめ]が降[ふ]るか降[ふ]らないかのうちに、試合[しあい]は終[お]わった。", en: "Almost before it had started to rain, the match was over." }
+  1013→    ],
+  1014→    notes:
+  1015→      "Emphasizes immediacy—something happens right at the boundary of an action starting or not. Common in written narratives. Similar to 〜たとたん（に）but more about the borderline moment than immediate sequence.",
+  1016→    related: ["gn1-198"]
+  1017→  },
+  1018→
+  1019→  {
+  1020→    id: "gn1-198",
+  1021→    point: "〜を通じて / 〜を通して",
+  1022→    reading: "...o tsujite / ...o tooshite",
+  1023→    level: "N1",
+  1024→    category: "Time/Sequence",
+  1025→    meaning: "throughout...; over the course of...; through (means)",
+  1026→    structure: "N（期間／手段）+ を通じて / を通して",
+  1027→    explanation:
+  1028→      "Indicates duration throughout an entire period, or a means/method through which something is done. 〜を通じて tends to be more written/formal; 〜を通して slightly more colloquial.",
+  1029→    formation:
+  1030→      "N + を通じて / N + を通して\n例: 一年間[いちねんかん]を通じて / その事件[じけん]を通じて / 先輩[せんぱい]を通して",
+  1031→    examples: [
+  1032→      { jp: "一年間[いちねんかん]を通じて、彼[かれ]の態度[たいど]は変[か]わらなかった。", en: "Throughout the year, his attitude did not change." },
+  1033→      { jp: "その事件[じけん]を通じて、多[おお]くのことを学[まな]んだ。", en: "Through that incident, I learned a great deal." }
+  1034→    ],
+  1035→    notes:
+  1036→      "Two main uses: (1) 'throughout a period' (duration); (2) 'through a means/intermediary.' Differs from 〜にわたって in emphasizing continuity through, not just spanning. Both forms are interchangeable in most cases.",
+  1037→    related: ["gn1-194", "gn1-199"]
+  1038→  },
+  1039→
+  1040→  {
+  1041→    id: "gn1-199",
+  1042→    point: "〜を皮切りに",
+  1043→    reading: "...o kawakiri ni",
+  1044→    level: "N1",
+  1045→    category: "Time/Sequence",
+  1046→    meaning: "starting with...; with... as the kickoff",
+  1047→    structure: "N + を皮切り[かわきり]に（して）",
+  1048→    explanation:
+  1049→      "Indicates that something begins with the stated event, with more to follow. Formal; common in news and business contexts to mark the start of a series.",
+  1050→    formation:
+  1051→      "N + を皮切り[かわきり]に（して）\n例: 東京[とうきょう]を皮切り[かわきり]に / この大会[たいかい]を皮切り[かわきり]に / 挨拶[あいさつ]を皮切り[かわきり]に",
+  1052→    examples: [
+  1053→      { jp: "東京[とうきょう]を皮切り[かわきり]に、全国[ぜんこく]ツアーが始[はじ]まる。", en: "Starting with Tokyo, the nationwide tour begins." },
+  1054→      { jp: "この大会[たいかい]を皮切り[かわきり]に、各地[かくち]で大会[たいかい]が開[ひら]かれる。", en: "Starting with this tournament, competitions will be held in various places." }
+  1055→    ],
+  1056→    notes:
+  1057→      "Marks the first of a series. Differs from 〜をはじめ (which lists a representative of a group)—〜を皮切りに emphasizes temporal sequence and the start of more to come. Common in formal announcements.",
+  1058→    related: ["gn1-198", "gn1-200"]
+  1059→  },
+  1060→
+  1061→  {
+  1062→    id: "gn1-200",
+  1063→    point: "〜を控えて / 〜を控えた",
+  1064→    reading: "...o hikaete / ...o hikaeta",
+  1065→    level: "N1",
+  1066→    category: "Time/Sequence",
+  1067→    meaning: "with... approaching/just around the corner; just before...",
+  1068→    structure: "N + を控[ひか]えて（／控[ひか]えた + N）",
+  1069→    explanation:
+  1070→      "Indicates that an important event is imminent—just ahead or about to happen. Common with events like 試験[しけん], 試合[しあい], 出産[しゅっさん], 開幕[かいまく]. Can modify a noun or stand alone.",
+  1071→    formation:
+  1072→      "N + を控[ひか]えて / N + を控[ひか]えた + N\n例: 試験[しけん]を控[ひか]えて / 出発[しゅっぱつ]を控[ひか]えた空港[くうこう] / 開幕[かいまく]を控[ひか]えて",
+  1073→    examples: [
+  1074→      { jp: "試験[しけん]を控[ひか]えて、学生[がくせい]たちは必死[ひっし]に勉強[べんきょう]している。", en: "With exams approaching, students are studying desperately." },
+  1075→      { jp: "出発[しゅっぱつ]を控[ひか]えた空港[くうこう]は、混雑[こんざつ]していた。", en: "The airport, with departures imminent, was crowded." }
+  1076→    ],
+  1077→    notes:
+  1078→      "Indicates an imminent event—something is just around the corner. Common in news and daily life. The 〜を控えたN form modifies a noun directly (e.g., 試験を控えた学生). Differs from 〜に先立って (before) in focusing on imminence.",
+  1079→    related: ["gn1-199"]
+  1080→  }
+  1081→];
+  1082→

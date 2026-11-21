@@ -17,10 +17,13 @@ import { grammarN1A } from "./grammar-n1-a";
 import { grammarN1B } from "./grammar-n1-b";
 import { grammarN1C } from "./grammar-n1-c";
 import { grammarN1D } from "./grammar-n1-d";
+import { grammarN1E } from "./grammar-n1-e";
+import { grammarN1F } from "./grammar-n1-f";
 
 // Grammar: N5/N4 (Minna no Nihongo) + N3/N2/N1 (Shinzaizen Master / try! series)
 // Target counts aligned with official JLPT grammar point expectations:
-//   N5: 80, N4: 130, N3: 140, N2: 200, N1: 200  (total 750)
+//   N5: 80, N4: 130, N3: 140, N2: 200, N1: 214  (total 764)
+// N1 cap bumped from 200 -> 214 to accommodate chunk E (gn1-201..214).
 // Deduplicated by point, then capped per level so the exported
 // grammarData respects the target counts above.
 const allGrammar: GrammarData[] = [
@@ -42,6 +45,8 @@ const allGrammar: GrammarData[] = [
   ...grammarN1B,
   ...grammarN1C,
   ...grammarN1D,
+  ...grammarN1E,
+  ...grammarN1F,
 ];
 
 /** Per-level caps — first N unique points per level are kept. */
