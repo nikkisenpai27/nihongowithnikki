@@ -2,6 +2,8 @@
 
 <div align="center">
 
+<img src="https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_png/cloudinary-tools-uploads/kxjkqunuu6btdlxakguz" width="600" alt="Nihongo with Nikki dashboard">
+
   # 🌸 Nihongo with Nikki
   
   **Your daily dashboard for mastering Japanese (JLPT N5 to N1).**
