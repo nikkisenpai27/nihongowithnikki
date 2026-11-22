@@ -53,3 +53,4 @@ server.log
 # Skills directory
 /skills/db/*.db
 db/custom.db
+.env*

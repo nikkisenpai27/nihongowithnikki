@@ -265,6 +265,7 @@ export function applyBackground(s: Pick<SettingsState, "backgroundMode" | "backg
 
   let imageUrl: string | null = null;
   if (s.backgroundMode === "custom" && s.customBackground) {
+    // Custom uploaded wallpapers are data URLs (base64) — no basePath needed
     imageUrl = s.customBackground;
   } else if (s.backgroundMode === "preset") {
     const preset = BACKGROUND_PRESETS.find((p) => p.id === s.backgroundPreset);
@@ -274,9 +275,6 @@ export function applyBackground(s: Pick<SettingsState, "backgroundMode" | "backg
   root.style.setProperty("--bg-image", imageUrl ? `url("${imageUrl}")` : "none");
   root.style.setProperty("--bg-opacity", String(s.backgroundOpacity / 100));
   root.style.setProperty("--bg-blur", `${s.backgroundBlur}px`);
-  // Only mount the wallpaper layer when there's an actual image to render,
-  // so opacity/blur have nothing to act on when the user is in "custom"
-  // mode but hasn't uploaded anything yet (or just removed their upload).
   body.classList.toggle("has-wallpaper", !!imageUrl);
 }
 

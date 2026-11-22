@@ -1,7 +1,7 @@
 "use client";
 
+import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { assetUrl } from "@/lib/asset";
 
 interface NikkiAvatarProps {
   size?: number;
@@ -30,12 +30,14 @@ export function NikkiAvatar({ size = 48, className, withHalo = false }: NikkiAva
         className="relative block overflow-hidden rounded-full ring-2 ring-primary/30"
         style={{ width: size, height: size, minWidth: size, minHeight: size }}
       >
-        <img
-          src={assetUrl("/nikki-logo.png")}
+        <Image
+          src="/nikki-logo.png"
           alt="Nikki, your Japanese tutor"
           width={size}
           height={size}
-          style={{ width: size, height: size, objectFit: "cover", display: "block" }}
+          className="h-full w-full object-cover"
+          priority
+          unoptimized
         />
       </span>
     </span>
