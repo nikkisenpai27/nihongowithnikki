@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { assetUrl } from "@/lib/asset";
 
 interface NikkiAvatarProps {
   size?: number;
@@ -27,17 +27,22 @@ export function NikkiAvatar({ size = 48, className, withHalo = false }: NikkiAva
         />
       )}
       <span
-        className="relative block overflow-hidden rounded-full ring-2 ring-primary/30"
+        className="relative block overflow-hidden rounded-full ring-2 ring-primary/30 bg-primary/10"
         style={{ width: size, height: size, minWidth: size, minHeight: size }}
       >
-        <Image
-          src="/nikki-logo.png"
-          alt="Nikki, your Japanese tutor"
+        <img
+          src={assetUrl("/nikki-logo.png")}
+          alt="Nikki"
           width={size}
           height={size}
-          className="h-full w-full object-cover"
-          priority
-          unoptimized
+          style={{ width: size, height: size, objectFit: "cover", display: "block" }}
+          onError={(e) => {
+            // Fallback: try without basePath (for local dev)
+            const img = e.currentTarget;
+            if (img.src.includes("/nihongowithnikki/")) {
+              img.src = img.src.replace("/nihongowithnikki/", "/");
+            }
+          }}
         />
       </span>
     </span>
