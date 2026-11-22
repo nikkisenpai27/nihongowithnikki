@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_png/cloudinary-tools-uploads/kxjkqunuu6btdlxakguz" width="600" alt="Nihongo with Nikki dashboard">
+<img src="https://sanimgcdn.com/u/4d9877fdbd25fb8a03605eccb509ba9c.png" width="600" alt="Nihongo with Nikki dashboard">
 
   # 🌸 Nihongo with Nikki
   
