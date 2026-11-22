@@ -75,20 +75,27 @@ export function AuthPage({ onAuth }: AuthPageProps) {
 
     setLoading(true);
     try {
-      const endpoint = mode === "signup" ? "/api/auth/signup" : "/api/auth/login";
-      const body =
-        mode === "signup"
-          ? { email, password, name }
-          : { email, password };
-      const res = await fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Authentication failed");
-      localStorage.setItem("nikki-user", JSON.stringify(data.user));
-      onAuth(data.user);
+      if (mode === "signup") {
+        // Client-side signup: store user in localStorage
+        const users = JSON.parse(localStorage.getItem("nikki-users") || "[]");
+        if (users.some((u: { email: string }) => u.email === email)) {
+          throw new Error("An account with this username already exists");
+        }
+        const user = { id: `user-${Date.now()}`, email, name: name || email, password, provider: "credentials" };
+        users.push(user);
+        localStorage.setItem("nikki-users", JSON.stringify(users));
+        const { password: _, ...userWithoutPassword } = user;
+        localStorage.setItem("nikki-user", JSON.stringify(userWithoutPassword));
+        onAuth(userWithoutPassword);
+      } else {
+        // Client-side login: check localStorage
+        const users = JSON.parse(localStorage.getItem("nikki-users") || "[]");
+        const user = users.find((u: { email: string; password: string }) => u.email === email && u.password === password);
+        if (!user) throw new Error("Invalid username or password");
+        const { password: _, ...userWithoutPassword } = user;
+        localStorage.setItem("nikki-user", JSON.stringify(userWithoutPassword));
+        onAuth(userWithoutPassword);
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong");
     } finally {

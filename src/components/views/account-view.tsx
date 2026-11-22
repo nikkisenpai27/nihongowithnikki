@@ -157,7 +157,6 @@ export function AccountView() {
   }
 
   function handleLogout() {
-    fetch("/api/auth/logout", { method: "POST" }).catch(() => {});
     localStorage.removeItem("nikki-user");
     localStorage.removeItem("nikki-pfp");
     window.location.reload();

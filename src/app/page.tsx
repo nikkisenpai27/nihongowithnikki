@@ -40,7 +40,6 @@ export default function Home() {
   }
 
   function handleLogout() {
-    fetch("/api/auth/logout", { method: "POST" }).catch(() => {});
     localStorage.removeItem("nikki-user");
     setUser(null);
   }
