@@ -1,6 +1,4 @@
 <div align="center">
-  <img src="" alt="https://user58958.na.imgto.link/public/20261122/e0bca5c4e6cf30c86f48a777-20261119172705.avif" width="100%" style="border-radius: 10px;"/>
-</div>
 
   # 🌸 Nihongo with Nikki
   
