@@ -59,7 +59,7 @@ To get a local copy up and running, follow these simple steps.
 📄 License
 Distributed under the MIT License. See LICENSE for more information.
 
-<div align="center"> Made with 💜 for Japanese learners. </div> ```
+<div align="center"> Made with 💜 for Japanese learners. </div>
 
 <div align="center"><img src="https://www.gitskins.com/api/readme-reference/divider?username=torvalds&theme=neon&v=readme-reference-2" width="100%" alt="Section divider" /></div>
 
