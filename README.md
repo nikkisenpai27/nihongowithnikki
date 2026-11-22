@@ -51,3 +51,5 @@ To get a local copy up and running, follow these simple steps.
 
 *   Node.js (v16 or higher)
 *   npm or yarn
+
+<div align="center"> Made with 💜 for Japanese learners. </div> ```
