@@ -258,7 +258,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <span className="jp">日本語 with Nikki ・ やさしい日本語を一緒に学ぼう</span>
           <div className="flex items-center gap-3">
             <span>
-              JLPT N5 to N1 ・ 2,200 kanji ・ 10,000 vocab ・ 720 grammar ・ <span className="text-primary font-semibold">Nikki</span> is your friendly tutor
+              JLPT N5 to N1 ・ 2,142 kanji ・ 10,000 vocab ・ 720 grammar ・ <span className="text-primary font-semibold">Nikki</span> is your friendly tutor
             </span>
             <a
               href="https://discord.gg/S8ghkzPErv"

@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import {
   BookText,
+  Download,
   Search,
   Clock,
   CheckCircle2,
@@ -71,6 +72,18 @@ export function ReadingView() {
         jp="読解"
         icon={BookText}
         description={`${readingData.length} long passages with comprehension questions — ${readingData.filter(p=>p.level==="N5").length} for N5 and ${readingData.filter(p=>p.level==="N4").length} for N4. Toggle furigana, read side-by-side with English, then test your understanding.`}
+        action={
+          <Button size="sm" variant="outline" onClick={() => {
+            const data = readingData.map(p => ({ level: p.level, title: p.title, questions: p.questions?.length || 0 }));
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a"); a.href = url;
+            a.download = `reading-passages-${new Date().toISOString().slice(0,10)}.json`; a.click();
+            URL.revokeObjectURL(url);
+          }} className="gap-2">
+            <Download className="h-3.5 w-3.5" /> Download
+          </Button>
+        }
       />
 
       <div className="mb-4 flex flex-wrap items-center gap-2">

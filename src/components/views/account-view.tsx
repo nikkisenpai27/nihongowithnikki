@@ -188,7 +188,7 @@ export function AccountView() {
 
   // Target totals for display (match the JLPT study target counts)
   // These are the intended totals: 2200 kanji, 10000 vocab, 720 grammar
-  const totalKanjiCount = 2200;
+  const totalKanjiCount = 2142;
   const totalVocabCount = 10000;
   const totalGrammarCount = 720;
   const totalStoriesCount = storiesData.length;

@@ -1,13 +1,14 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { BookText, Search, Clock, CheckCircle2, Sparkles } from "lucide-react";
+import { BookText, Search, Clock, CheckCircle2, Sparkles, Download } from "lucide-react";
 import {
   ToggleGroup,
   ToggleGroupItem,
 } from "@/components/ui/toggle-group";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { storiesData } from "@/lib/data/stories";
 import { levelColor } from "@/lib/data/kanji";
 import { useProgress } from "@/lib/stores/progress-store";
@@ -61,9 +62,21 @@ export function StoriesView() {
         icon={BookText}
         description="Original short stories at N5 and N4 level, written by Nikki. Read with furigana, side-by-side translation, and built-in vocabulary."
         action={
-          <Badge variant="secondary" className="gap-1 px-3 py-1.5">
-            <CheckCircle2 className="h-3.5 w-3.5 text-matcha" /> {readCount}/{storiesData.length} read
-          </Badge>
+          <div className="flex gap-2">
+            <Badge variant="secondary" className="gap-1 px-3 py-1.5">
+              <CheckCircle2 className="h-3.5 w-3.5 text-matcha" /> {readCount}/{storiesData.length} read
+            </Badge>
+            <Button size="sm" variant="outline" onClick={() => {
+              const data = storiesData.map(s => ({ level: s.level, title: s.title.replace(/\[[^\]]+\]/g, ""), summary: s.summary, estMinutes: s.estMinutes }));
+              const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+              const url = URL.createObjectURL(blob);
+              const a = document.createElement("a"); a.href = url;
+              a.download = `stories-${new Date().toISOString().slice(0,10)}.json`; a.click();
+              URL.revokeObjectURL(url);
+            }} className="gap-2">
+              <Download className="h-3.5 w-3.5" /> Download
+            </Button>
+          </div>
         }
       />
 

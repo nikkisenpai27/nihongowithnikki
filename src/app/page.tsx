@@ -54,7 +54,6 @@ export default function Home() {
       <AppShell>
         <RouterView />
       </AppShell>
-      <FloatingLogout user={user} onLogout={handleLogout} />
     </UserContext.Provider>
   );
 }
@@ -125,21 +124,3 @@ function RouterView() {
   );
 }
 
-function FloatingLogout({
-  user,
-  onLogout,
-}: {
-  user: UserCtx;
-  onLogout: () => void;
-}) {
-  return (
-    <div className="fixed bottom-4 right-4 z-50 flex items-center gap-2 rounded-full border border-border bg-card/90 px-3 py-1.5 shadow-lg backdrop-blur">
-      <span className="text-xs font-medium text-foreground">
-        {user.name || user.email || "Guest"}
-      </span>
-      <Button size="sm" variant="ghost" className="h-7 px-2 text-xs" onClick={onLogout}>
-        <LogOut className="mr-1 h-3 w-3" /> Logout
-      </Button>
-    </div>
-  );
-}

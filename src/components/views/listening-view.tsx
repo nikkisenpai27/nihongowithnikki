@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import {
   Headphones,
+  Download,
   Search,
   Clock,
   Play,
@@ -75,6 +76,18 @@ export function ListeningView() {
         jp="聴解"
         icon={Headphones}
         description={`${listeningData.length} listening exercises — ${listeningData.filter(p=>p.level==="N5").length} for N5 and ${listeningData.filter(p=>p.level==="N4").length} for N4. Listen to the Japanese audio (spoken by Nikki), answer the questions, then reveal the transcript to check your understanding.`}
+        action={
+          <Button size="sm" variant="outline" onClick={() => {
+            const data = listeningData.map(p => ({ level: p.level, title: p.title, questions: p.questions?.length || 0 }));
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a"); a.href = url;
+            a.download = `listening-exercises-${new Date().toISOString().slice(0,10)}.json`; a.click();
+            URL.revokeObjectURL(url);
+          }} className="gap-2">
+            <Download className="h-3.5 w-3.5" /> Download
+          </Button>
+        }
       />
 
       <div className="mb-4 flex flex-wrap items-center gap-2">

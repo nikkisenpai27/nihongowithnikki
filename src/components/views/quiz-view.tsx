@@ -3,6 +3,7 @@
 import { useState, useMemo, useCallback } from "react";
 import {
   GraduationCap,
+  Download,
   Languages,
   BookOpen,
   SpellCheck,
@@ -278,6 +279,18 @@ export function QuizView() {
           jp="クイズ"
           icon={GraduationCap}
           description="Test your knowledge across kanji, vocabulary, and grammar. Nikki adapts questions to your chosen level and updates your mastery as you go."
+          action={
+            <Button size="sm" variant="outline" onClick={() => {
+              const data = { quizHistory: progress.quizHistory, totalQuizzes: progress.quizHistory.length, avgScore: progress.quizHistory.length > 0 ? Math.round(progress.quizHistory.reduce((a,q) => a + (q.score/q.total)*100, 0) / progress.quizHistory.length) : 0 };
+              const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+              const url = URL.createObjectURL(blob);
+              const a = document.createElement("a"); a.href = url;
+              a.download = `quiz-results-${new Date().toISOString().slice(0,10)}.json`; a.click();
+              URL.revokeObjectURL(url);
+            }} className="gap-2">
+              <Download className="h-3.5 w-3.5" /> Download Results
+            </Button>
+          }
         />
         <Card className="p-5">
           <h3 className="mb-3 text-sm font-bold text-foreground">Choose a quiz type</h3>
@@ -451,7 +464,19 @@ export function QuizView() {
         title="Quiz"
         jp="クイズ"
         icon={GraduationCap}
-        action={<Badge variant="secondary">Q{current + 1}/{questions.length}</Badge>}
+        description="Test your Japanese knowledge with adaptive quizzes. Choose your level, topic, and difficulty — then track your progress over time."
+        action={
+          <Button size="sm" variant="outline" onClick={() => {
+            const data = { quizHistory: progress.quizHistory, totalQuizzes: progress.quizHistory.length, avgScore: progress.quizHistory.length > 0 ? Math.round(progress.quizHistory.reduce((a,q) => a + (q.score/q.total)*100, 0) / progress.quizHistory.length) : 0 };
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a"); a.href = url;
+            a.download = `quiz-results-${new Date().toISOString().slice(0,10)}.json`; a.click();
+            URL.revokeObjectURL(url);
+          }} className="gap-2">
+            <Download className="h-3.5 w-3.5" /> Download
+          </Button>
+        }
       />
       <Progress value={((current + (answered ? 1 : 0)) / questions.length) * 100} className="mb-4 h-2" />
 

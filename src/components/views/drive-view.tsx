@@ -64,7 +64,7 @@ export function DriveView() {
         title="Google Drive Resources"
         jp="ドライブ"
         icon={FolderOpen}
-        description="A complete collection of Japanese learning resources on Google Drive — handwritten grammar notes (N5/N4/N3), PDF textbooks, reference books, mock exams, vocabulary lists, kanji worksheets, listening practice audio, and more. Everything is free to download."
+        description="17+ types of free Japanese learning resources — Nikki's handwritten grammar notes (N5/N4/N3), PDF textbooks, reference books, 100+ JLPT mock exams, vocabulary lists, kanji worksheets, listening practice audio, reading comprehension drills, conversation scripts, writing templates, particle guides, conjugation charts, keigo reference sheets, yojijukugo lists, and more. All free to download from Google Drive."
       />
 
       {/* Hero card with animation */}
@@ -88,10 +88,11 @@ export function DriveView() {
               <span className="jp ml-2 text-lg text-muted-foreground">学習資料</span>
             </h2>
             <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-              A comprehensive collection of Japanese learning materials — all free on Google Drive.
-              Includes Nikki&apos;s handwritten grammar notes (N5/N4/N3), PDF textbooks, reference books, JLPT mock exams
+              17+ types of free Japanese learning materials — all on Google Drive.
+              Includes Nikki&apos;s handwritten grammar notes (N5/N4/N3), PDF textbooks, reference books, 100+ JLPT mock exams
               with answer keys, vocabulary lists, kanji worksheets, listening practice audio, reading comprehension
-              drills, and conjugation charts. Whether you&apos;re starting from zero or aiming for N1, there&apos;s something
+              drills, conversation scripts, writing templates, particle guides, conjugation charts, keigo reference
+              sheets, and yojijukugo lists. Whether you&apos;re starting from zero or aiming for N1, there&apos;s something
               here for every level.
             </p>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-3 sm:justify-start">
@@ -123,9 +124,9 @@ export function DriveView() {
           )}
         >
           {[
-            { label: "Resource Types", value: "8+", jp: "資料" },
+            { label: "Resource Types", value: "17+", jp: "資料" },
             { label: "JLPT Levels", value: "N5–N1", jp: "レベル" },
-            { label: "Mock Tests", value: "5+", jp: "模試" },
+            { label: "Mock Tests", value: "100+", jp: "模試" },
           ].map((stat, i) => (
             <div
               key={i}

@@ -31,7 +31,7 @@ const dot = DotGothic16({ variable: "--font-dot", subsets: ["latin"], weight: ["
 export const metadata: Metadata = {
   title: "Nihongo with Nikki — Learn JLPT N5 to N1 with Nikki",
   description:
-    "A warm, friendly Japanese learning platform for JLPT N5 to N1. Study 2,200 kanji, 10,000 vocabulary, 720 grammar points, reading, listening, and stories with Nikki, your personal tutor.",
+    "A warm, friendly Japanese learning platform for JLPT N5 to N1. Study 2,142 kanji, 10,000 vocabulary, 720 grammar points, reading, listening, and stories with Nikki, your personal tutor.",
   keywords: [
     "Japanese",
     "JLPT",

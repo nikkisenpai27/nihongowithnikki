@@ -120,7 +120,7 @@ function Onboarding({ onDone }: { onDone: () => void }) {
             <h2 className="mt-4 text-2xl font-bold text-foreground">こんにちは！ I&apos;m Nikki.</h2>
             <p className="jp mt-1 text-lg text-primary">ニキです。よろしくお願いします！</p>
             <p className="mx-auto mt-3 max-w-md text-sm text-muted-foreground">
-              I&apos;ll be your friendly guide through JLPT N5 to N1 Japanese — 2,200 kanji, 10,000 vocabulary, 720 grammar points, stories, listening, and reading. Let&apos;s take 30 seconds
+              I&apos;ll be your friendly guide through JLPT N5 to N1 Japanese — 2,142 kanji, 10,000 vocabulary, 720 grammar points, stories, listening, and reading. Let&apos;s take 30 seconds
               to set up your perfect study space. Ready?
             </p>
             <Button className="mt-5" onClick={() => setStep(1)}>
@@ -415,7 +415,7 @@ export function SettingsView() {
               Nikki believes learning should feel kind, visual, and a little playful. いっしょにがんばろう！
             </p>
             <div className="mt-3 flex flex-wrap gap-1.5">
-              <Badge variant="secondary">2,200 kanji</Badge>
+              <Badge variant="secondary">2,142 kanji</Badge>
               <Badge variant="secondary">10,000 words</Badge>
               <Badge variant="secondary">720 grammar points</Badge>
               <Badge variant="secondary">400 stories</Badge>
