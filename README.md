@@ -2,8 +2,6 @@
 
 <div align="center">
 
-<img src="https://sanimgcdn.com/u/4d9877fdbd25fb8a03605eccb509ba9c.png" width="600" alt="Nihongo with Nikki dashboard">
-
   # 🌸 Nihongo with Nikki
   
   **Your daily dashboard for mastering Japanese (JLPT N5 to N1).**
