@@ -11,6 +11,7 @@ import {
   CheckCircle2,
   Check,
   X,
+  Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -154,7 +155,7 @@ export function AuthPage({ onAuth }: AuthPageProps) {
           }}
         >
           {/* Logo + heading */}
-          <div className="mb-6 flex flex-col items-center gap-3" style={{ transform: "translateZ(40px)" }}>
+          <div className="mb-4 flex flex-col items-center gap-3" style={{ transform: "translateZ(40px)" }}>
             <NikkiAvatar size={72} withHalo />
             <div className="text-center">
               <h1
@@ -167,6 +168,24 @@ export function AuthPage({ onAuth }: AuthPageProps) {
                 {mode === "signup" ? "アカウントを作成" : "ログイン"}
               </p>
             </div>
+          </div>
+
+          {/* Continue as guest — highlighted at top */}
+          <button
+            onClick={() => onAuth({ id: "guest", email: "", name: "Guest" })}
+            className="mb-5 flex w-full items-center justify-center gap-2 rounded-xl border-2 border-primary/40 bg-primary/10 px-4 py-3 text-sm font-bold text-primary transition-all hover:bg-primary/20 hover:shadow-md"
+            style={{ transform: "translateZ(35px)" }}
+          >
+            <Sparkles className="h-4 w-4" />
+            Continue as Guest
+            <ArrowRight className="h-4 w-4" />
+          </button>
+
+          {/* Divider */}
+          <div className="mb-5 flex items-center gap-3">
+            <div className="h-px flex-1 bg-border" />
+            <span className="text-xs font-medium text-muted-foreground">or sign up / login</span>
+            <div className="h-px flex-1 bg-border" />
           </div>
 
           {/* Mode toggle */}
@@ -343,14 +362,6 @@ export function AuthPage({ onAuth }: AuthPageProps) {
               </div>
             ))}
           </div>
-
-          {/* Guest link */}
-          <button
-            onClick={() => onAuth({ id: "guest", email: "", name: "Guest" })}
-            className="mt-4 w-full text-center text-xs text-muted-foreground underline-offset-2 hover:text-primary hover:underline"
-          >
-            Continue as guest →
-          </button>
         </div>
       </div>
 
