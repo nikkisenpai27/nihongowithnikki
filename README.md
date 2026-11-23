@@ -2,6 +2,8 @@
 
 <div align="center">
 
+<img width="1920" height="1080" alt="20261119172705" src="https://github.com/user-attachments/assets/ebffe5c1-ba49-4739-8709-572b5e419147" />
+
   # 🌸 Nihongo with Nikki
   
   **Your daily dashboard for mastering Japanese (JLPT N5 to N1).**
